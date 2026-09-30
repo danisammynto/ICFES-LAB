@@ -1,0 +1,77 @@
+{
+  "materia": "ciencias-naturales",
+  "entradas": [
+    {
+      "id": "cie-genetica-mendeliana",
+      "subtema": "biologia",
+      "titulo": "Genética mendeliana: alelos dominantes y recesivos",
+      "palabras_clave": ["genetica", "genética", "mendel", "alelo", "alelos", "dominante", "recesivo", "punnett", "genotipo", "fenotipo"],
+      "explicacion": "En la herencia mendeliana, cada característica depende de un gen que tiene dos copias, llamadas alelos: una se hereda de la madre y otra del padre. El alelo dominante (se escribe con mayúscula, A) se manifiesta aunque haya una sola copia; el recesivo (con minúscula, a) solo se manifiesta cuando hay dos copias (aa). El genotipo es la combinación de alelos (AA, Aa o aa) y el fenotipo es la característica que se observa. El cuadro de Punnett combina los alelos que aporta cada padre para predecir las proporciones de la descendencia.",
+      "ejemplo": "Si se cruzan dos plantas Aa, el cuadro de Punnett da AA, Aa, Aa y aa: se espera un 75 % de descendientes con el rasgo dominante y un 25 % con el recesivo (proporción 3:1).",
+      "tip_icfes": "Si un hijo muestra el rasgo recesivo, cada padre le dio un alelo recesivo, aunque ellos muestren el rasgo dominante. Esa pista resuelve muchas preguntas sobre genotipos."
+    },
+    {
+      "id": "cie-cadenas-troficas",
+      "subtema": "biologia",
+      "titulo": "Cadenas tróficas y flujo de energía",
+      "palabras_clave": ["cadena trofica", "cadena trófica", "cadenas troficas", "cadenas tróficas", "red trofica", "red trófica", "productores", "consumidores", "descomponedores", "depredador"],
+      "explicacion": "Una cadena trófica muestra quién se alimenta de quién en un ecosistema. Empieza con los productores (plantas y algas, que hacen fotosíntesis), sigue con los consumidores primarios (herbívoros) y los consumidores secundarios y terciarios (carnívoros), y se completa con los descomponedores (hongos y bacterias), que reciclan la materia. La energía fluye en un solo sentido y de cada nivel solo pasa al siguiente cerca del 10 %; el resto se gasta en la respiración y se pierde como calor. Por eso hay menos organismos en los niveles superiores, mientras que la materia sí se recicla. Varias cadenas conectadas forman una red trófica.",
+      "ejemplo": "En un humedal: algas → pequeños crustáceos → peces → garza. Si las algas captan 10.000 kJ de energía, a los crustáceos llegan unos 1.000 kJ, a los peces unos 100 kJ y a la garza apenas unos 10 kJ.",
+      "tip_icfes": "Si en una pregunta desaparece una especie, sigue las flechas: sus presas tienden a aumentar y sus depredadores, a disminuir. Recuerda que las flechas indican hacia dónde va la energía, de la presa al depredador."
+    },
+    {
+      "id": "cie-efecto-invernadero",
+      "subtema": "medio-ambiente",
+      "titulo": "Efecto invernadero, ciclo del carbono y cambio climático",
+      "palabras_clave": ["efecto invernadero", "invernadero", "calentamiento global", "cambio climatico", "cambio climático", "ciclo del carbono", "dioxido de carbono", "dióxido de carbono", "co2", "gases de efecto invernadero"],
+      "explicacion": "El efecto invernadero es un fenómeno natural: gases como el dióxido de carbono (CO₂), el metano (CH₄) y el vapor de agua dejan pasar la luz del Sol, pero retienen parte del calor que emite la Tierra. Gracias a él, la temperatura media del planeta es de unos 15 °C y no de unos −18 °C. El problema es que la quema de combustibles fósiles, la deforestación y la ganadería aumentan la cantidad de estos gases, intensifican el efecto y causan el calentamiento global. En el ciclo del carbono, la fotosíntesis retira CO₂ de la atmósfera, mientras que la respiración, la descomposición y la combustión lo devuelven.",
+      "ejemplo": "Al talar y quemar un bosque ocurren dos cosas: el carbono guardado en la madera se libera como CO₂ y desaparecen árboles que retiraban CO₂ del aire mediante la fotosíntesis. Por eso la deforestación es una de las principales fuentes de emisiones de Colombia.",
+      "tip_icfes": "No confundas el efecto invernadero con el agujero de la capa de ozono: el primero retiene calor; el segundo deja pasar más radiación ultravioleta. Son problemas distintos, con causas distintas."
+    },
+    {
+      "id": "cie-leyes-newton",
+      "subtema": "fisica",
+      "titulo": "Las tres leyes de Newton",
+      "palabras_clave": ["leyes de newton", "newton", "inercia", "fuerza", "fuerzas", "fuerza neta", "accion y reaccion", "acción y reacción", "aceleracion", "aceleración"],
+      "explicacion": "Primera ley (inercia): si la fuerza neta sobre un cuerpo es cero, este permanece en reposo o sigue moviéndose en línea recta con velocidad constante. Segunda ley: la fuerza neta produce una aceleración en su misma dirección, según F = m·a (F en newtons, m en kilogramos y a en m/s²). Tercera ley: si un cuerpo A ejerce una fuerza sobre un cuerpo B, B ejerce sobre A una fuerza de igual magnitud y sentido contrario; como actúan sobre cuerpos distintos, no se anulan entre sí. Idea clave: moverse no requiere fuerza neta, pero cambiar la velocidad sí.",
+      "ejemplo": "Para acelerar un carrito de 20 kg a 1,5 m/s² se necesita una fuerza neta F = 20 kg × 1,5 m/s² = 30 N. Si el carrito ya va con velocidad constante, la fuerza neta sobre él es 0 N, aunque se esté moviendo.",
+      "tip_icfes": "Cuando un enunciado diga 'velocidad constante', piensa de inmediato en fuerza neta igual a cero: las fuerzas a favor y en contra del movimiento están equilibradas."
+    },
+    {
+      "id": "cie-energia-mecanica",
+      "subtema": "fisica",
+      "titulo": "Energía mecánica y su conservación",
+      "palabras_clave": ["energia", "energía", "energia cinetica", "energía cinética", "energia potencial", "energía potencial", "energia mecanica", "energía mecánica", "conservacion de la energia", "conservación de la energía"],
+      "explicacion": "La energía cinética es la energía del movimiento: Ec = ½·m·v². La energía potencial gravitacional depende de la altura: Ep = m·g·h, y en los problemas suele usarse g = 10 m/s². La energía mecánica es la suma de ambas y, si no hay fricción, se conserva: lo que pierde una forma lo gana la otra. Con fricción, parte de la energía mecánica se transforma en calor, pero la energía total del sistema se sigue conservando.",
+      "ejemplo": "Una pelota de 0,5 kg se deja caer desde 5 m de altura. Arriba tiene Ep = 0,5 kg × 10 m/s² × 5 m = 25 J. Justo antes de tocar el suelo, sin fricción, esos 25 J son cinéticos: ½ × 0,5 × v² = 25, así que v² = 100 y v = 10 m/s.",
+      "tip_icfes": "Sin fricción, la velocidad de un objeto que cae no depende de su masa: v = √(2·g·h). Muchas opciones incorrectas suponen que el objeto más pesado llega más rápido."
+    },
+    {
+      "id": "cie-ph-acidos-bases",
+      "subtema": "quimica",
+      "titulo": "Ácidos, bases y pH",
+      "palabras_clave": ["ph", "acido", "ácido", "acidos", "ácidos", "basico", "básico", "alcalino", "neutralizacion", "neutralización"],
+      "explicacion": "El pH mide qué tan ácida o básica es una solución, en una escala que suele ir de 0 a 14. Un pH menor que 7 es ácido (limón, vinagre, jugo gástrico), 7 es neutro (agua pura a 25 °C) y mayor que 7 es básico o alcalino (jabón, bicarbonato, leche de magnesia). La escala es logarítmica: cada unidad de pH menos significa una solución 10 veces más ácida. Cuando un ácido reacciona con una base se produce una neutralización, que forma una sal y agua.",
+      "ejemplo": "Un vinagre de pH 3 es 10 × 10 = 100 veces más ácido que un jugo de pH 5. Para aliviar la acidez estomacal se usa un antiácido básico, como el hidróxido de magnesio, que neutraliza parte del ácido del estómago.",
+      "tip_icfes": "Si el pH de un sistema sube, su acidez disminuye; si baja, aumenta. Revisa siempre la dirección del cambio y recuerda que cada unidad de pH equivale a un factor de 10."
+    },
+    {
+      "id": "cie-balanceo-conservacion-masa",
+      "subtema": "quimica",
+      "titulo": "Conservación de la masa y balanceo de ecuaciones",
+      "palabras_clave": ["balanceo", "balancear", "ecuacion quimica", "ecuación química", "reaccion quimica", "reacción química", "conservacion de la masa", "conservación de la masa", "lavoisier", "coeficientes"],
+      "explicacion": "Según la ley de conservación de la masa (Lavoisier), en una reacción química la materia no se crea ni se destruye: los átomos solo se reorganizan. Por eso una ecuación química debe estar balanceada, con el mismo número de átomos de cada elemento a ambos lados de la flecha. Para balancear se cambian únicamente los coeficientes (los números delante de las fórmulas) y nunca los subíndices, porque eso cambiaría la sustancia. Si en un experimento la masa parece aumentar o disminuir, casi siempre es porque un gas entró o salió del sistema.",
+      "ejemplo": "Combustión del metano (gas natural): CH₄ + 2 O₂ → CO₂ + 2 H₂O. Hay 1 C, 4 H y 4 O a cada lado. En masa: 16 g de CH₄ + 64 g de O₂ = 80 g de reactivos, que producen 44 g de CO₂ + 36 g de H₂O = 80 g de productos.",
+      "tip_icfes": "Para verificar el balanceo, cuenta los átomos de cada elemento a ambos lados multiplicando el coeficiente por el subíndice. Empieza por los elementos que aparecen en una sola sustancia de cada lado y deja el hidrógeno y el oxígeno para el final."
+    },
+    {
+      "id": "cie-variables-experimentales",
+      "subtema": "metodo-cientifico",
+      "titulo": "Variables, hipótesis y grupo control",
+      "palabras_clave": ["variable", "variables", "variable independiente", "variable dependiente", "hipotesis", "hipótesis", "grupo control", "experimento", "metodo cientifico", "método científico"],
+      "explicacion": "En un experimento, la variable independiente es la que el investigador cambia a propósito; la dependiente es la que mide para ver el efecto; y las variables controladas son las que mantiene iguales para que no afecten el resultado. La hipótesis es una posible respuesta a la pregunta de investigación que se puede poner a prueba, por ejemplo: 'si aumenta la temperatura, la pastilla se disolverá más rápido'. El grupo control no recibe el tratamiento y sirve como punto de comparación. Una conclusión válida se apoya en los datos y no generaliza más allá de lo que se midió.",
+      "ejemplo": "Para saber si un abono orgánico aumenta la cosecha de tomate, se siembran 20 plantas iguales: 10 reciben abono y 10 no. Variable independiente: uso del abono. Variable dependiente: kilogramos de tomate cosechados. Variables controladas: variedad, riego, luz y tipo de suelo. Grupo control: las 10 plantas sin abono.",
+      "tip_icfes": "Pregúntate: ¿qué cambió el investigador? (independiente) y ¿qué midió? (dependiente). Si dos grupos se diferencian en más de una condición, el experimento no permite saber cuál de ellas causó el efecto."
+    }
+  ]
+}

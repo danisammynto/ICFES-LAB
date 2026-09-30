@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simulacros · ICFES Lab</title>
+  <meta name="description" content="Simulacros completos con la estructura del Saber 11, minisimulacros y retos.">
+  <link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/tokens.css">
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/componentes.css">
+  <link rel="stylesheet" href="/css/layout.css">
+  <link rel="stylesheet" href="/css/paginas/simulacros.css">
+  <script src="/js/tema-inicial.js"></script>
+  <script type="module" src="/js/paginas/simulacros.js"></script>
+</head>
+<body class="app">
+  <a class="saltar-contenido" href="#contenido">Saltar al contenido</a>
+  <header id="cabecera" class="main-header"></header>
+  <nav id="barra-lateral" class="sidebar-lateral"></nav>
+
+  <main id="contenido" class="principal">
+    <div class="encabezado-pagina">
+      <div>
+        <h1>Simulacros</h1>
+        <p>Pon a prueba lo que sabes en condiciones parecidas a las del examen real.</p>
+      </div>
+    </div>
+
+    <div id="aviso-en-curso"></div>
+
+    <!-- Tarjetas del prototipo Barrasimulacros -->
+    <div class="main-container">
+      <div class="card completos">
+        <div class="card-content">
+          <span class="icono-card"><svg class="icono" aria-hidden="true"><use href="/img/iconos.svg#clipboard-list"></use></svg></span>
+          <h2>SIMULACROS</h2>
+          <div class="details-tiempo">
+            <p><strong>1.ª sesión:</strong> 4 h 30 min</p>
+            <p><strong>2.ª sesión:</strong> 4 h 30 min</p>
+          </div>
+          <div class="texto-details">
+            <p>Esta prueba ofrece un acercamiento a la experiencia del examen real, poniendo a prueba diferentes habilidades y conocimientos a través de preguntas tipo ICFES. Su objetivo es que puedas practicar, identificar tus fortalezas y reconocer los aspectos que necesitas seguir mejorando.</p>
+          </div>
+          <div class="resumen-card" id="resumen-completos"></div>
+          <p class="nota-banco" id="nota-completos"></p>
+        </div>
+        <a href="/simulacros-completos" class="btn btn-primario btn-lg btn-iniciar">INICIAR</a>
+      </div>
+
+      <div class="card minis">
+        <div class="card-content">
+          <span class="icono-card"><svg class="icono" aria-hidden="true"><use href="/img/iconos.svg#timer"></use></svg></span>
+          <h2>MINISIMULACROS</h2>
+          <div class="details-tiempo">
+            <p><strong>Duración:</strong> 30 min</p>
+            <p><strong>Preguntas:</strong> 20 a 30</p>
+          </div>
+          <div class="texto-details">
+            <p>Un breve acercamiento a la prueba que te permitirá poner en práctica tus conocimientos y mantener un buen ritmo de preparación. Responde diferentes preguntas tipo ICFES, fortalece tus habilidades y prepárate poco a poco para enfrentar la prueba con mayor seguridad.</p>
+          </div>
+          <div class="resumen-card" id="resumen-minis"></div>
+        </div>
+        <a href="/minisimulacros" class="btn btn-primario btn-lg btn-iniciar">INICIAR</a>
+      </div>
+    </div>
+
+    <section class="seccion" id="retos">
+      <div class="seccion-titulo">
+        <h2>Retos</h2>
+        <span class="texto-3 texto-sm">Se desbloquean al subir de nivel · recompensa si superas el porcentaje mínimo</span>
+      </div>
+      <div class="retos" id="lista-retos"></div>
+    </section>
+
+    <section class="seccion">
+      <div class="seccion-titulo"><h2>Historial</h2></div>
+      <div class="tarjeta" id="historial"></div>
+    </section>
+  </main>
+
+  <nav id="nav-movil" class="nav-movil"></nav>
+</body>
+</html>

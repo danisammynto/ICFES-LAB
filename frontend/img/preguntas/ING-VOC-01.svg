@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" role="img" aria-labelledby="titulo-ing-voc-01">
+  <title id="titulo-ing-voc-01">Aviso en inglés con el título NOTICE que dice: You can borrow up to 3 books for 15 days. Please show your student card.</title>
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <rect x="48" y="36" width="400" height="244" rx="18" fill="#81a1f6" fill-opacity="0.35"/>
+  <rect x="40" y="28" width="400" height="244" rx="18" fill="#ffffff"/>
+  <path d="M40 46 A18 18 0 0 1 58 28 H422 A18 18 0 0 1 440 46 V92 H40 Z" fill="#d5e068"/>
+  <line x1="40" y1="92" x2="440" y2="92" stroke="#2b2f5e" stroke-width="3"/>
+  <rect x="40" y="28" width="400" height="244" rx="18" fill="none" stroke="#2b2f5e" stroke-width="4"/>
+  <circle cx="70" cy="60" r="7" fill="#fda879" stroke="#2b2f5e" stroke-width="2"/>
+  <circle cx="410" cy="60" r="7" fill="#fda879" stroke="#2b2f5e" stroke-width="2"/>
+  <g font-family="Poppins, Arial, sans-serif" fill="#2b2f5e" text-anchor="middle">
+    <text x="240" y="70" font-size="26" font-weight="700" letter-spacing="4">NOTICE</text>
+    <text x="240" y="134" font-size="22">You can borrow up to 3 books</text>
+    <text x="240" y="164" font-size="22">for 15 days.</text>
+    <text x="240" y="218" font-size="20" font-weight="600">Please show your student card.</text>
+  </g>
+  <line x1="190" y1="187" x2="290" y2="187" stroke="#81a1f6" stroke-width="3" stroke-linecap="round"/>
+  <path d="M240 238 C232 233 220 233 212 236 V258 C220 255 232 255 240 260 Z" fill="#fda879" stroke="#2b2f5e" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M240 238 C248 233 260 233 268 236 V258 C260 255 248 255 240 260 Z" fill="#fda879" stroke="#2b2f5e" stroke-width="2" stroke-linejoin="round"/>
+</svg>

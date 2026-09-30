@@ -1,0 +1,73 @@
+/* =============================================================================
+   ICFES Lab · Páginas de cuenta (inicio de sesión, registro, recuperación)
+   ============================================================================= */
+
+.pagina-auth {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+  min-height: 100vh;
+}
+
+.panel-marca {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--esp-8);
+  padding: var(--esp-10);
+  color: #fff;
+  background:
+    radial-gradient(circle at 85% 15%, rgba(213, 224, 104, 0.35), transparent 40%),
+    radial-gradient(circle at 10% 90%, rgba(253, 168, 121, 0.35), transparent 40%),
+    linear-gradient(145deg, #3a3f8a 0%, #484ea2 45%, #6b7bdc 100%);
+  overflow: hidden;
+}
+
+.panel-marca .logo-imagen { height: 42px; color: #fff; }
+.panel-marca h1 { font-size: clamp(2rem, 3.2vw, 2.9rem); max-width: 540px; margin: 0 0 var(--esp-4); }
+.panel-marca h1 span { color: var(--lima); }
+.panel-marca p { color: rgba(255, 255, 255, 0.85); max-width: 480px; font-size: var(--texto-lg); }
+
+.lista-beneficios { list-style: none; padding: 0; margin: var(--esp-6) 0 0; display: grid; gap: var(--esp-3); }
+.lista-beneficios li { display: flex; align-items: center; gap: var(--esp-3); font-weight: 500; }
+.lista-beneficios .icono { width: 34px; height: 34px; padding: 7px; border-radius: 10px; background: rgba(255, 255, 255, 0.14); color: var(--lima); }
+
+.vanty-marca { position: absolute; right: 36px; bottom: 30px; width: 190px; animation: flotar 4.5s ease-in-out infinite; }
+
+.panel-formulario {
+  display: grid;
+  place-items: center;
+  padding: var(--esp-8) var(--esp-6);
+  background: var(--fondo);
+}
+
+.caja-formulario { width: min(440px, 100%); }
+.caja-formulario h2 { font-size: var(--texto-2xl); margin-bottom: 4px; }
+.caja-formulario > p { color: var(--texto-2); margin-bottom: var(--esp-6); }
+.caja-formulario .tarjeta { padding: var(--esp-8); }
+.pie-formulario { margin-top: var(--esp-5); text-align: center; font-size: var(--texto-sm); color: var(--texto-2); }
+.fila-campos { display: grid; grid-template-columns: 1fr 1fr; gap: var(--esp-3); }
+.enlace-secundario { font-size: var(--texto-sm); font-weight: 600; }
+
+.fuerza { display: flex; gap: 4px; margin-top: 4px; }
+.fuerza span { flex: 1; height: 5px; border-radius: 3px; background: var(--fondo-2); transition: background var(--transicion); }
+.fuerza[data-nivel='1'] span:nth-child(-n + 1) { background: var(--coral); }
+.fuerza[data-nivel='2'] span:nth-child(-n + 2) { background: var(--durazno-600); }
+.fuerza[data-nivel='3'] span:nth-child(-n + 3) { background: var(--lima-600); }
+.fuerza[data-nivel='4'] span:nth-child(-n + 4) { background: var(--exito); }
+
+.casilla { display: flex; gap: var(--esp-2); align-items: flex-start; font-size: var(--texto-sm); color: var(--texto-2); margin-bottom: var(--esp-4); }
+.casilla input { margin-top: 3px; accent-color: var(--primario); width: 17px; height: 17px; }
+
+@media (max-width: 991px) {
+  .pagina-auth { grid-template-columns: minmax(0, 1fr); }
+  .panel-marca { padding: var(--esp-6); gap: var(--esp-4); }
+  .panel-marca p, .lista-beneficios, .vanty-marca { display: none; }
+  .panel-marca h1 { font-size: var(--texto-2xl); margin: 0; }
+  .panel-formulario { place-items: start center; padding: var(--esp-6) var(--esp-4) var(--esp-10); }
+  .caja-formulario .tarjeta { padding: var(--esp-6); }
+}
+
+@media (max-width: 480px) {
+  .fila-campos { grid-template-columns: 1fr; gap: 0; }
+}

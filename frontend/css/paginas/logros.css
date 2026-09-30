@@ -1,0 +1,63 @@
+/* =============================================================================
+   ICFES Lab · Logros, niveles, insignias, racha y retos
+   ============================================================================= */
+
+.resumen-logros { display: grid; grid-template-columns: minmax(0, 1.4fr) repeat(3, minmax(0, 1fr)); gap: var(--esp-4); margin-bottom: var(--esp-6); }
+.tarjeta-nivel { display: flex; align-items: center; gap: var(--esp-4); background: linear-gradient(135deg, #484ea2, #6b7bdc); color: #fff; border: 0; }
+.tarjeta-nivel .medalla { --color: #d5e068; background: rgba(255, 255, 255, 0.15); border-color: rgba(213, 224, 104, 0.6); color: var(--lima); }
+.tarjeta-nivel h2 { color: #fff; margin: 0; font-size: var(--texto-xl); }
+.tarjeta-nivel p { margin: 0; color: rgba(255, 255, 255, 0.85); font-size: var(--texto-sm); }
+.tarjeta-nivel .barra { background: rgba(255, 255, 255, 0.2); margin: 8px 0 4px; }
+
+.grid-logros { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: var(--esp-4); }
+.logro { display: flex; gap: var(--esp-4); align-items: flex-start; }
+.logro h3 { font-size: var(--texto-md); margin: 0 0 2px; }
+.logro p { font-size: var(--texto-sm); color: var(--texto-2); margin: 0 0 var(--esp-2); }
+.logro .fila-entre { font-size: var(--texto-xs); color: var(--texto-3); margin-top: 6px; }
+.logro.pendiente { background: var(--superficie-2); }
+.logro.pendiente .medalla { filter: grayscale(1); opacity: 0.55; }
+.logro.desbloqueado { border-color: color-mix(in srgb, var(--lima-600) 45%, var(--borde)); }
+
+.ruta-niveles { position: relative; display: flex; flex-direction: column; gap: var(--esp-5); padding-left: 34px; }
+.ruta-niveles::before { content: ''; position: absolute; left: 27px; top: 20px; bottom: 20px; width: 4px; border-radius: 2px; background: var(--borde); }
+.nivel-ruta { position: relative; display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: var(--esp-4); align-items: flex-start; margin-left: -34px; }
+.nivel-ruta .medalla { width: 60px; height: 60px; position: relative; z-index: 1; background: var(--superficie); }
+.nivel-ruta.alcanzado .medalla { box-shadow: 0 0 0 5px color-mix(in srgb, var(--color) 20%, transparent); }
+.nivel-ruta:not(.alcanzado) .medalla { filter: grayscale(1); opacity: 0.6; }
+.nivel-ruta h3 { margin: 0; }
+.nivel-ruta .xp { font-size: var(--texto-sm); color: var(--texto-3); }
+.nivel-ruta ul { margin: var(--esp-3) 0 0; padding-left: 1.1em; font-size: var(--texto-sm); color: var(--texto-2); display: grid; gap: 4px; }
+
+.grid-insignias { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: var(--esp-4); }
+.insignia { display: flex; flex-direction: column; align-items: center; gap: var(--esp-2); text-align: center; padding: var(--esp-5) var(--esp-3); }
+.insignia strong { font-size: var(--texto-sm); }
+.insignia span { font-size: var(--texto-xs); color: var(--texto-3); }
+.insignia .rareza { text-transform: uppercase; letter-spacing: 0.06em; font-weight: 700; }
+.rareza.comun { color: var(--texto-3); }
+.rareza.rara { color: var(--cielo-700); }
+.rareza.epica { color: #8a5cf0; }
+.rareza.legendaria { color: var(--oro); }
+
+.racha-grande { display: grid; grid-template-columns: auto repeat(3, minmax(0, 1fr)); gap: var(--esp-6); align-items: center; }
+.racha-grande img { width: 90px; }
+.racha-grande .dato strong { font-family: var(--fuente-titulos); font-size: var(--texto-3xl); display: block; line-height: 1; }
+.calendario-largo { grid-auto-columns: minmax(10px, 1fr); }
+.hitos { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: var(--esp-3); }
+.hito { display: flex; gap: var(--esp-3); align-items: center; padding: var(--esp-4); border-radius: var(--radio-lg); border: 1px solid var(--borde); background: var(--superficie); }
+.hito .dias { display: grid; place-items: center; width: 52px; height: 52px; border-radius: 16px; background: var(--durazno-100); color: var(--durazno-800); font-family: var(--fuente-titulos); font-weight: 800; flex-shrink: 0; }
+.hito.obtenido .dias { background: var(--durazno-600); color: #fff; }
+.hito p { margin: 0; font-size: var(--texto-xs); color: var(--texto-2); }
+
+@media (max-width: 1199px) {
+  .resumen-logros { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .tarjeta-nivel { grid-column: 1 / -1; }
+  .racha-grande { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .racha-grande img { display: none; }
+}
+
+@media (max-width: 767px) {
+  .grid-logros { grid-template-columns: minmax(0, 1fr); }
+  .grid-insignias { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .racha-grande { gap: var(--esp-3); }
+  .racha-grande .dato strong { font-size: var(--texto-2xl); }
+}

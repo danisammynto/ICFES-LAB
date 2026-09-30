@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="Poppins, Arial, sans-serif">
+  <title>Gráfica de barras: aumento anual del salario mínimo e inflación anual en un país hipotético entre 2021 y 2024 (datos ficticios)</title>
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <text x="240" y="24" text-anchor="middle" font-size="16" font-weight="bold" fill="#2b2f5e">Salario mínimo e inflación (datos ficticios)</text>
+  <rect x="62" y="38" width="14" height="14" fill="#484ea2"/>
+  <text x="82" y="50" font-size="14" fill="#2b2f5e">Aumento del salario mínimo</text>
+  <rect x="300" y="38" width="14" height="14" fill="#fda879"/>
+  <text x="320" y="50" font-size="14" fill="#2b2f5e">Inflación anual</text>
+  <g stroke="#81a1f6" stroke-width="1" stroke-dasharray="4 4">
+    <line x1="60" y1="200" x2="460" y2="200"/>
+    <line x1="60" y1="150" x2="460" y2="150"/>
+    <line x1="60" y1="100" x2="460" y2="100"/>
+  </g>
+  <g font-size="14" fill="#2b2f5e" text-anchor="end">
+    <text x="52" y="255">0 %</text>
+    <text x="52" y="205">5 %</text>
+    <text x="52" y="155">10 %</text>
+    <text x="52" y="105">15 %</text>
+  </g>
+  <g fill="#484ea2">
+    <rect x="78" y="210" width="30" height="40"/>
+    <rect x="178" y="150" width="30" height="100"/>
+    <rect x="278" y="90" width="30" height="160"/>
+    <rect x="378" y="130" width="30" height="120"/>
+  </g>
+  <g fill="#fda879">
+    <rect x="112" y="220" width="30" height="30"/>
+    <rect x="212" y="120" width="30" height="130"/>
+    <rect x="312" y="160" width="30" height="90"/>
+    <rect x="412" y="190" width="30" height="60"/>
+  </g>
+  <line x1="60" y1="70" x2="60" y2="250" stroke="#2b2f5e" stroke-width="2"/>
+  <line x1="60" y1="250" x2="460" y2="250" stroke="#2b2f5e" stroke-width="2"/>
+  <g font-size="14" fill="#2b2f5e" text-anchor="middle">
+    <text x="93" y="204">4 %</text>
+    <text x="127" y="214">3 %</text>
+    <text x="193" y="144">10 %</text>
+    <text x="227" y="114">13 %</text>
+    <text x="293" y="84">16 %</text>
+    <text x="327" y="154">9 %</text>
+    <text x="393" y="124">12 %</text>
+    <text x="427" y="184">6 %</text>
+    <text x="110" y="272">2021</text>
+    <text x="210" y="272">2022</text>
+    <text x="310" y="272">2023</text>
+    <text x="410" y="272">2024</text>
+  </g>
+</svg>

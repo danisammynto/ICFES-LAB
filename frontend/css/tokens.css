@@ -1,0 +1,149 @@
+/* =============================================================================
+   ICFES Lab · Tokens de diseño
+   Paleta: verde claro #d5e068 · azul oscuro #484ea2 · azul claro #81a1f6 · naranjita #fda879
+   ============================================================================= */
+
+:root {
+  /* Paleta de marca */
+  --lima: #d5e068;
+  --lima-100: #f3f7d2;
+  --lima-600: #a8bb2c;
+  --lima-800: #5f6b12;
+  --indigo: #484ea2;
+  --indigo-50: #f0f1fb;
+  --indigo-100: #e1e3f6;
+  --indigo-700: #3a3f8a;
+  --indigo-900: #23264f;
+  --cielo: #81a1f6;
+  --cielo-50: #f1f5ff;
+  --cielo-100: #e2eafe;
+  --cielo-700: #4d6fd1;
+  --durazno: #fda879;
+  --durazno-100: #ffeadf;
+  --durazno-600: #f47c48;
+  --durazno-800: #9b3f14;
+  --oro: #e0a526;
+  --coral: #e5484d;
+  --coral-100: #fde7e8;
+  --exito: #2e9e6a;
+  --exito-100: #dcf5e8;
+
+  /* Materias */
+  --mat: #484ea2;
+  --lec: #81a1f6;
+  --cie: #a8bb2c;
+  --soc: #2fb3a0;
+  --ing: #b27af0;
+
+  /* Superficies y texto (modo claro) */
+  --fondo: #f5f6fb;
+  --fondo-2: #eceef8;
+  --superficie: #ffffff;
+  --superficie-2: #f8f9fd;
+  --borde: #e4e6f1;
+  --borde-fuerte: #cfd3e8;
+  --texto: #23264f;
+  --texto-2: #555a86;
+  --texto-3: #8588ac;
+  --texto-invertido: #ffffff;
+  --primario: var(--indigo);
+  --primario-hover: var(--indigo-700);
+  --primario-suave: var(--indigo-50);
+  --enfoque: #81a1f6;
+
+  /* Tipografía */
+  --fuente-titulos: 'Outfit', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --fuente-texto: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --texto-xs: 0.75rem;
+  --texto-sm: 0.875rem;
+  --texto-md: 1rem;
+  --texto-lg: 1.125rem;
+  --texto-xl: 1.375rem;
+  --texto-2xl: 1.75rem;
+  --texto-3xl: 2.25rem;
+  --texto-4xl: 3rem;
+
+  /* Espaciado, radios y sombras */
+  --esp-1: 4px;
+  --esp-2: 8px;
+  --esp-3: 12px;
+  --esp-4: 16px;
+  --esp-5: 20px;
+  --esp-6: 24px;
+  --esp-8: 32px;
+  --esp-10: 40px;
+  --radio-sm: 8px;
+  --radio: 12px;
+  --radio-lg: 18px;
+  --radio-xl: 24px;
+  --radio-pill: 999px;
+  --sombra-sm: 0 1px 2px rgba(35, 38, 79, 0.06);
+  --sombra: 0 1px 2px rgba(35, 38, 79, 0.05), 0 6px 20px rgba(35, 38, 79, 0.06);
+  --sombra-lg: 0 12px 40px rgba(35, 38, 79, 0.14);
+  --transicion: 160ms cubic-bezier(0.2, 0.7, 0.3, 1);
+
+  /* Estructura */
+  --alto-cabecera: 68px;
+  --ancho-barra: 232px;
+  --ancho-barra-compacta: 80px;
+  --alto-nav-movil: 66px;
+  --ancho-max: 1320px;
+
+  color-scheme: light;
+}
+
+/* Modo oscuro: preferencia del sistema (salvo que el usuario elija claro)… */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-tema='claro']) {
+    --fondo: #111329;
+    --fondo-2: #171a36;
+    --superficie: #1b1e3d;
+    --superficie-2: #212547;
+    --borde: #2b2f5c;
+    --borde-fuerte: #3b4076;
+    --texto: #eceefe;
+    --texto-2: #b0b4dc;
+    --texto-3: #8084b2;
+    --primario: #5a61c4;
+    --primario-hover: #6a71d4;
+    --primario-suave: #252a55;
+    --indigo-50: #252a55;
+    --indigo-100: #2d3264;
+    --cielo-50: #1f2a4d;
+    --cielo-100: #253359;
+    --lima-100: #2c3219;
+    --durazno-100: #3a2a24;
+    --coral-100: #3d2226;
+    --exito-100: #183a2c;
+    --sombra: 0 1px 2px rgba(0, 0, 0, 0.3), 0 6px 20px rgba(0, 0, 0, 0.25);
+    --sombra-lg: 0 12px 40px rgba(0, 0, 0, 0.5);
+    color-scheme: dark;
+  }
+}
+
+/* …o elección explícita en Configuración. */
+:root[data-tema='oscuro'] {
+  --fondo: #111329;
+  --fondo-2: #171a36;
+  --superficie: #1b1e3d;
+  --superficie-2: #212547;
+  --borde: #2b2f5c;
+  --borde-fuerte: #3b4076;
+  --texto: #eceefe;
+  --texto-2: #b0b4dc;
+  --texto-3: #8084b2;
+  --primario: #5a61c4;
+  --primario-hover: #6a71d4;
+  --primario-suave: #252a55;
+  --indigo-50: #252a55;
+  --indigo-100: #2d3264;
+  --cielo-50: #1f2a4d;
+  --cielo-100: #253359;
+  --lima-100: #2c3219;
+  --durazno-100: #3a2a24;
+  --coral-100: #3d2226;
+  --exito-100: #183a2c;
+  --sombra: 0 1px 2px rgba(0, 0, 0, 0.3), 0 6px 20px rgba(0, 0, 0, 0.25);
+  --sombra-lg: 0 12px 40px rgba(0, 0, 0, 0.5);
+  color-scheme: dark;
+}

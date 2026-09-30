@@ -1,0 +1,52 @@
+/* =============================================================================
+   ICFES Lab · Tienda y editor de avatar
+   ============================================================================= */
+
+.diseno-tienda { display: grid; grid-template-columns: 320px minmax(0, 1fr); gap: var(--esp-6); align-items: start; }
+
+.vista-avatar { position: sticky; top: calc(var(--alto-cabecera) + var(--esp-6)); text-align: center; }
+.vista-avatar .marco-avatar { width: 200px; height: 200px; margin: 0 auto var(--esp-4); border-radius: 50%; overflow: hidden; box-shadow: 0 16px 40px rgba(72, 78, 162, 0.25); }
+.vista-avatar .marco-avatar svg { width: 100%; height: 100%; }
+.saldo { display: inline-flex; align-items: center; gap: var(--esp-2); padding: 8px 16px; border-radius: var(--radio-pill); background: #fff4d6; color: #7a5600; font-family: var(--fuente-titulos); font-size: var(--texto-xl); font-weight: 800; margin-bottom: var(--esp-4); }
+.saldo .icono { color: var(--oro); }
+:root[data-tema='oscuro'] .saldo { background: #3a3218; color: #f4d27a; }
+@media (prefers-color-scheme: dark) { :root:not([data-tema='claro']) .saldo { background: #3a3218; color: #f4d27a; } }
+
+.grid-items { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: var(--esp-4); }
+.item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--esp-2);
+  padding: var(--esp-4);
+  border: 2px solid var(--borde);
+  border-radius: var(--radio-lg);
+  background: var(--superficie);
+  text-align: center;
+  cursor: pointer;
+  transition: border-color var(--transicion), transform var(--transicion);
+}
+.item:hover { transform: translateY(-2px); border-color: var(--cielo); }
+.item.seleccionado { border-color: var(--primario); box-shadow: 0 0 0 3px color-mix(in srgb, var(--cielo) 35%, transparent); }
+.item.bloqueado { cursor: not-allowed; opacity: 0.6; }
+.item .miniatura { width: 84px; height: 84px; border-radius: 50%; overflow: hidden; }
+.item .miniatura svg { width: 100%; height: 100%; }
+.item strong { font-size: var(--texto-sm); }
+.item .etiqueta-estado { position: absolute; top: 8px; right: 8px; }
+.item .precio { font-size: var(--texto-sm); font-weight: 700; color: #7a5600; display: inline-flex; align-items: center; gap: 4px; }
+.item .precio .icono { color: var(--oro); }
+
+.tarjeta-protector { display: flex; gap: var(--esp-5); align-items: center; flex-wrap: wrap; }
+.tarjeta-protector .medalla { --color: var(--durazno-600); }
+
+@media (max-width: 991px) {
+  .diseno-tienda { grid-template-columns: minmax(0, 1fr); }
+  .vista-avatar { position: static; }
+  .vista-avatar .marco-avatar { width: 150px; height: 150px; }
+}
+
+@media (max-width: 767px) {
+  .grid-items { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--esp-3); }
+  .item .miniatura { width: 70px; height: 70px; }
+}

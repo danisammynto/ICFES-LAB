@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vanty · ICFES Lab</title>
+  <meta name="description" content="Vanty, tu tutora con inteligencia artificial para el ICFES.">
+  <link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/tokens.css">
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/componentes.css">
+  <link rel="stylesheet" href="/css/layout.css">
+  <link rel="stylesheet" href="/css/pregunta.css">
+  <link rel="stylesheet" href="/css/paginas/inicio.css">
+  <link rel="stylesheet" href="/css/paginas/vanty.css">
+  <script src="/js/tema-inicial.js"></script>
+  <script type="module" src="/js/paginas/vanty.js"></script>
+</head>
+<body class="app">
+  <a class="saltar-contenido" href="#mensaje-nuevo">Saltar al chat</a>
+  <header id="cabecera" class="main-header"></header>
+  <nav id="barra-lateral" class="sidebar-lateral"></nav>
+
+  <main id="contenido" class="principal principal-vanty">
+    <div class="vanty-layout">
+      <aside class="conversaciones" id="panel-conversaciones" aria-label="Conversaciones">
+        <button class="btn btn-primario btn-bloque" id="nueva-conversacion">
+          <svg class="icono" aria-hidden="true"><use href="/img/iconos.svg#message-square-plus"></use></svg> Nueva conversación
+        </button>
+        <p class="texto-xs texto-3 mb-0">Historial</p>
+        <div class="lista-conversaciones" id="lista-conversaciones"></div>
+      </aside>
+
+      <section class="chat" aria-label="Chat con Vanty">
+        <div class="chat-cabecera">
+          <button class="btn btn-fantasma btn-icono boton-conversaciones" id="boton-conversaciones" aria-label="Ver conversaciones" aria-controls="panel-conversaciones" aria-expanded="false">
+            <svg class="icono" aria-hidden="true"><use href="/img/iconos.svg#panel-left"></use></svg>
+          </button>
+          <img src="/img/vanty.svg" alt="">
+          <div class="crecer">
+            <h1>Vanty</h1>
+            <span class="en-linea">Tu tutora del ICFES</span>
+          </div>
+          <span class="chip" id="modo-vanty"></span>
+          <span class="chip texto-xs" id="uso-vanty" title="Mensajes usados hoy"></span>
+        </div>
+
+        <div class="mensajes" id="mensajes" role="log" aria-live="polite" aria-relevant="additions"></div>
+
+        <div class="sugerencias" id="sugerencias" aria-label="Sugerencias"></div>
+        <form class="compositor" id="compositor">
+          <label class="caja-texto" for="mensaje-nuevo">
+            <span class="solo-lector">Escribe tu mensaje para Vanty</span>
+            <textarea id="mensaje-nuevo" rows="1" maxlength="2000" placeholder="Pregúntale a Vanty… (Enter para enviar, Shift+Enter para nueva línea)"></textarea>
+            <span class="contador" id="contador">0/2000</span>
+          </label>
+          <button class="btn btn-primario btn-icono btn-enviar" type="submit" id="boton-enviar" aria-label="Enviar mensaje">
+            <svg class="icono" aria-hidden="true"><use href="/img/iconos.svg#send"></use></svg>
+          </button>
+        </form>
+        <p class="aviso-ia mb-0">Vanty puede equivocarse. Verifica la información importante con tus docentes o fuentes oficiales.</p>
+      </section>
+
+      <aside class="panel-vanty" aria-label="Análisis de Vanty">
+        <div>
+          <h2><svg class="icono" aria-hidden="true"><use href="/img/iconos.svg#sparkles"></use></svg> Tu análisis</h2>
+          <p class="texto-xs texto-3">Vanty revisa tu rendimiento, errores, temas débiles y tiempos de respuesta.</p>
+        </div>
+        <div id="resumen-analisis"></div>
+        <div>
+          <h2 class="mb-4"><svg class="icono" aria-hidden="true"><use href="/img/iconos.svg#lightbulb"></use></svg> Recomendaciones</h2>
+          <div class="lista-recomendaciones" id="recomendaciones-vanty"></div>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <nav id="nav-movil" class="nav-movil"></nav>
+</body>
+</html>

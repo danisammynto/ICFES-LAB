@@ -1,0 +1,214 @@
+{
+  "materia": "matematicas",
+  "contextos": {
+    "MAT-CTX-01": {
+      "titulo": "Encuesta sobre el transporte al colegio",
+      "texto": "En un colegio de Bucaramanga se preguntó a los 250 estudiantes de los grados 10.º y 11.º qué medio de transporte usan para llegar al colegio. Cada estudiante marcó una sola opción. Los resultados se muestran en la tabla:\n\nGrado | Bus | Bicicleta | A pie | Total\n10.º | 75 | 30 | 45 | 150\n11.º | 35 | 25 | 40 | 100\nTotal | 110 | 55 | 85 | 250",
+      "imagen": null,
+      "imagen_alt": null,
+      "fuente": "Texto original elaborado para ICFES Lab"
+    }
+  },
+  "preguntas": [
+    {
+      "codigo": "MAT-ALG-01",
+      "subtema": "algebra",
+      "dificultad": 1,
+      "competencia": "Formulación y ejecución",
+      "contexto_ref": null,
+      "contexto": "En una plaza de mercado de Tunja, el precio de un bulto de papa pastusa pasó de $80.000 en enero a $92.000 en marzo.",
+      "enunciado": "¿En qué porcentaje aumentó el precio del bulto de papa entre enero y marzo?",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        { "letra": "A", "texto": "12 %", "correcta": false, "retroalimentacion": "Toma el aumento de $12.000 como si fuera un 12 %. Un aumento en pesos no es un porcentaje: hay que compararlo con el precio inicial, 12.000 ÷ 80.000 = 0,15." },
+        { "letra": "B", "texto": "13 %", "correcta": false, "retroalimentacion": "Resulta de dividir el aumento entre el precio final (12.000 ÷ 92.000 ≈ 0,13). La variación porcentual se calcula respecto al valor inicial, $80.000." },
+        { "letra": "C", "texto": "15 %", "correcta": true, "retroalimentacion": "Correcto: el aumento es 92.000 − 80.000 = $12.000 y 12.000 ÷ 80.000 = 0,15, es decir, 15 %. Comprobación: 80.000 × 1,15 = 92.000." },
+        { "letra": "D", "texto": "115 %", "correcta": false, "retroalimentacion": "Sale de 92.000 ÷ 80.000 = 1,15, que indica que el precio de marzo es el 115 % del de enero. El aumento es solo lo que supera el 100 %, es decir, 15 %." }
+      ],
+      "explicacion": "**Paso 1.** Calcula el aumento en pesos: 92.000 − 80.000 = $12.000.\n**Paso 2.** Compara ese aumento con el precio **inicial**: 12.000 ÷ 80.000 = 0,15.\n**Paso 3.** Exprésalo en porcentaje: 0,15 × 100 = 15 %.\n**Comprobación:** aumentar un 15 % equivale a multiplicar por 1,15, y 80.000 × 1,15 = 92.000 ✓.\nRecuerda: la variación porcentual siempre se calcula respecto al valor inicial, no al final.",
+      "tiempo_estimado_seg": 75,
+      "etiquetas": ["porcentajes", "variación porcentual", "aumento de precios"]
+    },
+    {
+      "codigo": "MAT-ALG-02",
+      "subtema": "algebra",
+      "dificultad": 2,
+      "competencia": "Formulación y ejecución",
+      "contexto_ref": null,
+      "contexto": "El grupo de teatro de un colegio de Barranquilla presentó una obra en el auditorio. La boleta general costaba $12.000 y la boleta para estudiantes, $8.000. En total se vendieron 180 boletas y se recaudaron $1.840.000.",
+      "enunciado": "¿Cuántas boletas para estudiantes se vendieron?",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        { "letra": "A", "texto": "40", "correcta": false, "retroalimentacion": "Sale de suponer que todas las boletas fueron generales (180 × 12.000 = 2.160.000) y dividir el excedente de $320.000 entre 8.000. Cada boleta de estudiante reduce el recaudo en 12.000 − 8.000 = 4.000, así que el excedente debe dividirse entre 4.000, lo que da 80." },
+        { "letra": "B", "texto": "80", "correcta": true, "retroalimentacion": "Correcto: con g + e = 180 y 12.000g + 8.000e = 1.840.000 se obtiene e = 80 y g = 100. Comprobación: 100 × 12.000 + 80 × 8.000 = 1.840.000." },
+        { "letra": "C", "texto": "92", "correcta": false, "retroalimentacion": "Resulta de dividir 1.840.000 entre la suma de los precios (20.000). Eso supondría que se vendieron 92 boletas de cada tipo, es decir, 184 boletas en total y no 180." },
+        { "letra": "D", "texto": "100", "correcta": false, "retroalimentacion": "100 es la cantidad de boletas generales. El sistema se resolvió bien, pero se respondió la otra incógnita: las boletas para estudiantes son 180 − 100 = 80." }
+      ],
+      "explicacion": "Sean g las boletas generales y e las boletas para estudiantes. El enunciado da dos ecuaciones:\n• g + e = 180 (cantidad de boletas)\n• 12.000g + 8.000e = 1.840.000 (dinero recaudado)\nDe la primera, g = 180 − e. Al sustituir en la segunda: 12.000(180 − e) + 8.000e = 1.840.000 → 2.160.000 − 4.000e = 1.840.000 → 4.000e = 320.000 → **e = 80**. Entonces g = 180 − 80 = 100.\n**Comprobación:** 100 × 12.000 + 80 × 8.000 = 1.200.000 + 640.000 = 1.840.000 ✓.",
+      "tiempo_estimado_seg": 150,
+      "etiquetas": ["sistemas de ecuaciones", "sistema 2×2", "método de sustitución"]
+    },
+    {
+      "codigo": "MAT-GEO-01",
+      "subtema": "geometria",
+      "dificultad": 2,
+      "competencia": "Formulación y ejecución",
+      "contexto_ref": null,
+      "contexto": "Don Hernando tiene un lote en una vereda de Duitama (Boyacá) con forma de trapecio rectángulo, como se muestra en la figura. El lado de 15 m es perpendicular a las dos bases. Él quiere cercar todo el borde del lote con malla.",
+      "enunciado": "¿Cuántos metros de malla necesita don Hernando para cercar todo el lote?",
+      "imagen": "/img/preguntas/MAT-GEO-01.svg",
+      "imagen_alt": "Trapecio rectángulo que representa el lote: base inferior de 20 m, base superior de 12 m y lado vertical de 15 m, perpendicular a ambas bases. El lado inclinado no tiene medida y está marcado con un signo de interrogación.",
+      "opciones": [
+        { "letra": "A", "texto": "47 m", "correcta": false, "retroalimentacion": "Solo suma los tres lados con medida conocida (20 + 12 + 15 = 47) y olvida el lado inclinado, que también hay que cercar." },
+        { "letra": "B", "texto": "55 m", "correcta": false, "retroalimentacion": "Toma el lado inclinado como 8 m, la diferencia entre las bases. Ese valor es solo uno de los catetos del triángulo rectángulo que se forma; el lado inclinado es la hipotenusa." },
+        { "letra": "C", "texto": "62 m", "correcta": false, "retroalimentacion": "Supone que el lado inclinado mide lo mismo que la altura (15 m). El lado inclinado es la hipotenusa de un triángulo rectángulo y siempre es más largo que cada cateto." },
+        { "letra": "D", "texto": "64 m", "correcta": true, "retroalimentacion": "Correcto: el lado inclinado mide √(8² + 15²) = √289 = 17 m y el perímetro es 20 + 12 + 15 + 17 = 64 m." }
+      ],
+      "explicacion": "**Paso 1.** Traza una línea vertical desde el extremo derecho de la base menor hasta la base mayor. Se forma un triángulo rectángulo con catetos de 15 m (la altura) y 20 − 12 = 8 m.\n**Paso 2.** El lado inclinado es la hipotenusa. Por el teorema de Pitágoras: c² = 8² + 15² = 64 + 225 = 289, así que c = √289 = 17 m.\n**Paso 3.** El perímetro es la suma de los cuatro lados: 20 + 12 + 15 + 17 = **64 m**.\nObserva que 8, 15 y 17 forman una terna pitagórica que conviene recordar.",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": ["perímetro", "teorema de pitágoras", "trapecio"]
+    },
+    {
+      "codigo": "MAT-GEO-02",
+      "subtema": "geometria",
+      "dificultad": 3,
+      "competencia": "Argumentación",
+      "contexto_ref": null,
+      "contexto": "El acueducto de una vereda de Garzón (Huila) tiene un tanque cilíndrico de 2 m de radio y 3 m de altura. La junta de acción comunal planea construir un tanque nuevo, también cilíndrico, con el doble del radio y la mitad de la altura del actual. El ingeniero encargado afirma: «El tanque nuevo tendrá la misma capacidad que el actual, porque lo que gana en radio lo pierde en altura».",
+      "enunciado": "¿Es correcta la afirmación del ingeniero?",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        { "letra": "A", "texto": "No, porque el volumen depende del cuadrado del radio: el tanque nuevo tendría 24π m³, el doble de los 12π m³ del actual.", "correcta": true, "retroalimentacion": "Correcto: V = π·r²·h. Actual: π·2²·3 = 12π m³. Nuevo: π·4²·1,5 = 24π m³. Duplicar el radio multiplica el volumen por 4 y reducir la altura a la mitad lo divide entre 2: el efecto neto es ×2." },
+        { "letra": "B", "texto": "No, porque al duplicar el radio el volumen se cuadruplica: el tanque nuevo tendría 48π m³, cuatro veces la capacidad actual.", "correcta": false, "retroalimentacion": "Tiene en cuenta el efecto del radio (×4), pero olvida que la altura se reduce a la mitad. 48π m³ sería la capacidad si la altura siguiera siendo de 3 m." },
+        { "letra": "C", "texto": "Sí, porque el radio se multiplica por 2 y la altura se divide entre 2, y esos dos cambios se compensan exactamente.", "correcta": false, "retroalimentacion": "Es un razonamiento lineal: el radio aparece elevado al cuadrado en la fórmula del volumen, así que su efecto (×4) es mayor que el de la altura (÷2)." },
+        { "letra": "D", "texto": "Sí, porque los dos tanques tienen la misma superficie lateral, 12π m², y por lo tanto les cabe la misma cantidad de agua.", "correcta": false, "retroalimentacion": "Es cierto que la superficie lateral (2π·r·h) mide 12π m² en ambos tanques, pero el área no mide la capacidad. La capacidad es el volumen, y el del tanque nuevo es el doble." }
+      ],
+      "explicacion": "La capacidad de un tanque cilíndrico es su volumen: V = π·r²·h.\n• Tanque actual: V = π · 2² · 3 = 12π m³ ≈ 37,7 m³.\n• Tanque nuevo: r = 4 m y h = 1,5 m, así que V = π · 4² · 1,5 = 24π m³ ≈ 75,4 m³.\nComo el radio está **al cuadrado**, duplicarlo multiplica el volumen por 2² = 4; reducir la altura a la mitad lo divide entre 2. El efecto neto es 4 ÷ 2 = 2: el tanque nuevo tiene el **doble** de capacidad, así que la afirmación del ingeniero es falsa.\nOjo: la superficie lateral sí es igual en ambos tanques (12π m²), pero el área no indica cuánta agua cabe.",
+      "tiempo_estimado_seg": 150,
+      "etiquetas": ["volumen", "cilindro", "cambio de dimensiones"]
+    },
+    {
+      "codigo": "MAT-EST-01",
+      "subtema": "estadistica",
+      "dificultad": 1,
+      "competencia": "Interpretación y representación",
+      "contexto_ref": null,
+      "contexto": "La bibliotecaria de un colegio de Tunja registró cuántos libros prestó cada día, de lunes a viernes, durante una semana. Los resultados se muestran en la gráfica.",
+      "enunciado": "¿Cuál fue el promedio (media aritmética) de libros prestados por día durante esa semana?",
+      "imagen": "/img/preguntas/MAT-EST-01.svg",
+      "imagen_alt": "Gráfica de barras del número de libros prestados por día: lunes 15, martes 20, miércoles 10, jueves 25 y viernes 20. El eje vertical va de 0 a 30 de 5 en 5.",
+      "opciones": [
+        { "letra": "A", "texto": "17,5 libros", "correcta": false, "retroalimentacion": "Resulta de promediar solo los valores distintos (10, 15, 20 y 25): 70 ÷ 4 = 17,5. Cada día cuenta, así que el 20 debe sumarse dos veces (martes y viernes)." },
+        { "letra": "B", "texto": "18 libros", "correcta": true, "retroalimentacion": "Correcto: la suma es 15 + 20 + 10 + 25 + 20 = 90 libros y hay 5 días, así que la media es 90 ÷ 5 = 18." },
+        { "letra": "C", "texto": "20 libros", "correcta": false, "retroalimentacion": "20 es la mediana (el dato central al ordenar: 10, 15, 20, 20, 25) y también la moda, pero no la media." },
+        { "letra": "D", "texto": "90 libros", "correcta": false, "retroalimentacion": "90 es el total de libros prestados en la semana. Para obtener el promedio falta dividir entre los 5 días." }
+      ],
+      "explicacion": "**Paso 1.** Lee en la gráfica el valor de cada barra: lunes 15, martes 20, miércoles 10, jueves 25 y viernes 20.\n**Paso 2.** Suma todos los datos: 15 + 20 + 10 + 25 + 20 = 90.\n**Paso 3.** Divide entre la cantidad de datos (5 días): 90 ÷ 5 = **18 libros por día**.\nNo confundas la media con la mediana ni con la moda, que en este caso valen 20.",
+      "tiempo_estimado_seg": 75,
+      "etiquetas": ["media aritmética", "gráfica de barras", "lectura de gráficas"]
+    },
+    {
+      "codigo": "MAT-EST-02",
+      "subtema": "estadistica",
+      "dificultad": 2,
+      "competencia": "Argumentación",
+      "contexto_ref": null,
+      "contexto": "El consejo estudiantil de un colegio de Pereira, que tiene 1.200 estudiantes, quiere saber cuál es el deporte preferido para organizar un torneo. Para ello encuestó a los 40 integrantes de la selección de fútbol del colegio, y 30 de ellos respondieron que su deporte preferido es el fútbol. Con base en esto, el consejo concluyó que el 75 % de los estudiantes del colegio prefiere el fútbol.",
+      "enunciado": "¿Es válida la conclusión del consejo estudiantil?",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        { "letra": "A", "texto": "Sí, porque 30 de los 40 encuestados equivalen exactamente al 75 %, y ese porcentaje se puede aplicar a todo el colegio.", "correcta": false, "retroalimentacion": "El cálculo es correcto (30 ÷ 40 = 0,75), pero solo describe a la selección de fútbol. Un cálculo bien hecho no corrige una muestra mal escogida." },
+        { "letra": "B", "texto": "Sí, porque 40 estudiantes es una muestra suficientemente grande para representar a un colegio de 1.200 estudiantes.", "correcta": false, "retroalimentacion": "El tamaño no es lo único importante: si los encuestados salen de un grupo particular, la muestra sigue sesgada, sin importar cuántos sean." },
+        { "letra": "C", "texto": "No, porque para que una encuesta sea válida se debe preguntar como mínimo a la mitad de los estudiantes del colegio.", "correcta": false, "retroalimentacion": "No existe esa regla. Una muestra pequeña puede ser válida si se elige al azar entre todos los estudiantes; el problema aquí es a quiénes se encuestó, no cuántos." },
+        { "letra": "D", "texto": "No, porque solo se encuestó a jugadores de fútbol, que tienden a preferir ese deporte, así que la muestra no representa al colegio.", "correcta": true, "retroalimentacion": "Correcto: la muestra tiene un sesgo de selección. Para generalizar, habría que elegir al azar estudiantes de todos los grados y cursos." }
+      ],
+      "explicacion": "Para generalizar el resultado de una encuesta a toda la población (los 1.200 estudiantes), la muestra debe ser **representativa**, es decir, parecerse a la población en lo que se quiere estudiar.\nAquí se encuestó únicamente a la selección de fútbol, un grupo que por su naturaleza tiende a preferir ese deporte: es un **sesgo de selección**.\nEl cálculo 30 ÷ 40 = 75 % es correcto, pero solo describe a la selección, no al colegio.\nUna forma adecuada sería escoger al azar estudiantes de todos los grados y cursos; el problema no es el tamaño de la muestra, sino cómo se eligió.",
+      "tiempo_estimado_seg": 90,
+      "etiquetas": ["muestra representativa", "sesgo", "encuestas"]
+    },
+    {
+      "codigo": "MAT-PRO-01",
+      "subtema": "probabilidad",
+      "dificultad": 1,
+      "competencia": "Interpretación y representación",
+      "contexto_ref": "MAT-CTX-01",
+      "contexto": null,
+      "enunciado": "Si se elige al azar uno de los 250 estudiantes encuestados, ¿cuál es la probabilidad de que llegue al colegio en bus?",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        { "letra": "A", "texto": "1/3", "correcta": false, "retroalimentacion": "Supone que los tres medios de transporte son igual de probables. No es así: cada estudiante es un caso, y muchos más estudiantes llegan en bus que en bicicleta." },
+        { "letra": "B", "texto": "11/25", "correcta": true, "retroalimentacion": "Correcto: 110 de los 250 estudiantes llegan en bus, y 110/250 = 11/25 = 0,44 = 44 %." },
+        { "letra": "C", "texto": "1/2", "correcta": false, "retroalimentacion": "Es la probabilidad calculada solo con los estudiantes de 10.º (75/150). La pregunta se refiere a todos los encuestados, así que se deben usar los totales." },
+        { "letra": "D", "texto": "11/14", "correcta": false, "retroalimentacion": "Divide los casos favorables entre los no favorables (110/140). En la probabilidad, el denominador son todos los casos posibles: 250." }
+      ],
+      "explicacion": "La probabilidad clásica es P = casos favorables ÷ casos posibles.\n**Casos posibles:** los 250 estudiantes encuestados.\n**Casos favorables:** los que llegan en bus; según la columna «Bus», son 75 + 35 = 110.\nP = 110/250 = 11/25 = 0,44, es decir, **44 %**.\nSi la pregunta hubiera dicho «si se elige un estudiante de 10.º», el total de casos posibles se reduciría a 150.",
+      "tiempo_estimado_seg": 75,
+      "etiquetas": ["probabilidad clásica", "tabla de doble entrada", "casos favorables"]
+    },
+    {
+      "codigo": "MAT-PRO-02",
+      "subtema": "probabilidad",
+      "dificultad": 3,
+      "competencia": "Argumentación",
+      "contexto_ref": "MAT-CTX-01",
+      "contexto": null,
+      "enunciado": "Mateo observa en la tabla que 30 estudiantes de 10.º llegan en bicicleta, mientras que en 11.º solo lo hacen 25. Por eso afirma: «Si se elige al azar un estudiante de 10.º, es más probable que llegue en bicicleta que si se elige al azar un estudiante de 11.º». ¿Es correcta la afirmación de Mateo?",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        { "letra": "A", "texto": "No, porque la probabilidad es 30/150 = 20 % para un estudiante de 10.º y 25/100 = 25 % para uno de 11.º.", "correcta": true, "retroalimentacion": "Correcto: al fijar el grado, los casos posibles son solo los estudiantes de ese grado. En proporción, en 11.º hay más estudiantes que llegan en bicicleta." },
+        { "letra": "B", "texto": "No, porque en ambos casos la probabilidad es 55/250 = 22 %, ya que todos son estudiantes del mismo colegio.", "correcta": false, "retroalimentacion": "22 % es la probabilidad de que un estudiante cualquiera llegue en bicicleta. Al elegir dentro de un grado, el total de casos posibles cambia y la probabilidad también." },
+        { "letra": "C", "texto": "Sí, porque 30 es mayor que 25; es decir, en 10.º hay más casos favorables que en 11.º.", "correcta": false, "retroalimentacion": "Compara solo los casos favorables e ignora que los grupos tienen distinto tamaño: 150 estudiantes en 10.º y 100 en 11.º." },
+        { "letra": "D", "texto": "Sí, porque de los 55 estudiantes que llegan en bicicleta, 30 son de 10.º y 25 de 11.º, y 30/55 es mayor que 25/55.", "correcta": false, "retroalimentacion": "Invierte la condición: 30/55 es la probabilidad de que un ciclista elegido al azar sea de 10.º, no la de que un estudiante de 10.º llegue en bicicleta." }
+      ],
+      "explicacion": "La afirmación compara dos probabilidades **condicionales**: primero se fija el grado y luego se pregunta por la bicicleta. Por eso los casos posibles son solo los estudiantes de ese grado.\n• P(bicicleta | 10.º) = 30/150 = 0,20 = 20 % (se lee «probabilidad de llegar en bicicleta dado que es de 10.º»).\n• P(bicicleta | 11.º) = 25/100 = 0,25 = 25 %.\nAunque en 10.º hay más ciclistas (30 > 25), también hay más estudiantes (150 > 100), así que la proporción es menor.\nEs más probable que un estudiante de 11.º llegue en bicicleta, y la afirmación de Mateo es **falsa**.",
+      "tiempo_estimado_seg": 150,
+      "etiquetas": ["probabilidad condicional", "tabla de doble entrada", "argumentación"]
+    },
+    {
+      "codigo": "MAT-CAL-01",
+      "subtema": "calculo-basico",
+      "dificultad": 2,
+      "competencia": "Interpretación y representación",
+      "contexto_ref": null,
+      "contexto": "En el Festival del Viento y de las Cometas de Villa de Leyva (Boyacá), Samuel registró la altura de su cometa durante 12 minutos de vuelo. La gráfica muestra la altura h, en metros, en función del tiempo t, en minutos.",
+      "enunciado": "¿En cuál de los siguientes intervalos de tiempo la cometa descendió con mayor rapidez?",
+      "imagen": "/img/preguntas/MAT-CAL-01.svg",
+      "imagen_alt": "Gráfica de la altura de la cometa (en metros) contra el tiempo (en minutos), formada por segmentos rectos: sube de 0 m a 30 m entre los minutos 0 y 2, llega a 50 m en el minuto 4, se mantiene en 50 m hasta el minuto 6, baja a 30 m en el minuto 7 y desciende hasta 0 m en el minuto 12.",
+      "opciones": [
+        { "letra": "A", "texto": "Entre el minuto 0 y el minuto 2", "correcta": false, "retroalimentacion": "En ese tramo la altura cambia rápido (15 m por minuto), pero la cometa está subiendo, no descendiendo: la gráfica es creciente." },
+        { "letra": "B", "texto": "Entre el minuto 4 y el minuto 6", "correcta": false, "retroalimentacion": "En ese tramo la cometa está en su altura máxima (50 m), pero la gráfica es horizontal: la altura no cambia, así que la rapidez de cambio es 0." },
+        { "letra": "C", "texto": "Entre el minuto 6 y el minuto 7", "correcta": true, "retroalimentacion": "Correcto: la altura baja de 50 m a 30 m en 1 minuto, es decir, 20 m por minuto. Es el tramo decreciente más inclinado." },
+        { "letra": "D", "texto": "Entre el minuto 7 y el minuto 12", "correcta": false, "retroalimentacion": "Es el tramo en el que más altura se pierde (30 m), pero lo hace en 5 minutos: 30 ÷ 5 = 6 m por minuto, más lento que entre los minutos 6 y 7." }
+      ],
+      "explicacion": "La rapidez con que cambia la altura en un intervalo es la tasa de cambio: Δh ÷ Δt. Solo interesan los tramos en los que la gráfica **baja**.\n• Del minuto 6 al 7: (30 − 50) ÷ (7 − 6) = −20 m/min.\n• Del minuto 7 al 12: (0 − 30) ÷ (12 − 7) = −6 m/min.\nEl signo negativo indica descenso. La cometa descendió más rápido entre los minutos 6 y 7 (20 m por minuto), aunque en total perdió más altura entre los minutos 7 y 12.\nEn la gráfica, ese es el tramo decreciente más inclinado.",
+      "tiempo_estimado_seg": 105,
+      "etiquetas": ["tasa de cambio", "interpretación de gráficas", "decrecimiento"]
+    },
+    {
+      "codigo": "MAT-CAL-02",
+      "subtema": "calculo-basico",
+      "dificultad": 3,
+      "competencia": "Formulación y ejecución",
+      "contexto_ref": null,
+      "contexto": "Un emprendimiento de arepas de Bogotá tiene 1.600 seguidores en redes sociales. Una agencia de publicidad le ofrece dos estrategias:\n• Estrategia 1: ganar 1.500 seguidores nuevos cada mes.\n• Estrategia 2: aumentar cada mes el número de seguidores en un 50 % respecto a los que tenga al final del mes anterior.",
+      "enunciado": "Si cada estrategia se cumple exactamente como se describe, ¿al final de qué mes el número de seguidores con la estrategia 2 supera por primera vez al de la estrategia 1?",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        { "letra": "A", "texto": "Al final del segundo mes", "correcta": false, "retroalimentacion": "Resulta de calcular la estrategia 2 como 1.600 × 1,5 × n (4.800 en el mes 2). Pero el 50 % se aplica sobre el valor del mes anterior, así que el factor 1,5 se multiplica una vez por cada mes: en el mes 2 hay 1.600 × 1,5² = 3.600 seguidores, menos que 4.600." },
+        { "letra": "B", "texto": "Al final del tercer mes", "correcta": false, "retroalimentacion": "En el tercer mes el aumento de la estrategia 2 (1.800 seguidores) supera por primera vez al de la estrategia 1 (1.500), pero el total todavía es menor: 5.400 frente a 6.100. Que la tasa de cambio sea mayor no significa que el valor ya lo sea." },
+        { "letra": "C", "texto": "Al final del cuarto mes", "correcta": true, "retroalimentacion": "Correcto: en el mes 4 la estrategia 2 llega a 1.600 × 1,5⁴ = 8.100 seguidores y la estrategia 1 a 1.600 + 4 × 1.500 = 7.600. En el mes 3 todavía iba perdiendo (5.400 frente a 6.100)." },
+        { "letra": "D", "texto": "Nunca, porque la estrategia 2 solo agrega 800 seguidores cada mes", "correcta": false, "retroalimentacion": "Calcula el 50 % siempre sobre los 1.600 seguidores iniciales. En la estrategia 2 el porcentaje se aplica sobre la cantidad acumulada, así que los aumentos crecen cada mes: 800, 1.200, 1.800, 2.700…" }
+      ],
+      "explicacion": "La estrategia 1 es **lineal** (suma 1.500 cada mes): S₁ = 1.600 + 1.500·n. La estrategia 2 es **exponencial** (multiplica por 1,5 cada mes): S₂ = 1.600 · 1,5ⁿ.\nMes a mes (estrategia 1 frente a estrategia 2):\n• Mes 1: 3.100 frente a 2.400\n• Mes 2: 4.600 frente a 3.600\n• Mes 3: 6.100 frente a 5.400\n• Mes 4: 7.600 frente a **8.100**\nLa estrategia 2 supera a la 1 por primera vez al final del **cuarto mes**. Aunque empieza más despacio, sus aumentos crecen cada mes, y a largo plazo un crecimiento exponencial siempre supera a uno lineal.",
+      "tiempo_estimado_seg": 180,
+      "etiquetas": ["crecimiento exponencial", "crecimiento lineal", "tasa de cambio"]
+    }
+  ]
+}

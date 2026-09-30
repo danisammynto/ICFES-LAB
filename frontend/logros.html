@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Logros · ICFES Lab</title>
+  <meta name="description" content="Tus logros, niveles, insignias, rachas y retos en ICFES Lab.">
+  <link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/tokens.css">
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/componentes.css">
+  <link rel="stylesheet" href="/css/layout.css">
+  <link rel="stylesheet" href="/css/paginas/inicio.css">
+  <link rel="stylesheet" href="/css/paginas/simulacros.css">
+  <link rel="stylesheet" href="/css/paginas/logros.css">
+  <script src="/js/tema-inicial.js"></script>
+  <script type="module" src="/js/paginas/logros.js"></script>
+</head>
+<body class="app">
+  <a class="saltar-contenido" href="#contenido">Saltar al contenido</a>
+  <header id="cabecera" class="main-header"></header>
+  <nav id="barra-lateral" class="sidebar-lateral"></nav>
+
+  <main id="contenido" class="principal">
+    <div class="encabezado-pagina">
+      <div>
+        <h1>Logros y retos</h1>
+        <p>Cada paso cuenta: sube de nivel, mantén tu racha y colecciona insignias.</p>
+      </div>
+      <a href="/tienda" class="btn btn-secundario"><svg class="icono" aria-hidden="true"><use href="/img/iconos.svg#store"></use></svg> Ir a la tienda</a>
+    </div>
+
+    <div class="resumen-logros" id="resumen-logros"></div>
+
+    <div class="pestanas" role="tablist" aria-label="Secciones de logros">
+      <button role="tab" id="tab-logros" aria-controls="panel-logros" aria-selected="true"><svg class="icono" aria-hidden="true"><use href="/img/iconos.svg#trophy"></use></svg> Logros</button>
+      <button role="tab" id="tab-niveles" aria-controls="panel-niveles" aria-selected="false" tabindex="-1"><svg class="icono" aria-hidden="true"><use href="/img/iconos.svg#mountain"></use></svg> Niveles</button>
+      <button role="tab" id="tab-insignias" aria-controls="panel-insignias" aria-selected="false" tabindex="-1"><svg class="icono" aria-hidden="true"><use href="/img/iconos.svg#award"></use></svg> Insignias</button>
+      <button role="tab" id="tab-racha" aria-controls="panel-racha" aria-selected="false" tabindex="-1"><svg class="icono" aria-hidden="true"><use href="/img/iconos.svg#flame"></use></svg> Racha</button>
+      <button role="tab" id="tab-retos" aria-controls="panel-retos" aria-selected="false" tabindex="-1"><svg class="icono" aria-hidden="true"><use href="/img/iconos.svg#swords"></use></svg> Retos</button>
+    </div>
+
+    <section role="tabpanel" id="panel-logros" aria-labelledby="tab-logros"></section>
+    <section role="tabpanel" id="panel-niveles" aria-labelledby="tab-niveles" hidden></section>
+    <section role="tabpanel" id="panel-insignias" aria-labelledby="tab-insignias" hidden></section>
+    <section role="tabpanel" id="panel-racha" aria-labelledby="tab-racha" hidden></section>
+    <section role="tabpanel" id="panel-retos" aria-labelledby="tab-retos" hidden></section>
+  </main>
+
+  <nav id="nav-movil" class="nav-movil"></nav>
+</body>
+</html>

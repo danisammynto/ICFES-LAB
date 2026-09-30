@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 212 48" role="img" aria-labelledby="titulo-logo">
+  <title id="titulo-logo">ICFES Lab</title>
+  <rect x="2" y="2" width="44" height="44" rx="13" fill="#484ea2"/>
+  <path d="M19 12h10M21 12v8.5L13.6 32.9a3.2 3.2 0 0 0 2.8 4.8h15.2a3.2 3.2 0 0 0 2.8-4.8L27 20.5V12" fill="none" stroke="#ffffff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M16.3 30.4h15.4l2 3.4a1.6 1.6 0 0 1-1.4 2.4H15.7a1.6 1.6 0 0 1-1.4-2.4z" fill="#d5e068"/>
+  <circle cx="22" cy="26" r="1.7" fill="#81a1f6"/>
+  <circle cx="26.6" cy="23.4" r="1.2" fill="#81a1f6"/>
+  <path d="M37 7.5l1.3 3.2 3.2 1.3-3.2 1.3L37 16.5l-1.3-3.2-3.2-1.3 3.2-1.3z" fill="#fda879"/>
+  <text x="56" y="33" font-family="Outfit, 'Segoe UI', Arial, sans-serif" font-size="25" font-weight="800" fill="#23264f" letter-spacing="-0.5">ICFES<tspan fill="#484ea2"> Lab</tspan></text>
+</svg>

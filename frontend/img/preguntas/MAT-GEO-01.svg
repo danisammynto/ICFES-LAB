@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Lote en forma de trapecio rectángulo: base mayor de 20 m, base menor de 12 m, lado perpendicular a las bases de 15 m y lado inclinado desconocido</title>
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <polygon points="100,250 380,250 268,40 100,40" fill="#81a1f6" fill-opacity="0.25" stroke="#2b2f5e" stroke-width="3" stroke-linejoin="round"/>
+  <line x1="268" y1="40" x2="380" y2="250" stroke="#484ea2" stroke-width="4" stroke-linecap="round"/>
+  <path d="M100,236 H114 V250" fill="none" stroke="#2b2f5e" stroke-width="2"/>
+  <path d="M100,54 H114 V40" fill="none" stroke="#2b2f5e" stroke-width="2"/>
+  <g font-family="Poppins, Arial, sans-serif" fill="#2b2f5e">
+    <text x="240" y="280" font-size="18" text-anchor="middle">20 m</text>
+    <text x="184" y="30" font-size="18" text-anchor="middle">12 m</text>
+    <text x="90" y="151" font-size="18" text-anchor="end">15 m</text>
+    <text x="345" y="140" font-size="22" font-weight="700" fill="#484ea2">?</text>
+  </g>
+</svg>

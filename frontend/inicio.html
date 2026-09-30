@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicio · ICFES Lab</title>
+  <meta name="description" content="Tu panel de estudio para la Prueba Saber 11: racha, progreso, estadísticas y recomendaciones de Vanty.">
+  <link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/tokens.css">
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/componentes.css">
+  <link rel="stylesheet" href="/css/layout.css">
+  <link rel="stylesheet" href="/css/paginas/inicio.css">
+  <script src="/js/tema-inicial.js"></script>
+  <script src="/vendor/chart.js/chart.umd.min.js" defer></script>
+  <script type="module" src="/js/paginas/inicio.js"></script>
+</head>
+<body class="app">
+  <a class="saltar-contenido" href="#contenido">Saltar al contenido</a>
+  <header id="cabecera" class="main-header"></header>
+  <nav id="barra-lateral" class="sidebar-lateral"></nav>
+
+  <main id="contenido" class="principal">
+    <div class="encabezado-pagina">
+      <div>
+        <h1 id="saludo">¡Hola!</h1>
+        <p id="subtitulo">Preparando tu panel de estudio…</p>
+      </div>
+    </div>
+
+    <!-- Fila superior: racha · recordatorio diario · cuenta regresiva -->
+    <div class="fila-superior">
+      <article class="racha tarjeta" aria-labelledby="titulo-racha">
+        <h3 class="titulo-racha" id="titulo-racha">RACHA DE <span id="dias-racha">0</span> DÍAS</h3>
+        <img src="/img/fuego.svg" alt="" class="fuego-racha">
+        <p class="racha-record mb-0" id="record-racha"></p>
+        <div class="semana-racha" id="semana-racha" aria-label="Actividad de esta semana"></div>
+        <div class="recompensa-racha" id="recompensa-racha"></div>
+      </article>
+
+      <article class="recordatorio tarjeta" aria-labelledby="mensaje-estudio">
+        <span class="etiqueta-dia">Recordatorio diario</span>
+        <h2 id="mensaje-estudio">ESTE ES TU DÍA DE ESTUDIO</h2>
+        <p id="motivacion"></p>
+        <a href="/materias" class="btn btn-lima btn-lg boton-recordatorio" id="boton-leccion">INICIA TU LECCIÓN DE HOY</a>
+        <p class="detalle-leccion mb-0" id="detalle-leccion"></p>
+        <img src="/img/vanty.svg" alt="Vanty, tu tutora" class="imagen-personaje">
+      </article>
+
+      <article class="cuenta-regresiva tarjeta" aria-labelledby="titulo-cuenta">
+        <h3 class="titulo-cuenta-regresiva" id="titulo-cuenta">DÍAS RESTANTES PARA EL ICFES</h3>
+        <div><span id="dias-icfes" class="dias-restantes">–</span><span class="dias-unidad">días</span></div>
+        <div>
+          <p class="fecha" id="fecha-icfes"></p>
+          <a href="/configuracion#preparacion" id="cambiar-fecha">Cambiar mi fecha</a>
+        </div>
+      </article>
+    </div>
+
+    <!-- Fila inferior: porcentaje completado · estadísticas -->
+    <div class="fila-inferior">
+      <article class="progreso tarjeta">
+        <h2>Porcentaje completado</h2>
+        <div class="circulo-progreso anillo" id="anillo-progreso" style="--color: var(--primario)">
+          <div class="centrado">
+            <span id="porcentaje-general" class="anillo-valor">0%</span>
+            <span class="anillo-etiqueta">de tu plan de estudio</span>
+          </div>
+        </div>
+        <div class="nivel-resumen" id="nivel-resumen"></div>
+      </article>
+
+      <div class="estadisticas">
+        <article class="analisis-horas tarjeta">
+          <h3>Horas estudiadas esta semana</h3>
+          <div class="grafica"><canvas id="graficobarras" aria-label="Horas estudiadas por día"></canvas></div>
+        </article>
+        <article class="analisis-desempeno tarjeta">
+          <h3>Desempeño por área</h3>
+          <div class="grafica"><canvas id="graficoRadar" aria-label="Puntaje estimado por área"></canvas></div>
+        </article>
+        <article class="analisis-avance tarjeta">
+          <h3>Porcentaje por materia</h3>
+          <div class="lista-progreso" id="lista-progreso"></div>
+        </article>
+      </div>
+    </div>
+
+    <!-- Analítica: indicadores, evolución, recomendaciones y calendario -->
+    <div class="fila-analitica">
+      <div>
+        <div class="kpis" id="kpis"></div>
+        <article class="tarjeta">
+          <h3 class="tarjeta-titulo">Evolución semanal</h3>
+          <p class="tarjeta-sub">Precisión y preguntas respondidas en las últimas 8 semanas</p>
+          <div class="grafica grafica-alta"><canvas id="grafico-evolucion" aria-label="Evolución semanal"></canvas></div>
+        </article>
+      </div>
+      <div class="columna" style="gap: var(--esp-6)">
+        <article class="tarjeta">
+          <div class="cabecera-vanty">
+            <img src="/img/vanty.svg" alt="">
+            <div class="crecer">
+              <h3 class="mb-0">Vanty recomienda</h3>
+              <a href="/vanty" class="texto-sm">Hablar con Vanty</a>
+            </div>
+          </div>
+          <div class="lista-recomendaciones" id="recomendaciones"></div>
+        </article>
+        <article class="tarjeta">
+          <h3 class="tarjeta-titulo">Calendario de actividad</h3>
+          <div class="calendario" id="calendario" aria-label="Días de estudio de las últimas 16 semanas"></div>
+          <div class="leyenda-calendario">Menos
+            <span class="celda" style="background: var(--fondo-2)"></span>
+            <span class="celda" style="background: color-mix(in srgb, var(--lima-600) 30%, var(--fondo-2))"></span>
+            <span class="celda" style="background: color-mix(in srgb, var(--lima-600) 55%, var(--fondo-2))"></span>
+            <span class="celda" style="background: color-mix(in srgb, var(--lima-600) 80%, var(--fondo-2))"></span>
+            <span class="celda" style="background: var(--primario)"></span> Más
+          </div>
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <nav id="nav-movil" class="nav-movil"></nav>
+</body>
+</html>

@@ -1,0 +1,51 @@
+/* =============================================================================
+   ICFES Lab · Avance (análisis inteligente)
+   ============================================================================= */
+
+.kpis-avance { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: var(--esp-4); margin-bottom: var(--esp-6); }
+
+.puntaje-icfes { display: grid; grid-template-columns: 240px minmax(0, 1fr) minmax(0, 1fr); gap: var(--esp-8); align-items: center; }
+.puntaje-icfes .anillo { width: 210px; margin: 0 auto; --grosor: 18px; }
+.puntaje-icfes .anillo-valor { font-size: 3rem; }
+.puntaje-global-info { text-align: center; margin-top: var(--esp-3); }
+.areas-puntaje { display: flex; flex-direction: column; gap: var(--esp-3); }
+.area-puntaje .fila-entre { font-size: var(--texto-sm); margin-bottom: 5px; }
+.area-puntaje .confianza { font-size: 11px; color: var(--texto-3); }
+.proyeccion { padding: var(--esp-5); border-radius: var(--radio-lg); background: linear-gradient(145deg, var(--lima-100), var(--cielo-50)); }
+.proyeccion .valor-proyeccion { font-family: var(--fuente-titulos); font-size: 2.6rem; font-weight: 800; line-height: 1; color: var(--primario); }
+.proyeccion .meta-linea { display: flex; align-items: center; gap: var(--esp-2); margin-top: var(--esp-3); font-size: var(--texto-sm); }
+
+.lista-temas { display: flex; flex-direction: column; gap: var(--esp-3); }
+.tema-item { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 4px var(--esp-3); align-items: center; }
+.tema-item .nombre { font-weight: 600; font-size: var(--texto-sm); }
+.tema-item .detalle { font-size: var(--texto-xs); color: var(--texto-3); }
+.tema-item .barra { grid-column: 1 / -1; }
+
+.tendencia { display: inline-flex; align-items: center; gap: 3px; font-weight: 700; font-size: var(--texto-sm); }
+.tendencia.sube { color: var(--exito); }
+.tendencia.baja { color: var(--coral); }
+.tendencia.igual { color: var(--texto-3); }
+
+.arbol-temas details { border: 1px solid var(--borde); border-radius: var(--radio-lg); background: var(--superficie); }
+.arbol-temas details + details { margin-top: var(--esp-3); }
+.arbol-temas summary { display: flex; align-items: center; gap: var(--esp-3); padding: var(--esp-4) var(--esp-5); cursor: pointer; list-style: none; }
+.arbol-temas summary::-webkit-details-marker { display: none; }
+.arbol-temas summary .barra { flex: 0 0 160px; }
+.arbol-temas .subtemas-arbol { padding: 0 var(--esp-5) var(--esp-5); display: grid; gap: var(--esp-3); }
+
+.error-frecuente { display: flex; gap: var(--esp-3); align-items: flex-start; padding: var(--esp-3) 0; border-bottom: 1px solid var(--borde); }
+.error-frecuente:last-child { border-bottom: 0; }
+.error-frecuente .fallos { display: grid; place-items: center; min-width: 46px; height: 46px; border-radius: var(--radio); background: var(--coral-100); color: var(--coral); font-family: var(--fuente-titulos); font-weight: 800; }
+.error-frecuente p { margin: 0; font-size: var(--texto-sm); }
+
+@media (max-width: 1199px) {
+  .puntaje-icfes { grid-template-columns: 1fr 1fr; }
+  .puntaje-icfes > :first-child { grid-column: 1 / -1; }
+  .kpis-avance { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+@media (max-width: 767px) {
+  .puntaje-icfes { grid-template-columns: minmax(0, 1fr); gap: var(--esp-5); }
+  .arbol-temas summary .barra { flex-basis: 80px; }
+  .kpis-avance { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--esp-3); }
+}

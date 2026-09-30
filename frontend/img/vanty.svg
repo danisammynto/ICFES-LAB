@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-labelledby="titulo-vanty">
+  <title id="titulo-vanty">Vanty, la tutora con inteligencia artificial de ICFES Lab</title>
+  <defs>
+    <linearGradient id="vanty-cabeza" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#5b62c2"/>
+      <stop offset="1" stop-color="#3a3f8a"/>
+    </linearGradient>
+    <radialGradient id="vanty-brillo" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#d5e068" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#d5e068" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <!-- Sombra -->
+  <ellipse cx="100" cy="186" rx="46" ry="7" fill="#23264f" opacity="0.15"/>
+  <!-- Antena -->
+  <circle cx="100" cy="28" r="18" fill="url(#vanty-brillo)"/>
+  <line x1="100" y1="36" x2="100" y2="54" stroke="#3a3f8a" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="100" cy="28" r="8" fill="#d5e068" stroke="#3a3f8a" stroke-width="3"/>
+  <!-- Orejas / audífonos -->
+  <rect x="24" y="88" width="20" height="40" rx="10" fill="#81a1f6"/>
+  <rect x="156" y="88" width="20" height="40" rx="10" fill="#81a1f6"/>
+  <!-- Cabeza -->
+  <rect x="36" y="52" width="128" height="112" rx="44" fill="url(#vanty-cabeza)"/>
+  <!-- Pantalla del rostro -->
+  <rect x="52" y="72" width="96" height="70" rx="30" fill="#23264f"/>
+  <!-- Ojos -->
+  <ellipse cx="81" cy="101" rx="10" ry="12" fill="#d5e068"/>
+  <ellipse cx="119" cy="101" rx="10" ry="12" fill="#d5e068"/>
+  <circle cx="84" cy="96" r="3.2" fill="#ffffff"/>
+  <circle cx="122" cy="96" r="3.2" fill="#ffffff"/>
+  <!-- Sonrisa -->
+  <path d="M87 121q13 11 26 0" fill="none" stroke="#d5e068" stroke-width="5" stroke-linecap="round"/>
+  <!-- Mejillas -->
+  <circle cx="66" cy="119" r="6" fill="#fda879" opacity="0.85"/>
+  <circle cx="134" cy="119" r="6" fill="#fda879" opacity="0.85"/>
+  <!-- Birrete -->
+  <path d="M100 40 142 55 100 70 58 55z" fill="#23264f"/>
+  <path d="M76 61v10c0 6 11 10 24 10s24-4 24-10V61l-24 9z" fill="#2e3263"/>
+  <path d="M142 55v20" stroke="#fda879" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="142" cy="78" r="4.5" fill="#fda879"/>
+  <!-- Destellos -->
+  <path d="M170 40l2.2 5.3 5.3 2.2-5.3 2.2-2.2 5.3-2.2-5.3-5.3-2.2 5.3-2.2z" fill="#fda879"/>
+  <path d="M28 52l1.6 3.8 3.8 1.6-3.8 1.6-1.6 3.8-1.6-3.8-3.8-1.6 3.8-1.6z" fill="#81a1f6"/>
+</svg>

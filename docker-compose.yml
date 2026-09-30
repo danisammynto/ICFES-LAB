@@ -1,0 +1,49 @@
+# =============================================================================
+#  ICFES Lab · Entorno completo con Docker (aplicación + PostgreSQL)
+#
+#  1. Define JWT_SECRET (y opcionalmente ANTHROPIC_API_KEY) en un archivo .env
+#     junto a este archivo o en tu terminal.
+#  2. docker compose up --build
+#  3. Abre http://localhost:3000
+# =============================================================================
+services:
+  db:
+    image: postgres:17-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: icfeslab
+      POSTGRES_USER: icfeslab
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-icfeslab_local}
+    volumes:
+      - datos-postgres:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U icfeslab -d icfeslab"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  app:
+    build: .
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      - "3000:3000"
+    environment:
+      NODE_ENV: production
+      PORT: 3000
+      APP_URL: ${APP_URL:-http://localhost:3000}
+      APP_TZ: America/Bogota
+      DATABASE_URL: postgresql://icfeslab:${POSTGRES_PASSWORD:-icfeslab_local}@db:5432/icfeslab
+      JWT_SECRET: ${JWT_SECRET:?Define JWT_SECRET con al menos 32 caracteres}
+      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
+      VANTY_MODEL: ${VANTY_MODEL:-claude-opus-5}
+      SMTP_HOST: ${SMTP_HOST:-}
+      SMTP_PORT: ${SMTP_PORT:-587}
+      SMTP_USER: ${SMTP_USER:-}
+      SMTP_PASS: ${SMTP_PASS:-}
+      SMTP_FROM: ${SMTP_FROM:-ICFES Lab <no-reply@icfeslab.co>}
+
+volumes:
+  datos-postgres:

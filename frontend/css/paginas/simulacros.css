@@ -1,0 +1,158 @@
+/* =============================================================================
+   ICFES Lab · Simulacros
+   Prototipos: Barrasimulacros (card / details_tiempo / texto_details / btn-iniciar),
+   simulacro_inicio (grid-container / card-simulacro / titulo-simulacro) y
+   minisimulacros_inicio (camino / tapita).
+   ============================================================================= */
+
+/* --- Página principal: dos tarjetas ------------------------------------------------ */
+.main-container { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--esp-6); margin-bottom: var(--esp-8); }
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-4);
+  padding: var(--esp-8);
+  border-radius: var(--radio-xl);
+  overflow: hidden;
+  color: var(--indigo-900);
+  box-shadow: var(--sombra);
+}
+
+.card.completos { background: linear-gradient(150deg, #eef1ff 0%, #c9d6fd 100%); }
+.card.minis { background: linear-gradient(150deg, #f7fadf 0%, #e3ec96 100%); }
+.card::after {
+  content: '';
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  right: -70px;
+  top: -70px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.45);
+}
+
+.card-content { position: relative; z-index: 1; display: flex; flex-direction: column; gap: var(--esp-4); }
+.card-content .icono-card { display: grid; place-items: center; width: 56px; height: 56px; border-radius: 18px; background: #fff; color: var(--indigo); box-shadow: var(--sombra-sm); }
+.card-content .icono-card .icono { width: 28px; height: 28px; }
+.card-content h2 { font-size: var(--texto-2xl); letter-spacing: 0.04em; margin: 0; }
+.details-tiempo { display: flex; flex-wrap: wrap; gap: var(--esp-2); }
+.details-tiempo p { margin: 0; padding: 6px 12px; border-radius: var(--radio-pill); background: rgba(255, 255, 255, 0.7); font-size: var(--texto-sm); }
+.texto-details p { margin: 0; color: #3b3f6e; line-height: 1.65; }
+.resumen-card { display: flex; gap: var(--esp-5); flex-wrap: wrap; font-size: var(--texto-sm); }
+.resumen-card strong { display: block; font-family: var(--fuente-titulos); font-size: var(--texto-xl); }
+.btn-iniciar { position: relative; z-index: 1; align-self: flex-start; min-width: 180px; letter-spacing: 0.06em; }
+.nota-banco { position: relative; z-index: 1; font-size: var(--texto-xs); color: #4b4f7c; margin: 0; }
+
+.aviso-en-curso { display: flex; align-items: center; gap: var(--esp-4); flex-wrap: wrap; margin-bottom: var(--esp-6); padding: var(--esp-4) var(--esp-5); border-radius: var(--radio-lg); background: var(--durazno-100); border: 1px solid color-mix(in srgb, var(--durazno) 50%, transparent); }
+.aviso-en-curso .icono { color: var(--durazno-600); width: 26px; height: 26px; }
+
+/* --- Retos ------------------------------------------------------------------------- */
+.retos { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: var(--esp-5); }
+.reto { display: flex; flex-direction: column; gap: var(--esp-3); }
+.reto .fila-entre .medalla { width: 46px; height: 46px; }
+.reto h3 { margin: 0; font-size: var(--texto-lg); }
+.reto p { margin: 0; font-size: var(--texto-sm); color: var(--texto-2); }
+.reto .btn { margin-top: auto; }
+.reto.bloqueado { background: var(--superficie-2); }
+.reto.bloqueado .medalla { filter: grayscale(1); opacity: 0.5; }
+
+/* --- Cuadrícula de simulacros completos ------------------------------------------- */
+.grid-container { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: var(--esp-5); }
+
+.card-simulacro {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-3);
+  min-height: 190px;
+  padding: var(--esp-5);
+  border: 1px solid var(--borde);
+  border-radius: var(--radio-xl);
+  background: var(--superficie);
+  box-shadow: var(--sombra);
+  color: var(--texto);
+  text-align: left;
+  text-decoration: none !important;
+  transition: transform var(--transicion), box-shadow var(--transicion), border-color var(--transicion);
+  overflow: hidden;
+}
+
+.card-simulacro:hover { transform: translateY(-4px); box-shadow: var(--sombra-lg); border-color: var(--cielo); }
+.card-simulacro::before { content: ''; position: absolute; inset: 0 0 auto; height: 6px; background: linear-gradient(90deg, var(--indigo), var(--cielo)); }
+.card-simulacro.completado::before { background: linear-gradient(90deg, var(--lima-600), var(--lima)); }
+.card-simulacro.en-curso::before { background: linear-gradient(90deg, var(--durazno-600), var(--durazno)); }
+.numero-simulacro { font-family: var(--fuente-titulos); font-size: 2.6rem; font-weight: 800; line-height: 1; color: var(--primario); opacity: 0.18; position: absolute; right: 16px; top: 18px; }
+.titulo-simulacro { font-family: var(--fuente-titulos); font-size: var(--texto-xl); font-weight: 700; }
+.card-simulacro .meta { font-size: var(--texto-sm); color: var(--texto-2); display: grid; gap: 4px; }
+.card-simulacro .meta span { display: flex; align-items: center; gap: 6px; }
+.card-simulacro .estado { margin-top: auto; }
+
+/* --- Camino de minisimulacros (tapitas) ------------------------------------------- */
+.camino-contenedor { position: relative; max-width: 560px; margin: 0 auto; padding: var(--esp-4) 0 var(--esp-10); }
+/* El relleno izquierdo deja espacio para los desplazamientos negativos del zigzag. */
+.camino { position: relative; display: flex; flex-direction: column; gap: 34px; padding-left: 160px; }
+.camino-linea { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; overflow: visible; }
+.camino-linea path { fill: none; stroke: var(--borde-fuerte); stroke-width: 6; stroke-linecap: round; stroke-dasharray: 2 14; }
+.camino-linea path.recorrido { stroke: var(--lima-600); stroke-dasharray: none; stroke-width: 6; opacity: 0.7; }
+
+.paso-camino { position: relative; display: flex; align-items: center; gap: var(--esp-4); transform: translateX(var(--x, 0)); }
+.paso-camino.derecha { flex-direction: row-reverse; text-align: right; }
+
+.tapita {
+  --tapa: var(--primario);
+  --tapa-borde: var(--indigo-700);
+  position: relative;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  width: 92px;
+  height: 92px;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: #fff;
+  font-family: var(--fuente-titulos);
+  font-size: 1.9rem;
+  font-weight: 800;
+  text-decoration: none !important;
+  cursor: pointer;
+  filter: drop-shadow(0 8px 14px rgba(35, 38, 79, 0.22));
+  transition: transform var(--transicion);
+}
+
+.tapita > svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.tapita .numero .icono { width: 30px; height: 30px; }
+.tapita .borde-tapa { fill: var(--tapa-borde); }
+.tapita .cara-tapa { fill: var(--tapa); }
+.tapita .brillo-tapa { fill: #ffffff; opacity: 0.18; }
+.tapita .numero { position: relative; z-index: 1; }
+.tapita:hover { transform: scale(1.07) rotate(-4deg); }
+.tapita.disponible { animation: latir 2.2s ease-in-out infinite; }
+.tapita.completada { --tapa: var(--lima); --tapa-borde: var(--lima-600); color: var(--indigo-900); }
+.tapita.bloqueada { --tapa: var(--fondo-2); --tapa-borde: var(--borde-fuerte); color: var(--texto-3); cursor: not-allowed; filter: none; }
+.tapita.bloqueada:hover { transform: none; }
+.tapita.en-curso { --tapa: var(--durazno); --tapa-borde: var(--durazno-600); color: var(--indigo-900); }
+
+.info-paso { max-width: 240px; }
+.info-paso strong { display: block; font-family: var(--fuente-titulos); font-size: var(--texto-lg); }
+.info-paso span { font-size: var(--texto-sm); color: var(--texto-2); }
+
+/* --- Historial --------------------------------------------------------------------- */
+.historial td .chip { font-size: var(--texto-xs); }
+
+@media (max-width: 991px) {
+  .main-container { grid-template-columns: minmax(0, 1fr); }
+}
+
+@media (max-width: 767px) {
+  .card { padding: var(--esp-6); }
+  .grid-container { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--esp-3); }
+  .card-simulacro { min-height: 160px; padding: var(--esp-4); }
+  .titulo-simulacro { font-size: var(--texto-lg); }
+  .camino { padding-left: 64px; }
+  .tapita { width: 76px; height: 76px; font-size: 1.6rem; }
+  .info-paso { max-width: 140px; }
+  .paso-camino { transform: translateX(calc(var(--x, 0) * 0.4)); }
+}

@@ -1,0 +1,77 @@
+{
+  "materia": "ingles",
+  "entradas": [
+    {
+      "id": "ing-present-perfect-simple-past",
+      "subtema": "grammar",
+      "titulo": "Present perfect vs. simple past",
+      "palabras_clave": ["present perfect", "presente perfecto", "simple past", "past simple", "pasado simple", "pretérito perfecto", "preterito perfecto", "tiempos verbales", "have been"],
+      "explicacion": "El **simple past** (pasado simple) se usa para acciones terminadas en un momento concreto del pasado: I visited Cartagena last year. El **present perfect** (have/has + participio pasado) conecta el pasado con el presente: situaciones que empezaron antes y continúan (I have lived here since 2020), experiencias sin fecha (Have you ever tried ajiaco?) o resultados recientes (I have lost my keys). La pista está en las expresiones de tiempo: yesterday, ago, last e in 2019 van con pasado simple; since, for, ever, never, already, yet y just suelen ir con present perfect. Ojo: en español decimos «vivo aquí desde 2020», pero en inglés se dice I have lived here since 2020.",
+      "ejemplo": "She moved to Cali in 2020 (pasado simple: fecha terminada). She has lived in Cali since 2020 (present perfect: todavía vive allí).",
+      "tip_icfes": "Antes de mirar las opciones, subraya la expresión de tiempo cercana al hueco. Ago, yesterday y last descartan el present perfect; since o for con una situación que continúa descartan el pasado simple."
+    },
+    {
+      "id": "ing-condicionales",
+      "subtema": "grammar",
+      "titulo": "Condicionales (zero, first y second conditional)",
+      "palabras_clave": ["condicional", "condicionales", "conditional", "conditionals", "if clause", "oración condicional", "oracion condicional", "first conditional", "second conditional", "would"],
+      "explicacion": "Los condicionales expresan que algo ocurre solo si se cumple una condición. El **zero conditional** (If + presente, presente) se usa para verdades generales: If you heat ice, it melts. El **first conditional** (If + presente, will + verbo) se usa para situaciones reales o probables en el futuro: If it rains tomorrow, we will stay home. El **second conditional** (If + pasado, would + verbo) se usa para situaciones imaginarias o poco probables: If I had more time, I would learn French. En el second conditional se suele usar were con todas las personas (If I were you, I would study more), y en el first conditional no se usa will después de if (If it will rain ✗ → If it rains ✓).",
+      "ejemplo": "If I get a high score on the ICFES, I will apply for a scholarship (first: es posible). If I lived in San Andrés, I would go to the beach every day (second: es imaginario).",
+      "tip_icfes": "Mira el tiempo verbal de la parte con if: si está en presente, la otra parte suele llevar will; si está en pasado, la otra lleva would. Esa correspondencia te permite descartar opciones rápidamente en las Partes 4 y 7."
+    },
+    {
+      "id": "ing-comparativos-superlativos",
+      "subtema": "grammar",
+      "titulo": "Comparativos y superlativos",
+      "palabras_clave": ["comparativo", "comparativos", "superlativo", "superlativos", "comparative", "superlative", "comparación", "comparacion", "more than", "the most"],
+      "explicacion": "Los **comparativos** comparan dos cosas y van con than; los **superlativos** destacan una cosa dentro de un grupo y van con the. Con adjetivos de una sílaba se añade -er / -est (tall → taller → the tallest), y si terminan en consonante-vocal-consonante se duplica la última letra (hot → hotter → the hottest). Con la mayoría de adjetivos de dos o más sílabas se usa more / the most (expensive → more expensive → the most expensive), excepto los terminados en -y, que cambian a -ier / -iest (easy → easier → the easiest). Algunos son irregulares y hay que memorizarlos: good → better → the best; bad → worse → the worst.",
+      "ejemplo": "Medellín is warmer than Bogotá. / Caño Cristales is one of the most beautiful rivers in Colombia. / This is the best day of my life!",
+      "tip_icfes": "Si ves than después del hueco, necesitas un comparativo; si ves the antes del hueco y una expresión como in the class o in Colombia después, necesitas un superlativo. Nunca combines las dos formas: more taller ✗, the most tallest ✗."
+    },
+    {
+      "id": "ing-verbos-modales",
+      "subtema": "context-understanding",
+      "titulo": "Verbos modales (can, must, should, might…)",
+      "palabras_clave": ["modales", "verbos modales", "modal verbs", "must", "mustn't", "should", "have to", "might", "obligación", "obligacion"],
+      "explicacion": "Los **verbos modales** (can, could, must, should, might…) van seguidos de un verbo en forma base, sin to (You must go, no You must to go), y revelan la intención de quien habla; por eso son clave para entender avisos y conversaciones. **Can / could** expresan habilidad, permiso o peticiones (I can swim; Could you open the window?). **Must** y **have to** expresan obligación (You must wear a helmet), mientras que **mustn't** expresa prohibición y **don't have to** significa que algo no es necesario. **Should** sirve para dar consejos (You should sleep more) y **might / may** expresan posibilidad (It might rain later).",
+      "ejemplo": "Aviso: “Visitors must show their ID at reception” → es obligatorio mostrar el documento. “You don't have to bring lunch; it is included” → no es necesario llevar almuerzo.",
+      "tip_icfes": "En avisos y diálogos, el modal revela la intención: must/mustn't = regla, should = consejo, can = permiso o posibilidad. No confundas mustn't (está prohibido) con don't have to (no es necesario): es una de las trampas favoritas del examen."
+    },
+    {
+      "id": "ing-preposiciones-tiempo-lugar",
+      "subtema": "language-use",
+      "titulo": "Preposiciones de tiempo y lugar (in, on, at)",
+      "palabras_clave": ["preposiciones", "preposición", "preposicion", "prepositions", "preposition", "in on at", "preposiciones de tiempo", "preposiciones de lugar", "next to", "between"],
+      "explicacion": "Para el **tiempo**: **at** va con horas y momentos exactos (at 7:00, at night, at noon), **on** con días y fechas (on Monday, on May 5th, on my birthday) e **in** con meses, años, estaciones y partes del día (in August, in 2026, in the morning). Para el **lugar**: **at** va con puntos específicos (at the bus stop, at school), **on** con superficies (on the table, on the wall) e **in** con espacios cerrados o áreas (in the classroom, in Colombia). Otras preposiciones de lugar útiles son next to (al lado de), between (entre dos cosas), in front of (enfrente de), behind (detrás de) y under (debajo de). En español usamos «en» para casi todo, por eso este tema causa tantos errores.",
+      "ejemplo": "The concert is on Saturday at 8:00 p.m. at the stadium in Barranquilla. / My birthday is in March, on the 14th.",
+      "tip_icfes": "Piensa del más general al más específico: in (meses, años, ciudades, países) → on (días, fechas, superficies) → at (horas exactas, puntos específicos). Si el hueco va antes de un día de la semana o de una fecha, la respuesta casi siempre es on."
+    },
+    {
+      "id": "ing-false-friends",
+      "subtema": "vocabulary",
+      "titulo": "False friends (falsos amigos)",
+      "palabras_clave": ["false friends", "false friend", "falsos amigos", "falso amigo", "cognados", "library", "actually", "carpet", "parents", "embarrassed"],
+      "explicacion": "Los **false friends** (falsos amigos) son palabras en inglés que se parecen a palabras del español, pero significan otra cosa. Son una trampa frecuente en las Partes 1, 2 y 7 del ICFES, porque muchos distractores se aprovechan de ellos. Algunos de los más comunes: library (biblioteca, no librería), parents (padres, no parientes), carpet (alfombra, no carpeta), actually (en realidad, no actualmente), embarrassed (avergonzado, no embarazada), exit (salida, no éxito) y assist (ayudar, no asistir; asistir se dice attend). Cuando una palabra te parezca demasiado fácil porque suena igual que en español, verifica su significado con el contexto.",
+      "ejemplo": "Actually, I don't live in Bogotá; I live in Chía = En realidad no vivo en Bogotá, vivo en Chía. Para decir «actualmente vivo en Chía» se usa currently: I currently live in Chía.",
+      "tip_icfes": "Si una opción se parece muchísimo a una palabra en español, sospecha. Antes de elegirla, pregúntate si su significado real encaja con el contexto."
+    },
+    {
+      "id": "ing-phrasal-verbs",
+      "subtema": "vocabulary",
+      "titulo": "Phrasal verbs frecuentes",
+      "palabras_clave": ["phrasal verbs", "phrasal verb", "verbos frasales", "verbo frasal", "look for", "give up", "get up", "turn off", "find out"],
+      "explicacion": "Un **phrasal verb** es un verbo seguido de una o dos partículas (up, off, on, out, for…) que juntas forman un significado nuevo, a veces muy distinto del verbo original. Por ejemplo, give significa «dar», pero **give up** significa «rendirse» o «dejar de hacer algo». Algunos de los más frecuentes son get up (levantarse), look for (buscar), look after (cuidar), find out (averiguar), turn on / turn off (encender / apagar), put on (ponerse ropa), take off (quitarse ropa o despegar) y pick up (recoger). Apréndelos con oraciones completas, no como palabras sueltas.",
+      "ejemplo": "I'm looking for my phone (estoy buscando mi celular). / Don't give up! You can do it (¡no te rindas!). / Please turn off the lights when you leave (apaga las luces).",
+      "tip_icfes": "Cuando veas un verbo seguido de up, off, out u on, no lo traduzcas palabra por palabra: lee toda la oración y pregúntate qué acción tiene sentido en ese contexto."
+    },
+    {
+      "id": "ing-skimming-scanning",
+      "subtema": "reading",
+      "titulo": "Estrategias de lectura: skimming y scanning",
+      "palabras_clave": ["skimming", "scanning", "estrategias de lectura", "estrategia de lectura", "comprensión lectora", "comprension lectora", "reading", "idea principal", "main idea"],
+      "explicacion": "**Skimming** es una lectura rápida para captar la idea general: lees el título, la primera oración de cada párrafo y las palabras que se repiten, sin detenerte en lo que no entiendes. **Scanning** es buscar un dato concreto (una fecha, un nombre, un número o una palabra clave) recorriendo el texto con la vista hasta encontrarlo. En el ICFES conviene combinarlas: primero haces skimming para saber de qué trata el texto; luego lees la pregunta y haces scanning para ubicar el párrafo donde está la respuesta. Por último, lee ese fragmento con atención, porque la respuesta correcta suele estar parafraseada, no copiada.",
+      "ejemplo": "Si la pregunta es «How long has the museum been open?», haz scanning buscando expresiones de tiempo (since, for, years) en lugar de volver a leer todo el texto.",
+      "tip_icfes": "Lee primero las preguntas y después el texto: así sabrás qué buscar. Si una opción copia palabras exactas del texto, revísala dos veces; muchas veces es una trampa."
+    }
+  ]
+}

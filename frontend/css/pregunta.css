@@ -1,0 +1,107 @@
+/* =============================================================================
+   ICFES Lab · Pregunta tipo ICFES (práctica, simulacros, revisión y Vanty)
+   ============================================================================= */
+
+.pregunta { display: flex; flex-direction: column; gap: var(--esp-4); }
+
+.pregunta-meta { display: flex; align-items: center; flex-wrap: wrap; gap: var(--esp-2) var(--esp-3); }
+.pregunta-numero { font-family: var(--fuente-titulos); font-weight: 700; color: var(--primario); }
+
+.pregunta-contexto {
+  padding: var(--esp-5);
+  border-radius: var(--radio-lg);
+  background: var(--superficie-2);
+  border: 1px solid var(--borde);
+  border-left: 4px solid var(--cielo);
+  max-height: 460px;
+  overflow-y: auto;
+  line-height: 1.65;
+}
+
+.pregunta-contexto h4 { margin-bottom: var(--esp-2); }
+.pregunta-contexto img { margin-top: var(--esp-3); border-radius: var(--radio); background: #fff; }
+.pregunta-fuente { margin: var(--esp-3) 0 0; font-size: var(--texto-xs); color: var(--texto-3); font-style: italic; }
+
+.pregunta-enunciado { font-size: var(--texto-lg); font-weight: 600; line-height: 1.5; }
+
+.pregunta-imagen { margin: 0; padding: var(--esp-3); border-radius: var(--radio-lg); background: #fff; border: 1px solid var(--borde); }
+.pregunta-imagen img { margin: 0 auto; max-height: 340px; }
+
+.opciones { display: flex; flex-direction: column; gap: var(--esp-3); }
+
+.opcion {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: var(--esp-3);
+  width: 100%;
+  padding: 14px 16px;
+  border: 2px solid var(--borde);
+  border-radius: var(--radio-lg);
+  background: var(--superficie);
+  color: var(--texto);
+  text-align: left;
+  line-height: 1.45;
+  transition: border-color var(--transicion), background var(--transicion), transform var(--transicion);
+}
+
+.opcion:hover:not(:disabled) { border-color: var(--cielo); background: var(--cielo-50); }
+.opcion[aria-checked='true'] { border-color: var(--primario); background: var(--indigo-50); box-shadow: 0 0 0 3px color-mix(in srgb, var(--cielo) 30%, transparent); }
+.opcion:disabled { cursor: default; }
+
+.opcion-letra {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
+  background: var(--fondo-2);
+  font-family: var(--fuente-titulos);
+  font-weight: 700;
+  color: var(--texto-2);
+}
+
+.opcion[aria-checked='true'] .opcion-letra { background: var(--primario); color: #fff; }
+.opcion-texto { display: flex; flex-direction: column; gap: 6px; padding-top: 4px; }
+.opcion-retro { font-size: var(--texto-sm); color: var(--texto-2); }
+
+.opcion.correcta { border-color: var(--exito); background: var(--exito-100); }
+.opcion.correcta .opcion-letra { background: var(--exito); color: #fff; }
+.opcion.incorrecta { border-color: var(--coral); background: var(--coral-100); }
+.opcion.incorrecta .opcion-letra { background: var(--coral); color: #fff; }
+
+.resultado-respuesta {
+  display: flex;
+  align-items: center;
+  gap: var(--esp-3);
+  padding: var(--esp-3) var(--esp-4);
+  border-radius: var(--radio);
+  font-family: var(--fuente-titulos);
+  animation: subir 260ms ease-out;
+}
+
+.resultado-respuesta .icono { width: 26px; height: 26px; }
+.resultado-respuesta.acierto { background: var(--exito-100); color: var(--exito); }
+.resultado-respuesta.error { background: var(--coral-100); color: var(--coral); }
+.resultado-respuesta.omitida { background: var(--fondo-2); color: var(--texto-2); }
+.resultado-respuesta strong { color: var(--texto); }
+
+.explicacion {
+  margin-top: var(--esp-3);
+  padding: var(--esp-5);
+  border-radius: var(--radio-lg);
+  background: var(--lima-100);
+  border: 1px solid color-mix(in srgb, var(--lima-600) 30%, transparent);
+  animation: subir 320ms ease-out;
+}
+
+.explicacion h4 { display: flex; align-items: center; gap: var(--esp-2); color: var(--lima-800); }
+:root[data-tema='oscuro'] .explicacion h4 { color: var(--lima); }
+@media (prefers-color-scheme: dark) { :root:not([data-tema='claro']) .explicacion h4 { color: var(--lima); } }
+
+@media (max-width: 767px) {
+  .pregunta-enunciado { font-size: var(--texto-md); }
+  .pregunta-contexto { padding: var(--esp-4); max-height: 340px; }
+  .opcion { padding: 12px; }
+}

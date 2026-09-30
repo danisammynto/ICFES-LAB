@@ -1,0 +1,66 @@
+/* =============================================================================
+   ICFES Lab · Lección y práctica
+   ============================================================================= */
+
+.diseno-leccion { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: var(--esp-8); align-items: start; }
+.contenido-leccion { display: flex; flex-direction: column; gap: var(--esp-5); max-width: 760px; }
+.contenido-leccion > .texto-rico { font-size: 1.05rem; line-height: 1.7; }
+
+.cabecera-leccion { margin-bottom: var(--esp-2); }
+.cabecera-leccion h1 { font-size: var(--texto-3xl); margin-bottom: var(--esp-2); }
+.cabecera-leccion p { color: var(--texto-2); font-size: var(--texto-lg); margin: 0; }
+
+.bloque { padding: var(--esp-5) var(--esp-6); border-radius: var(--radio-lg); border: 1px solid var(--borde); background: var(--superficie); }
+.bloque h3 { display: flex; align-items: center; gap: var(--esp-2); font-size: var(--texto-lg); margin-bottom: var(--esp-2); }
+.bloque-concepto { background: var(--cielo-50); border-color: var(--cielo-100); }
+.bloque-concepto h3 .icono { color: var(--cielo-700); }
+.bloque-formula { background: var(--indigo-50); border-color: var(--indigo-100); text-align: center; }
+.bloque-formula .formula { font-family: 'Cambria Math', 'Times New Roman', serif; font-size: 1.45rem; color: var(--primario); letter-spacing: 0.02em; overflow-x: auto; }
+.bloque-formula .nota { margin: var(--esp-2) 0 0; font-size: var(--texto-sm); color: var(--texto-2); }
+.bloque-ejemplo h3 .icono { color: var(--durazno-600); }
+.bloque-ejemplo .pasos { counter-reset: paso; list-style: none; padding: 0; margin: var(--esp-3) 0; display: grid; gap: var(--esp-2); }
+.bloque-ejemplo .pasos li { counter-increment: paso; display: flex; gap: var(--esp-3); align-items: flex-start; }
+.bloque-ejemplo .pasos li::before { content: counter(paso); display: grid; place-items: center; flex-shrink: 0; width: 26px; height: 26px; border-radius: 50%; background: var(--durazno-100); color: var(--durazno-800); font-weight: 700; font-size: var(--texto-sm); }
+.bloque-ejemplo .respuesta { display: inline-flex; align-items: center; gap: var(--esp-2); padding: 6px 12px; border-radius: var(--radio); background: var(--exito-100); color: var(--exito); font-weight: 700; }
+.bloque-tip { background: var(--lima-100); border-color: color-mix(in srgb, var(--lima-600) 35%, transparent); }
+.bloque-tip h3 { color: var(--lima-800); }
+:root[data-tema='oscuro'] .bloque-tip h3 { color: var(--lima); }
+@media (prefers-color-scheme: dark) { :root:not([data-tema='claro']) .bloque-tip h3 { color: var(--lima); } }
+.bloque-lista ul { margin: 0; padding-left: 1.2em; display: grid; gap: 6px; }
+
+.bloque-ejercicio { border: 2px dashed var(--borde-fuerte); }
+.bloque-ejercicio .opciones-ejercicio { display: grid; gap: var(--esp-2); margin-top: var(--esp-3); }
+.bloque-ejercicio .opcion { padding: 10px 14px; }
+.bloque-ejercicio .retro { margin-top: var(--esp-3); }
+
+.panel-leccion { position: sticky; top: calc(var(--alto-cabecera) + var(--esp-6)); display: flex; flex-direction: column; gap: var(--esp-4); }
+.panel-leccion .tarjeta { padding: var(--esp-5); }
+.progreso-lectura .fila-entre { font-size: var(--texto-sm); margin-bottom: 6px; }
+.recompensas-leccion { display: flex; gap: var(--esp-2); flex-wrap: wrap; }
+
+.fin-leccion { text-align: center; padding: var(--esp-8); background: linear-gradient(145deg, var(--lima-100), var(--cielo-50)); border: 0; }
+.fin-leccion img { width: 110px; margin: 0 auto var(--esp-3); }
+.fin-leccion .fila { justify-content: center; flex-wrap: wrap; }
+
+/* --- Práctica ------------------------------------------------------------------- */
+.diseno-practica { display: grid; grid-template-columns: minmax(0, 1fr) 280px; gap: var(--esp-6); align-items: start; }
+.tarjeta-pregunta { padding: var(--esp-8); }
+.acciones-pregunta { display: flex; gap: var(--esp-3); flex-wrap: wrap; justify-content: flex-end; margin-top: var(--esp-6); }
+.cronometro { display: inline-flex; align-items: center; gap: 6px; font-variant-numeric: tabular-nums; color: var(--texto-2); font-weight: 600; }
+.marcador { display: grid; grid-template-columns: 1fr 1fr; gap: var(--esp-3); }
+.marcador .dato { padding: var(--esp-3); border-radius: var(--radio); background: var(--superficie-2); text-align: center; }
+.marcador strong { display: block; font-family: var(--fuente-titulos); font-size: var(--texto-2xl); }
+.marcador span { font-size: 11px; text-transform: uppercase; letter-spacing: 0.04em; color: var(--texto-3); }
+
+@media (max-width: 1199px) {
+  .diseno-leccion, .diseno-practica { grid-template-columns: minmax(0, 1fr); }
+  .panel-leccion { position: static; order: -1; }
+  .panel-leccion .tarjeta-solo-escritorio { display: none; }
+}
+
+@media (max-width: 767px) {
+  .cabecera-leccion h1 { font-size: var(--texto-2xl); }
+  .bloque { padding: var(--esp-4); }
+  .tarjeta-pregunta { padding: var(--esp-4); }
+  .acciones-pregunta .btn { flex: 1; }
+}

@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Gráfica de barras de los libros prestados por día en la biblioteca: lunes 15, martes 20, miércoles 10, jueves 25 y viernes 20</title>
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <g stroke="#81a1f6" stroke-opacity="0.5" stroke-width="1">
+    <line x1="70" y1="210" x2="470" y2="210"/>
+    <line x1="70" y1="175" x2="470" y2="175"/>
+    <line x1="70" y1="140" x2="470" y2="140"/>
+    <line x1="70" y1="105" x2="470" y2="105"/>
+    <line x1="70" y1="70" x2="470" y2="70"/>
+    <line x1="70" y1="35" x2="470" y2="35"/>
+  </g>
+  <g fill="#484ea2">
+    <rect x="88" y="140" width="44" height="105"/>
+    <rect x="168" y="105" width="44" height="140"/>
+    <rect x="248" y="175" width="44" height="70"/>
+    <rect x="328" y="70" width="44" height="175"/>
+    <rect x="408" y="105" width="44" height="140"/>
+  </g>
+  <g stroke="#2b2f5e" stroke-width="2">
+    <line x1="70" y1="35" x2="70" y2="245"/>
+    <line x1="70" y1="245" x2="470" y2="245"/>
+  </g>
+  <g font-family="Poppins, Arial, sans-serif" fill="#2b2f5e">
+    <text x="270" y="22" font-size="16" font-weight="600" text-anchor="middle">Libros prestados por día</text>
+    <g font-size="14" text-anchor="end">
+      <text x="62" y="250">0</text>
+      <text x="62" y="215">5</text>
+      <text x="62" y="180">10</text>
+      <text x="62" y="145">15</text>
+      <text x="62" y="110">20</text>
+      <text x="62" y="75">25</text>
+      <text x="62" y="40">30</text>
+    </g>
+    <g font-size="14" font-weight="700" text-anchor="middle">
+      <text x="110" y="133">15</text>
+      <text x="190" y="98">20</text>
+      <text x="270" y="168">10</text>
+      <text x="350" y="63">25</text>
+      <text x="430" y="98">20</text>
+    </g>
+    <g font-size="14" text-anchor="middle">
+      <text x="110" y="265">Lunes</text>
+      <text x="190" y="265">Martes</text>
+      <text x="270" y="265">Miércoles</text>
+      <text x="350" y="265">Jueves</text>
+      <text x="430" y="265">Viernes</text>
+    </g>
+    <text x="270" y="291" font-size="14" text-anchor="middle">Día de la semana</text>
+    <text transform="translate(22,140) rotate(-90)" font-size="14" text-anchor="middle">Número de libros</text>
+  </g>
+</svg>

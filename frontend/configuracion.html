@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Configuración · ICFES Lab</title>
+  <link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/tokens.css">
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/componentes.css">
+  <link rel="stylesheet" href="/css/layout.css">
+  <link rel="stylesheet" href="/css/paginas/perfil.css">
+  <script src="/js/tema-inicial.js"></script>
+  <script type="module" src="/js/paginas/configuracion.js"></script>
+</head>
+<body class="app">
+  <a class="saltar-contenido" href="#contenido">Saltar al contenido</a>
+  <header id="cabecera" class="main-header"></header>
+  <nav id="barra-lateral" class="sidebar-lateral"></nav>
+
+  <main id="contenido" class="principal">
+    <div class="encabezado-pagina">
+      <div>
+        <h1>Configuración</h1>
+        <p>Ajusta tu preparación, la apariencia y la seguridad de tu cuenta.</p>
+      </div>
+    </div>
+
+    <div class="config">
+      <nav class="indice-config" aria-label="Secciones">
+        <a href="#preparacion"><svg class="icono" aria-hidden="true"><use href="/img/iconos.svg#target"></use></svg> Preparación</a>
+        <a href="#apariencia"><svg class="icono" aria-hidden="true"><use href="/img/iconos.svg#sun-moon"></use></svg> Apariencia</a>
+        <a href="#cuenta"><svg class="icono" aria-hidden="true"><use href="/img/iconos.svg#mail"></use></svg> Cuenta</a>
+        <a href="#seguridad"><svg class="icono" aria-hidden="true"><use href="/img/iconos.svg#shield"></use></svg> Seguridad</a>
+        <a href="#sesion"><svg class="icono" aria-hidden="true"><use href="/img/iconos.svg#log-out"></use></svg> Sesión</a>
+        <a href="#peligro"><svg class="icono" aria-hidden="true"><use href="/img/iconos.svg#triangle-alert"></use></svg> Eliminar cuenta</a>
+      </nav>
+
+      <div class="secciones-config">
+        <form class="tarjeta" id="preparacion" novalidate>
+          <h2><svg class="icono" aria-hidden="true"><use href="/img/iconos.svg#target"></use></svg> Preparación</h2>
+          <p>Tu fecha de examen y tus metas personalizan la cuenta regresiva, las recomendaciones y la proyección de puntaje.</p>
+          <fieldset style="border: 0; padding: 0; margin: 0 0 var(--esp-4)">
+            <legend class="etiqueta" style="margin-bottom: 8px">Fecha de tu examen</legend>
+            <label class="opcion-fecha">
+              <input type="radio" name="tipo_fecha" value="global" checked>
+              <span><strong>Usar la fecha oficial de la plataforma</strong><br><span class="texto-sm texto-2" id="texto-fecha-global"></span></span>
+            </label>
+            <label class="opcion-fecha">
+              <input type="radio" name="tipo_fecha" value="personal">
+              <span class="crecer"><strong>Usar mi propia fecha</strong><br>
+                <input class="entrada mt-4" type="date" id="fecha-personal" name="fecha_personal" aria-label="Mi fecha del examen">
+              </span>
+            </label>
+          </fieldset>
+          <div class="rejilla-2" style="gap: var(--esp-4)">
+            <div class="campo">
+              <label for="meta-diaria">Meta diaria de estudio</label>
+              <select class="entrada" id="meta-diaria" name="meta_diaria_min">
+                <option value="10">10 minutos</option>
+                <option value="20">20 minutos</option>
+                <option value="30">30 minutos</option>
+                <option value="45">45 minutos</option>
+                <option value="60">1 hora</option>
+                <option value="90">1 h 30 min</option>
+                <option value="120">2 horas</option>
+              </select>
+            </div>
+            <div class="campo">
+              <label for="meta-puntaje">Meta de puntaje global (0–500)</label>
+              <input class="entrada" type="number" id="meta-puntaje" name="meta_puntaje" min="0" max="500" step="1" placeholder="Ej.: 320">
+            </div>
+          </div>
+          <label class="interruptor mb-4">
+            <input type="checkbox" id="recordatorios" name="recordatorios">
+            <span>Mostrar recordatorios diarios de estudio</span>
+          </label>
+          <div class="acciones-form"><button class="btn btn-primario" type="submit">Guardar preparación</button></div>
+        </form>
+
+        <section class="tarjeta" id="apariencia">
+          <h2><svg class="icono" aria-hidden="true"><use href="/img/iconos.svg#sun-moon"></use></svg> Apariencia</h2>
+          <p>Elige cómo se ve ICFES Lab.</p>
+          <div class="segmentado" role="group" aria-label="Tema de la interfaz" id="selector-tema">
+            <button type="button" data-tema="claro" aria-pressed="false"><svg class="icono icono-sm" aria-hidden="true"><use href="/img/iconos.svg#sun"></use></svg> Claro</button>
+            <button type="button" data-tema="oscuro" aria-pressed="false"><svg class="icono icono-sm" aria-hidden="true"><use href="/img/iconos.svg#moon"></use></svg> Oscuro</button>
+            <button type="button" data-tema="sistema" aria-pressed="false"><svg class="icono icono-sm" aria-hidden="true"><use href="/img/iconos.svg#sun-moon"></use></svg> Sistema</button>
+          </div>
+        </section>
+
+        <form class="tarjeta" id="cuenta" novalidate>
+          <h2><svg class="icono" aria-hidden="true"><use href="/img/iconos.svg#mail"></use></svg> Cuenta</h2>
+          <p>Correo actual: <strong id="email-actual"></strong></p>
+          <div class="rejilla-2" style="gap: var(--esp-4)">
+            <div class="campo"><label for="nuevo-email">Nuevo correo</label><input class="entrada" type="email" id="nuevo-email" name="email" autocomplete="email" required></div>
+            <div class="campo"><label for="password-email">Contraseña actual</label><input class="entrada" type="password" id="password-email" name="password" autocomplete="current-password" required></div>
+          </div>
+          <div class="acciones-form"><button class="btn btn-primario" type="submit">Cambiar correo</button></div>
+        </form>
+
+        <form class="tarjeta" id="seguridad" novalidate>
+          <h2><svg class="icono" aria-hidden="true"><use href="/img/iconos.svg#shield"></use></svg> Seguridad</h2>
+          <p>Al cambiar la contraseña cerraremos tus sesiones en otros dispositivos.</p>
+          <div class="campo"><label for="password-actual">Contraseña actual</label><input class="entrada" type="password" id="password-actual" name="actual" autocomplete="current-password" required></div>
+          <div class="rejilla-2" style="gap: var(--esp-4)">
+            <div class="campo"><label for="password-nueva">Nueva contraseña</label><input class="entrada" type="password" id="password-nueva" name="nueva" autocomplete="new-password" minlength="8" required></div>
+            <div class="campo"><label for="password-confirmacion">Confirma la nueva contraseña</label><input class="entrada" type="password" id="password-confirmacion" name="confirmacion" autocomplete="new-password" required></div>
+          </div>
+          <div class="acciones-form">
+            <button class="btn btn-primario" type="submit">Cambiar contraseña</button>
+          </div>
+        </form>
+
+        <section class="tarjeta" id="sesion">
+          <h2><svg class="icono" aria-hidden="true"><use href="/img/iconos.svg#log-out"></use></svg> Sesión</h2>
+          <p>Cierra tu sesión en este dispositivo o en todos los dispositivos donde hayas ingresado. Tu progreso queda guardado.</p>
+          <div class="acciones-form">
+            <button class="btn btn-secundario" type="button" id="cerrar-sesiones">Cerrar sesión en todos los dispositivos</button>
+            <button class="btn btn-primario" type="button" id="cerrar-sesion">Cerrar sesión</button>
+          </div>
+        </section>
+
+        <section class="tarjeta zona-peligro" id="peligro">
+          <h2><svg class="icono" aria-hidden="true"><use href="/img/iconos.svg#triangle-alert"></use></svg> Eliminar cuenta</h2>
+          <p>Se borrarán de forma permanente tu progreso, estadísticas, logros, simulacros y conversaciones con Vanty. Esta acción no se puede deshacer.</p>
+          <div class="acciones-form"><button class="btn btn-peligro" type="button" id="eliminar-cuenta">Eliminar mi cuenta</button></div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <nav id="nav-movil" class="nav-movil"></nav>
+</body>
+</html>

@@ -1,0 +1,73 @@
+/* =============================================================================
+   ICFES Lab · Resultado de simulacro
+   ============================================================================= */
+
+.hero-resultado {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: var(--esp-8);
+  align-items: center;
+  padding: var(--esp-8);
+  margin-bottom: var(--esp-6);
+  border-radius: var(--radio-xl);
+  color: #fff;
+  background:
+    radial-gradient(circle at 90% 10%, rgba(213, 224, 104, 0.35), transparent 40%),
+    linear-gradient(135deg, #3a3f8a, #484ea2 55%, #6b7bdc);
+}
+
+.hero-resultado .anillo { width: 190px; --grosor: 16px; background:
+  radial-gradient(closest-side, #454b9c calc(100% - var(--grosor)), transparent calc(100% - var(--grosor) + 1px)),
+  conic-gradient(var(--lima) calc(var(--porcentaje) * 1%), rgba(255, 255, 255, 0.2) 0); }
+.hero-resultado .anillo-valor { color: #fff; font-size: 2.8rem; }
+.hero-resultado .anillo-etiqueta { color: rgba(255, 255, 255, 0.8); font-size: var(--texto-sm); }
+.hero-resultado h1 { color: #fff; margin-bottom: var(--esp-2); }
+.hero-resultado p { color: rgba(255, 255, 255, 0.88); }
+.hero-resultado .estrellas .icono { width: 34px; height: 34px; }
+.hero-resultado .estrellas { color: rgba(255, 255, 255, 0.35); margin-bottom: var(--esp-2); }
+.hero-resultado .chip { background: rgba(255, 255, 255, 0.16); color: #fff; }
+.hero-resultado .comparacion { font-weight: 600; }
+
+.cifras { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: var(--esp-3); margin-bottom: var(--esp-6); }
+.cifra { padding: var(--esp-4); text-align: center; }
+.cifra .icono { width: 22px; height: 22px; margin: 0 auto 6px; }
+.cifra strong { display: block; font-family: var(--fuente-titulos); font-size: var(--texto-2xl); line-height: 1.1; }
+.cifra span { font-size: var(--texto-xs); color: var(--texto-3); text-transform: uppercase; letter-spacing: 0.04em; }
+.cifra.acierto .icono { color: var(--exito); }
+.cifra.error .icono { color: var(--coral); }
+.cifra.omitida .icono { color: var(--texto-3); }
+
+.areas-resultado { display: flex; flex-direction: column; gap: var(--esp-4); }
+.area-resultado .fila-entre { font-size: var(--texto-sm); margin-bottom: 6px; }
+
+.filtros-revision { display: flex; flex-wrap: wrap; gap: var(--esp-2); margin-bottom: var(--esp-4); }
+.filtros-revision .btn[aria-pressed='true'] { background: var(--primario); border-color: var(--primario); color: #fff; }
+.item-revision { border: 1px solid var(--borde); border-radius: var(--radio-lg); background: var(--superficie); overflow: hidden; }
+.item-revision + .item-revision { margin-top: var(--esp-3); }
+.item-revision summary {
+  display: flex;
+  align-items: center;
+  gap: var(--esp-3);
+  padding: var(--esp-4) var(--esp-5);
+  cursor: pointer;
+  list-style: none;
+}
+.item-revision summary::-webkit-details-marker { display: none; }
+.item-revision summary .icono-estado { width: 22px; height: 22px; }
+.item-revision summary .acierto { color: var(--exito); }
+.item-revision summary .error { color: var(--coral); }
+.item-revision summary .omitida { color: var(--texto-3); }
+.item-revision summary .resumen-enunciado { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: var(--texto-2); font-size: var(--texto-sm); }
+.item-revision[open] summary { border-bottom: 1px solid var(--borde); background: var(--superficie-2); }
+.item-revision .cuerpo-revision { padding: var(--esp-5); }
+
+@media (max-width: 1199px) {
+  .cifras { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+@media (max-width: 767px) {
+  .hero-resultado { grid-template-columns: minmax(0, 1fr); justify-items: center; text-align: center; padding: var(--esp-6); gap: var(--esp-4); }
+  .hero-resultado .anillo { width: 150px; }
+  .cifras { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .item-revision summary { padding: var(--esp-3); }
+}

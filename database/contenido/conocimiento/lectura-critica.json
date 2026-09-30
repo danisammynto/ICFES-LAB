@@ -1,0 +1,77 @@
+{
+  "materia": "lectura-critica",
+  "entradas": [
+    {
+      "id": "lec-idea-principal",
+      "subtema": "interpretacion",
+      "titulo": "Idea principal de un texto",
+      "palabras_clave": ["idea principal", "ideas principales", "idea central", "tema del texto", "ideas secundarias", "idea secundaria", "de que trata", "de qué trata", "resumen"],
+      "explicacion": "La idea principal es la afirmación más importante que el texto hace sobre su tema; responde a la pregunta «¿qué dice el autor sobre esto?». El tema, en cambio, se dice en pocas palabras (por ejemplo, «los páramos»). Las ideas secundarias son los ejemplos, datos y explicaciones que apoyan la idea principal. Una buena idea principal cubre todo el texto, no solo un párrafo, y no agrega nada que el autor no diga.",
+      "ejemplo": "En un texto que explica que los páramos guardan el agua como una esponja, que los frailejones atrapan la niebla y que su destrucción afecta a las ciudades, el tema es «los páramos» y la idea principal es «los páramos son fundamentales porque regulan el agua que consumen muchas ciudades».",
+      "tip_icfes": "Descarta las opciones que solo mencionan un dato o un ejemplo (demasiado específicas) y las que servirían para cualquier texto (demasiado generales). La correcta resume todo el texto con precisión."
+    },
+    {
+      "id": "lec-inferencia",
+      "subtema": "inferencias",
+      "titulo": "Inferencias: leer entre líneas",
+      "palabras_clave": ["inferencia", "inferencias", "inferir", "deducir", "leer entre lineas", "leer entre líneas", "conclusion", "conclusión", "conclusiones"],
+      "explicacion": "Inferir es sacar una conclusión que no está escrita en el texto, pero que se apoya en pistas que sí aparecen. La fórmula es: pista del texto + conocimiento general = conclusión. Una inferencia válida siempre se puede justificar señalando partes del texto. Si una conclusión no tiene ninguna pista que la respalde, es una suposición o una extrapolación, y en el ICFES funciona como distractor.",
+      "ejemplo": "«Mateo miró el reloj por quinta vez y tamborileó los dedos sobre la mesa». El texto no dice que Mateo esté impaciente, pero se puede inferir por sus gestos.",
+      "tip_icfes": "Entre dos opciones, elige la que necesite menos suposiciones extra. Desconfía de palabras absolutas como «siempre», «nunca» o «todos» si el texto no las respalda."
+    },
+    {
+      "id": "lec-tipos-de-texto",
+      "subtema": "analisis-textos",
+      "titulo": "Tipos de texto",
+      "palabras_clave": ["tipos de texto", "tipo de texto", "texto narrativo", "texto expositivo", "texto argumentativo", "texto descriptivo", "texto instructivo", "tipologia textual", "tipología textual"],
+      "explicacion": "Según su propósito, los textos pueden ser narrativos (cuentan hechos reales o imaginarios), expositivos (explican o informan), argumentativos (defienden una tesis para convencer), descriptivos (muestran cómo es algo), instructivos (indican pasos) o discontinuos (tablas, gráficas, infografías). En el ICFES aparecen cuentos, columnas de opinión, fragmentos filosóficos, textos científicos y textos discontinuos. Reconocer el tipo te dice qué buscar: en un cuento, el narrador y los personajes; en una columna, la tesis y los argumentos; en un texto científico, causas, efectos y datos.",
+      "ejemplo": "Una columna que defiende que se deben ampliar las ciclorrutas es un texto argumentativo; un artículo que explica cómo funciona una bicicleta eléctrica es un texto expositivo.",
+      "tip_icfes": "Antes de leer las preguntas, identifica el tipo de texto por su título, su fuente y su primer párrafo. Así sabrás si debes buscar una tesis, una secuencia de hechos o una explicación."
+    },
+    {
+      "id": "lec-tesis-argumentos",
+      "subtema": "argumentacion",
+      "titulo": "Tesis y argumentos",
+      "palabras_clave": ["tesis", "argumento", "argumentos", "contraargumento", "refutacion", "refutación", "postura del autor", "tipos de argumento", "reforzar", "debilitar"],
+      "explicacion": "La tesis es la postura que el autor defiende; los argumentos son las razones que la sostienen (datos, ejemplos, autoridad, analogías, relaciones de causa y efecto). Un contraargumento es una objeción a la tesis, y la refutación es la respuesta del autor a esa objeción. Para saber si un dato refuerza o debilita un argumento, reconstrúyelo en la forma «X, porque Y» y pregúntate si el dato hace más creíble o menos creíble ese «porque».",
+      "ejemplo": "Tesis: «El colegio debería tener una huerta escolar». Argumento: «porque los estudiantes aprenden biología con experiencias reales». Un dato que debilitaría el argumento: «en los colegios con huerta, el aprendizaje de biología no mejoró».",
+      "tip_icfes": "En preguntas de «debilita», busca la opción que ataque la razón o el supuesto del argumento. Las opciones que repiten lo que el texto ya dice lo refuerzan, y las que cambian de tema no lo afectan."
+    },
+    {
+      "id": "lec-falacias",
+      "subtema": "argumentacion",
+      "titulo": "Falacias frecuentes",
+      "palabras_clave": ["falacia", "falacias", "ad hominem", "ad populum", "generalizacion apresurada", "generalización apresurada", "falsa disyuntiva", "falsa causa", "pendiente resbaladiza"],
+      "explicacion": "Una falacia es un razonamiento que parece válido, pero cuyas razones no sostienen la conclusión. Las más frecuentes son: ad hominem (atacar a la persona en vez de sus ideas), ad populum (creer que algo es verdad porque mucha gente lo cree), generalización apresurada (concluir sobre todos a partir de pocos casos), falsa disyuntiva (presentar solo dos opciones cuando hay más), falsa causa (suponer que lo que ocurre después es efecto de lo anterior) y pendiente resbaladiza (predecir sin pruebas una cadena de desastres).",
+      "ejemplo": "«Ese remedio casero seguro funciona: en mi barrio todos lo usan» es una falacia ad populum, porque la popularidad de una creencia no prueba que sea verdadera.",
+      "tip_icfes": "El ICFES rara vez te pide el nombre de la falacia: te pide reconocer el error. Pregúntate si la razón realmente prueba lo que se afirma. En preguntas de «mismo error», busca la misma estructura de razonamiento, no el mismo tema."
+    },
+    {
+      "id": "lec-conectores",
+      "subtema": "comprension-textual",
+      "titulo": "Conectores lógicos",
+      "palabras_clave": ["conectores", "conector", "conectores logicos", "conectores lógicos", "sin embargo", "por lo tanto", "ademas", "además", "aunque", "marcadores textuales"],
+      "explicacion": "Los conectores son palabras o expresiones que muestran cómo se relacionan las ideas de un texto. Hay conectores de adición (además, también), contraste (pero, sin embargo, no obstante), concesión (aunque, si bien, ahora bien), causa (porque, ya que), consecuencia (por eso, por lo tanto), ejemplificación (por ejemplo, es decir) y conclusión (en conclusión, en síntesis). Entender el conector te dice qué papel cumple la frase o el párrafo que introduce.",
+      "ejemplo": "«Estudié toda la semana; sin embargo, el examen me salió regular». El conector «sin embargo» marca un contraste entre lo que se esperaba (que saliera bien) y lo que pasó.",
+      "tip_icfes": "Si te preguntan qué conector completa un texto, lee las dos ideas que une y define la relación (suma, oposición, causa o consecuencia) antes de mirar las opciones. Luego prueba la opción elegida dentro de la frase."
+    },
+    {
+      "id": "lec-intencion-comunicativa",
+      "subtema": "analisis-textos",
+      "titulo": "Intención comunicativa del autor",
+      "palabras_clave": ["intencion comunicativa", "intención comunicativa", "intencion del autor", "intención del autor", "proposito del autor", "propósito del autor", "para que escribe", "para qué escribe", "finalidad del texto"],
+      "explicacion": "La intención comunicativa es el propósito con el que se escribe un texto: informar, explicar, narrar, convencer, criticar, entretener, describir o dar instrucciones. Se reconoce por el tipo de texto, el tono, el lenguaje (objetivo o valorativo) y los recursos que usa el autor, como datos, ejemplos, preguntas, ironía o llamados al lector. Un mismo tema puede tratarse con intenciones muy distintas.",
+      "ejemplo": "Sobre el reciclaje, una infografía de la alcaldía busca informar cómo separar los residuos; una columna que reclama rutas de recolección selectiva busca criticar la situación y convencer al lector.",
+      "tip_icfes": "Fíjate en los verbos de las opciones: «informar», «explicar», «criticar», «persuadir», «narrar». Elige el que describa lo que hace el texto completo, no solo un párrafo, y desconfía de intenciones que el autor nunca manifiesta."
+    },
+    {
+      "id": "lec-textos-discontinuos",
+      "subtema": "interpretacion",
+      "titulo": "Lectura de textos discontinuos",
+      "palabras_clave": ["texto discontinuo", "textos discontinuos", "infografia", "infografía", "tabla", "tablas", "grafica", "gráfica", "graficas", "gráficas"],
+      "explicacion": "Los textos discontinuos presentan la información en tablas, gráficas, infografías, mapas o avisos, en lugar de párrafos seguidos. Para leerlos, revisa primero el título, las columnas o los ejes, las unidades (%, horas, pesos) y la fuente. Luego compara valores y busca tendencias: qué aumenta, qué disminuye y qué se mantiene. Recuerda que si dos datos cambian juntos (correlación), eso no prueba que uno cause el otro (causalidad).",
+      "ejemplo": "Si una tabla muestra que los estudiantes que más usan pantallas antes de dormir son los que menos duermen, puedes afirmar que ambas cosas aparecen juntas, pero no que las pantallas sean la única causa del poco sueño.",
+      "tip_icfes": "Antes de elegir, comprueba cada cifra de la opción en la tabla. Las trampas típicas son confundir columnas, sumar mal los grupos, cambiar «algunos» por «todos» o convertir una correlación en una causa."
+    }
+  ]
+}

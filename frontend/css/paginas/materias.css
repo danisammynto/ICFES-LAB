@@ -1,0 +1,104 @@
+/* =============================================================================
+   ICFES Lab · Materias (prototipo: grid-materias / card-materia / btn-estudiar)
+   y detalle de materia (temas → subtemas → lecciones)
+   ============================================================================= */
+
+.grid-materias { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: var(--esp-6); }
+
+.card-materia { display: flex; flex-direction: column; gap: var(--esp-4); padding: 0; overflow: hidden; }
+.card-materia-cabecera {
+  --color: var(--primario);
+  position: relative;
+  padding: var(--esp-6);
+  background:
+    radial-gradient(circle at 90% 10%, color-mix(in srgb, #fff 30%, transparent), transparent 45%),
+    linear-gradient(135deg, var(--color), color-mix(in srgb, var(--color) 70%, #23264f));
+  color: #fff;
+}
+
+.card-materia-cabecera .icono-materia {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.2);
+  margin-bottom: var(--esp-3);
+}
+
+.card-materia-cabecera .icono-materia .icono { width: 28px; height: 28px; }
+.card-materia-cabecera h2 { font-size: var(--texto-xl); margin: 0 0 4px; color: #fff; }
+.card-materia-cabecera p { margin: 0; font-size: var(--texto-sm); color: rgba(255, 255, 255, 0.88); }
+.card-materia-cuerpo { display: flex; flex-direction: column; gap: var(--esp-4); padding: 0 var(--esp-6) var(--esp-6); flex: 1; }
+.progreso-materia .fila-entre { font-size: var(--texto-sm); font-weight: 600; margin-bottom: 6px; }
+.datos-materia { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--esp-2); }
+.dato { padding: var(--esp-2) var(--esp-3); border-radius: var(--radio); background: var(--superficie-2); text-align: center; }
+.dato strong { display: block; font-family: var(--fuente-titulos); font-size: var(--texto-lg); }
+.dato span { font-size: 11px; color: var(--texto-3); text-transform: uppercase; letter-spacing: 0.04em; }
+.siguiente-leccion { font-size: var(--texto-sm); color: var(--texto-2); }
+.acciones-materia { display: flex; flex-wrap: wrap; gap: var(--esp-2); margin-top: auto; }
+.acciones-materia .btn { flex: 1 1 auto; }
+
+/* --- Detalle de materia --------------------------------------------------------- */
+.encabezado-materia {
+  --color: var(--primario);
+  display: flex;
+  align-items: center;
+  gap: var(--esp-6);
+  padding: var(--esp-8);
+  margin-bottom: var(--esp-8);
+  border-radius: var(--radio-xl);
+  color: #fff;
+  background:
+    radial-gradient(circle at 85% 20%, color-mix(in srgb, #fff 25%, transparent), transparent 40%),
+    linear-gradient(135deg, var(--color), color-mix(in srgb, var(--color) 65%, #23264f));
+}
+
+.encabezado-materia h1 { color: #fff; margin-bottom: 6px; }
+.encabezado-materia p { color: rgba(255, 255, 255, 0.9); margin: 0; }
+.encabezado-materia .anillo { width: 120px; --grosor: 10px; flex-shrink: 0; background:
+  radial-gradient(closest-side, color-mix(in srgb, var(--color) 80%, #23264f) calc(100% - var(--grosor)), transparent calc(100% - var(--grosor) + 1px)),
+  conic-gradient(var(--lima) calc(var(--porcentaje) * 1%), rgba(255, 255, 255, 0.25) 0); }
+.encabezado-materia .anillo-valor { font-size: var(--texto-2xl); color: #fff; }
+.encabezado-materia .anillo-etiqueta { color: rgba(255, 255, 255, 0.8); }
+
+.tema { margin-bottom: var(--esp-8); }
+.tema-titulo { display: flex; align-items: baseline; gap: var(--esp-3); flex-wrap: wrap; margin-bottom: var(--esp-4); }
+.tema-titulo h2 { font-size: var(--texto-xl); margin: 0; }
+.tema-titulo span { color: var(--texto-3); font-size: var(--texto-sm); }
+
+.subtemas { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: var(--esp-5); }
+.subtema { display: flex; flex-direction: column; gap: var(--esp-3); }
+.subtema-cabecera { display: flex; gap: var(--esp-3); align-items: flex-start; }
+.subtema-cabecera .medalla { width: 48px; height: 48px; }
+.subtema-cabecera h3 { font-size: var(--texto-lg); margin: 0 0 2px; }
+.subtema-cabecera p { margin: 0; font-size: var(--texto-sm); color: var(--texto-2); }
+.subtema .chips { display: flex; flex-wrap: wrap; gap: var(--esp-2); }
+.subtema .lecciones { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+.subtema .lecciones a { display: flex; align-items: center; gap: var(--esp-2); padding: 8px 10px; border-radius: var(--radio-sm); background: var(--superficie-2); color: var(--texto); font-size: var(--texto-sm); text-decoration: none; }
+.subtema .lecciones a:hover { background: var(--primario-suave); color: var(--primario); }
+.subtema .lecciones .hecha .icono { color: var(--exito); }
+.subtema .acciones { display: flex; gap: var(--esp-2); margin-top: auto; }
+.subtema .acciones .btn { flex: 1; }
+
+.subtema.bloqueado { background: var(--superficie-2); }
+.subtema.bloqueado > *:not(.candado) { opacity: 0.45; filter: grayscale(0.6); pointer-events: none; }
+.candado {
+  display: flex;
+  align-items: center;
+  gap: var(--esp-2);
+  padding: var(--esp-2) var(--esp-3);
+  border-radius: var(--radio);
+  background: var(--indigo-50);
+  color: var(--primario);
+  font-size: var(--texto-sm);
+  font-weight: 600;
+}
+
+.subtema.completado { border-color: color-mix(in srgb, var(--exito) 45%, var(--borde)); }
+
+@media (max-width: 767px) {
+  .grid-materias, .subtemas { grid-template-columns: minmax(0, 1fr); gap: var(--esp-4); }
+  .encabezado-materia { flex-direction: column; align-items: flex-start; padding: var(--esp-6); gap: var(--esp-4); }
+  .encabezado-materia .anillo { width: 96px; }
+}

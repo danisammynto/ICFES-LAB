@@ -1,0 +1,20 @@
+/* =============================================================================
+   ICFES Lab · Panel de administración
+   ============================================================================= */
+
+.kpis-admin { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--esp-4); margin-bottom: var(--esp-6); }
+.filtros-admin { display: flex; flex-wrap: wrap; gap: var(--esp-3); align-items: flex-end; margin-bottom: var(--esp-4); }
+.filtros-admin .campo { margin: 0; min-width: 180px; }
+.filtros-admin .crecer { min-width: 220px; }
+.tabla td.enunciado { max-width: 380px; }
+.tabla td.enunciado span { display: -webkit-box; -webkit-line-clamp: 2; line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.paginacion { display: flex; align-items: center; justify-content: flex-end; gap: var(--esp-3); margin-top: var(--esp-4); font-size: var(--texto-sm); }
+
+.opcion-form { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: var(--esp-2) var(--esp-3); align-items: start; padding: var(--esp-3); border-radius: var(--radio); background: var(--superficie-2); margin-bottom: var(--esp-3); }
+.opcion-form .letra { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 10px; background: var(--primario); color: #fff; font-weight: 700; }
+.opcion-form label.correcta { display: inline-flex; align-items: center; gap: 6px; font-size: var(--texto-sm); color: var(--texto-2); }
+.opcion-form label.correcta input { accent-color: var(--exito); }
+.errores-importacion { max-height: 240px; overflow: auto; margin: var(--esp-3) 0 0; padding-left: 1.2em; font-size: var(--texto-sm); color: var(--coral); }
+
+@media (max-width: 1199px) { .kpis-admin { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 767px) { .filtros-admin .campo { min-width: 100%; } }

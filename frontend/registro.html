@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crear cuenta · ICFES Lab</title>
+  <meta name="description" content="Crea tu cuenta gratis en ICFES Lab y prepárate para la Prueba Saber 11 con gamificación e inteligencia artificial.">
+  <link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/tokens.css">
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/componentes.css">
+  <link rel="stylesheet" href="/css/paginas/auth.css">
+  <script src="/js/tema-inicial.js"></script>
+  <script type="module" src="/js/paginas/registro.js"></script>
+</head>
+<body>
+  <div class="pagina-auth">
+    <section class="panel-marca">
+      <a href="/" aria-label="ICFES Lab, página principal">
+        <svg class="logo-imagen" viewBox="0 0 212 48" role="img" aria-label="ICFES Lab">
+          <rect x="2" y="2" width="44" height="44" rx="13" fill="#ffffff" fill-opacity="0.16"/>
+          <path d="M19 12h10M21 12v8.5L13.6 32.9a3.2 3.2 0 0 0 2.8 4.8h15.2a3.2 3.2 0 0 0 2.8-4.8L27 20.5V12" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M16.3 30.4h15.4l2 3.4a1.6 1.6 0 0 1-1.4 2.4H15.7a1.6 1.6 0 0 1-1.4-2.4z" fill="#d5e068"/>
+          <path d="M37 7.5l1.3 3.2 3.2 1.3-3.2 1.3L37 16.5l-1.3-3.2-3.2-1.3 3.2-1.3z" fill="#fda879"/>
+          <text x="56" y="33" font-family="Outfit, Segoe UI, sans-serif" font-size="25" font-weight="800" fill="currentColor">ICFES<tspan fill="#d5e068"> Lab</tspan></text>
+        </svg>
+      </a>
+      <div>
+        <h1>Prepárate para el ICFES <span>jugando y aprendiendo</span>.</h1>
+        <p>Lecciones cortas, preguntas tipo ICFES, simulacros cronometrados y una tutora con IA que se adapta a ti.</p>
+        <ul class="lista-beneficios">
+          <li><svg class="icono" aria-hidden="true"><use href="/img/iconos.svg#book-open"></use></svg> Las 5 áreas del Saber 11 organizadas por temas</li>
+          <li><svg class="icono" aria-hidden="true"><use href="/img/iconos.svg#clipboard-list"></use></svg> Simulacros completos y minisimulacros</li>
+          <li><svg class="icono" aria-hidden="true"><use href="/img/iconos.svg#trophy"></use></svg> 5 niveles, logros, insignias y tienda de avatar</li>
+        </ul>
+      </div>
+      <img src="/img/vanty.svg" alt="" class="vanty-marca">
+    </section>
+
+    <main class="panel-formulario" id="contenido">
+      <div class="caja-formulario">
+        <h2>Crea tu cuenta</h2>
+        <p>Es gratis y empiezas con 50 monedas.</p>
+        <form class="tarjeta" id="formulario" novalidate>
+          <div class="alerta alerta-error alerta-formulario oculto" role="alert" tabindex="-1"></div>
+          <div class="campo">
+            <label for="nombre">Nombre completo</label>
+            <input class="entrada" type="text" id="nombre" name="nombre" autocomplete="name" required minlength="2" maxlength="80" placeholder="María José Rodríguez">
+            <span class="campo-error" id="error-nombre"></span>
+          </div>
+          <div class="campo">
+            <label for="email">Correo electrónico</label>
+            <input class="entrada" type="email" id="email" name="email" autocomplete="email" required maxlength="160" placeholder="tucorreo@ejemplo.com">
+            <span class="campo-error" id="error-email"></span>
+          </div>
+          <div class="campo">
+            <label for="password">Contraseña</label>
+            <div class="entrada-con-icono">
+              <input class="entrada" type="password" id="password" name="password" autocomplete="new-password" required minlength="8" maxlength="72" aria-describedby="ayuda-password">
+              <button type="button" class="btn btn-fantasma btn-icono btn-sm" data-ver-password="password" aria-label="Mostrar contraseña">
+                <svg class="icono" aria-hidden="true"><use href="/img/iconos.svg#eye"></use></svg>
+              </button>
+            </div>
+            <div class="fuerza" id="fuerza" data-nivel="0" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+            <span class="campo-ayuda" id="ayuda-password">Mínimo 8 caracteres, con letras y números.</span>
+            <span class="campo-error" id="error-password"></span>
+          </div>
+          <div class="fila-campos">
+            <div class="campo">
+              <label for="grado">Grado</label>
+              <select class="entrada" id="grado" name="grado">
+                <option value="11">11.º</option>
+                <option value="10">10.º</option>
+                <option value="egresado">Egresado</option>
+                <option value="otro">Otro</option>
+              </select>
+              <span class="campo-error" id="error-grado"></span>
+            </div>
+            <div class="campo">
+              <label for="fecha_icfes">Fecha de tu ICFES <span class="texto-3">(opcional)</span></label>
+              <input class="entrada" type="date" id="fecha_icfes" name="fecha_icfes">
+              <span class="campo-error" id="error-fecha_icfes"></span>
+            </div>
+          </div>
+          <label class="casilla">
+            <input type="checkbox" id="acepto" name="acepto" required>
+            <span>Acepto que ICFES Lab use mis datos de estudio para personalizar mi aprendizaje y mis estadísticas.</span>
+          </label>
+          <button type="submit" class="btn btn-primario btn-lg btn-bloque" id="boton-enviar">Crear mi cuenta</button>
+        </form>
+        <p class="pie-formulario">¿Ya tienes cuenta? <a href="/login">Inicia sesión</a></p>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

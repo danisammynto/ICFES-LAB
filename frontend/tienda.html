@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tienda · ICFES Lab</title>
+  <meta name="description" content="Personaliza tu avatar y consigue insignias y protectores de racha con tus monedas.">
+  <link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/tokens.css">
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/componentes.css">
+  <link rel="stylesheet" href="/css/layout.css">
+  <link rel="stylesheet" href="/css/paginas/logros.css">
+  <link rel="stylesheet" href="/css/paginas/tienda.css">
+  <script src="/js/tema-inicial.js"></script>
+  <script type="module" src="/js/paginas/tienda.js"></script>
+</head>
+<body class="app">
+  <a class="saltar-contenido" href="#contenido">Saltar al contenido</a>
+  <header id="cabecera" class="main-header"></header>
+  <nav id="barra-lateral" class="sidebar-lateral"></nav>
+
+  <main id="contenido" class="principal">
+    <div class="encabezado-pagina">
+      <div>
+        <h1>Tienda</h1>
+        <p>Gana monedas estudiando y úsalas para personalizar tu avatar, coleccionar insignias y proteger tu racha.</p>
+      </div>
+    </div>
+
+    <div class="diseno-tienda">
+      <aside class="tarjeta vista-avatar" aria-label="Vista previa del avatar">
+        <div class="saldo" id="saldo"></div>
+        <div class="marco-avatar" id="vista-previa"></div>
+        <p class="texto-sm texto-2" id="texto-vista">Elige un artículo para verlo en tu avatar.</p>
+        <button class="btn btn-primario btn-bloque" id="guardar-avatar" disabled>
+          <svg class="icono" aria-hidden="true"><use href="/img/iconos.svg#save"></use></svg> Guardar avatar
+        </button>
+        <button class="btn btn-fantasma btn-bloque mt-4" id="restablecer-avatar" hidden>Deshacer cambios</button>
+      </aside>
+
+      <div>
+        <div class="pestanas" role="tablist" aria-label="Categorías de la tienda">
+          <button role="tab" id="tab-color" aria-controls="panel-color" aria-selected="true"><svg class="icono" aria-hidden="true"><use href="/img/iconos.svg#palette"></use></svg> Colores</button>
+          <button role="tab" id="tab-expresion" aria-controls="panel-expresion" aria-selected="false" tabindex="-1"><svg class="icono" aria-hidden="true"><use href="/img/iconos.svg#heart"></use></svg> Expresiones</button>
+          <button role="tab" id="tab-accesorio" aria-controls="panel-accesorio" aria-selected="false" tabindex="-1"><svg class="icono" aria-hidden="true"><use href="/img/iconos.svg#graduation-cap"></use></svg> Accesorios</button>
+          <button role="tab" id="tab-fondo" aria-controls="panel-fondo" aria-selected="false" tabindex="-1"><svg class="icono" aria-hidden="true"><use href="/img/iconos.svg#sparkles"></use></svg> Fondos</button>
+          <button role="tab" id="tab-insignias" aria-controls="panel-insignias" aria-selected="false" tabindex="-1"><svg class="icono" aria-hidden="true"><use href="/img/iconos.svg#award"></use></svg> Insignias</button>
+          <button role="tab" id="tab-protectores" aria-controls="panel-protectores" aria-selected="false" tabindex="-1"><svg class="icono" aria-hidden="true"><use href="/img/iconos.svg#shield-check"></use></svg> Protectores</button>
+        </div>
+        <section role="tabpanel" id="panel-color" aria-labelledby="tab-color"></section>
+        <section role="tabpanel" id="panel-expresion" aria-labelledby="tab-expresion" hidden></section>
+        <section role="tabpanel" id="panel-accesorio" aria-labelledby="tab-accesorio" hidden></section>
+        <section role="tabpanel" id="panel-fondo" aria-labelledby="tab-fondo" hidden></section>
+        <section role="tabpanel" id="panel-insignias" aria-labelledby="tab-insignias" hidden></section>
+        <section role="tabpanel" id="panel-protectores" aria-labelledby="tab-protectores" hidden></section>
+      </div>
+    </div>
+  </main>
+
+  <nav id="nav-movil" class="nav-movil"></nav>
+</body>
+</html>

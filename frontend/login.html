@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iniciar sesión · ICFES Lab</title>
+  <meta name="description" content="Ingresa a ICFES Lab y sigue preparándote para la Prueba Saber 11.">
+  <link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/tokens.css">
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/componentes.css">
+  <link rel="stylesheet" href="/css/paginas/auth.css">
+  <script src="/js/tema-inicial.js"></script>
+  <script type="module" src="/js/paginas/login.js"></script>
+</head>
+<body>
+  <div class="pagina-auth">
+    <section class="panel-marca">
+      <a href="/" aria-label="ICFES Lab, página principal">
+        <svg class="logo-imagen" viewBox="0 0 212 48" role="img" aria-label="ICFES Lab">
+          <rect x="2" y="2" width="44" height="44" rx="13" fill="#ffffff" fill-opacity="0.16"/>
+          <path d="M19 12h10M21 12v8.5L13.6 32.9a3.2 3.2 0 0 0 2.8 4.8h15.2a3.2 3.2 0 0 0 2.8-4.8L27 20.5V12" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M16.3 30.4h15.4l2 3.4a1.6 1.6 0 0 1-1.4 2.4H15.7a1.6 1.6 0 0 1-1.4-2.4z" fill="#d5e068"/>
+          <path d="M37 7.5l1.3 3.2 3.2 1.3-3.2 1.3L37 16.5l-1.3-3.2-3.2-1.3 3.2-1.3z" fill="#fda879"/>
+          <text x="56" y="33" font-family="Outfit, Segoe UI, sans-serif" font-size="25" font-weight="800" fill="currentColor">ICFES<tspan fill="#d5e068"> Lab</tspan></text>
+        </svg>
+      </a>
+      <div>
+        <h1>Bienvenido de nuevo. Tu racha te <span>está esperando</span>.</h1>
+        <p>Sigue sumando XP, completa tus lecciones y mide tu avance con simulacros realistas.</p>
+        <ul class="lista-beneficios">
+          <li><svg class="icono" aria-hidden="true"><use href="/img/iconos.svg#flame"></use></svg> Rachas, niveles y logros que te motivan</li>
+          <li><svg class="icono" aria-hidden="true"><use href="/img/iconos.svg#bot"></use></svg> Vanty, tu tutora con inteligencia artificial</li>
+          <li><svg class="icono" aria-hidden="true"><use href="/img/iconos.svg#chart-line"></use></svg> Tu puntaje estimado y proyección de mejora</li>
+        </ul>
+      </div>
+      <img src="/img/vanty.svg" alt="" class="vanty-marca">
+    </section>
+
+    <main class="panel-formulario" id="contenido">
+      <div class="caja-formulario">
+        <h2>Iniciar sesión</h2>
+        <p>Ingresa con tu correo y contraseña.</p>
+        <form class="tarjeta" id="formulario" novalidate>
+          <div class="alerta alerta-error alerta-formulario oculto" role="alert" tabindex="-1"></div>
+          <div class="campo">
+            <label for="email">Correo electrónico</label>
+            <input class="entrada" type="email" id="email" name="email" autocomplete="email" required maxlength="160" placeholder="tucorreo@ejemplo.com">
+            <span class="campo-error" id="error-email"></span>
+          </div>
+          <div class="campo">
+            <div class="fila-entre">
+              <label for="password">Contraseña</label>
+              <a class="enlace-secundario" href="/recuperar">¿La olvidaste?</a>
+            </div>
+            <div class="entrada-con-icono">
+              <input class="entrada" type="password" id="password" name="password" autocomplete="current-password" required maxlength="72">
+              <button type="button" class="btn btn-fantasma btn-icono btn-sm" data-ver-password="password" aria-label="Mostrar contraseña">
+                <svg class="icono" aria-hidden="true"><use href="/img/iconos.svg#eye"></use></svg>
+              </button>
+            </div>
+            <span class="campo-error" id="error-password"></span>
+          </div>
+          <button type="submit" class="btn btn-primario btn-lg btn-bloque" id="boton-enviar">Ingresar</button>
+        </form>
+        <p class="pie-formulario">¿Aún no tienes cuenta? <a href="/registro">Crea una gratis</a></p>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

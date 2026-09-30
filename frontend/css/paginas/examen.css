@@ -1,0 +1,83 @@
+/* =============================================================================
+   ICFES Lab · Presentación de simulacros (modo examen)
+   ============================================================================= */
+
+.barra-examen {
+  position: sticky;
+  top: var(--alto-cabecera);
+  z-index: 600;
+  display: flex;
+  align-items: center;
+  gap: var(--esp-4);
+  flex-wrap: wrap;
+  margin: calc(-1 * var(--esp-8)) calc(-1 * var(--esp-8)) var(--esp-6);
+  padding: var(--esp-3) var(--esp-8);
+  background: var(--superficie);
+  border-bottom: 1px solid var(--borde);
+}
+
+.barra-examen h1 { font-size: var(--texto-lg); margin: 0; }
+.barra-examen .progreso-examen { flex: 1; min-width: 160px; }
+.barra-examen .progreso-examen .fila-entre { font-size: var(--texto-xs); color: var(--texto-2); margin-bottom: 4px; }
+
+.reloj {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--esp-2);
+  padding: 8px 14px;
+  border-radius: var(--radio);
+  background: var(--indigo-50);
+  color: var(--primario);
+  font-family: var(--fuente-titulos);
+  font-size: var(--texto-xl);
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+}
+
+.reloj.alerta { background: var(--durazno-100); color: var(--durazno-800); }
+.reloj.critico { background: var(--coral-100); color: var(--coral); animation: latir 1s ease-in-out infinite; }
+
+.diseno-examen { display: grid; grid-template-columns: minmax(0, 1fr) 290px; gap: var(--esp-6); align-items: start; }
+.navegacion-pregunta { display: flex; justify-content: space-between; gap: var(--esp-3); margin-top: var(--esp-6); flex-wrap: wrap; }
+.btn.marcada { background: var(--durazno-100); border-color: var(--durazno); color: var(--durazno-800); }
+
+.panel-navegador { position: sticky; top: calc(var(--alto-cabecera) + 90px); }
+.navegador { display: grid; grid-template-columns: repeat(auto-fill, minmax(38px, 1fr)); gap: 6px; max-height: 50vh; overflow-y: auto; padding: 2px; }
+.navegador button {
+  position: relative;
+  aspect-ratio: 1;
+  border: 1.5px solid var(--borde-fuerte);
+  border-radius: 10px;
+  background: var(--superficie);
+  color: var(--texto-2);
+  font-size: var(--texto-sm);
+  font-weight: 600;
+}
+
+.navegador button.respondida { background: var(--primario); border-color: var(--primario); color: #fff; }
+.navegador button.marcada::after { content: ''; position: absolute; top: -4px; right: -4px; width: 11px; height: 11px; border-radius: 50%; background: var(--durazno-600); border: 2px solid var(--superficie); }
+.navegador button.actual { outline: 3px solid var(--cielo); outline-offset: 1px; }
+.leyenda-navegador { display: flex; flex-wrap: wrap; gap: var(--esp-3); margin: var(--esp-3) 0 var(--esp-4); font-size: var(--texto-xs); color: var(--texto-2); }
+.leyenda-navegador span { display: inline-flex; align-items: center; gap: 5px; }
+.leyenda-navegador i { width: 12px; height: 12px; border-radius: 4px; border: 1.5px solid var(--borde-fuerte); display: inline-block; }
+.leyenda-navegador i.l-respondida { background: var(--primario); border-color: var(--primario); }
+.leyenda-navegador i.l-marcada { background: var(--durazno-600); border-color: var(--durazno-600); border-radius: 50%; }
+
+.pantalla-sesion { max-width: 720px; margin: var(--esp-8) auto; text-align: center; padding: var(--esp-10) var(--esp-8); }
+.pantalla-sesion img { width: 120px; margin: 0 auto var(--esp-4); }
+.pantalla-sesion .lista-desbloqueos { max-width: 520px; margin: var(--esp-5) auto; }
+.estado-guardado { font-size: var(--texto-xs); color: var(--texto-3); display: inline-flex; align-items: center; gap: 4px; }
+
+@media (max-width: 1199px) {
+  .barra-examen { margin: calc(-1 * var(--esp-6)) calc(-1 * var(--esp-6)) var(--esp-6); padding: var(--esp-3) var(--esp-6); }
+  .diseno-examen { grid-template-columns: minmax(0, 1fr); }
+  .panel-navegador { position: static; order: 2; }
+}
+
+@media (max-width: 767px) {
+  .barra-examen { margin: calc(-1 * var(--esp-4)) calc(-1 * var(--esp-4)) var(--esp-4); padding: var(--esp-3) var(--esp-4); gap: var(--esp-3); }
+  .barra-examen h1 { width: 100%; font-size: var(--texto-md); }
+  .reloj { font-size: var(--texto-lg); padding: 6px 10px; }
+  .navegacion-pregunta .btn { flex: 1; }
+  .pantalla-sesion { padding: var(--esp-6) var(--esp-4); }
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Práctica · ICFES Lab</title>
+  <link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/tokens.css">
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/componentes.css">
+  <link rel="stylesheet" href="/css/layout.css">
+  <link rel="stylesheet" href="/css/pregunta.css">
+  <link rel="stylesheet" href="/css/paginas/leccion.css">
+  <script src="/js/tema-inicial.js"></script>
+  <script type="module" src="/js/paginas/practica.js"></script>
+</head>
+<body class="app">
+  <a class="saltar-contenido" href="#contenido">Saltar al contenido</a>
+  <header id="cabecera" class="main-header"></header>
+  <nav id="barra-lateral" class="sidebar-lateral"></nav>
+
+  <main id="contenido" class="principal">
+    <a href="/materias" class="miga" id="miga"><svg class="icono icono-sm" aria-hidden="true"><use href="/img/iconos.svg#arrow-left"></use></svg> Materias</a>
+    <div class="encabezado-pagina">
+      <div>
+        <h1 id="titulo-practica">Práctica</h1>
+        <p id="subtitulo-practica">Preguntas tipo ICFES adaptadas a tu nivel.</p>
+      </div>
+    </div>
+    <div class="diseno-practica">
+      <div id="zona-pregunta" aria-live="polite"></div>
+      <aside class="columna" style="gap: var(--esp-4)">
+        <div class="tarjeta">
+          <h3 class="tarjeta-titulo"><svg class="icono" aria-hidden="true"><use href="/img/iconos.svg#chart-column"></use></svg> Esta sesión</h3>
+          <div class="marcador">
+            <div class="dato"><strong id="m-respondidas">0</strong><span>Respondidas</span></div>
+            <div class="dato"><strong id="m-precision">—</strong><span>Precisión</span></div>
+            <div class="dato"><strong id="m-seguidas">0</strong><span>Seguidas</span></div>
+            <div class="dato"><strong id="m-dominio">—</strong><span>Dominio</span></div>
+          </div>
+        </div>
+        <div class="tarjeta">
+          <h3 class="tarjeta-titulo"><svg class="icono" aria-hidden="true"><use href="/img/iconos.svg#info"></use></svg> ¿Cómo funciona?</h3>
+          <p class="texto-sm texto-2 mb-0">La dificultad se adapta a tu dominio del tema. Priorizamos preguntas que no has visto o que fallaste antes. Usa las teclas A–D para responder.</p>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <nav id="nav-movil" class="nav-movil"></nav>
+</body>
+</html>

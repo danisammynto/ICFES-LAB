@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Administración · ICFES Lab</title>
+  <link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/tokens.css">
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/componentes.css">
+  <link rel="stylesheet" href="/css/layout.css">
+  <link rel="stylesheet" href="/css/paginas/inicio.css">
+  <link rel="stylesheet" href="/css/paginas/admin.css">
+  <script src="/js/tema-inicial.js"></script>
+  <script src="/vendor/chart.js/chart.umd.min.js" defer></script>
+  <script type="module" src="/js/paginas/admin.js"></script>
+</head>
+<body class="app">
+  <a class="saltar-contenido" href="#contenido">Saltar al contenido</a>
+  <header id="cabecera" class="main-header"></header>
+  <nav id="barra-lateral" class="sidebar-lateral"></nav>
+
+  <main id="contenido" class="principal">
+    <div class="encabezado-pagina">
+      <div>
+        <h1>Administración</h1>
+        <p>Gestiona el banco de preguntas, los usuarios y la configuración de la plataforma.</p>
+      </div>
+    </div>
+
+    <div class="pestanas" role="tablist" aria-label="Secciones de administración">
+      <button role="tab" id="tab-resumen" aria-controls="panel-resumen" aria-selected="true"><svg class="icono" aria-hidden="true"><use href="/img/iconos.svg#layout-dashboard"></use></svg> Resumen</button>
+      <button role="tab" id="tab-preguntas" aria-controls="panel-preguntas" aria-selected="false" tabindex="-1"><svg class="icono" aria-hidden="true"><use href="/img/iconos.svg#list-checks"></use></svg> Preguntas</button>
+      <button role="tab" id="tab-usuarios" aria-controls="panel-usuarios" aria-selected="false" tabindex="-1"><svg class="icono" aria-hidden="true"><use href="/img/iconos.svg#users"></use></svg> Usuarios</button>
+      <button role="tab" id="tab-configuracion" aria-controls="panel-configuracion" aria-selected="false" tabindex="-1"><svg class="icono" aria-hidden="true"><use href="/img/iconos.svg#settings"></use></svg> Configuración</button>
+    </div>
+
+    <section role="tabpanel" id="panel-resumen" aria-labelledby="tab-resumen"></section>
+    <section role="tabpanel" id="panel-preguntas" aria-labelledby="tab-preguntas" hidden></section>
+    <section role="tabpanel" id="panel-usuarios" aria-labelledby="tab-usuarios" hidden></section>
+    <section role="tabpanel" id="panel-configuracion" aria-labelledby="tab-configuracion" hidden></section>
+  </main>
+
+  <nav id="nav-movil" class="nav-movil"></nav>
+</body>
+</html>

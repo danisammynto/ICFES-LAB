@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 150" role="img" aria-labelledby="titulo-fuego">
+  <title id="titulo-fuego">Fuego de la racha</title>
+  <defs>
+    <linearGradient id="fuego-exterior" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#f47c48"/>
+      <stop offset="0.6" stop-color="#fb9660"/>
+      <stop offset="1" stop-color="#fda879"/>
+    </linearGradient>
+    <linearGradient id="fuego-interior" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#ffcf5c"/>
+      <stop offset="1" stop-color="#fff2b3"/>
+    </linearGradient>
+  </defs>
+  <path d="M60 6c7 22 35 38 41 67 7 34-16 67-41 71C35 140 12 112 17 81c3-18 14-28 21-41 2 14 8 22 16 27C50 45 51 24 60 6z" fill="url(#fuego-exterior)"/>
+  <path d="M61 64c4 13 20 22 23 40 3 19-9 34-24 35-14-1-26-13-22-31 2-11 9-16 13-24 2 8 5 12 10 14-2-12-3-23 0-34z" fill="url(#fuego-interior)"/>
+  <ellipse cx="60" cy="118" rx="9" ry="12" fill="#ffffff" opacity="0.55"/>
+</svg>
