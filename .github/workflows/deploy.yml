@@ -1,0 +1,33 @@
+name: Deploy Static Content to Pages
+
+on:
+  push:
+    branches: ["main"] # Cambia "main" por "master" si tu rama principal se llama así
+
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+job_deployment:
+  environment:
+    name: github-pages
+    url: ${{ steps.deployment.outputs.page_url }}
+  runs-on: ubuntu-latest
+  steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+    - name: Setup Pages
+      uses: actions/configure-pages@v4
+    - name: Upload artifact
+      uses: actions/upload-pages-artifact@v3
+      with:
+        path: './frontend' # <--- Aquí le indicamos que tu web está en la carpeta frontend
+    - name: Deploy to GitHub-pages
+      uses: actions/deploy-pages@v4
