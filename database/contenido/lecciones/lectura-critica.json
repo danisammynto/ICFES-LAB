@@ -2,93 +2,1938 @@
   "materia": "lectura-critica",
   "lecciones": [
     {
-      "codigo": "LEC-COM-L1",
-      "subtema": "comprension-textual",
-      "titulo": "Lee lo que el texto dice (y nada más)",
-      "resumen": "Aprenderás a localizar información explícita, a parafrasear sin deformar y a descubrir el sentido de palabras y expresiones según su contexto.",
-      "duracion_min": 9,
-      "bloques": [
-        { "tipo": "texto", "contenido": "En el ICFES, muchas preguntas de Lectura Crítica no buscan tu opinión: quieren comprobar que entiendes **qué dice exactamente el texto**. Parece fácil, pero es donde más puntos se pierden, porque leemos rápido, completamos con lo que ya sabemos y terminamos respondiendo algo que el texto nunca dijo. En esta lección vas a entrenar el ojo para leer con precisión." },
-        { "tipo": "concepto", "titulo": "Comprensión literal", "contenido": "Es la capacidad de identificar la información que aparece **de forma explícita** en un texto: quién hace qué, cuándo, dónde, cómo y por qué, además del significado de palabras y expresiones **según el contexto** en el que aparecen. Una respuesta literal siempre se puede señalar con el dedo en el texto." },
-        { "tipo": "lista", "titulo": "Estrategia L-P-V para preguntas literales", "items": ["**Localiza**: subraya la palabra clave del enunciado y búscala (o un sinónimo) en el texto.", "**Parafrasea**: di con tus palabras lo que dice ese fragmento, sin agregar ni quitar información.", "**Verifica**: compara cada opción con el fragmento y descarta las que agregan datos, invierten causa y efecto o mezclan información de otro párrafo."] },
-        { "tipo": "concepto", "titulo": "El sentido depende del contexto", "contenido": "Una misma palabra cambia de significado según la frase: «pesado» no significa lo mismo en «un bulto pesado» que en «un compañero pesado». Cuando el ICFES pregunta qué significa una expresión **en el texto**, busca el sentido que tiene allí, no la definición del diccionario. Relee la oración anterior y la siguiente: casi siempre ahí está la pista." },
-        { "tipo": "ejemplo", "titulo": "Ejemplo resuelto: sentido de una expresión", "enunciado": "Micro-texto: «Cuando anunciaron que el examen se aplazaba, el salón fue una olla a presión que por fin soltó el vapor: gritos, risas y hasta aplausos». ¿Qué significa en el texto la expresión «una olla a presión que por fin soltó el vapor»?", "pasos": ["Paso 1: reconoce que la expresión es figurada: el salón no es literalmente una olla.", "Paso 2: busca las pistas cercanas. Antes: el anuncio de que el examen se aplazaba. Después: «gritos, risas y hasta aplausos».", "Paso 3: piensa qué tienen en común el salón y la olla: una tensión acumulada que se libera de golpe.", "Paso 4: formula el sentido con tus palabras y comprueba que encaje con las pistas: los estudiantes estaban tensos y, con la noticia, soltaron esa tensión con alegría.", "Paso 5: descarta lecturas literales (algo se calentó en el salón) y extrapolaciones (los estudiantes estaban furiosos con el profesor)."], "respuesta": "La expresión indica que los estudiantes, tensos por el examen, liberaron de golpe esa tensión al saber que se aplazaba." },
-        { "tipo": "lista", "titulo": "Trampas frecuentes en preguntas literales", "items": ["Opciones que dicen algo **cierto en la vida real**, pero que el texto no menciona.", "Opciones que **mezclan** datos de dos párrafos distintos.", "Opciones que **invierten** la causa y el efecto o el orden de los hechos.", "Opciones que cambian una palabra clave: «algunos» por «todos», «puede» por «siempre»."] },
-        { "tipo": "tip", "contenido": "Tip ICFES: en las preguntas literales, la opción correcta casi nunca copia el texto palabra por palabra; suele ser una **paráfrasis fiel**. Desconfía de la opción que repite una frase exacta, pero le cambia una palabra clave como «nunca», «todos» o «siempre»." },
-        { "tipo": "ejercicio", "enunciado": "Lee: «La biblioteca del barrio abre de lunes a sábado. Los sábados solo atiende en la mañana porque, en la tarde, el salón se usa para el taller de teatro». Según el texto, ¿por qué la biblioteca no atiende los sábados en la tarde?", "opciones": ["Porque los sábados en la tarde no llegan lectores.", "Porque en la tarde el salón se usa para el taller de teatro.", "Porque los bibliotecarios descansan los fines de semana.", "Porque la biblioteca solo abre de lunes a viernes."], "correcta": 1, "explicacion": "El texto dice explícitamente que en la tarde «el salón se usa para el taller de teatro». La primera opción inventa una causa, la tercera agrega información que no aparece y la cuarta contradice el texto, que dice que la biblioteca abre de lunes a sábado." },
-        { "tipo": "ejercicio", "enunciado": "Lee: «Después de tres derrotas seguidas, el entrenador reunió al equipo y habló sin rodeos: el problema no era la suerte, sino la falta de entrenamiento». En el texto, la expresión «habló sin rodeos» significa que el entrenador", "opciones": ["habló durante mucho tiempo sin dejar participar a nadie.", "habló caminando en línea recta frente al equipo.", "dijo las cosas de manera directa y clara.", "evitó hablar del problema para no desanimar al equipo."], "correcta": 2, "explicacion": "«Sin rodeos» significa «de forma directa». Lo confirma lo que sigue: el entrenador dice abiertamente que el problema era la falta de entrenamiento. La opción de caminar en línea recta es una lectura literal, y la de evitar el problema dice lo contrario de lo que ocurre." }
-      ]
-    },
-    {
-      "codigo": "LEC-INF-L1",
-      "subtema": "inferencias",
-      "titulo": "Leer entre líneas sin inventar",
-      "resumen": "Aprenderás a sacar conclusiones que el texto no dice directamente, pero que sus pistas permiten sostener, y a diferenciarlas de las suposiciones sin base.",
-      "duracion_min": 10,
-      "bloques": [
-        { "tipo": "texto", "contenido": "Los textos no lo dicen todo: dejan pistas para que el lector complete el sentido. Si un personaje «mira el reloj por quinta vez», nadie tiene que escribir que está impaciente. A eso se le llama **inferir**. En el ICFES, las preguntas de inferencia son de las más frecuentes, y la clave está en el punto medio: ni quedarse en lo literal, ni inventar." },
-        { "tipo": "concepto", "titulo": "¿Qué es una inferencia válida?", "contenido": "Es una conclusión que **no aparece escrita** en el texto, pero que se deduce de las pistas que sí están, combinadas con conocimientos generales razonables. Fórmula práctica: **pista del texto + lo que sé = conclusión**. Si no puedes señalar ninguna pista que la apoye, no es una inferencia: es una suposición." },
-        { "tipo": "lista", "titulo": "Tres tipos de conclusiones que encontrarás en las opciones", "items": ["**Literal**: repite lo que el texto dice. Es verdadera, pero no responde cuando te piden inferir.", "**Inferencia válida**: va más allá del texto, pero se apoya en pistas concretas.", "**Extrapolación**: va demasiado lejos; suena lógica, pero el texto no da pistas suficientes para sostenerla (o incluso la contradice)."] },
-        { "tipo": "ejemplo", "titulo": "Ejemplo resuelto: ¿qué se puede inferir?", "enunciado": "Micro-texto: «Camila llegó empapada, dejó el paraguas roto en la entrada y le pidió a su hermano una toalla. Afuera, los carros avanzaban despacio por la calle convertida en río». ¿Cuál conclusión es una inferencia válida? (1) Llovía con fuerza. (2) Camila odia la lluvia. (3) Camila perdió el bus por culpa de su hermano.", "pasos": ["Paso 1: subraya las pistas: «llegó empapada», «paraguas roto», «pidió una toalla», «calle convertida en río», «carros avanzaban despacio».", "Paso 2: combina las pistas con lo que sabes: alguien empapado, con el paraguas roto y una calle inundada indican un aguacero fuerte.", "Paso 3: revisa la conclusión 2: el texto no dice nada sobre lo que Camila siente por la lluvia. Es una suposición.", "Paso 4: revisa la conclusión 3: no hay ninguna pista sobre un bus ni sobre el hermano como responsable. Es una invención.", "Paso 5: aplica la prueba del dedo: para la conclusión 1 puedes señalar varias pistas en el texto; para las otras, ninguna."], "respuesta": "La inferencia válida es la 1: llovía con fuerza." },
-        { "tipo": "concepto", "titulo": "Inferir en textos narrativos", "contenido": "En los cuentos, las emociones y las intenciones de los personajes casi nunca se nombran: se muestran con acciones, gestos, silencios y detalles del ambiente. Pregúntate: ¿qué hace el personaje?, ¿qué cambia entre el comienzo y el final?, ¿qué sabe el narrador y qué sabe el lector? A veces el lector deduce cosas que el propio narrador todavía no entiende." },
-        { "tipo": "tip", "contenido": "Tip ICFES: cuando dudes entre dos opciones de inferencia, elige la que necesite **menos suposiciones extra**. La correcta suele ser la más prudente: se apoya en varias pistas y no agrega hechos que el texto no menciona." },
-        { "tipo": "lista", "titulo": "Señales de que una opción es una extrapolación", "items": ["Usa palabras absolutas como «siempre», «nunca», «todos» o «nadie» que el texto no respalda.", "Atribuye a los personajes intenciones o sentimientos sin ninguna pista.", "Predice consecuencias muy lejanas a partir de un solo dato.", "Contradice algún detalle del texto que se leyó con prisa."] },
-        { "tipo": "ejercicio", "enunciado": "Lee: «Don Ernesto puso el arroz y la panela sobre el mostrador, contó sus monedas dos veces y, con un suspiro, devolvió la panela al estante». ¿Qué se puede inferir del texto?", "opciones": ["Don Ernesto no tenía dinero suficiente para comprar todo lo que quería.", "A don Ernesto no le gusta la panela.", "Don Ernesto es el dueño de la tienda.", "Don Ernesto siempre tiene problemas económicos."], "correcta": 0, "explicacion": "Las pistas («contó sus monedas dos veces», «con un suspiro», «devolvió la panela») indican que el dinero no le alcanzaba para todo. Que no le guste la panela no tiene apoyo (el suspiro sugiere que sí la quería), nada indica que sea el dueño de la tienda y la última opción generaliza con «siempre» a partir de una sola escena." },
-        { "tipo": "ejercicio", "enunciado": "Lee: «Todos los días, a las seis de la tarde, Sofía se asoma a la ventana cuando pasa el bus del colegio. Desde que su mejor amiga se trasteó a Cali, el bus pasa y Sofía sigue mirando la calle un largo rato». ¿Cuál es la inferencia más razonable?", "opciones": ["Sofía quiere cambiarse de colegio.", "Sofía también se va a trastear a Cali.", "A Sofía le molesta el ruido del bus.", "Sofía extraña a su amiga, a quien seguramente veía llegar en ese bus."], "correcta": 3, "explicacion": "El texto relaciona el cambio en la conducta de Sofía con el trasteo de su amiga: el bus pasa y ella se queda mirando la calle. Eso permite inferir que la extraña y que antes la esperaba. Las demás opciones no tienen ninguna pista que las respalde." }
-      ]
-    },
-    {
-      "codigo": "LEC-INT-L1",
-      "subtema": "interpretacion",
-      "titulo": "Del detalle al sentido global",
-      "resumen": "Aprenderás a encontrar la idea principal de un texto, a interpretar el lenguaje figurado y a leer tablas e infografías sin caer en trampas.",
+      "codigo": "LEC-ANT-L1",
+      "subtema": "como-analizar-un-texto",
+      "titulo": "¿Cómo analizar un texto?",
+      "resumen": "Analizar un texto es entender qué dice, qué quiere decir, por qué lo dice y qué se puede concluir a partir de eso. En el ICFES no gana quien lee más rápido, sino quien responde con evidencia del texto.",
       "duracion_min": 11,
       "bloques": [
-        { "tipo": "texto", "contenido": "Interpretar es construir el **sentido global** de un texto: qué quiere decir como un todo, qué significa una metáfora o qué muestran los datos de una tabla. Es como armar un rompecabezas: cada párrafo es una ficha, y tu tarea es ver la imagen completa sin perder de vista ninguna pieza." },
-        { "tipo": "concepto", "titulo": "Tema, idea principal e ideas secundarias", "contenido": "El **tema** es de qué habla el texto, en pocas palabras («los páramos»). La **idea principal** es lo que el texto afirma sobre ese tema, en una oración completa («los páramos son vitales porque regulan el agua que consumen muchas ciudades»). Las **ideas secundarias** son los ejemplos, datos, explicaciones o detalles que apoyan la idea principal." },
-        { "tipo": "lista", "titulo": "Prueba rápida de la idea principal", "items": ["¿Resume el texto completo y no solo un párrafo?", "¿Los ejemplos y los datos del texto la apoyan?", "¿Evita exagerar («todos», «nunca») o agregar propuestas que el autor no hace?", "¿Podría ser el titular fiel del texto?"] },
-        { "tipo": "ejemplo", "titulo": "Ejemplo resuelto: encontrar la idea principal", "enunciado": "Micro-texto: «Muchos creen que reciclar consiste solo en separar la basura. Sin embargo, si el plástico llega sucio, las plantas de aprovechamiento lo descartan. Además, sin rutas de recolección selectiva, lo que se separa en casa termina mezclado en el camión. Separar es apenas el primer eslabón de una cadena». ¿Cuál es la idea principal?", "pasos": ["Paso 1: identifica el tema: el reciclaje.", "Paso 2: ubica la afirmación que el autor defiende. El conector «Sin embargo» marca el giro frente a la creencia común.", "Paso 3: clasifica el resto: el plástico sucio y la falta de rutas son ejemplos, es decir, ideas secundarias.", "Paso 4: busca la frase que recoge todo: «Separar es apenas el primer eslabón de una cadena».", "Paso 5: formula la idea principal en una oración y comprueba que cubra todo el texto."], "respuesta": "Reciclar no es solo separar la basura: para que funcione se necesitan otros eslabones, como entregar materiales limpios y contar con recolección selectiva." },
-        { "tipo": "concepto", "titulo": "Interpretar el lenguaje figurado", "contenido": "Metáforas, comparaciones, ironías y personificaciones dicen algo **distinto** de su sentido literal. Para interpretarlas, identifica los dos elementos que se relacionan, pregúntate qué tienen en común y verifica que tu interpretación encaje con el resto del texto. Ejemplo: «el páramo es una esponja» significa que absorbe el agua y la suelta poco a poco, no que sea blando." },
-        { "tipo": "concepto", "titulo": "Leer tablas, gráficas e infografías", "contenido": "Los textos discontinuos también se leen con método. Antes de responder, revisa el **título**, las **columnas** o los ejes, las **unidades** (%, horas, pesos) y la **fuente**. Después busca **tendencias**: qué sube, qué baja y qué se mantiene. Y recuerda: que dos datos cambien juntos no prueba que uno cause el otro." },
-        { "tipo": "tip", "contenido": "Tip ICFES: si una opción de idea principal es muy específica (un dato, un nombre, un ejemplo), casi seguro es un distractor. Si es tan general que serviría para cualquier texto, también. La correcta está en el punto justo: cubre todo el texto y dice algo concreto." },
-        { "tipo": "ejercicio", "enunciado": "Lee: «En Colombia se desperdician millones de toneladas de alimentos cada año. Una parte se pierde en el campo por falta de vías; otra, en las plazas de mercado por mal almacenamiento; y otra, en los hogares, cuando compramos más de lo que consumimos. Reducir el desperdicio exige cambios en toda la cadena, desde la finca hasta la nevera». ¿Cuál es la idea principal?", "opciones": ["En los hogares colombianos se compran más alimentos de los que se consumen.", "El desperdicio de alimentos ocurre en varias etapas, por lo que reducirlo requiere cambios en toda la cadena.", "Colombia debe construir más vías para sacar las cosechas del campo.", "Los alimentos se dañan en las plazas de mercado por mal almacenamiento."], "correcta": 1, "explicacion": "La opción correcta recoge la afirmación central y la conclusión del texto («reducir el desperdicio exige cambios en toda la cadena»). Las opciones sobre los hogares y las plazas de mercado son ejemplos de un solo eslabón (ideas secundarias), y la de construir vías es una propuesta que el texto no hace." },
-        { "tipo": "ejercicio", "enunciado": "Una tabla muestra las visitas a la biblioteca de un colegio: enero, 120; febrero, 180; marzo, 240; abril, 90 (mes con vacaciones de Semana Santa). ¿Cuál interpretación se sostiene con los datos?", "opciones": ["La asistencia aumentó todos los meses del primer cuatrimestre.", "Las vacaciones hicieron que los estudiantes dejaran de leer para siempre.", "La asistencia creció de enero a marzo y cayó en abril, el mes con vacaciones.", "En abril hubo el doble de visitas que en enero."], "correcta": 2, "explicacion": "Los datos suben de 120 a 180 y a 240, y bajan a 90 en abril. La primera opción ignora la caída de abril, la segunda es una extrapolación que la tabla no permite (además confunde visitas a la biblioteca con lectura) y la cuarta es falsa: 90 es menos que 120." }
+        {
+          "tipo": "texto",
+          "contenido": "Analizar un texto es entender **qué dice**, **qué quiere decir**, **por qué lo dice** y **qué se puede concluir** a partir de eso. En el ICFES no gana quien lee más rápido, sino quien responde con evidencia del texto."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Qué evalúa la prueba"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "La prueba de Lectura Crítica evalúa tres competencias. Conocerlas te ayuda a saber qué tipo de pregunta tienes enfrente."
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Competencia",
+            "Qué te piden",
+            "Peso aprox."
+          ],
+          "filas": [
+            [
+              "Identificar y entender contenidos locales",
+              "Significado de palabras y expresiones, hechos y personajes que aparecen explícitamente.",
+              "25 %"
+            ],
+            [
+              "Comprender cómo se relacionan las partes",
+              "Estructura, función de cada parte, voces del texto, relaciones entre ideas, lectura de gráficas y tablas.",
+              "42 %"
+            ],
+            [
+              "Reflexionar y evaluar",
+              "Validez de argumentos, intención, estrategias del autor, relación entre textos y contexto.",
+              "33 %"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Los textos pueden ser **continuos** (se leen en orden: cuentos, ensayos, columnas) o **discontinuos** (no se leen de corrido: tablas, gráficas, infografías, cómics). Pueden ser literarios o informativos, incluidos textos filosóficos."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Los 4 niveles de lectura"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Para responder bien debes moverte entre cuatro niveles. Cada uno va más profundo que el anterior."
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Nivel",
+            "Pregunta guía",
+            "Ejemplo con la frase “Hace frío y Laura lleva abrigo”"
+          ],
+          "filas": [
+            [
+              "1. Literal",
+              "¿Qué dice el texto?",
+              "Hace frío y Laura lleva abrigo."
+            ],
+            [
+              "2. Inferencial",
+              "¿Qué sugiere sin decirlo?",
+              "Laura se abrigó porque hace frío."
+            ],
+            [
+              "3. Analítico",
+              "¿Cómo está construido y para qué?",
+              "La conjunción “y” une una causa (frío) con una consecuencia (abrigo)."
+            ],
+            [
+              "4. Crítico",
+              "¿Es válido, coherente, convincente?",
+              "La relación es lógica y coherente; no hay contradicción."
+            ]
+          ]
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Antes de leer: observa"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Estos elementos te dan pistas antes de leer una sola línea:"
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Elemento",
+            "Qué te indica"
+          ],
+          "filas": [
+            [
+              "Título",
+              "Tema, tipo de texto, tono y a veces la postura del autor. Un título como “El mito de la meritocracia” ya anuncia una crítica."
+            ],
+            [
+              "Autor y fuente",
+              "Punto de vista, autoridad sobre el tema, posibles sesgos y confiabilidad. No es igual un artículo científico que un blog personal."
+            ],
+            [
+              "Pie de página / notas",
+              "Fuente de la información, significado de palabras difíciles, contexto histórico o datos adicionales. Muchas respuestas están aquí."
+            ],
+            [
+              "Formato",
+              "Versos → poema; diálogos con acotaciones → teatro; gráficas → texto discontinuo informativo."
+            ]
+          ]
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Durante la lectura: extrae lo importante"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "No te dejes asustar por los textos largos ni por el “relleno”. Tu misión es encontrar las ideas principales, la tesis y los protagonistas. Para eso usa el método **QQDCP**:"
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Pregunta",
+            "Qué buscar"
+          ],
+          "filas": [
+            [
+              "¿Qué?",
+              "La acción principal o el tema del texto."
+            ],
+            [
+              "¿Quién?",
+              "Personajes, protagonistas o involucrados."
+            ],
+            [
+              "¿Dónde?",
+              "Lugar donde ocurren los hechos."
+            ],
+            [
+              "¿Cuándo?",
+              "Época o momento en que sucede."
+            ],
+            [
+              "¿Por qué?",
+              "Motivo o causa más importante."
+            ]
+          ]
+        },
+        {
+          "tipo": "ejemplo",
+          "titulo": "Aplicar QQDCP",
+          "contenido": "“Ayer, en Medellín, un grupo de estudiantes organizó una campaña para reciclar plástico, porque quieren cuidar el planeta y reducir la contaminación.”\n\n• **¿Qué?** Organizaron una campaña de reciclaje.\n\n• **¿Quién?** Un grupo de estudiantes.\n\n• **¿Dónde?** En Medellín.\n\n• **¿Cuándo?** Ayer.\n\n• **¿Por qué?** Para cuidar el planeta y reducir la contaminación.\n\nCon estas cinco respuestas ya tienes un resumen fiel del fragmento. Fíjate que el “por qué” suele introducirse con conectores de causa o finalidad (“porque”, “para”)."
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Además, presta atención a:"
+        },
+        {
+          "tipo": "lista",
+          "items": [
+            "**Negrilla, cursiva, comillas o subrayado:** el autor está resaltando algo; suelen preguntar por eso.",
+            "**Inicio y final de cada párrafo:** allí suelen estar la idea central y la conclusión.",
+            "**Conectores:** muestran cómo se relacionan las ideas (ver sección 2.6)."
+          ],
+          "ordenada": false
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Tema, idea principal e ideas secundarias"
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Concepto",
+            "Qué es",
+            "Cómo se expresa"
+          ],
+          "filas": [
+            [
+              "Tema",
+              "De qué trata el texto.",
+              "Una palabra o frase corta: “el reciclaje”."
+            ],
+            [
+              "Idea principal",
+              "Lo más importante que el autor dice sobre el tema.",
+              "Una oración completa: “El reciclaje solo funciona si se separa en la fuente”."
+            ],
+            [
+              "Ideas secundarias",
+              "Datos, ejemplos o explicaciones que apoyan la idea principal.",
+              "Cifras, casos, aclaraciones."
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "contenido": "**Cómo identificar la idea principal, paso a paso:**"
+        },
+        {
+          "tipo": "lista",
+          "items": [
+            "Identifica el tema: ¿de qué se habla en todo el texto?",
+            "Pregúntate: ¿qué dice el autor sobre ese tema?",
+            "Busca la oración que resume todo; suele estar al inicio o al final.",
+            "Haz la prueba de la eliminación: si quitas esa idea, ¿el resto pierde sentido? Si sí, es la principal.",
+            "Comprueba que no sea un ejemplo ni un dato aislado: la idea principal es general; los ejemplos son particulares."
+          ],
+          "ordenada": true
+        },
+        {
+          "tipo": "ejemplo",
+          "titulo": "Idea principal",
+          "contenido": "“Las abejas polinizan cerca del 75 % de los cultivos que consumimos. Sin ellas, frutas como la manzana o el aguacate serían escasas y costosas. Por eso, proteger a las abejas es proteger nuestra alimentación.”\n\n**Tema:** las abejas. **Idea principal:** proteger a las abejas es proteger nuestra alimentación. **Ideas secundarias:** el dato del 75 % y el ejemplo de la manzana y el aguacate.\n\n¿Por qué? El conector “por eso” anuncia una conclusión que se apoya en lo anterior. El dato y los ejemplos existen para sostener esa idea; si la quitamos, el párrafo queda como una lista de datos sin propósito."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Información explícita, implícita e inferencias"
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Explícita",
+            "Implícita (inferencia)"
+          ],
+          "filas": [
+            [
+              "Está escrita en el texto, con esas palabras o con sinónimos.",
+              "No está escrita, pero se deduce lógicamente de lo que sí está."
+            ],
+            [
+              "Se ubica señalando la línea.",
+              "Se construye uniendo pistas del texto."
+            ],
+            [
+              "“Juan llegó empapado.”",
+              "“Probablemente llovía o le cayó agua.”"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "contenido": "**Inferir no es suponer.** Una inferencia válida se apoya en pistas del texto; una suposición agrega información que el texto no permite deducir."
+        },
+        {
+          "tipo": "texto",
+          "contenido": "**Cómo hacer una inferencia, paso a paso:**"
+        },
+        {
+          "tipo": "lista",
+          "items": [
+            "Reúne las pistas: acciones, palabras clave, adjetivos, contexto.",
+            "Pregúntate qué explica mejor esas pistas juntas.",
+            "Verifica que tu conclusión no contradiga nada del texto.",
+            "Verifica que no necesites inventar datos para sostenerla."
+          ],
+          "ordenada": true
+        },
+        {
+          "tipo": "ejemplo",
+          "titulo": "Inferencia válida vs. suposición",
+          "contenido": "“Martina miró el reloj por quinta vez, golpeaba el piso con el pie y revisaba la puerta cada vez que alguien entraba al café.”\n\n**Pistas:** mira el reloj repetidamente, mueve el pie, revisa la puerta.\n\n**Inferencia válida:** Martina espera a alguien y está impaciente. Todas las pistas apuntan a eso.\n\n**Suposición (inválida):** “Martina espera a su novio, que siempre llega tarde.” El texto no dice quién es ni que “siempre” llegue tarde; eso es inventar."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Intención y postura del autor"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "La **intención** es para qué escribe el autor (informar, convencer, criticar, entretener…). La **postura** es su posición frente al tema (a favor, en contra, neutral, crítica). Pistas para reconocerlas:"
+        },
+        {
+          "tipo": "lista",
+          "items": [
+            "**Adjetivos y adverbios valorativos:** “una medida absurda”, “afortunadamente”.",
+            "**Verbos de opinión:** creo, considero, es necesario, debemos.",
+            "**Ejemplos elegidos:** si solo muestra casos negativos, probablemente critica.",
+            "**Conclusión y título:** suelen condensar la posición.",
+            "**Tono:** irónico, alarmado, celebratorio, neutro."
+          ],
+          "ordenada": false
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Para fijar la postura, pregúntate: ¿defiende o critica?, ¿advierte o celebra?, ¿propone o rechaza?"
+        },
+        {
+          "tipo": "ejemplo",
+          "titulo": "Reconocer la postura",
+          "contenido": "“Nos dicen que las redes sociales nos conectan. Curioso: nunca habíamos tenido tantos amigos virtuales y tan pocas conversaciones reales.”\n\n**Pistas:** “Nos dicen” marca distancia frente a una idea ajena; “Curioso” tiene tono irónico; el contraste “tantos amigos virtuales / tan pocas conversaciones” muestra un efecto negativo.\n\n**Postura:** crítica frente a la idea de que las redes nos conectan. **Intención:** cuestionar una creencia común. El autor no lo dice de forma directa; lo deducimos de la ironía y del contraste."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Función de un párrafo y relaciones entre partes"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Cada párrafo cumple un papel dentro del texto. Para descubrirlo pregúntate: ¿qué aporta este párrafo a la idea central? Mira el conector inicial y compáralo con el párrafo anterior."
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Función",
+            "Pistas típicas"
+          ],
+          "filas": [
+            [
+              "Introducir o contextualizar",
+              "Presenta el tema, antecedentes, una pregunta."
+            ],
+            [
+              "Plantear la tesis",
+              "“Considero que”, “es necesario”, afirmación discutible."
+            ],
+            [
+              "Argumentar o explicar",
+              "“porque”, “ya que”, datos, causas."
+            ],
+            [
+              "Ejemplificar",
+              "“por ejemplo”, “como ocurre en”."
+            ],
+            [
+              "Presentar una objeción",
+              "“Algunos dirán que”, “se suele afirmar”."
+            ],
+            [
+              "Refutar o contrastar",
+              "“sin embargo”, “no obstante”, “pero”."
+            ],
+            [
+              "Concluir",
+              "“en conclusión”, “por tanto”, retoma la tesis."
+            ]
+          ]
+        },
+        {
+          "tipo": "ejemplo",
+          "titulo": "Relación entre dos enunciados",
+          "contenido": "Enunciado 1: “Con la muerte de una persona desaparecen para siempre sus recuerdos.”\n\nEnunciado 2: “Salvo que exista una memoria del universo, como algunos han conjeturado.”\n\nLa expresión **“salvo que”** introduce una condición que podría desmentir la regla anterior. El enunciado 2 no dice que el 1 sea falso ni lo confirma: plantea una **posible refutación**. Una pequeña expresión cambia la relación lógica entre las ideas."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "El significado de una expresión según su contexto"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "El ICFES pregunta a menudo qué significa una palabra o frase “en el texto”, no en el diccionario. Pasos:"
+        },
+        {
+          "tipo": "lista",
+          "items": [
+            "Lee la oración completa y las oraciones de antes y después.",
+            "Identifica si se usa en sentido literal o figurado.",
+            "Reemplaza la expresión por cada opción y comprueba cuál conserva el sentido.",
+            "Fíjate si forma parte de una lista o serie: los elementos de una serie suelen ser de la misma categoría."
+          ],
+          "ordenada": true
+        },
+        {
+          "tipo": "ejemplo",
+          "titulo": "Palabra en contexto",
+          "contenido": "“El nuevo ministro llegó con la escoba en la mano: en una semana despidió a la mitad de los directivos.”\n\n“Escoba” no significa un objeto de limpieza. La segunda parte (“despidió a la mitad de los directivos”) explica la primera: la escoba representa la intención de “limpiar” o renovar el equipo. El significado lo da el contexto inmediato."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Las 6 señales de alerta para descartar opciones"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Aplica estos criterios para eliminar respuestas incorrectas rápidamente:"
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Señal de alerta",
+            "Cómo reconocerla",
+            "Por qué se descarta"
+          ],
+          "filas": [
+            [
+              "1. Generalización",
+              "Palabras absolutas: siempre, nunca, todos, nadie, ninguno, jamás, todo, nada.",
+              "Basta una excepción para que sea falsa. Ojo: si el texto realmente generaliza, puede ser válida."
+            ],
+            [
+              "2. Prejuicio",
+              "Discriminación por origen, género, orientación, religión o clase social.",
+              "El ICFES no valida opciones discriminatorias."
+            ],
+            [
+              "3. Falsedad absoluta",
+              "Contradice la lógica, la ciencia o la historia.",
+              "Es imposible, salvo que el texto analice precisamente una creencia falsa."
+            ],
+            [
+              "4. No está en el texto",
+              "Suena razonable, pero el texto no lo dice ni permite inferirlo.",
+              "La respuesta debe estar escrita o deducirse directamente."
+            ],
+            [
+              "5. Contradice al autor",
+              "Dice lo contrario de la postura central.",
+              "Primero define la postura del autor y luego compárala."
+            ],
+            [
+              "6. No responde la pregunta",
+              "Es verdadera y está en el texto, pero responde otra cosa.",
+              "Antes de mirar opciones, define qué piden: ¿tema, tesis, causa, conclusión?"
+            ]
+          ]
+        },
+        {
+          "tipo": "ejemplo",
+          "titulo": "Descarte aplicado",
+          "contenido": "Texto: “Aunque el teletrabajo reduce los desplazamientos, muchos empleados reportan dificultades para separar la vida laboral de la personal.”\n\nPregunta: ¿Qué problema del teletrabajo señala el texto?\n\n• “Todos los empleados odian el teletrabajo” → **generalización** y no está en el texto.\n\n• “El teletrabajo reduce los desplazamientos” → es cierto en el texto, pero es una ventaja: **no responde** la pregunta.\n\n• “Las empresas ahorran en arriendo” → suena lógico, pero **no se menciona**.\n\n• “Cuesta separar el trabajo de la vida personal” → correcta: aparece después de “aunque”, que introduce el contraste.\n\nEl conector “aunque” divide la oración en ventaja y problema. Identificar qué te preguntan (el problema) evita caer en la opción verdadera pero irrelevante."
+        },
+        {
+          "tipo": "concepto",
+          "titulo": "Recuerda",
+          "contenido": "• No respondas con tu conocimiento previo; responde con lo que dice o permite inferir el texto.\n\n• Lee primero la pregunta y luego vuelve al texto con un objetivo.\n\n• Todo texto tiene un propósito: búscalo.\n\n• No te quedes en la lectura superficial; pregúntate qué sentido global transmite el texto."
+        }
       ]
     },
     {
-      "codigo": "LEC-ANA-L1",
-      "subtema": "analisis-textos",
-      "titulo": "Cómo está armado un texto: tipos, partes y conectores",
-      "resumen": "Aprenderás a reconocer el tipo de texto y su intención, a identificar la función de cada párrafo y a usar los conectores como mapa de lectura.",
-      "duracion_min": 12,
+      "codigo": "LEC-TIP-L1",
+      "subtema": "tipos-de-textos",
+      "titulo": "Tipos de textos e intenciones comunicativas",
+      "resumen": "Reconocer el tipo de texto funciona como una brújula: te permite predecir su estructura, su propósito y el tipo de preguntas que te harán. No se lee igual un cuento que una noticia o un ensayo.",
+      "duracion_min": 9,
       "bloques": [
-        { "tipo": "texto", "contenido": "Un texto no es un montón de frases sueltas: es una construcción en la que cada parte cumple un papel. Así como un equipo de fútbol tiene arquero, defensas y delanteros, un texto tiene párrafos que introducen, argumentan, ejemplifican, conceden o concluyen. Cuando ves esa estructura, las preguntas de análisis se vuelven mucho más fáciles." },
-        { "tipo": "concepto", "titulo": "Tipos de texto e intención comunicativa", "contenido": "Según su propósito, un texto puede ser **narrativo** (cuenta hechos reales o imaginarios), **expositivo** (explica o informa), **argumentativo** (defiende una tesis para convencer), **descriptivo** (muestra cómo es algo), **instructivo** (indica pasos) o **discontinuo** (tablas, gráficas, infografías, avisos). La **intención comunicativa** es ese propósito: narrar, informar, persuadir, criticar, describir u orientar." },
-        { "tipo": "lista", "titulo": "Funciones típicas de un párrafo", "items": ["**Introducir**: presenta el tema o el problema.", "**Plantear la tesis**: dice qué defiende el autor.", "**Argumentar**: da razones, datos o ejemplos.", "**Conceder**: reconoce una idea contraria o una limitación («es cierto que…», «ahora bien…»).", "**Refutar**: responde a una objeción.", "**Concluir**: recoge lo dicho o hace una propuesta."] },
-        { "tipo": "lista", "titulo": "Conectores y la relación que marcan", "items": ["**Adición**: además, también, asimismo, incluso.", "**Contraste**: pero, sin embargo, no obstante, en cambio.", "**Concesión**: aunque, si bien, a pesar de que, ahora bien.", "**Causa**: porque, ya que, puesto que, dado que.", "**Consecuencia**: por eso, por lo tanto, así que, de modo que.", "**Ejemplificación**: por ejemplo, es decir, como.", "**Conclusión**: en conclusión, en síntesis, finalmente."] },
-        { "tipo": "ejemplo", "titulo": "Ejemplo resuelto: la función de un fragmento", "enunciado": "Micro-texto de una columna: (1) «Los parques de Medellín deberían tener más bebederos públicos». (2) «Cada fin de semana miles de personas hacen ejercicio en ellos y muchas compran agua embotellada, lo que genera toneladas de plástico». (3) «Es cierto que instalar bebederos cuesta dinero. Sin embargo, sale más barato que recoger y procesar esas botellas». ¿Qué función cumple el fragmento (3)?", "pasos": ["Paso 1: identifica la tesis: el fragmento (1) dice lo que el autor defiende (más bebederos).", "Paso 2: identifica el argumento: el fragmento (2) da una razón (el plástico de las botellas).", "Paso 3: observa los conectores del fragmento (3): «Es cierto que» reconoce un punto en contra (el costo) y «Sin embargo» introduce la respuesta del autor.", "Paso 4: nombra la función: el autor concede una objeción y luego la refuta para sostener su tesis.", "Paso 5: descarta funciones que no encajan: el fragmento no introduce el tema, no cambia la postura del autor ni presenta un ejemplo."], "respuesta": "El fragmento (3) reconoce una posible objeción (el costo) y la refuta para sostener la tesis." },
-        { "tipo": "concepto", "titulo": "¿Quién habla en el texto?", "contenido": "En un texto pueden aparecer varias voces: el narrador, los personajes, el autor, las personas que el autor cita o las posturas con las que discute. Distingue siempre **quién dice qué**: una idea que el autor menciona no siempre es una idea que el autor defiende. En los cuentos, pregúntate además qué tanto sabe el narrador." },
-        { "tipo": "tip", "contenido": "Tip ICFES: cuando te pregunten por la función de un párrafo, mira cómo empieza. Los conectores del inicio («Sin embargo», «Por eso», «Ahora bien», «Por ejemplo») son el mapa que te dice cómo se relaciona ese párrafo con lo anterior." },
-        { "tipo": "ejercicio", "enunciado": "Lee: «Moverse en bicicleta es económico: no requiere gasolina ni parqueadero pago. ______, mejora la salud de quienes la usan». ¿Qué conector completa mejor el texto?", "opciones": ["Sin embargo", "Por lo tanto", "Además", "Aunque"], "correcta": 2, "explicacion": "La segunda oración suma otro beneficio de la bicicleta, así que se necesita un conector de adición: «Además». «Sin embargo» y «Aunque» marcan contraste o concesión, y «Por lo tanto» presentaría la buena salud como consecuencia del ahorro de dinero, lo cual no tiene sentido." },
-        { "tipo": "ejercicio", "enunciado": "¿Cuál es la intención comunicativa principal de un texto que explica, con datos y ejemplos, cómo se forman los huracanes en el mar Caribe?", "opciones": ["Convencer al lector de mudarse lejos de la costa.", "Narrar la historia de una familia afectada por un huracán.", "Dar instrucciones para armar un kit de emergencias.", "Informar y explicar un fenómeno natural."], "correcta": 3, "explicacion": "Un texto que explica cómo se forma un fenómeno, con datos y ejemplos, es expositivo: su intención es informar y explicar. Convencer corresponde a un texto argumentativo, narrar a uno narrativo y dar instrucciones a uno instructivo." }
+        {
+          "tipo": "texto",
+          "contenido": "Reconocer el tipo de texto funciona como una brújula: te permite predecir su estructura, su propósito y el tipo de preguntas que te harán. No se lee igual un cuento que una noticia o un ensayo."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Textos continuos y discontinuos"
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Tipo",
+            "Cómo se lee",
+            "Ejemplos"
+          ],
+          "filas": [
+            [
+              "Continuo",
+              "En orden, de principio a fin, organizado en párrafos o versos.",
+              "Cuentos, poemas, ensayos, noticias, columnas, textos filosóficos."
+            ],
+            [
+              "Discontinuo",
+              "Por partes, relacionando elementos visuales y verbales.",
+              "Tablas, gráficas, infografías, mapas, cómics, avisos, afiches."
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "contenido": "**Cómo leer un texto discontinuo:**"
+        },
+        {
+          "tipo": "lista",
+          "items": [
+            "Lee el título y la fuente: te dicen el tema y la confiabilidad.",
+            "Revisa ejes, convenciones, leyendas y unidades (%, millones, años).",
+            "Relaciona imagen y texto: ¿se complementan, se contradicen o uno ilustra al otro?",
+            "En cómics, observa expresiones, globos (diálogo, pensamiento, grito) y la secuencia de viñetas.",
+            "No concluyas más de lo que muestran los datos."
+          ],
+          "ordenada": true
+        },
+        {
+          "tipo": "ejemplo",
+          "titulo": "Gráfica descrita",
+          "contenido": "Una infografía titulada “Lectura en Colombia” muestra dos barras: 2020 = 2,7 libros por persona; 2024 = 3,1 libros por persona. Fuente: encuesta nacional.\n\n**Se puede afirmar:** el promedio de libros leídos por persona aumentó entre 2020 y 2024.\n\n**No se puede afirmar:** que “los colombianos aman más la lectura” (es una valoración) ni que “todos leen más” (es un promedio; algunos pudieron leer menos). Leer bien un dato es no estirarlo más allá de lo que muestra."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Géneros literarios"
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Género",
+            "Propósito",
+            "Rasgos para reconocerlo",
+            "Ejemplos"
+          ],
+          "filas": [
+            [
+              "Lírico",
+              "Expresar sentimientos, emociones o estados de ánimo.",
+              "Verso y estrofa (también prosa poética), rima, ritmo, figuras literarias, voz poética (“yo lírico”).",
+              "Poemas, canciones, odas, coplas."
+            ],
+            [
+              "Narrativo",
+              "Contar hechos reales o imaginarios.",
+              "Narrador, personajes, tiempo, espacio; inicio, nudo y desenlace.",
+              "Cuentos, novelas, fábulas, mitos, leyendas, crónicas."
+            ],
+            [
+              "Dramático",
+              "Representar acciones ante un público.",
+              "Diálogos y acotaciones; no hay narrador: hablan los personajes.",
+              "Tragedias, comedias, guiones teatrales."
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "contenido": "El **ensayo** suele estudiarse junto a los géneros literarios como género ensayístico o didáctico: su objetivo es exponer una opinión y convencer, con introducción, tesis, argumentos y conclusión."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 3,
+          "texto": "Mito, leyenda y fábula"
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Mito",
+            "Leyenda",
+            "Fábula"
+          ],
+          "filas": [
+            [
+              "Explica el origen del mundo, de la vida o de fenómenos naturales.",
+              "Enseña valores o advierte sobre comportamientos sociales; a menudo buscaba que la gente “hiciera caso”.",
+              "Deja una enseñanza moral explícita (moraleja)."
+            ],
+            [
+              "Protagonistas: dioses o seres sobrenaturales; tiempo remoto e indefinido.",
+              "Mezcla hechos o lugares reconocibles con elementos fantásticos.",
+              "Protagonistas: casi siempre animales con rasgos humanos."
+            ],
+            [
+              "Ej.: origen del Sol y la Luna.",
+              "Ej.: La Llorona, El Mohán.",
+              "Ej.: La cigarra y la hormiga."
+            ]
+          ]
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Tipologías textuales y su intención"
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Tipo",
+            "Intención principal",
+            "Pistas lingüísticas",
+            "Ejemplos"
+          ],
+          "filas": [
+            [
+              "Narrativo",
+              "Contar una historia o sucesión de hechos.",
+              "Verbos de acción en pasado, marcadores de tiempo (“luego”, “aquella tarde”).",
+              "Cuento, crónica, noticia."
+            ],
+            [
+              "Descriptivo",
+              "Mostrar cómo es algo o alguien.",
+              "Abundantes adjetivos, verbos “ser/estar/tener”, comparaciones.",
+              "Retrato, guía turística, ficha técnica."
+            ],
+            [
+              "Expositivo",
+              "Informar o explicar de forma objetiva.",
+              "Tercera persona, presente, definiciones, datos, términos técnicos.",
+              "Artículo científico, enciclopedia, manual escolar."
+            ],
+            [
+              "Argumentativo",
+              "Convencer o persuadir.",
+              "Opiniones, conectores de causa y contraste, “considero”, “es necesario”.",
+              "Ensayo, columna de opinión, discurso, reseña crítica."
+            ],
+            [
+              "Instructivo",
+              "Guiar para realizar una tarea.",
+              "Imperativo o infinitivo (“mezcle”, “mezclar”), pasos numerados.",
+              "Receta, manual, reglamento."
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "contenido": "**Ojo:** muchos textos mezclan secuencias. Una crónica narra, pero puede describir y opinar. Para clasificarlo, pregúntate cuál es la intención **predominante**."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Intenciones comunicativas"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "La intención comunicativa es el propósito que tiene el autor al escribir. Para identificarla, pregúntate: **¿qué quiere que el lector haga, sepa o sienta?**"
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Intención",
+            "El autor busca…",
+            "Señal típica"
+          ],
+          "filas": [
+            [
+              "Informar",
+              "Dar a conocer hechos o datos.",
+              "Datos verificables, tono neutro."
+            ],
+            [
+              "Explicar",
+              "Hacer comprender un fenómeno o concepto.",
+              "Definiciones, causas, ejemplos, “es decir”."
+            ],
+            [
+              "Persuadir / convencer",
+              "Que el lector adopte una idea o actúe.",
+              "Tesis, argumentos, llamados a la acción."
+            ],
+            [
+              "Criticar o denunciar",
+              "Mostrar un problema o cuestionar algo.",
+              "Ironía, valoraciones negativas, contrastes."
+            ],
+            [
+              "Expresar",
+              "Transmitir emociones o vivencias.",
+              "Primera persona, figuras literarias."
+            ],
+            [
+              "Entretener / narrar",
+              "Contar una historia para el disfrute.",
+              "Personajes, conflicto, desenlace."
+            ],
+            [
+              "Instruir",
+              "Que el lector realice algo.",
+              "Pasos, órdenes, listas."
+            ]
+          ]
+        },
+        {
+          "tipo": "ejemplo",
+          "titulo": "Un mismo tema, tres intenciones",
+          "contenido": "A: “El 40 % del agua potable de la ciudad se pierde por fugas en la red.”\n\nB: “Es inaceptable que la empresa de acueducto siga ignorando las fugas mientras sube las tarifas.”\n\nC: “Cierre la llave mientras se cepilla los dientes.”\n\n**A informa:** presenta un dato verificable sin valorarlo. **B critica/persuade:** “inaceptable” e “ignorando” son valoraciones; busca indignar y convencer. **C instruye:** verbo en imperativo que indica una acción concreta.\n\nLo que cambia no es el tema (el agua) sino lo que el autor quiere lograr; esas pistas lingüísticas lo delatan."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Hecho (dato) y opinión"
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Hecho o dato",
+            "Opinión"
+          ],
+          "filas": [
+            [
+              "Afirmación objetiva y comprobable.",
+              "Valoración personal y subjetiva."
+            ],
+            [
+              "Se respalda con estadísticas, fuentes o métodos verificables.",
+              "Varía según la perspectiva de cada persona."
+            ],
+            [
+              "“El 30 % de los encuestados prefiere leer en papel.”",
+              "“Leer en papel es mucho más agradable.”"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "contenido": "**Cómo distinguirlos:** pregúntate si la afirmación se puede verificar con una medición o una fuente. Busca adjetivos valorativos (bueno, terrible, sobrevalorado) y expresiones como “en mi opinión”, “a mi juicio”, “considero”. Las opiniones suelen ser la base de la tesis; los datos, la base de los argumentos."
+        },
+        {
+          "tipo": "ejemplo",
+          "titulo": "Separar dato y opinión en una misma oración",
+          "contenido": "“La ciudad tiene 120 km de ciclorrutas, una cifra vergonzosa para una capital moderna.”\n\n“Tiene 120 km de ciclorrutas” es un **dato**: se puede medir. “Una cifra vergonzosa” es una **opinión**: otra persona podría considerarla suficiente. Una sola oración puede mezclar ambas cosas; el ICFES suele preguntar cuál parte es la valoración del autor."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Conectores del discurso"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Los conectores son los puentes entre las ideas. Indican cómo se relaciona lo que sigue con lo anterior, por eso son claves para entender la estructura y la postura."
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Función",
+            "Conectores",
+            "Qué indican"
+          ],
+          "filas": [
+            [
+              "Contraste u oposición",
+              "pero, sin embargo, no obstante, aunque, a pesar de, en cambio, por el contrario",
+              "Lo que sigue se opone o matiza lo anterior. Suele venir lo que el autor considera más importante."
+            ],
+            [
+              "Causa",
+              "porque, ya que, debido a, puesto que",
+              "Explican el motivo de algo."
+            ],
+            [
+              "Consecuencia",
+              "por tanto, por consiguiente, en consecuencia, por eso, como resultado",
+              "Lo que sigue es resultado de lo anterior; a menudo anuncian la conclusión."
+            ],
+            [
+              "Explicación",
+              "es decir, o sea, esto es, en otras palabras",
+              "Reformulan o aclaran una idea."
+            ],
+            [
+              "Ejemplificación",
+              "por ejemplo, concretamente, en particular",
+              "Introducen un caso que ilustra una idea general."
+            ],
+            [
+              "Opinión",
+              "en mi opinión, a mi juicio, considero que, para mí",
+              "Lo que sigue es una valoración subjetiva."
+            ],
+            [
+              "Orden",
+              "primero, luego, después, finalmente",
+              "Secuencia de pasos o hechos."
+            ],
+            [
+              "Comparación",
+              "como, así como, igual que, de la misma forma",
+              "Semejanzas entre ideas."
+            ],
+            [
+              "Finalidad",
+              "para que, con el fin de, a fin de",
+              "Objetivo o propósito de una acción."
+            ],
+            [
+              "Adición",
+              "además, también, asimismo, incluso",
+              "Suman información en la misma dirección."
+            ]
+          ]
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Personajes y narradores"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Un ser (persona, animal u objeto) es **personaje** si habla, realiza acciones o es importante para la trama. Los lugares no son personajes porque no actúan ni tienen voluntad."
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Personaje",
+            "Función"
+          ],
+          "filas": [
+            [
+              "Protagonista",
+              "Centro de la historia; recibe mayor desarrollo."
+            ],
+            [
+              "Antagonista",
+              "Se opone al protagonista y dificulta sus objetivos."
+            ],
+            [
+              "Secundario",
+              "Rodea al protagonista y crea subtramas o contextos."
+            ],
+            [
+              "Terciario (extra)",
+              "Intervención mínima; si se quita, la trama no cambia."
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Para identificar al narrador, observa primero los **pronombres** (yo/nosotros = 1.ª persona; tú = 2.ª; él/ella/ellos = 3.ª) y luego **cuánto sabe** y si participa."
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Narrador",
+            "Rasgos",
+            "Ejemplo"
+          ],
+          "filas": [
+            [
+              "Omnisciente",
+              "Lo sabe todo, incluso pensamientos de los personajes. Suele usar tercera persona y no participa en la historia.",
+              "“Pedro sonreía, pero por dentro temía que lo descubrieran.”"
+            ],
+            [
+              "Protagonista",
+              "Cuenta su propia historia en primera persona; es el centro de los hechos.",
+              "“Aquel día decidí irme de casa.”"
+            ],
+            [
+              "Testigo u observador",
+              "Vio los hechos, pero no le sucedieron a él. Puede usar 1.ª persona (“yo vi que…”), 2.ª (le cuenta a otro lo que ese otro hizo) o 3.ª (observa desde fuera).",
+              "“Desde mi ventana vi cómo el vecino enterraba algo en el jardín.”"
+            ]
+          ]
+        },
+        {
+          "tipo": "ejemplo",
+          "titulo": "Diferenciar narrador testigo y omnisciente",
+          "contenido": "“Vi a Rosa salir del banco con los ojos rojos. No sé qué le dijeron, pero no volvió a hablar del préstamo.”\n\nUsa primera persona (“vi”, “no sé”), pero los hechos le ocurren a Rosa: es **narrador testigo**. La clave es “no sé qué le dijeron”: un narrador omnisciente sí lo sabría. Lo que el narrador ignora es tan revelador como lo que cuenta."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Superestructuras: el esqueleto de cada texto"
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Tipo de texto",
+            "Partes"
+          ],
+          "filas": [
+            [
+              "Argumentativo",
+              "Introducción (contexto) → Tesis (opinión discutible) → Argumentos (razones, datos) → Conclusión (retoma y refuerza la tesis)."
+            ],
+            [
+              "Narrativo",
+              "Inicio (personajes, lugar, tiempo) → Nudo (conflicto) → Desenlace (resolución)."
+            ],
+            [
+              "Expositivo",
+              "Introducción (tema) → Desarrollo (explicación) → Conclusión (síntesis)."
+            ],
+            [
+              "Instructivo",
+              "Título (tarea) → Materiales o elementos → Procedimiento (pasos ordenados)."
+            ],
+            [
+              "Descriptivo",
+              "Presentación del objeto → Rasgos seleccionados y organizados (de lo general a lo particular, de arriba abajo, etc.)."
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Reconocer la superestructura te permite ubicar rápidamente dónde está la información: la tesis en un ensayo, el conflicto en un cuento, los pasos en un instructivo."
+        }
       ]
     },
     {
-      "codigo": "LEC-ARG-L1",
-      "subtema": "argumentacion",
-      "titulo": "Tesis, argumentos y trampas del razonamiento",
-      "resumen": "Aprenderás a identificar la tesis y los argumentos de un texto, a reconocer falacias frecuentes y a decidir qué información refuerza o debilita una postura.",
-      "duracion_min": 13,
+      "codigo": "LEC-TAL-L1",
+      "subtema": "taller-tipos-de-textos",
+      "titulo": "Taller de tipos de textos",
+      "resumen": "En esta sección se aplica, con fragmentos analizados paso a paso, todo lo visto en el tema anterior. El objetivo es mostrar cómo se razona para identificar el tipo de texto, su intención y su estructura.",
+      "duracion_min": 5,
       "bloques": [
-        { "tipo": "texto", "contenido": "Las preguntas más exigentes de Lectura Crítica te piden **evaluar**: ¿el argumento es sólido?, ¿qué dato lo debilitaría?, ¿dónde está la trampa? La buena noticia es que evaluar argumentos es una habilidad que se entrena, como un tiro libre: con técnica y práctica, cada vez aciertas más. Además, te servirá mucho más allá del examen: en redes, en debates y en cualquier decisión importante." },
-        { "tipo": "concepto", "titulo": "Tesis, argumentos, contraargumentos y refutación", "contenido": "La **tesis** es la postura que el autor defiende (responde a «¿qué quiere que yo crea?»). Los **argumentos** son las razones que la sostienen (responden a «¿por qué debería creerlo?»). Un **contraargumento** es una objeción a la tesis, y la **refutación** es la respuesta del autor a esa objeción." },
-        { "tipo": "lista", "titulo": "Tipos de argumento frecuentes", "items": ["**De autoridad**: cita a un experto o a una institución reconocida en el tema.", "**Con datos**: usa cifras, encuestas o estudios.", "**Por ejemplificación**: se apoya en casos concretos.", "**Por analogía**: compara con una situación parecida.", "**De causa y efecto**: muestra que algo produce una consecuencia.", "**Contraejemplo**: presenta un caso que demuestra que una afirmación general es falsa."] },
-        { "tipo": "lista", "titulo": "Falacias frecuentes: argumentos con trampa", "items": ["**Ad hominem**: atacar a la persona en lugar de sus razones.", "**Ad populum**: creer que algo es verdadero porque mucha gente lo cree.", "**Generalización apresurada**: concluir algo sobre todos a partir de pocos casos.", "**Falsa disyuntiva**: presentar solo dos opciones cuando hay más.", "**Falsa causa**: suponer que, como algo ocurrió después de otra cosa, fue causado por ella.", "**Pendiente resbaladiza**: afirmar sin pruebas que un paso llevará a una cadena de desastres.", "**Autoridad irrelevante**: citar a alguien famoso que no es experto en el tema."] },
-        { "tipo": "ejemplo", "titulo": "Ejemplo resuelto: ¿qué dato debilita el argumento?", "enunciado": "Micro-texto: «El colegio debería abrir la biblioteca hasta las 6:00 p. m. Muchos estudiantes no tienen internet ni computador en casa, y hoy la biblioteca cierra a las 2:00 p. m., justo cuando termina la jornada». ¿Cuál dato, de ser cierto, debilitaría el argumento? (1) El 70 % de los estudiantes no tiene computador en casa. (2) Una encuesta mostró que casi todos los estudiantes sin computador trabajan o cuidan a sus hermanos en la tarde y no podrían quedarse. (3) La biblioteca acaba de recibir veinte computadores nuevos.", "pasos": ["Paso 1: identifica la tesis: abrir la biblioteca hasta las 6:00 p. m.", "Paso 2: identifica el argumento: los estudiantes sin internet ni computador necesitan usarla después de clase.", "Paso 3: reconstruye el supuesto oculto: esos estudiantes podrían quedarse en la tarde si la biblioteca abriera.", "Paso 4: evalúa cada dato. El (1) muestra que la necesidad es real y el (3) que la biblioteca tiene recursos: ambos apoyan la tesis.", "Paso 5: el (2) ataca el supuesto: si quienes más la necesitan no pueden quedarse, ampliar el horario no resolvería su problema."], "respuesta": "El dato (2) debilita el argumento, porque muestra que los estudiantes que más necesitan la biblioteca no podrían aprovechar el nuevo horario." },
-        { "tipo": "tip", "contenido": "Tip ICFES: en las preguntas de «refuerza o debilita», escribe primero el argumento en una línea: «X, porque Y». Luego busca la opción que ataque ese **porque** (la razón o el supuesto). Cuidado con las opciones que repiten lo que el texto ya dice (refuerzan) o que hablan de otro tema (no afectan)." },
-        { "tipo": "concepto", "titulo": "Falacia no es lo mismo que opinión contraria", "contenido": "Un argumento no es falaz porque no estés de acuerdo con él. Es falaz cuando su **estructura** es defectuosa: las razones no apoyan la conclusión, aunque parezca que sí. Por eso el ICFES te pide identificar el error de razonamiento, no juzgar si la postura te gusta." },
-        { "tipo": "ejercicio", "enunciado": "«No hay que hacerle caso a la propuesta de Andrés de crear una huerta escolar: él siempre saca malas notas en biología». ¿Qué error de razonamiento se comete?", "opciones": ["Ad populum, porque se apela a lo que piensa la mayoría.", "Ad hominem, porque se descalifica la propuesta atacando a quien la hace.", "Falsa disyuntiva, porque se presentan solo dos opciones.", "Generalización apresurada, porque se concluye algo sobre todos a partir de un solo caso."], "correcta": 1, "explicacion": "Se rechaza la propuesta por una característica de Andrés (sus notas), no por las razones a favor o en contra de la huerta. Es una falacia ad hominem: el valor de una propuesta no depende de las calificaciones de quien la presenta." },
-        { "tipo": "ejercicio", "enunciado": "Un texto defiende que la jornada única mejora el rendimiento académico y, como prueba, cita un estudio según el cual los colegios que la adoptaron subieron su puntaje en las pruebas. ¿Cuál dato, de ser cierto, debilitaría más ese argumento?", "opciones": ["A los estudiantes de esos colegios les gusta almorzar en el colegio.", "Muchos países tienen jornadas escolares largas.", "El estudio fue publicado en una revista reconocida.", "Esos colegios también renovaron a sus profesores y sus laboratorios el mismo año."], "correcta": 3, "explicacion": "Si al mismo tiempo cambiaron los profesores y los laboratorios, la mejora podría deberse a esos factores y no a la jornada única: el vínculo de causa y efecto queda en duda. El gusto por el almuerzo no se relaciona con el rendimiento, lo que ocurre en otros países no aporta evidencia sobre el efecto y la revista reconocida más bien refuerza la confiabilidad del estudio." }
+        {
+          "tipo": "texto",
+          "contenido": "En esta sección se aplica, con fragmentos analizados paso a paso, todo lo visto en el tema anterior. El objetivo es mostrar **cómo se razona** para identificar el tipo de texto, su intención y su estructura."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Ruta de análisis en 5 preguntas"
+        },
+        {
+          "tipo": "lista",
+          "items": [
+            "**Forma:** ¿prosa, versos, diálogos, gráfica, viñetas?",
+            "**Propósito:** ¿narra, describe, explica, convence, instruye o expresa?",
+            "**Pistas lingüísticas:** tiempos verbales, persona gramatical, adjetivos, conectores, modo imperativo.",
+            "**Estructura:** ¿qué partes reconozco (tesis, nudo, pasos…)?",
+            "**Intención predominante:** si hay mezcla, ¿qué busca sobre todo el autor?"
+          ],
+          "ordenada": true
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Fragmentos analizados"
+        },
+        {
+          "tipo": "ejemplo",
+          "titulo": "Fragmento 1",
+          "contenido": "“La fotosíntesis es el proceso mediante el cual las plantas transforman la luz solar en energía química. Ocurre principalmente en las hojas, gracias a la clorofila, y produce oxígeno como residuo.”\n\n• **Forma:** prosa en párrafo.\n\n• **Pistas:** definición (“es el proceso mediante el cual”), tercera persona, presente, términos técnicos, ausencia de opiniones.\n\n• **Tipo:** expositivo. **Intención:** explicar un fenómeno de forma objetiva.\n\nNo hay ninguna palabra que valore (“maravilloso”, “importante”); por eso no es argumentativo."
+        },
+        {
+          "tipo": "ejemplo",
+          "titulo": "Fragmento 2",
+          "contenido": "“Se nos repite que la tecnología en el aula mejora el aprendizaje. Sin embargo, un computador sin un maestro preparado es apenas un mueble caro. Primero formemos docentes; luego compremos equipos.”\n\n• **Pistas:** “Se nos repite” presenta una idea ajena; “Sin embargo” la contradice; “un mueble caro” es una metáfora valorativa; “formemos”, “compremos” proponen una acción.\n\n• **Tesis:** la formación docente debe preceder a la compra de tecnología.\n\n• **Tipo:** argumentativo. **Intención:** convencer y proponer.\n\nLa estructura es típica: idea que se cuestiona → refutación con “sin embargo” → propuesta final."
+        },
+        {
+          "tipo": "ejemplo",
+          "titulo": "Fragmento 3",
+          "contenido": "“Aquella madrugada el río creció sin aviso. Doña Inés alcanzó a subir a sus nietos al techo; desde allí vieron cómo el agua se llevaba la cerca, la vaca y la radio que había sido de su esposo.”\n\n• **Pistas:** verbos en pasado (“creció”, “alcanzó”, “vieron”), marcador temporal (“aquella madrugada”), personajes y secuencia de hechos.\n\n• **Narrador:** tercera persona, externo a la historia.\n\n• **Tipo:** narrativo. **Intención:** relatar; el detalle de “la radio que había sido de su esposo” añade carga emocional, pues sugiere una pérdida afectiva y no solo material."
+        },
+        {
+          "tipo": "ejemplo",
+          "titulo": "Fragmento 4",
+          "contenido": "“Me duele esta ciudad de puentes rotos, / me duele su lluvia que no limpia nada.”\n\n• **Forma:** versos.\n\n• **Pistas:** primera persona (“me duele”), repetición al inicio (anáfora), personificación de la lluvia que “no limpia nada”.\n\n• **Tipo:** lírico. **Intención:** expresar dolor y desencanto frente a la ciudad.\n\nLa lluvia que “no limpia nada” no es un dato meteorológico: en sentido figurado sugiere que nada mejora los problemas de la ciudad."
+        },
+        {
+          "tipo": "ejemplo",
+          "titulo": "Fragmento 5 (dramático)",
+          "contenido": "LUCÍA. — (Dejando caer las llaves.) ¿Otra vez tarde?\n\nANDRÉS. — (Sin mirarla.) Había trancón.\n\n• **Pistas:** nombres de personajes antes de cada intervención, guiones de diálogo y acotaciones entre paréntesis; no hay narrador.\n\n• **Tipo:** dramático.\n\n• **Inferencia:** las acotaciones (“dejando caer las llaves”, “sin mirarla”) muestran tensión entre los personajes; “otra vez” indica que no es la primera vez que pasa."
+        },
+        {
+          "tipo": "ejemplo",
+          "titulo": "Fragmento 6 (discontinuo)",
+          "contenido": "Afiche: imagen de un pulmón formado por colillas de cigarrillo. Texto grande: “Cada colilla cuenta.” Texto pequeño: “El tabaco causa más de 8 millones de muertes al año. Fuente: OMS.”\n\n• **Relación imagen-texto:** la imagen hace visible la idea de que fumar destruye los pulmones; el dato con fuente le da credibilidad.\n\n• **Tipo:** discontinuo informativo con intención persuasiva (campaña).\n\n• **Intención:** desestimular el consumo de tabaco. Combina un recurso emotivo (la imagen impactante) con un argumento de cifras y de autoridad."
+        },
+        {
+          "tipo": "concepto",
+          "titulo": "Diferencias que suelen confundir",
+          "contenido": "• **Expositivo vs. argumentativo:** el expositivo explica sin tomar partido; el argumentativo defiende una postura.\n\n• **Narrativo vs. descriptivo:** el narrativo hace avanzar el tiempo con acciones; el descriptivo “detiene” el tiempo para mostrar cómo es algo.\n\n• **Noticia vs. columna de opinión:** la noticia informa hechos (qué, quién, cuándo, dónde); la columna los valora.\n\n• **Lírico vs. narrativo en verso:** si en el poema predominan las emociones, es lírico; si cuenta una historia con personajes y hechos, predomina lo narrativo."
+        }
+      ]
+    },
+    {
+      "codigo": "LEC-FIG-L1",
+      "subtema": "figuras-literarias",
+      "titulo": "Figuras literarias",
+      "resumen": "Son recursos del lenguaje que sirven para embellecer, resaltar, comparar, exagerar, contrastar o dar fuerza a una idea. Aparecen en poemas, canciones, cuentos, discursos y publicidad.",
+      "duracion_min": 6,
+      "bloques": [
+        {
+          "tipo": "texto",
+          "contenido": "Son recursos del lenguaje que sirven para embellecer, resaltar, comparar, exagerar, contrastar o dar fuerza a una idea. Aparecen en poemas, canciones, cuentos, discursos y publicidad. En el ICFES no basta con nombrarlas: debes entender **qué efecto producen** y **qué significan** en el texto."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Sentido literal y sentido figurado"
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Sentido literal",
+            "Sentido figurado"
+          ],
+          "filas": [
+            [
+              "La frase significa exactamente lo que dice.",
+              "La frase quiere decir algo distinto a lo que dice."
+            ],
+            [
+              "“El niño está llorando.”",
+              "“El cielo está llorando.” (está lloviendo, quizá con tono triste)"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "contenido": "La mayoría de figuras trabajan con el sentido figurado, aunque algunas juegan con el sonido, el orden o la repetición de las palabras."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Clasificación"
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Tipo",
+            "Con qué juegan",
+            "Pregunta clave"
+          ],
+          "filas": [
+            [
+              "Fónicas",
+              "El sonido de las palabras.",
+              "¿Qué suena?"
+            ],
+            [
+              "Morfosintácticas",
+              "El orden y la estructura de la oración.",
+              "¿Cómo está organizada la frase?"
+            ],
+            [
+              "Semánticas",
+              "El significado de las palabras.",
+              "¿Qué significado especial tiene?"
+            ]
+          ]
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Figuras fónicas"
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Figura",
+            "Qué es",
+            "Ejemplo"
+          ],
+          "filas": [
+            [
+              "Aliteración",
+              "Repetición de sonidos similares para crear ritmo o efecto sonoro.",
+              "“Mi mamá me mima” (sonido m). “En el silencio solo se escuchaba un susurro sonoro” (sonido s, que evoca suavidad)."
+            ],
+            [
+              "Onomatopeya",
+              "Palabras que imitan sonidos reales.",
+              "“Quiquiriquí”, “miau”, “el tic tac del reloj”."
+            ]
+          ]
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Figuras morfosintácticas"
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Figura",
+            "Qué es",
+            "Ejemplo"
+          ],
+          "filas": [
+            [
+              "Anáfora",
+              "Repetición de una o más palabras al inicio de versos u oraciones.",
+              "“Temprano levantó la muerte el vuelo, / temprano madrugó la madrugada.” (M. Hernández)"
+            ],
+            [
+              "Paralelismo",
+              "Repetición de una misma estructura gramatical.",
+              "“Yo canto, yo sueño, yo vivo.”"
+            ],
+            [
+              "Polisíndeton",
+              "Uso repetido de conjunciones (sobre todo “y”) para dar énfasis o lentitud.",
+              "“Y ríe, y canta, y llora, y sueña.”"
+            ],
+            [
+              "Asíndeton",
+              "Omisión de conjunciones para dar rapidez.",
+              "“Llegué, vi, vencí.”"
+            ],
+            [
+              "Hipérbaton",
+              "Alteración del orden lógico de las palabras.",
+              "“De verdes sauces hay una espesura.” (Orden normal: hay una espesura de sauces verdes.)"
+            ],
+            [
+              "Elipsis",
+              "Omisión de palabras que se sobreentienden.",
+              "“Yo, café; ella, té.” (se omite “tomo/toma”)"
+            ],
+            [
+              "Enumeración",
+              "Serie de elementos de una misma categoría.",
+              "“Perdió la casa, el carro, los amigos, la paz.”"
+            ]
+          ]
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Figuras semánticas"
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 3,
+          "texto": "De contraste y exageración"
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Figura",
+            "Qué es",
+            "Ejemplo"
+          ],
+          "filas": [
+            [
+              "Antítesis",
+              "Contrapone dos ideas opuestas en frases distintas.",
+              "“Es tan corto el amor, y es tan largo el olvido.” (Neruda)"
+            ],
+            [
+              "Oxímoron",
+              "Une dos palabras de significado opuesto en una misma expresión.",
+              "“Silencio ensordecedor”, “dulce tormento”."
+            ],
+            [
+              "Paradoja",
+              "Idea aparentemente absurda que esconde una verdad.",
+              "“Vivo sin vivir en mí.” (Santa Teresa)"
+            ],
+            [
+              "Hipérbole",
+              "Exageración intencional, por exceso o por defecto.",
+              "“Te esperé mil años.” “No cabe un alma.”"
+            ]
+          ]
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 3,
+          "texto": "De analogía (semejanza)"
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Figura",
+            "Qué es",
+            "Ejemplo"
+          ],
+          "filas": [
+            [
+              "Símil o comparación",
+              "Relación de semejanza con un nexo explícito: como, cual, igual que, se parece a.",
+              "“Tus ojos brillan como luceros.”"
+            ],
+            [
+              "Metáfora",
+              "Identifica un término real con uno imaginario sin nexo.",
+              "“Tus ojos son estrellas.” “El tiempo es oro.”"
+            ],
+            [
+              "Alegoría",
+              "Metáfora extendida en la que varios elementos tienen sentido simbólico.",
+              "Comparar la vida con un viaje en barco: el mar son las dificultades, el puerto la muerte."
+            ],
+            [
+              "Símbolo",
+              "Elemento concreto que representa una idea abstracta.",
+              "La paloma blanca = paz; la balanza = justicia."
+            ],
+            [
+              "Personificación",
+              "Atribuye cualidades humanas a objetos, animales o ideas.",
+              "“El viento susurraba.”"
+            ]
+          ]
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 3,
+          "texto": "De sustitución"
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Figura",
+            "Qué es",
+            "Ejemplo"
+          ],
+          "filas": [
+            [
+              "Metonimia",
+              "Nombra algo con el nombre de otra cosa relacionada (causa, autor, lugar, contenido).",
+              "“Leí a García Márquez” (su obra). “Tomemos una copa” (el contenido)."
+            ],
+            [
+              "Sinécdoque",
+              "Nombra el todo por la parte o la parte por el todo.",
+              "“Veinte cabezas de ganado.” “Necesitamos más manos.”"
+            ],
+            [
+              "Eufemismo",
+              "Sustituye una expresión dura o desagradable por una más suave.",
+              "“Pasó a mejor vida” (murió). “Desvinculado de la empresa” (despedido)."
+            ]
+          ]
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 3,
+          "texto": "Sensoriales e interpretativas"
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Figura",
+            "Qué es",
+            "Ejemplo"
+          ],
+          "filas": [
+            [
+              "Sinestesia",
+              "Mezcla sensaciones de distintos sentidos o las asocia con emociones.",
+              "“Una voz dulce” (oído + gusto). “Un silencio oscuro” (oído + vista)."
+            ],
+            [
+              "Ironía",
+              "Dice lo contrario de lo que quiere expresar, con intención crítica o humorística. Si es hiriente, es sarcasmo.",
+              "“¡Qué puntual!” a alguien que llega una hora tarde."
+            ],
+            [
+              "Pregunta retórica",
+              "Pregunta que no espera respuesta; busca afirmar o hacer reflexionar.",
+              "“¿Hasta cuándo vamos a tolerar esto?”"
+            ]
+          ]
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Diferencias que debes tener claras"
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Se confunden",
+            "Cómo diferenciarlas"
+          ],
+          "filas": [
+            [
+              "Símil vs. metáfora",
+              "El símil usa nexo (“como”); la metáfora no. “Fuerte como un roble” vs. “Es un roble”."
+            ],
+            [
+              "Antítesis vs. oxímoron",
+              "La antítesis opone ideas en frases distintas; el oxímoron une opuestos en una misma expresión (sustantivo + adjetivo)."
+            ],
+            [
+              "Oxímoron vs. paradoja",
+              "El oxímoron es un choque de dos palabras; la paradoja es una idea completa que parece contradictoria pero tiene sentido."
+            ],
+            [
+              "Metáfora vs. personificación",
+              "La personificación da rasgos humanos a algo no humano; la metáfora identifica una cosa con otra."
+            ],
+            [
+              "Metonimia vs. sinécdoque",
+              "La sinécdoque es una relación parte-todo; la metonimia, de cercanía (autor-obra, envase-contenido)."
+            ],
+            [
+              "Ironía vs. hipérbole",
+              "La ironía invierte el sentido; la hipérbole lo agranda o lo reduce sin invertirlo."
+            ]
+          ]
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Cómo identificar e interpretar una figura"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Sigue este orden de diagnóstico:"
+        },
+        {
+          "tipo": "lista",
+          "items": [
+            "**¿Qué llama la atención: el sonido, el orden o el significado?**",
+            "**Sonido:** ¿se repiten letras? → aliteración. ¿Imita un ruido? → onomatopeya.",
+            "**Orden:** ¿suena desordenado? → hipérbaton. ¿Muchos “y”? → polisíndeton. ¿Se repite el inicio? → anáfora.",
+            "**Significado:** ¿hay contradicción? En dos palabras → oxímoron; en dos ideas → antítesis. ¿Hay comparación? Con “como” → símil; directa → metáfora. ¿Exageración? → hipérbole. ¿Se dice lo contrario? → ironía.",
+            "**Interpreta:** traduce la figura a lenguaje literal y pregúntate qué efecto produce (énfasis, emoción, crítica, belleza)."
+          ],
+          "ordenada": true
+        },
+        {
+          "tipo": "ejemplo",
+          "titulo": "Interpretar figuras en un fragmento",
+          "contenido": "“Mi barrio es un reloj sin manecillas: / las horas pasan, pero nunca llega el progreso.”\n\n• **Figura:** metáfora (“mi barrio es un reloj sin manecillas”), sin nexo comparativo.\n\n• **Traducción literal:** en el barrio el tiempo transcurre, pero nada cambia ni avanza.\n\n• **Efecto e intención:** expresar frustración y criticar el abandono del barrio.\n\nEl segundo verso explica el primero: “las horas pasan, pero nunca llega el progreso”. Además, el conector “pero” marca el contraste entre el paso del tiempo y la falta de cambio. Así se pasa de nombrar la figura a interpretarla."
+        }
+      ]
+    },
+    {
+      "codigo": "LEC-ARM-L1",
+      "subtema": "la-argumentacion",
+      "titulo": "La argumentación",
+      "resumen": "Argumentar es convencer con razones. Un texto argumentativo no basta con decir algo: tiene que demostrarlo. En el ICFES te pedirán identificar la tesis, reconocer los argumentos, ver cómo se relacionan y evaluar si son sólidos.",
+      "duracion_min": 6,
+      "bloques": [
+        {
+          "tipo": "texto",
+          "contenido": "Argumentar es convencer con razones. Un texto argumentativo no basta con decir algo: tiene que demostrarlo. En el ICFES te pedirán identificar la tesis, reconocer los argumentos, ver cómo se relacionan y evaluar si son sólidos."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Elementos básicos"
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Elemento",
+            "Qué es",
+            "Pregunta que responde"
+          ],
+          "filas": [
+            [
+              "Tesis",
+              "Idea central y discutible que el autor defiende.",
+              "¿Qué defiende el autor?"
+            ],
+            [
+              "Argumento",
+              "Razón, dato o evidencia que respalda la tesis.",
+              "¿Por qué lo defiende?"
+            ],
+            [
+              "Contraargumento",
+              "Idea contraria que el autor reconoce.",
+              "¿Qué dirían los que no están de acuerdo?"
+            ],
+            [
+              "Refutación",
+              "Respuesta del autor al contraargumento.",
+              "¿Por qué esa objeción no es suficiente?"
+            ],
+            [
+              "Conclusión",
+              "Cierre que se deriva de los argumentos y retoma la tesis.",
+              "¿A qué se llega?"
+            ]
+          ]
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Diferencias clave"
+        },
+        {
+          "tipo": "lista",
+          "items": [
+            "**Tema vs. tesis:** el tema es de qué se habla (“el uso del celular en clase”); la tesis es la posición sobre ese tema (“el celular debería permitirse en clase con fines pedagógicos”).",
+            "**Tesis vs. argumento:** la tesis es lo que se defiende; el argumento es la razón por la que se defiende. Si una idea responde a “¿por qué?” sobre otra, es un argumento.",
+            "**Tesis vs. conclusión:** a menudo coinciden en contenido, pero la conclusión aparece al final como resultado de los argumentos; la tesis puede estar al inicio.",
+            "**Una tesis es discutible:** “El agua hierve a 100 °C a nivel del mar” no es tesis (es un hecho); “El agua debería ser gratuita” sí lo es."
+          ],
+          "ordenada": false
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Cómo identificar la tesis, paso a paso"
+        },
+        {
+          "tipo": "lista",
+          "items": [
+            "Identifica el tema.",
+            "Busca la afirmación que alguien podría discutir.",
+            "Revisa el primer y el último párrafo: allí suele estar.",
+            "Busca marcas de opinión: “considero”, “es necesario”, “debemos”, “es un error”.",
+            "Comprueba: ¿el resto del texto sirve para apoyarla? Si los demás párrafos responden “por qué” a esa idea, es la tesis."
+          ],
+          "ordenada": true
+        },
+        {
+          "tipo": "ejemplo",
+          "titulo": "Tesis, argumentos, contraargumento y conclusión",
+          "contenido": "(1) Los colegios deberían empezar la jornada a las 8:00 y no a las 6:30. (2) Diversos estudios del sueño muestran que los adolescentes necesitan entre 8 y 10 horas de descanso. (3) Además, los estudiantes que duermen poco se concentran menos y rinden peor. (4) Algunos dirán que un horario más tarde complica la logística de las familias. (5) Sin embargo, ese costo es menor que el de una generación que aprende agotada. (6) Por tanto, retrasar la hora de entrada es una inversión en educación.\n\n• **(1) Tesis:** afirmación discutible con “deberían”.\n\n• **(2) Argumento de autoridad y de cifras:** se apoya en estudios y datos numéricos.\n\n• **(3) Argumento de causa-efecto:** dormir poco → menor concentración → bajo rendimiento. “Además” indica que suma otra razón.\n\n• **(4) Contraargumento:** “Algunos dirán” presenta la objeción.\n\n• **(5) Refutación:** “Sin embargo” responde a la objeción.\n\n• **(6) Conclusión:** “Por tanto” anuncia el cierre y retoma la tesis.\n\nLos conectores son la guía: cada uno revela la función de la oración que introduce."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Tipos de argumentos"
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Tipo",
+            "En qué se basa",
+            "Ejemplo",
+            "Cuándo es fuerte o débil"
+          ],
+          "filas": [
+            [
+              "Deductivo",
+              "Va de lo general a lo particular.",
+              "Todos los mamíferos respiran; el perro es mamífero; el perro respira.",
+              "Si las premisas son verdaderas, la conclusión es segura."
+            ],
+            [
+              "Inductivo",
+              "Va de casos particulares a una conclusión general.",
+              "Mi hermano, mi primo y mi amigo aprendieron inglés viendo películas; ver películas ayuda a aprender inglés.",
+              "Solo da probabilidad; más casos y variados lo hacen más fuerte."
+            ],
+            [
+              "Autoridad",
+              "Opinión de expertos, instituciones o investigaciones.",
+              "“Según la OMS, las vacunas previenen millones de muertes.”",
+              "Fuerte si la autoridad sabe del tema; débil si no."
+            ],
+            [
+              "Cifras",
+              "Estadísticas, porcentajes, encuestas.",
+              "“El 80 % de los estudiantes aprobó tras estudiar con guías.”",
+              "Más fuerte si los datos son verificables y tienen fuente."
+            ],
+            [
+              "Ejemplificación",
+              "Casos concretos que ilustran una idea.",
+              "Noruega, China y Países Bajos usan transporte eléctrico para reducir emisiones.",
+              "Fuerte si los ejemplos son representativos."
+            ],
+            [
+              "Analogía",
+              "Compara dos situaciones semejantes.",
+              "Así como el ejercicio fortalece el cuerpo, estudiar fortalece la mente.",
+              "La semejanza debe ser pertinente; no cualquier parecido sirve."
+            ],
+            [
+              "Causa-efecto",
+              "Muestra que algo produce un resultado.",
+              "Dormir poco causa menor concentración y bajo rendimiento.",
+              "No confundir coincidencia con causalidad."
+            ],
+            [
+              "Emotivo-afectivo",
+              "Apela a sentimientos: compasión, miedo, indignación.",
+              "“Piensa en los niños que sufren hambre.”",
+              "Conmueve, pero no prueba nada por sí solo."
+            ],
+            [
+              "Experiencia personal",
+              "Vivencias propias.",
+              "“Fui a ese restaurante y me atendieron mal.”",
+              "Subjetivo: una experiencia no representa a todos."
+            ],
+            [
+              "Creencias o valores",
+              "Religión, moral, ideología, convicciones.",
+              "“Debemos ayudar a los demás porque es lo correcto.”",
+              "Persuade a quien comparte los valores; no aporta pruebas."
+            ],
+            [
+              "Calidad",
+              "Características positivas reales de algo.",
+              "“Este café es excelente por su aroma y durabilidad del sabor.”",
+              "Fuerte si las cualidades son comprobables."
+            ],
+            [
+              "Estético",
+              "Belleza o apariencia.",
+              "“Este celular es el mejor porque es el más bonito.”",
+              "Débil: la apariencia no demuestra calidad."
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "contenido": "**Truco para reconocerlos:** ¿usa expertos? → autoridad. ¿Números? → cifras. ¿Emociones? → emotivo. ¿Casos concretos? → ejemplificación. ¿Compara situaciones? → analogía. ¿Relaciona causa y resultado? → causa-efecto. ¿Generaliza desde casos? → inductivo. ¿Parte de una regla general? → deductivo."
+        },
+        {
+          "tipo": "texto",
+          "contenido": "En resumen, los argumentos pueden agruparse en **lógicos o racionales** (deductivo, inductivo, analogía, causa-efecto, ejemplificación, cifras), **persuasivos** (autoridad, experiencia personal, emotivo, creencias, estético, calidad) e **incorrectos** (las falacias, que se ven en el siguiente tema)."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Cómo evaluar un argumento"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "No todos los argumentos son iguales. Para valorar su fuerza, hazte tres preguntas:"
+        },
+        {
+          "tipo": "lista",
+          "items": [
+            "**¿Está bien sustentado?** ¿Hay datos, fuentes o razones verificables?",
+            "**¿Es lógico?** ¿La conclusión se desprende realmente de las razones?",
+            "**¿Tiene relación con la tesis?** Un argumento verdadero pero que no apoya la tesis no sirve."
+          ],
+          "ordenada": true
+        },
+        {
+          "tipo": "texto",
+          "contenido": "También revisa si el argumento evita falacias y si las fuentes son confiables. Un argumento convincente no siempre es válido: puede emocionar sin probar."
+        },
+        {
+          "tipo": "ejemplo",
+          "titulo": "Evaluar la fuerza de dos argumentos",
+          "contenido": "Tesis: “Se deben prohibir los plásticos de un solo uso.”\n\nArgumento A: “Un estudio del Ministerio de Ambiente indica que el 56 % de los residuos en las playas del país son plásticos de un solo uso.”\n\nArgumento B: “Las playas llenas de plástico se ven horribles en las fotos.”\n\n**A es más fuerte:** tiene una fuente identificable, un dato preciso y una relación directa con la tesis. **B es débil:** es un argumento estético; que algo se vea feo no demuestra que deba prohibirse.\n\nEn el ICFES, cuando piden “el argumento que mejor sustenta la tesis”, busca el que tenga evidencia verificable y relación directa con lo que se defiende."
+        }
+      ]
+    },
+    {
+      "codigo": "LEC-FAL-L1",
+      "subtema": "falacias-argumentativas",
+      "titulo": "Falacias argumentativas",
+      "resumen": "Una falacia es un argumento que parece correcto pero tiene un error de razonamiento. Pueden ser muy persuasivas, por eso es importante reconocerlas. En el ICFES suelen preguntarte por qué un argumento es débil o qué error comete.",
+      "duracion_min": 5,
+      "bloques": [
+        {
+          "tipo": "texto",
+          "contenido": "Una falacia es un argumento que **parece correcto pero tiene un error de razonamiento**. Pueden ser muy persuasivas, por eso es importante reconocerlas. En el ICFES suelen preguntarte por qué un argumento es débil o qué error comete."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Señales de alerta"
+        },
+        {
+          "tipo": "lista",
+          "items": [
+            "Generalizaciones exageradas (“todos”, “siempre”).",
+            "Ataques a la persona en lugar de a sus ideas.",
+            "Solo dos opciones cuando hay más.",
+            "Conclusiones sin pruebas o con pruebas que no se relacionan.",
+            "Estereotipos, manipulación emocional o amenazas."
+          ],
+          "ordenada": false
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Falacias más frecuentes"
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Falacia",
+            "Qué hace",
+            "Ejemplo",
+            "Por qué falla"
+          ],
+          "filas": [
+            [
+              "Ad hominem (contra la persona)",
+              "Ataca a quien argumenta, no su argumento.",
+              "“No le creas sobre economía, ni siquiera terminó el bachillerato.”",
+              "La calidad de una idea no depende de quién la dice."
+            ],
+            [
+              "Generalización apresurada",
+              "Saca una conclusión general de pocos casos.",
+              "“Dos taxistas me cobraron de más: todos los taxistas son ladrones.”",
+              "Pocos casos no representan a todo el grupo."
+            ],
+            [
+              "Falsa causa (post hoc)",
+              "Supone que, como B ocurrió después de A, A causó B.",
+              "“Desde que cambié de peinado me va mejor en el colegio.”",
+              "Ocurrir después no es lo mismo que ser causado."
+            ],
+            [
+              "Hombre de paja",
+              "Deforma la postura del otro para atacarla con facilidad.",
+              "“Quieren menos tareas: o sea, quieren que los estudiantes no aprendan nada.”",
+              "Refuta una idea que nadie defendió."
+            ],
+            [
+              "Falso dilema",
+              "Presenta solo dos opciones cuando hay más.",
+              "“O estás conmigo o estás contra mí.”",
+              "Ignora alternativas intermedias."
+            ],
+            [
+              "Pendiente resbaladiza",
+              "Supone una cadena de consecuencias graves sin pruebas.",
+              "“Si permitimos el celular en clase, luego no habrá clases y el colegio cerrará.”",
+              "Cada paso de la cadena no está demostrado."
+            ],
+            [
+              "Falsa autoridad (ad verecundiam)",
+              "Usa como autoridad a alguien que no es experto en el tema.",
+              "“Este suplemento cura la gastritis; lo dijo un famoso futbolista.”",
+              "La fama no da conocimiento médico."
+            ],
+            [
+              "Ad populum (mayoría)",
+              "Afirma que algo es verdad porque muchos lo creen o lo hacen.",
+              "“Millones lo compran, así que debe ser bueno.”",
+              "La popularidad no prueba la verdad."
+            ],
+            [
+              "Ad ignorantiam (ignorancia)",
+              "Afirma algo porque no se ha probado lo contrario.",
+              "“Nadie ha demostrado que los fantasmas no existen; entonces existen.”",
+              "La falta de pruebas no prueba nada."
+            ],
+            [
+              "Ad misericordiam (lástima)",
+              "Busca aceptación solo por compasión.",
+              "“Merezco un 5; he tenido un semestre muy duro.”",
+              "La lástima no reemplaza las razones."
+            ],
+            [
+              "Ad baculum (fuerza)",
+              "Impone una idea mediante amenaza.",
+              "“Acepta mi propuesta o te saco del grupo.”",
+              "El miedo no es una razón."
+            ],
+            [
+              "Tu quoque (tú también)",
+              "Rechaza una crítica señalando que el otro hace lo mismo.",
+              "“¿Me dices que no fume? ¡Tú también fumabas!”",
+              "La incoherencia del otro no invalida el argumento."
+            ],
+            [
+              "Petición de principio (círculo)",
+              "La conclusión ya está en la premisa.",
+              "“Este libro dice la verdad porque así lo afirma el libro.”",
+              "No aporta ninguna razón nueva."
+            ],
+            [
+              "Pista falsa (cortina de humo)",
+              "Desvía la discusión a otro tema.",
+              "“¿Por qué critican el alza del pasaje si hay tantos problemas de seguridad?”",
+              "Evita responder la crítica original."
+            ]
+          ]
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Argumento válido o falacia: diferencias finas"
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Argumento válido",
+            "Falacia parecida",
+            "La diferencia"
+          ],
+          "filas": [
+            [
+              "Autoridad",
+              "Falsa autoridad",
+              "Si el experto sabe del tema, es válido; si no, es falacia."
+            ],
+            [
+              "Inductivo",
+              "Generalización apresurada",
+              "Muchos casos representativos vs. pocos casos aislados."
+            ],
+            [
+              "Causa-efecto",
+              "Falsa causa",
+              "Relación demostrada vs. simple coincidencia en el tiempo."
+            ],
+            [
+              "Emotivo",
+              "Ad misericordiam",
+              "El emotivo acompaña razones; la falacia usa la emoción en lugar de razones."
+            ],
+            [
+              "Refutación",
+              "Hombre de paja",
+              "Responde a la postura real vs. a una versión deformada."
+            ]
+          ]
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Cómo detectar una falacia, paso a paso"
+        },
+        {
+          "tipo": "lista",
+          "items": [
+            "Identifica la conclusión: ¿qué quiere que creas?",
+            "Identifica la razón que ofrece.",
+            "Pregúntate: ¿esa razón, si fuera cierta, realmente prueba la conclusión?",
+            "Revisa si ataca a la persona, deforma ideas, usa emociones o amenazas, o generaliza desde pocos casos.",
+            "Ponle nombre según la tabla."
+          ],
+          "ordenada": true
+        },
+        {
+          "tipo": "ejemplo",
+          "titulo": "Analizar una falacia",
+          "contenido": "“El concejal propone ampliar las ciclorrutas, pero él mismo va en carro al trabajo. Su propuesta, por tanto, no tiene ningún valor.”\n\n• **Conclusión:** la propuesta no tiene valor.\n\n• **Razón ofrecida:** el concejal usa carro.\n\n• **¿La razón prueba la conclusión?** No. Que él use carro no dice nada sobre si las ciclorrutas son útiles.\n\n• **Error:** se ataca la conducta de la persona y su incoherencia en vez de la propuesta: falacia **ad hominem**, en su variante **tu quoque**.\n\nPara refutar bien la propuesta habría que hablar de costos, seguridad o beneficios de las ciclorrutas, no de los hábitos del concejal."
+        }
+      ]
+    },
+    {
+      "codigo": "LEC-MIN-L1",
+      "subtema": "mini-detalles-de-los-textos",
+      "titulo": "Mini detalles de los textos",
+      "resumen": "Muchas preguntas del ICFES se resuelven gracias a detalles pequeños que cambian el sentido: un signo de puntuación, un pronombre, una palabra como “quizá” o “incluso”. Estos son los que más conviene vigilar.",
+      "duracion_min": 6,
+      "bloques": [
+        {
+          "tipo": "texto",
+          "contenido": "Muchas preguntas del ICFES se resuelven gracias a detalles pequeños que cambian el sentido: un signo de puntuación, un pronombre, una palabra como “quizá” o “incluso”. Estos son los que más conviene vigilar."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Signos de puntuación con sentido"
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Signo",
+            "Uso que debes reconocer",
+            "Ejemplo e interpretación"
+          ],
+          "filas": [
+            [
+              "Comillas “ ”",
+              "Citar palabras de otro, señalar ironía o marcar un término especial.",
+              "“Los ‘expertos’ fallaron otra vez.” Las comillas indican que el autor duda de que sean expertos: ironía."
+            ],
+            [
+              "Paréntesis ( ) y rayas — —",
+              "Agregan una aclaración, dato o comentario secundario.",
+              "“El proyecto (financiado por la alcaldía) fracasó.” El dato aclara, pero no es la idea central."
+            ],
+            [
+              "Dos puntos :",
+              "Anuncian una explicación, consecuencia, enumeración o cita.",
+              "“Solo había una salida: renunciar.” Lo que sigue explica lo anterior."
+            ],
+            [
+              "Punto y coma ;",
+              "Separan ideas relacionadas o elementos de una lista compleja.",
+              "“Unos estudiaban; otros dormían.” Contrapone dos grupos."
+            ],
+            [
+              "Puntos suspensivos …",
+              "Duda, suspenso, ironía o algo que se deja sin decir.",
+              "“Dijo que llegaría temprano…” Sugiere que no lo hizo."
+            ],
+            [
+              "Signos de interrogación ¿?",
+              "Preguntas reales o retóricas.",
+              "“¿Acaso alguien cree que esto es justo?” No pregunta: afirma que no es justo."
+            ],
+            [
+              "Signos de exclamación ¡!",
+              "Emoción, sorpresa, énfasis o ironía.",
+              "“¡Qué gran servicio!” Puede ser ironía si el contexto muestra un mal servicio."
+            ]
+          ]
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Pronombres y referentes"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Palabras como **esto, ello, este, aquel, lo, la, su, dicho, tal** remiten a algo dicho antes (o después). El ICFES pregunta: “En el texto, la palabra ‘esto’ se refiere a…”. Para resolverlo:"
+        },
+        {
+          "tipo": "lista",
+          "items": [
+            "Busca hacia atrás la idea o el sustantivo más cercano con sentido lógico.",
+            "Reemplaza el pronombre por tu candidato y relee: si la oración conserva el sentido, es el referente correcto."
+          ],
+          "ordenada": true
+        },
+        {
+          "tipo": "ejemplo",
+          "titulo": "Referente",
+          "contenido": "“Los bosques regulan el agua y protegen el suelo. Sin embargo, la deforestación avanza. **Esto** pone en riesgo los acueductos rurales.”\n\n“Esto” no se refiere a los bosques ni a la regulación del agua (eso no es un riesgo), sino a **el avance de la deforestación**. Al reemplazarlo: “El avance de la deforestación pone en riesgo los acueductos rurales”; la oración tiene sentido."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Palabras que gradúan la certeza (modalizadores)"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Indican qué tan seguro está el autor. Cambian por completo el alcance de una afirmación, y las opciones incorrectas suelen exagerarlo."
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Grado",
+            "Palabras",
+            "Qué implica"
+          ],
+          "filas": [
+            [
+              "Certeza",
+              "es indudable, sin duda, evidentemente, está demostrado",
+              "El autor lo presenta como seguro."
+            ],
+            [
+              "Posibilidad",
+              "quizá, tal vez, posiblemente, podría, al parecer",
+              "Es una hipótesis, no una afirmación segura."
+            ],
+            [
+              "Obligación o recomendación",
+              "debe, es necesario, hay que, conviene",
+              "Marca postura: el autor propone algo."
+            ],
+            [
+              "Cuantificadores",
+              "algunos, muchos, la mayoría, pocos, en ocasiones",
+              "Limitan el alcance; no equivalen a “todos” ni “siempre”."
+            ]
+          ]
+        },
+        {
+          "tipo": "ejemplo",
+          "titulo": "Cuidado con el alcance",
+          "contenido": "“Algunos estudios sugieren que la música clásica podría mejorar la concentración.”\n\n“Algunos” limita los estudios, “sugieren” no es “demuestran” y “podría” indica posibilidad. Una opción que diga “la música clásica mejora la concentración” exagera: convierte una posibilidad en certeza."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Palabras pequeñas que cambian la lógica"
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Palabra",
+            "Efecto",
+            "Ejemplo"
+          ],
+          "filas": [
+            [
+              "incluso / hasta",
+              "Señalan algo inesperado o extremo.",
+              "“Vinieron incluso los vecinos que nunca salen.”"
+            ],
+            [
+              "solo / únicamente",
+              "Restringen.",
+              "“Solo los inscritos pueden votar.”"
+            ],
+            [
+              "apenas",
+              "Indica poca cantidad o algo recién ocurrido.",
+              "“Apenas el 10 % respondió.” (valoración: es poco)"
+            ],
+            [
+              "salvo que / a menos que",
+              "Plantean una excepción o condición.",
+              "“Ganaremos, salvo que llueva.”"
+            ],
+            [
+              "ya / todavía",
+              "Marcan cambio o permanencia.",
+              "“Todavía no hay solución.” (el problema sigue)"
+            ],
+            [
+              "no solo… sino también",
+              "Suman y destacan lo segundo.",
+              "“No solo contamina, sino que también enferma.”"
+            ]
+          ]
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Las voces del texto"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "En un texto pueden hablar varias voces: el autor, personas citadas, “la gente”, expertos. Es clave distinguir **qué dice el autor** de **lo que el autor cuenta que otros dicen**."
+        },
+        {
+          "tipo": "lista",
+          "items": [
+            "**Cita directa:** con comillas o guion. Reproduce las palabras exactas de otro.",
+            "**Cita indirecta:** “El ministro afirmó que…”. El autor resume lo dicho por otro.",
+            "**Verbos de reporte:** revelan la actitud del autor. “Admite” sugiere que reconoce algo a regañadientes; “insinúa”, que no lo dice abiertamente; “asegura”, que lo afirma con firmeza; “pretende”, que el autor duda."
+          ],
+          "ordenada": false
+        },
+        {
+          "tipo": "ejemplo",
+          "titulo": "Voz del autor vs. voz citada",
+          "contenido": "“El gerente asegura que la empresa nunca contaminó el río. Los análisis del laboratorio, sin embargo, cuentan otra historia.”\n\nLa idea de que “la empresa nunca contaminó” es del **gerente**, no del autor. El autor marca distancia con “sin embargo” y deja entender que los análisis contradicen al gerente. Si una opción atribuye al autor la defensa de la empresa, está confundiendo las voces."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Otros detalles que conviene mirar"
+        },
+        {
+          "tipo": "lista",
+          "items": [
+            "**Persona gramatical:** “nosotros” puede incluir al lector para crear complicidad (“todos somos responsables”).",
+            "**Tiempos verbales:** el pasado narra; el presente generaliza o explica; el futuro y el condicional plantean predicciones o hipótesis.",
+            "**Adjetivos valorativos:** “escandaloso”, “admirable”, “mediocre” revelan opinión.",
+            "**Títulos, subtítulos y epígrafes:** anticipan el tema y a veces el tono o la postura.",
+            "**Fecha y fuente:** permiten contextualizar (un dato de 1990 puede no ser válido hoy).",
+            "**Negrilla, cursiva y subrayado:** el autor destaca algo; la cursiva también marca palabras extranjeras o títulos de obras.",
+            "**Repeticiones:** si una palabra o imagen se repite, probablemente es clave para el sentido global.",
+            "**Títulos con doble sentido:** pueden anticipar ironía o el mensaje profundo, como cuando un cuento sobre un anciano se titula “El testigo” y sugiere que cada persona es testigo único de su propia vida."
+          ],
+          "ordenada": false
+        },
+        {
+          "tipo": "concepto",
+          "titulo": "Idea final",
+          "contenido": "Lee con intención, piensa con criterio y responde con evidencia. Los pequeños detalles no son adornos: muchas veces son la clave de la respuesta."
+        },
+        {
+          "tipo": "lista",
+          "items": [
+            "Apuntes de Lectura Crítica de @preicfes_grupo500 (¿Cómo analizar un texto?, Tipos de textos e intenciones comunicativas, Figuras literarias, Tipos de argumentos y Resumen de conceptos clave).",
+            "Icfes. Guía de orientación Saber 11.° 2025-2. https://www.icfes.gov.co/wp-content/uploads/2025/04/30-abril-guia-orientacion-saber-11o-2025-2.pdf",
+            "Icfes. Cuadernillo de preguntas Lectura Crítica Saber 11.° 2026. https://www.icfes.gov.co/wp-content/uploads/2026/03/16-feb-cuadernillo-de-preguntas-lectura-critica-saber-11-2026.pdf"
+          ],
+          "ordenada": false
+        }
       ]
     }
   ]

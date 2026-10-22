@@ -3,8 +3,10 @@
  */
 import { api } from '../core/api.js';
 import { $, formatoFecha, formatoNumero, formatoPorcentaje, h, icono, montar } from '../core/dom.js';
-import { iniciarPagina } from '../core/layout.js';
+import { iniciarPagina, procesarRecompensas } from '../core/layout.js';
 import { alfa, grafica, PALETA } from '../core/graficas.js';
+import { crearPersonaje, etapaDeNivel } from '../core/personaje.js';
+import { pedirFechaExamen, preguntarCalendario, textoCuentaRegresiva } from '../core/calendario.js';
 import { errorCarga, toastError } from '../core/ui.js';
 
 const LETRAS_DIA = ['L', 'M', 'X', 'J', 'V', 'S', 'D'];
@@ -58,15 +60,46 @@ function pintarRecordatorio(recordatorio) {
   detalle.title = delDia.motivo;
 }
 
+/**
+ * Cuenta regresiva según el calendario del estudiante (A o B) y la fecha oficial del ICFES.
+ * Sin fecha oficial única no se muestra ningún número: se explica la situación y se pide el dato.
+ */
 function pintarCuentaRegresiva(icfes) {
   const dias = icfes.dias;
   $('#dias-icfes').textContent = dias == null ? '–' : Math.max(0, dias);
-  let texto;
-  if (dias == null) texto = 'Define la fecha de tu examen en Configuración.';
-  else if (dias < 0) texto = 'La fecha del examen ya pasó: actualízala en Configuración.';
-  else if (dias === 0) texto = '¡Hoy es el día! Confía en tu preparación.';
-  else texto = `${icfes.nombre}: ${formatoFecha(icfes.fecha, { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' })}${icfes.estimada ? ' (fecha estimada)' : ''}`;
-  $('#fecha-icfes').textContent = texto;
+  $('#fecha-icfes').textContent = textoCuentaRegresiva(icfes);
+
+  const actualizar = (r) => {
+    if (!r) return;
+    procesarRecompensas(r);
+    pintarCuentaRegresiva(r.cuenta_regresiva);
+  };
+  const enlace = (texto, accion) => h('button', { type: 'button', class: 'boton-enlace', onclick: accion }, texto);
+  const cambiar = () => preguntarCalendario({ actual: icfes.calendario }).then(actualizar);
+  const acciones = [];
+  if (!icfes.calendario) {
+    acciones.push(h('button', { type: 'button', class: 'btn btn-primario btn-sm', onclick: cambiar }, icono('calendar-days', 'icono-sm'), 'Elegir mi calendario'));
+  } else {
+    acciones.push(h('span', { class: 'chip' }, icono('calendar-days', 'icono-sm'), `Calendario ${icfes.calendario}`));
+    if (icfes.estado === 'varias' || icfes.estado === 'elegida') acciones.push(enlace('Elegir mi fecha', () => pedirFechaExamen(icfes).then(actualizar)));
+    if (icfes.estado === 'sin_publicar' || icfes.estado === 'citacion') acciones.push(enlace(icfes.estado === 'citacion' ? 'Cambiar fecha de mi citación' : 'Ingresar fecha de mi citación', () => pedirFechaExamen(icfes).then(actualizar)));
+    acciones.push(enlace('Cambiar calendario', cambiar));
+  }
+  montar($('#acciones-cuenta'), acciones);
+}
+
+// Si el calendario se elige en la pregunta del primer inicio de sesión, el contador se actualiza solo.
+window.addEventListener('icfes:calendario', (e) => {
+  if (e.detail?.cuenta_regresiva) pintarCuentaRegresiva(e.detail.cuenta_regresiva);
+});
+
+/** Mascota del recordatorio: muestra la etapa que corresponde al nivel del estudiante. */
+function pintarPersonaje(nivel) {
+  const numero = nivel?.nivel?.numero ?? 1;
+  const etapa = etapaDeNivel(numero);
+  const marco = $('#personaje-inicio');
+  montar(marco, crearPersonaje({ nivel: numero, clase: 'personaje-widget', etiqueta: `Tu mascota en la etapa ${etapa.nombre}` }));
+  marco.title = `${etapa.nombre}: ${etapa.descripcion}`;
 }
 
 function pintarProgreso(progreso, nivel) {
@@ -79,9 +112,11 @@ function pintarProgreso(progreso, nivel) {
         h('strong', {}, `Nivel ${nivel.nivel.numero} · ${nivel.nivel.nombre}`)),
       h('span', { class: 'texto-2' }, `${formatoNumero(nivel.xp)} XP`)),
     h('div', { class: 'barra', style: { '--valor': `${nivel.progreso}%`, '--color': 'var(--lima-600)' } }),
-    h('p', { class: 'texto-xs texto-3 mt-4 mb-0' }, nivel.siguiente
-      ? `Te faltan ${formatoNumero(nivel.siguiente.faltan)} XP para ${nivel.siguiente.nombre}.`
-      : '¡Alcanzaste el nivel máximo: Maestro ICFES!'));
+    nivel.siguiente
+      ? h('p', { class: 'texto-xs texto-3 mt-4 mb-0' },
+        `Para ${nivel.siguiente.nombre}: ${nivel.siguiente.cumplidos} de ${nivel.siguiente.requisitos.length} requisitos cumplidos. `,
+        h('a', { href: '/logros#niveles' }, 'Ver requisitos'))
+      : h('p', { class: 'texto-xs texto-3 mt-4 mb-0' }, `¡Alcanzaste el nivel máximo: ${nivel.nivel.nombre}!`));
 
   montar($('#lista-progreso'), progreso.materias.map((m) =>
     h('a', { class: 'materia-item', href: `/materia?slug=${m.slug}`, style: { color: 'inherit', textDecoration: 'none' } },
@@ -234,6 +269,7 @@ async function cargar() {
       : 'Este es tu resumen de estudio. ¡Sigamos avanzando!';
     pintarRacha(datos.racha);
     pintarRecordatorio(datos.recordatorio);
+    pintarPersonaje(datos.nivel);
     pintarCuentaRegresiva(datos.cuenta_regresiva);
     pintarProgreso(datos.progreso, datos.nivel);
     pintarKpis(datos.estadisticas, datos.puntaje_estimado);

@@ -6,9 +6,10 @@
  *   const usuario = await iniciarPagina({ activa: 'inicio' });
  */
 import { api } from './api.js';
-import { $, formatoNumero, h, icono, s } from './dom.js';
+import { $, formatoNumero, h, icono } from './dom.js';
 import { crearAvatar } from './avatar.js';
 import { aplicarTema } from './tema.js';
+import { preguntarCalendario } from './calendario.js';
 import { confirmar, mostrarEventos } from './ui.js';
 
 const NAVEGACION = [
@@ -16,7 +17,7 @@ const NAVEGACION = [
   { id: 'materias', texto: 'Materias', icono: 'book-open', url: '/materias' },
   { id: 'simulacros', texto: 'Simulacros', icono: 'clipboard-list', url: '/simulacros' },
   { id: 'avance', texto: 'Avance', icono: 'chart-line', url: '/avance' },
-  { id: 'vanty', texto: 'Vanty', icono: 'bot', url: '/vanty' },
+  { id: 'vanty', texto: 'Vanty', icono: 'mascota', url: '/vanty' },
   { id: 'logros', texto: 'Logros', icono: 'trophy', url: '/logros' },
   { id: 'tienda', texto: 'Tienda', icono: 'store', url: '/tienda' },
 ];
@@ -25,17 +26,9 @@ const NAVEGACION_MOVIL = ['inicio', 'materias', 'simulacros', 'vanty', 'avance']
 let usuarioActual = null;
 export const usuario = () => usuarioActual;
 
-/** Logo en línea (usa las fuentes de la página y se adapta al modo oscuro). */
+/** Logo oficial de ICFES Lab (imagen con borde blanco: se ve bien en modo claro y oscuro). */
 export function logo() {
-  return s('svg', { class: 'logo-imagen', viewBox: '0 0 212 48', role: 'img', 'aria-label': 'ICFES Lab' },
-    s('rect', { x: 2, y: 2, width: 44, height: 44, rx: 13, fill: '#484ea2' }),
-    s('path', { d: 'M19 12h10M21 12v8.5L13.6 32.9a3.2 3.2 0 0 0 2.8 4.8h15.2a3.2 3.2 0 0 0 2.8-4.8L27 20.5V12', fill: 'none', stroke: '#fff', 'stroke-width': 2.6, 'stroke-linecap': 'round', 'stroke-linejoin': 'round' }),
-    s('path', { d: 'M16.3 30.4h15.4l2 3.4a1.6 1.6 0 0 1-1.4 2.4H15.7a1.6 1.6 0 0 1-1.4-2.4z', fill: '#d5e068' }),
-    s('circle', { cx: 22, cy: 26, r: 1.7, fill: '#81a1f6' }),
-    s('circle', { cx: 26.6, cy: 23.4, r: 1.2, fill: '#81a1f6' }),
-    s('path', { d: 'M37 7.5l1.3 3.2 3.2 1.3-3.2 1.3L37 16.5l-1.3-3.2-3.2-1.3 3.2-1.3z', fill: '#fda879' }),
-    s('text', { x: 56, y: 33, 'font-family': 'Outfit, Segoe UI, sans-serif', 'font-size': 25, 'font-weight': 800, fill: 'currentColor', 'letter-spacing': '-0.5' },
-      'ICFES', s('tspan', { fill: '#81a1f6' }, ' Lab')));
+  return h('img', { class: 'logo-imagen', src: '/img/logo-icfes-lab.png', alt: 'ICFES Lab', width: 520, height: 140 });
 }
 
 function chip(clase, nombreIcono, id, texto, titulo) {
@@ -157,6 +150,14 @@ export async function iniciarPagina({ activa = null, modoExamen = false } = {}) 
   if (!modoExamen) {
     construirBarraLateral(u, activa);
     construirNavMovil(activa);
+    // Primer inicio de sesión: se pregunta el calendario del Saber 11 una sola vez (queda en el perfil).
+    if (!u.calendario_icfes) {
+      preguntarCalendario({ obligatorio: true }).then((r) => {
+        if (!r) return;
+        usuarioActual = { ...usuarioActual, calendario_icfes: r.calendario_icfes };
+        procesarRecompensas(r);
+      });
+    }
   }
   return u;
 }

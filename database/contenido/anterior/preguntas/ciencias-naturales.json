@@ -1,0 +1,214 @@
+{
+  "materia": "ciencias-naturales",
+  "contextos": {
+    "CIE-CTX-01": {
+      "titulo": "Sal en el agua de riego y germinación del fríjol",
+      "texto": "En algunas zonas secas del Caribe colombiano, ciertos pozos tienen agua con sales disueltas. Un grupo de estudiantes quiso averiguar si la sal del agua de riego afecta la germinación de las semillas de fríjol.\nColocaron 20 semillas de la misma variedad en cada uno de cuatro platos con algodón y regaron cada plato con 10 mL diarios de una solución distinta. Los cuatro platos se mantuvieron a 25 °C y con la misma iluminación. Después de 7 días contaron las semillas germinadas en cada plato:\n• Plato 1 · agua sin sal (0 g/L): 18 semillas germinadas.\n• Plato 2 · agua con 2 g/L de sal: 15 semillas germinadas.\n• Plato 3 · agua con 4 g/L de sal: 9 semillas germinadas.\n• Plato 4 · agua con 8 g/L de sal: 2 semillas germinadas.",
+      "imagen": null,
+      "imagen_alt": null,
+      "fuente": "Texto original elaborado para ICFES Lab"
+    }
+  },
+  "preguntas": [
+    {
+      "codigo": "CIE-BIO-01",
+      "subtema": "biologia",
+      "dificultad": 2,
+      "competencia": "Uso comprensivo del conocimiento científico",
+      "contexto_ref": null,
+      "contexto": "En una granja de Pasto (Nariño), Rosa cría cuyes. Considere que el color del pelaje de estos cuyes depende de un solo gen: el alelo N (pelaje negro) es dominante y el alelo n (pelaje blanco) es recesivo. Rosa cruzó un macho negro con una hembra blanca y, en varias camadas, obtuvo 12 crías: 6 negras y 6 blancas.",
+      "enunciado": "Si Rosa cruza entre sí dos de las crías negras, ¿qué porcentaje de crías blancas puede esperar en la nueva descendencia?",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        { "letra": "A", "texto": "0 %, porque dos cuyes negros solo pueden tener crías negras.", "correcta": false, "retroalimentacion": "Es un error común creer que el rasgo recesivo desaparece. Las crías negras son portadoras (Nn): cada una puede transmitir el alelo n y, si ambas lo aportan, la cría será nn, es decir, blanca." },
+        { "letra": "B", "texto": "25 %, porque cada cría negra heredó un alelo n de su madre blanca.", "correcta": true, "retroalimentacion": "Correcto. La madre (nn) solo aporta alelos n, así que toda cría negra es Nn. El cruce Nn × Nn produce NN, Nn, Nn y nn: 1 de cada 4 crías (25 %) será blanca." },
+        { "letra": "C", "texto": "50 %, porque se repetirá la proporción observada en el primer cruce.", "correcta": false, "retroalimentacion": "La proporción 1:1 del primer cruce se debió a que uno de los padres era nn (Nn × nn). En el nuevo cruce ambos padres son Nn, y la proporción esperada cambia a 3 negras : 1 blanca." },
+        { "letra": "D", "texto": "75 %, porque en el cuadro de Punnett tres de cada cuatro combinaciones tienen el alelo N.", "correcta": false, "retroalimentacion": "El 75 % corresponde a las crías con al menos un alelo N (NN y Nn), que son negras. Una cría blanca debe ser nn, y eso ocurre solo en 1 de las 4 combinaciones." }
+      ],
+      "explicacion": "**Paso 1.** La madre es blanca, así que su genotipo es nn: solo puede transmitir el alelo n.\n**Paso 2.** Cada cría negra recibió un alelo n de la madre y, para ser negra, un alelo N del padre. Por tanto, todas las crías negras son heterocigotas (Nn).\n**Paso 3.** Al cruzar dos de ellas (Nn × Nn), el cuadro de Punnett da cuatro combinaciones igualmente probables: NN, Nn, nN y nn.\n**Paso 4.** Solo nn produce pelaje blanco: 1 de 4 combinaciones, es decir, **25 %**. Las otras tres (75 %) darán crías negras.\nDato extra: que la mitad de las crías del primer cruce saliera blanca indica que el macho original también era Nn.",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": ["genética mendeliana", "alelos dominantes y recesivos", "cuadro de Punnett", "heterocigoto"]
+    },
+    {
+      "codigo": "CIE-BIO-02",
+      "subtema": "biologia",
+      "dificultad": 3,
+      "competencia": "Explicación de fenómenos",
+      "contexto_ref": null,
+      "contexto": "Muchos ciclistas colombianos entrenan en Boyacá, por ejemplo en Paipa, a unos 2.500 m de altitud. Estos son algunos datos del aire en Paipa y en Santa Marta, que está al nivel del mar:\n• Santa Marta (0 m): oxígeno = 21 % del aire; presión atmosférica = 101 kPa.\n• Paipa (2.500 m): oxígeno = 21 % del aire; presión atmosférica = 75 kPa.\nUn ciclista samario que llega a entrenar en Paipa se fatiga con facilidad durante los primeros días. Después de cuatro semanas, sus exámenes muestran que su sangre tiene más glóbulos rojos que antes del viaje.",
+      "enunciado": "¿Cuál de las siguientes afirmaciones explica mejor el cambio observado en la sangre del ciclista?",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        { "letra": "A", "texto": "En Paipa el aire contiene un menor porcentaje de oxígeno, y los glóbulos rojos adicionales producen el oxígeno que les falta a los músculos.", "correcta": false, "retroalimentacion": "Tiene dos errores. Según los datos, el porcentaje de oxígeno es el mismo (21 %) en ambas ciudades; lo que cambia es la presión. Además, los glóbulos rojos no producen oxígeno: lo transportan unido a la hemoglobina." },
+        { "letra": "B", "texto": "En Paipa el porcentaje de oxígeno es igual al de Santa Marta, así que los glóbulos rojos aumentan porque el cuerpo refuerza sus defensas por el esfuerzo.", "correcta": false, "retroalimentacion": "Que el porcentaje sea igual no significa que se inhale la misma cantidad de oxígeno: con menor presión, cada litro de aire tiene menos moléculas de O₂. Además, la defensa del organismo es función de los glóbulos blancos, no de los rojos." },
+        { "letra": "C", "texto": "En Paipa el aire es más puro y cada inhalación aporta más oxígeno, por lo que el cuerpo fabrica más glóbulos rojos para aprovecharlo.", "correcta": false, "retroalimentacion": "El aire de montaña puede tener menos contaminantes, pero eso no aumenta el oxígeno disponible. Con una presión de 75 kPa, cada inhalación contiene menos moléculas de O₂ que al nivel del mar, no más." },
+        { "letra": "D", "texto": "En Paipa cada inhalación aporta menos moléculas de oxígeno, y los glóbulos rojos adicionales permiten que la sangre transporte más oxígeno a los músculos.", "correcta": true, "retroalimentacion": "Correcto. Con el mismo 21 % de oxígeno pero menor presión, el aire está menos concentrado: cada inhalación lleva menos moléculas de O₂. El cuerpo compensa fabricando más glóbulos rojos, cuya hemoglobina transporta el oxígeno; así cada litro de sangre lleva más O₂ a los músculos." }
+      ],
+      "explicacion": "**Paso 1.** Compara los datos: el porcentaje de oxígeno es el mismo (21 %), pero la presión en Paipa es menor (75 kPa frente a 101 kPa).\n**Paso 2.** A menor presión, el aire está menos comprimido: cada litro contiene menos moléculas de todos los gases, incluido el O₂. Por eso cada inhalación aporta menos oxígeno y el ciclista se fatiga al principio.\n**Paso 3.** Los glóbulos rojos contienen hemoglobina, la proteína que transporta el O₂ desde los pulmones hasta los tejidos. No producen oxígeno ni defienden al cuerpo; esa última función es de los glóbulos blancos.\n**Paso 4.** La falta de oxígeno estimula a los riñones a liberar la hormona eritropoyetina (EPO), y la médula ósea fabrica más glóbulos rojos. Así la sangre transporta más oxígeno aunque cada inhalación traiga menos.\nEsta adaptación es la base del entrenamiento en altura.",
+      "tiempo_estimado_seg": 150,
+      "etiquetas": ["glóbulos rojos", "hemoglobina", "sistema respiratorio", "presión atmosférica", "adaptación a la altura"]
+    },
+    {
+      "codigo": "CIE-MED-01",
+      "subtema": "medio-ambiente",
+      "dificultad": 1,
+      "competencia": "Explicación de fenómenos",
+      "contexto_ref": null,
+      "contexto": "El páramo de Chingaza abastece buena parte del agua que se consume en Bogotá. En los páramos, los frailejones atrapan la humedad de la niebla con sus hojas cubiertas de vellosidades, y los musgos y los suelos, ricos en materia orgánica, almacenan grandes cantidades de agua. Esa agua se libera lentamente hacia las quebradas durante todo el año, incluso en la temporada seca.",
+      "enunciado": "Si en una zona del páramo se retiran los frailejones y los musgos y se ara el suelo para sembrar papa, lo más probable es que las quebradas que nacen allí",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        { "letra": "A", "texto": "lleven menos agua en la temporada seca, porque el suelo pierde su capacidad de almacenar agua y liberarla poco a poco.", "correcta": true, "retroalimentacion": "Correcto. Sin frailejones ni musgos, y con el suelo arado y expuesto, se pierde la 'esponja' del páramo: el agua de lluvia escurre rápido y en la temporada seca queda muy poca para alimentar las quebradas." },
+        { "letra": "B", "texto": "lleven más agua durante todo el año, porque ya no habrá plantas que absorban el agua de la lluvia.", "correcta": false, "retroalimentacion": "Sin vegetación el agua escurre más rápido durante los aguaceros, pero se pierde la capacidad de almacenarla. El resultado no es más agua todo el año, sino crecientes en época de lluvias y quebradas casi secas en la temporada seca." },
+        { "letra": "C", "texto": "mantengan el mismo caudal, porque el agua de las quebradas depende solo de la cantidad de lluvia.", "correcta": false, "retroalimentacion": "La lluvia importa, pero el texto muestra que el páramo también captura agua de la niebla y la regula: la guarda en sus suelos y musgos y la libera poco a poco. Si se destruye ese sistema, el caudal cambia aunque llueva lo mismo." },
+        { "letra": "D", "texto": "se congelen con más frecuencia, porque sin vegetación el agua del páramo se transforma en hielo.", "correcta": false, "retroalimentacion": "Aquí se confunde el páramo con los glaciares de los nevados. El páramo no almacena el agua como hielo, sino en sus suelos y musgos; retirar la vegetación no convierte el agua en hielo." }
+      ],
+      "explicacion": "**Paso 1.** Identifica la función del páramo en el texto: captura agua de la lluvia y de la niebla, la almacena en suelos y musgos y la libera lentamente.\n**Paso 2.** Al retirar frailejones y musgos, se pierde la captura de agua de la niebla. Al arar, el suelo queda expuesto al sol y al viento, se seca y pierde materia orgánica, así que retiene cada vez menos agua.\n**Paso 3.** Sin esa 'esponja', el agua de lluvia escurre rápidamente y no queda reserva para la temporada seca.\n**Conclusión:** las quebradas llevarán menos agua justo cuando más se necesita. Por eso los páramos son ecosistemas estratégicos para el abastecimiento de agua en Colombia.",
+      "tiempo_estimado_seg": 90,
+      "etiquetas": ["páramos", "regulación hídrica", "biodiversidad colombiana", "servicios ecosistémicos"]
+    },
+    {
+      "codigo": "CIE-MED-02",
+      "subtema": "medio-ambiente",
+      "dificultad": 2,
+      "competencia": "Explicación de fenómenos",
+      "contexto_ref": null,
+      "contexto": "Una laguna andina está rodeada de cultivos de cebolla que se abonan con fertilizantes ricos en nitratos y fosfatos. Después de cada temporada de lluvias, el agua de la laguna se vuelve verde por la gran cantidad de algas y, semanas más tarde, los pescadores encuentran muchos peces muertos. Los análisis del agua no detectan sustancias tóxicas para los peces, pero sí una concentración muy baja de oxígeno disuelto.",
+      "enunciado": "¿Cuál de las siguientes secuencias explica mejor la muerte de los peces?",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        { "letra": "A", "texto": "Lluvias → los fertilizantes llegan a la laguna → los nitratos y fosfatos se acumulan en las branquias → los peces mueren envenenados.", "correcta": false, "retroalimentacion": "Los análisis descartan sustancias tóxicas para los peces. Los nitratos y fosfatos actúan como nutrientes para las algas; el daño a los peces es indirecto, por la falta de oxígeno." },
+        { "letra": "B", "texto": "Lluvias → los fertilizantes llegan a la laguna → las algas se multiplican y producen un exceso de oxígeno → el exceso de oxígeno intoxica a los peces.", "correcta": false, "retroalimentacion": "Los análisis muestran muy poco oxígeno, no un exceso. Las algas producen oxígeno mientras viven, pero cuando mueren en grandes cantidades su descomposición lo agota." },
+        { "letra": "C", "texto": "Lluvias → los fertilizantes llegan a la laguna → las algas se multiplican → al morir, las bacterias que las descomponen consumen el oxígeno → los peces mueren.", "correcta": true, "retroalimentacion": "Correcto. Es el proceso de eutrofización: el exceso de nutrientes dispara el crecimiento de las algas; cuando estas mueren, las bacterias descomponedoras usan el oxígeno disuelto para degradarlas y los peces mueren por asfixia." },
+        { "letra": "D", "texto": "Lluvias → el agua de la laguna se enfría → el agua fría retiene menos oxígeno disuelto → los peces mueren por falta de oxígeno.", "correcta": false, "retroalimentacion": "Ocurre lo contrario: el agua fría puede disolver más oxígeno que el agua caliente. Además, esta secuencia no explica por qué el agua se vuelve verde ni el papel de los fertilizantes." }
+      ],
+      "explicacion": "**Paso 1.** Descarta lo que contradicen los datos: no hay sustancias tóxicas (se descarta el envenenamiento) y hay poco oxígeno (se descarta un exceso de oxígeno).\n**Paso 2.** Las lluvias arrastran los fertilizantes de los cultivos hacia la laguna. Los nitratos y fosfatos son nutrientes para las algas, que se multiplican y tiñen el agua de verde.\n**Paso 3.** Cuando las algas mueren, las bacterias descomponedoras las degradan y, en ese proceso, consumen gran parte del oxígeno disuelto.\n**Paso 4.** Sin oxígeno suficiente, los peces mueren. Este fenómeno se llama **eutrofización** y se previene usando menos fertilizantes y conservando franjas de vegetación en las orillas, que retienen los nutrientes antes de que lleguen al agua.",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": ["eutrofización", "contaminación del agua", "fertilizantes", "oxígeno disuelto", "descomponedores"]
+    },
+    {
+      "codigo": "CIE-FIS-01",
+      "subtema": "fisica",
+      "dificultad": 1,
+      "competencia": "Uso comprensivo del conocimiento científico",
+      "contexto_ref": null,
+      "contexto": "Un bus del MIO, en Cali, avanza en línea recta con velocidad constante y frena de repente. Los pasajeros que van de pie y no se sostienen de las barandas se inclinan hacia adelante.",
+      "enunciado": "¿Cuál de los siguientes principios explica lo que les ocurre a los pasajeros?",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        { "letra": "A", "texto": "Toda acción tiene una reacción: al frenar, el bus empuja a los pasajeros hacia adelante con una fuerza igual a la del freno.", "correcta": false, "retroalimentacion": "Se aplica mal la tercera ley de Newton: las fuerzas de acción y reacción actúan sobre cuerpos distintos, y aquí ninguna fuerza empuja a los pasajeros hacia adelante. Lo que ocurre es que su cuerpo sigue moviéndose mientras el bus se frena." },
+        { "letra": "B", "texto": "Todo cuerpo tiende a conservar su estado de movimiento: los pasajeros siguen moviéndose hacia adelante mientras el bus se detiene.", "correcta": true, "retroalimentacion": "Correcto. Es la primera ley de Newton o principio de inercia. Los pasajeros llevaban la misma velocidad del bus; cuando este frena, sus cuerpos tienden a mantener esa velocidad y por eso se van hacia adelante." },
+        { "letra": "C", "texto": "Los cuerpos en movimiento acumulan una fuerza propia que los sigue impulsando hacia adelante hasta que se agota.", "correcta": false, "retroalimentacion": "Es una idea muy común, pero incorrecta: un cuerpo no necesita una 'fuerza guardada' para seguir moviéndose. Mantener la velocidad no requiere fuerza; cambiarla, sí." },
+        { "letra": "D", "texto": "Al frenar, la fuerza de gravedad dentro del bus cambia de dirección y empuja a los pasajeros hacia adelante.", "correcta": false, "retroalimentacion": "La gravedad (el peso) siempre apunta hacia el centro de la Tierra, es decir, hacia abajo, y no cambia porque el bus frene. La inclinación hacia adelante se debe a la inercia." }
+      ],
+      "explicacion": "**Paso 1.** Antes de frenar, el bus y los pasajeros se mueven juntos, con la misma velocidad.\n**Paso 2.** Al frenar, el bus reduce su velocidad. A los pasajeros solo los frena la fricción del piso sobre sus pies; sobre el resto del cuerpo no actúa ninguna fuerza que lo detenga.\n**Paso 3.** Por la **primera ley de Newton (inercia)**, todo cuerpo tiende a conservar su velocidad si no actúa una fuerza neta que la cambie. Por eso los pies se frenan con el bus, pero el tronco sigue hacia adelante.\n**Conclusión:** ninguna fuerza empuja a los pasajeros hacia adelante; simplemente siguen moviéndose mientras el bus se detiene. Por eso es importante sostenerse de las barandas.",
+      "tiempo_estimado_seg": 75,
+      "etiquetas": ["leyes de Newton", "inercia", "primera ley de Newton", "fuerza"]
+    },
+    {
+      "codigo": "CIE-FIS-02",
+      "subtema": "fisica",
+      "dificultad": 3,
+      "competencia": "Indagación",
+      "contexto_ref": null,
+      "contexto": "Un bus articulado de TransMilenio viaja en línea recta entre dos estaciones. La gráfica muestra cómo cambió su velocidad durante el recorrido.",
+      "enunciado": "Con base en la gráfica, ¿cuál de las siguientes conclusiones es válida?",
+      "imagen": "/img/preguntas/CIE-FIS-02.svg",
+      "imagen_alt": "Gráfica de velocidad (m/s) contra tiempo (s). La velocidad aumenta en línea recta de 0 a 10 m/s entre 0 y 10 s, se mantiene constante en 10 m/s entre 10 y 40 s y disminuye en línea recta hasta 0 m/s entre 40 y 50 s.",
+      "opciones": [
+        { "letra": "A", "texto": "Entre 0 s y 10 s el bus recorre 100 m, porque al final de ese intervalo su velocidad es 10 m/s.", "correcta": false, "retroalimentacion": "Multiplicar la velocidad final por el tiempo supone que el bus fue a 10 m/s todo el intervalo, pero partió del reposo. La distancia es el área del triángulo: ½ × 10 s × 10 m/s = 50 m." },
+        { "letra": "B", "texto": "Entre 10 s y 40 s el bus está detenido, porque la línea de la gráfica es horizontal.", "correcta": false, "retroalimentacion": "Se confunde una gráfica de velocidad con una de posición. Una línea horizontal en una gráfica velocidad–tiempo indica velocidad constante (aquí, 10 m/s), no reposo. El bus estaría detenido solo si la línea estuviera sobre v = 0." },
+        { "letra": "C", "texto": "Entre 40 s y 50 s el bus se devuelve hacia la estación de partida, porque la línea de la gráfica desciende.", "correcta": false, "retroalimentacion": "La velocidad disminuye, pero sigue siendo positiva hasta llegar a cero: el bus avanza cada vez más despacio en el mismo sentido y se detiene. Solo se devolvería si la velocidad tomara valores negativos." },
+        { "letra": "D", "texto": "Entre 10 s y 40 s la fuerza neta sobre el bus es cero, porque su velocidad no cambia.", "correcta": true, "retroalimentacion": "Correcto. Entre 10 s y 40 s la velocidad es constante (10 m/s), así que la aceleración es cero. Por la segunda ley de Newton (F neta = m·a), la fuerza neta también es cero: la fuerza que impulsa al bus se equilibra con la fricción y la resistencia del aire." }
+      ],
+      "explicacion": "**Paso 1.** Lee la gráfica por tramos: de 0 a 10 s la velocidad sube de 0 a 10 m/s; de 10 a 40 s se mantiene en 10 m/s; de 40 a 50 s baja de 10 m/s a 0.\n**Paso 2.** En el tramo de 10 a 40 s, Δv = 0, así que la aceleración es a = Δv/Δt = 0 m/s².\n**Paso 3.** Por la segunda ley de Newton, F neta = m·a = 0. El bus sí se mueve, pero la fuerza que lo impulsa está equilibrada con la fricción y la resistencia del aire.\n**Paso 4.** Descarta las demás: de 0 a 10 s recorre ½ × 10 s × 10 m/s = 50 m (no 100 m); una línea horizontal en v–t no significa reposo; y de 40 a 50 s la velocidad sigue siendo positiva, así que el bus frena sin devolverse.\n**Clave:** moverse con velocidad constante no requiere fuerza neta; cambiar la velocidad sí.",
+      "tiempo_estimado_seg": 150,
+      "etiquetas": ["gráfica velocidad-tiempo", "MRUA", "segunda ley de Newton", "fuerza neta", "interpretación de gráficas"]
+    },
+    {
+      "codigo": "CIE-QUI-01",
+      "subtema": "quimica",
+      "dificultad": 2,
+      "competencia": "Explicación de fenómenos",
+      "contexto_ref": null,
+      "contexto": "En el laboratorio del colegio, Valentina calienta al aire un trozo de lana de acero (hierro) de 10,0 g hasta que se oscurece; al pesarlo de nuevo, la balanza marca 10,8 g. Al mismo tiempo, Andrés quema en un plato abierto una hoja de papel de 5,0 g; las cenizas que quedan pesan 0,2 g.",
+      "enunciado": "¿Cuál de las siguientes afirmaciones explica correctamente ambos resultados?",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        { "letra": "A", "texto": "El hierro se combina con el oxígeno del aire y forma un óxido de mayor masa; el papel produce dióxido de carbono y vapor de agua, que escapan al aire. En ambos casos, la masa total se conserva.", "correcta": true, "retroalimentacion": "Correcto. La balanza solo registra lo que queda en el plato. El hierro gana la masa del oxígeno que incorpora y el papel pierde la masa de los gases que se van. Si ambas reacciones ocurrieran en recipientes cerrados, la masa total no cambiaría." },
+        { "letra": "B", "texto": "La combustión del papel destruye parte de la materia y la oxidación del hierro crea materia nueva, porque la ley de conservación de la masa no se cumple cuando hay fuego.", "correcta": false, "retroalimentacion": "La ley de conservación de la masa se cumple en todas las reacciones químicas, con o sin fuego. La materia no se crea ni se destruye: los átomos se reorganizan y, en este caso, algunos entran desde el aire o salen hacia él." },
+        { "letra": "C", "texto": "El hierro absorbe el calor de la llama y ese calor aumenta su masa; el papel, en cambio, libera su calor al aire y por eso su masa disminuye.", "correcta": false, "retroalimentacion": "El calor es energía que se transfiere, no una sustancia con masa que se pueda medir en una balanza. El cambio de masa se debe a los átomos de oxígeno que se unen al hierro y a los gases que escapan del papel." },
+        { "letra": "D", "texto": "El hierro se dilata al calentarse y por eso pesa más; el papel se transforma completamente en energía y por eso la mayor parte de su masa desaparece.", "correcta": false, "retroalimentacion": "Dilatarse aumenta el volumen, no la masa. Y el papel no se convierte en energía: sus átomos de carbono e hidrógeno forman CO₂ y H₂O, gases que se dispersan en el aire." }
+      ],
+      "explicacion": "**Paso 1.** Recuerda la ley de conservación de la masa: en una reacción química los átomos no se crean ni se destruyen, solo se reorganizan.\n**Paso 2.** Hierro: el oxígeno del aire se une al hierro y forma un óxido (por ejemplo, 3 Fe + 2 O₂ → Fe₃O₄). El sólido pesa más porque ahora incluye oxígeno: los 0,8 g adicionales corresponden al oxígeno incorporado.\n**Paso 3.** Papel: la celulosa reacciona con el O₂ y produce CO₂ y vapor de agua, gases que escapan del plato abierto. Solo quedan 0,2 g de cenizas, formadas por minerales que no arden.\n**Paso 4.** La balanza no registra los gases que entran o salen. Si cada experimento se hiciera en un recipiente cerrado, la masa total antes y después de la reacción sería la misma.\n**Clave:** cuando una masa parece aparecer o desaparecer, busca un gas que entró o salió del sistema.",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": ["conservación de la masa", "reacciones químicas", "combustión", "oxidación", "sistemas abiertos y cerrados"]
+    },
+    {
+      "codigo": "CIE-QUI-02",
+      "subtema": "quimica",
+      "dificultad": 3,
+      "competencia": "Uso comprensivo del conocimiento científico",
+      "contexto_ref": null,
+      "contexto": "La gráfica muestra la solubilidad del nitrato de potasio (KNO₃), una sal usada como fertilizante, a diferentes temperaturas. En el laboratorio se disuelve la máxima cantidad posible de KNO₃ en 50 g de agua a 60 °C; luego la solución se enfría hasta 20 °C y se deja en reposo hasta que dejan de formarse cristales.",
+      "enunciado": "¿Qué masa de KNO₃ se separa de la solución en forma de cristales?",
+      "imagen": "/img/preguntas/CIE-QUI-02.svg",
+      "imagen_alt": "Curva de solubilidad del KNO₃: gramos de sal que se disuelven en 100 g de agua según la temperatura. La curva crece cada vez más rápido: 13 g a 0 °C, 21 g a 10 °C, 32 g a 20 °C, 46 g a 30 °C, 64 g a 40 °C, 86 g a 50 °C y 110 g a 60 °C. Los puntos de 20 °C (32 g) y 60 °C (110 g) están resaltados.",
+      "opciones": [
+        { "letra": "A", "texto": "16 g", "correcta": false, "retroalimentacion": "16 g es la masa que sigue disuelta a 20 °C (32 g × 50/100), no la que se cristaliza. Los cristales son la diferencia entre lo que estaba disuelto y lo que el agua todavía puede retener." },
+        { "letra": "B", "texto": "39 g", "correcta": true, "retroalimentacion": "Correcto. A 60 °C, 50 g de agua disuelven 110 g ÷ 2 = 55 g de KNO₃; a 20 °C solo pueden retener 32 g ÷ 2 = 16 g. El exceso, 55 g − 16 g = 39 g, se separa como cristales." },
+        { "letra": "C", "texto": "55 g", "correcta": false, "retroalimentacion": "55 g es todo lo que se disolvió a 60 °C. Al enfriar no se cristaliza todo el soluto: a 20 °C el agua todavía mantiene disueltos 16 g." },
+        { "letra": "D", "texto": "78 g", "correcta": false, "retroalimentacion": "78 g (110 g − 32 g) sería la respuesta si hubiera 100 g de agua. Como solo hay 50 g, todas las cantidades se reducen a la mitad." }
+      ],
+      "explicacion": "**Paso 1.** Lee la gráfica: la solubilidad del KNO₃ es de 110 g por cada 100 g de agua a 60 °C y de 32 g por cada 100 g de agua a 20 °C.\n**Paso 2.** Ajusta a 50 g de agua, que es la mitad: a 60 °C se disuelven 110 ÷ 2 = 55 g y a 20 °C solo caben 32 ÷ 2 = 16 g.\n**Paso 3.** Al enfriar, el agua ya no puede mantener disuelto todo el soluto y el exceso se cristaliza: 55 g − 16 g = **39 g**.\n**Paso 4.** Comprueba: 39 g de cristales + 16 g disueltos = 55 g, la misma masa de soluto del comienzo.\nEste proceso, llamado cristalización por enfriamiento, se usa para purificar sales cuya solubilidad cambia mucho con la temperatura.",
+      "tiempo_estimado_seg": 180,
+      "etiquetas": ["solubilidad", "curva de solubilidad", "cristalización", "soluciones saturadas", "temperatura"]
+    },
+    {
+      "codigo": "CIE-MET-01",
+      "subtema": "metodo-cientifico",
+      "dificultad": 1,
+      "competencia": "Indagación",
+      "contexto_ref": "CIE-CTX-01",
+      "contexto": null,
+      "enunciado": "¿Cuál es la variable independiente en este experimento?",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        { "letra": "A", "texto": "La concentración de sal en el agua de riego.", "correcta": true, "retroalimentacion": "Correcto. La concentración de sal es lo que los estudiantes cambiaron a propósito entre un plato y otro (0, 2, 4 y 8 g/L) para ver su efecto." },
+        { "letra": "B", "texto": "El número de semillas germinadas en cada plato.", "correcta": false, "retroalimentacion": "Esa es la variable dependiente: lo que se mide para ver cómo responde la germinación al cambio en la concentración de sal." },
+        { "letra": "C", "texto": "La temperatura de 25 °C a la que estaban los platos.", "correcta": false, "retroalimentacion": "La temperatura fue la misma en los cuatro platos: es una variable controlada, que se mantiene fija para que no influya en los resultados." },
+        { "letra": "D", "texto": "La variedad de fríjol que se utilizó.", "correcta": false, "retroalimentacion": "Todos los platos tenían semillas de la misma variedad, así que es una variable controlada, no la independiente." }
+      ],
+      "explicacion": "**Paso 1.** Busca qué cambia a propósito entre los platos: solo la concentración de sal (0, 2, 4 y 8 g/L). Esa es la **variable independiente**.\n**Paso 2.** Busca qué se mide como resultado: el número de semillas germinadas. Esa es la **variable dependiente**.\n**Paso 3.** Todo lo que se mantiene igual (temperatura, luz, variedad de fríjol, número de semillas, volumen de riego y tiempo) son **variables controladas**.\nTruco: la independiente es la causa que el investigador manipula; la dependiente es el efecto que mide.",
+      "tiempo_estimado_seg": 60,
+      "etiquetas": ["variables", "variable independiente", "diseño experimental"]
+    },
+    {
+      "codigo": "CIE-MET-02",
+      "subtema": "metodo-cientifico",
+      "dificultad": 2,
+      "competencia": "Indagación",
+      "contexto_ref": "CIE-CTX-01",
+      "contexto": null,
+      "enunciado": "¿Cuál de las siguientes conclusiones es válida a partir de los resultados del experimento?",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        { "letra": "A", "texto": "La sal impide por completo la germinación de cualquier tipo de semilla, sin importar su concentración.", "correcta": false, "retroalimentacion": "Es una generalización excesiva: incluso con 8 g/L germinaron 2 semillas, y solo se probó el fríjol. El resultado no puede extenderse a todas las semillas ni a todas las concentraciones." },
+        { "letra": "B", "texto": "Las plantas de fríjol regadas con agua sin sal crecieron más altas que las regadas con agua salada.", "correcta": false, "retroalimentacion": "Los estudiantes contaron semillas germinadas; no midieron la altura de las plantas. Una conclusión válida solo puede referirse a lo que se midió." },
+        { "letra": "C", "texto": "En las condiciones del experimento, a mayor concentración de sal en el agua de riego, menos semillas de fríjol germinaron.", "correcta": true, "retroalimentacion": "Correcto. Los datos muestran una tendencia clara: 18, 15, 9 y 2 semillas germinadas con 0, 2, 4 y 8 g/L de sal. La conclusión se limita a lo medido y a las condiciones del experimento." },
+        { "letra": "D", "texto": "Una concentración baja de sal (2 g/L) favorece la germinación del fríjol, porque en ese plato germinaron 15 semillas.", "correcta": false, "retroalimentacion": "Hay que comparar con el grupo control: sin sal germinaron 18 semillas y con 2 g/L germinaron 15. La sal no favoreció la germinación; la redujo." }
+      ],
+      "explicacion": "**Paso 1.** Organiza los datos: 0 g/L → 18; 2 g/L → 15; 4 g/L → 9; 8 g/L → 2 semillas germinadas de 20.\n**Paso 2.** Identifica la tendencia: cada vez que aumenta la concentración de sal, germinan menos semillas.\n**Paso 3.** Verifica que la conclusión hable solo de lo que se midió (germinación, no altura), de lo que se probó (fríjol, no todas las semillas) y que compare con el grupo control (agua sin sal).\n**Paso 4.** La conclusión válida es que, en las condiciones del experimento, a mayor concentración de sal germinaron menos semillas de fríjol. Una buena conclusión no exagera ni va más allá de los datos.",
+      "tiempo_estimado_seg": 105,
+      "etiquetas": ["conclusiones válidas", "interpretación de datos", "grupo control", "generalización"]
+    }
+  ]
+}

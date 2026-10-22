@@ -3,8 +3,8 @@
  */
 import { transaccion, una, varias } from '../config/db.js';
 import { AppError, noEncontrado, solicitudInvalida } from '../utils/AppError.js';
-import { esFechaValida } from '../utils/fechas.js';
-import { guardarConfig, obtenerConfig } from './config.service.js';
+import { esFechaValida, fechaLocal } from '../utils/fechas.js';
+import { CALENDARIOS, calendariosIcfes, guardarConfig, obtenerConfig } from './config.service.js';
 import { cargarPreguntas } from './preguntas.service.js';
 import { guardarPregunta, importarPreguntas, validarPregunta } from './contenido.service.js';
 
@@ -187,19 +187,47 @@ export async function actualizarUsuario(adminId, id, { activo, rol }) {
 
 export async function obtenerConfiguracion() {
   return {
-    fecha_icfes: (await obtenerConfig('fecha_icfes')) ?? {},
+    calendarios_icfes: await calendariosIcfes(),
     vanty: (await obtenerConfig('vanty')) ?? {},
   };
 }
 
-export async function actualizarConfiguracion({ fechaIcfes, vanty }) {
-  if (fechaIcfes) {
-    if (!esFechaValida(fechaIcfes.fecha)) throw solicitudInvalida('La fecha del ICFES no es válida.');
-    await guardarConfig('fecha_icfes', {
-      fecha: fechaIcfes.fecha,
-      nombre: String(fechaIcfes.nombre || 'Saber 11').slice(0, 80),
-      estimada: Boolean(fechaIcfes.estimada),
-    }, 'Fecha global del próximo examen.');
+/**
+ * Fechas OFICIALES del Saber 11 publicadas por el ICFES para cada calendario. Sin fechas, la
+ * plataforma informa que aún no están publicadas (no se calculan fechas estimadas).
+ */
+function normalizarCalendarios(entrada, actual) {
+  const texto = (valor, maximo) => String(valor ?? '').trim().slice(0, maximo);
+  const resultado = { revisado: fechaLocal() };
+  for (const letra of CALENDARIOS) {
+    const c = entrada?.[letra];
+    if (!c) {
+      resultado[letra] = actual[letra];
+      continue;
+    }
+    const fechas = (Array.isArray(c.fechas) ? c.fechas : []).filter((f) => f?.fecha);
+    if (fechas.length > 3) throw solicitudInvalida(`Registra como máximo 3 fechas para el Calendario ${letra}.`);
+    const vistas = new Set();
+    resultado[letra] = {
+      convocatoria: texto(c.convocatoria, 80) || actual[letra].convocatoria,
+      meses: texto(c.meses, 80) || actual[letra].meses,
+      fuente: texto(c.fuente, 200) || null,
+      fechas: fechas.map((f) => {
+        if (!esFechaValida(f.fecha)) throw solicitudInvalida(`Una fecha del Calendario ${letra} no es válida.`);
+        return { fecha: f.fecha, descripcion: texto(f.descripcion, 80) || 'Aplicación de la prueba' };
+      }).filter((f) => !vistas.has(f.fecha) && vistas.add(f.fecha)).sort((a, b) => a.fecha.localeCompare(b.fecha)),
+    };
+    if (resultado[letra].fechas.length && !resultado[letra].fuente) {
+      throw solicitudInvalida(`Indica la fuente oficial (resolución o enlace del ICFES) de las fechas del Calendario ${letra}.`);
+    }
+  }
+  return resultado;
+}
+
+export async function actualizarConfiguracion({ calendarios, vanty }) {
+  if (calendarios) {
+    await guardarConfig('calendarios_icfes', normalizarCalendarios(calendarios, await calendariosIcfes()),
+      'Fechas oficiales del Saber 11 por calendario (A y B) publicadas por el ICFES.');
   }
   if (vanty) {
     const limite = Number.parseInt(vanty.limite_diario, 10);

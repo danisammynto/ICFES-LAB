@@ -2,96 +2,3433 @@
   "materia": "ingles",
   "lecciones": [
     {
-      "codigo": "ING-REA-L1",
-      "subtema": "reading",
-      "titulo": "Lee como detective: skimming y scanning",
-      "resumen": "Aprenderás a leer textos en inglés con estrategia para responder preguntas literales e inferenciales sin traducir palabra por palabra.",
-      "duracion_min": 10,
+      "codigo": "ING-EST-L1",
+      "subtema": "estructura-oracion-imperativo",
+      "titulo": "Estructura de la oración y modo imperativo",
+      "resumen": "Los pronombres personales reemplazan el nombre de una persona, un animal o una cosa. En inglés funcionan como sujeto de la oración, es decir, indican quién realiza la acción.",
+      "duracion_min": 8,
       "bloques": [
-        { "tipo": "texto", "contenido": "¿Te ha pasado que lees un texto en inglés y a la mitad ya olvidaste cómo empezaba? No es falta de nivel: es falta de estrategia. En las **Partes 5 y 6** del ICFES no necesitas entender cada palabra, sino saber **qué buscar y dónde buscarlo**. Hoy vas a aprender las dos técnicas que usan los lectores expertos." },
-        { "tipo": "concepto", "titulo": "Skimming y scanning", "contenido": "**Skimming** es leer rápido para captar la idea general: miras el título, la primera oración de cada párrafo y las palabras que se repiten. **Scanning** es buscar un dato específico (un nombre, una fecha, un número o una palabra clave) sin leer todo con detalle, como cuando buscas tu nombre en una lista de resultados." },
-        { "tipo": "concepto", "titulo": "Preguntas literales vs. inferenciales", "contenido": "Una pregunta **literal** (Parte 5) tiene la respuesta escrita en el texto, aunque con otras palabras (paráfrasis). Una pregunta **inferencial** (Parte 6) te pide deducir algo que no se dice directamente: la actitud del autor, su propósito o una conclusión lógica a partir de varias pistas." },
-        { "tipo": "lista", "titulo": "Frases que anuncian una pregunta inferencial", "items": ["What can we infer about…? → ¿Qué podemos deducir sobre…?", "What is the writer's attitude…? → ¿Cuál es la actitud del autor…?", "What is the main purpose of the text? → ¿Cuál es el propósito principal del texto?", "What does the writer mean by…? → ¿Qué quiere decir el autor con…?", "It is likely that… → Es probable que…"] },
-        { "tipo": "ejemplo", "titulo": "Ejemplo resuelto", "enunciado": "Text: “Camila started running in 2023. At first, she could only run for ten minutes without stopping. Last month, she finished her first 10-kilometer race in Bucaramanga, and now she is training for a half marathon.”\nQuestion: How has Camila changed since 2023?", "pasos": ["Skimming: el texto habla de Camila y de su progreso como corredora.", "Scanning: busca las expresiones de tiempo para comparar el antes y el después: at first → solo diez minutos; last month → terminó una carrera de 10 kilómetros; now → entrena para una media maratón.", "Inferencia: el texto no dice «she is stronger», pero todas las pistas muestran que ahora puede correr distancias mucho más largas."], "respuesta": "She can run much longer distances than before." },
-        { "tipo": "tip", "contenido": "Tip ICFES: lee primero la pregunta y después el texto; así sabrás exactamente qué buscar. Desconfía de las opciones que copian palabras exactas del texto: suelen ser trampas. La respuesta correcta casi siempre está parafraseada." },
-        { "tipo": "lista", "titulo": "Errores frecuentes", "items": ["Traducir palabra por palabra y perder la idea general.", "Elegir una opción solo porque repite palabras del texto.", "Responder con tu opinión o con lo que sabes del tema, en lugar de lo que dice el texto.", "Confundir la opinión de un personaje con la del autor."] },
-        { "tipo": "ejercicio", "enunciado": "Read: “The school library opens at 7 a.m. and closes at 4 p.m. On Fridays, it closes two hours earlier.”\nWhat time does the library close on Fridays?", "opciones": ["At 7 a.m.", "At 2 p.m.", "At 4 p.m.", "At 6 p.m."], "correcta": 1, "explicacion": "Haz scanning con la palabra Fridays: ese día la biblioteca cierra dos horas antes (two hours earlier) de lo normal, es decir, a las 2 p.m. Las 4 p.m. es la hora de cierre de los demás días, y las 6 p.m. resulta de sumar las dos horas en lugar de restarlas." },
-        { "tipo": "ejercicio", "enunciado": "Read: “Andrés looked at the dark clouds, put his umbrella in his backpack and told his mom: ‘I think I'll take the bus today instead of my bike.’”\nWhat can we infer?", "opciones": ["Andrés's bike is broken.", "Andrés doesn't like his school.", "Andrés thinks it is going to rain.", "Andrés's mom is going to drive him."], "correcta": 2, "explicacion": "El texto no dice que la bicicleta esté dañada ni que su mamá lo vaya a llevar. Las pistas son las nubes oscuras (dark clouds), el paraguas en la maleta y que prefiere el bus a la bicicleta: todo indica que cree que va a llover. Eso es una inferencia: no está escrito, pero se deduce de varias pistas." }
+        {
+          "tipo": "texto",
+          "contenido": "La prueba de Inglés del Saber 11 tiene siete partes. Dos de ellas evalúan directamente la gramática: en la **Parte 4** y en la **Parte 7** debes completar un texto escogiendo la palabra con la forma o el significado correcto. Los temas de este documento son justamente los que más aparecen en esas preguntas, y además te ayudan a entender los textos de las partes de comprensión de lectura."
+        },
+        {
+          "tipo": "texto",
+          "contenido": "En cada tema encontrarás qué significa la estructura, cómo se forma y cuándo se usa. Los ejemplos aparecen así:"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "▸ Example in English → Traducción al español"
+        },
+        {
+          "tipo": "concepto",
+          "titulo": "Recuadros como este",
+          "contenido": "Señalan errores comunes, diferencias entre temas que se confunden y pistas para resolver preguntas del ICFES."
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Antes de estudiar los tiempos verbales, necesitas entender cómo se arma una oración en inglés. El inglés es mucho más estricto que el español con el **orden de las palabras**: si cambias el orden, la oración se vuelve incorrecta o cambia de significado. Por eso este tema es la base de todo lo demás."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Los pronombres personales"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Los pronombres personales reemplazan el nombre de una persona, un animal o una cosa. En inglés funcionan como **sujeto** de la oración, es decir, indican quién realiza la acción."
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Persona",
+            "Singular",
+            "Plural"
+          ],
+          "filas": [
+            [
+              "Primera",
+              "**I** = yo",
+              "**We** = nosotros / nosotras"
+            ],
+            [
+              "Segunda",
+              "**You** = tú / usted",
+              "**You** = ustedes"
+            ],
+            [
+              "Tercera",
+              "**He** = él\n**She** = ella\n**It** = eso (cosas, animales, ideas)",
+              "**They** = ellos / ellas"
+            ]
+          ]
+        },
+        {
+          "tipo": "alerta",
+          "titulo": "Ojo",
+          "contenido": "**I** siempre se escribe en mayúscula, aunque esté en medio de la oración.\n\n**You** sirve para tú, usted y ustedes. El contexto indica de cuál se trata.\n\n**It** se usa para cosas, animales (cuando no sabemos su sexo o no importa) y situaciones: It is raining (Está lloviendo).\n\nA **he, she, it** se les llama **tercera persona del singular**. Este grupo es muy importante porque en presente simple el verbo cambia con ellos. Un truco para recordarlos es la sigla **SHIT** (She, He, IT)."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Las partes de una oración"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Casi todas las oraciones en inglés siguen el mismo orden: **Sujeto + Verbo + Complemento**."
+        },
+        {
+          "tipo": "lista",
+          "items": [
+            "**Sujeto:** quién hace la acción (una persona, un pronombre, una cosa).",
+            "**Verbo:** la acción o el estado (play, study, be).",
+            "**Complemento:** la información extra: qué, dónde, cuándo, con quién, cómo."
+          ],
+          "ordenada": false
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Sujeto",
+            "Verbo",
+            "Complemento",
+            "Traducción"
+          ],
+          "filas": [
+            [
+              "Adriana",
+              "plays",
+              "with her cat",
+              "Adriana juega con su gato"
+            ],
+            [
+              "They",
+              "study",
+              "together",
+              "Ellos estudian juntos"
+            ],
+            [
+              "My brother",
+              "eats",
+              "pizza on Fridays",
+              "Mi hermano come pizza los viernes"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "contenido": "A diferencia del español, en inglés **el sujeto casi nunca se puede omitir**. En español decimos \"Estudio inglés\" y se entiende que es \"yo\", pero en inglés siempre debemos decir I study English. Incluso cuando en español no hay sujeto, el inglés usa **it**:"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "▸ It is cold. → Hace frío."
+        },
+        {
+          "tipo": "texto",
+          "contenido": "▸ It is 3 o’clock. → Son las 3 en punto."
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Otra diferencia: en inglés el **adjetivo va antes del sustantivo**, al revés que en español."
+        },
+        {
+          "tipo": "texto",
+          "contenido": "▸ a **red** car → un carro **rojo**"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "▸ an **interesting** book → un libro **interesante**"
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Afirmar, negar y preguntar con verbos comunes"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Cada oración puede ser afirmativa (dice que algo pasa), negativa (dice que algo NO pasa) o interrogativa (pregunta). Con la mayoría de los verbos, para negar y preguntar necesitamos un **verbo auxiliar**: **do** o **does**."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 3,
+          "texto": "¿Qué es un verbo auxiliar?"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Es un verbo \"ayudante\". **Do/does** no tienen significado propio en estas oraciones (no se traducen), pero el inglés los necesita para poder colocar el **not** y para formar preguntas. Es como una pieza de la estructura que en español no existe."
+        },
+        {
+          "tipo": "lista",
+          "items": [
+            "**Does** se usa con **he, she, it** (y con un sujeto singular como \"Adriana\" o \"my dog\").",
+            "**Do** se usa con **I, you, we, they** (y con sujetos plurales como \"my friends\")."
+          ],
+          "ordenada": false
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Tipo",
+            "Estructura",
+            "Ejemplo",
+            "Traducción"
+          ],
+          "filas": [
+            [
+              "Afirmativa",
+              "Sujeto + verbo + complemento",
+              "Adriana plays with her cat.",
+              "Adriana juega con su gato."
+            ],
+            [
+              "Negativa",
+              "Sujeto + do/does + not + verbo + complemento",
+              "Adriana does not play with her cat.",
+              "Adriana no juega con su gato."
+            ],
+            [
+              "Pregunta",
+              "Do/Does + sujeto + verbo + complemento + ?",
+              "Does Adriana play with her cat?",
+              "¿Adriana juega con su gato?"
+            ]
+          ]
+        },
+        {
+          "tipo": "alerta",
+          "titulo": "Error muy común",
+          "contenido": "Cuando usas **does** o **doesn’t**, el verbo principal vuelve a su forma base (sin -s), porque la marca de tercera persona ya la lleva el auxiliar.\n\nCorrecto: She doesn’t play. / Does she play? — Incorrecto: She doesn’t plays. / Does she plays?"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Formas cortas (contracciones), muy usadas en textos y en el ICFES: **do not = don’t** y **does not = doesn’t**."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "El verbo to be (ser / estar)"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "**To be** es el verbo más importante del inglés. Significa **ser** o **estar**, según el contexto. Es especial porque **no necesita do/does**: él mismo se niega y forma preguntas."
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Pronombre",
+            "To be",
+            "Contracción",
+            "Ejemplo"
+          ],
+          "filas": [
+            [
+              "I",
+              "am",
+              "I’m",
+              "I am a student. → Soy estudiante."
+            ],
+            [
+              "He / She / It",
+              "is",
+              "he’s, she’s, it’s",
+              "She is happy. → Ella está feliz."
+            ],
+            [
+              "You / We / They",
+              "are",
+              "you’re, we’re, they’re",
+              "They are friends. → Ellos son amigos."
+            ]
+          ]
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 3,
+          "texto": "Negación y pregunta con to be"
+        },
+        {
+          "tipo": "lista",
+          "items": [
+            "**Negar:** agregas **not** después de am / is / are."
+          ],
+          "ordenada": false
+        },
+        {
+          "tipo": "texto",
+          "contenido": "▸ She is not happy. (She isn’t happy.) → Ella no está feliz."
+        },
+        {
+          "tipo": "texto",
+          "contenido": "▸ They are not students. (They aren’t students.) → Ellos no son estudiantes."
+        },
+        {
+          "tipo": "lista",
+          "items": [
+            "**Preguntar:** pones el verbo to be **antes** del sujeto."
+          ],
+          "ordenada": false
+        },
+        {
+          "tipo": "texto",
+          "contenido": "▸ Is she happy? → ¿Ella está feliz?"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "▸ Are they students? → ¿Ellos son estudiantes?"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Contracciones negativas: **am not = ’m not** (no existe \"amn’t\"), **is not = isn’t**, **are not = aren’t**."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 3,
+          "texto": "¿Para qué se usa to be?"
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Uso",
+            "Ejemplo",
+            "Traducción"
+          ],
+          "filas": [
+            [
+              "Describir (con adjetivos)",
+              "He is not tall.",
+              "Él no es alto."
+            ],
+            [
+              "Decir dónde está algo (con preposiciones)",
+              "The pencil is on the table.",
+              "El lápiz está sobre la mesa."
+            ],
+            [
+              "Decir la edad",
+              "I am 15 years old.",
+              "Tengo 15 años."
+            ],
+            [
+              "Indicar que algo existe (there is / there are)",
+              "There is a fish in the river.\nThere are two fish.",
+              "Hay un pez en el río.\nHay dos peces."
+            ],
+            [
+              "Como auxiliar de los tiempos continuos y de la voz pasiva",
+              "He is living in Barranca.",
+              "Él está viviendo en Barranca."
+            ]
+          ]
+        },
+        {
+          "tipo": "concepto",
+          "titulo": "Diferencia con el español",
+          "contenido": "La edad se dice con **to be**, no con \"have\": I am 15 years old (literalmente \"soy 15 años de edad\"). Decir I have 15 years es incorrecto.\n\n**There is** se usa con una sola cosa y **there are** con varias. Ambas se traducen como \"hay\"."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "El modo imperativo"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "El imperativo es la forma del verbo que usamos para **decirle a alguien que haga o no haga algo**. Se usa para:"
+        },
+        {
+          "tipo": "lista",
+          "items": [
+            "Dar órdenes: Sit down. (Siéntate.)",
+            "Dar instrucciones: Mix the eggs and the flour. (Mezcla los huevos y la harina.)",
+            "Hacer advertencias: Be careful! (¡Ten cuidado!)",
+            "Escribir letreros y avisos: Do not enter. (No entrar.) — muy frecuente en la parte de avisos del ICFES."
+          ],
+          "ordenada": false
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 3,
+          "texto": "¿Cómo se forma?"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Es la estructura más sencilla del inglés: **se usa el verbo en su forma base y no se escribe el sujeto**. Se entiende que hablamos con \"you\"."
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Forma",
+            "Estructura",
+            "Ejemplos"
+          ],
+          "filas": [
+            [
+              "Afirmativa",
+              "Verbo + complemento",
+              "Wash your hands! → ¡Lávate las manos!\nTell me the truth. → Dime la verdad."
+            ],
+            [
+              "Negativa",
+              "Don’t + verbo + complemento",
+              "Don’t smoke here. → No fumes aquí.\nDon’t hit your sister. → No le pegues a tu hermana."
+            ],
+            [
+              "Incluyéndote a ti (sugerencia)",
+              "Let’s + verbo",
+              "Let’s go to the park. → Vamos al parque."
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Para sonar más amable se agrega **please**: Please, close the door. (Por favor, cierra la puerta.) En letreros formales se usa **Do not** en lugar de **Don’t**, y también es común **No + -ing**: No smoking (Prohibido fumar)."
+        }
       ]
     },
     {
-      "codigo": "ING-GRA-L1",
-      "subtema": "grammar",
-      "titulo": "Present perfect vs. simple past: ¿ya terminó o sigue pasando?",
-      "resumen": "Aprenderás a elegir entre el present perfect y el simple past usando las pistas de tiempo que trae cada oración.",
-      "duracion_min": 12,
+      "codigo": "ING-PRE-L1",
+      "subtema": "presente-simple-progresivo",
+      "titulo": "Presente simple y progresivo",
+      "resumen": "En inglés hay dos formas principales de hablar del presente. La primera, el presente simple, habla de lo que pasa en general o de forma habitual. La segunda, el presente progresivo (o continuo), habla de lo que está pasando ahora mismo.",
+      "duracion_min": 6,
       "bloques": [
-        { "tipo": "texto", "contenido": "En la **Parte 4** del ICFES encontrarás textos cortos con huecos, y muchos de ellos evalúan tiempos verbales. El par que más confunde a los hispanohablantes es el **present perfect** (I have lived) y el **simple past** (I lived). La buena noticia: casi siempre la oración trae una pista que te dice cuál usar. ¡Vamos a aprender a encontrarla!" },
-        { "tipo": "concepto", "titulo": "La idea clave", "contenido": "Usa el **simple past** para acciones terminadas en un momento concreto del pasado (yesterday, last year, in 2019, two days ago). Usa el **present perfect** cuando la acción empezó en el pasado y continúa hoy, o cuando importa la experiencia o el resultado sin decir cuándo ocurrió (since, for, ever, never, already, yet)." },
-        { "tipo": "formula", "contenido": "Present perfect: Subject + have/has + past participle", "nota": "I have visited Cartagena twice. / She has lived in Cali since 2020." },
-        { "tipo": "formula", "contenido": "Simple past: Subject + verb in the past (-ed or irregular form)", "nota": "We visited Cartagena last December. / She moved to Cali in 2020." },
-        { "tipo": "lista", "titulo": "Palabras pista", "items": ["Simple past → yesterday, last week, last year, ago, in 2019, when I was a child", "Present perfect → since, for, already, yet, ever, never, just, so far", "Since + punto de inicio (since 2020, since Monday)", "For + duración (for three years, for a week)"] },
-        { "tipo": "ejemplo", "titulo": "Ejemplo resuelto", "enunciado": "Complete: “My brother ______ (play) soccer since he was six, and last Saturday he ______ (score) his first goal in a real match.”", "pasos": ["Primer hueco: since he was six indica una acción que empezó en el pasado y continúa hoy → present perfect.", "El sujeto es my brother (he), así que se usa has: has played.", "Segundo hueco: last Saturday es un momento terminado del pasado → simple past: scored."], "respuesta": "has played / scored" },
-        { "tipo": "lista", "titulo": "Errores frecuentes", "items": ["I live here since 2020 ✗ → I have lived here since 2020 ✓", "I have seen that movie yesterday ✗ → I saw that movie yesterday ✓", "She has went to Medellín ✗ → She has gone to Medellín ✓ (se usa el participio, no el pasado)", "I have studied here since three years ✗ → I have studied here for three years ✓"] },
-        { "tipo": "tip", "contenido": "Tip ICFES: antes de mirar las opciones, subraya las expresiones de tiempo que rodean el hueco. Si ves ago, yesterday o last, piensa en simple past; si ves since o for con una situación que continúa, piensa en present perfect." },
-        { "tipo": "ejercicio", "enunciado": "Choose the correct option: “I ______ Medellín three years ago.”", "opciones": ["have visited", "visited", "has visited", "visit"], "correcta": 1, "explicacion": "Three years ago señala un momento terminado del pasado, por eso se usa el simple past: visited. La palabra ago nunca va con present perfect." },
-        { "tipo": "ejercicio", "enunciado": "Choose the correct option: “Laura and Felipe ______ best friends since 2018.”", "opciones": ["are", "were", "have been", "has been"], "correcta": 2, "explicacion": "Since 2018 indica que la amistad empezó en el pasado y continúa hoy, así que se usa present perfect. Como el sujeto es plural (Laura and Felipe), la forma correcta es have been, no has been." }
+        {
+          "tipo": "texto",
+          "contenido": "En inglés hay dos formas principales de hablar del presente. La primera, el **presente simple**, habla de lo que pasa en general o de forma habitual. La segunda, el **presente progresivo** (o continuo), habla de lo que está pasando ahora mismo. Elegir bien entre los dos es una de las preguntas más frecuentes de gramática."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Presente simple"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Equivale al presente del español: \"yo estudio\", \"ella vive\". Se usa para:"
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Uso",
+            "Ejemplo",
+            "Traducción"
+          ],
+          "filas": [
+            [
+              "Rutinas y hábitos",
+              "I study every day.",
+              "Estudio todos los días."
+            ],
+            [
+              "Hechos y verdades generales",
+              "Water boils at 100 °C.",
+              "El agua hierve a 100 °C."
+            ],
+            [
+              "Estados y situaciones permanentes",
+              "She lives in Bucaramanga.",
+              "Ella vive en Bucaramanga."
+            ],
+            [
+              "Gustos y preferencias",
+              "I like to paint.",
+              "Me gusta pintar."
+            ],
+            [
+              "Horarios y eventos programados (incluso futuros)",
+              "The class starts at 8 a.m.",
+              "La clase empieza a las 8 a. m."
+            ]
+          ]
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 3,
+          "texto": "La regla de la S (tercera persona)"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "En presente simple el verbo casi no cambia: **solo cambia con he, she, it**, al que se le agrega una **-s**. Con I, you, we y they el verbo queda igual."
+        },
+        {
+          "tipo": "texto",
+          "contenido": "▸ I **play** / You **play** / They **play** → Yo juego / Tú juegas / Ellos juegan"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "▸ She **plays** / He **plays** / It **plays** → Ella juega / Él juega / Eso juega"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "La forma de agregar la -s depende de cómo termina el verbo:"
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Si el verbo termina en…",
+            "Se agrega",
+            "Ejemplos"
+          ],
+          "filas": [
+            [
+              "La mayoría de verbos",
+              "-s",
+              "dance → dances, work → works"
+            ],
+            [
+              "-o, -s, -ss, -sh, -ch, -x, -z",
+              "-es",
+              "go → goes, watch → watches, fix → fixes"
+            ],
+            [
+              "Consonante + y",
+              "se quita la y y se agrega -ies",
+              "cry → cries, study → studies"
+            ],
+            [
+              "Vocal + y",
+              "-s (la y se queda)",
+              "play → plays, buy → buys"
+            ],
+            [
+              "Have (irregular)",
+              "has",
+              "Snoopy has a black cat."
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "contenido": "▸ Snoopy dances with Woodstock. → Snoopy baila con Woodstock."
+        },
+        {
+          "tipo": "texto",
+          "contenido": "▸ Snoopy goes to the gym. → Snoopy va al gimnasio."
+        },
+        {
+          "tipo": "texto",
+          "contenido": "▸ Snoopy cries in the bathroom. → Snoopy llora en el baño."
+        },
+        {
+          "tipo": "concepto",
+          "titulo": "Los verbos modales no llevan -s",
+          "contenido": "Los modales (can, could, will, would, may, might, must, should, shall, ought to) **nunca cambian**, ni siquiera con he/she/it, y el verbo que los acompaña tampoco lleva -s: Snoopy can play the guitar (no \"cans plays\"). Los verás en el tema 5."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 3,
+          "texto": "Negación y pregunta"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Como viste en el tema 1, con los verbos comunes se usa el auxiliar **do / does** (y el verbo vuelve a su forma base). Con to be no se usa do/does."
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Tipo",
+            "Con otros verbos",
+            "Con to be"
+          ],
+          "filas": [
+            [
+              "Afirmativa",
+              "Snoopy lives in Bucaramanga.\nSnoopy vive en Bucaramanga.",
+              "Snoopy is happy.\nSnoopy está feliz."
+            ],
+            [
+              "Negativa",
+              "Snoopy doesn’t live in Bucaramanga.\nSnoopy no vive en Bucaramanga.",
+              "Snoopy isn’t happy.\nSnoopy no está feliz."
+            ],
+            [
+              "Pregunta",
+              "Does Snoopy live in Bucaramanga?\n¿Snoopy vive en Bucaramanga?",
+              "Is Snoopy happy?\n¿Snoopy está feliz?"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "contenido": "**Respuestas cortas:** se responde con el auxiliar, sin repetir el verbo: Do you like coffee? — Yes, I do. / No, I don’t. Is she your sister? — Yes, she is."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 3,
+          "texto": "Palabras que indican presente simple"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Las expresiones de frecuencia son una pista clara: **always** (siempre), **usually** (normalmente), **often** (a menudo), **sometimes** (a veces), **never** (nunca), **every day / every week** (todos los días / todas las semanas), **on Mondays** (los lunes), **once a week** (una vez a la semana). Las estudiarás con más detalle en el tema 8."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Presente progresivo (presente continuo)"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Equivale en español a **\"estar + -ando / -iendo\"**: \"estoy estudiando\", \"está lloviendo\". Muestra una acción **en desarrollo**, que todavía no ha terminado."
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Uso",
+            "Ejemplo",
+            "Traducción"
+          ],
+          "filas": [
+            [
+              "Acciones que pasan en este momento",
+              "I am studying English right now.",
+              "Estoy estudiando inglés ahora mismo."
+            ],
+            [
+              "Situaciones temporales (de estos días)",
+              "She is working at a hotel this month.",
+              "Ella está trabajando en un hotel este mes."
+            ],
+            [
+              "Planes futuros ya organizados",
+              "Karol G is coming to Colombia next month.",
+              "Karol G viene a Colombia el próximo mes."
+            ],
+            [
+              "Hábitos que molestan (con always)",
+              "She is always talking in class.",
+              "Ella siempre está hablando en clase."
+            ]
+          ]
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 3,
+          "texto": "¿Cómo se forma?"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Necesita dos partes: el verbo **to be en presente** (am / is / are), que funciona como auxiliar, y el **verbo principal terminado en -ing**."
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Tipo",
+            "Estructura",
+            "Ejemplo"
+          ],
+          "filas": [
+            [
+              "Afirmativa",
+              "Sujeto + am/is/are + verbo-ing",
+              "He is working at the cinema. → Él está trabajando en el cine."
+            ],
+            [
+              "Negativa",
+              "Sujeto + am/is/are + not + verbo-ing",
+              "We are not working at the cinema. → No estamos trabajando en el cine."
+            ],
+            [
+              "Pregunta",
+              "Am/Is/Are + sujeto + verbo-ing + ?",
+              "Is Snoopy working at the cinema? → ¿Snoopy está trabajando en el cine?"
+            ]
+          ]
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 3,
+          "texto": "Reglas para agregar -ing"
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Caso",
+            "Regla",
+            "Ejemplos"
+          ],
+          "filas": [
+            [
+              "La mayoría de verbos",
+              "Se agrega -ing",
+              "sing → singing, go → going"
+            ],
+            [
+              "Terminan en -e",
+              "Se quita la e y se agrega -ing",
+              "write → writing, ride → riding"
+            ],
+            [
+              "Terminan en -ie",
+              "Se cambia ie por y + -ing",
+              "die → dying, lie → lying"
+            ],
+            [
+              "Una sílaba con consonante-vocal-consonante (CVC)",
+              "Se duplica la última consonante",
+              "jog → jogging, run → running, swim → swimming"
+            ],
+            [
+              "Terminan en w, x o y",
+              "No se duplica",
+              "draw → drawing, fix → fixing, play → playing"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Palabras que indican presente progresivo: **now** (ahora), **right now** (ahora mismo), **at the moment** (en este momento), **today / this week** (hoy / esta semana), **Look!** (¡Mira!), **Listen!** (¡Escucha!)."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "¿Presente simple o progresivo?"
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Presente simple",
+            "Presente progresivo"
+          ],
+          "filas": [
+            [
+              "Lo habitual, lo general, lo permanente.",
+              "Lo que está pasando ahora o es temporal."
+            ],
+            [
+              "I **drink** coffee every morning.\nTomo café todas las mañanas.",
+              "I **am drinking** coffee now.\nEstoy tomando café ahora."
+            ],
+            [
+              "He **lives** in Cali.\nÉl vive en Cali (es su casa).",
+              "He **is living** in Cali this year.\nÉl está viviendo en Cali este año (es temporal)."
+            ]
+          ]
+        },
+        {
+          "tipo": "concepto",
+          "titulo": "Verbos que casi nunca van en -ing (verbos de estado)",
+          "contenido": "Algunos verbos expresan estados, gustos, pensamientos o posesión, no acciones. Por eso se usan en presente simple aunque hablemos de \"ahora\": **like, love, hate, want, need, know, understand, believe, remember, belong, seem**.\n\nCorrecto: I know the answer. (Sé la respuesta.) — Incorrecto: I am knowing the answer.\n\nCorrecto: She wants a new phone. (Ella quiere un celular nuevo.) — Incorrecto: She is wanting a new phone."
+        }
       ]
     },
     {
-      "codigo": "ING-VOC-L1",
-      "subtema": "vocabulary",
-      "titulo": "Avisos y falsos amigos: que no te engañen las palabras",
-      "resumen": "Aprenderás a interpretar avisos cortos y a reconocer los falsos amigos que más confunden a los hispanohablantes en las Partes 1 y 2.",
-      "duracion_min": 10,
+      "codigo": "ING-PAS-L1",
+      "subtema": "pasado-simple-progresivo",
+      "titulo": "Pasado simple y progresivo",
+      "resumen": "Para hablar del pasado también hay dos formas principales. El pasado simple cuenta acciones terminadas (lo que pasó), y el pasado progresivo describe acciones que estaban en desarrollo en un momento del pasado (lo que estaba pasando).",
+      "duracion_min": 6,
       "bloques": [
-        { "tipo": "texto", "contenido": "Las **Partes 1 y 2** del ICFES evalúan vocabulario. En la Parte 1 lees avisos (notices) y decides dónde podrías verlos o qué significan; en la Parte 2 relacionas descripciones con palabras. Son preguntas rápidas, ideales para sumar puntos, pero tienen trampas: palabras que se parecen al español y significan otra cosa." },
-        { "tipo": "concepto", "titulo": "¿Qué es un falso amigo?", "contenido": "Un **falso amigo** (false friend) es una palabra en inglés que se escribe o suena parecido a una del español, pero tiene otro significado. Por ejemplo, **library** no es «librería», sino «biblioteca», y **parents** no son «parientes», sino «padres»." },
-        { "tipo": "lista", "titulo": "Falsos amigos que debes conocer", "items": ["library = biblioteca (librería = bookstore)", "parents = padres (parientes = relatives)", "carpet = alfombra (carpeta = folder)", "exit = salida (éxito = success)", "actually = en realidad (actualmente = currently)", "embarrassed = avergonzado (embarazada = pregnant)", "assist = ayudar (asistir = attend)"] },
-        { "tipo": "concepto", "titulo": "El lenguaje de los avisos", "contenido": "Los avisos usan frases cortas y directas. Memoriza estas fórmulas: **No + verbo-ing** (No parking = prohibido estacionar), **Please do not…** (por favor, no…), **… must be…** (obligación: Helmets must be worn = es obligatorio usar casco), **Keep + adjetivo** (Keep this door closed = mantenga esta puerta cerrada) y **Out of order** (fuera de servicio)." },
-        { "tipo": "ejemplo", "titulo": "Ejemplo resuelto", "enunciado": "Notice: “Out of order. Please use the stairs.”\nWhere can you see this notice?", "pasos": ["Identifica las palabras clave: out of order (fuera de servicio) y stairs (escaleras).", "Pregúntate qué aparato podría dañarse y obligarte a usar las escaleras en su lugar.", "Conclusión: el aviso está en un ascensor (elevator) o en una escalera eléctrica (escalator) de un edificio."], "respuesta": "On an elevator (or an escalator) in a building." },
-        { "tipo": "tip", "contenido": "Tip ICFES: en la Parte 1, lee todas las palabras del aviso, no solo la primera o la última. Imagina la escena: ¿quién lo escribió y para quién? Cada opción incorrecta suele estar diseñada para atrapar a quien reconoce solo una palabra suelta." },
-        { "tipo": "lista", "titulo": "Pistas para la Parte 2 (léxico)", "items": ["Identifica la categoría: ¿la descripción habla de una persona, un lugar, un objeto o una acción?", "Fíjate en el inicio: You can buy… here (lugar), This person… (persona o profesión), You use this to… (objeto).", "Descarta primero las opciones de otra categoría.", "Si una opción se parece mucho a una palabra en español, verifica que no sea un falso amigo."] },
-        { "tipo": "ejercicio", "enunciado": "Notice: “Keep off the grass.”\nWhat does this notice mean?", "opciones": ["You can play soccer here.", "You must cut the grass.", "Do not walk on the grass.", "The grass is for sale."], "correcta": 2, "explicacion": "Keep off significa «mantenerse alejado de algo»: Keep off the grass = no pisar el césped. La primera opción dice lo contrario, la segunda inventa una obligación que el aviso no menciona y la cuarta no tiene relación con el mensaje." },
-        { "tipo": "ejercicio", "enunciado": "Which word completes the sentence? “I need a ______ to keep all my English worksheets together.”", "opciones": ["carpet", "folder", "library", "record"], "correcta": 1, "explicacion": "Folder significa «carpeta», el objeto para guardar hojas. Carpet es un falso amigo: significa «alfombra». Library es «biblioteca» y record significa «registro» o «disco»." }
+        {
+          "tipo": "texto",
+          "contenido": "Para hablar del pasado también hay dos formas principales. El **pasado simple** cuenta acciones **terminadas** (lo que pasó), y el **pasado progresivo** describe acciones que **estaban en desarrollo** en un momento del pasado (lo que estaba pasando)."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Pasado simple"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Equivale al pretérito del español: \"vi\", \"comí\", \"fue\". Se usa para:"
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Uso",
+            "Ejemplo",
+            "Traducción"
+          ],
+          "filas": [
+            [
+              "Hechos del pasado",
+              "Cleopatra was the queen of Egypt.",
+              "Cleopatra fue la reina de Egipto."
+            ],
+            [
+              "Acciones que empezaron y terminaron en el pasado",
+              "Melanie Martinez released her album a month ago.",
+              "Melanie Martinez lanzó su álbum hace un mes."
+            ],
+            [
+              "Una serie de acciones terminadas, una tras otra",
+              "I woke up, took a shower and left.",
+              "Me desperté, me bañé y salí."
+            ]
+          ]
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 3,
+          "texto": "El verbo to be en pasado: was / were"
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Pronombre",
+            "Pasado de to be",
+            "Ejemplo"
+          ],
+          "filas": [
+            [
+              "I / He / She / It",
+              "was",
+              "I was tired. → Yo estaba cansado."
+            ],
+            [
+              "You / We / They",
+              "were",
+              "They were at home. → Ellos estaban en casa."
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Igual que en presente, to be se niega con **not** (**wasn’t, weren’t**) y pregunta poniéndose antes del sujeto: Were you at the party? (¿Estabas en la fiesta?)"
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 3,
+          "texto": "Verbos regulares"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Los verbos regulares forman el pasado agregando **-ed**. La gran ventaja es que **la forma es la misma para todas las personas** (no hay regla de la S)."
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Si el verbo termina en…",
+            "Regla",
+            "Ejemplos"
+          ],
+          "filas": [
+            [
+              "La mayoría de verbos",
+              "Se agrega -ed",
+              "talk → talked, dress → dressed"
+            ],
+            [
+              "-e",
+              "Se agrega solo -d",
+              "arrive → arrived, love → loved"
+            ],
+            [
+              "Consonante + y",
+              "Se quita la y y se agrega -ied",
+              "try → tried, marry → married, study → studied"
+            ],
+            [
+              "Vocal + y",
+              "Se agrega -ed (la y se queda)",
+              "play → played, enjoy → enjoyed"
+            ],
+            [
+              "Una sílaba CVC",
+              "Se duplica la última consonante",
+              "stop → stopped, plan → planned"
+            ]
+          ]
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 3,
+          "texto": "Verbos irregulares"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Los verbos irregulares no siguen una regla: cada uno tiene su propia forma de pasado y hay que **aprenderlos de memoria**. Son muy frecuentes en el ICFES. Aprende también su **participio** (tercera columna), porque lo necesitarás para los tiempos perfectos (tema 6) y la voz pasiva (tema 9)."
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Verbo (base)",
+            "Pasado",
+            "Participio",
+            "Significado"
+          ],
+          "filas": [
+            [
+              "be",
+              "was / were",
+              "been",
+              "ser / estar"
+            ],
+            [
+              "become",
+              "became",
+              "become",
+              "convertirse, volverse"
+            ],
+            [
+              "begin",
+              "began",
+              "begun",
+              "empezar"
+            ],
+            [
+              "buy",
+              "bought",
+              "bought",
+              "comprar"
+            ],
+            [
+              "come",
+              "came",
+              "come",
+              "venir"
+            ],
+            [
+              "do",
+              "did",
+              "done",
+              "hacer"
+            ],
+            [
+              "eat",
+              "ate",
+              "eaten",
+              "comer"
+            ],
+            [
+              "find",
+              "found",
+              "found",
+              "encontrar"
+            ],
+            [
+              "get",
+              "got",
+              "got / gotten",
+              "obtener, conseguir"
+            ],
+            [
+              "give",
+              "gave",
+              "given",
+              "dar"
+            ],
+            [
+              "go",
+              "went",
+              "gone",
+              "ir"
+            ],
+            [
+              "have",
+              "had",
+              "had",
+              "tener"
+            ],
+            [
+              "know",
+              "knew",
+              "known",
+              "saber, conocer"
+            ],
+            [
+              "make",
+              "made",
+              "made",
+              "hacer, fabricar"
+            ],
+            [
+              "see",
+              "saw",
+              "seen",
+              "ver"
+            ],
+            [
+              "steal",
+              "stole",
+              "stolen",
+              "robar"
+            ],
+            [
+              "take",
+              "took",
+              "taken",
+              "tomar, llevar"
+            ],
+            [
+              "tell",
+              "told",
+              "told",
+              "decir, contar"
+            ],
+            [
+              "think",
+              "thought",
+              "thought",
+              "pensar"
+            ],
+            [
+              "win",
+              "won",
+              "won",
+              "ganar"
+            ],
+            [
+              "write",
+              "wrote",
+              "written",
+              "escribir"
+            ]
+          ]
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 3,
+          "texto": "Estructura: afirmación, negación y pregunta"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Para negar y preguntar en pasado se usa el auxiliar **did** con todas las personas. Igual que con do/does, cuando aparece **did**, el verbo principal vuelve a su **forma base**, porque el auxiliar ya marca el pasado."
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Tipo",
+            "Estructura",
+            "Ejemplo"
+          ],
+          "filas": [
+            [
+              "Afirmativa",
+              "Sujeto + verbo en pasado + complemento",
+              "I watched Euphoria last night. → Vi Euphoria anoche.\nMy cat stole my homework. → Mi gato robó mi tarea."
+            ],
+            [
+              "Negativa",
+              "Sujeto + did not (didn’t) + verbo base + complemento",
+              "I didn’t watch Euphoria last night. → No vi Euphoria anoche.\nMy cat didn’t steal my homework. → Mi gato no robó mi tarea."
+            ],
+            [
+              "Pregunta",
+              "Did + sujeto + verbo base + complemento + ?",
+              "Did you watch Euphoria last night? → ¿Viste Euphoria anoche?\nDid my cat steal my homework? → ¿Mi gato robó mi tarea?"
+            ]
+          ]
+        },
+        {
+          "tipo": "alerta",
+          "titulo": "Error muy común",
+          "contenido": "Nunca se pone el verbo en pasado después de **did**: Did he win? (correcto) / Did he won? (incorrecto). She didn’t go (correcto) / She didn’t went (incorrecto)."
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Palabras que indican pasado simple: **yesterday** (ayer), **last night / last week / last year** (anoche / la semana pasada / el año pasado), **ago** (hace: two days ago = hace dos días), **in 2009**, **when I was a child** (cuando era niño)."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Pasado progresivo (pasado continuo)"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Equivale en español a **\"estaba + -ando / -iendo\"**: \"estaba corriendo\", \"estábamos jugando\". Describe una acción que **estaba en progreso** en algún momento del pasado."
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Uso",
+            "Ejemplo",
+            "Traducción"
+          ],
+          "filas": [
+            [
+              "Acción en desarrollo en el pasado",
+              "He was running in the park.",
+              "Él estaba corriendo en el parque."
+            ],
+            [
+              "Acción en progreso en un momento específico",
+              "At 8 p.m. I was having dinner.",
+              "A las 8 p. m. yo estaba cenando."
+            ],
+            [
+              "Acción interrumpida por otra (con when)",
+              "He was texting when the car hit him.",
+              "Él estaba escribiendo mensajes cuando el carro lo golpeó."
+            ],
+            [
+              "Dos acciones que pasaban al mismo tiempo (con while)",
+              "I was cooking while she was cleaning.",
+              "Yo estaba cocinando mientras ella estaba limpiando."
+            ]
+          ]
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 3,
+          "texto": "¿Cómo se forma?"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Es igual al presente progresivo, pero con **to be en pasado** (was / were) + el verbo terminado en **-ing**. Las reglas del -ing son las mismas del tema 2."
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Tipo",
+            "Estructura",
+            "Ejemplo"
+          ],
+          "filas": [
+            [
+              "Afirmativa",
+              "Sujeto + was/were + verbo-ing",
+              "Snoopy was crying in his room. → Snoopy estaba llorando en su habitación."
+            ],
+            [
+              "Negativa",
+              "Sujeto + was/were + not + verbo-ing",
+              "We weren’t playing volleyball. → No estábamos jugando voleibol."
+            ],
+            [
+              "Pregunta",
+              "Was/Were + sujeto + verbo-ing + ?",
+              "Were you playing volleyball? → ¿Estaban jugando voleibol?"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "contenido": "En el ICFES, si ves **was / were** antes del espacio y la acción estaba ocurriendo durante un periodo, la respuesta suele ser el verbo en **-ing**: people were using paper all over Europe (la gente estaba usando papel en toda Europa)."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "¿Pasado simple o progresivo?"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Piensa en una película: el pasado progresivo es el **escenario de fondo** (lo que estaba pasando) y el pasado simple es la **acción puntual** que ocurre (lo que pasó)."
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Pasado simple",
+            "Pasado progresivo"
+          ],
+          "filas": [
+            [
+              "Acción completa y terminada.",
+              "Acción en desarrollo, sin importar si terminó."
+            ],
+            [
+              "I **read** a book yesterday.\nLeí un libro ayer (lo terminé).",
+              "I **was reading** a book yesterday.\nEstaba leyendo un libro ayer."
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "contenido": "▸ I **was sleeping** when the phone **rang**. → Yo **estaba durmiendo** cuando **sonó** el teléfono."
+        },
+        {
+          "tipo": "texto",
+          "contenido": "**When** suele ir con la acción corta (pasado simple) y **while** con la acción larga (pasado progresivo): While I was walking, I saw an accident (Mientras caminaba, vi un accidente)."
+        }
       ]
     },
     {
-      "codigo": "ING-CON-L1",
-      "subtema": "context-understanding",
-      "titulo": "Conversaciones reales: responde según la situación",
-      "resumen": "Aprenderás a escoger la respuesta más natural en diálogos cortos y a deducir el propósito o la actitud de quien habla o escribe.",
-      "duracion_min": 10,
+      "codigo": "ING-FUT-L1",
+      "subtema": "futuro-comparativos-superlativos",
+      "titulo": "Futuro, comparativos y superlativos",
+      "resumen": "En español casi siempre usamos una sola forma de futuro (\"viajaré\" o \"voy a viajar\"). En inglés hay varias, y cada una transmite una idea un poco distinta: una decisión del momento, un plan, una cita en la agenda o una acción que estará en progreso.",
+      "duracion_min": 7,
       "bloques": [
-        { "tipo": "texto", "contenido": "Entender el contexto es saber leer entre líneas. En la **Parte 3** del ICFES completas conversaciones cortas eligiendo la respuesta más adecuada, y en la **Parte 6** deduces ideas que el texto no dice directamente. En ambos casos la gramática no basta: necesitas pensar en **la situación, la intención y el tono** de quien habla." },
-        { "tipo": "concepto", "titulo": "Funciones comunicativas", "contenido": "Cada frase cumple una función: pedir algo, ofrecer, agradecer, disculparse, sugerir o invitar. La respuesta correcta es la que **corresponde a esa función**. Si alguien te agradece (Thanks a lot!), respondes You're welcome; si alguien se disculpa (I'm sorry I'm late), respondes Don't worry o That's OK." },
-        { "tipo": "lista", "titulo": "Pares frecuentes (frase → respuesta natural)", "items": ["Thank you so much! → You're welcome. / No problem.", "I'm sorry I'm late. → Don't worry. / That's OK.", "Would you like some juice? → Yes, please. / No, thanks.", "Could you help me with this box? → Sure! / Of course.", "Why don't we go to the park? → Good idea! / That sounds great.", "Have a nice weekend! → Thanks, you too!"] },
-        { "tipo": "ejemplo", "titulo": "Ejemplo resuelto", "enunciado": "A: Would you like to come to my house on Saturday to watch the match?\nB: ______\nA: Great! It starts at three.", "pasos": ["Identifica la función de la primera línea: Would you like…? es una invitación.", "Mira la línea siguiente: Great! It starts at three → B aceptó la invitación.", "Descarta las respuestas que rechazan la invitación o que responden a otra función (por ejemplo, You're welcome responde a un agradecimiento)."], "respuesta": "Sure, I'd love to!" },
-        { "tipo": "tip", "contenido": "Tip ICFES: en la Parte 3, lee también lo que viene **después** del hueco. Si la otra persona responde Yes, here it is o Great!, esa reacción te dice exactamente qué tipo de frase falta." },
-        { "tipo": "concepto", "titulo": "Inferir propósito y actitud", "contenido": "En reseñas, correos o mensajes, pregúntate: ¿para qué lo escribió (informar, quejarse, recomendar, invitar, disculparse)? ¿Cómo se siente (entusiasmado, decepcionado, preocupado)? Las pistas están en los adjetivos (amazing, disappointing), en los conectores de contraste (but, however) y en los consejos finales (My advice…, You should…)." },
-        { "tipo": "lista", "titulo": "Errores frecuentes", "items": ["Responder a la gramática y no a la intención: Why don't we…? es una sugerencia, no una pregunta sobre razones.", "Confundir You're welcome (de nada) con Welcome (bienvenido).", "Elegir una opción porque repite una palabra del diálogo.", "Atribuirle al autor la opinión de otro personaje."] },
-        { "tipo": "ejercicio", "enunciado": "Complete the conversation:\nA: I passed my chemistry exam! I studied all weekend.\nB: ______", "opciones": ["Congratulations! That's great news.", "Never mind. Maybe next time.", "You're welcome.", "I'm sorry to hear that."], "correcta": 0, "explicacion": "A comparte una buena noticia, así que lo natural es felicitarlo: Congratulations! Never mind. Maybe next time sirve para consolar a alguien a quien le fue mal, You're welcome responde a un agradecimiento e I'm sorry to hear that se usa ante una mala noticia." },
-        { "tipo": "ejercicio", "enunciado": "Read: “Hi, Ms. Duarte. I'm writing because I was sick yesterday and missed the English test. Is it possible to take it another day? I can bring a doctor's note. Thank you, Samuel.”\nWhat is Samuel's main purpose?", "opciones": ["To complain about the English test.", "To explain why he missed school last week.", "To ask for another date to take the test.", "To send his doctor's note to the teacher."], "correcta": 2, "explicacion": "Samuel explica que estuvo enfermo, pero su propósito principal es pedir otra oportunidad: Is it possible to take it another day? No se queja del examen, habla de ayer (no de la semana pasada) y ofrece llevar la excusa médica después; no la está enviando." }
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Las formas de hablar del futuro"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "En español casi siempre usamos una sola forma de futuro (\"viajaré\" o \"voy a viajar\"). En inglés hay varias, y cada una transmite una idea un poco distinta: una decisión del momento, un plan, una cita en la agenda o una acción que estará en progreso."
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Forma",
+            "Se usa para",
+            "Ejemplo"
+          ],
+          "filas": [
+            [
+              "**Will** (futuro simple)",
+              "Decisiones espontáneas, promesas, predicciones u opiniones sobre el futuro",
+              "I’ll help you. → Te ayudaré.\nI will always love you. → Siempre te amaré."
+            ],
+            [
+              "**Going to**",
+              "Planes e intenciones que ya decidiste; predicciones basadas en lo que ves",
+              "I’m going to dye my hair tomorrow. → Me voy a tinturar el pelo mañana."
+            ],
+            [
+              "**Presente progresivo**",
+              "Planes ya organizados, con fecha, hora o acuerdo",
+              "She’s traveling to Bogotá next week. → Ella viaja a Bogotá la próxima semana."
+            ],
+            [
+              "**Will be + -ing** (futuro continuo)",
+              "Acciones que estarán en progreso en un momento del futuro",
+              "Don’t call me at 3 p.m. I will be having an interview. → No me llames a las 3. Estaré en una entrevista."
+            ],
+            [
+              "**Presente simple**",
+              "Horarios fijos (transporte, clases, eventos)",
+              "The bus leaves at 6:00. → El bus sale a las 6:00."
+            ]
+          ]
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 3,
+          "texto": "Futuro simple con will"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Se traduce con el futuro del español (\"pagaré\", \"llegará\"). **Will** es un verbo modal: no cambia con ninguna persona y va seguido del **verbo en forma base**."
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Tipo",
+            "Estructura",
+            "Ejemplo"
+          ],
+          "filas": [
+            [
+              "Afirmativa",
+              "Sujeto + will + verbo base",
+              "Snoopy will pay for dinner. → Snoopy pagará la cena."
+            ],
+            [
+              "Negativa",
+              "Sujeto + will not (won’t) + verbo base",
+              "Snoopy won’t pay for dinner. → Snoopy no pagará la cena."
+            ],
+            [
+              "Pregunta",
+              "Will + sujeto + verbo base + ?",
+              "Will Snoopy pay for dinner? → ¿Snoopy pagará la cena?"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Contracciones: **I’ll, you’ll, he’ll, she’ll, it’ll, we’ll, they’ll**. La negación **will not** se contrae como **won’t** (no \"willn’t\")."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 3,
+          "texto": "Futuro con going to"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Se traduce como **\"ir a + verbo\"**: \"voy a estudiar\". Se forma con **to be (am/is/are) + going to + verbo base**."
+        },
+        {
+          "tipo": "texto",
+          "contenido": "▸ I am going to study tonight. → Voy a estudiar esta noche."
+        },
+        {
+          "tipo": "texto",
+          "contenido": "▸ They aren’t going to come. → Ellos no van a venir."
+        },
+        {
+          "tipo": "texto",
+          "contenido": "▸ Is she going to buy a car? → ¿Ella va a comprar un carro?"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "▸ Look at those clouds! It’s going to rain. → ¡Mira esas nubes! Va a llover. (predicción con evidencia)"
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 3,
+          "texto": "Futuro continuo (will be + -ing)"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Se traduce como **\"estaré + -ando / -iendo\"**. Imagina que te asomas a un momento del futuro y ves la acción ocurriendo."
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Tipo",
+            "Estructura",
+            "Ejemplo"
+          ],
+          "filas": [
+            [
+              "Afirmativa",
+              "Sujeto + will be + verbo-ing",
+              "Snoopy will be having an interview. → Snoopy estará teniendo una entrevista."
+            ],
+            [
+              "Negativa",
+              "Sujeto + will not (won’t) be + verbo-ing",
+              "Snoopy won’t be having an interview. → Snoopy no estará teniendo una entrevista."
+            ],
+            [
+              "Pregunta",
+              "Will + sujeto + be + verbo-ing + ?",
+              "Will Snoopy be having an interview? → ¿Snoopy estará teniendo una entrevista?"
+            ]
+          ]
+        },
+        {
+          "tipo": "concepto",
+          "titulo": "Diferencias que suelen confundirse",
+          "contenido": "**Will vs. going to:** will es una decisión que tomas en el momento (Suena el teléfono: I’ll answer it = Yo contesto). Going to es algo que ya habías decidido (I’m going to answer all the emails today = Voy a contestar todos los correos hoy).\n\n**Going to vs. presente progresivo:** los dos hablan de planes, pero el presente progresivo indica un plan más seguro, ya acordado o agendado. I’m going to see the doctor (tengo la intención) vs. I’m seeing the doctor at 3 p.m. (ya tengo la cita)."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Comparativos"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Los comparativos sirven para **comparar dos cosas o personas** y decir cuál tiene más (o menos) de una cualidad. En español decimos \"más alto que\", \"mejor que\". En inglés hay dos formas de hacerlo, según la longitud del adjetivo."
+        },
+        {
+          "tipo": "lista",
+          "items": [
+            "**Adjetivos cortos** (una sílaba): se agrega **-er** + **than**. tall → taller than (más alto que).",
+            "**Adjetivos largos** (dos sílabas o más): se pone **more** antes + **than**. famous → more famous than (más famoso que)."
+          ],
+          "ordenada": false
+        },
+        {
+          "tipo": "texto",
+          "contenido": "▸ Taylor Swift is taller than Ariana Grande. → Taylor Swift es más alta que Ariana Grande."
+        },
+        {
+          "tipo": "texto",
+          "contenido": "▸ Blackpink is more famous than Red Velvet. → Blackpink es más famoso que Red Velvet."
+        },
+        {
+          "tipo": "texto",
+          "contenido": "▸ The book is better than the movie. → El libro es mejor que la película."
+        },
+        {
+          "tipo": "texto",
+          "contenido": "**Than** significa \"que\" en una comparación. Si en una pregunta del ICFES aparece **than** después del espacio, la respuesta es un comparativo (-er o more)."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 3,
+          "texto": "Otras formas de comparar"
+        },
+        {
+          "tipo": "lista",
+          "items": [
+            "**Less + adjetivo + than** = menos… que: This phone is less expensive than that one. (Este celular es menos caro que ese.)",
+            "**As + adjetivo + as** = tan… como (igualdad): My sister is as tall as my mom. (Mi hermana es tan alta como mi mamá.)",
+            "**Not as + adjetivo + as** = no tan… como: Math is not as easy as art. (Matemáticas no es tan fácil como arte.)"
+          ],
+          "ordenada": false
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Superlativos"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Los superlativos indican que algo está en el **extremo** de un grupo: es **el más** o **el menos** de todos. En español: \"el más alto\", \"la mejor\". Siempre van con **the**."
+        },
+        {
+          "tipo": "lista",
+          "items": [
+            "**Adjetivos cortos:** the + adjetivo + **-est**. the tallest (el más alto).",
+            "**Adjetivos largos:the most** + adjetivo. the most exciting (el más emocionante)."
+          ],
+          "ordenada": false
+        },
+        {
+          "tipo": "texto",
+          "contenido": "▸ Bridgerton is the most exciting TV show of the moment. → Bridgerton es la serie más emocionante del momento."
+        },
+        {
+          "tipo": "texto",
+          "contenido": "▸ Mount Everest is the highest mountain in the world. → El Everest es la montaña más alta del mundo."
+        },
+        {
+          "tipo": "texto",
+          "contenido": "▸ Grupo 500 is the best preICFES. → Grupo 500 es el mejor preICFES."
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Después del superlativo suele aparecer **in** (con lugares o grupos: in the world, in my class) u **of** (con periodos o cantidades: of the year, of all). Para lo contrario se usa **the least**: the least expensive (el menos caro)."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Reglas de formación"
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Tipo de adjetivo",
+            "Comparativo",
+            "Superlativo"
+          ],
+          "filas": [
+            [
+              "Una sílaba",
+              "+ -er\ncolder, smarter",
+              "+ -est\nthe coldest, the smartest"
+            ],
+            [
+              "Terminado en -e",
+              "+ -r\nnicer, cuter",
+              "+ -st\nthe nicest, the cutest"
+            ],
+            [
+              "Terminado en consonante + y",
+              "y → -ier\nprettier, happier, easier",
+              "y → -iest\nthe prettiest, the happiest, the easiest"
+            ],
+            [
+              "Una sílaba con consonante-vocal-consonante (CVC)",
+              "Se duplica la última consonante + -er\nfatter, hotter, bigger",
+              "Se duplica + -est\nthe fattest, the hottest, the biggest"
+            ],
+            [
+              "Dos o más sílabas",
+              "more + adjetivo\nmore intelligent, more expensive",
+              "the most + adjetivo\nthe most intelligent, the most expensive"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Fíjate que los adjetivos de dos sílabas terminados en **-y** (happy, easy, pretty, busy) siguen la regla de -ier / -iest y **no** usan more / most."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 3,
+          "texto": "Adjetivos irregulares"
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Adjetivo",
+            "Comparativo",
+            "Superlativo"
+          ],
+          "filas": [
+            [
+              "good (bueno)",
+              "better (mejor)",
+              "the best (el mejor)"
+            ],
+            [
+              "bad (malo)",
+              "worse (peor)",
+              "the worst (el peor)"
+            ],
+            [
+              "far (lejos)",
+              "farther / further (más lejos)",
+              "the farthest / the furthest (el más lejano)"
+            ],
+            [
+              "old (viejo)",
+              "older / elder (mayor)",
+              "the oldest / the eldest (el mayor)"
+            ],
+            [
+              "much / many (mucho / muchos)",
+              "more (más)",
+              "the most (el que más)"
+            ],
+            [
+              "little (poco)",
+              "less (menos)",
+              "the least (el que menos)"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "contenido": "**Elder** y **eldest** solo se usan para miembros de una familia: my elder brother (mi hermano mayor)."
+        },
+        {
+          "tipo": "tip",
+          "titulo": "Tip para el ICFES",
+          "contenido": "Si ves **than** después del espacio → comparativo (more o -er).\n\nSi ves **the** antes del espacio → superlativo (most o -est). Ejemplo: This was not the highest price paid for a Picasso.\n\nNunca se combinan las dos formas: more taller y the most tallest son incorrectos."
+        }
       ]
     },
     {
-      "codigo": "ING-LAN-L1",
-      "subtema": "language-use",
-      "titulo": "Texto incompleto: conectores y colocaciones que suman puntos",
-      "resumen": "Aprenderás a completar textos en inglés reconociendo conectores y colocaciones, las claves de la Parte 7.",
-      "duracion_min": 12,
+      "codigo": "ING-MOD-L1",
+      "subtema": "modal-phrasal-verbs",
+      "titulo": "Modal verbs y phrasal verbs",
+      "resumen": "Los verbos modales son verbos auxiliares que le añaden una idea al verbo principal: capacidad, posibilidad, permiso, obligación, consejo o probabilidad. Compara: I swim (nado) / I can swim (sé nadar) / I should swim (debería nadar) / I must swim (debo nadar).",
+      "duracion_min": 8,
       "bloques": [
-        { "tipo": "texto", "contenido": "La **Parte 7** del ICFES es un texto con huecos en el que varias opciones parecen posibles si traduces palabra por palabra. El secreto está en mirar **la estructura alrededor del hueco**: qué viene antes, qué viene después y qué relación hay entre las ideas. Dos tipos de huecos aparecen una y otra vez: **conectores** y **colocaciones**." },
-        { "tipo": "concepto", "titulo": "Conectores: la relación entre ideas", "contenido": "Los conectores muestran cómo se relacionan dos ideas: **adición** (and, also, moreover), **contraste** (but, however, although, despite), **causa** (because, since) y **consecuencia** (so, therefore). Primero decide qué relación hay entre las ideas y luego revisa qué estructura gramatical exige cada conector." },
-        { "tipo": "formula", "contenido": "Although / Even though + subject + verb, main clause", "nota": "Although it was raining, we went to the Ciclovía." },
-        { "tipo": "formula", "contenido": "Despite / In spite of + noun or verb-ing, main clause", "nota": "Despite the rain, we went to the Ciclovía. / Despite feeling tired, she finished the race." },
-        { "tipo": "concepto", "titulo": "Colocaciones: palabras que siempre van juntas", "contenido": "Una **colocación** es una combinación de palabras que los hablantes nativos usan siempre de la misma forma. No se traduce literalmente: en español «hacemos» una pregunta, pero en inglés se dice **ask** a question; «tomamos» una decisión, pero en inglés se dice **make** a decision." },
-        { "tipo": "lista", "titulo": "Colocaciones frecuentes", "items": ["make: a decision, a mistake, a plan, friends, noise", "do: homework, exercise, a favor, the dishes, your best", "take: part in, a photo, a break, a bus, a test", "have: breakfast, a party, fun, a good time", "pay: attention, a visit, the bill"] },
-        { "tipo": "ejemplo", "titulo": "Ejemplo resuelto", "enunciado": "Complete: “______ it was raining very hard, my cousin took amazing photos of Caño Cristales.” (although / despite / because)", "pasos": ["Hay dos ideas opuestas: llovía mucho / tomó fotos increíbles → se necesita un conector de contraste, así que because queda descartado.", "Después del hueco viene sujeto + verbo (it was raining) → despite no sirve, porque exige un sustantivo o un verbo-ing.", "El único conector de contraste que acepta sujeto + verbo es although."], "respuesta": "Although it was raining very hard, my cousin took amazing photos of Caño Cristales." },
-        { "tipo": "lista", "titulo": "Errores frecuentes", "items": ["Make part of ✗ → be part of / take part in ✓", "Despite it was late ✗ → Although it was late / Despite the late hour ✓", "Even it was late ✗ → Even though it was late ✓", "Make homework ✗ → Do homework ✓"] },
-        { "tipo": "tip", "contenido": "Tip ICFES: en la Parte 7, lee primero el texto completo sin detenerte en los huecos para entender la idea general. Luego prueba cada opción mentalmente con las palabras de antes y de después. Si dudas entre dos conectores, revisa si lo que sigue es una oración (sujeto + verbo) o un sustantivo." },
-        { "tipo": "ejercicio", "enunciado": "Complete: “Sofía couldn't go to the concert ______ she had a very important exam the next day.”", "opciones": ["although", "because", "despite", "however"], "correcta": 1, "explicacion": "Tener un examen importante es la causa de que Sofía no fuera al concierto, así que se necesita un conector de causa: because. Although y despite expresan contraste, y however no puede unir dos oraciones de esa manera." },
-        { "tipo": "ejercicio", "enunciado": "Complete: “Our teacher always says: ‘Don't worry if you ______ a mistake. That's how we learn!’”", "opciones": ["do", "take", "make", "have"], "correcta": 2, "explicacion": "La colocación correcta es make a mistake (cometer un error). Aunque en español decimos «hacer» o «cometer», en inglés mistake va siempre con make, nunca con do, take ni have." }
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Modal verbs (verbos modales)"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Los verbos modales son verbos auxiliares que **le añaden una idea al verbo principal**: capacidad, posibilidad, permiso, obligación, consejo o probabilidad. Compara: I swim (nado) / I can swim (sé nadar) / I should swim (debería nadar) / I must swim (debo nadar). La acción es la misma; el modal cambia la intención."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 3,
+          "texto": "Características de los modales"
+        },
+        {
+          "tipo": "lista",
+          "items": [
+            "**No cambian con la persona:** no llevan -s en tercera persona. She can (no \"she cans\").",
+            "**Van seguidos del verbo en forma base, sin \"to\":** You should study (no \"should to study\" ni \"should studies\"). La excepción es **ought to**.",
+            "**No necesitan do/does/did:** se niegan agregando **not** y forman preguntas poniéndose antes del sujeto."
+          ],
+          "ordenada": false
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Tipo",
+            "Estructura",
+            "Ejemplo"
+          ],
+          "filas": [
+            [
+              "Afirmativa",
+              "Sujeto + modal + verbo base",
+              "Snoopy should buy a new car. → Snoopy debería comprar un carro nuevo."
+            ],
+            [
+              "Negativa",
+              "Sujeto + modal + not + verbo base",
+              "Snoopy shouldn’t buy a new car. → Snoopy no debería comprar un carro nuevo."
+            ],
+            [
+              "Pregunta",
+              "Modal + sujeto + verbo base + ?",
+              "Should Snoopy buy a new car? → ¿Snoopy debería comprar un carro nuevo?"
+            ]
+          ]
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 3,
+          "texto": "Significado y uso de cada modal"
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Modal",
+            "Traducción",
+            "Uso",
+            "Ejemplo"
+          ],
+          "filas": [
+            [
+              "**can**",
+              "poder, saber",
+              "Habilidad, posibilidad, pedir un favor o permiso (informal)",
+              "I can speak four languages. → Sé hablar cuatro idiomas.\nCan you help me? → ¿Me puedes ayudar?"
+            ],
+            [
+              "**could**",
+              "podía, podría",
+              "Habilidad en el pasado, posibilidad, petición más educada",
+              "When I was younger, I could run faster. → Cuando era más joven, podía correr más rápido.\nCould you help me? → ¿Podrías ayudarme?"
+            ],
+            [
+              "**may**",
+              "puede que, poder (permiso)",
+              "Posibilidad razonable, pedir permiso de forma formal",
+              "It may rain later. → Puede que llueva más tarde.\nMay I go to the restroom? → ¿Puedo ir al baño?"
+            ],
+            [
+              "**might**",
+              "tal vez, quizás, podría",
+              "Posibilidad más baja o duda",
+              "She might come with us tonight. → Tal vez ella venga con nosotros esta noche."
+            ],
+            [
+              "**will**",
+              "futuro (-é, -á)",
+              "Futuro, promesas, decisiones del momento",
+              "I will call you tomorrow. → Te llamaré mañana."
+            ],
+            [
+              "**would**",
+              "condicional (-ía)",
+              "Peticiones amables, ofrecimientos, situaciones imaginarias",
+              "Would you help me? → ¿Me ayudarías?\nIf I had money, I would travel to Korea. → Si tuviera dinero, viajaría a Corea."
+            ],
+            [
+              "**shall**",
+              "¿…? (sugerencia)",
+              "Sugerir u ofrecer algo en preguntas con I / we (formal o británico)",
+              "Shall we go to the movies? → ¿Vamos al cine?"
+            ],
+            [
+              "**should**",
+              "debería",
+              "Consejos y recomendaciones",
+              "You should see a doctor. → Deberías ir al médico."
+            ],
+            [
+              "**ought to**",
+              "debería",
+              "Igual que should, un poco más formal",
+              "You ought to eat more vegetables. → Deberías comer más verduras."
+            ],
+            [
+              "**must**",
+              "deber, tener que",
+              "Obligación fuerte, prohibición (must not), deducción segura",
+              "You must wear a seatbelt. → Debes usar cinturón.\nJorge isn’t here. He must be sick. → Jorge no está. Debe estar enfermo."
+            ]
+          ]
+        },
+        {
+          "tipo": "concepto",
+          "titulo": "Diferencias que suelen confundirse",
+          "contenido": "**Can vs. could:** could es el pasado de can (I could swim when I was five) y también una forma más cortés de pedir algo.\n\n**May vs. might:** las dos expresan posibilidad; might suena menos seguro que may.\n\n**Should vs. must:** should es un consejo (puedes no hacerlo); must es una obligación (tienes que hacerlo).\n\n**Must not vs. don’t have to:** You mustn’t smoke here = está prohibido fumar. You don’t have to come = no es necesario que vengas (puedes venir si quieres). **Have to** (tener que) funciona parecido a must, pero no es un modal puro: cambia con la persona (she has to) y usa do/does (Do you have to go?)."
+        },
+        {
+          "tipo": "texto",
+          "contenido": "En el ICFES, para elegir el modal, fíjate en la **intención** de la oración. Por ejemplo, en each country where the Olympic Games are held must be chosen carefully se expresa una obligación (must). En circus elephants have a bad life. They may have pains in their bodies se expresa una posibilidad (may)."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Phrasal verbs"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Un phrasal verb es un **verbo + una partícula** (una preposición o un adverbio como up, off, on, out, down, after, for). Lo importante es que **juntos forman un significado nuevo**, que muchas veces no se puede adivinar traduciendo cada palabra por separado."
+        },
+        {
+          "tipo": "texto",
+          "contenido": "▸ look = mirar / look **after** = cuidar → mirar / cuidar"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "▸ turn = girar / turn **off** = apagar → girar / apagar"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "▸ give = dar / give **up** = rendirse, dejar un hábito → dar / rendirse"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Por eso los phrasal verbs se aprenden como si fueran **vocabulario**: cada combinación es una palabra distinta. Se conjugan igual que cualquier verbo; solo cambia el verbo, la partícula se mantiene: I took up dancing (pasado), She is looking for her keys (presente progresivo)."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 3,
+          "texto": "Phrasal verbs con take"
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Phrasal verb",
+            "Significado",
+            "Ejemplo"
+          ],
+          "filas": [
+            [
+              "take up",
+              "empezar una actividad o pasatiempo",
+              "I took up dancing when I was fifteen. → Empecé a bailar cuando tenía quince años."
+            ],
+            [
+              "take care of",
+              "cuidar, encargarse de",
+              "She has to take care of her dog. → Ella tiene que cuidar a su perro."
+            ],
+            [
+              "take away",
+              "quitar, llevarse algo",
+              "The teacher took my phone away. → El profesor me quitó el celular."
+            ],
+            [
+              "take place",
+              "tener lugar, ocurrir, realizarse",
+              "The concert will take place next Saturday. → El concierto será el próximo sábado."
+            ],
+            [
+              "take part (in)",
+              "participar (en)",
+              "I took part in a science competition. → Participé en una competencia de ciencias."
+            ],
+            [
+              "take off",
+              "despegar (avión); quitarse (ropa)",
+              "The plane took off at 8:00 a.m. → El avión despegó a las 8:00 a. m.\nTake off your shoes. → Quítate los zapatos."
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "contenido": "**Takeaway** (escrito junto) es un sustantivo que significa \"comida para llevar\": We ordered a takeaway (Pedimos comida para llevar)."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 3,
+          "texto": "Phrasal verbs con look"
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Phrasal verb",
+            "Significado",
+            "Ejemplo"
+          ],
+          "filas": [
+            [
+              "look out",
+              "¡cuidado!, estar atento",
+              "Look out! There’s a car coming. → ¡Cuidado! Viene un carro."
+            ],
+            [
+              "look up",
+              "buscar información (en un diccionario, internet)",
+              "You can look up the address online. → Puedes buscar la dirección en internet."
+            ],
+            [
+              "look after",
+              "cuidar",
+              "Nurses look after patients in the hospital. → Las enfermeras cuidan a los pacientes en el hospital."
+            ],
+            [
+              "look for",
+              "buscar (algo o a alguien que perdiste)",
+              "We looked for our teacher after class. → Buscamos a nuestro profesor después de clase."
+            ],
+            [
+              "look forward to",
+              "esperar algo con ganas",
+              "We are looking forward to our vacation. → Esperamos con ansias nuestras vacaciones."
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "contenido": "**Look up vs. look for:** look up es buscar un dato o información; look for es buscar algo o a alguien que no encuentras. **Look forward to** va seguido de un sustantivo o de un verbo en **-ing**: I’m looking forward to seeing you (lo verás en el tema 8)."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 3,
+          "texto": "Phrasal verbs con turn"
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Phrasal verb",
+            "Significado",
+            "Ejemplo"
+          ],
+          "filas": [
+            [
+              "turn on",
+              "encender, prender",
+              "Please turn on the lights; it’s getting dark. → Por favor prende las luces; está oscureciendo."
+            ],
+            [
+              "turn off",
+              "apagar",
+              "Don’t forget to turn off the lights. → No olvides apagar las luces."
+            ],
+            [
+              "turn down",
+              "bajar el volumen; rechazar",
+              "Please turn down the music. → Por favor baja la música.\nShe turned down the job offer. → Ella rechazó la oferta de trabajo."
+            ],
+            [
+              "turn up",
+              "subir el volumen; aparecer",
+              "Turn up the radio! → ¡Sube el radio!"
+            ],
+            [
+              "turn into",
+              "convertirse en",
+              "The old factory turned into a museum. → La vieja fábrica se convirtió en un museo."
+            ]
+          ]
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 3,
+          "texto": "Otros phrasal verbs frecuentes"
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Phrasal verb",
+            "Significado",
+            "Ejemplo"
+          ],
+          "filas": [
+            [
+              "put off",
+              "aplazar, posponer",
+              "The shooting of the movie wasn’t put off. → El rodaje de la película no se aplazó."
+            ],
+            [
+              "give up",
+              "rendirse; dejar un hábito",
+              "Don’t give up! → ¡No te rindas!"
+            ],
+            [
+              "find out",
+              "descubrir, averiguar",
+              "I found out the truth. → Descubrí la verdad."
+            ],
+            [
+              "get up",
+              "levantarse (de la cama)",
+              "I get up at 6 a.m. → Me levanto a las 6 a. m."
+            ],
+            [
+              "grow up",
+              "crecer (hacerse adulto)",
+              "She grew up in Medellín. → Ella creció en Medellín."
+            ],
+            [
+              "go on",
+              "continuar",
+              "Please go on with your story. → Por favor continúa con tu historia."
+            ]
+          ]
+        },
+        {
+          "tipo": "tip",
+          "titulo": "Tip para el ICFES",
+          "contenido": "Cuando el espacio está justo después de un verbo como take, put, look o turn y las opciones son partículas (up, off, place, away…), es una pregunta de phrasal verbs. Lee la oración completa y piensa qué significado tiene sentido: This celebration took place in 1987 (Esta celebración tuvo lugar en 1987)."
+        }
+      ]
+    },
+    {
+      "codigo": "ING-PER-L1",
+      "subtema": "perfecto-preposiciones",
+      "titulo": "Tiempo perfecto y preposiciones in, on, at",
+      "resumen": "Los tiempos perfectos conectan dos momentos: una acción y un punto de referencia posterior. El presente perfecto une el pasado con el presente; el pasado perfecto, un pasado con otro pasado anterior; y el futuro perfecto, el futuro con algo que ya habrá terminado antes.",
+      "duracion_min": 9,
+      "bloques": [
+        {
+          "tipo": "texto",
+          "contenido": "Los tiempos perfectos conectan **dos momentos**: una acción y un punto de referencia posterior. El presente perfecto une el pasado con el presente; el pasado perfecto, un pasado con otro pasado anterior; y el futuro perfecto, el futuro con algo que ya habrá terminado antes."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "El participio pasado"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Todos los tiempos perfectos usan el **participio pasado** del verbo, que en español corresponde a las formas terminadas en **-ado / -ido** (comido, estudiado, visto). En inglés:"
+        },
+        {
+          "tipo": "lista",
+          "items": [
+            "**Verbos regulares:** el participio es igual al pasado simple, terminado en **-ed**: work → worked → worked.",
+            "**Verbos irregulares:** tienen una forma propia que hay que aprender (la tercera columna de la tabla del tema 3): eat → ate → eaten, see → saw → seen, make → made → made."
+          ],
+          "ordenada": false
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Presente perfecto"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Se forma con **have / has + participio** y se traduce como **\"he / has / ha + -ado / -ido\"**: \"he comido\", \"ella ha viajado\". El auxiliar **have** sí cambia según la persona: **has** con he, she, it y **have** con los demás."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 3,
+          "texto": "¿Cuándo se usa el presente perfecto simple?"
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Uso",
+            "Ejemplo",
+            "Traducción"
+          ],
+          "filas": [
+            [
+              "Experiencias de vida, sin decir cuándo",
+              "I have studied French before.",
+              "He estudiado francés antes."
+            ],
+            [
+              "Acciones pasadas con un resultado importante ahora",
+              "She has lost her keys.",
+              "Ella perdió sus llaves (y todavía no las tiene)."
+            ],
+            [
+              "Algo que empezó en el pasado y sigue (con for / since)",
+              "They have lived here for five years.",
+              "Llevan cinco años viviendo aquí."
+            ],
+            [
+              "Acciones muy recientes (con just)",
+              "I have just finished.",
+              "Acabo de terminar."
+            ]
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Tipo",
+            "Estructura",
+            "Ejemplo"
+          ],
+          "filas": [
+            [
+              "Afirmativa",
+              "Sujeto + have/has + participio",
+              "Snoopy has eaten cake. → Snoopy ha comido pastel."
+            ],
+            [
+              "Negativa",
+              "Sujeto + haven’t/hasn’t + participio",
+              "I haven’t eaten cake. → No he comido pastel."
+            ],
+            [
+              "Pregunta",
+              "Have/Has + sujeto + participio + ?",
+              "Has Snoopy eaten cake? → ¿Snoopy ha comido pastel?"
+            ]
+          ]
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 3,
+          "texto": "Presente perfecto continuo"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Se forma con **have / has + been + verbo-ing** y se traduce como **\"he estado + -ando / -iendo\"** o \"llevo… -ando\". Resalta la **duración** de una acción que empezó en el pasado y sigue ocurriendo (o acaba de terminar)."
+        },
+        {
+          "tipo": "texto",
+          "contenido": "▸ They have been living in this city for five years. → Han estado viviendo en esta ciudad durante cinco años."
+        },
+        {
+          "tipo": "texto",
+          "contenido": "▸ Snoopy hasn’t been eating cake. → Snoopy no ha estado comiendo pastel."
+        },
+        {
+          "tipo": "texto",
+          "contenido": "▸ Have you been waiting long? → ¿Llevas mucho tiempo esperando?"
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 3,
+          "texto": "Palabras clave del presente perfecto"
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Palabra",
+            "Significado",
+            "Ejemplo"
+          ],
+          "filas": [
+            [
+              "for",
+              "durante (un periodo de tiempo)",
+              "for two years → durante dos años"
+            ],
+            [
+              "since",
+              "desde (un punto de inicio)",
+              "since 2020 → desde 2020"
+            ],
+            [
+              "already",
+              "ya (en afirmativas)",
+              "I have already eaten. → Ya comí."
+            ],
+            [
+              "yet",
+              "todavía / ya (al final, en negativas y preguntas)",
+              "I haven’t finished yet. → Todavía no he terminado."
+            ],
+            [
+              "just",
+              "acabar de",
+              "She has just arrived. → Ella acaba de llegar."
+            ],
+            [
+              "ever / never",
+              "alguna vez / nunca",
+              "Have you ever been to Cartagena? → ¿Has ido alguna vez a Cartagena?"
+            ]
+          ]
+        },
+        {
+          "tipo": "concepto",
+          "titulo": "Presente perfecto vs. pasado simple",
+          "contenido": "El **pasado simple** se usa cuando se dice o se sabe **cuándo** pasó algo terminado: I saw that movie yesterday (Vi esa película ayer).\n\nEl **presente perfecto** se usa cuando **no importa o no se dice cuándo**, o cuando la situación sigue: I have seen that movie (He visto esa película).\n\nPor eso, con expresiones como yesterday, last week, in 2010, ago se usa pasado simple, nunca presente perfecto."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Pasado perfecto"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Se forma con **had + participio** y se traduce como **\"había + -ado / -ido\"**. Se usa para una acción que ocurrió **antes de otra acción pasada**: es \"el pasado del pasado\". **Had** es igual para todas las personas."
+        },
+        {
+          "tipo": "texto",
+          "contenido": "▸ I had heard that song before it became famous. → Había escuchado esa canción antes de que se hiciera famosa."
+        },
+        {
+          "tipo": "texto",
+          "contenido": "▸ When we arrived, the movie had already started. → Cuando llegamos, la película ya había empezado."
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Tipo",
+            "Estructura",
+            "Ejemplo"
+          ],
+          "filas": [
+            [
+              "Afirmativa",
+              "Sujeto + had + participio",
+              "Snoopy had eaten cake. → Snoopy había comido pastel."
+            ],
+            [
+              "Negativa",
+              "Sujeto + hadn’t + participio",
+              "I hadn’t eaten cake. → No había comido pastel."
+            ],
+            [
+              "Pregunta",
+              "Had + sujeto + participio + ?",
+              "Had Snoopy eaten cake? → ¿Snoopy había comido pastel?"
+            ]
+          ]
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 3,
+          "texto": "Pasado perfecto continuo"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "**Had + been + verbo-ing**, \"había estado + -ando / -iendo\". Resalta cuánto tiempo **llevaba ocurriendo** una acción antes de otro momento del pasado."
+        },
+        {
+          "tipo": "texto",
+          "contenido": "▸ He had been working there for two years when Joanne joined the company. → Él llevaba dos años trabajando allí cuando Joanne entró a la empresa."
+        },
+        {
+          "tipo": "texto",
+          "contenido": "▸ Had you been studying before the test? → ¿Habías estado estudiando antes del examen?"
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Futuro perfecto"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Se forma con **will have + participio** y se traduce como **\"habré / habrá + -ado / -ido\"**. Indica que una acción **ya estará terminada** antes de un momento del futuro. Es igual para todas las personas."
+        },
+        {
+          "tipo": "texto",
+          "contenido": "▸ She will have arrived from London by your birthday. → Ella habrá llegado de Londres para tu cumpleaños."
+        },
+        {
+          "tipo": "texto",
+          "contenido": "▸ I won’t have finished by 5 p.m. → No habré terminado para las 5 p. m."
+        },
+        {
+          "tipo": "texto",
+          "contenido": "▸ Will Snoopy have eaten the cake? → ¿Snoopy se habrá comido el pastel?"
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 3,
+          "texto": "Futuro perfecto continuo"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "**Will have + been + verbo-ing**: resalta cuánto tiempo **llevará** ocurriendo una acción en un momento del futuro."
+        },
+        {
+          "tipo": "texto",
+          "contenido": "▸ By 2030, my dad will have been living in Chicago for ten years. → Para 2030, mi papá llevará diez años viviendo en Chicago."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Resumen de los tiempos perfectos"
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Tiempo",
+            "Perfecto simple",
+            "Perfecto continuo"
+          ],
+          "filas": [
+            [
+              "Presente",
+              "have/has + participio\nI have eaten. → He comido.",
+              "have/has + been + -ing\nI have been eating. → He estado comiendo."
+            ],
+            [
+              "Pasado",
+              "had + participio\nI had eaten. → Había comido.",
+              "had + been + -ing\nI had been eating. → Había estado comiendo."
+            ],
+            [
+              "Futuro",
+              "will have + participio\nI will have eaten. → Habré comido.",
+              "will have + been + -ing\nI will have been eating. → Habré estado comiendo."
+            ]
+          ]
+        },
+        {
+          "tipo": "alerta",
+          "titulo": "Ojo con las contracciones",
+          "contenido": "**’s** puede ser is o has: He’s eating (is) / He’s eaten (has). Si va seguido de participio, es has.\n\n**’d** puede ser had o would: I’d finished (had) / I’d like a coffee (would).\n\nEn el ICFES, si ves **has / have / had** antes del espacio, normalmente la respuesta es el **participio**: Great Britain has created some differences; NASA has made him stay."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Preposiciones in, on, at"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Estas tres preposiciones pueden traducirse como \"en\", y por eso se confunden mucho. La clave es pensar en ellas como una **pirámide que va de lo más general a lo más específico**: **in** para espacios o periodos grandes, **on** para algo intermedio y **at** para un punto exacto."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 3,
+          "texto": "Preposiciones de tiempo"
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Preposición",
+            "Se usa con",
+            "Ejemplos"
+          ],
+          "filas": [
+            [
+              "**in**\n(periodos largos)",
+              "Meses, años, estaciones, siglos, décadas y partes del día",
+              "in July, in 2026, in summer, in the 90s, in the morning, in the afternoon, in the evening"
+            ],
+            [
+              "**on**\n(días)",
+              "Días de la semana, fechas y días especiales",
+              "on Monday, on May 5th, on my birthday, on Christmas Day, on the weekend (inglés de EE. UU.)"
+            ],
+            [
+              "**at**\n(momentos exactos)",
+              "Horas y momentos puntuales",
+              "at 7 o’clock, at noon, at night, at midnight, at the moment, at Christmas, at the weekend (inglés británico)"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "contenido": "▸ I was born in 2009, on a Sunday, at 6 a.m. → Nací en 2009, un domingo, a las 6 a. m."
+        },
+        {
+          "tipo": "texto",
+          "contenido": "**Sin preposición:** no se usa in, on ni at antes de **this, next, last, every, today, tomorrow, yesterday**: I’ll see you next Friday (no \"on next Friday\"); We met last year."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 3,
+          "texto": "Preposiciones de lugar"
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Preposición",
+            "Idea",
+            "Ejemplos"
+          ],
+          "filas": [
+            [
+              "**in**",
+              "Dentro de un espacio cerrado o de un área grande (ciudad, país)",
+              "in the box, in my room, in the car, in Bogotá, in Colombia"
+            ],
+            [
+              "**on**",
+              "Sobre una superficie; calles; pisos; transporte público",
+              "on the table, on the wall, on Main Street, on the second floor, on the bus, on the train"
+            ],
+            [
+              "**at**",
+              "Un punto específico, una dirección exacta o un lugar donde se hace una actividad",
+              "at the door, at the bus stop, at 25 Main Street, at school, at home, at work, at a concert"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "contenido": "▸ The keys are in my bag. → Las llaves están en (dentro de) mi bolso."
+        },
+        {
+          "tipo": "texto",
+          "contenido": "▸ The pencil is on the table. → El lápiz está sobre la mesa."
+        },
+        {
+          "tipo": "texto",
+          "contenido": "▸ I’ll wait for you at the entrance. → Te espero en la entrada."
+        },
+        {
+          "tipo": "concepto",
+          "titulo": "Casos que suelen confundirse",
+          "contenido": "**In the car / in a taxi** (vehículos pequeños, vas \"adentro\") vs. **on the bus / on a plane** (transporte público o grande, vas \"encima\" de la plataforma).\n\n**At school** = estar en el colegio por la actividad (estudiando). **In the school** = dentro del edificio.\n\n**In the morning / in the afternoon / in the evening**, pero **at night**."
+        }
+      ]
+    },
+    {
+      "codigo": "ING-WHQ-L1",
+      "subtema": "wh-questions-conectores",
+      "titulo": "Wh questions y conectores",
+      "resumen": "Existen dos tipos de preguntas. Las de sí / no (Do you like pizza? → Yes / No) y las preguntas de información, que piden un dato concreto: un lugar, una persona, una razón, un momento.",
+      "duracion_min": 9,
+      "bloques": [
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "WH questions (preguntas de información)"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Existen dos tipos de preguntas. Las de **sí / no** (Do you like pizza? → Yes / No) y las **preguntas de información**, que piden un dato concreto: un lugar, una persona, una razón, un momento. Estas últimas empiezan con una palabra interrogativa, y como casi todas comienzan por \"wh-\", se llaman **WH questions**."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 3,
+          "texto": "Palabras interrogativas"
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Palabra",
+            "Significado",
+            "Pregunta por…",
+            "Ejemplo"
+          ],
+          "filas": [
+            [
+              "**What**",
+              "¿Qué? ¿Cuál?",
+              "cosas, acciones, información",
+              "What is your name? → ¿Cuál es tu nombre?"
+            ],
+            [
+              "**Who**",
+              "¿Quién? ¿Quiénes?",
+              "personas",
+              "Who is your teacher? → ¿Quién es tu profesor?"
+            ],
+            [
+              "**Whom**",
+              "¿A quién?",
+              "la persona que recibe la acción (formal)",
+              "To whom did you send it? → ¿A quién se lo enviaste?"
+            ],
+            [
+              "**Whose**",
+              "¿De quién?",
+              "el dueño de algo",
+              "Whose phone is this? → ¿De quién es este celular?"
+            ],
+            [
+              "**Which**",
+              "¿Cuál? ¿Cuáles?",
+              "una opción entre varias conocidas",
+              "Which color do you prefer, red or blue? → ¿Cuál color prefieres, rojo o azul?"
+            ],
+            [
+              "**Where**",
+              "¿Dónde? ¿Adónde?",
+              "lugares",
+              "Where do you live? → ¿Dónde vives?"
+            ],
+            [
+              "**When**",
+              "¿Cuándo?",
+              "tiempo, fechas",
+              "When is your birthday? → ¿Cuándo es tu cumpleaños?"
+            ],
+            [
+              "**Why**",
+              "¿Por qué?",
+              "razones (se responde con because)",
+              "Why are you sad? → ¿Por qué estás triste?"
+            ],
+            [
+              "**How**",
+              "¿Cómo?",
+              "la manera o el estado",
+              "How are you? → ¿Cómo estás?"
+            ]
+          ]
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 3,
+          "texto": "Combinaciones con how y what"
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Expresión",
+            "Significado",
+            "Ejemplo"
+          ],
+          "filas": [
+            [
+              "How much",
+              "¿Cuánto? (incontables y precios)",
+              "How much is it? → ¿Cuánto cuesta?"
+            ],
+            [
+              "How many",
+              "¿Cuántos? (contables)",
+              "How many brothers do you have? → ¿Cuántos hermanos tienes?"
+            ],
+            [
+              "How old",
+              "¿Cuántos años?",
+              "How old are you? → ¿Cuántos años tienes?"
+            ],
+            [
+              "How often",
+              "¿Con qué frecuencia?",
+              "How often do you exercise? → ¿Cada cuánto haces ejercicio?"
+            ],
+            [
+              "How long",
+              "¿Cuánto tiempo?",
+              "How long is the movie? → ¿Cuánto dura la película?"
+            ],
+            [
+              "How far",
+              "¿Qué tan lejos?",
+              "How far is the school? → ¿Qué tan lejos queda el colegio?"
+            ],
+            [
+              "What time",
+              "¿A qué hora? ¿Qué hora?",
+              "What time does the class start? → ¿A qué hora empieza la clase?"
+            ]
+          ]
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 3,
+          "texto": "¿Cómo se forma una WH question?"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "La palabra interrogativa va **al inicio** y después se sigue la misma estructura de una pregunta de sí / no:"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "**WH + auxiliar (do / does / did / am / is / are / will / can…) + sujeto + verbo + complemento + ?**"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "▸ Where **do** you live? → ¿Dónde vives?"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "▸ What **did** she buy yesterday? → ¿Qué compró ella ayer?"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "▸ Why **are** you crying? → ¿Por qué estás llorando?"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "▸ When **will** they arrive? → ¿Cuándo llegarán?"
+        },
+        {
+          "tipo": "concepto",
+          "titulo": "Preguntas sobre el sujeto (sin do / does / did)",
+          "contenido": "Cuando **who** o **what** preguntan por quién hace la acción (el sujeto), no se usa auxiliar y el verbo se conjuga normal: Who called you? (¿Quién te llamó?) — no \"Who did call you?\". What happened? (¿Qué pasó?).\n\nCompara: Who called you? (pregunto quién hizo la llamada) / Who did you call? (pregunto a quién llamaste tú)."
+        },
+        {
+          "tipo": "concepto",
+          "titulo": "Diferencias que suelen confundirse",
+          "contenido": "**What vs. which:** what es una pregunta abierta (What is your favorite food?); which se usa cuando hay opciones limitadas (Which one do you want, this or that?).\n\n**Whose vs. who’s:** whose = ¿de quién?; who’s = who is (Who’s that girl? = ¿Quién es esa chica?).\n\n**Why vs. because:** why pregunta la razón; because la responde. Why are you late? — Because I missed the bus."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Conectores"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Los conectores son palabras que **unen ideas** y muestran **qué relación hay entre ellas**: si una idea se suma a otra, la contradice, la explica, es su consecuencia o es una condición. Entenderlos es clave en el ICFES, porque te ayudan a comprender los textos y aparecen directamente en las preguntas de completar. Para elegir el conector correcto, lee lo que hay **antes y después** del espacio y pregúntate qué relación tienen esas dos ideas."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 3,
+          "texto": "Conectores de adición (suman información)"
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Conector",
+            "Significado",
+            "Ejemplo"
+          ],
+          "filas": [
+            [
+              "and",
+              "y",
+              "I like tea and coffee. → Me gusta el té y el café."
+            ],
+            [
+              "also",
+              "también",
+              "Snoopy is smart. He is also kind. → Snoopy es inteligente. También es amable."
+            ],
+            [
+              "besides",
+              "además",
+              "I’m not hungry. Besides, I already ate. → No tengo hambre. Además, ya comí."
+            ],
+            [
+              "in addition / moreover / furthermore",
+              "además (más formales)",
+              "The hotel is cheap. Moreover, it is near the beach. → El hotel es barato. Además, queda cerca de la playa."
+            ]
+          ]
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 3,
+          "texto": "Conectores adversativos y concesivos (contraste)"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Los dos grupos expresan **contraste** entre ideas. Los **adversativos** oponen una idea a otra (pero, sin embargo). Los **concesivos** reconocen un obstáculo que **no impide** lo que pasa después (aunque, a pesar de). Por eso los apuntes repiten algunos conectores en los dos grupos: although, despite y while expresan concesión."
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Conector",
+            "Significado",
+            "Ejemplo"
+          ],
+          "filas": [
+            [
+              "but",
+              "pero",
+              "I like tea, but I prefer coffee. → Me gusta el té, pero prefiero el café."
+            ],
+            [
+              "however",
+              "sin embargo",
+              "Snoopy is nice. However, he is very shy. → Snoopy es amable. Sin embargo, es muy tímido."
+            ],
+            [
+              "although / though / even though",
+              "aunque",
+              "Although it rained, we went outside. → Aunque llovió, salimos."
+            ],
+            [
+              "despite / in spite of",
+              "a pesar de",
+              "Despite the noise, Snoopy slept well. → A pesar del ruido, Snoopy durmió bien."
+            ],
+            [
+              "while / whereas",
+              "aunque; mientras que (contraste)",
+              "While it’s hard, I’ll try it. → Aunque es difícil, lo intentaré.\nI love math, whereas my sister hates it. → Yo amo las matemáticas, mientras que mi hermana las odia."
+            ]
+          ]
+        },
+        {
+          "tipo": "concepto",
+          "titulo": "Although vs. despite (pregunta muy frecuente)",
+          "contenido": "Después de **although** va una **oración completa** (sujeto + verbo): Although it was raining, we played.\n\nDespués de **despite / in spite of** va un **sustantivo** o un **verbo en -ing**, nunca una oración: Despite the rain, we played. / Despite being far away, the explosions caused stress.\n\n**But vs. however:** but une dos partes de la misma oración; however normalmente empieza una oración nueva y va seguido de coma."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 3,
+          "texto": "Conectores causales (explican la causa)"
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Conector",
+            "Significado",
+            "Ejemplo"
+          ],
+          "filas": [
+            [
+              "because",
+              "porque",
+              "I stayed home because it rained. → Me quedé en casa porque llovió."
+            ],
+            [
+              "because of",
+              "por, debido a (+ sustantivo)",
+              "We stayed home because of the rain. → Nos quedamos en casa por la lluvia."
+            ],
+            [
+              "since / as",
+              "ya que, como",
+              "Since you’re here, let’s begin. → Ya que estás aquí, empecemos."
+            ],
+            [
+              "due to",
+              "debido a (+ sustantivo)",
+              "The flight was canceled due to the storm. → El vuelo se canceló debido a la tormenta."
+            ]
+          ]
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 3,
+          "texto": "Conectores de conclusión o consecuencia"
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Conector",
+            "Significado",
+            "Ejemplo"
+          ],
+          "filas": [
+            [
+              "so",
+              "así que, por eso",
+              "Snoopy studied, so he passed. → Snoopy estudió, así que aprobó."
+            ],
+            [
+              "therefore",
+              "por lo tanto (formal)",
+              "It’s late; therefore, we should go. → Es tarde; por lo tanto, deberíamos irnos."
+            ],
+            [
+              "as a result",
+              "como resultado",
+              "He didn’t sleep. As a result, he was tired. → No durmió. Como resultado, estaba cansado."
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "contenido": "**Because vs. so:** because introduce la **causa**; so introduce la **consecuencia**. I was tired because I worked a lot / I worked a lot, so I was tired."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 3,
+          "texto": "Conectores condicionales"
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Conector",
+            "Significado",
+            "Ejemplo"
+          ],
+          "filas": [
+            [
+              "if",
+              "si (condición)",
+              "If you come, I’ll be happy. → Si vienes, estaré feliz."
+            ],
+            [
+              "unless",
+              "a menos que (= if… not)",
+              "Don’t go unless you are ready. → No vayas a menos que estés listo."
+            ],
+            [
+              "whether",
+              "si (cuando hay dos opciones o duda)",
+              "I don’t know whether she’ll come (or not). → No sé si ella vendrá (o no)."
+            ]
+          ]
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 3,
+          "texto": "Conectores de secuencia y tiempo"
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Conector",
+            "Significado",
+            "Ejemplo"
+          ],
+          "filas": [
+            [
+              "first, then, after that, finally",
+              "primero, luego, después, finalmente",
+              "First, wash the rice. Then, add water. → Primero, lava el arroz. Luego, agrega agua."
+            ],
+            [
+              "meanwhile",
+              "mientras tanto",
+              "She cleaned. Meanwhile, I cooked. → Ella limpió. Mientras tanto, yo cociné."
+            ],
+            [
+              "while",
+              "mientras (al mismo tiempo)",
+              "I listen to music while I study. → Escucho música mientras estudio."
+            ],
+            [
+              "until / till",
+              "hasta que (till es más informal)",
+              "I waited until she returned. → Esperé hasta que ella regresó."
+            ],
+            [
+              "before / after",
+              "antes de / después de",
+              "Wash your hands before eating. → Lávate las manos antes de comer."
+            ]
+          ]
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 3,
+          "texto": "Otros conectores"
+        },
+        {
+          "tipo": "lista",
+          "items": [
+            "**Than** (que), para comparar: Snoopy is taller than his brother (Snoopy es más alto que su hermano).",
+            "**That** (que), introduce información o lo que alguien dice o piensa: She said that it was urgent (Ella dijo que era urgente)."
+          ],
+          "ordenada": false
+        },
+        {
+          "tipo": "alerta",
+          "titulo": "Palabras que NO son conectores (trampas del ICFES)",
+          "contenido": "En las opciones de respuesta suelen aparecer **preposiciones** que parecen conectores, pero no unen ideas: **within** (dentro de: within 24 hours), **regarding** (con respecto a: a question regarding the exam), **beneath** (debajo de: beneath the bed), **towards** (hacia: she walked towards the door), **through** (a través de).\n\nEjemplo ICFES: Despite the shots that killed Kennedy, she kept recording while most people were escaping. La idea es de contraste inesperado (a pesar del peligro, siguió grabando), por eso la respuesta es **despite** y no within, beneath o towards."
+        }
+      ]
+    },
+    {
+      "codigo": "ING-GER-L1",
+      "subtema": "gerundio-infinitivo-adverbios",
+      "titulo": "Gerundio e infinitivo y adverbios de tiempo",
+      "resumen": "Cuando un verbo funciona como sustantivo o va después de otro verbo, en inglés puede tomar dos formas: el gerundio (verbo + -ing) o el infinitivo (to + verbo). Elegir la correcta depende de reglas fijas que vale la pena conocer.",
+      "duracion_min": 8,
+      "bloques": [
+        {
+          "tipo": "texto",
+          "contenido": "Cuando un verbo funciona como sustantivo o va después de otro verbo, en inglés puede tomar dos formas: el **gerundio** (verbo + -ing) o el **infinitivo** (to + verbo). Elegir la correcta depende de reglas fijas que vale la pena conocer."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "El gerundio (verbo + -ing)"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Ojo: aunque se escribe igual que en los tiempos continuos, aquí el -ing **no** significa \"estar haciendo\". El gerundio convierte el verbo en un **sustantivo**, es decir, nombra una actividad. Por eso muchas veces se traduce al español con un **infinitivo** (nadar, comer)."
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Uso",
+            "Ejemplo",
+            "Traducción"
+          ],
+          "filas": [
+            [
+              "Como sujeto de la oración",
+              "Drinking water is healthy.",
+              "Tomar agua es saludable."
+            ],
+            [
+              "Después de una preposición (for, about, before, after, without, on, in, at, of…)",
+              "Wash your hands before eating.\nI saved him from dating her.",
+              "Lávate las manos antes de comer.\nLo salvé de salir con ella."
+            ],
+            [
+              "Después de ciertos verbos",
+              "I enjoy listening to music.",
+              "Disfruto escuchar música."
+            ],
+            [
+              "Después de to be, para nombrar una actividad",
+              "Her passion is cooking.",
+              "Su pasión es cocinar."
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "contenido": "**Verbos que van seguidos de gerundio:** enjoy (disfrutar), finish (terminar), keep (seguir), mind (molestar), miss (extrañar), practice (practicar), suggest (sugerir), avoid (evitar), imagine (imaginar), consider (considerar), can’t stand (no soportar)."
+        },
+        {
+          "tipo": "texto",
+          "contenido": "▸ She keeps calling me. → Ella sigue llamándome."
+        },
+        {
+          "tipo": "texto",
+          "contenido": "▸ Do you mind opening the window? → ¿Te molestaría abrir la ventana?"
+        },
+        {
+          "tipo": "concepto",
+          "titulo": "Diferencia con el español",
+          "contenido": "En español el sujeto puede ser un infinitivo: \"Nadar es divertido\". En inglés se usa el gerundio: Swimming is fun (no \"Swim is fun\").\n\nEjemplo ICFES: Hanging out with friends in pubs also makes them really special. El espacio es el sujeto de la oración, por eso va en -ing."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "El infinitivo (to + verbo)"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "El infinitivo es la forma \"to + verbo base\": to eat, to study, to relax. Equivale al infinitivo del español (comer, estudiar) o a \"para + infinitivo\"."
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Uso",
+            "Ejemplo",
+            "Traducción"
+          ],
+          "filas": [
+            [
+              "Después de un adjetivo (easy, hard, important, happy, sad, excited, fun…)",
+              "This book is easy to read.",
+              "Este libro es fácil de leer."
+            ],
+            [
+              "Para expresar propósito (para qué)",
+              "I took a shower to relax.",
+              "Me bañé para relajarme."
+            ],
+            [
+              "Después de ciertos verbos",
+              "He promised to love me.",
+              "Él prometió amarme."
+            ],
+            [
+              "Después de un sustantivo o pronombre objeto",
+              "My parents allow me to go.\nI have a lot of homework to do.",
+              "Mis padres me permiten ir.\nTengo mucha tarea por hacer."
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "contenido": "**Verbos que van seguidos de infinitivo:** agree (estar de acuerdo), choose (escoger), decide (decidir), expect (esperar), hope (esperar, tener la esperanza), learn (aprender), need (necesitar), plan (planear), pretend (fingir), promise (prometer), seem (parecer), want (querer), would like (quisiera)."
+        },
+        {
+          "tipo": "texto",
+          "contenido": "▸ We decided to stay home. → Decidimos quedarnos en casa."
+        },
+        {
+          "tipo": "texto",
+          "contenido": "▸ She wants me to help her. → Ella quiere que yo la ayude."
+        },
+        {
+          "tipo": "concepto",
+          "titulo": "Infinitivo sin \"to\"",
+          "contenido": "Después de los **verbos modales** (can, should, must, will…) el verbo va sin to: You should rest.\n\nDespués de **make** y **let** también: My mom made me clean my room (Mi mamá me hizo limpiar mi cuarto). Let me help you (Déjame ayudarte)."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Verbos que aceptan gerundio e infinitivo"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Algunos verbos pueden ir con cualquiera de las dos formas. Hay dos grupos:"
+        },
+        {
+          "tipo": "lista",
+          "items": [
+            "**Sin cambio de significado:** like, love, hate, prefer, start, begin, continue. I like dancing = I like to dance (Me gusta bailar). It started raining = It started to rain (Empezó a llover).",
+            "**Con cambio de significado:** stop, remember, forget, try, regret. Aquí la forma sí importa:"
+          ],
+          "ordenada": false
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Verbo",
+            "Con gerundio (-ing)",
+            "Con infinitivo (to)"
+          ],
+          "filas": [
+            [
+              "stop",
+              "I stopped drinking coffee.\nDejé de tomar café.",
+              "I stopped to drink coffee.\nMe detuve para tomar café."
+            ],
+            [
+              "remember",
+              "I remember meeting her.\nRecuerdo haberla conocido (algo pasado).",
+              "Remember to call her.\nAcuérdate de llamarla (algo pendiente)."
+            ],
+            [
+              "forget",
+              "I’ll never forget visiting Paris.\nNunca olvidaré haber visitado París.",
+              "Don’t forget to lock the door.\nNo olvides cerrar la puerta con llave."
+            ],
+            [
+              "try",
+              "Try drinking more water.\nPrueba tomar más agua (como experimento).",
+              "I tried to open the door.\nIntenté abrir la puerta (con esfuerzo)."
+            ]
+          ]
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Cuando \"to\" es preposición (+ -ing)"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "A veces **to** no forma parte de un infinitivo, sino que es una **preposición** (como \"a\" en español). En ese caso, y como después de cualquier preposición, el verbo va en **-ing**. Un truco: si después de \"to\" puedes poner un sustantivo, entonces \"to\" es preposición."
+        },
+        {
+          "tipo": "texto",
+          "contenido": "▸ I’m looking forward **to** the weekend. / I’m looking forward **to** seeing you. → Espero con ganas el fin de semana. / Tengo ganas de verte."
+        },
+        {
+          "tipo": "texto",
+          "contenido": "▸ I’m used **to** working with people. → Estoy acostumbrado a trabajar con gente."
+        },
+        {
+          "tipo": "texto",
+          "contenido": "▸ I’m addicted **to** Netflix. / I’m addicted **to** eating chocolate. → Soy adicto a Netflix. / Soy adicto a comer chocolate."
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Expresión",
+            "Significado",
+            "Expresión",
+            "Significado"
+          ],
+          "filas": [
+            [
+              "be used to",
+              "estar acostumbrado a",
+              "addicted to",
+              "adicto a"
+            ],
+            [
+              "look forward to",
+              "tener ganas de",
+              "committed to",
+              "comprometido con"
+            ],
+            [
+              "object to",
+              "oponerse a",
+              "devoted to",
+              "dedicado / fiel a"
+            ],
+            [
+              "confess to",
+              "confesar",
+              "dedication to",
+              "dedicación a"
+            ],
+            [
+              "get around to",
+              "sacar tiempo para",
+              "in addition to",
+              "además de"
+            ],
+            [
+              "prefer (algo) to",
+              "preferir (algo) a",
+              "reaction to",
+              "reacción a"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "contenido": "**Used to vs. be used to:** I used to play soccer (antes jugaba fútbol, ya no) lleva verbo base. I am used to playing soccer (estoy acostumbrado a jugar fútbol) lleva -ing."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Adverbios de tiempo"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Los adverbios de tiempo responden a preguntas como **¿cuándo?, ¿por cuánto tiempo?** y **¿con qué frecuencia?** Son muy útiles en el ICFES porque funcionan como **pistas**: te indican qué tiempo verbal debes usar."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 3,
+          "texto": "Adverbios que dicen cuándo"
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Adverbio",
+            "Significado",
+            "Ejemplo"
+          ],
+          "filas": [
+            [
+              "now / right now",
+              "ahora / ahora mismo",
+              "I’m busy right now. → Estoy ocupado ahora mismo."
+            ],
+            [
+              "today, tonight",
+              "hoy, esta noche",
+              "We have a test today. → Tenemos examen hoy."
+            ],
+            [
+              "yesterday, tomorrow",
+              "ayer, mañana",
+              "I called her yesterday. → La llamé ayer."
+            ],
+            [
+              "soon, later",
+              "pronto, más tarde",
+              "See you later. → Nos vemos más tarde."
+            ],
+            [
+              "then",
+              "entonces, luego",
+              "I was a child then. → En ese entonces era niño."
+            ],
+            [
+              "recently, lately",
+              "recientemente, últimamente",
+              "I haven’t seen him lately. → No lo he visto últimamente."
+            ],
+            [
+              "ago",
+              "hace (va después del tiempo)",
+              "She left two hours ago. → Ella se fue hace dos horas."
+            ]
+          ]
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 3,
+          "texto": "Adverbios de frecuencia"
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Adverbio",
+            "Significado",
+            "Frecuencia aproximada"
+          ],
+          "filas": [
+            [
+              "always",
+              "siempre",
+              "100 %"
+            ],
+            [
+              "usually",
+              "normalmente",
+              "80 %"
+            ],
+            [
+              "often",
+              "a menudo, con frecuencia",
+              "60 %"
+            ],
+            [
+              "sometimes",
+              "a veces",
+              "40 %"
+            ],
+            [
+              "rarely / seldom",
+              "casi nunca, rara vez",
+              "10 %"
+            ],
+            [
+              "never",
+              "nunca",
+              "0 %"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "contenido": "**Posición:** van **antes del verbo principal** (She always arrives early = Ella siempre llega temprano), pero **después de to be** (She is always late = Ella siempre llega tarde) y entre el auxiliar y el verbo (I have never been to Spain). Las expresiones más largas, como **every day, once a week, twice a month**, van al final: I exercise twice a week (Hago ejercicio dos veces por semana)."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 3,
+          "texto": "Already, yet, still y just"
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Adverbio",
+            "Significado",
+            "Ejemplo"
+          ],
+          "filas": [
+            [
+              "already",
+              "ya (antes de lo esperado)",
+              "I have already finished. → Ya terminé."
+            ],
+            [
+              "yet",
+              "todavía (negativas); ya (preguntas). Va al final",
+              "Has she called yet? → ¿Ya llamó?\nShe hasn’t called yet. → Todavía no ha llamado."
+            ],
+            [
+              "still",
+              "todavía, aún (algo continúa)",
+              "He still lives with his parents. → Él todavía vive con sus papás."
+            ],
+            [
+              "just",
+              "acabar de",
+              "I have just eaten. → Acabo de comer."
+            ]
+          ]
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 3,
+          "texto": "Expresiones de tiempo que indican el tiempo verbal"
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Tiempo verbal",
+            "Expresiones típicas"
+          ],
+          "filas": [
+            [
+              "Presente simple",
+              "always, usually, often, sometimes, never, every day, on Mondays, once a week"
+            ],
+            [
+              "Presente progresivo",
+              "now, right now, at the moment, today, this week, Look!, Listen!"
+            ],
+            [
+              "Pasado simple",
+              "yesterday, last night, last week, ago, in 2010, when I was a child"
+            ],
+            [
+              "Pasado progresivo",
+              "while, at 8 p.m. yesterday, all day yesterday, when (+ acción que interrumpe)"
+            ],
+            [
+              "Futuro",
+              "tomorrow, next week, next year, soon, in the future, tonight"
+            ],
+            [
+              "Presente perfecto",
+              "for, since, already, yet, just, ever, never, recently, so far"
+            ],
+            [
+              "Pasado perfecto",
+              "before, after, by the time, already (en una historia del pasado)"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "contenido": "**For vs. since:for** indica la duración (for three years = durante tres años) y **since** el punto de inicio (since 2023 = desde 2023)."
+        }
+      ]
+    },
+    {
+      "codigo": "ING-ADV-L1",
+      "subtema": "adverbios-voz-pasiva",
+      "titulo": "Adverbios y voz pasiva",
+      "resumen": "Un adverbio es una palabra que da más información sobre un verbo, un adjetivo u otro adverbio. Responde preguntas como ¿cómo?, ¿dónde?, ¿cuándo?, ¿con qué frecuencia? o ¿qué tanto?",
+      "duracion_min": 8,
+      "bloques": [
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Los adverbios"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Un adverbio es una palabra que **da más información sobre un verbo, un adjetivo u otro adverbio**. Responde preguntas como ¿cómo?, ¿dónde?, ¿cuándo?, ¿con qué frecuencia? o ¿qué tanto?"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "▸ She sings **beautifully**. → Ella canta hermosamente. (modifica al verbo sing)"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "▸ The test was **very** difficult. → El examen fue muy difícil. (modifica al adjetivo difficult)"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "▸ He runs **really** fast. → Él corre realmente rápido. (modifica al adverbio fast)"
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 3,
+          "texto": "Adjetivo vs. adverbio"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Esta es la confusión más frecuente. El **adjetivo** describe a un **sustantivo** (cómo es algo o alguien). El **adverbio** describe una **acción** (cómo se hace algo)."
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Adjetivo (describe un sustantivo)",
+            "Adverbio (describe un verbo)"
+          ],
+          "filas": [
+            [
+              "She is a **careful** driver.\nElla es una conductora cuidadosa.",
+              "She drives **carefully**.\nElla conduce con cuidado."
+            ],
+            [
+              "He is **quick**.\nÉl es rápido.",
+              "He finished **quickly**.\nÉl terminó rápidamente."
+            ],
+            [
+              "The exam was **easy**.\nEl examen fue fácil.",
+              "I passed the exam **easily**.\nPasé el examen fácilmente."
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Después de **to be** y de verbos como **look, feel, seem, sound, taste** se usa adjetivo, no adverbio: You look happy (Te ves feliz), no \"You look happily\"."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 3,
+          "texto": "¿Cómo se forman los adverbios?"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Muchos adverbios se forman agregando **-ly** al adjetivo, lo que equivale a la terminación **-mente** del español (quick → quickly = rápido → rápidamente)."
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Adjetivo termina en…",
+            "Regla",
+            "Ejemplos"
+          ],
+          "filas": [
+            [
+              "La mayoría",
+              "+ -ly",
+              "slow → slowly, quiet → quietly, careful → carefully"
+            ],
+            [
+              "consonante + y",
+              "y → -ily",
+              "happy → happily, easy → easily"
+            ],
+            [
+              "-le",
+              "se cambia la e por y",
+              "gentle → gently, possible → possibly"
+            ],
+            [
+              "-ic",
+              "+ -ally",
+              "basic → basically, dramatic → dramatically"
+            ]
+          ]
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 3,
+          "texto": "Adverbios irregulares"
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Adjetivo",
+            "Adverbio",
+            "Ejemplo"
+          ],
+          "filas": [
+            [
+              "good (bueno)",
+              "well (bien)",
+              "She speaks English well. → Ella habla bien inglés."
+            ],
+            [
+              "fast (rápido)",
+              "fast (igual)",
+              "He drives fast. → Él maneja rápido."
+            ],
+            [
+              "hard (duro, difícil)",
+              "hard (duro)",
+              "They work hard. → Ellos trabajan duro."
+            ],
+            [
+              "late (tarde)",
+              "late (igual)",
+              "I woke up late. → Me desperté tarde."
+            ],
+            [
+              "early (temprano)",
+              "early (igual)",
+              "We arrived early. → Llegamos temprano."
+            ]
+          ]
+        },
+        {
+          "tipo": "concepto",
+          "titulo": "Falsos adverbios",
+          "contenido": "**Hardly** no significa \"duramente\", sino **casi no**: I can hardly see (Casi no puedo ver).\n\n**Lately** no significa \"tarde\", sino **últimamente**.\n\n**Friendly, lovely, lonely, ugly** terminan en -ly pero son **adjetivos**: a friendly dog (un perro amigable)."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 3,
+          "texto": "Tipos de adverbios"
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Tipo",
+            "Responde a",
+            "Ejemplos"
+          ],
+          "filas": [
+            [
+              "De modo",
+              "¿Cómo?",
+              "quickly, slowly, carefully, well, badly"
+            ],
+            [
+              "De lugar",
+              "¿Dónde?",
+              "here, there, everywhere, outside, inside, upstairs"
+            ],
+            [
+              "De tiempo",
+              "¿Cuándo?",
+              "now, today, yesterday, soon, later, already, yet (tema 8)"
+            ],
+            [
+              "De frecuencia",
+              "¿Con qué frecuencia?",
+              "always, usually, often, sometimes, rarely, never"
+            ],
+            [
+              "De grado o intensidad",
+              "¿Qué tanto?",
+              "very, too, enough, quite, really, extremely, almost"
+            ],
+            [
+              "De certeza",
+              "¿Qué tan seguro?",
+              "probably, certainly, definitely, maybe, perhaps"
+            ]
+          ]
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 3,
+          "texto": "Very, too y enough"
+        },
+        {
+          "tipo": "lista",
+          "items": [
+            "**Very** = muy (intensifica sin problema): It’s very hot. (Hace mucho calor.)",
+            "**Too** = demasiado (más de lo necesario, con idea negativa): It’s too hot to go out. (Hace demasiado calor para salir.)",
+            "**Enough** = suficiente; va **después** del adjetivo o adverbio: You are old enough to drive. (Tienes edad suficiente para manejar.)"
+          ],
+          "ordenada": false
+        },
+        {
+          "tipo": "texto",
+          "contenido": "**Orden habitual:** cuando hay varios adverbios al final de la oración, se ordenan **modo → lugar → tiempo**: She sang beautifully at the concert last night (Ella cantó hermosamente en el concierto anoche)."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "La voz pasiva"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Una oración puede contarse de dos formas. En la **voz activa**, el sujeto es quien **hace** la acción. En la **voz pasiva**, el sujeto es quien **recibe** la acción. La información es la misma, pero cambia lo que queremos destacar."
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Voz activa",
+            "Voz pasiva"
+          ],
+          "filas": [
+            [
+              "**The boys** found the money.\nLos niños encontraron el dinero.",
+              "**The money** was found by the boys.\nEl dinero fue encontrado por los niños."
+            ],
+            [
+              "Lo importante es quién lo hizo (the boys).",
+              "Lo importante es lo que pasó con el dinero."
+            ]
+          ]
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 3,
+          "texto": "¿Cuándo se usa?"
+        },
+        {
+          "tipo": "lista",
+          "items": [
+            "Cuando nos interesa más **lo que recibe la acción** que quien la realiza: The Mona Lisa was painted in the 16th century.",
+            "Cuando **no sabemos** quién hizo la acción o **no importa**: My bike was stolen. (Se robaron mi bici.)",
+            "Cuando quien hace la acción es **obvio**: He was arrested. (Fue arrestado — obviamente por la policía.)",
+            "Para describir **procesos** de forma impersonal (muy común en textos científicos y noticias): The coffee is harvested and then dried.",
+            "Para **evitar señalar** a un responsable: Mistakes were made. (Se cometieron errores.)"
+          ],
+          "ordenada": false
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 3,
+          "texto": "¿Cómo se forma?"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "La fórmula es siempre la misma: **verbo to be (en el tiempo que corresponda) + participio pasado del verbo principal**. El que realiza la acción (el \"agente\") se puede mencionar al final con **by** (por), pero muchas veces se omite."
+        },
+        {
+          "tipo": "texto",
+          "contenido": "**Pasos para pasar de activa a pasiva:**"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "1. El **objeto** de la oración activa pasa a ser el **sujeto**: the money."
+        },
+        {
+          "tipo": "texto",
+          "contenido": "2. Se pone el verbo **to be** en el **mismo tiempo** que tenía el verbo activo (found = pasado → was)."
+        },
+        {
+          "tipo": "texto",
+          "contenido": "3. Se agrega el **participio** del verbo principal: found."
+        },
+        {
+          "tipo": "texto",
+          "contenido": "4. Si es importante, se agrega **by + quien hizo la acción**: by the boys."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 3,
+          "texto": "La voz pasiva en cada tiempo verbal"
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Tiempo",
+            "Estructura",
+            "Ejemplo"
+          ],
+          "filas": [
+            [
+              "Presente simple",
+              "am / is / are + participio",
+              "A letter is written by Rita. → Una carta es escrita por Rita."
+            ],
+            [
+              "Presente progresivo",
+              "am / is / are being + participio",
+              "The letter is being written by Rita. → La carta está siendo escrita por Rita."
+            ],
+            [
+              "Pasado simple",
+              "was / were + participio",
+              "The tiger was chased by him. → El tigre fue perseguido por él."
+            ],
+            [
+              "Pasado progresivo",
+              "was / were being + participio",
+              "The tiger was being chased by him. → El tigre estaba siendo perseguido por él."
+            ],
+            [
+              "Presente perfecto",
+              "have / has been + participio",
+              "A letter has been written by Rita. → Una carta ha sido escrita por Rita."
+            ],
+            [
+              "Pasado perfecto",
+              "had been + participio",
+              "The tiger had been chased by him. → El tigre había sido perseguido por él."
+            ],
+            [
+              "Futuro (will)",
+              "will be + participio",
+              "A letter will be written by Rita. → Una carta será escrita por Rita."
+            ],
+            [
+              "Futuro (going to)",
+              "am / is / are going to be + participio",
+              "The house is going to be painted. → La casa va a ser pintada."
+            ],
+            [
+              "Con modales",
+              "modal + be + participio",
+              "The rules must be respected. → Las reglas deben ser respetadas."
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "contenido": "En español a veces es más natural traducir la pasiva con **\"se\"**: English is spoken here = Aquí se habla inglés. The rooms are cleaned daily = Las habitaciones se limpian a diario."
+        },
+        {
+          "tipo": "tip",
+          "titulo": "Tip para el ICFES: ¿voz pasiva o tiempo continuo?",
+          "contenido": "Cuando antes del espacio hay un verbo **to be** (am, is, are, was, were, been) y las opciones son el mismo verbo conjugado de distintas formas, solo pueden ser correctas dos opciones: la terminada en **-ing** (tiempo continuo) o el **participio** (voz pasiva). Descarta las demás.\n\nLuego pregúntate: **¿el sujeto hace la acción o la recibe?** Si la recibe → participio. Si la hace → -ing.\n\nAmsterdam is known for its streets along the water → Amsterdam no \"conoce\", es conocida: pasiva (known).\n\nIn general, she was described as an unusual child → ella no describe, es descrita: pasiva (described).\n\nOtras pistas de pasiva: aparece **by + persona** después del espacio (The book was written by Gabriel García Márquez), o la oración empieza por lo que recibe la acción (The rooms are cleaned daily)."
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Este documento se elaboró a partir de los apuntes de Inglés de Grupo 500 (@preicfes_grupo500) y se complementó con las siguientes fuentes:"
+        },
+        {
+          "tipo": "lista",
+          "items": [
+            "Icfes. Infografía de la prueba de Inglés Saber 11.° (2025). https://www.icfes.gov.co/wp-content/uploads/2025/09/17-septiembre-infografia-prueba-ingles-saber-11.pdf",
+            "Icfes. Guía de orientación Saber 11.° 2026-2. https://www.icfes.gov.co/wp-content/uploads/2026/03/17-marzo-guia-de-orientacion-saber-11-2026-2.pdf",
+            "British Council, LearnEnglish. Prepositions of time: at, in, on. https://learnenglish.britishcouncil.org/free-resources/grammar/a1-a2-grammar/prepositions-of-time-at-in-on",
+            "British Council, LearnEnglish. Grammar reference (tiempos verbales, voz pasiva, verbos seguidos de -ing o infinitivo). https://learnenglish.britishcouncil.org/free-resources/grammar",
+            "Cambridge Dictionary. About Words blog: Infinitive or -ing verb? (2024). https://dictionaryblog.cambridge.org/2024/02/21/infinitive-or-ing-verb/",
+            "Cambridge Dictionary. English Grammar Today. https://dictionary.cambridge.org/grammar/british-grammar/"
+          ],
+          "ordenada": false
+        }
       ]
     }
   ]

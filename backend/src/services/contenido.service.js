@@ -6,7 +6,7 @@
 import { una, varias } from '../config/db.js';
 
 const LETRAS = ['A', 'B', 'C', 'D'];
-const TIPOS_BLOQUE = new Set(['texto', 'concepto', 'formula', 'ejemplo', 'lista', 'tip', 'ejercicio']);
+const TIPOS_BLOQUE = new Set(['texto', 'subtitulo', 'concepto', 'formula', 'ejemplo', 'lista', 'tabla', 'imagen', 'tip', 'alerta', 'ejercicio']);
 
 const textoValido = (v, max = 10_000) => typeof v === 'string' && v.trim().length > 0 && v.length <= max;
 
@@ -18,17 +18,19 @@ export function validarPregunta(p, { contextos = {}, subtemas = new Set() } = {}
   if (!subtemas.has(p?.subtema)) errores.push(`${id}: subtema "${p?.subtema}" no existe`);
   if (![1, 2, 3].includes(p?.dificultad)) errores.push(`${id}: dificultad debe ser 1, 2 o 3`);
   if (!textoValido(p?.enunciado, 3000)) errores.push(`${id}: falta el enunciado`);
-  if (!textoValido(p?.explicacion, 6000)) errores.push(`${id}: falta la explicación`);
+  // La explicación es opcional (el banco puede traer solo la respuesta correcta).
+  if (p?.explicacion != null && (typeof p.explicacion !== 'string' || p.explicacion.length > 6000)) errores.push(`${id}: explicación inválida`);
   if (p?.contexto_ref && p?.contexto) errores.push(`${id}: usa contexto_ref o contexto, no ambos`);
   if (p?.contexto_ref && !contextos[p.contexto_ref]) errores.push(`${id}: contexto_ref "${p.contexto_ref}" no existe`);
   if (p?.imagen && !/^(\/img\/|https:\/\/)/.test(p.imagen)) errores.push(`${id}: la imagen debe ser /img/... o https://`);
   if (p?.tiempo_estimado_seg != null && !(p.tiempo_estimado_seg >= 15 && p.tiempo_estimado_seg <= 600)) {
     errores.push(`${id}: tiempo_estimado_seg fuera de rango (15–600)`);
   }
-  if (!Array.isArray(p?.opciones) || p.opciones.length !== 4) {
-    errores.push(`${id}: debe tener exactamente 4 opciones`);
+  // 4 opciones (A–D) o, como en varias partes de la prueba de Inglés, 3 opciones (A–C).
+  if (!Array.isArray(p?.opciones) || ![3, 4].includes(p.opciones.length)) {
+    errores.push(`${id}: debe tener 3 o 4 opciones`);
   } else {
-    if (p.opciones.map((o) => o.letra).join('') !== 'ABCD') errores.push(`${id}: las letras deben ser A, B, C y D en orden`);
+    if (p.opciones.map((o) => o.letra).join('') !== 'ABCD'.slice(0, p.opciones.length)) errores.push(`${id}: las letras deben ser A, B, C (y D) en orden`);
     if (p.opciones.filter((o) => o.correcta === true).length !== 1) errores.push(`${id}: debe tener exactamente 1 opción correcta`);
     if (!p.opciones.every((o) => textoValido(o.texto, 2000))) errores.push(`${id}: hay opciones sin texto`);
   }
@@ -47,6 +49,8 @@ export function validarLeccion(l, { subtemas = new Set() } = {}) {
     if (b?.tipo === 'ejercicio' && (!Array.isArray(b.opciones) || b.opciones.length !== 4 || !(b.correcta >= 0 && b.correcta <= 3))) {
       errores.push(`${id}: ejercicio inválido`);
     }
+    if (b?.tipo === 'tabla' && (!Array.isArray(b.filas) || !b.filas.every((f) => Array.isArray(f)))) errores.push(`${id}: tabla inválida`);
+    if (b?.tipo === 'imagen' && !/^(\/img\/|https:\/\/)/.test(b.src ?? '')) errores.push(`${id}: la imagen debe ser /img/... o https://`);
   }
   return errores;
 }
@@ -71,7 +75,7 @@ async function guardarContexto(cliente, codigo, { titulo = null, texto, imagen =
 }
 
 /**
- * Inserta o actualiza una pregunta con sus 4 opciones.
+ * Inserta o actualiza una pregunta con sus opciones (3 o 4).
  * @returns {Promise<{ id: number, nueva: boolean }>}
  */
 export async function guardarPregunta(cliente, p, { subtemaId, contextoId, origen = 'banco' }) {
@@ -86,20 +90,23 @@ export async function guardarPregunta(cliente, p, { subtemaId, contextoId, orige
        tiempo_estimado_seg = EXCLUDED.tiempo_estimado_seg, etiquetas = EXCLUDED.etiquetas, activa = TRUE
      RETURNING id, (xmax = 0) AS nueva`,
     [p.codigo, subtemaId, contextoId, p.enunciado, p.imagen ?? null, p.imagen_alt ?? null, p.dificultad,
-      p.competencia ?? null, p.explicacion, p.tiempo_estimado_seg ?? 120, p.etiquetas ?? [], origen],
+      p.competencia ?? null, p.explicacion ?? '', p.tiempo_estimado_seg ?? 120, p.etiquetas ?? [], origen],
     cliente,
   );
   // Se desmarca la correcta anterior antes del upsert para no violar el índice de "una sola correcta".
   await cliente.query(`UPDATE opciones SET es_correcta = FALSE WHERE pregunta_id = $1`, [fila.id]);
+  const letras = LETRAS.slice(0, p.opciones.length);
   for (const [i, o] of p.opciones.entries()) {
     await cliente.query(
       `INSERT INTO opciones (pregunta_id, letra, texto, es_correcta, retroalimentacion)
        VALUES ($1, $2, $3, $4, $5)
        ON CONFLICT (pregunta_id, letra) DO UPDATE SET
          texto = EXCLUDED.texto, es_correcta = EXCLUDED.es_correcta, retroalimentacion = EXCLUDED.retroalimentacion`,
-      [fila.id, LETRAS[i], o.texto, o.correcta === true, o.retroalimentacion ?? null],
+      [fila.id, letras[i], o.texto, o.correcta === true, o.retroalimentacion ?? null],
     );
   }
+  // Si la pregunta pasó de 4 a 3 opciones, se retira la sobrante.
+  await cliente.query(`DELETE FROM opciones WHERE pregunta_id = $1 AND NOT (letra = ANY($2::text[]))`, [fila.id, letras]);
   return { id: fila.id, nueva: fila.nueva };
 }
 

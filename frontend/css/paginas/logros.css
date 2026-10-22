@@ -27,6 +27,14 @@
 .nivel-ruta h3 { margin: 0; }
 .nivel-ruta .xp { font-size: var(--texto-sm); color: var(--texto-3); }
 .nivel-ruta ul { margin: var(--esp-3) 0 0; padding-left: 1.1em; font-size: var(--texto-sm); color: var(--texto-2); display: grid; gap: 4px; }
+.nivel-ruta .etiqueta-requisitos { margin: var(--esp-3) 0 0; font-size: var(--texto-xs); font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--texto-3); }
+.nivel-ruta .etiqueta-requisitos + ul { margin-top: 6px; }
+.requisitos-nivel { list-style: none; padding-left: 0 !important; }
+.requisitos-nivel li { display: flex; gap: 8px; align-items: flex-start; }
+.requisitos-nivel li > .icono { margin-top: 2px; flex-shrink: 0; color: var(--texto-3); }
+.requisitos-nivel li.cumplido > .icono { color: var(--exito); }
+.detalle-requisito { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 4px; }
+.detalle-requisito .chip { font-size: 11px; padding: 2px 8px; }
 
 .grid-insignias { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: var(--esp-4); }
 .insignia { display: flex; flex-direction: column; align-items: center; gap: var(--esp-2); text-align: center; padding: var(--esp-5) var(--esp-3); }
@@ -39,7 +47,7 @@
 .rareza.legendaria { color: var(--oro); }
 
 .racha-grande { display: grid; grid-template-columns: auto repeat(3, minmax(0, 1fr)); gap: var(--esp-6); align-items: center; }
-.racha-grande img { width: 90px; }
+.racha-grande img { width: 90px; height: auto; }
 .racha-grande .dato strong { font-family: var(--fuente-titulos); font-size: var(--texto-3xl); display: block; line-height: 1; }
 .calendario-largo { grid-auto-columns: minmax(10px, 1fr); }
 .hitos { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: var(--esp-3); }

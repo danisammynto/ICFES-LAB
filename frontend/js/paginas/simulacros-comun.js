@@ -23,6 +23,9 @@ export async function confirmarInicio(simulacro) {
   }
   const reglas = [
     `${simulacro.preguntas} preguntas en ${simulacro.sesiones.length > 1 ? `${simulacro.sesiones.length} sesiones` : '1 sesión'} (${formatoDuracion(simulacro.duracion_min * 60)} en total).`,
+    simulacro.preguntas < simulacro.preguntas_objetivo
+      ? `La estructura completa tiene ${simulacro.preguntas_objetivo} preguntas; el banco tiene hoy ${simulacro.preguntas} disponibles para este simulacro y el tiempo se ajusta a esa cantidad.`
+      : null,
     'El cronómetro corre en el servidor: si cierras la página, el tiempo sigue avanzando.',
     'Tus respuestas se guardan automáticamente. Puedes marcar preguntas para revisarlas al final.',
     'No verás si aciertas hasta terminar: así funciona el examen real.',
@@ -37,7 +40,7 @@ export async function confirmarInicio(simulacro) {
       ? h('div', { class: 'fila envolver gap-2', style: { marginBottom: 'var(--esp-4)' } },
         simulacro.sesiones.map((s) => h('span', { class: 'chip chip-cielo' }, icono('clock', 'icono-sm'), `${s.titulo}: ${s.preguntas} preguntas · ${formatoDuracion(s.duracion_min * 60)}`)))
       : null,
-    h('ul', { class: 'lista-desbloqueos' }, reglas.map((r) => h('li', {}, icono('circle-check', 'icono-sm'), r))),
+    h('ul', { class: 'lista-desbloqueos' }, reglas.filter(Boolean).map((r) => h('li', {}, icono('circle-check', 'icono-sm'), r))),
     h('p', { class: 'texto-sm texto-2 mt-4' }, icono('gift', 'icono-sm'), ` Recompensa: +${simulacro.recompensa.xp} XP y +${simulacro.recompensa.monedas} monedas${simulacro.intentos ? ' (reducida por repetición)' : ''}.`),
     h('div', { class: 'modal-acciones' },
       h('button', { class: 'btn btn-secundario', onclick: () => cerrar(false) }, 'Ahora no'),

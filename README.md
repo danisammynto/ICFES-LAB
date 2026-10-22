@@ -19,14 +19,14 @@ Plataforma web para prepararse para la **Prueba Saber 11 (ICFES)** que combina g
 | Área | Funcionalidades |
 |---|---|
 | **Usuarios** | Registro, inicio y cierre de sesión (en este dispositivo o en todos), recuperación de contraseña por correo, perfil, avatar personalizable, configuración de cuenta, eliminación de cuenta. |
-| **Dashboard** | Racha y calendario de actividad, recordatorio diario con la lección del día, cuenta regresiva al ICFES, porcentaje completado, horas por semana, desempeño por área (radar), avance por materia, precisión, tiempo promedio, evolución semanal, puntaje estimado y recomendaciones de Vanty. |
-| **Materias** | Las 5 áreas del Saber 11 → temas → subtemas → lecciones con teoría, ejemplos resueltos, tips y ejercicios. Subtemas que se desbloquean por nivel. |
-| **Preguntas tipo ICFES** | Enunciado, contexto (compartido entre preguntas), imagen opcional, 4 opciones, respuesta correcta, retroalimentación por opción y explicación detallada. Práctica adaptativa por dificultad. |
-| **Gamificación** | XP, 5 niveles (Principiante → Maestro ICFES), monedas, 21 logros, 19 insignias, rachas con protectores y recompensas, retos por nivel, tienda de avatar. |
-| **Simulacros** | 10 simulacros completos (2 sesiones con la estructura del Saber 11), camino de 10 minisimulacros (20–30 preguntas, 30 min) y 6 retos. Cronómetro controlado por el servidor, autoguardado, marcas de revisión, puntaje global (0–500) y por área, recomendaciones y revisión pregunta a pregunta. |
+| **Dashboard** | Racha y calendario de actividad, recordatorio diario con la lección del día, cuenta regresiva al ICFES según el calendario del estudiante (A o B) y la fecha oficial publicada por el ICFES, porcentaje completado, horas por semana, desempeño por área (radar), avance por materia, precisión, tiempo promedio, evolución semanal, puntaje estimado y recomendaciones de Vanty. |
+| **Materias** | Las 5 áreas del Saber 11 → los 9 bloques del temario (Matemáticas, Lectura crítica, Biología macro, Biología micro, Química, Física, Sociales y ciudadanas, Historia e Inglés) → 84 temas. Cada tema tiene su explicación completa (apuntes con subtítulos, tablas, fórmulas, ejemplos e imágenes) seguida de las preguntas del banco de ese tema. Los temas de continuación (II y III) se desbloquean por nivel. |
+| **Preguntas tipo ICFES** | Enunciado, contexto (compartido entre preguntas), imagen opcional, 4 opciones (3 en varias partes de Inglés, como en la prueba real), respuesta correcta, retroalimentación por opción y explicación opcional. Organizadas por materia y tema, sin mezclarse. Práctica adaptativa por dificultad. |
+| **Gamificación** | XP, 4 niveles (Principiante → Experto) que exigen actividad, preguntas respondidas, porcentaje de aciertos y avance en el temario, monedas, 38 logros, insignias por logros, niveles y rachas, rachas con protectores y recompensas, retos por nivel y tienda de avatar. |
+| **Simulacros** | 5 simulacros completos (primera sesión de 120 preguntas y segunda de 134, con la distribución por área del Saber 11), camino de 10 minisimulacros (20–30 preguntas, 30 min) y 5 retos. Cronómetro controlado por el servidor, autoguardado, marcas de revisión, puntaje global (0–500) y por área, recomendaciones y revisión pregunta a pregunta. |
 | **Vanty (IA)** | Chat con respuestas en streaming. Resuelve dudas, explica errores, recomienda temas, adapta la dificultad, genera preguntas personalizadas y motiva. Usa **Claude** si configuras una API key y un **motor local** si no. |
 | **Analítica** | Fortalezas, debilidades, rendimiento por materia y por tema, tiempos de respuesta, evolución semanal y mensual, errores frecuentes, puntaje estimado ICFES (global y por área) y proyección de mejora. |
-| **Administración** | Métricas, banco de preguntas (crear, editar, activar, importar JSON), usuarios y roles, fecha global del ICFES y límites de Vanty. |
+| **Administración** | Métricas, banco de preguntas (crear, editar, activar, importar JSON), usuarios y roles, fechas oficiales del Saber 11 por calendario (A y B) y límites de Vanty. |
 
 **Stack:** HTML5 · CSS3 · JavaScript (módulos ES, sin frameworks) · Chart.js · Node.js 22+ · Express 5 · PostgreSQL 13+ · SDK de Anthropic.
 
@@ -57,7 +57,7 @@ Abre **http://localhost:3000**. Con `npm run db:demo` puedes entrar con:
 
 | Rol | Correo | Contraseña |
 |---|---|---|
-| Estudiante (nivel 4, historial completo) | `demo@icfeslab.co` | `IcfesLab2026` |
+| Estudiante (6 semanas de historial; con los requisitos de nivel actuales queda en el nivel 1) | `demo@icfeslab.co` | `IcfesLab2026` |
 | Administrador | `admin@icfeslab.co` | `AdminLab2026` |
 
 > Las cuentas de demostración tienen contraseñas públicas: úsalas solo para probar y no ejecutes `npm run db:demo` en producción.
@@ -86,7 +86,7 @@ Detalles, costos y privacidad en [docs/VANTY.md](docs/VANTY.md).
 |---|---|
 | `npm start` | Inicia el servidor. |
 | `npm run dev` | Inicia el servidor y lo reinicia al cambiar el código. |
-| `npm run db:setup` | Crea la base de datos (si puede), aplica `schema.sql`, `seed.sql` y carga el contenido JSON. No borra datos. |
+| `npm run db:setup` | Crea la base de datos (si puede), aplica `schema.sql`, las migraciones de `database/migraciones/`, `seed.sql` y carga el contenido JSON. No borra datos. |
 | `npm run db:reset` | **Borra todo** y reinstala la base de datos desde cero. |
 | `npm run db:seed` | Recarga solo el contenido académico (preguntas y lecciones). |
 | `npm run db:demo` | Crea o recrea las cuentas de demostración. |
@@ -161,9 +161,9 @@ icfes-lab/
 
 ## Contenido académico
 
-El banco inicial tiene **50 preguntas originales** (10 por área, 2 por subtema, dificultad 3/4/3), **25 lecciones** (una por subtema, con ejercicios) y **40 entradas** de conocimiento para Vanty. Todo el contenido fue escrito para ICFES Lab (no copia ítems oficiales). Para ampliar el banco usa el panel de administración (formulario o importación JSON) o agrega archivos en `database/contenido/` y ejecuta `npm run db:seed`.
+El contenido sigue el **temario 2026** de ICFES Lab: **84 temas** en 9 bloques, **84 lecciones** (la explicación completa de cada tema, tomada de los apuntes de la academia) y **252 preguntas** del banco (3 por tema, organizadas por materia y tema), más **40 entradas** de conocimiento para Vanty. Lo que quedó pendiente de revisión docente está en [`database/contenido/PENDIENTES.md`](database/contenido/PENDIENTES.md). El temario anterior (25 subtemas, 50 preguntas y 25 lecciones) se conserva en `database/contenido/anterior/` y queda **desactivado** en la base de datos (`activo = FALSE`), de modo que el historial y el progreso de los estudiantes no se pierden. Para ampliar el banco usa el panel de administración (formulario o importación JSON) o agrega archivos en `database/contenido/` y ejecuta `npm run db:seed`.
 
-> Recomendación: pide a un docente de cada área que revise el contenido antes de usarlo con estudiantes, en especial los datos jurídicos de Sociales y Ciudadanas (Ley 1930 de 2018 sobre páramos, plazos del derecho de petición).
+> Recomendación: pide a un docente de cada área que revise el contenido antes de usarlo con estudiantes, empezando por las preguntas listadas en `database/contenido/PENDIENTES.md` (mencionan una figura, gráfica o tabla que no venía en el banco).
 
 ICFES Lab es una plataforma independiente y no está afiliada al ICFES. Los puntajes que muestra son estimaciones orientativas.
 

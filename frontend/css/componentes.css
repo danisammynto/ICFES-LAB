@@ -439,3 +439,20 @@ textarea.entrada { min-height: 110px; resize: vertical; }
 @keyframes flotar { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
 
 .animar-entrada { animation: subir 320ms cubic-bezier(0.2, 0.7, 0.3, 1) both; }
+
+/* --- Calendario del Saber 11 (pregunta del primer inicio de sesión y fecha de la citación) --- */
+.modal-calendario { max-width: 540px; }
+.opciones-calendario { display: grid; gap: var(--esp-3); margin: var(--esp-4) 0; }
+.opcion-calendario {
+  display: flex; align-items: center; gap: var(--esp-3); width: 100%; padding: var(--esp-4);
+  text-align: left; font: inherit; color: var(--texto); cursor: pointer;
+  border: 2px solid var(--borde); border-radius: var(--radio-lg); background: var(--superficie);
+}
+.opcion-calendario:hover { border-color: var(--cielo); }
+.opcion-calendario.elegida { border-color: var(--primario); background: color-mix(in srgb, var(--primario) 8%, var(--superficie)); }
+.opcion-calendario > span:last-child { display: flex; flex-direction: column; gap: 2px; }
+.opcion-calendario > .icono { flex-shrink: 0; color: var(--primario); }
+.letra-calendario {
+  display: grid; place-items: center; flex-shrink: 0; width: 44px; height: 44px; border-radius: 12px;
+  background: var(--primario); color: #fff; font-family: var(--fuente-titulos); font-weight: 800; font-size: var(--texto-xl);
+}

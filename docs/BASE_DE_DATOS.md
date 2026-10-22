@@ -14,11 +14,13 @@
 | 7. IA Vanty | `conversaciones_vanty`, `mensajes_vanty` |
 | 8. Configuración | `configuracion` |
 
-En total: **35 tablas**, **2 vistas**, **3 funciones de trigger**, **7 triggers** y **26 índices** además de los que crean las llaves primarias y las restricciones `UNIQUE`.
+En total: **35 tablas**, **2 vistas**, **3 funciones de trigger**, **7 triggers** y **27 índices** además de los que crean las llaves primarias y las restricciones `UNIQUE`.
 
 **Convenciones:** nombres en español y `snake_case`; fechas con zona horaria (`TIMESTAMPTZ`); los días de estudio (`DATE`) se calculan en la zona horaria de la aplicación (`America/Bogota`); valores cerrados con `CHECK` en lugar de `ENUM`; identificadores `UUID` para las entidades expuestas en URLs (usuarios, intentos, conversaciones) y enteros `IDENTITY` para el catálogo.
 
 > Las tablas mínimas solicitadas (`usuarios`, `perfiles`, `materias`, `temas`, `subtemas`, `preguntas`, `respuestas`, `simulacros`, `resultados`, `progreso`, `logros`, `rachas`, `estadisticas`, `mensajes_vanty`) existen con esos mismos nombres.
+
+> **Migraciones.** `schema.sql` describe el esquema completo para instalaciones nuevas. Los cambios sobre bases ya instaladas van en `database/migraciones/NNN_nombre.sql` (idempotentes: `ADD COLUMN IF NOT EXISTS`, `CREATE OR REPLACE FUNCTION`…) y `npm run db:setup` los aplica en orden antes de recargar el catálogo. La migración `001_temario_2026.sql` añade `temas.activo` y `subtemas.activo` y permite preguntas de 3 opciones. La `002_niveles_calendario.sql` añade `perfiles.calendario_icfes`, `niveles.requisitos`, `insignias.activa` y `logros.activo`, y elimina el nivel 5 moviendo a sus estudiantes al nivel 4 sin tocar su XP, logros ni insignias.
 
 ---
 
@@ -48,7 +50,7 @@ flowchart TB
     U -->|"conversa"| V
 ```
 
-Todas las tablas de actividad, progreso, gamificación, estadísticas y Vanty pertenecen a un estudiante (`usuario_id → usuarios.id`, con borrado en cascada). `configuracion` no tiene relaciones: guarda la fecha global del ICFES y los límites de Vanty.
+Todas las tablas de actividad, progreso, gamificación, estadísticas y Vanty pertenecen a un estudiante (`usuario_id → usuarios.id`, con borrado en cascada). `configuracion` no tiene relaciones: guarda las fechas oficiales del Saber 11 por calendario y los límites de Vanty.
 
 ---
 
@@ -86,6 +88,7 @@ erDiagram
         varchar grado
         jsonb avatar
         date fecha_icfes
+        char calendario_icfes
         smallint meta_diaria_min
         smallint meta_puntaje
         varchar tema_interfaz
@@ -115,7 +118,8 @@ erDiagram
 | `usuarios.token_version` | Al incrementarse invalida todos los JWT emitidos (cambio de contraseña, "cerrar todas las sesiones", desactivación). |
 | `perfiles.avatar` | JSON con los códigos de los artículos equipados: `color`, `expresion`, `accesorio` y `fondo`. |
 | `perfiles.grado` | `10`, `11`, `egresado` u `otro`. |
-| `perfiles.fecha_icfes` | Fecha personal del examen; si es `NULL` se usa la global de `configuracion`. |
+| `perfiles.calendario_icfes` | `A` o `B`: calendario en el que el estudiante presentará el Saber 11. `NULL` hasta que responde la pregunta del primer inicio de sesión. |
+| `perfiles.fecha_icfes` | Fecha de la citación (si el ICFES no ha publicado la fecha oficial) o la fecha oficial elegida cuando el ICFES publica varias para un calendario. |
 | `perfiles.meta_diaria_min` · `meta_puntaje` | 5 a 240 minutos · 0 a 500 puntos. |
 | `perfiles.tema_interfaz` | `claro`, `oscuro` o `sistema`. |
 | `perfiles.monedas` | Empieza en 50 y nunca puede ser negativo. |
@@ -132,7 +136,7 @@ erDiagram
     subtemas ||--o{ preguntas : "clasifica"
     contextos |o--o{ preguntas : "comparte"
     usuarios |o--o{ preguntas : "autor (Vanty)"
-    preguntas ||--|{ opciones : "tiene 4"
+    preguntas ||--|{ opciones : "tiene 3 o 4"
 
     materias {
         smallint id PK
@@ -152,6 +156,7 @@ erDiagram
         varchar nombre
         varchar descripcion
         smallint orden
+        bool activo
     }
     subtemas {
         int id PK
@@ -162,6 +167,7 @@ erDiagram
         varchar icono
         smallint nivel_requerido FK
         smallint orden
+        bool activo
     }
     lecciones {
         int id PK
@@ -219,13 +225,15 @@ erDiagram
 | `materias.slug` | `matematicas`, `lectura-critica`, `ciencias-naturales`, `sociales-ciudadanas`, `ingles`. |
 | `materias.peso_global` | 3 en las áreas núcleo y 1 en Inglés (ponderación del puntaje global). |
 | `subtemas.nivel_requerido` | Nivel del estudiante que desbloquea el subtema. |
-| `lecciones.contenido` | Arreglo JSON de bloques: `texto`, `concepto`, `formula`, `ejemplo`, `lista`, `tip`, `ejercicio`. |
+| `temas.activo` · `subtemas.activo` | `FALSE` para los temas del temario anterior: se conservan con todo su historial (respuestas, progreso, lecciones completadas) pero no aparecen en Materias, en la práctica, en Vanty ni en la analítica. Los cambia `seed.sql` al cargar un temario nuevo. |
+| `lecciones.contenido` | Arreglo JSON de bloques: `texto`, `subtitulo`, `concepto`, `formula`, `ejemplo`, `lista`, `tabla`, `imagen`, `tip`, `alerta`, `ejercicio`. Las lecciones del temario 2026 son la explicación completa del tema (apuntes), sin ejercicios incrustados: las preguntas del tema se muestran a continuación desde `preguntas`. |
 | `contextos` | Texto, tabla, gráfica o situación que comparten varias preguntas, como en el ICFES. |
 | `preguntas.dificultad` | 1 baja, 2 media, 3 alta. |
+| `preguntas.explicacion` | Explicación detallada; puede quedar vacía (`''`) cuando el banco solo trae la respuesta correcta. |
 | `preguntas.tiempo_estimado_seg` | 15 a 600 s; se usa para evaluar el ritmo del estudiante. |
 | `preguntas.etiquetas` | Arreglo `TEXT[]` con índice GIN. |
 | `preguntas.origen` · `autor_id` · `publica` | `banco`, `admin` o `vanty`. Las generadas por Vanty son privadas y tienen autor. |
-| `opciones` | Exactamente 4 (letras A–D) y 1 correcta por pregunta, cada una con su retroalimentación. |
+| `opciones` | 3 o 4 por pregunta (letras A–C o A–D; Inglés usa 3 en varias partes) y exactamente 1 correcta, validado por el trigger `tg_validar_opciones_pregunta`. Retroalimentación opcional por opción. |
 
 ### 3. Actividad del estudiante
 
@@ -414,6 +422,7 @@ erDiagram
         varchar icono
         int recompensa_monedas
         jsonb desbloqueos
+        jsonb requisitos
         int insignia_id FK
     }
     insignias {
@@ -428,6 +437,7 @@ erDiagram
         int precio_monedas
         smallint nivel_requerido FK
         smallint orden
+        bool activa
     }
     logros {
         int id PK
@@ -443,6 +453,7 @@ erDiagram
         int insignia_id FK
         bool secreto
         smallint orden
+        bool activo
     }
     usuario_logros {
         uuid usuario_id PK, FK
@@ -458,7 +469,7 @@ erDiagram
 
 | Columna | Detalle |
 |---|---|
-| `niveles.xp_minimo` | 0 · 400 · 1500 · 4500 · 10 000 (Principiante → Maestro ICFES). |
+| `niveles.xp_minimo` | 0 · 1000 · 4000 · 9000 (Principiante → Experto). Además de la XP, cada nivel exige los requisitos de `niveles.requisitos`. |
 | `niveles.desbloqueos` | Lista (JSON) de lo que desbloquea el nivel, para mostrarla al estudiante. |
 | `niveles.insignia_id` · `insignias.nivel_requerido` | Relación circular: la insignia que entrega cada nivel y el nivel que exige cada insignia. Se resuelve con `ALTER TABLE` en `schema.sql`. |
 | `insignias.rareza` · `origen` | `comun`, `rara`, `epica`, `legendaria` · `logro`, `nivel`, `tienda`, `racha`. Solo las de tienda tienen precio. |
@@ -604,7 +615,9 @@ erDiagram
 | `mensajes_vanty.rol` · `tipo` | `usuario` o `vanty` · `texto`, `pregunta`, `recomendacion` o `explicacion`. |
 | `mensajes_vanty.metadata` | Pregunta de las tarjetas interactivas, pregunta adjunta, modelo usado. |
 | `mensajes_vanty.proveedor` · `tokens_*` | `claude` o `local` · consumo de la API por respuesta. |
-| `configuracion` | Clave → valor JSON: `fecha_icfes` (fecha global del examen) y `vanty` (límite diario de mensajes). |
+| `configuracion` | Clave → valor JSON: `calendarios_icfes` (fechas oficiales del Saber 11 de los calendarios A y B, con su fuente; vacías mientras el ICFES no las publique) y `vanty` (límite diario de mensajes). |
+| `niveles.requisitos` | Requisitos académicos además de la XP: `dias_activos`, `respondidas`, `precision`, `temario_area` y `actividades` (ver [GAMIFICACION.md](GAMIFICACION.md#niveles)). |
+| `insignias.activa` · `logros.activo` | `FALSE` para lo que ya no se puede obtener (insignias de la tienda, nivel Maestro): quien lo tiene lo conserva. |
 
 ---
 
@@ -707,7 +720,7 @@ Además de los índices de las llaves primarias y de las restricciones `UNIQUE`:
 | Función | Trigger | Momento | Qué hace |
 |---|---|---|---|
 | `tg_set_actualizado_en()` | `usuarios_actualizado_en`, `perfiles_actualizado_en`, `conversaciones_vanty_actualizado_en`, `configuracion_actualizado_en` | `BEFORE UPDATE` | Actualiza la columna `actualizado_en`. |
-| `tg_validar_opciones_pregunta()` | `preguntas_opciones_validas` (en `preguntas`), `opciones_validas` (en `opciones`) | `CONSTRAINT TRIGGER … DEFERRABLE INITIALLY DEFERRED` | Al confirmar la transacción, cada pregunta debe tener **exactamente 4 opciones y 1 correcta**. Al ser diferido, permite insertar la pregunta y luego sus opciones dentro de la misma transacción. |
+| `tg_validar_opciones_pregunta()` | `preguntas_opciones_validas` (en `preguntas`), `opciones_validas` (en `opciones`) | `CONSTRAINT TRIGGER … DEFERRABLE INITIALLY DEFERRED` | Al confirmar la transacción, cada pregunta debe tener **3 o 4 opciones y exactamente 1 correcta**. Al ser diferido, permite insertar la pregunta y luego sus opciones dentro de la misma transacción. |
 | `tg_usuario_inicial()` | `usuarios_alta_inicial` | `AFTER INSERT` en `usuarios` | Crea el perfil (con el primer nombre como nombre visible), la racha y el inventario inicial con los artículos gratuitos de la tienda. |
 
 ## Vistas
@@ -725,16 +738,16 @@ Además de los índices de las llaves primarias y de las restricciones `UNIQUE`:
 
 | Catálogo | Cantidad | Detalle |
 |---|---|---|
-| Niveles | 5 | Principiante (0 XP), Explorador (400), Avanzado (1500), Experto (4500), Maestro ICFES (10 000). |
-| Insignias | 19 | 4 de nivel, 3 de racha, 6 de logros, 6 de tienda. |
-| Materias / temas / subtemas | 5 / 15 / 25 | Los 25 subtemas pedidos; 10 se desbloquean en los niveles 2 y 3. |
-| Logros | 21 | Constancia, precisión, simulacros, progreso, social y 2 secretos. |
+| Niveles | 4 | Principiante (0 XP), Explorador (1000), Avanzado (4000) y Experto (9000), cada uno con sus requisitos académicos. |
+| Insignias | 12 | 3 de nivel, 3 de racha y 6 de logros (las de la tienda y la del nivel Maestro se retiraron). |
+| Materias / temas / subtemas | 5 / 9 / 84 | Temario 2026: 84 temas en 9 bloques; los 14 de continuación se desbloquean en el nivel 2. |
+| Logros | 38 | Constancia, precisión, simulacros, progreso, social, especiales y 2 secretos. |
 | Artículos de tienda | 33 | 9 colores, 7 expresiones, 8 accesorios, 8 fondos y el protector de racha. |
 | Recompensas de racha | 6 | 3, 7, 14, 30, 60 y 100 días. |
-| Plantillas de simulacro | 26 | 10 completos, 10 minisimulacros encadenados y 6 retos. |
-| Configuración | 2 claves | `fecha_icfes` (fecha global del examen) y `vanty` (límite diario de mensajes). |
+| Plantillas de simulacro | 20 | 5 completos (120 + 134 preguntas), 10 minisimulacros encadenados y 5 retos. |
+| Configuración | 2 claves | `calendarios_icfes` (fechas oficiales por calendario) y `vanty` (límite diario de mensajes). |
 
-`seed_contenido.sql` (o `npm run db:seed`) carga el contenido académico de `database/contenido/`: **50 preguntas** (200 opciones, 39 contextos y 7 imágenes) y **25 lecciones**. El formato está documentado en [FORMATO.md](../database/contenido/FORMATO.md).
+`seed_contenido.sql` (o `npm run db:seed`) carga el contenido académico de `database/contenido/`: **252 preguntas** y **84 lecciones** del temario 2026. El formato está documentado en [FORMATO.md](../database/contenido/FORMATO.md).
 
 ---
 

@@ -4,8 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tienda · ICFES Lab</title>
-  <meta name="description" content="Personaliza tu avatar y consigue insignias y protectores de racha con tus monedas.">
+  <meta name="description" content="Personaliza tu personaje y consigue protectores de racha con tus monedas.">
   <link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <meta name="theme-color" content="#484ea2">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap">
@@ -13,6 +16,7 @@
   <link rel="stylesheet" href="/css/base.css">
   <link rel="stylesheet" href="/css/componentes.css">
   <link rel="stylesheet" href="/css/layout.css">
+  <link rel="stylesheet" href="/css/personaje.css">
   <link rel="stylesheet" href="/css/paginas/logros.css">
   <link rel="stylesheet" href="/css/paginas/tienda.css">
   <script src="/js/tema-inicial.js"></script>
@@ -24,39 +28,55 @@
   <nav id="barra-lateral" class="sidebar-lateral"></nav>
 
   <main id="contenido" class="principal">
-    <div class="encabezado-pagina">
+    <div class="encabezado-tienda">
       <div>
         <h1>Tienda</h1>
-        <p>Gana monedas estudiando y úsalas para personalizar tu avatar, coleccionar insignias y proteger tu racha.</p>
+        <p>Gana monedas estudiando y úsalas para vestir a tu personaje y proteger tu racha.</p>
       </div>
+      <aside class="tarjeta tarjeta-monedas" aria-label="Tus monedas">
+        <div>
+          <span class="rotulo">Tus monedas</span>
+          <strong class="saldo" id="saldo"></strong>
+        </div>
+        <a class="btn btn-lima" href="/materias">Ganar más</a>
+      </aside>
     </div>
 
     <div class="diseno-tienda">
-      <aside class="tarjeta vista-avatar" aria-label="Vista previa del avatar">
-        <div class="saldo" id="saldo"></div>
-        <div class="marco-avatar" id="vista-previa"></div>
-        <p class="texto-sm texto-2" id="texto-vista">Elige un artículo para verlo en tu avatar.</p>
-        <button class="btn btn-primario btn-bloque" id="guardar-avatar" disabled>
-          <svg class="icono" aria-hidden="true"><use href="/img/iconos.svg#save"></use></svg> Guardar avatar
-        </button>
-        <button class="btn btn-fantasma btn-bloque mt-4" id="restablecer-avatar" hidden>Deshacer cambios</button>
+      <aside class="columna-personaje">
+        <article class="tarjeta vista-avatar" aria-label="Vista previa de tu personaje">
+          <p class="nota-personaje">Tu personaje, <strong>tu estilo</strong></p>
+          <div class="marco-avatar" id="vista-previa"></div>
+          <p class="texto-sm texto-2" id="texto-vista">Elige un artículo para verlo en tu personaje.</p>
+          <div class="look-actual">
+            <span class="rotulo">Look actual</span>
+            <div class="chips" id="look-actual"></div>
+          </div>
+          <button class="btn btn-primario btn-bloque" id="guardar-avatar" disabled>
+            <svg class="icono" aria-hidden="true"><use href="/img/iconos.svg#save"></use></svg> Guardar personaje
+          </button>
+          <button class="btn btn-fantasma btn-bloque mt-4" id="restablecer-avatar" hidden>Deshacer cambios</button>
+        </article>
+
+        <article class="tarjeta tarjeta-paleta" id="seccion-color" aria-labelledby="titulo-paleta">
+          <h2 id="titulo-paleta">Paleta de colores</h2>
+          <p class="texto-sm texto-2">Elige el color de tu personaje.</p>
+          <div class="paleta" id="paleta-colores"></div>
+        </article>
+
+        <article class="tarjeta tarjeta-monedas-ayuda" aria-labelledby="titulo-ganar">
+          <h2 id="titulo-ganar">¿Cómo gano monedas?</h2>
+          <ul class="lista-ganar" id="lista-ganar"></ul>
+        </article>
       </aside>
 
-      <div>
-        <div class="pestanas" role="tablist" aria-label="Categorías de la tienda">
-          <button role="tab" id="tab-color" aria-controls="panel-color" aria-selected="true"><svg class="icono" aria-hidden="true"><use href="/img/iconos.svg#palette"></use></svg> Colores</button>
-          <button role="tab" id="tab-expresion" aria-controls="panel-expresion" aria-selected="false" tabindex="-1"><svg class="icono" aria-hidden="true"><use href="/img/iconos.svg#heart"></use></svg> Expresiones</button>
-          <button role="tab" id="tab-accesorio" aria-controls="panel-accesorio" aria-selected="false" tabindex="-1"><svg class="icono" aria-hidden="true"><use href="/img/iconos.svg#graduation-cap"></use></svg> Accesorios</button>
-          <button role="tab" id="tab-fondo" aria-controls="panel-fondo" aria-selected="false" tabindex="-1"><svg class="icono" aria-hidden="true"><use href="/img/iconos.svg#sparkles"></use></svg> Fondos</button>
-          <button role="tab" id="tab-insignias" aria-controls="panel-insignias" aria-selected="false" tabindex="-1"><svg class="icono" aria-hidden="true"><use href="/img/iconos.svg#award"></use></svg> Insignias</button>
-          <button role="tab" id="tab-protectores" aria-controls="panel-protectores" aria-selected="false" tabindex="-1"><svg class="icono" aria-hidden="true"><use href="/img/iconos.svg#shield-check"></use></svg> Protectores</button>
-        </div>
-        <section role="tabpanel" id="panel-color" aria-labelledby="tab-color"></section>
-        <section role="tabpanel" id="panel-expresion" aria-labelledby="tab-expresion" hidden></section>
-        <section role="tabpanel" id="panel-accesorio" aria-labelledby="tab-accesorio" hidden></section>
-        <section role="tabpanel" id="panel-fondo" aria-labelledby="tab-fondo" hidden></section>
-        <section role="tabpanel" id="panel-insignias" aria-labelledby="tab-insignias" hidden></section>
-        <section role="tabpanel" id="panel-protectores" aria-labelledby="tab-protectores" hidden></section>
+      <div class="columna-catalogo">
+        <nav class="navegacion-tienda" id="navegacion-tienda" aria-label="Secciones de la tienda"></nav>
+        <section class="tarjeta seccion-tienda" id="seccion-expresion" aria-labelledby="titulo-expresion"></section>
+        <section class="tarjeta seccion-tienda" id="seccion-accesorio" aria-labelledby="titulo-accesorio"></section>
+        <section class="tarjeta seccion-tienda" id="seccion-fondo" aria-labelledby="titulo-fondo"></section>
+        <section class="tarjeta seccion-tienda" id="seccion-protector" aria-labelledby="titulo-protector"></section>
+        <section class="tarjeta seccion-evolucion" id="seccion-evolucion" aria-labelledby="titulo-evolucion"></section>
       </div>
     </div>
   </main>

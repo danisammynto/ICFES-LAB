@@ -3,204 +3,1924 @@
   "contextos": {},
   "preguntas": [
     {
-      "codigo": "SOC-HIS-01",
-      "subtema": "historia",
-      "dificultad": 1,
-      "competencia": "Pensamiento reflexivo y sistémico",
-      "contexto_ref": null,
-      "contexto": "Entre 1958 y 1974 funcionó en Colombia el Frente Nacional, un acuerdo entre los partidos Liberal y Conservador pactado como respuesta al periodo conocido como La Violencia y al gobierno militar del general Gustavo Rojas Pinilla. Según el acuerdo, la Presidencia de la República se alternaba cada cuatro años entre los dos partidos y los cargos públicos se repartían por partes iguales entre ellos.",
-      "enunciado": "Una historiadora afirma que el Frente Nacional “fue una solución que trajo nuevos problemas”. ¿Cuál de las siguientes afirmaciones sustenta mejor esta idea?",
-      "imagen": null,
-      "imagen_alt": null,
-      "opciones": [
-        { "letra": "A", "texto": "Amplió la participación política, porque permitió que nuevos partidos compitieran por la Presidencia en igualdad de condiciones.", "correcta": false, "retroalimentacion": "Ocurrió lo contrario: el acuerdo reservó la Presidencia y los cargos públicos a liberales y conservadores, de modo que otros movimientos no podían competir en igualdad de condiciones." },
-        { "letra": "B", "texto": "Redujo la violencia entre liberales y conservadores, pero dejó por fuera del poder a las fuerzas políticas distintas de esos dos partidos.", "correcta": true, "retroalimentacion": "Correcta. Recoge las dos caras de la frase: la “solución” (el fin de la confrontación bipartidista) y los “nuevos problemas” (la exclusión de otras fuerzas políticas, que alimentó el descontento)." },
-        { "letra": "C", "texto": "Estableció la elección popular de alcaldes, lo que debilitó el control de los partidos tradicionales sobre las regiones.", "correcta": false, "retroalimentacion": "Es un anacronismo: la elección popular de alcaldes se aprobó en 1986 y las primeras elecciones se hicieron en 1988, más de una década después del Frente Nacional." },
-        { "letra": "D", "texto": "Puso fin al conflicto armado, pero causó una crisis económica por la desmovilización de las guerrillas.", "correcta": false, "retroalimentacion": "Es falsa: durante el Frente Nacional surgieron guerrillas como las FARC, el ELN y el EPL; el conflicto armado no terminó en ese periodo." }
-      ],
-      "explicacion": "El Frente Nacional (1958-1974) fue la salida que encontraron los dos partidos tradicionales para terminar la violencia bipartidista y el gobierno militar: se turnaron la Presidencia y se repartieron por mitades los cargos públicos.\n**La solución:** disminuyó notablemente la confrontación armada entre liberales y conservadores.\n**Los nuevos problemas:** el sistema quedó cerrado para otras fuerzas políticas. Muchos historiadores señalan esa exclusión como uno de los factores que contribuyeron al surgimiento de guerrillas en los años sesenta (FARC, ELN, EPL) y, más tarde, del M-19, que tomó su nombre de las cuestionadas elecciones del 19 de abril de 1970.\nPor eso la opción B es la única que muestra a la vez el logro y su consecuencia negativa. Las opciones C y D contienen errores históricos, y la A dice lo contrario de lo que ocurrió.",
-      "tiempo_estimado_seg": 90,
-      "etiquetas": ["frente nacional", "siglo xx", "bipartidismo", "exclusión política"]
-    },
-    {
-      "codigo": "SOC-HIS-02",
-      "subtema": "historia",
+      "codigo": "SOC-DDH-01",
+      "subtema": "derechos-humanos",
       "dificultad": 2,
-      "competencia": "Interpretación y análisis de perspectivas",
+      "competencia": null,
       "contexto_ref": null,
-      "contexto": "Testimonios ficticios, elaborados con fines educativos, de personas que vivieron el proceso que llevó a la Asamblea Nacional Constituyente de 1991:\n• Estudiante universitaria (1990): “La violencia y la corrupción nos mostraron que las instituciones no escuchaban a la gente. Votar la ‘séptima papeleta’ fue decir que los ciudadanos también podemos proponer un nuevo pacto.”\n• Líder indígena del Cauca: “Queremos que la nueva Constitución reconozca que Colombia es un país con muchos pueblos, culturas y lenguas, y que nosotros tengamos voz en esa decisión.”\n• Excombatiente de una guerrilla desmovilizada: “Dejamos las armas porque creemos que los cambios se pueden lograr por la vía política. La Asamblea es la prueba de que ese camino existe.”\n• Congresista de un partido tradicional: “Comparto que el país necesita reformas, pero la Constitución vigente dice que su reforma le corresponde al Congreso. Me preocupa que una Asamblea sin límites claros genere inseguridad jurídica.”",
-      "enunciado": "Al comparar los cuatro testimonios, es correcto afirmar que",
+      "contexto": "Un grupo de mineros artesanales ha aumentado sus ingresos al encontrar un punto del río en el cual se puede extraer oro con la ayuda de mercurio. La comunidad del municipio aledaño se ha visto afectada, porque el río se ha contaminado con los desechos tóxicos que genera la actividad minera y es la única fuente de agua que tienen los habitantes para el consumo e irrigación de cultivos. Ante esto, la alcaldesa del municipio considera necesario establecer una normatividad que regule este tipo de actividades.",
+      "enunciado": "¿Cuál es la razón que mejor justifica por qué debería establecerse allí una normatividad que regule las actividades de extracción minera en el municipio?",
       "imagen": null,
       "imagen_alt": null,
       "opciones": [
-        { "letra": "A", "texto": "el congresista se opone a cualquier cambio y defiende que la Constitución de 1886 siga igual.", "correcta": false, "retroalimentacion": "El congresista dice explícitamente que “el país necesita reformas”; su reparo es sobre el procedimiento, no sobre la necesidad de cambios." },
-        { "letra": "B", "texto": "la estudiante y el excombatiente coinciden en que la reforma debía hacerla únicamente el Congreso.", "correcta": false, "retroalimentacion": "Ninguno de los dos lo plantea: ambos valoran la Asamblea como un camino abierto a la participación ciudadana y política. La idea de que la reforma le corresponde al Congreso aparece en el testimonio del congresista." },
-        { "letra": "C", "texto": "la líder indígena rechaza la Asamblea porque cree que no reconocerá la diversidad cultural.", "correcta": false, "retroalimentacion": "Confunde su postura: la líder espera que la nueva Constitución sí reconozca la diversidad y quiere participar en su redacción." },
-        { "letra": "D", "texto": "tres de los actores ven en la Asamblea un canal de participación, y el congresista cuestiona el procedimiento, no la necesidad de reformas.", "correcta": true, "retroalimentacion": "Correcta. La estudiante, la líder indígena y el excombatiente ven la Asamblea como una oportunidad de ser escuchados; el congresista acepta que se necesitan reformas, pero duda del mecanismo." }
+        {
+          "letra": "A",
+          "texto": "Para que los mineros busquen más lugares de extracción de oro sin tener problemas con las autoridades.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "Para garantizar los derechos a la salud y a un ambiente sano de los pobladores y el derecho de los mineros al trabajo.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "Para que se pueda subsidiar la compra de agua para los pobladores, por medio de las ganancias que genera la explotación minera.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "Para establecer periodos de alternancia en la extracción del oro, para que los mineros descansen y permitan que el agua no se contamine tanto.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
       ],
-      "explicacion": "Para analizar perspectivas, identifica en cada testimonio **quién habla, qué propone y qué le preocupa**.\n1. La estudiante ve la Asamblea como una forma de que los ciudadanos propongan un nuevo pacto.\n2. La líder indígena busca el reconocimiento de la diversidad y tener voz en la decisión.\n3. El excombatiente la ve como prueba de que la vía política es posible.\n4. El congresista acepta la necesidad de reformas, pero su preocupación es jurídica: la Constitución de 1886 reservaba al Congreso la facultad de reformarla.\nEse debate fue real: la convocatoria se hizo por vías excepcionales (la ‘séptima papeleta’ y la votación de mayo de 1990) y la Corte Suprema de Justicia la avaló en 1990. La Asamblea, elegida en diciembre de ese año, expidió la Constitución el 4 de julio de 1991.",
-      "tiempo_estimado_seg": 150,
-      "etiquetas": ["constitución de 1991", "séptima papeleta", "asamblea nacional constituyente", "perspectivas"]
-    },
-    {
-      "codigo": "SOC-GEO-01",
-      "subtema": "geografia",
-      "dificultad": 1,
-      "competencia": "Pensamiento social",
-      "contexto_ref": null,
-      "contexto": "Mariana vive en un municipio ubicado a orillas del río Magdalena, a unos 300 m sobre el nivel del mar, donde la temperatura media es de 28 °C y abundan los cultivos de cacao y mango. En vacaciones visita la finca de su abuelo, en una ladera de la cordillera cercana, a 2.700 m de altitud. Allí la temperatura media es de 13 °C y se cultivan papa y haba.",
-      "enunciado": "¿Qué explica principalmente la diferencia entre los cultivos de los dos lugares?",
-      "imagen": null,
-      "imagen_alt": null,
-      "opciones": [
-        { "letra": "A", "texto": "La finca del abuelo está lejos del río, y sin riego es imposible cultivar cacao o mango.", "correcta": false, "retroalimentacion": "El caso no habla de riego ni de la distancia al río; la información clave es la diferencia de altitud (300 m frente a 2.700 m) y de temperatura (28 °C frente a 13 °C)." },
-        { "letra": "B", "texto": "A mayor altitud aumenta la temperatura, y la papa necesita más calor que el cacao.", "correcta": false, "retroalimentacion": "Es el error inverso: al ascender, la temperatura disminuye, como lo muestran los datos (28 °C abajo y 13 °C arriba). La papa se adapta al clima frío." },
-        { "letra": "C", "texto": "Al ascender disminuye la temperatura, y cada piso térmico favorece cultivos distintos.", "correcta": true, "retroalimentacion": "Correcta. El municipio de Mariana está en el piso térmico cálido (cacao, mango) y la finca, en el frío (papa, haba). La altitud determina la temperatura, y esta, los cultivos posibles." },
-        { "letra": "D", "texto": "La papa y la haba solo se cultivan en tierras planas, como las de los valles de los ríos.", "correcta": false, "retroalimentacion": "Es falso: en Colombia la papa y la haba se cultivan sobre todo en laderas y altiplanos de clima frío, como los de Boyacá, Cundinamarca y Nariño." }
-      ],
-      "explicacion": "En Colombia, por estar en la zona intertropical, la temperatura depende sobre todo de la **altitud**: en promedio desciende unos 6 °C por cada 1.000 m de ascenso (0,6 °C por cada 100 m).\nEntre los dos lugares hay 2.400 m de diferencia (2.700 − 300), lo que equivale a unos 14 o 15 °C menos; por eso se pasa de 28 °C a 13 °C.\nEsa diferencia ubica al municipio de Mariana en el **piso térmico cálido** (menos de 1.000 m, más de 24 °C) y a la finca del abuelo en el **piso frío** (2.000 a 3.000 m, entre 12 y 18 °C).\nCada piso favorece cultivos distintos: cacao, mango y plátano en el cálido; café en el templado; papa, haba y hortalizas en el frío. Es un ejemplo de la relación entre sociedad y territorio: las condiciones naturales influyen en las actividades económicas de las comunidades.",
-      "tiempo_estimado_seg": 75,
-      "etiquetas": ["pisos térmicos", "altitud", "clima", "sociedad y territorio"]
-    },
-    {
-      "codigo": "SOC-GEO-02",
-      "subtema": "geografia",
-      "dificultad": 2,
-      "competencia": "Pensamiento reflexivo y sistémico",
-      "contexto_ref": null,
-      "contexto": "Santa Rosa es un municipio andino ficticio cuyo acueducto se abastece de las quebradas que nacen en un páramo cercano. En los últimos años, varias familias campesinas que viven en el páramo han ampliado los cultivos de papa y los potreros para ganado, y una empresa solicitó permiso para extraer oro en la zona. La empresa de acueducto advierte que el caudal de las quebradas ha disminuido, mientras que las familias campesinas explican que la agricultura es su principal fuente de ingresos.",
-      "enunciado": "¿Cuál de las siguientes propuestas atiende de manera más completa las dimensiones ambiental, económica y social de este problema?",
-      "imagen": null,
-      "imagen_alt": null,
-      "opciones": [
-        { "letra": "A", "texto": "Delimitar el páramo, no permitir allí la minería y acordar con las familias un plan gradual de reconversión productiva con apoyo técnico y económico.", "correcta": true, "retroalimentacion": "Correcta. Protege el ecosistema que regula el agua (dimensión ambiental), ofrece alternativas de ingreso (dimensión económica) y reconoce a las familias como parte de la solución (dimensión social)." },
-        { "letra": "B", "texto": "Autorizar la mina y la ampliación de los cultivos, porque generan empleo e ingresos para el municipio en el corto plazo.", "correcta": false, "retroalimentacion": "Solo considera la dimensión económica inmediata e ignora que el deterioro del páramo afectaría el agua de todo el municipio. Además, la ley colombiana prohíbe la minería en los páramos." },
-        { "letra": "C", "texto": "Desalojar de inmediato a las familias campesinas, sin compensación, para que el ecosistema se recupere lo más rápido posible.", "correcta": false, "retroalimentacion": "Atiende solo la dimensión ambiental y desconoce los derechos y el sustento de las familias; además, generaría un nuevo conflicto social." },
-        { "letra": "D", "texto": "Construir un tanque de almacenamiento más grande en el casco urbano, sin intervenir lo que ocurre en el páramo.", "correcta": false, "retroalimentacion": "Ataca un síntoma (la falta de agua almacenada), pero no la causa: si el páramo se sigue deteriorando, el agua que llega a las quebradas seguirá disminuyendo." }
-      ],
-      "explicacion": "Los páramos funcionan como **esponjas**: su vegetación (frailejones, musgos, pajonales) y sus suelos captan el agua de la lluvia y la neblina y la liberan poco a poco hacia las quebradas. Colombia tiene una de las mayores extensiones de páramo del mundo, y muchas ciudades dependen de ellos para su abastecimiento de agua.\nUn problema socioambiental tiene varias dimensiones: **ambiental** (proteger el ecosistema), **económica** (ingresos de las familias y del municipio) y **social** (derechos y bienestar de la comunidad).\nUna buena solución no sacrifica por completo una dimensión por otra. La opción A protege el agua y, al mismo tiempo, busca alternativas para las familias; B, C y D atienden una sola dimensión o solo un síntoma. En Colombia, la ley de páramos (Ley 1930 de 2018) prohíbe la minería en estos ecosistemas y prevé la reconversión gradual de las actividades agropecuarias con acompañamiento a sus habitantes.",
+      "explicacion": "",
       "tiempo_estimado_seg": 120,
-      "etiquetas": ["páramos", "agua", "conflictos ambientales", "dimensiones de un problema"]
+      "etiquetas": []
     },
     {
-      "codigo": "SOC-ECO-01",
-      "subtema": "economia",
+      "codigo": "SOC-DDH-02",
+      "subtema": "derechos-humanos",
       "dificultad": 2,
-      "competencia": "Interpretación y análisis de perspectivas",
+      "competencia": null,
       "contexto_ref": null,
-      "contexto": "El Gobierno nacional estudia eliminar el arancel (impuesto que se cobra a los productos importados) que hoy pagan las importaciones de arroz. Una asociación de consumidores apoya la medida, porque las familias de menores ingresos destinan una parte importante de su presupuesto a los alimentos. En cambio, los productores de arroz del Tolima y del Casanare se oponen a ella.",
-      "enunciado": "¿Qué interés explica mejor la oposición de los productores de arroz?",
+      "contexto": "En el 2006, una sentencia de la Corte Constitucional de Colombia determinó que la interrupción voluntaria del embarazo estaría permitida en tres situaciones: cuando exista riesgo físico o mental para la mujer en estado de embarazo, cuando exista una malformación en el feto que haga inviable su vida y cuando la gestación haya sido producto de una violación.",
+      "enunciado": "Con la decisión de ese año, la Corte buscaba que se respetara el derecho",
       "imagen": null,
       "imagen_alt": null,
       "opciones": [
-        { "letra": "A", "texto": "Evitar que el precio del arroz suba y que las familias compren menos, lo que reduciría sus ventas.", "correcta": false, "retroalimentacion": "Confunde el efecto de la medida: sin arancel, el arroz importado entra más barato, así que la presión es a que el precio baje, no a que suba." },
-        { "letra": "B", "texto": "Proteger a las familias de menores ingresos, que gastan buena parte de su dinero en alimentos.", "correcta": false, "retroalimentacion": "Ese es el argumento de la asociación de consumidores, no el de los productores. Confundir las perspectivas de los actores es un error frecuente." },
-        { "letra": "C", "texto": "Evitar que el arroz importado, al entrar más barato, aumente la oferta, haga bajar el precio y reduzca sus ingresos.", "correcta": true, "retroalimentacion": "Correcta. Sin arancel, el arroz importado compite con ventaja; la mayor oferta presiona el precio a la baja y los productores nacionales venderían menos o a menor precio." },
-        { "letra": "D", "texto": "Evitar que el nuevo impuesto se cobre a los productores nacionales por cada tonelada que vendan.", "correcta": false, "retroalimentacion": "Confunde qué es un arancel: es un impuesto a los productos importados, no a los nacionales. Además, la medida propone eliminarlo, no crearlo." }
+        {
+          "letra": "A",
+          "texto": "a la educación sexual.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "al buen nombre.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "a la salud.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "a la libertad de cultos.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
       ],
-      "explicacion": "Un **arancel** encarece los productos importados y así protege a los productores nacionales de la competencia externa.\nSi se elimina, el arroz importado llega más barato: aumenta la **oferta** en el mercado y, con una demanda similar, el **precio** tiende a bajar.\n• Los **consumidores** ganan: pagan menos por un alimento básico (por eso apoyan la medida).\n• Los **productores nacionales** pierden: deben vender más barato o pierden compradores (por eso se oponen).\nAnalizar perspectivas consiste en identificar qué gana o qué pierde cada actor con una decisión. Este tipo de debate acompaña a la globalización y a la apertura económica que Colombia inició a comienzos de los años noventa.",
+      "explicacion": "",
       "tiempo_estimado_seg": 120,
-      "etiquetas": ["oferta y demanda", "aranceles", "globalización", "actores e intereses"]
+      "etiquetas": []
     },
     {
-      "codigo": "SOC-ECO-02",
-      "subtema": "economia",
-      "dificultad": 3,
-      "competencia": "Pensamiento reflexivo y sistémico",
-      "contexto_ref": null,
-      "contexto": "La gráfica presenta datos ficticios de un país hipotético: el aumento porcentual del salario mínimo decretado para cada año y la inflación registrada durante ese mismo año.",
-      "enunciado": "Un candidato afirma: “Como el salario mínimo subió todos los años, el poder de compra de quienes lo ganan mejoró en cada uno de esos años”. Con base en la gráfica, ¿cuál es la evaluación correcta de esta afirmación?",
-      "imagen": "/img/preguntas/SOC-ECO-02.svg",
-      "imagen_alt": "Gráfica de barras agrupadas por año. 2021: aumento del salario mínimo 4 %, inflación 3 %. 2022: aumento del salario mínimo 10 %, inflación 13 %. 2023: aumento del salario mínimo 16 %, inflación 9 %. 2024: aumento del salario mínimo 12 %, inflación 6 %.",
-      "opciones": [
-        { "letra": "A", "texto": "Es correcta, porque un aumento del salario nominal siempre se traduce en mayor poder de compra.", "correcta": false, "retroalimentacion": "Confunde el salario nominal (la cantidad de pesos) con el salario real (lo que se puede comprar con ellos). Si los precios suben más que el salario, el poder de compra cae aunque el salario aumente." },
-        { "letra": "B", "texto": "Es incorrecta, porque en 2022 la inflación (13 %) superó el aumento del salario (10 %), así que ese año el salario alcanzó para comprar menos.", "correcta": true, "retroalimentacion": "Correcta. En 2022 los precios subieron más que el salario, de modo que el salario real disminuyó (cerca de 2,7 %). Basta un año en esa situación para refutar la afirmación." },
-        { "letra": "C", "texto": "Es incorrecta, porque en 2023 se registró la inflación más alta del periodo y ese año el salario perdió poder de compra.", "correcta": false, "retroalimentacion": "Error de lectura de la gráfica: la inflación más alta fue la de 2022 (13 %). En 2023 el salario subió 16 % y la inflación fue de 9 %, así que el poder de compra aumentó." },
-        { "letra": "D", "texto": "Es correcta, porque en todos los años el aumento del salario fue mayor que la inflación.", "correcta": false, "retroalimentacion": "Error de lectura: en 2022 la barra de la inflación (13 %) es más alta que la del aumento del salario (10 %)." }
-      ],
-      "explicacion": "La clave es distinguir el **salario nominal** (los pesos que se reciben) del **salario real** (los bienes y servicios que se pueden comprar con ellos).\nUna forma aproximada de estimar el cambio del salario real es: aumento del salario − inflación.\n• 2021: 4 % − 3 % ≈ +1 % (gana poder de compra)\n• 2022: 10 % − 13 % ≈ −3 % (pierde poder de compra)\n• 2023: 16 % − 9 % ≈ +7 % (gana)\n• 2024: 12 % − 6 % ≈ +6 % (gana)\nEl cálculo exacto para 2022 es 1,10 ÷ 1,13 ≈ 0,973, es decir, una pérdida cercana al 2,7 %. Como ese año el salario perdió poder de compra, la afirmación del candidato es falsa. Evaluar afirmaciones con evidencia, y no aceptarlas por quién las dice, es una habilidad clave del pensamiento reflexivo.",
-      "tiempo_estimado_seg": 180,
-      "etiquetas": ["inflación", "salario real", "lectura de gráficas", "evaluación de argumentos"]
-    },
-    {
-      "codigo": "SOC-POL-01",
-      "subtema": "politica",
+      "codigo": "SOC-DDH-03",
+      "subtema": "derechos-humanos",
       "dificultad": 2,
-      "competencia": "Pensamiento social",
+      "competencia": null,
       "contexto_ref": null,
-      "contexto": "En el municipio ficticio de El Porvenir, la alcaldía pagó la totalidad de un contrato para construir un puente peatonal, pero la obra quedó abandonada a mitad de camino. Una veeduría ciudadana, es decir, un grupo de ciudadanos organizado para vigilar la gestión pública, denunció el caso y pidió que se establezca si hubo un daño a los recursos públicos y que se recupere el dinero perdido.",
-      "enunciado": "¿Qué entidad es la competente para adelantar el proceso que determine si hubo un daño al patrimonio público y quién debe responder económicamente por él?",
+      "contexto": null,
+      "enunciado": "Los derechos a la vida, la libertad y la integridad personal hacen parte de los llamados derechos de primera generación, que corresponden a los derechos",
       "imagen": null,
       "imagen_alt": null,
       "opciones": [
-        { "letra": "A", "texto": "La Contraloría, porque ejerce el control fiscal sobre el manejo de los recursos públicos.", "correcta": true, "retroalimentacion": "Correcta. El control fiscal consiste en vigilar cómo se gestionan los recursos públicos; mediante un proceso de responsabilidad fiscal, la Contraloría determina quién causó el daño y le exige resarcirlo." },
-        { "letra": "B", "texto": "La Defensoría del Pueblo, porque vela por la promoción y la protección de los derechos humanos.", "correcta": false, "retroalimentacion": "La Defensoría hace parte del Ministerio Público, pero su función es promover y proteger los derechos humanos, no investigar el manejo del dinero público." },
-        { "letra": "C", "texto": "La Procuraduría, porque vigila la conducta de los servidores públicos y adelanta investigaciones disciplinarias.", "correcta": false, "retroalimentacion": "Es el distractor más cercano: la Procuraduría sí podría abrir una investigación disciplinaria por el incumplimiento de deberes. Pero determinar el daño patrimonial y su resarcimiento es control fiscal, tarea de la Contraloría." },
-        { "letra": "D", "texto": "El Concejo municipal, porque es el órgano de la rama judicial encargado de juzgar al alcalde.", "correcta": false, "retroalimentacion": "El concejo es una corporación administrativa de elección popular que ejerce control político sobre la administración municipal; no pertenece a la rama judicial ni adelanta procesos de responsabilidad fiscal." }
+        {
+          "letra": "A",
+          "texto": "económicos, sociales y culturales.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "colectivos y ambientales.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "de los pueblos.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "civiles y políticos.",
+          "correcta": true,
+          "retroalimentacion": null
+        }
       ],
-      "explicacion": "Un mismo hecho puede dar lugar a **tres investigaciones distintas** que avanzan en paralelo:\n• **Fiscal** (Contraloría): ¿se perdieron recursos públicos?, ¿quién debe responder por ellos?\n• **Disciplinaria** (Procuraduría o personería): ¿el servidor público incumplió sus deberes?\n• **Penal** (Fiscalía General de la Nación, que pertenece a la rama judicial): ¿se cometió un delito?\nLa pregunta pide establecer el daño al patrimonio y quién responde económicamente: eso es **control fiscal**. Según el origen de los recursos, lo ejerce la contraloría territorial (departamental o municipal) o la Contraloría General de la República. La Contraloría y el Ministerio Público (Procuraduría, Defensoría del Pueblo y personerías) son los órganos de control del Estado.",
+      "explicacion": "",
       "tiempo_estimado_seg": 120,
-      "etiquetas": ["órganos de control", "contraloría", "procuraduría", "veedurías ciudadanas"]
+      "etiquetas": []
     },
     {
-      "codigo": "SOC-POL-02",
-      "subtema": "politica",
-      "dificultad": 3,
-      "competencia": "Interpretación y análisis de perspectivas",
+      "codigo": "SOC-C91-01",
+      "subtema": "constitucion-de-1991",
+      "dificultad": 2,
+      "competencia": null,
       "contexto_ref": null,
-      "contexto": "En un foro sobre descentralización se escucharon estas intervenciones (testimonios ficticios):\n• Gobernadora: “Los departamentos y municipios conocen mejor las necesidades de su gente. Deberían recibir más recursos y decidir con mayor autonomía en qué invertirlos.”\n• Funcionario del Gobierno nacional: “Muchos municipios pequeños tienen poco personal técnico y recaudan muy pocos impuestos propios. Si se les transfieren más recursos sin fortalecer esas capacidades, aumenta el riesgo de que se malgasten.”\n• Líder comunitaria de una vereda: “Las decisiones sobre nuestras vías y escuelas se toman muy lejos de aquí. Con más autonomía local, la comunidad podría participar directamente en la definición del presupuesto.”",
-      "enunciado": "¿Cuál de las siguientes propuestas recoge a la vez la preocupación del funcionario nacional y las aspiraciones de la gobernadora y de la líder comunitaria?",
+      "contexto": "Luego de tres meses de una huelga, promovida por trabajadores pertenecientes al sindicato de una empresa privada de textiles que reclamaban un incremento salarial, las directivas de la empresa tomaron tres decisiones:\n1. Incrementar dos días de vacaciones a fin de año.\n2. Otorgar bonos económicos anuales a los trabajadores que demostraran mayores niveles de productividad.\n3. Reducir en treinta minutos la jornada laboral el último viernes de cada mes a los trabajadores que renunciaran a formar parte del sindicato que promovió la huelga.\nEsta última medida, argumentaron las directivas, tendría como fin evitar, a futuro, posibles afectaciones en las utilidades de la empresa derivadas del cese de actividades.",
+      "enunciado": "A la luz de la Constitución Política de Colombia, la tercera decisión de la empresa es",
       "imagen": null,
       "imagen_alt": null,
       "opciones": [
-        { "letra": "A", "texto": "Centralizar en el Gobierno nacional la ejecución de las vías y escuelas, para evitar que los recursos se pierdan en los municipios.", "correcta": false, "retroalimentacion": "Responde solo a la preocupación del funcionario y va en contra de la autonomía territorial que piden la gobernadora y la líder comunitaria." },
-        { "letra": "B", "texto": "Aumentar las transferencias a los municipios sin ninguna condición, pues la autonomía territorial impide cualquier tipo de control.", "correcta": false, "retroalimentacion": "Recoge solo la aspiración de la gobernadora e ignora el riesgo señalado por el funcionario. Además, es falso que la autonomía impida el control: las entidades territoriales están sujetas a los órganos de control y a la vigilancia ciudadana." },
-        { "letra": "C", "texto": "Reemplazar al concejo municipal por asambleas veredales que decidan todo el presupuesto sin intervención de las autoridades elegidas.", "correcta": false, "retroalimentacion": "Exagera la postura de la líder: ella pide participar, no reemplazar a las autoridades elegidas. Además, no responde a la preocupación del funcionario por la capacidad técnica." },
-        { "letra": "D", "texto": "Transferir más recursos y competencias, acompañados de asistencia técnica a los municipios y de presupuestos participativos con veeduría ciudadana.", "correcta": true, "retroalimentacion": "Correcta. Amplía la autonomía (gobernadora), fortalece capacidades y control para reducir el riesgo de malgasto (funcionario) y abre espacios de participación directa (líder comunitaria)." }
+        {
+          "letra": "A",
+          "texto": "válida, porque las empresas privadas pueden otorgar beneficios a los trabajadores siempre y cuando estos se acojan a sus condiciones.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "inválida, porque los beneficios otorgados a los trabajadores pueden afectar el desempeño económico de la empresa.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "inválida, porque atenta contra el derecho de los trabajadores a la libre asociación y a la libertad sindical.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "válida, porque los sindicatos en una empresa privada vulneran los derechos de los trabajadores no sindicalizados.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
       ],
-      "explicacion": "La **descentralización** consiste en trasladar poder de decisión, funciones y recursos del nivel nacional a departamentos y municipios. En Colombia avanzó con la elección popular de alcaldes (desde 1988) y de gobernadores (desde 1991), y con las transferencias de la Nación a los territorios.\nPara resolver una pregunta de perspectivas de nivel alto, primero identifica el interés de cada actor:\n• Gobernadora: más recursos y **autonomía**.\n• Funcionario: evitar el **malgasto** por falta de capacidad técnica.\n• Líder comunitaria: **participación** directa de la comunidad.\nLuego busca la propuesta que no sacrifique a ningún actor. Solo la D combina autonomía, fortalecimiento técnico, control y participación; A, B y C responden a un solo actor o deforman lo que dijo.",
-      "tiempo_estimado_seg": 180,
-      "etiquetas": ["descentralización", "autonomía territorial", "participación ciudadana", "perspectivas"]
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
     },
     {
-      "codigo": "SOC-CIU-01",
-      "subtema": "ciudadania",
-      "dificultad": 1,
-      "competencia": "Pensamiento social",
+      "codigo": "SOC-C91-02",
+      "subtema": "constitucion-de-1991",
+      "dificultad": 2,
+      "competencia": null,
       "contexto_ref": null,
-      "contexto": "En el municipio ficticio de La Esperanza, la alcaldesa fue elegida con un programa de gobierno que prometía construir un acueducto veredal y un puesto de salud. Después de un año y medio de gobierno, un grupo de ciudadanos considera que ella no ha cumplido ese programa y quiere que deje el cargo antes de que termine su periodo.",
-      "enunciado": "¿Qué mecanismo de participación ciudadana, reconocido en la Constitución de 1991, permite a los ciudadanos lograr este propósito?",
+      "contexto": "En una de las carreteras de un país, un grupo de policías le pidió a un ciudadano que se sometiera a una prueba de alcoholemia. Aunque se encontraba conduciendo un carro particular, para entonces el ciudadano ocupaba el cargo de senador. Si bien la prueba de alcoholemia es un procedimiento legal que se le realiza a cualquier ciudadano, el entonces senador les solicitó a los oficiales no ser sometido a dicho procedimiento, debido a que él desempeñaba un cargo de representación popular. También les dijo que seguramente sus electores reprobarían que a él se le estuvieran haciendo ese tipo de exigencias, y que podría comunicarse con los jefes inmediatos de los oficiales para interponer la respectiva queja.",
+      "enunciado": "La situación anteriormente descrita es un ejemplo de",
       "imagen": null,
       "imagen_alt": null,
       "opciones": [
-        { "letra": "A", "texto": "El cabildo abierto, porque en él los ciudadanos votan para destituir a los funcionarios municipales.", "correcta": false, "retroalimentacion": "El cabildo abierto es una sesión pública de una corporación, como el concejo o la junta administradora local, en la que los habitantes discuten asuntos de interés comunitario; no sirve para destituir a nadie." },
-        { "letra": "B", "texto": "La acción de tutela, porque protege a la comunidad cuando un gobernante incumple sus promesas de campaña.", "correcta": false, "retroalimentacion": "La tutela es un mecanismo judicial para proteger derechos fundamentales; no es un mecanismo de participación ni sirve para terminar el mandato de un gobernante." },
-        { "letra": "C", "texto": "La revocatoria del mandato, porque permite a los ciudadanos dar por terminado el mandato de un alcalde o de un gobernador.", "correcta": true, "retroalimentacion": "Correcta. Es el mecanismo con el que los ciudadanos pueden terminar anticipadamente el mandato de alcaldes y gobernadores, por ejemplo, por incumplir el programa con el que fueron elegidos." },
-        { "letra": "D", "texto": "El plebiscito, porque permite a los habitantes de un municipio elegir un nuevo alcalde en cualquier momento.", "correcta": false, "retroalimentacion": "El plebiscito lo convoca el presidente de la República para que el pueblo apoye o rechace una decisión del Ejecutivo; no sirve para cambiar alcaldes." }
+        {
+          "letra": "A",
+          "texto": "irrespeto a la dignidad de un senador de la República por parte de la Policía Nacional.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "abuso de autoridad porque el senador utiliza su cargo para tratar de impedir que se cumpla la ley.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "defensa jurídica por parte del senador, al sentir que se presenta vulneración de un derecho fundamental.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "conducta irregular por parte de la Policía Nacional, porque los oficiales no tienen la competencia para juzgar a un senador.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
       ],
-      "explicacion": "La Constitución de 1991 creó una **democracia participativa**: además de votar, los ciudadanos pueden intervenir directamente en las decisiones públicas. El artículo 103 enumera los mecanismos de participación: el voto, el plebiscito, el referendo, la consulta popular, el cabildo abierto, la iniciativa legislativa y la revocatoria del mandato.\nLa **revocatoria del mandato** permite terminar anticipadamente el periodo de un alcalde o de un gobernador. Se relaciona con el **voto programático**: quien elige a un alcalde o gobernador le impone como mandato el programa que presentó al inscribirse como candidato.\nLa ley fija requisitos para usarla, como recoger un número mínimo de firmas, que haya pasado un tiempo mínimo desde la posesión y que la ciudadanía la apruebe en una votación.\nLa tutela (B) es un mecanismo de protección, no de participación; el cabildo abierto (A) y el plebiscito (D) tienen otros fines.",
-      "tiempo_estimado_seg": 75,
-      "etiquetas": ["mecanismos de participación", "revocatoria del mandato", "voto programático", "constitución de 1991"]
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
     },
     {
-      "codigo": "SOC-CIU-02",
-      "subtema": "ciudadania",
-      "dificultad": 3,
-      "competencia": "Pensamiento social",
+      "codigo": "SOC-C91-03",
+      "subtema": "constitucion-de-1991",
+      "dificultad": 2,
+      "competencia": null,
       "contexto_ref": null,
-      "contexto": "Analiza las siguientes situaciones (casos ficticios):\n1. Hace dos meses, Luz Marina radicó una petición escrita en la Secretaría de Educación municipal para conocer los cupos escolares disponibles para su hija. Hasta hoy no ha recibido ninguna respuesta.\n2. Un joven fue capturado sin orden judicial y sin haber sido sorprendido cometiendo un delito. Han pasado más de 36 horas y no ha sido puesto a disposición de un juez.\n3. Los habitantes de un barrio quieren que un juez ordene detener los vertimientos tóxicos que una fábrica hace en la quebrada que atraviesa el sector y que afectan a toda la comunidad.",
-      "enunciado": "¿Cuál es el mecanismo judicial más adecuado para cada situación?",
+      "contexto": null,
+      "enunciado": "De acuerdo con la Constitución Política de 1991, Colombia se define como un Estado social de derecho, lo cual implica que",
       "imagen": null,
       "imagen_alt": null,
       "opciones": [
-        { "letra": "A", "texto": "1: acción de tutela; 2: hábeas corpus; 3: acción popular.", "correcta": true, "retroalimentacion": "Correcta. En la situación 1 se vulneró el derecho fundamental de petición (no hubo respuesta), que se protege con tutela; en la 2 hay una privación ilegal de la libertad (hábeas corpus); en la 3 se afecta un derecho colectivo, el ambiente sano (acción popular)." },
-        { "letra": "B", "texto": "1: derecho de petición; 2: acción de tutela; 3: acción de cumplimiento.", "correcta": false, "retroalimentacion": "Luz Marina ya ejerció el derecho de petición, que además no es una acción judicial. Para la detención ilegal existe un mecanismo específico y más rápido, el hábeas corpus, y la acción de cumplimiento sirve para exigir que se cumpla una ley o un acto administrativo, no para proteger derechos colectivos." },
-        { "letra": "C", "texto": "1: acción de cumplimiento; 2: hábeas corpus; 3: acción de tutela.", "correcta": false, "retroalimentacion": "Acierta solo en la situación 2. En la 1 lo vulnerado es un derecho fundamental, que se protege con tutela, y en la 3 el derecho afectado es colectivo, por lo que corresponde la acción popular." },
-        { "letra": "D", "texto": "1: derecho de petición; 2: hábeas corpus; 3: acción popular.", "correcta": false, "retroalimentacion": "Es la opción más tentadora, pero falla en la situación 1: la petición ya se presentó y no fue respondida, así que lo que procede es acudir a un juez mediante tutela. El derecho de petición no es una acción judicial: se ejerce directamente ante las autoridades." }
+        {
+          "letra": "A",
+          "texto": "el Estado debe garantizar los derechos fundamentales y el bienestar de los ciudadanos, y las autoridades están sometidas a la ley.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "el gobernante tiene poder absoluto sobre las leyes.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "los derechos solo se reconocen a quienes pagan impuestos.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "el Estado no interviene en asuntos sociales.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
       ],
-      "explicacion": "Para elegir el mecanismo, sigue tres pasos: **1)** ¿qué derecho se vulnera?, **2)** ¿es individual o colectivo?, **3)** ¿existe un mecanismo específico para ese caso?\n• Situación 1: la petición es un derecho fundamental (art. 23) y la ley fija plazos breves para responder (la regla general es de 15 días hábiles). Como la petición ya se presentó y no fue respondida, procede la **acción de tutela** (art. 86) para que un juez ordene responder.\n• Situación 2: toda persona detenida debe ser puesta a disposición de un juez dentro de las 36 horas siguientes. Ante una privación ilegal de la libertad procede el **hábeas corpus** (art. 30), que debe resolverse en un término de 36 horas.\n• Situación 3: el ambiente sano es un derecho colectivo; se protege con la **acción popular** (art. 88).\nLa acción de cumplimiento (art. 87) sirve para exigir que una autoridad cumpla una ley o un acto administrativo, lo que no corresponde a ninguno de los tres casos.",
-      "tiempo_estimado_seg": 180,
-      "etiquetas": ["mecanismos de protección", "acción de tutela", "hábeas corpus", "acción popular"]
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "SOC-MPA-01",
+      "subtema": "mecanismos-de-participacion",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": "En distintas ciudades del país, grupos defensores de los animales, conocidos como “animalistas”, se han opuesto a ciertas actividades como las peleas de gallos y las corridas de toros, pues consideran que en estas, por su carácter violento, se atenta contra el bienestar de los animales. Por su parte, los promotores de tales actividades defienden su derecho a realizarlas, pues afirman que hacen parte del contexto cultural de su ciudad. Los animalistas se han dirigido al Congreso para que se dicten leyes que prohíban la realización de dichas actividades, mientras que los promotores proponen que la decisión sea tomada por el pueblo por medio de consultas ciudadanas.",
+      "enunciado": "De acuerdo con el enunciado anterior, puede afirmarse que ambos grupos defienden",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "los principios éticos que pesan sobre la vida animal.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "las decisiones democráticas.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "el respeto por las tradiciones culturales.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "el derecho a escoger libremente estrategias con fines recreativos.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "SOC-MPA-02",
+      "subtema": "mecanismos-de-participacion",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": "En Buenos Aires, Argentina, vecinos y vecinas de un asentamiento urbano informal que se cansaron de esperar estudiaron enfermería y conducción de ambulancias y crearon la Central de Emergencias Villeras: cinco vehículos recorren 20 asentamientos para llegar “allí donde el Estado no llega”. El sistema se sostiene gracias a 500 personas, no recibe ayuda de sectores privados ni del Estado, y se financia con fiestas, rifas y otros proyectos.",
+      "enunciado": "Aplicar en otra ciudad la iniciativa descrita requeriría",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "la asistencia del Estado y sus funcionarios para satisfacer las demandas de servicios de salud.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "la participación solidaria y organizada de la comunidad en proyectos autónomos.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "la donación, por parte de hospitales y clínicas, de los equipos médicos necesarios.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "la inversión económica de la empresa privada para apoyar proyectos comunitarios.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "SOC-MPA-03",
+      "subtema": "mecanismos-de-participacion",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "El mecanismo de participación ciudadana mediante el cual los votantes pueden decidir si destituyen a un alcalde antes de terminar su periodo se denomina",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "plebiscito.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "cabildo abierto.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "revocatoria del mandato.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "acción de tutela.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "SOC-MPR-01",
+      "subtema": "mecanismos-de-proteccion",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "Una persona considera que se le está vulnerando su derecho fundamental a la salud porque su EPS se niega a autorizar un tratamiento. El mecanismo más rápido para proteger su derecho es",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "la acción de cumplimiento.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "la acción de tutela.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "la acción popular.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "el referendo.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "SOC-MPR-02",
+      "subtema": "mecanismos-de-proteccion",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "Para proteger derechos colectivos, como el goce de un ambiente sano, los ciudadanos pueden interponer",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "una acción popular.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "un hábeas corpus.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "una acción de tutela individual.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "un acto legislativo.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "SOC-MPR-03",
+      "subtema": "mecanismos-de-proteccion",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "El hábeas corpus es un mecanismo que protege principalmente el derecho a",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "la salud.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "la educación.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "la propiedad privada.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "la libertad personal.",
+          "correcta": true,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "SOC-PRE-01",
+      "subtema": "prejuicios",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "A mediados de 2014, un reconocido periodista presentó algunas razones por las cuales se debía votar por una candidata presidencial. En relación con lo anterior, identifique cuál de estos enunciados guarda un prejuicio contra las mujeres.",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "“Elegir a la candidata sería un hito en la historia del país, porque sería la primera presidenta”.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "“La candidata posee propuestas claras, pese a su inexperiencia en cargos públicos”.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "“La candidata no es la típica mujer que se dejaría manipular en la escena política”.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "“Aunque los estudios universitarios de la candidata no hayan sido en Colombia, posee la formación académica adecuada para este cargo”.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "SOC-PRE-02",
+      "subtema": "prejuicios",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "La afirmación “los jóvenes son irresponsables” es un ejemplo de",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "un hecho verificable.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "un argumento válido basado en datos.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "prejuicio, porque generaliza sin evidencia sobre todo un grupo.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "una estadística oficial.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "SOC-PRE-03",
+      "subtema": "prejuicios",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "Una consecuencia social de los prejuicios hacia un grupo étnico es",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "una mayor participación política del grupo.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "la discriminación y la exclusión de ese grupo.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "la igualdad de oportunidades.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "el fortalecimiento de la convivencia.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "SOC-ME1-01",
+      "subtema": "modelos-economicos-i",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "En un modelo capitalista de mercado, los precios de los bienes se determinan principalmente por",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "las decisiones del Estado.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "la planificación central.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "los sindicatos de trabajadores.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "la oferta y la demanda.",
+          "correcta": true,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "SOC-ME1-02",
+      "subtema": "modelos-economicos-i",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "Una característica del modelo socialista de planificación centralizada es que",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "el Estado planifica la producción y controla los principales medios de producción.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "los medios de producción son de propiedad privada.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "existe libre competencia entre empresas.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "el Estado no interviene en la economía.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "SOC-ME1-03",
+      "subtema": "modelos-economicos-i",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "La propiedad privada de los medios de producción es característica del",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "socialismo.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "comunismo.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "capitalismo.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "feudalismo.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "SOC-ME2-01",
+      "subtema": "modelos-economicos-ii",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "John Maynard Keynes sostenía que, en épocas de crisis, el Estado debe",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "reducir al mínimo el gasto público.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "aumentar la inversión pública para estimular la demanda.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "eliminar impuestos y regulaciones.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "cerrar las fronteras al comercio.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "SOC-ME2-02",
+      "subtema": "modelos-economicos-ii",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "Una política típica del modelo neoliberal es",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "privatizar empresas estatales y reducir la intervención del Estado.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "nacionalizar las empresas privadas.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "fijar por ley el precio de todos los productos.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "prohibir las importaciones.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "SOC-ME2-03",
+      "subtema": "modelos-economicos-ii",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "La globalización económica se caracteriza por",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "el aislamiento de los mercados nacionales.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "la desaparición del comercio internacional.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "la autosuficiencia total de cada país.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "la creciente integración de mercados, flujos de capital, bienes e información entre países.",
+          "correcta": true,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "SOC-HM1-01",
+      "subtema": "historia-del-mundo-i",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "El Imperio romano de Occidente cayó en el año",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "330 d. C.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "1453 d. C.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "1492 d. C.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "476 d. C.",
+          "correcta": true,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "SOC-HM1-02",
+      "subtema": "historia-del-mundo-i",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "La religión monoteísta fundada por Mahoma en el siglo VII es",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "el islam.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "el cristianismo.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "el judaísmo.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "el budismo.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "SOC-HM1-03",
+      "subtema": "historia-del-mundo-i",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "La Edad Media se extiende aproximadamente entre",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "los siglos I y V.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "los siglos XV y XVIII.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "los siglos V y XV.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "los siglos X y XX.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "SOC-HM2-01",
+      "subtema": "historia-del-mundo-ii",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "En el feudalismo, la relación entre el señor feudal y el vasallo se basaba en",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "el comercio libre entre iguales.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "la protección y la concesión de tierras a cambio de fidelidad y servicio.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "el pago de salarios en dinero.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "la elección democrática de los gobernantes.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "SOC-HM2-02",
+      "subtema": "historia-del-mundo-ii",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "Las cruzadas fueron expediciones militares cristianas cuyo objetivo declarado era",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "recuperar Jerusalén y los lugares santos.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "conquistar el continente americano.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "expulsar a los mongoles de Europa.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "abolir el sistema feudal.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "SOC-HM2-03",
+      "subtema": "historia-del-mundo-ii",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "El Renacimiento se caracterizó por",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "el predominio absoluto del teocentrismo.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "el fortalecimiento del feudalismo.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "el rechazo al arte y a la ciencia.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "el humanismo y el renovado interés por la cultura clásica.",
+          "correcta": true,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "SOC-HM3-01",
+      "subtema": "historia-del-mundo-iii",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": "El progreso industrial en los países europeos tuvo como consecuencia inevitable una política imperialista, expresada en el afán por extender su dominio territorial a otros continentes ricos en recursos naturales y en materias primas. Es así como Inglaterra, Francia y Alemania competían por colonizar África, Asia y América para asegurar el poderío mundial que aún hoy mantienen.\nDe acuerdo con este planteamiento, se puede concluir acertadamente que\n1. la idea de progreso benefició a los países subdesarrollados.\n2. los países europeos han civilizado al mundo entero.\n3. el capitalismo promovió las políticas imperialistas.\n4. el progreso europeo se dio gracias a los recursos de sus colonias.",
+      "enunciado": "Solo dos de las afirmaciones anteriores son correctas. ¿Cuáles son?",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "Afirmaciones 1 y 2",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "Afirmaciones 2 y 3",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "Afirmaciones 3 y 4",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "Afirmaciones 2 y 4",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "SOC-HM3-02",
+      "subtema": "historia-del-mundo-iii",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "La Revolución francesa de 1789 se inspiró en el lema",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "Dios, patria y rey.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "paz, pan y tierra.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "libertad, igualdad y fraternidad.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "orden y progreso.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "SOC-HM3-03",
+      "subtema": "historia-del-mundo-iii",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "La Revolución Industrial se inició en el siglo XVIII en",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "Francia.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "Inglaterra.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "España.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "Rusia.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "SOC-HXX-01",
+      "subtema": "historia-del-siglo-xx",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": "Lea atentamente el siguiente fragmento, tomado de una intervención pública de un famoso líder político del siglo XX: “La libertad se enfrenta a muchas dificultades y la democracia no es perfecta, pero nunca hemos tenido que levantar un muro para encerrar a nuestro pueblo, para prevenir que la gente se vaya. [...] Pese a que el muro es la más obvia y viva demostración del fracaso del sistema comunista a ojos del mundo entero [...] es una ofensa contra la humanidad, que separa familias, divide maridos y esposas, hermanos y hermanas [...]”",
+      "enunciado": "De los siguientes argumentos, ¿cuál permite enmarcar temporalmente el anterior fragmento en los años de la Guerra Fría?",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "El discurso hace referencia al muro de Berlín y la división de Alemania en dos repúblicas, sucesos posteriores a la Segunda Guerra Mundial.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "El discurso presenta evidencia que lo vincula al ascenso del Partido Nacionalsocialista en Alemania durante las décadas del 20 y 30 del siglo XX.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "El discurso hace referencia a la caída del muro de Berlín y la reunificación alemana, sucesos posteriores a la Primera Guerra Mundial.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "El discurso presenta evidencia de la división, a principios del siglo XX, del Imperio alemán, suceso que fue formalizado con el Tratado de Versalles.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "SOC-HXX-02",
+      "subtema": "historia-del-siglo-xx",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "Irlanda se separó de Inglaterra en 1921, consiguió su independencia por completo en 1937 y se constituyó en república en 1949. Desde entonces se ha acrecentado un conflicto territorial en el norte de Irlanda, el cual surgió fundamentalmente porque seis de sus provincias desean adherirse al Reino Unido debido a que comparten su religión. Se puede señalar que el conflicto se ha originado sustancialmente porque allí",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "actúa el grupo radical IRA, que tiene como objetivos centrales lograr la unidad nacional en Irlanda y no permitir su fragmentación territorial.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "existe un porcentaje importante de cristianos protestantes que no comparten las doctrinas del catolicismo romano presente en la mayor parte de Irlanda.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "surgió un grupo extremista, constituido por algunos cristianos protestantes para contrarrestar las acciones del IRA contra su libertad de culto.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "existe una imposición de límites estatales que no coinciden con las áreas que tradicionalmente han profesado diferentes vertientes religiosas.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "SOC-HXX-03",
+      "subtema": "historia-del-siglo-xx",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "La Primera Guerra Mundial (1914-1918) se desencadenó inmediatamente después de",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "la caída del muro de Berlín.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "la Revolución rusa de 1917.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "el ascenso del partido nazi al poder.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "el asesinato del archiduque Francisco Fernando en Sarajevo.",
+          "correcta": true,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "SOC-HL1-01",
+      "subtema": "historia-de-latinoamerica-i",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": "La esclavitud ha sido un sistema presente en casi todas las sociedades, regiones geográficas y periodos históricos. En el continente africano, la esclavitud fue practicada durante siglos antes de la llegada de los europeos: en la mayoría de casos, los esclavos eran capturados en guerras y comercializados a través de caravanas transaharianas por mercaderes musulmanes; en su mayoría, las mujeres y los niños eran utilizados principalmente en labores domésticas, y ocupaban un porcentaje mínimo dentro de la fuerza de trabajo. Luego de la conquista de América y la consolidación del comercio transatlántico, este fue monopolizado por los imperios europeos, particularmente por los holandeses, los ingleses y los franceses, quienes realizaron traslados masivos de esclavos africanos para trabajar en las plantaciones e ingenios azucareros; para la segunda mitad del siglo XVIII, aproximadamente 1.400.000 esclavos trabajaban en las plantaciones azucareras.",
+      "enunciado": "De acuerdo con la información anterior, ¿qué cambió en la historia de la esclavitud en África antes y después de la conquista de América?",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "Los sistemas políticos involucrados en el comercio esclavista, el volumen del comercio esclavista y las prácticas religiosas de los esclavos.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "Las técnicas para capturar esclavos, la justificación ideológica para la esclavización y los sistemas políticos involucrados en el comercio esclavista.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "La composición demográfica de los esclavos, la intensidad del comercio y el rol en el sistema productivo al cual eran destinados los esclavos.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "Las mejoras tecnológicas en la producción agrícola, la composición demográfica de los esclavos y el impacto ambiental de los sistemas económicos.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "SOC-HL1-02",
+      "subtema": "historia-de-latinoamerica-i",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "La conquista del Imperio azteca fue dirigida por",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "Hernán Cortés.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "Francisco Pizarro.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "Cristóbal Colón.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "Vasco Núñez de Balboa.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "SOC-HL1-03",
+      "subtema": "historia-de-latinoamerica-i",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "En la época colonial, el sistema por el cual los indígenas debían entregar tributo o trabajo a un español encargado de “protegerlos” y evangelizarlos se llamaba",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "república de indios.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "sindicato.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "encomienda.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "cabildo.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "SOC-HL2-01",
+      "subtema": "historia-de-latinoamerica-ii",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "El líder que impulsó la independencia de varios países de Sudamérica y propuso la creación de la Gran Colombia fue",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "José Artigas.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "Simón Bolívar.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "Porfirio Díaz.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "Benito Juárez.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "SOC-HL2-02",
+      "subtema": "historia-de-latinoamerica-ii",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "La Revolución mexicana, iniciada en 1910, se levantó contra la dictadura de",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "Porfirio Díaz.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "Antonio López de Santa Anna.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "Benito Juárez.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "Francisco Madero.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "SOC-HL2-03",
+      "subtema": "historia-de-latinoamerica-ii",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "La Revolución cubana triunfó en 1959 bajo el liderazgo de",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "Juan Domingo Perón.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "Salvador Allende.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "Getúlio Vargas.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "Fidel Castro.",
+          "correcta": true,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "SOC-HC1-01",
+      "subtema": "historia-de-colombia-i",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": "Lea con atención los siguientes textos:\nEntre octubre de 1899 y noviembre de 1902, en Colombia se libró una guerra civil que enfrentó a las fuerzas del Gobierno, centralista y conservador, con los sectores más radicales del Partido Liberal. “La guerra de los Mil Días”, como es conocida, dejó al final al país con una economía destrozada y con un drama social de más de 100.000 muertos.\nEl 3 de noviembre de 1903, la provincia de Panamá se separa de Colombia y sus élites liberales la proclaman como una República independiente. Esta separación contó con el apoyo militar y económico de los Estados Unidos, como parte de una estrategia de los norteamericanos para fortalecer su hegemonía y su influencia en América Latina. El Estado colombiano poco pudo hacer para impedir la pérdida del istmo de Panamá.",
+      "enunciado": "De acuerdo con los dos textos, ¿qué relación existe entre la guerra de los Mil Días y la separación de Panamá de Colombia?",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "Las tensiones entre los proyectos centralistas y federalistas le impidieron al Gobierno colombiano mantener la paz y la soberanía sobre el territorio nacional.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "Las guerras internas de Colombia y la correspondiente pérdida de la provincia de Panamá son consecuencia directa de las políticas imperialistas de los Estados Unidos.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "El control sobre la posición geoestratégica de Panamá motivó los enfrentamientos dados en la guerra de los Mil Días y en la separación del istmo de Colombia.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "La separación de Panamá es consecuencia de los deseos separatistas de las provincias de Colombia, los cuales motivaron la guerra de los Mil Días.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "SOC-HC1-02",
+      "subtema": "historia-de-colombia-i",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "El 20 de julio de 1810 se considera el inicio del proceso de",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "la Constitución de 1991.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "la guerra de los Mil Días.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "independencia de la Nueva Granada.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "la separación de Panamá.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "SOC-HC1-03",
+      "subtema": "historia-de-colombia-i",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "La Batalla de Boyacá, que selló la independencia de la Nueva Granada, ocurrió en",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "1810.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "1819.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "1830.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "1886.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "SOC-HC2-01",
+      "subtema": "historia-de-colombia-ii",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": "Lea atentamente el siguiente fragmento, tomado de un discurso presidencial: “Los militares podemos afirmar, satisfechos y tranquilos, que hoy continuamos tan unidos y vigilantes al servicio exclusivo de la Patria, como el día en que la Divina Providencia hizo estallar de júbilo a Colombia, al poner en nuestras manos la responsabilidad del Gobierno. [...] Dios es testigo de que en los actos de mi vida sólo he buscado el bienestar de mis conciudadanos y de que antes del 13 de junio trabajé sincera e incansablemente para que las circunstancias no me obligaran a recibir el poder. [...]”",
+      "enunciado": "¿En qué periodo histórico nacional se inscribe este discurso?",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "El periodo bipartidista denominado Frente Nacional (1958-1974).",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "El mandato de Jorge Eliécer Gaitán (1946-1950).",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "La dictadura del general Gustavo Rojas Pinilla (1953-1957).",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "La guerra de los Mil Días (1899-1902).",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "SOC-HC2-02",
+      "subtema": "historia-de-colombia-ii",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "La Constitución Política vigente en Colombia fue promulgada en",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "1886.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "1863.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "1948.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "1991.",
+          "correcta": true,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "SOC-HC2-03",
+      "subtema": "historia-de-colombia-ii",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "El periodo conocido como “La Violencia” en Colombia se intensificó tras el asesinato de",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "Jorge Eliécer Gaitán.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "Rafael Uribe Uribe.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "Luis Carlos Galán.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "Gustavo Rojas Pinilla.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "SOC-EVC-01",
+      "subtema": "eventos-canonicos",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "El descubrimiento de América por Cristóbal Colón ocurrió en el año",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "1453.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "1519.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "1492.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "1810.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "SOC-EVC-02",
+      "subtema": "eventos-canonicos",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "La Segunda Guerra Mundial terminó en el año",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "1918.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "1945.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "1939.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "1962.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "SOC-EVC-03",
+      "subtema": "eventos-canonicos",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "La caída del muro de Berlín, símbolo del fin de la Guerra Fría, ocurrió en",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "1989.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "1961.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "1945.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "1991.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
     }
   ]
 }

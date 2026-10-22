@@ -22,7 +22,9 @@ function resumen(niveles, logros, insignias, racha) {
         h('p', {}, `Nivel ${actual.nivel.numero}`),
         h('h2', {}, actual.nivel.nombre),
         h('div', { class: 'barra', style: { '--valor': `${actual.progreso}%`, '--color': 'var(--lima)' } }),
-        h('p', {}, actual.siguiente ? `${formatoNumero(actual.xp)} XP · faltan ${formatoNumero(actual.siguiente.faltan)} para ${actual.siguiente.nombre}` : `${formatoNumero(actual.xp)} XP · ¡Nivel máximo!`))),
+        h('p', {}, actual.siguiente
+          ? `${formatoNumero(actual.xp)} XP · ${actual.siguiente.cumplidos} de ${actual.siguiente.requisitos.length} requisitos para ${actual.siguiente.nombre}`
+          : `${formatoNumero(actual.xp)} XP · ¡Nivel máximo!`))),
     dato('trophy', `${obtenidos}/${logros.length}`, 'Logros'),
     dato('award', `${insignias.filter((i) => i.obtenida).length}`, 'Insignias'),
     dato('flame', `${racha.actual} días`, 'Racha actual'),
@@ -43,8 +45,26 @@ function panelLogros(logros) {
       l.insignia ? h('span', { class: 'chip chip-lima mt-4' }, icono(l.insignia.icono, 'icono-sm'), `Insignia: ${l.insignia.nombre}`) : null))));
 }
 
+/** Valor actual de un requisito, con su unidad. */
+function valorRequisito(r) {
+  const unidad = { xp: ' XP', precision: ' %', temario_area: ' %', actividades: ' %' }[r.clave] ?? '';
+  return `${formatoNumero(r.actual ?? 0)}${unidad} de ${formatoNumero(r.meta)}${unidad}`;
+}
+
+/** Requisitos del siguiente nivel con el avance del estudiante. */
+function listaRequisitos(requisitos) {
+  return h('ul', { class: 'requisitos-nivel' }, requisitos.map((r) => h('li', { class: r.cumplido ? 'cumplido' : '' },
+    icono(r.cumplido ? 'circle-check' : 'circle-dot', 'icono-sm'),
+    h('div', {},
+      h('strong', {}, r.etiqueta), ' · ', h('span', {}, valorRequisito(r)),
+      r.detalle ? h('div', { class: 'detalle-requisito' }, r.detalle.map((d) => h('span', { class: 'chip' }, `${d.nombre}: ${d.completados}/${d.total}`))) : null))));
+}
+
 function panelNiveles(niveles) {
-  return h('div', { class: 'tarjeta' }, h('div', { class: 'ruta-niveles' }, niveles.niveles.map((n) => h('div', { class: `nivel-ruta ${n.alcanzado ? 'alcanzado' : ''}` },
+  const siguiente = niveles.actual.siguiente;
+  return h('div', { class: 'tarjeta' },
+    h('p', { class: 'texto-2 texto-sm' }, 'Para subir de nivel necesitas la XP y todos los requisitos académicos del nivel: días de estudio, preguntas respondidas, porcentaje de aciertos y avance en el temario de Lectura Crítica, Matemáticas, Sociales y Ciudadanas, Ciencias Naturales e Inglés. Tu nivel nunca baja.'),
+    h('div', { class: 'ruta-niveles' }, niveles.niveles.map((n) => h('div', { class: `nivel-ruta ${n.alcanzado ? 'alcanzado' : ''}` },
     h('span', { class: 'medalla', style: { '--color': n.color } }, icono(n.icono)),
     h('div', {},
       h('div', { class: 'fila envolver gap-2' },
@@ -52,9 +72,15 @@ function panelNiveles(niveles) {
         n.numero === niveles.actual.nivel.numero ? h('span', { class: 'chip chip-xp' }, 'Tu nivel actual') : n.alcanzado ? h('span', { class: 'chip chip-exito' }, icono('check', 'icono-sm'), 'Alcanzado') : h('span', { class: 'chip' }, icono('lock', 'icono-sm'), 'Bloqueado')),
       h('span', { class: 'xp' }, `${formatoNumero(n.xp_minimo)} XP${n.recompensa_monedas ? ` · recompensa: ${n.recompensa_monedas} monedas` : ''}`),
       h('p', { class: 'texto-2 texto-sm mb-0' }, n.descripcion),
+      n.numero > 1 && siguiente && n.numero === siguiente.numero
+        ? [h('p', { class: 'etiqueta-requisitos' }, `Requisitos (${siguiente.cumplidos} de ${siguiente.requisitos.length} cumplidos)`), listaRequisitos(siguiente.requisitos)]
+        : n.numero > 1
+          ? [h('p', { class: 'etiqueta-requisitos' }, 'Requisitos'), h('ul', {}, n.requisitos.map((r) => h('li', {}, r.texto)))]
+          : null,
+      h('p', { class: 'etiqueta-requisitos' }, 'Desbloquea'),
       h('ul', {},
         n.desbloqueos.map((d) => h('li', {}, d)),
-        n.subtemas.length ? h('li', {}, h('strong', {}, 'Subtemas: '), n.subtemas.join(', ')) : null,
+        n.subtemas.length ? h('li', {}, h('strong', {}, 'Temas: '), n.subtemas.join(', ')) : null,
         n.retos.length ? h('li', {}, h('strong', {}, 'Retos: '), n.retos.join(', ')) : null))))));
 }
 
@@ -63,7 +89,7 @@ function panelInsignias(insignias) {
     h('span', { class: `medalla medalla-lg ${i.obtenida ? '' : 'bloqueada'}`, style: { '--color': i.color } }, icono(i.icono)),
     h('strong', {}, i.nombre),
     h('span', { class: `rareza ${i.rareza}` }, NOMBRE_RAREZA[i.rareza]),
-    h('span', {}, i.obtenida ? `Obtenida ${formatoFecha(i.obtenida_en, { day: 'numeric', month: 'short' })}` : i.origen === 'tienda' ? `En la tienda · ${i.precio_monedas} monedas` : i.descripcion))));
+    h('span', {}, i.obtenida ? `Obtenida ${formatoFecha(i.obtenida_en, { day: 'numeric', month: 'short' })}` : i.descripcion))));
 }
 
 function panelRacha(r) {
@@ -72,7 +98,7 @@ function panelRacha(r) {
   return [
     h('article', { class: 'tarjeta seccion' },
       h('div', { class: 'racha-grande' },
-        h('img', { src: '/img/fuego.svg', alt: '' }),
+        h('img', { src: '/img/fuego-racha.png', alt: '', width: 203, height: 256 }),
         h('div', { class: 'dato' }, h('strong', {}, r.actual), h('span', { class: 'texto-2 texto-sm' }, 'días de racha')),
         h('div', { class: 'dato' }, h('strong', {}, r.maxima), h('span', { class: 'texto-2 texto-sm' }, 'récord personal')),
         h('div', { class: 'dato' }, h('strong', {}, r.protectores), h('span', { class: 'texto-2 texto-sm' }, 'protectores (máx. 3)'))),

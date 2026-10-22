@@ -72,7 +72,8 @@ async function formatoExplicacion(ctx, adjunto, usuarioId) {
     partes.push(`Elegiste la **${elegida.letra}**: ${elegida.retroalimentacion ?? 'no es la respuesta correcta.'}`);
   }
   partes.push(`La respuesta correcta es la **${correcta.letra}**: ${correcta.texto}`);
-  partes.push(`**¿Por qué?** ${p.explicacion}`);
+  if (p.explicacion) partes.push(`**¿Por qué?** ${p.explicacion}`);
+  else if (correcta.retroalimentacion) partes.push(`**¿Por qué?** ${correcta.retroalimentacion}`);
   const tip = conocimientoDeSubtema(p.subtema.slug);
   if (tip?.tip_icfes) partes.push(`**Tip ICFES:** ${tip.tip_icfes}`);
   partes.push('¿Quieres intentar una pregunta parecida? Escribe **"genera una pregunta similar"**.');

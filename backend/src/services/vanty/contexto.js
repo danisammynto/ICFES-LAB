@@ -49,6 +49,7 @@ export async function construirContexto(usuarioId) {
          JOIN materias m ON m.id = t.materia_id
          LEFT JOIN respuestas r ON r.subtema_id = s.id AND r.usuario_id = $1 AND r.creado_en > now() - interval '90 days'
          LEFT JOIN progreso pr ON pr.subtema_id = s.id AND pr.usuario_id = $1
+        WHERE s.activo
         GROUP BY s.id, m.id`,
       [usuarioId],
     ),
@@ -84,7 +85,7 @@ export async function construirContexto(usuarioId) {
     estimarPuntajes(usuarioId, { fechaExamen: icfes.fecha }),
     perfil.siguiente_nivel
       ? varias(
-        `SELECT s.nombre FROM subtemas s WHERE s.nivel_requerido = $1 ORDER BY s.nombre`,
+        `SELECT s.nombre FROM subtemas s WHERE s.nivel_requerido = $1 AND s.activo ORDER BY s.nombre`,
         [perfil.siguiente_nivel],
       )
       : Promise.resolve([]),
@@ -164,10 +165,16 @@ export function contextoComoTexto(ctx) {
   lineas.push(`Perfil de rendimiento del estudiante (datos reales de ICFES Lab, fecha ${fechaLocal()}):`);
   lineas.push(`- Nombre: ${ctx.nombre}. Grado: ${ctx.grado ?? 'no indicado'}. Nivel ${ctx.nivel.numero} (${ctx.nivel.nombre}) con ${ctx.nivel.xp} XP.`);
   if (ctx.siguiente_nivel) {
-    lineas.push(`- Le faltan ${ctx.siguiente_nivel.faltan} XP para el nivel ${ctx.siguiente_nivel.nombre}${ctx.siguiente_nivel.desbloquea.length ? `, que desbloquea: ${ctx.siguiente_nivel.desbloquea.join(', ')}` : ''}.`);
+    lineas.push(`- Para el nivel ${ctx.siguiente_nivel.nombre} le faltan ${ctx.siguiente_nivel.faltan} XP, además de cumplir los requisitos de días de estudio, preguntas respondidas, porcentaje de aciertos y avance en el temario (se ven en Logros > Niveles)${ctx.siguiente_nivel.desbloquea.length ? `, que desbloquea: ${ctx.siguiente_nivel.desbloquea.join(', ')}` : ''}.`);
   }
   lineas.push(`- Racha actual: ${ctx.racha.actual} días (récord ${ctx.racha.maxima}). ${ctx.racha.estudio_hoy ? 'Ya estudió hoy' : 'Aún no ha estudiado hoy'} (${ctx.hoy.minutos} de ${ctx.meta_diaria_min} min de su meta diaria). Días activos en la última semana: ${ctx.dias_activos_7}.`);
-  if (ctx.icfes.dias != null) lineas.push(`- Faltan ${ctx.icfes.dias} días para su examen Saber 11 (${ctx.icfes.fecha}${ctx.icfes.estimada ? ', fecha estimada' : ''}).`);
+  if (ctx.icfes.dias != null) {
+    lineas.push(`- Faltan ${ctx.icfes.dias} días para su examen ${ctx.icfes.convocatoria ?? 'Saber 11'} (${ctx.icfes.fecha}, ${ctx.icfes.estado === 'citacion' ? 'fecha de su citación' : 'fecha oficial del ICFES'}).`);
+  } else if (ctx.icfes.calendario) {
+    lineas.push(`- Presentará el ${ctx.icfes.convocatoria}. El ICFES aún no ha publicado una fecha única de aplicación (suele presentarse ${ctx.icfes.meses}): no inventes la fecha.`);
+  } else {
+    lineas.push('- Aún no ha indicado en qué calendario (A o B) presentará el Saber 11.');
+  }
   lineas.push(`- Preguntas respondidas (90 días): ${ctx.respondidas_total}.`);
 
   const areas = ctx.areas.filter((a) => a.respondidas > 0);

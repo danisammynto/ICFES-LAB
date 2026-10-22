@@ -2,26 +2,31 @@
  * Configuración de la cuenta.
  */
 import { api } from '../core/api.js';
-import { $, $$, formatoFecha, h } from '../core/dom.js';
+import { $, $$, formatoFecha, h, montar } from '../core/dom.js';
 import { aplicarTema } from '../core/tema.js';
-import { cerrarSesion, iniciarPagina } from '../core/layout.js';
+import { cerrarSesion, iniciarPagina, procesarRecompensas } from '../core/layout.js';
 import { conCarga, modal, toast, toastError } from '../core/ui.js';
+import { textoCuentaRegresiva, textoMeses } from '../core/calendario.js';
 
 const formPreparacion = $('#preparacion');
+let estadoIcfes = null;
 
 function pintarTema(tema) {
   $$('#selector-tema button').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.tema === tema)));
 }
 
 async function cargar() {
-  const perfil = await api.get('/api/perfil');
+  const [perfil, publica] = await Promise.all([
+    api.get('/api/perfil'),
+    api.get('/api/config/publica', { redirigir401: false }).catch(() => null),
+  ]);
+  // Aunque el ICFES no haya publicado las fechas, se indica en qué meses suele presentarse cada calendario.
+  for (const letra of ['A', 'B']) {
+    const meses = publica?.calendarios_icfes?.[letra]?.meses ?? (letra === 'A' ? 'entre finales de julio y agosto' : 'en marzo');
+    $(`#meses-calendario-${letra}`).textContent = textoMeses(meses);
+  }
   const c = perfil.configuracion;
-  const global = perfil.icfes.fecha_global;
-  $('#texto-fecha-global').textContent = global
-    ? `${formatoFecha(global, { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' })}`
-    : 'Aún no definida por el administrador.';
-  formPreparacion.tipo_fecha.value = c.fecha_icfes ? 'personal' : 'global';
-  $('#fecha-personal').value = c.fecha_icfes ?? '';
+  pintarCalendario(perfil.icfes, c.calendario_icfes);
   $('#meta-diaria').value = String(c.meta_diaria_min);
   if (![...$('#meta-diaria').options].some((o) => o.value === String(c.meta_diaria_min))) {
     $('#meta-diaria').append(h('option', { value: c.meta_diaria_min, selected: true }, `${c.meta_diaria_min} minutos`));
@@ -32,29 +37,68 @@ async function cargar() {
   pintarTema(c.tema_interfaz);
 }
 
+/**
+ * Calendario del Saber 11 y, si el ICFES no publicó una fecha única, el dato que falta:
+ * la fecha de la citación (sin publicar) o cuál de las fechas oficiales corresponde (varias).
+ */
+function pintarCalendario(icfes, calendario) {
+  estadoIcfes = icfes;
+  if (calendario) formPreparacion.calendario_icfes.value = calendario;
+  $('#estado-fecha-icfes').textContent = textoCuentaRegresiva(icfes);
+  const campo = $('#campo-fecha-citacion');
+  const entrada = $('#fecha-citacion-config');
+  const lista = $('#fecha-oficial-config');
+  const varias = icfes.estado === 'varias' || icfes.estado === 'elegida';
+  const sinPublicar = icfes.estado === 'sin_publicar' || icfes.estado === 'citacion';
+  campo.hidden = !(varias || sinPublicar);
+  entrada.hidden = !sinPublicar;
+  lista.hidden = !varias;
+  $('#etiqueta-fecha-citacion').textContent = varias
+    ? 'Tu fecha según la citación (el ICFES publicó varias)'
+    : 'Fecha de la prueba según tu citación (opcional)';
+  entrada.value = icfes.estado === 'citacion' ? icfes.fecha : '';
+  montar(lista, h('option', { value: '' }, 'Elige tu fecha'), (icfes.opciones ?? []).map((o) => h('option', {
+    value: o.fecha,
+    selected: o.fecha === icfes.fecha,
+  }, `${formatoFecha(o.fecha, { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' })} · ${o.descripcion}`)));
+}
+
+// Al elegir otro calendario, la fecha anterior deja de aplicar: se ocultan los campos hasta guardar.
+$$('input[name="calendario_icfes"]').forEach((radio) => radio.addEventListener('change', () => {
+  const mismo = radio.value === estadoIcfes?.calendario;
+  $('#campo-fecha-citacion').hidden = !mismo || !['varias', 'elegida', 'sin_publicar', 'citacion'].includes(estadoIcfes?.estado);
+  $('#estado-fecha-icfes').textContent = mismo ? textoCuentaRegresiva(estadoIcfes) : `Guarda para ver la fecha oficial del Calendario ${radio.value}.`;
+}));
+
 formPreparacion.addEventListener('submit', async (e) => {
   e.preventDefault();
-  const personal = formPreparacion.tipo_fecha.value === 'personal';
-  const fecha = $('#fecha-personal').value;
-  if (personal && !fecha) {
-    toastError('Elige tu fecha del examen o usa la fecha oficial.');
+  const calendario = formPreparacion.calendario_icfes.value;
+  if (!calendario) {
+    toastError('Elige el calendario en el que presentarás el ICFES.');
     return;
   }
   const metaPuntaje = $('#meta-puntaje').value;
+  const cuerpoCalendario = { calendario_icfes: calendario };
+  if (!$('#campo-fecha-citacion').hidden) {
+    const lista = $('#fecha-oficial-config');
+    cuerpoCalendario.fecha_icfes = (lista.hidden ? $('#fecha-citacion-config').value : lista.value) || null;
+  }
   try {
-    await conCarga(formPreparacion.querySelector('[type="submit"]'), () => api.put('/api/perfil/configuracion', {
-      fecha_icfes: personal ? fecha : null,
-      meta_diaria_min: Number($('#meta-diaria').value),
-      meta_puntaje: metaPuntaje === '' ? null : Number(metaPuntaje),
-      recordatorios: $('#recordatorios').checked,
-    }));
+    await conCarga(formPreparacion.querySelector('[type="submit"]'), async () => {
+      const r = await api.put('/api/perfil/calendario', cuerpoCalendario);
+      procesarRecompensas(r);
+      pintarCalendario(r.cuenta_regresiva, r.calendario_icfes);
+      await api.put('/api/perfil/configuracion', {
+        meta_diaria_min: Number($('#meta-diaria').value),
+        meta_puntaje: metaPuntaje === '' ? null : Number(metaPuntaje),
+        recordatorios: $('#recordatorios').checked,
+      });
+    });
     toast('Preparación actualizada.');
   } catch (error) {
     toastError(error.message);
   }
 });
-
-$('#fecha-personal').addEventListener('focus', () => { formPreparacion.tipo_fecha.value = 'personal'; });
 
 $$('#selector-tema button').forEach((boton) => boton.addEventListener('click', async () => {
   const tema = boton.dataset.tema;
@@ -124,3 +168,8 @@ $('#eliminar-cuenta').addEventListener('click', () => {
 
 await iniciarPagina({ activa: null });
 cargar().catch((error) => toastError(error.message));
+
+// Si el calendario se elige en la pregunta del primer inicio de sesión, esta sección se actualiza sola.
+window.addEventListener('icfes:calendario', (e) => {
+  if (e.detail?.cuenta_regresiva) pintarCalendario(e.detail.cuenta_regresiva, e.detail.calendario_icfes);
+});

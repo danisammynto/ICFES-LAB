@@ -1,221 +1,1044 @@
 {
   "materia": "ingles",
-  "contextos": {
-    "ING-CTX-01": {
-      "titulo": "Flowers on my back",
-      "texto": "My name is Sara, and I live in Santa Elena, a small village in the mountains near Medellín. My family grows flowers, and for us, August is the most important month of the year because of the Flower Festival.\n\nThe most famous event of the festival is the silleteros parade. Silleteros are farmers who carry big flower arrangements, called silletas, on their backs. My grandfather Julio has walked in the parade for more than forty years. When I was twelve, he taught me how to choose the flowers, how to organize them by color and how to tie them to the wooden frame without breaking them.\n\nLast year, I carried my own silleta in the parade for the first time. It wasn't very big, but it was heavy, and after two kilometers my back hurt a lot. I wanted to stop, but then I heard people clapping and shouting my name. At that moment, I forgot about the pain.\n\nSome of my friends think the parade is just a show for tourists. For me, it is much more than that. Every flower tells a story about my family, and one day I want to teach my own children how to make a silleta.",
-      "imagen": null,
-      "imagen_alt": null,
-      "fuente": "Texto original elaborado para ICFES Lab"
-    },
-    "ING-CTX-02": {
-      "titulo": "Sundays on wheels",
-      "texto": "Every Sunday and public holiday, from 7 a.m. to 2 p.m., many of Bogotá's main roads are closed to cars and open to people. This is the Ciclovía, one of the city's most popular traditions. People of all ages (1) ______ part in it every week: children learning to ride a bike, teenagers on skates, runners and even grandparents walking their dogs. Along the way, there are small stands where you can buy a cold fruit juice or get a flat tire fixed.\n\n(2) ______ the Ciclovía started as a small event on just a few streets in the 1970s, today it covers more than one hundred kilometers, and cities all over the world have copied the idea.",
-      "imagen": null,
-      "imagen_alt": null,
-      "fuente": "Texto original elaborado para ICFES Lab"
-    }
-  },
+  "contextos": {},
   "preguntas": [
     {
-      "codigo": "ING-REA-01",
-      "subtema": "reading",
+      "codigo": "ING-EST-01",
+      "subtema": "estructura-oracion-imperativo",
       "dificultad": 2,
-      "competencia": "Parte 5 · Comprensión literal",
-      "contexto_ref": "ING-CTX-01",
+      "competencia": null,
+      "contexto_ref": null,
       "contexto": null,
-      "enunciado": "According to the text, what did Sara learn from her grandfather?",
+      "enunciado": "Choose the correct option: “______ the door, please. It’s cold in here.”",
       "imagen": null,
       "imagen_alt": null,
       "opciones": [
-        { "letra": "A", "texto": "How to grow flowers in the mountains.", "correcta": false, "retroalimentacion": "El texto dice que la familia de Sara cultiva flores (My family grows flowers), pero en ningún momento dice que el abuelo le enseñara a cultivarlas. La opción combina palabras del texto (flowers, mountains) para formar una idea que no aparece." },
-        { "letra": "B", "texto": "How to make a silleta.", "correcta": true, "retroalimentacion": "¡Correcto! En el segundo párrafo, Sara cuenta que su abuelo le enseñó a escoger las flores, organizarlas por color y amarrarlas al marco de madera: justamente los pasos para hacer una silleta. El último párrafo lo confirma: ella quiere enseñarles a sus hijos how to make a silleta." },
-        { "letra": "C", "texto": "How to organize the Flower Festival.", "correcta": false, "retroalimentacion": "El verbo organize sí aparece, pero se refiere a organizar las flores por color (organize them by color), no a organizar la Feria de las Flores. Es el error de reconocer una palabra suelta sin leer la oración completa." },
-        { "letra": "D", "texto": "How to walk two kilometers without pain.", "correcta": false, "retroalimentacion": "Los dos kilómetros y el dolor aparecen en el tercer párrafo, cuando Sara desfiló por primera vez, y allí dice que sí le dolió la espalda. Nadie le enseñó a caminar sin dolor." }
+        {
+          "letra": "A",
+          "texto": "Closing",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "Closes",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "Close",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "To close",
+          "correcta": false,
+          "retroalimentacion": null
+        }
       ],
-      "explicacion": "En la **Parte 5 (comprensión literal)** la respuesta está en el texto, aunque expresada con otras palabras. Haz scanning con la palabra clave de la pregunta, **grandfather**: aparece en el segundo párrafo, donde Sara dice que él le enseñó (taught, pasado de teach) a escoger las flores, organizarlas por color y amarrarlas al marco de madera. Esos tres pasos equivalen a **hacer una silleta**, y la última oración del texto lo confirma con la frase how to make a silleta. Las opciones incorrectas copian palabras reales del texto (grow flowers, organize, two kilometers), pero las combinan en ideas que el texto no dice. **Consejo:** desconfía de las opciones que repiten palabras exactas; la correcta suele ser una paráfrasis.",
-      "tiempo_estimado_seg": 150,
-      "etiquetas": ["A2", "comprensión literal", "scanning", "paráfrasis", "cultura colombiana"]
-    },
-    {
-      "codigo": "ING-REA-02",
-      "subtema": "reading",
-      "dificultad": 3,
-      "competencia": "Parte 6 · Comprensión inferencial",
-      "contexto_ref": "ING-CTX-01",
-      "contexto": null,
-      "enunciado": "Which statement best describes Sara's attitude toward the silleteros parade?",
-      "imagen": null,
-      "imagen_alt": null,
-      "opciones": [
-        { "letra": "A", "texto": "She enjoys it, but she agrees that it is mainly a show for tourists.", "correcta": false, "retroalimentacion": "Quienes piensan que el desfile es just a show for tourists son algunos amigos de Sara, no ella. Justo después, ella dice lo contrario: For me, it is much more than that. Esta opción le atribuye a Sara la opinión de otras personas." },
-        { "letra": "B", "texto": "She thinks carrying a silleta is too hard, so she plans to stop.", "correcta": false, "retroalimentacion": "Es verdad que le dolió la espalda, pero Sara cuenta que olvidó el dolor al escuchar al público y que quiere enseñarles la tradición a sus hijos. Nada indica que piense dejar de participar." },
-        { "letra": "C", "texto": "She sees it as a family tradition that she wants to continue.", "correcta": true, "retroalimentacion": "¡Correcto! Frases como Every flower tells a story about my family y one day I want to teach my own children how to make a silleta muestran que para ella el desfile es una herencia familiar que quiere mantener viva." },
-        { "letra": "D", "texto": "She only takes part because her grandfather asks her to.", "correcta": false, "retroalimentacion": "El abuelo le enseñó a hacer silletas, pero el texto no dice que la obligue a desfilar. Al contrario, Sara habla con orgullo y quiere transmitir la tradición por decisión propia." }
-      ],
-      "explicacion": "En la **Parte 6 (comprensión inferencial)** la respuesta no está escrita de forma literal: debes deducirla uniendo varias pistas. Para identificar la **actitud** de Sara, observa el último párrafo. Primero presenta la opinión de sus amigos (just a show for tourists) y luego la contrasta con la suya (For me, it is much more than that). Después dice que cada flor cuenta una historia sobre su familia y que quiere enseñarles a sus hijos a hacer silletas. Todas esas pistas indican que valora el desfile como una **tradición familiar** que quiere continuar. **Ojo:** la opción A es una trampa típica, porque presenta como opinión de la narradora lo que en realidad piensan otras personas.",
+      "explicacion": "",
       "tiempo_estimado_seg": 120,
-      "etiquetas": ["B1", "comprensión inferencial", "actitud del autor", "cultura colombiana"]
+      "etiquetas": []
     },
     {
-      "codigo": "ING-GRA-01",
-      "subtema": "grammar",
-      "dificultad": 1,
-      "competencia": "Parte 4 · Gramática en contexto",
-      "contexto_ref": null,
-      "contexto": "Hi, Mateo!\nI'm in Cartagena with my family. The old city is beautiful, but the weather here is much ______ than in Bogotá. Yesterday it was 33 °C!\nSee you on Monday,\nJuliana",
-      "enunciado": "Read Juliana's message. Which word correctly completes the gap?",
-      "imagen": null,
-      "imagen_alt": null,
-      "opciones": [
-        { "letra": "A", "texto": "hotter", "correcta": true, "retroalimentacion": "¡Correcto! Hot es un adjetivo corto (una sílaba) que termina en consonante-vocal-consonante, así que duplica la t y añade -er: hot → hotter. Con much delante, la idea es «mucho más caliente que»." },
-        { "letra": "B", "texto": "more hot", "correcta": false, "retroalimentacion": "Es una traducción literal de «más caliente». En inglés, los adjetivos de una sílaba forman el comparativo con -er, no con more: hot → hotter, cold → colder." },
-        { "letra": "C", "texto": "hottest", "correcta": false, "retroalimentacion": "Hottest es el superlativo («el más caliente»). Se usa con the para destacar algo dentro de un grupo (the hottest city in Colombia), no para comparar dos cosas con than." },
-        { "letra": "D", "texto": "hot", "correcta": false, "retroalimentacion": "Hot es la forma base del adjetivo. La palabra than después del hueco indica una comparación, así que se necesita la forma comparativa." }
-      ],
-      "explicacion": "La clave está en las palabras que rodean el hueco: **much** antes y **than** después. La estructura **much + comparativo + than** significa «mucho más… que». Como hot es un adjetivo corto (una sílaba), su comparativo se forma con **-er**, y como termina en consonante-vocal-consonante, duplica la última letra: hot → hotter (igual que big → bigger). Con adjetivos largos sí se usa more: The old city is more beautiful than I expected. Evita «more hot» o «more big»: son errores típicos de hispanohablantes.",
-      "tiempo_estimado_seg": 60,
-      "etiquetas": ["A2", "comparativos", "adjetivos", "much + comparativo"]
-    },
-    {
-      "codigo": "ING-GRA-02",
-      "subtema": "grammar",
+      "codigo": "ING-EST-02",
+      "subtema": "estructura-oracion-imperativo",
       "dificultad": 2,
-      "competencia": "Parte 4 · Gramática en contexto",
-      "contexto_ref": null,
-      "contexto": "My name is Valentina. I was born in Pasto, but my family moved to Cali when I was ten. We ______ in Cali since 2020, and now I can't imagine living anywhere else.",
-      "enunciado": "Read what Valentina says about herself. Which option correctly completes the gap?",
-      "imagen": null,
-      "imagen_alt": null,
-      "opciones": [
-        { "letra": "A", "texto": "live", "correcta": false, "retroalimentacion": "Es el error más común de los hispanohablantes: en español decimos «vivimos en Cali desde 2020» (presente), pero en inglés, cuando una situación empezó en el pasado y continúa hoy, no se usa el presente simple con since." },
-        { "letra": "B", "texto": "lived", "correcta": false, "retroalimentacion": "Lived (pasado simple) sirve para situaciones terminadas en un momento concreto del pasado (We lived in Pasto until 2020). Aquí Valentina todavía vive en Cali, y since indica que la situación continúa." },
-        { "letra": "C", "texto": "are living", "correcta": false, "retroalimentacion": "El presente continuo describe algo que ocurre ahora o que es temporal, pero no se combina con since para expresar duración desde un punto del pasado hasta hoy." },
-        { "letra": "D", "texto": "have lived", "correcta": true, "retroalimentacion": "¡Correcto! Since 2020 marca el punto de inicio de una situación que sigue siendo verdad. Por eso se usa el present perfect: have + participio pasado (have lived)." }
-      ],
-      "explicacion": "Fíjate en las pistas de tiempo. En la primera oración, **was born** y **moved** están en pasado simple porque son hechos terminados (when I was ten). En el hueco aparece **since 2020**, que indica desde cuándo ocurre algo que todavía es verdad: Valentina sigue viviendo en Cali (now I can't imagine living anywhere else). Esa combinación exige el **present perfect**: Subject + have/has + past participle → We have lived. En español usamos el presente («vivimos… desde»), por eso muchos estudiantes eligen live. Expresiones como since, for, already, yet, ever y never suelen acompañar al present perfect.",
-      "tiempo_estimado_seg": 75,
-      "etiquetas": ["B1", "present perfect", "since", "tiempos verbales"]
-    },
-    {
-      "codigo": "ING-VOC-01",
-      "subtema": "vocabulary",
-      "dificultad": 1,
-      "competencia": "Parte 1 · Avisos",
+      "competencia": null,
       "contexto_ref": null,
       "contexto": null,
-      "enunciado": "Where can you see this notice?",
-      "imagen": "/img/preguntas/ING-VOC-01.svg",
-      "imagen_alt": "Aviso con el título NOTICE que dice: «You can borrow up to 3 books for 15 days. Please show your student card.»",
-      "opciones": [
-        { "letra": "A", "texto": "At a bank.", "correcta": false, "retroalimentacion": "Quizá te guiaste por borrow (pedir prestado), que también se usa con dinero (borrow money), y por card. Pero en un banco no te prestan libros durante 15 días." },
-        { "letra": "B", "texto": "In a bookstore.", "correcta": false, "retroalimentacion": "En una librería (bookstore) los libros se compran, no se piden prestados. Ojo con el falso amigo: library no significa «librería», sino «biblioteca»." },
-        { "letra": "C", "texto": "In a school library.", "correcta": true, "retroalimentacion": "¡Correcto! Borrow significa «pedir prestado». El lugar donde puedes llevarte hasta 3 libros durante 15 días mostrando tu carné estudiantil es la biblioteca del colegio." },
-        { "letra": "D", "texto": "At a bus station.", "correcta": false, "retroalimentacion": "Student card puede recordarte la tarjeta del transporte, pero en una estación de bus no se prestan libros. Lee el aviso completo, no solo la última línea." }
-      ],
-      "explicacion": "En la **Parte 1** debes identificar dónde aparecería un aviso. Busca las palabras clave: **borrow** (pedir prestado), **books** (libros), **for 15 days** (por 15 días) y **student card** (carné estudiantil). Solo en una biblioteca escolar te prestan libros por un tiempo limitado y te piden el carné. Cuidado con el falso amigo: **library = biblioteca**, mientras que **bookstore / bookshop = librería**. Recuerda también la diferencia entre **borrow** (recibir algo prestado: I borrow a book) y **lend** (prestarle algo a otra persona: The library lends books to students).",
-      "tiempo_estimado_seg": 60,
-      "etiquetas": ["A1", "avisos", "lugares", "borrow vs lend", "falsos amigos"]
-    },
-    {
-      "codigo": "ING-VOC-02",
-      "subtema": "vocabulary",
-      "dificultad": 1,
-      "competencia": "Parte 2 · Léxico",
-      "contexto_ref": null,
-      "contexto": null,
-      "enunciado": "Which word matches this description?\n\n“Any member of your family, for example an aunt, an uncle or a cousin.”",
+      "enunciado": "Which sentence has the correct word order?",
       "imagen": null,
       "imagen_alt": null,
       "opciones": [
-        { "letra": "A", "texto": "relationship", "correcta": false, "retroalimentacion": "Relationship significa «relación» (por ejemplo, una amistad o un noviazgo). Es un sustantivo abstracto, no una persona; se parece a relative, pero no significa lo mismo." },
-        { "letra": "B", "texto": "parent", "correcta": false, "retroalimentacion": "Falso amigo clásico: parent no significa «pariente», sino «papá o mamá» (parents = padres). Una tía o un primo no son parents." },
-        { "letra": "C", "texto": "neighbor", "correcta": false, "retroalimentacion": "Neighbor significa «vecino»: una persona que vive cerca de ti, no necesariamente alguien de tu familia." },
-        { "letra": "D", "texto": "relative", "correcta": true, "retroalimentacion": "¡Correcto! Relative significa «pariente» o «familiar»: cualquier miembro de tu familia, como una tía, un tío o un primo. Ejemplo: All my relatives come to my house on Christmas Eve." }
+        {
+          "letra": "A",
+          "texto": "She every day walks to school.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "She walks to school every day.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "Every day walks she to school.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "Walks she every day to school.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
       ],
-      "explicacion": "En la **Parte 2** relacionas una descripción con la palabra que le corresponde. Esta descripción habla de **cualquier miembro de la familia** (any member of your family) y da ejemplos: una tía, un tío, un primo. La palabra que significa «pariente» es **relative**. La trampa principal es **parent**, un falso amigo: se parece a «pariente», pero significa «papá o mamá». Otra trampa es relationship, que comparte la raíz relat- pero significa «relación». **Consejo:** cuando una opción se parezca mucho a una palabra en español, comprueba su significado real antes de elegirla.",
-      "tiempo_estimado_seg": 60,
-      "etiquetas": ["A2", "léxico", "familia", "falsos amigos"]
-    },
-    {
-      "codigo": "ING-CON-01",
-      "subtema": "context-understanding",
-      "dificultad": 2,
-      "competencia": "Parte 3 · Conversación",
-      "contexto_ref": null,
-      "contexto": "Clerk: Good afternoon. How can I help you?\nCustomer: Hi. I bought these headphones here yesterday, but the left side doesn't work.\nClerk: ______\nCustomer: Yes, here it is. I paid in cash.",
-      "enunciado": "Complete the conversation. What does the clerk say?",
-      "imagen": null,
-      "imagen_alt": null,
-      "opciones": [
-        { "letra": "A", "texto": "Do you have the receipt?", "correcta": true, "retroalimentacion": "¡Correcto! La respuesta del cliente (Yes, here it is. I paid in cash) muestra que le hicieron una pregunta de sí o no para pedirle un objeto. En un reclamo por un producto dañado, lo lógico es pedir el recibo (receipt), que además muestra cómo se pagó." },
-        { "letra": "B", "texto": "What color would you like?", "correcta": false, "retroalimentacion": "Una pregunta con what no se responde con Yes. Además, el problema del cliente es que los audífonos no funcionan, no su color." },
-        { "letra": "C", "texto": "How much did you pay for them?", "correcta": false, "retroalimentacion": "Te pudo atraer la palabra paid de la última línea, pero una pregunta con how much se responde con un precio, no con Yes, here it is." },
-        { "letra": "D", "texto": "Are you going to buy them today?", "correcta": false, "retroalimentacion": "El cliente ya los compró ayer (I bought these headphones here yesterday), así que la pregunta no tiene sentido, y here it is tampoco la respondería." }
-      ],
-      "explicacion": "En la **Parte 3** no basta con leer lo que va antes del hueco: **la línea que viene después es la pista más fuerte**. El cliente responde Yes, here it is («sí, aquí está»), así que el empleado hizo una pregunta de sí o no pidiéndole un objeto. Como el cliente viene a reclamar por unos audífonos dañados, lo natural es que le pidan el **receipt** (recibo o factura) para comprobar la compra. Las preguntas con what o how much no se contestan con yes, y la opción D contradice lo que el cliente ya dijo. Vocabulario útil: receipt = recibo, refund = reembolso, pay in cash = pagar en efectivo.",
-      "tiempo_estimado_seg": 90,
-      "etiquetas": ["A2", "conversación", "funciones comunicativas", "compras"]
-    },
-    {
-      "codigo": "ING-CON-02",
-      "subtema": "context-understanding",
-      "dificultad": 3,
-      "competencia": "Parte 6 · Comprensión inferencial",
-      "contexto_ref": null,
-      "contexto": "★★★☆☆ Coffee farm tour in Salento\nReview by Daniela R.\n\nThe farm was beautiful, and our guide, Don Álvaro, knew everything about coffee. We picked coffee cherries, learned how the beans are dried and, of course, tasted a delicious cup at the end. However, the website said the tour lasted two hours, and it took almost four. Because of that, we missed the last bus back to Armenia and had to pay for an expensive taxi. My advice: go, but don't plan anything else for that afternoon!",
-      "enunciado": "What is the main purpose of Daniela's review?",
-      "imagen": null,
-      "imagen_alt": null,
-      "opciones": [
-        { "letra": "A", "texto": "To complain to the bus company about its schedule.", "correcta": false, "retroalimentacion": "Daniela menciona que perdió el último bus, pero la causa fue la duración del tour, no la empresa de buses. Además, la reseña está dirigida a otros visitantes, no a esa empresa." },
-        { "letra": "B", "texto": "To recommend the tour and warn others about how long it really takes.", "correcta": true, "retroalimentacion": "¡Correcto! Primero elogia la finca, al guía y el café (recomendación) y cierra con My advice: go, but don't plan anything else for that afternoon: invita a ir, pero advierte que el tour dura mucho más de lo anunciado." },
-        { "letra": "C", "texto": "To ask the farm to give her money back.", "correcta": false, "retroalimentacion": "Pedir un reembolso sería propio de un reclamo formal, pero Daniela no lo pide en ninguna parte. Su reseña mezcla elogios y una advertencia; no busca recuperar dinero." },
-        { "letra": "D", "texto": "To thank the guide for driving her back to Armenia.", "correcta": false, "retroalimentacion": "El texto dice que tuvieron que pagar un taxi costoso para volver a Armenia; el guía no los llevó. La opción mezcla dos datos reales del texto (el guía y Armenia) en una idea falsa." }
-      ],
-      "explicacion": "Preguntar por el **propósito (purpose)** de un texto es típico de la **Parte 6**: debes deducir para qué lo escribió el autor, no solo qué dice. Observa la estructura de la reseña: primero, aspectos positivos (the farm was beautiful, the guide knew everything about coffee, a delicious cup); luego, un problema introducido por **However** (el tour duró casi el doble de lo anunciado); y al final, un consejo para futuros visitantes (**My advice: go, but…**). Las tres estrellas confirman una opinión mixta. Por eso, el propósito es recomendar la experiencia y, al mismo tiempo, advertir sobre su duración real. Conectores como however y but suelen marcar el giro clave en este tipo de textos.",
-      "tiempo_estimado_seg": 150,
-      "etiquetas": ["B1", "comprensión inferencial", "propósito del autor", "reseñas", "conectores"]
-    },
-    {
-      "codigo": "ING-LAN-01",
-      "subtema": "language-use",
-      "dificultad": 2,
-      "competencia": "Parte 7 · Texto incompleto",
-      "contexto_ref": "ING-CTX-02",
-      "contexto": null,
-      "enunciado": "Which word best completes gap (1) in the text?",
-      "imagen": null,
-      "imagen_alt": null,
-      "opciones": [
-        { "letra": "A", "texto": "make", "correcta": false, "retroalimentacion": "Es un calco del español colombiano «hacer parte de». En inglés, «participar» se dice take part in y «ser parte de» se dice be part of; make part no existe como expresión." },
-        { "letra": "B", "texto": "do", "correcta": false, "retroalimentacion": "Do se usa con actividades y tareas (do homework, do exercise), pero no forma ninguna expresión con part in." },
-        { "letra": "C", "texto": "take", "correcta": true, "retroalimentacion": "¡Correcto! Take part in something significa «participar en algo». Es una colocación fija: People of all ages take part in it every week." },
-        { "letra": "D", "texto": "give", "correcta": false, "retroalimentacion": "Give significa «dar» y no forma con part in ninguna expresión que signifique participar." }
-      ],
-      "explicacion": "En la **Parte 7** muchos huecos evalúan **colocaciones**: combinaciones fijas de palabras que se aprenden como un bloque. Aquí la pista son las palabras que siguen al hueco: **part in it**. La expresión correcta es **take part in** (participar en). En Colombia decimos «hacer parte de», por eso make es la trampa más frecuente; pero en inglés «ser parte de» se dice **be part of** y «participar» se dice **take part in**. Otras colocaciones con take: take a photo, take a bus, take a break.",
+      "explicacion": "",
       "tiempo_estimado_seg": 120,
-      "etiquetas": ["B1", "colocaciones", "take part in", "texto incompleto"]
+      "etiquetas": []
     },
     {
-      "codigo": "ING-LAN-02",
-      "subtema": "language-use",
-      "dificultad": 3,
-      "competencia": "Parte 7 · Texto incompleto",
-      "contexto_ref": "ING-CTX-02",
+      "codigo": "ING-EST-03",
+      "subtema": "estructura-oracion-imperativo",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
       "contexto": null,
-      "enunciado": "Which word best completes gap (2) in the text?",
+      "enunciado": "Complete the sign: “Don’t ______ in the library.”",
       "imagen": null,
       "imagen_alt": null,
       "opciones": [
-        { "letra": "A", "texto": "Although", "correcta": true, "retroalimentacion": "¡Correcto! Although («aunque») va seguido de una oración completa (sujeto + verbo: the Ciclovía started…) y expresa contraste: empezó siendo pequeña, pero hoy es enorme." },
-        { "letra": "B", "texto": "Despite", "correcta": false, "retroalimentacion": "Despite también expresa contraste, pero va seguido de un sustantivo o de un verbo con -ing (Despite starting as a small event…), nunca de sujeto + verbo conjugado." },
-        { "letra": "C", "texto": "Even", "correcta": false, "retroalimentacion": "Even solo no funciona como «aunque»: se necesita even though (Even though the Ciclovía started…). Omitir though es un error típico al traducir «aun cuando»." },
-        { "letra": "D", "texto": "Because", "correcta": false, "retroalimentacion": "Because expresa causa, no contraste. Haber empezado en pocas calles no es la razón de que hoy mida más de cien kilómetros: las dos ideas se oponen." }
+        {
+          "letra": "A",
+          "texto": "talk",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "talking",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "to talk",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "talks",
+          "correcta": false,
+          "retroalimentacion": null
+        }
       ],
-      "explicacion": "El hueco está al inicio de una oración que une dos ideas opuestas: la Ciclovía **empezó pequeña** (a small event on just a few streets) y **hoy es enorme** (more than one hundred kilometers… cities all over the world). Se necesita un conector de **contraste** seguido de sujeto + verbo: **Although**. Despite también expresa contraste, pero exige un sustantivo o un verbo con -ing (Despite its small start…); even necesita though para funcionar como «aunque» (even though); y because expresa causa. Recuerda: **Although + sujeto + verbo** / **Despite + sustantivo o verbo-ing**.",
-      "tiempo_estimado_seg": 90,
-      "etiquetas": ["B+", "conectores", "although vs despite", "texto incompleto"]
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "ING-PRE-01",
+      "subtema": "presente-simple-progresivo",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "Complete: “Backpacking is an enjoyable way to travel for a reasonable price. […] This is a person who doesn’t want to stay in a hotel while traveling, but someone who is (126) ______ for adventure in areas that may not have been explored before.”",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "searching",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "inquiring",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "proving",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "requesting",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "ING-PRE-02",
+      "subtema": "presente-simple-progresivo",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "Complete: “Right now, the students ______ an exam.”",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "take",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "takes",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "took",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "are taking",
+          "correcta": true,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "ING-PRE-03",
+      "subtema": "presente-simple-progresivo",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "Complete: “My mother usually ______ breakfast at 7:00.”",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "make",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "is make",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "makes",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "making",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "ING-PAS-01",
+      "subtema": "pasado-simple-progresivo",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "Complete: “Amelia and her sister, Muriel, had a lot of adventures (99) ______ they were growing up.”",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "after",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "while",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "if",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "ING-PAS-02",
+      "subtema": "pasado-simple-progresivo",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "Complete: “Yesterday, we ______ to the park and played soccer.”",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "go",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "went",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "goes",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "gone",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "ING-PAS-03",
+      "subtema": "pasado-simple-progresivo",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "Complete: “When I called her, she ______ TV.”",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "watched",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "watches",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "is watching",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "was watching",
+          "correcta": true,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "ING-FUT-01",
+      "subtema": "futuro-comparativos-superlativos",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "Complete: “However, Amelia was always (100) ______ excited to explore new things than Muriel.”",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "more",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "very",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "most",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "ING-FUT-02",
+      "subtema": "futuro-comparativos-superlativos",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "Complete: “Tomorrow I ______ my grandparents. I already bought the tickets.”",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "am going to visit",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "visit",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "visited",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "will visiting",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "ING-FUT-03",
+      "subtema": "futuro-comparativos-superlativos",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "Complete: “Mount Everest is ______ mountain in the world.”",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "higher",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "highest",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "the highest",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "more high",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "ING-MOD-01",
+      "subtema": "modal-phrasal-verbs",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "Complete: “On a foggy morning, Emma Gatewood, an American school teacher, told her family, ‘I will go for a walk after breakfast.’ […] No one (98) ______ guess her plans: not one of her 11 children or her 23 grandchildren.”",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "could",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "must",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "shall",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "ING-MOD-02",
+      "subtema": "modal-phrasal-verbs",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "Complete: “Therefore, if you are thinking of backpacking and you haven’t been exercising lately, you may want to return to the gym and put your adventure (134) ______ until you have improved your body’s condition.”",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "through",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "up",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "down",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "off",
+          "correcta": true,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "ING-MOD-03",
+      "subtema": "modal-phrasal-verbs",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "Complete: “You ______ wear a seat belt. It’s the law.”",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "can",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "must",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "might",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "could",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "ING-PER-01",
+      "subtema": "perfecto-preposiciones",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "Complete: “Amelia was born (98) ______ July 24th, 1897 in Kansas.”",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "at",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "in",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "on",
+          "correcta": true,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "ING-PER-02",
+      "subtema": "perfecto-preposiciones",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "Complete: “At the age of 67, Emma became the first woman who walked the Appalachian Trail, a 2,050-mile way (100) ______ forests and mountains.”",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "under",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "until",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "through",
+          "correcta": true,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "ING-PER-03",
+      "subtema": "perfecto-preposiciones",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "Complete: “I have lived in Ibagué ______ 2015.”",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "since",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "for",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "in",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "at",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "ING-WHQ-01",
+      "subtema": "wh-questions-conectores",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "Complete: “In (125) ______ to explain what it is, we will provide the definition of a backpacker.”",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "love",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "half",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "advance",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "order",
+          "correcta": true,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "ING-WHQ-02",
+      "subtema": "wh-questions-conectores",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "Complete: “One of the benefits of backpacking includes reducing stress. (131) ______ helping mental health, nature hikes also keep people fit.”",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "Besides",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "Despite",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "Otherwise",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "Regarding",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "ING-WHQ-03",
+      "subtema": "wh-questions-conectores",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "Complete: “______ is your birthday? — It’s on March 5th.”",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "Who",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "Where",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "Why",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "When",
+          "correcta": true,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "ING-GER-01",
+      "subtema": "gerundio-infinitivo-adverbios",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "Complete: “Amelia finished her school studies in 1916, but she wasn’t sure about what to study (103) ______.”",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "yet",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "just",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "already",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "ING-GER-02",
+      "subtema": "gerundio-infinitivo-adverbios",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "Complete: “Today, even sixty years later, ‘Grandma’ Gatewood’s story is (103) ______ amazing.”",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "ever",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "still",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "already",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "ING-GER-03",
+      "subtema": "gerundio-infinitivo-adverbios",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "Complete: “She enjoys ______ novels in her free time.”",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "read",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "to read",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "reading",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "reads",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "ING-ADV-01",
+      "subtema": "adverbios-voz-pasiva",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "Complete: “[…] someone who is searching for adventure in areas that may not have been (127) ______ before.”",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "explore",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "explored",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "exploring",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "explores",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "ING-ADV-02",
+      "subtema": "adverbios-voz-pasiva",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "Complete: “(128) ______ backpackers aren’t very interested in indoor facilities. They look to meeting local residents from the destinations they visit.”",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "Generally",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "Perfectly",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "Directly",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "Urgently",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "ING-ADV-03",
+      "subtema": "adverbios-voz-pasiva",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "Complete: “The Mona Lisa ______ by Leonardo da Vinci.”",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "painted",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "was painted",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "paints",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "is painting",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
     }
   ]
 }

@@ -5,7 +5,7 @@
 export const REGLAS = Object.freeze({
   xp: {
     // XP por respuesta correcta según dificultad (1 baja, 2 media, 3 alta).
-    // Calibrado para que el nivel 2 llegue en la primera sesión y Maestro ICFES tome meses.
+    // Además de la XP, cada nivel exige requisitos académicos (niveles.requisitos, ver niveles.service.js).
     correctaPorDificultad: { 1: 5, 2: 6, 3: 8 },
     incorrecta: 1, // Premia el esfuerzo.
     repetida: 1, // Pregunta ya acertada en las últimas 24 h.

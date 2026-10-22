@@ -132,6 +132,9 @@ export async function listarSimulacros(usuarioId) {
       icono: s.icono,
       sesiones,
       preguntas: sesiones.reduce((a, x) => a + x.preguntas, 0),
+      // Preguntas de la estructura completa (p. ej. 254 en un simulacro completo del Saber 11). Si el banco
+      // aún no alcanza, `preguntas` es menor y se usan todas las disponibles.
+      preguntas_objetivo: s.config.sesiones.reduce((a, x) => a + Object.values(x.preguntas).reduce((b, n) => b + n, 0), 0),
       duracion_min: sesiones.reduce((a, x) => a + x.duracion_min, 0),
       recompensa: { xp: s.xp_recompensa, monedas: s.monedas_recompensa },
       intento_en_curso: enCursoPor.get(s.id) ?? null,

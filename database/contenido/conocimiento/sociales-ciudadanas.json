@@ -3,7 +3,7 @@
   "entradas": [
     {
       "id": "soc-frente-nacional",
-      "subtema": "historia",
+      "subtema": "historia-de-colombia-ii",
       "titulo": "Frente Nacional (1958-1974)",
       "palabras_clave": ["frente nacional", "bipartidismo", "alternancia", "liberales y conservadores", "paridad", "rojas pinilla", "la violencia"],
       "explicacion": "El Frente Nacional fue un acuerdo entre los partidos Liberal y Conservador que rigió entre 1958 y 1974. Durante esos 16 años, los dos partidos se alternaron la Presidencia cada cuatro años y se repartieron por partes iguales los cargos públicos. Surgió para superar la violencia bipartidista y el gobierno militar de Gustavo Rojas Pinilla (1953-1957). Logró reducir la confrontación entre liberales y conservadores, pero excluyó a otras fuerzas políticas, algo que muchos historiadores relacionan con el surgimiento de guerrillas en los años sesenta.",
@@ -12,7 +12,7 @@
     },
     {
       "id": "soc-constitucion-1991",
-      "subtema": "historia",
+      "subtema": "constitucion-de-1991",
       "titulo": "La Constitución de 1991 y la séptima papeleta",
       "palabras_clave": ["constitucion de 1991", "constitución de 1991", "septima papeleta", "séptima papeleta", "asamblea constituyente", "asamblea nacional constituyente", "constituyente"],
       "explicacion": "La Constitución de 1991 reemplazó a la de 1886. Su origen está en la crisis de finales de los años ochenta (narcoterrorismo, asesinatos de líderes políticos y desconfianza en las instituciones) y en el movimiento estudiantil de la ‘séptima papeleta’ de 1990, que pidió convocar una Asamblea Nacional Constituyente. La Asamblea, elegida en diciembre de 1990, reunió a fuerzas diversas: partidos tradicionales, el M-19 desmovilizado, representantes indígenas y otros sectores. La nueva Constitución, expedida el 4 de julio de 1991, definió a Colombia como un Estado social de derecho, participativo y pluralista, y creó herramientas como la acción de tutela y la Corte Constitucional.",
@@ -21,7 +21,7 @@
     },
     {
       "id": "soc-pisos-termicos",
-      "subtema": "geografia",
+      "subtema": null,
       "titulo": "Pisos térmicos",
       "palabras_clave": ["pisos termicos", "pisos térmicos", "piso termico", "piso térmico", "altitud", "clima", "temperatura", "paramo", "páramo"],
       "explicacion": "En Colombia, por estar en la zona intertropical, la temperatura depende principalmente de la altitud: en promedio desciende unos 6 °C por cada 1.000 m de ascenso. Así se forman los pisos térmicos (valores aproximados): cálido (0 a 1.000 m, más de 24 °C), templado (1.000 a 2.000 m, 18 a 24 °C), frío (2.000 a 3.000 m, 12 a 18 °C), páramo (3.000 a 4.000 m, 6 a 12 °C) y glacial o nival (por encima de unos 4.000 m, menos de 6 °C). Cada piso favorece cultivos y actividades distintas, lo que muestra la relación entre la sociedad y el territorio.",
@@ -30,7 +30,7 @@
     },
     {
       "id": "soc-oferta-demanda",
-      "subtema": "economia",
+      "subtema": "modelos-economicos-i",
       "titulo": "Oferta y demanda",
       "palabras_clave": ["oferta", "demanda", "oferta y demanda", "precio", "precios", "mercado", "escasez"],
       "explicacion": "La oferta es la cantidad de un bien o servicio que los productores están dispuestos a vender, y la demanda es la cantidad que los consumidores quieren comprar. El precio se forma en el mercado a partir de la relación entre ambas. Si la oferta disminuye y la demanda se mantiene, el precio tiende a subir; si la oferta aumenta, tiende a bajar. Si la demanda aumenta y la oferta no cambia, el precio también sube.",
@@ -39,7 +39,7 @@
     },
     {
       "id": "soc-inflacion",
-      "subtema": "economia",
+      "subtema": "modelos-economicos-i",
       "titulo": "Inflación y salario real",
       "palabras_clave": ["inflacion", "inflación", "ipc", "salario real", "poder adquisitivo", "costo de vida", "carestia", "carestía"],
       "explicacion": "La inflación es el aumento generalizado y sostenido de los precios de los bienes y servicios. En Colombia la mide el DANE mediante el Índice de Precios al Consumidor (IPC), y el Banco de la República tiene la función de mantener el poder adquisitivo de la moneda. Cuando la inflación es mayor que el aumento de los ingresos, las personas pierden poder de compra: su salario real disminuye aunque reciban más pesos. La inflación golpea más a quienes tienen ingresos bajos, porque destinan casi todo su dinero a bienes básicos.",
@@ -48,7 +48,7 @@
     },
     {
       "id": "soc-ramas-poder",
-      "subtema": "politica",
+      "subtema": "constitucion-de-1991",
       "titulo": "Ramas del poder público y órganos de control",
       "palabras_clave": ["ramas del poder", "rama ejecutiva", "rama legislativa", "rama judicial", "organos de control", "órganos de control", "contraloria", "contraloría", "procuraduria", "procuraduría"],
       "explicacion": "En Colombia el poder público se divide en tres ramas: la legislativa (el Congreso, que hace las leyes y ejerce control político), la ejecutiva (el presidente, los ministros, los gobernadores y los alcaldes, que ejecutan las leyes y las políticas públicas) y la judicial (las altas cortes, la Fiscalía, los tribunales y los jueces, que administran justicia). Además existen órganos autónomos, entre ellos los órganos de control: la Contraloría (control fiscal del dinero público) y el Ministerio Público, formado por la Procuraduría (conducta de los servidores públicos), la Defensoría del Pueblo (derechos humanos) y las personerías. La Registraduría y el Consejo Nacional Electoral conforman la organización electoral.",
@@ -57,7 +57,7 @@
     },
     {
       "id": "soc-mecanismos-proteccion",
-      "subtema": "ciudadania",
+      "subtema": "mecanismos-de-proteccion",
       "titulo": "Mecanismos de protección de derechos",
       "palabras_clave": ["tutela", "accion de tutela", "acción de tutela", "derecho de peticion", "derecho de petición", "habeas corpus", "hábeas corpus", "accion popular", "acción popular", "cumplimiento"],
       "explicacion": "La Constitución de 1991 creó mecanismos para proteger los derechos. La acción de tutela (art. 86) protege derechos fundamentales vulnerados o amenazados, y el juez debe decidir en máximo 10 días. El derecho de petición (art. 23) permite hacer solicitudes respetuosas a las autoridades y obtener pronta respuesta. La acción de cumplimiento (art. 87) exige que una autoridad cumpla una ley o un acto administrativo; las acciones populares (art. 88) protegen derechos colectivos, como el ambiente sano; y el hábeas corpus (art. 30) protege la libertad de quien está privado de ella ilegalmente.",
@@ -66,7 +66,7 @@
     },
     {
       "id": "soc-mecanismos-participacion",
-      "subtema": "ciudadania",
+      "subtema": "mecanismos-de-participacion",
       "titulo": "Mecanismos de participación ciudadana",
       "palabras_clave": ["mecanismos de participacion", "mecanismos de participación", "cabildo abierto", "revocatoria del mandato", "referendo", "plebiscito", "consulta popular", "iniciativa legislativa"],
       "explicacion": "El artículo 103 de la Constitución establece los mecanismos de participación del pueblo: el voto, el plebiscito, el referendo, la consulta popular, el cabildo abierto, la iniciativa legislativa y la revocatoria del mandato. El plebiscito lo convoca el presidente para que el pueblo apoye o rechace una decisión del Ejecutivo, y el referendo permite aprobar o rechazar una norma. La consulta popular somete a votación una pregunta de interés general, y el cabildo abierto es una sesión pública del concejo o de la junta administradora local para discutir asuntos de la comunidad. La iniciativa legislativa permite a los ciudadanos presentar proyectos de ley o de acuerdo, y la revocatoria del mandato permite terminar el periodo de un alcalde o de un gobernador.",

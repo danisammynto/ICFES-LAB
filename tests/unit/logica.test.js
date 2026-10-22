@@ -168,7 +168,8 @@ describe('Validación del contenido académico', () => {
     const dosCorrectas = { ...base, opciones: base.opciones.map((o) => ({ ...o, correcta: true })) };
     assert.ok(contenido.validarPregunta(dosCorrectas, { subtemas }).some((e) => e.includes('1 opción correcta')));
     assert.ok(contenido.validarPregunta({ ...base, subtema: 'inventado' }, { subtemas }).some((e) => e.includes('no existe')));
-    assert.ok(contenido.validarPregunta({ ...base, opciones: base.opciones.slice(0, 3) }, { subtemas }).some((e) => e.includes('4 opciones')));
+    assert.deepEqual(contenido.validarPregunta({ ...base, opciones: base.opciones.slice(0, 3) }, { subtemas }), [], 'acepta 3 opciones (Inglés)');
+    assert.ok(contenido.validarPregunta({ ...base, opciones: base.opciones.slice(0, 2) }, { subtemas }).some((e) => e.includes('3 o 4 opciones')));
   });
 });
 

@@ -8,6 +8,7 @@
 import { pool, una, varias } from '../config/db.js';
 import { fechaLocal } from '../utils/fechas.js';
 import { AppError } from '../utils/AppError.js';
+import { avanceHacia, cumpleNivel, metricasNivel, requisitosDeNivel } from './niveles.service.js';
 
 /** Registra un movimiento en el historial de recompensas. */
 async function registrarMovimiento(cliente, usuarioId, tipo, cantidad, motivo, referencia) {
@@ -51,12 +52,9 @@ export async function otorgar(cliente, usuarioId, { xp = 0, monedas = 0, motivo,
   monedas = Math.max(0, Math.round(monedas));
   if (!xp && !monedas) return eventos;
 
-  const perfil = await una(
-    `UPDATE perfiles SET xp = xp + $2, monedas = monedas + $3
-      WHERE usuario_id = $1
-      RETURNING xp, monedas, nivel`,
+  await cliente.query(
+    `UPDATE perfiles SET xp = xp + $2, monedas = monedas + $3 WHERE usuario_id = $1`,
     [usuarioId, xp, monedas],
-    cliente,
   );
   await registrarMovimiento(cliente, usuarioId, 'xp', xp, motivo, referencia);
   await registrarMovimiento(cliente, usuarioId, 'monedas', monedas, motivo, referencia);
@@ -65,10 +63,22 @@ export async function otorgar(cliente, usuarioId, { xp = 0, monedas = 0, motivo,
   if (xp) eventos.push({ tipo: 'xp', cantidad: xp, motivo });
   if (monedas) eventos.push({ tipo: 'monedas', cantidad: monedas, motivo });
 
-  // ¿Subió uno o varios niveles?
-  const nuevosNiveles = await varias(
-    `SELECT n.numero, n.nombre, n.color, n.icono, n.recompensa_monedas, n.desbloqueos, n.insignia_id,
-            i.nombre AS insignia_nombre, i.icono AS insignia_icono, i.color AS insignia_color
+  eventos.push(...(await subirNiveles(cliente, usuarioId)));
+  return eventos;
+}
+
+/**
+ * Sube al estudiante los niveles cuyos requisitos ya cumple (XP + actividad, preguntas,
+ * aciertos y temario). Los niveles se alcanzan en orden y nunca se pierden.
+ * Se llama al otorgar XP y al final de cada acción (evaluación de logros).
+ * @returns {Promise<object[]>} eventos de tipo 'nivel'.
+ */
+export async function subirNiveles(cliente, usuarioId) {
+  const eventos = [];
+  const perfil = await una(`SELECT xp, nivel FROM perfiles WHERE usuario_id = $1`, [usuarioId], cliente);
+  const candidatos = await varias(
+    `SELECT n.numero, n.nombre, n.color, n.icono, n.xp_minimo, n.recompensa_monedas, n.desbloqueos, n.requisitos,
+            n.insignia_id, i.nombre AS insignia_nombre, i.icono AS insignia_icono, i.color AS insignia_color
        FROM niveles n
        LEFT JOIN insignias i ON i.id = n.insignia_id
       WHERE n.numero > $1 AND n.xp_minimo <= $2
@@ -76,8 +86,12 @@ export async function otorgar(cliente, usuarioId, { xp = 0, monedas = 0, motivo,
     [perfil.nivel, perfil.xp],
     cliente,
   );
+  if (!candidatos.length) return eventos;
 
-  for (const nivel of nuevosNiveles) {
+  const metricas = await metricasNivel(usuarioId, cliente);
+  for (const nivel of candidatos) {
+    // Los niveles van en orden: si no cumple uno, tampoco puede saltar al siguiente.
+    if (!cumpleNivel(nivel, metricas)) break;
     await cliente.query(
       `UPDATE perfiles SET nivel = $2, monedas = monedas + $3 WHERE usuario_id = $1`,
       [usuarioId, nivel.numero, nivel.recompensa_monedas],
@@ -118,21 +132,37 @@ export async function gastarMonedas(cliente, usuarioId, cantidad, referencia) {
   return fila.monedas;
 }
 
-/** Nivel actual, siguiente nivel y porcentaje de avance. */
+/**
+ * Nivel actual, siguiente nivel con sus requisitos (valor actual de cada uno) y porcentaje de
+ * avance hacia él (promedio del avance de cada requisito).
+ */
 export async function progresoNivel(usuarioId, cliente = pool) {
   const perfil = await una(`SELECT xp, nivel, monedas FROM perfiles WHERE usuario_id = $1`, [usuarioId], cliente);
-  const niveles = await varias(`SELECT numero, nombre, xp_minimo, color, icono FROM niveles ORDER BY numero`, [], cliente);
-  const actual = niveles.find((n) => n.numero === perfil.nivel) ?? niveles[0];
+  const niveles = await varias(
+    `SELECT numero, nombre, xp_minimo, color, icono, requisitos FROM niveles ORDER BY numero`,
+    [],
+    cliente,
+  );
+  const { requisitos: _r, ...actual } = niveles.find((n) => n.numero === perfil.nivel) ?? niveles[0];
   const siguiente = niveles.find((n) => n.numero === perfil.nivel + 1) ?? null;
-  const rango = siguiente ? siguiente.xp_minimo - actual.xp_minimo : 1;
-  const avance = siguiente ? Math.min(100, Math.round((100 * (perfil.xp - actual.xp_minimo)) / rango)) : 100;
+  if (!siguiente) {
+    return { xp: perfil.xp, monedas: perfil.monedas, nivel: actual, siguiente: null, progreso: 100, maximo: true };
+  }
 
+  const requisitos = requisitosDeNivel(siguiente, await metricasNivel(usuarioId, cliente));
+  const { requisitos: _s, ...datosSiguiente } = siguiente;
   return {
     xp: perfil.xp,
     monedas: perfil.monedas,
     nivel: actual,
-    siguiente: siguiente ? { ...siguiente, faltan: Math.max(0, siguiente.xp_minimo - perfil.xp) } : null,
-    progreso: avance,
+    siguiente: {
+      ...datosSiguiente,
+      faltan: Math.max(0, siguiente.xp_minimo - perfil.xp),
+      requisitos,
+      cumplidos: requisitos.filter((r) => r.cumplido).length,
+    },
+    progreso: avanceHacia(requisitos),
+    maximo: false,
   };
 }
 

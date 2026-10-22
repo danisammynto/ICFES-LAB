@@ -2,97 +2,3053 @@
   "materia": "matematicas",
   "lecciones": [
     {
-      "codigo": "MAT-ALG-L1",
-      "subtema": "algebra",
-      "titulo": "Álgebra en la vida real: ecuaciones, porcentajes y sistemas",
-      "resumen": "Aprenderás a convertir situaciones cotidianas en ecuaciones, a calcular porcentajes sin caer en trampas y a resolver sistemas de dos ecuaciones con dos incógnitas.",
-      "duracion_min": 10,
-      "bloques": [
-        { "tipo": "texto", "contenido": "En el ICFES casi nunca te piden resolver una ecuación suelta: te cuentan una historia (un ahorro, una venta de boletas, un precio que sube) y tú debes convertirla en matemáticas. Esa **traducción** es la mitad del trabajo; la otra mitad es operar con orden. ¡Vamos a entrenar ambas!" },
-        { "tipo": "concepto", "titulo": "Del lenguaje cotidiano al lenguaje algebraico", "contenido": "Una **variable** (x, s, g…) representa una cantidad desconocida. Algunas pistas para traducir: «cada» o «por» indican multiplicación (15.000 por semana → 15.000·s); «más» o «aumenta» indican suma; «el doble» es 2x; «la mitad» es x/2; «es», «da» o «resulta» equivalen al signo =." },
-        { "tipo": "formula", "contenido": "a·x + b = c  →  x = (c − b) ÷ a", "nota": "Sirve cuando hay un valor fijo inicial (b) y una cantidad (a) que se repite x veces hasta llegar a un total (c)." },
-        { "tipo": "ejemplo", "titulo": "Ejemplo resuelto: ahorrando para un balón", "enunciado": "Julián tiene $35.000 ahorrados y cada semana guarda $15.000 más. ¿En cuántas semanas completará los $170.000 que cuesta un balón de fútbol profesional?", "pasos": ["Define la variable: s = número de semanas.", "Plantea la ecuación: 35.000 + 15.000·s = 170.000.", "Resta 35.000 a ambos lados: 15.000·s = 135.000.", "Divide entre 15.000: s = 135.000 ÷ 15.000 = 9.", "Comprueba: 35.000 + 15.000 × 9 = 35.000 + 135.000 = 170.000 ✓."], "respuesta": "9 semanas" },
-        { "tipo": "concepto", "titulo": "Porcentajes: siempre respecto a algo", "contenido": "El p % de una cantidad es (p ÷ 100) × cantidad. Aumentar un p % equivale a multiplicar por (1 + p/100), y descontar un p % equivale a multiplicar por (1 − p/100). La **variación porcentual** se calcula respecto al valor inicial: (final − inicial) ÷ inicial × 100 %. Y ojo: los porcentajes sucesivos se **multiplican**, no se suman." },
-        { "tipo": "texto", "contenido": "**Sistemas 2×2.** Cuando hay dos incógnitas necesitas dos ecuaciones. Con el **método de sustitución** despejas una variable en una ecuación y la reemplazas en la otra; con el de **reducción** sumas o restas las ecuaciones para eliminar una variable. Por ejemplo, si x + y = 10 y x − y = 4, al sumarlas queda 2x = 14, así que x = 7 y y = 3." },
-        { "tipo": "lista", "titulo": "Errores frecuentes", "items": ["Calcular la variación porcentual dividiendo entre el valor final en lugar del inicial.", "Sumar descuentos sucesivos: un 20 % y luego un 10 % no equivalen a un 30 %.", "Olvidar el valor fijo inicial al plantear la ecuación (por ejemplo, lo que ya estaba ahorrado).", "Resolver bien un sistema, pero responder la otra incógnita."] },
-        { "tipo": "tip", "contenido": "Tip ICFES: antes de resolver, subraya qué te preguntan exactamente. En problemas de ecuaciones y sistemas, a veces es más rápido **probar las opciones** en el enunciado: la correcta debe cumplir todas las condiciones al mismo tiempo." },
-        { "tipo": "ejercicio", "enunciado": "Un celular cuesta $600.000. En una promoción tiene un descuento del 20 % y, sobre el precio ya rebajado, un descuento adicional del 10 % por pagar de contado. ¿Cuánto se paga finalmente?", "opciones": ["$420.000", "$432.000", "$480.000", "$540.000"], "correcta": 1, "explicacion": "Primero: 600.000 × 0,80 = 480.000. Luego: 480.000 × 0,90 = 432.000. Sumar los descuentos (30 %) daría $420.000, pero el segundo descuento se aplica sobre $480.000, no sobre $600.000." },
-        { "tipo": "ejercicio", "enunciado": "En una cafetería de Cali, 2 empanadas y 1 jugo cuestan $7.000, mientras que 1 empanada y 1 jugo cuestan $4.500. ¿Cuánto cuesta una empanada?", "opciones": ["$2.000", "$2.250", "$2.500", "$3.500"], "correcta": 2, "explicacion": "Si a la primera compra le restas la segunda: (2e + j) − (e + j) = 7.000 − 4.500, así que e = 2.500. Entonces el jugo cuesta 4.500 − 2.500 = 2.000. Comprobación: 2 × 2.500 + 2.000 = 7.000 ✓." }
-      ]
-    },
-    {
-      "codigo": "MAT-GEO-L1",
-      "subtema": "geometria",
-      "titulo": "Geometría para medir el mundo: Pitágoras, áreas y volúmenes",
-      "resumen": "Repasarás perímetros, áreas y volúmenes, aplicarás el teorema de Pitágoras y descubrirás qué pasa con el área y el volumen cuando una figura cambia de tamaño.",
-      "duracion_min": 10,
-      "bloques": [
-        { "tipo": "texto", "contenido": "La geometría del ICFES es muy práctica: cercar un lote, embaldosar un piso, pintar una pared o llenar un tanque. La clave está en identificar qué te piden: ¿el **borde** (perímetro), la **superficie** (área) o el **espacio interior** (volumen)? Si aciertas en eso, ya tienes medio problema resuelto." },
-        { "tipo": "concepto", "titulo": "Perímetro, área y volumen", "contenido": "El **perímetro** es la longitud del contorno y se mide en unidades lineales (m, cm). El **área** mide la superficie y se expresa en unidades cuadradas (m², cm²). El **volumen** mide el espacio que ocupa un cuerpo y se expresa en unidades cúbicas (m³, cm³). Dato útil: 1 m³ equivale a 1.000 litros." },
-        { "tipo": "formula", "contenido": "Rectángulo: A = b·h   |   Triángulo: A = b·h ÷ 2   |   Trapecio: A = (B + b)·h ÷ 2   |   Círculo: A = π·r² y L = 2·π·r   |   Prisma y cilindro: V = (área de la base)·h", "nota": "Las figuras compuestas se resuelven dividiéndolas en partes conocidas." },
-        { "tipo": "concepto", "titulo": "Teorema de Pitágoras", "contenido": "En todo **triángulo rectángulo**, el cuadrado de la hipotenusa (el lado opuesto al ángulo recto, que es el más largo) es igual a la suma de los cuadrados de los catetos: c² = a² + b². Ternas que conviene recordar: 3-4-5, 5-12-13, 8-15-17 y sus múltiplos (6-8-10, 9-12-15…)." },
-        { "tipo": "ejemplo", "titulo": "Ejemplo resuelto: la escalera de los bomberos", "enunciado": "Un bombero de Manizales apoya una escalera de 6,5 m contra un muro. El pie de la escalera queda a 2,5 m de la base del muro. ¿A qué altura toca la escalera el muro?", "pasos": ["El muro y el suelo forman un ángulo recto, así que la escalera es la hipotenusa: c = 6,5 m.", "Un cateto es la distancia al muro, a = 2,5 m; la altura h es el otro cateto.", "Aplica Pitágoras: 6,5² = 2,5² + h², es decir, 42,25 = 6,25 + h².", "Despeja: h² = 42,25 − 6,25 = 36, así que h = √36 = 6 m.", "Comprueba: 2,5² + 6² = 6,25 + 36 = 42,25 = 6,5² ✓."], "respuesta": "La escalera toca el muro a 6 m de altura." },
-        { "tipo": "concepto", "titulo": "Cambio de escala", "contenido": "Si todas las longitudes de una figura se multiplican por un factor k, el perímetro se multiplica por k, el área por k² y el volumen por k³. Por ejemplo, al duplicar las medidas de una caja (k = 2), el área de sus caras se multiplica por 4 y su volumen por 8." },
-        { "tipo": "lista", "titulo": "Errores frecuentes", "items": ["Confundir perímetro con área, o escribir un área en metros en lugar de metros cuadrados.", "Aplicar Pitágoras en un triángulo que no es rectángulo.", "Olvidar sacar la raíz cuadrada al final: si c² = 289, entonces c = 17, no 289.", "Creer que si las medidas se duplican, el área o el volumen también se duplican."] },
-        { "tipo": "tip", "contenido": "Tip ICFES: marca en la figura todos los datos, incluidos los que se deducen (por ejemplo, la diferencia entre las dos bases de un trapecio). Si aparece un triángulo rectángulo con dos lados conocidos, piensa de inmediato en Pitágoras y revisa si se trata de una terna conocida: te ahorrará cálculos." },
-        { "tipo": "ejercicio", "enunciado": "Una rampa de un parque de patinaje de Medellín sube 0,9 m y su base horizontal mide 1,2 m. ¿Cuánto mide la superficie inclinada de la rampa?", "opciones": ["0,3 m", "1,5 m", "2,1 m", "2,25 m"], "correcta": 1, "explicacion": "La superficie inclinada es la hipotenusa: c² = 0,9² + 1,2² = 0,81 + 1,44 = 2,25, así que c = √2,25 = 1,5 m. Sumar los catetos da 2,1 m y olvidar la raíz cuadrada da 2,25." },
-        { "tipo": "ejercicio", "enunciado": "Una fábrica de Itagüí duplica el largo, el ancho y el alto de una caja con forma de prisma rectangular. ¿Cuántas veces aumenta la capacidad (el volumen) de la caja?", "opciones": ["2 veces", "4 veces", "6 veces", "8 veces"], "correcta": 3, "explicacion": "V = largo × ancho × alto. Si cada medida se multiplica por 2, el volumen se multiplica por 2 × 2 × 2 = 2³ = 8. El 4 corresponde a lo que ocurre con el área de cada cara (2²)." }
-      ]
-    },
-    {
-      "codigo": "MAT-EST-L1",
-      "subtema": "estadistica",
-      "titulo": "Estadística: haz que los datos hablen",
-      "resumen": "Aprenderás a calcular e interpretar la media, la mediana y la moda, a leer gráficas con cuidado y a reconocer cuándo una muestra representa bien a una población.",
+      "codigo": "MAT-OPB-L1",
+      "subtema": "operaciones-basicas",
+      "titulo": "Operaciones básicas",
+      "resumen": "Las operaciones básicas son la base de todo el examen: casi todas las preguntas terminan en sumar, restar, multiplicar, dividir o trabajar con fracciones. Muchas preguntas del preICFES no piden un resultado, sino detectar en qué paso se equivocó alguien al operar.",
       "duracion_min": 9,
       "bloques": [
-        { "tipo": "texto", "contenido": "Cada vez que oyes «el promedio de los colombianos…» o ves los resultados de una encuesta, hay estadística detrás. En el ICFES te pedirán leer tablas y gráficas, calcular medidas y, sobre todo, **decidir si una conclusión está bien sustentada**. ¡Aprende a no dejarte engañar por los números!" },
-        { "tipo": "concepto", "titulo": "Medidas de tendencia central", "contenido": "La **media** (promedio) es la suma de los datos dividida entre la cantidad de datos. La **mediana** es el dato central cuando los datos están ordenados (si hay dos datos centrales, se promedian). La **moda** es el dato que más se repite. El **rango** (dato mayor − dato menor) no es de tendencia central: mide qué tan dispersos están los datos." },
-        { "tipo": "formula", "contenido": "Media = (x₁ + x₂ + … + xₙ) ÷ n", "nota": "Cada dato cuenta, aunque esté repetido." },
-        { "tipo": "ejemplo", "titulo": "Ejemplo resuelto: ¿cuánto tardan en llegar?", "enunciado": "Seis estudiantes de un colegio de Neiva anotaron cuántos minutos tardan en llegar al colegio: 10, 12, 8, 10, 15 y 65 (este último vive en una vereda lejana). Halla la media, la mediana y la moda. ¿Cuál describe mejor el tiempo típico?", "pasos": ["Media: (10 + 12 + 8 + 10 + 15 + 65) ÷ 6 = 120 ÷ 6 = 20 minutos.", "Mediana: ordena los datos: 8, 10, 10, 12, 15, 65. Como son 6 datos, promedia los dos centrales: (10 + 12) ÷ 2 = 11 minutos.", "Moda: el 10 es el único dato que se repite, así que la moda es 10 minutos.", "El 65 es un dato atípico que «jala» la media hacia arriba: 5 de los 6 estudiantes tardan menos de 20 minutos. La mediana (11 minutos) describe mejor el caso típico."], "respuesta": "Media = 20 min, mediana = 11 min y moda = 10 min; la mediana es la más representativa." },
-        { "tipo": "concepto", "titulo": "Población, muestra y representatividad", "contenido": "La **población** es todo el grupo que se quiere estudiar y la **muestra** es la parte que realmente se observa. Una muestra es **representativa** cuando se parece a la población; la mejor forma de lograrlo es elegirla al azar entre toda la población. Si solo se escoge un grupo particular (los amigos, un solo curso, los de un club), la muestra tiene **sesgo** y sus conclusiones no se pueden generalizar." },
-        { "tipo": "lista", "titulo": "Cómo leer una gráfica sin errores", "items": ["Lee el título y qué representa cada eje.", "Revisa la escala: ¿de cuánto en cuánto aumentan las marcas?", "Fíjate si el eje vertical empieza en cero; si no, las diferencias se ven exageradas.", "Distingue entre cantidades (frecuencias) y porcentajes."] },
-        { "tipo": "tip", "contenido": "Tip ICFES: si ves un dato muy alejado de los demás, desconfía de la media; la mediana suele representar mejor al grupo. Y cuando te pregunten si una conclusión es válida, revisa primero **a quiénes** se encuestó y **cómo** se escogieron, antes de revisar las cuentas." },
-        { "tipo": "ejercicio", "enunciado": "Las notas de Laura en Química durante el periodo fueron 3,0; 4,0; 3,5; 4,5 y 4,0. ¿Cuál es la mediana de sus notas?", "opciones": ["3,5", "3,8", "4,0", "4,5"], "correcta": 2, "explicacion": "Ordenadas: 3,0 – 3,5 – 4,0 – 4,0 – 4,5. El dato central (el tercero) es 4,0. El 3,8 es la media, y el 3,5 aparece si se toma el dato del centro sin ordenar la lista." },
-        { "tipo": "ejercicio", "enunciado": "Se quiere estimar cuántas horas al día usan internet los habitantes de Montería. ¿Cuál de estas muestras es la más representativa?", "opciones": ["Los clientes de un café internet del centro, un sábado por la tarde.", "Los estudiantes de un solo colegio de la ciudad.", "300 personas elegidas al azar en distintos barrios, de diferentes edades y estratos.", "Los seguidores de una cuenta de videojuegos en redes sociales."], "correcta": 2, "explicacion": "La muestra elegida al azar entre distintos barrios, edades y estratos es la que más se parece a toda la población. Las demás son grupos con características particulares, es decir, tienen sesgo de selección." }
+        {
+          "tipo": "texto",
+          "contenido": "Las operaciones básicas son la base de todo el examen: casi todas las preguntas terminan en sumar, restar, multiplicar, dividir o trabajar con fracciones. Muchas preguntas del preICFES no piden un resultado, sino detectar **en qué paso se equivocó alguien** al operar."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Conjuntos numéricos"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Los números se agrupan en conjuntos, cada uno contenido dentro del siguiente. Saber a qué conjunto pertenece un número sirve para saber qué valores tienen sentido en un problema (por ejemplo, una cantidad de personas no puede ser negativa ni decimal)."
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Conjunto",
+            "Qué incluye",
+            "Ejemplos"
+          ],
+          "filas": [
+            [
+              "Naturales (ℕ)",
+              "Números para contar, positivos",
+              "1, 2, 3, 50, 1.000"
+            ],
+            [
+              "Enteros (ℤ)",
+              "Naturales, el 0 y los negativos",
+              "−8, −1, 0, 4"
+            ],
+            [
+              "Racionales (ℚ)",
+              "Todo número que se puede escribir como fracción a/b (b ≠ 0): decimales exactos y periódicos",
+              "3/4, −2,5, 0,333… = 1/3"
+            ],
+            [
+              "Irracionales (𝕀)",
+              "Decimales infinitos que NO se repiten",
+              "π = 3,14159…, √2 = 1,4142…"
+            ],
+            [
+              "Reales (ℝ)",
+              "Racionales + irracionales (el conjunto más grande)",
+              "Todos los anteriores"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "contenido": "**¿Qué NO es un número real?**"
+        },
+        {
+          "tipo": "lista",
+          "items": [
+            "Una división entre cero: 5 ÷ 0 no existe (no hay ningún número que multiplicado por 0 dé 5).",
+            "La raíz cuadrada (o cualquier raíz par) de un número negativo: √(−9) no es real."
+          ],
+          "ordenada": false
+        },
+        {
+          "tipo": "tip",
+          "titulo": "Cómo reconocerlo",
+          "contenido": "√9 = 3 es natural (la raíz es exacta); √7 es irracional (la raíz no es exacta). 0,25 es racional (decimal exacto = 1/4) y 0,666… también (periódico = 2/3)."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Propiedades de las operaciones"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Las propiedades permiten reorganizar una operación para hacerla más fácil sin cambiar el resultado."
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Propiedad",
+            "Suma",
+            "Multiplicación",
+            "Resta y división"
+          ],
+          "filas": [
+            [
+              "Conmutativa (cambiar el orden)",
+              "a + b = b + a\n3 + 5 = 5 + 3",
+              "a × b = b × a\n3 × 5 = 5 × 3",
+              "NO se cumple:\n10 − 2 ≠ 2 − 10\n10 ÷ 2 = 5, pero 2 ÷ 10 = 0,2"
+            ],
+            [
+              "Asociativa (agrupar distinto)",
+              "(a + b) + c = a + (b + c)",
+              "(a × b) × c = a × (b × c)",
+              "NO se cumple:\n(400 ÷ 10) ÷ 5 = 8\n400 ÷ (10 ÷ 5) = 200"
+            ],
+            [
+              "Elemento neutro",
+              "a + 0 = a",
+              "a × 1 = a",
+              "—"
+            ],
+            [
+              "Distributiva",
+              "—",
+              "a × (b + c) = a×b + a×c",
+              "—"
+            ]
+          ]
+        },
+        {
+          "tipo": "ejemplo",
+          "titulo": "Usar las propiedades para calcular rápido",
+          "contenido": "4 × 7 × 25 → por la conmutativa y la asociativa: (4 × 25) × 7 = 100 × 7 = **700**.\n\n12 × (3 + 5) → por la distributiva: 12 × 3 + 12 × 5 = 36 + 60 = **96** (igual que 12 × 8 = 96)."
+        },
+        {
+          "tipo": "texto",
+          "contenido": "**El cero en la división:** 0 ÷ 5 = 0 (cero dividido entre cualquier número da cero), pero 5 ÷ 0 **no existe**."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Ley de los signos"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Se usa cada vez que aparecen números negativos (temperaturas, deudas, alturas bajo el nivel del mar)."
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Operación",
+            "Regla",
+            "Ejemplo"
+          ],
+          "filas": [
+            [
+              "Suma con signos iguales",
+              "Se suman y se deja el mismo signo",
+              "−4 + (−6) = −10"
+            ],
+            [
+              "Suma con signos diferentes",
+              "Se restan y se deja el signo del número con mayor valor absoluto",
+              "−9 + 4 = −5\n9 + (−4) = 5"
+            ],
+            [
+              "Multiplicación y división",
+              "Signos iguales → positivo (+)\nSignos diferentes → negativo (−)",
+              "(−3)(−4) = 12\n(−12) ÷ 3 = −4"
+            ]
+          ]
+        },
+        {
+          "tipo": "ejemplo",
+          "titulo": "Variación de temperatura",
+          "contenido": "En la madrugada la temperatura era −3 °C y al mediodía 14 °C. ¿Cuánto subió?\n\nVariación = final − inicial = 14 − (−3) = 14 + 3 = **17 °C**."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Jerarquía de operaciones"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Cuando una expresión tiene varias operaciones, se resuelven en este orden:"
+        },
+        {
+          "tipo": "lista",
+          "items": [
+            "**1.** Paréntesis (y otros signos de agrupación).",
+            "**2.** Potencias y raíces.",
+            "**3.** Multiplicaciones y divisiones, de izquierda a derecha (tienen el mismo nivel).",
+            "**4.** Sumas y restas, de izquierda a derecha (tienen el mismo nivel)."
+          ],
+          "ordenada": false
+        },
+        {
+          "tipo": "ejemplo",
+          "titulo": "− 3 × (2 + 4)² ÷ 9",
+          "contenido": "Paréntesis: 2 + 4 = 6 → 20 − 3 × 6² ÷ 9\n\nPotencia: 6² = 36 → 20 − 3 × 36 ÷ 9\n\nMultiplicación y división de izquierda a derecha: 3 × 36 = 108; 108 ÷ 9 = 12 → 20 − 12\n\nResta: 20 − 12 = **8**\n\n**Ejemplo resuelto: Error típico del examen**\n\nEl peso de un camión es P = 2m + 30, donde m es el número de miniexcavadoras. Con m = 8, un conductor sumó primero 8 + 30 = 38 y luego multiplicó 2 × 38 = 76. ¿Está bien?\n\nNo. La multiplicación va antes que la suma: P = 2 × 8 + 30 = 16 + 30 = **46 toneladas**. El error fue sumar 30 antes de multiplicar por 2."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Fracciones"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Una fracción a/b representa **a partes de un total dividido en b partes iguales**. El número de arriba es el numerador y el de abajo el denominador. Se usan para expresar partes de un todo (3/4 del tanque), repartos y proporciones."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 3,
+          "texto": "Simplificar"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Se dividen numerador y denominador entre el mismo número hasta que no tengan divisores comunes."
+        },
+        {
+          "tipo": "ejemplo",
+          "titulo": "Simplificar 64/48",
+          "contenido": "64/48 → ÷2 → 32/24 → ÷2 → 16/12 → ÷2 → 8/6 → ÷2 → **4/3**\n\nSe termina porque 4 y 3 ya no tienen un divisor común (salvo el 1). Más rápido: dividir de una vez entre 16."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 3,
+          "texto": "Operaciones con fracciones"
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Operación",
+            "Cómo se hace",
+            "Ejemplo"
+          ],
+          "filas": [
+            [
+              "Suma o resta con igual denominador",
+              "Se suman o restan los numeradores y se deja el mismo denominador",
+              "1/2 + 4/2 = 5/2\n4/3 − 1/3 = 3/3 = 1"
+            ],
+            [
+              "Suma o resta con distinto denominador (\"carita feliz\")",
+              "a/b ± c/d = (a·d ± b·c) / (b·d)",
+              "1/2 + 2/3 = (1·3 + 2·2)/(2·3) = 7/6"
+            ],
+            [
+              "Multiplicación",
+              "Numerador por numerador y denominador por denominador",
+              "1/3 × 2/5 = 2/15"
+            ],
+            [
+              "División",
+              "Se multiplica la primera por la segunda invertida (o se multiplica en cruz)",
+              "3/5 ÷ 2/3 = 3/5 × 3/2 = 9/10"
+            ]
+          ]
+        },
+        {
+          "tipo": "ejemplo",
+          "titulo": "Resta con distinto denominador: 3/2 − 1/5",
+          "contenido": "Multiplicación cruzada: 3 × 5 = 15 y 2 × 1 = 2. Denominador: 2 × 5 = 10.\n\n3/2 − 1/5 = (15 − 2)/10 = **13/10**"
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 3,
+          "texto": "Fracción de una cantidad"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Para calcular una fracción de un número se **divide entre el denominador y se multiplica por el numerador**."
+        },
+        {
+          "tipo": "ejemplo",
+          "titulo": "¿Cuánto es 3/4 de 200 estudiantes?",
+          "contenido": "200 ÷ 4 = 50 → 50 × 3 = **150 estudiantes**.\n\n**Ejemplo resuelto: Fracción de un tanque que se llenó**\n\nUn tanque cilíndrico tiene base de 9 m² y altura de 1 m. Una llave bombea 10 L por minuto durante 80 minutos. ¿Qué fracción del tanque se llenó?\n\nPaso 1. Líquido vertido: 10 L/min × 80 min = 800 L.\n\nPaso 2. Volumen del tanque: 9 m² × 1 m = 9 m³. Como 1 m³ = 1.000 L → 9 m³ = 9.000 L.\n\nPaso 3. Fracción llenada: 800/9.000 = 8/90 = **4/45** (aproximadamente 0,089, es decir, cerca del 8,9 %)."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 3,
+          "texto": "Convertir entre fracción, decimal y porcentaje"
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Fracción",
+            "Decimal",
+            "Porcentaje"
+          ],
+          "filas": [
+            [
+              "1/2",
+              "0,5",
+              "50 %"
+            ],
+            [
+              "1/4",
+              "0,25",
+              "25 %"
+            ],
+            [
+              "3/4",
+              "0,75",
+              "75 %"
+            ],
+            [
+              "1/5",
+              "0,2",
+              "20 %"
+            ],
+            [
+              "1/10",
+              "0,1",
+              "10 %"
+            ],
+            [
+              "1/3",
+              "0,333…",
+              "33,3 %"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Fracción → decimal: se divide el numerador entre el denominador (3 ÷ 4 = 0,75). Decimal → porcentaje: se multiplica por 100 (0,75 × 100 = 75 %)."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Potencias y raíces"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Una potencia es una multiplicación repetida: aⁿ = a × a × … × a (n veces). La raíz es la operación inversa: √25 = 5 porque 5² = 25. Aparecen en áreas (cm²), volúmenes (cm³), el teorema de Pitágoras y el conteo de códigos."
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Propiedad",
+            "Regla",
+            "Ejemplo"
+          ],
+          "filas": [
+            [
+              "Producto de igual base",
+              "aᵐ · aⁿ = aᵐ⁺ⁿ",
+              "2³ · 2² = 2⁵ = 32"
+            ],
+            [
+              "Cociente de igual base",
+              "aᵐ ÷ aⁿ = aᵐ⁻ⁿ",
+              "5⁴ ÷ 5² = 5² = 25"
+            ],
+            [
+              "Potencia de potencia",
+              "(aᵐ)ⁿ = aᵐ·ⁿ",
+              "(3²)³ = 3⁶ = 729"
+            ],
+            [
+              "Exponente cero",
+              "a⁰ = 1 (a ≠ 0)",
+              "7⁰ = 1"
+            ],
+            [
+              "Exponente negativo",
+              "a⁻ⁿ = 1/aⁿ",
+              "2⁻³ = 1/8"
+            ],
+            [
+              "Raíz de un producto",
+              "√(a·b) = √a · √b",
+              "√50 = √25 · √2 = 5√2"
+            ]
+          ]
+        },
+        {
+          "tipo": "ejemplo",
+          "titulo": "Cantidad de códigos",
+          "contenido": "¿Cuántos códigos de 4 cifras (que se pueden repetir) se forman con los dígitos {1, 2, 3, 4, 5}?\n\nHay 5 opciones para cada una de las 4 posiciones: 5 × 5 × 5 × 5 = 5⁴ = **625 códigos**."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Unidades de medida y conversiones"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Solo se pueden sumar o comparar cantidades que estén en la **misma unidad**. Es una trampa frecuente del examen."
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Magnitud",
+            "Equivalencias más usadas"
+          ],
+          "filas": [
+            [
+              "Longitud",
+              "1 km = 1.000 m; 1 m = 100 cm; 1 cm = 10 mm"
+            ],
+            [
+              "Masa",
+              "1 t (tonelada) = 1.000 kg; 1 kg = 1.000 g; 1 libra = 500 g (uso común en Colombia)"
+            ],
+            [
+              "Capacidad y volumen",
+              "1 L = 1.000 mL; 1 m³ = 1.000 L; 1 dm³ = 1 L"
+            ],
+            [
+              "Tiempo",
+              "1 h = 60 min; 1 min = 60 s; 1 h = 3.600 s"
+            ],
+            [
+              "Área",
+              "1 m² = 10.000 cm² (porque 100 × 100)"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "contenido": "**Regla práctica:** de una unidad grande a una pequeña se **multiplica**; de una pequeña a una grande se **divide**."
+        },
+        {
+          "tipo": "ejemplo",
+          "titulo": "Sumar pesos en unidades distintas",
+          "contenido": "Tres pedidos pesan 500 kg, 200 kg y 1 t. Un empleado calcula 500 + 200 + 1 = 701 t. ¿Es correcto?\n\nNo: los datos están en unidades diferentes y no se pueden sumar directamente. Se convierte 1 t = 1.000 kg.\n\nTotal = 500 + 200 + 1.000 = **1.700 kg = 1,7 t**."
+        }
       ]
     },
     {
-      "codigo": "MAT-PRO-L1",
-      "subtema": "probabilidad",
-      "titulo": "Probabilidad: ¿qué tan posible es?",
-      "resumen": "Calcularás probabilidades contando casos favorables y posibles, trabajarás con eventos independientes y usarás tablas de doble entrada para resolver problemas de probabilidad condicional.",
-      "duracion_min": 11,
+      "codigo": "MAT-POR-L1",
+      "subtema": "porcentajes",
+      "titulo": "Porcentajes",
+      "resumen": "Un porcentaje indica cuántas partes de cada 100 se toman de un total. Se usa en descuentos, impuestos (IVA), intereses, estadísticas, encuestas y comparaciones. El símbolo % equivale a dividir entre 100: 25 % = 25/100 = 0,25.",
+      "duracion_min": 7,
       "bloques": [
-        { "tipo": "texto", "contenido": "La probabilidad mide qué tan posible es que algo ocurra, con un número entre 0 (imposible) y 1 (seguro). Aparece en rifas, pronósticos del clima, juegos y encuestas. En el ICFES casi todos los problemas de probabilidad se resuelven **contando bien**: qué casos sirven y cuántos casos hay en total." },
-        { "tipo": "concepto", "titulo": "Probabilidad clásica", "contenido": "Si todos los resultados de un experimento son igualmente probables, la probabilidad de un evento A es P(A) = casos favorables ÷ casos posibles. Se puede expresar como fracción, decimal o porcentaje: 1/4 = 0,25 = 25 %. La probabilidad de que A **no** ocurra es 1 − P(A)." },
-        { "tipo": "formula", "contenido": "P(A) = casos favorables ÷ casos posibles   |   P(no A) = 1 − P(A)   |   P(A y B) = P(A) × P(B), si A y B son independientes", "nota": "Dos eventos son independientes cuando el resultado de uno no afecta al otro, como dos lanzamientos de una moneda." },
-        { "tipo": "ejemplo", "titulo": "Ejemplo resuelto: la rifa del curso", "enunciado": "Para la rifa del curso 11-B de un colegio de Cúcuta se venden 200 boletas numeradas del 000 al 199. Sara compró todas las boletas que terminan en 7. ¿Qué probabilidad tiene de ganar?", "pasos": ["Casos posibles: las 200 boletas.", "Casos favorables: 007, 017, 027, …, 197. Hay una por cada decena (de 00 a 19), así que son 20 boletas.", "P = 20 ÷ 200 = 1/10 = 0,1."], "respuesta": "1/10, es decir, 10 %" },
-        { "tipo": "concepto", "titulo": "Tablas de doble entrada y probabilidad condicional", "contenido": "Una tabla de doble entrada clasifica a un grupo según dos características. Cuando la pregunta dice «si se sabe que…», «entre los que…» o «si se elige un estudiante de…», los casos posibles ya no son todos: se reducen a la fila o a la columna de esa condición. Eso es una **probabilidad condicional**." },
-        { "tipo": "ejemplo", "titulo": "Ejemplo resuelto: ¿quién practica deporte?", "enunciado": "En el curso 10-A de un colegio de Pasto hay 40 estudiantes. De los 20 hombres, 12 practican algún deporte; de las 20 mujeres, 10 lo practican. a) Si se elige al azar una mujer del curso, ¿cuál es la probabilidad de que practique deporte? b) Si se elige al azar a alguien que practica deporte, ¿cuál es la probabilidad de que sea mujer?", "pasos": ["Organiza los datos: hombres, 12 sí y 8 no; mujeres, 10 sí y 10 no. En total, 22 estudiantes practican deporte.", "a) La condición es «ser mujer»: los casos posibles son las 20 mujeres y los favorables, las 10 que practican deporte. P = 10/20 = 1/2.", "b) Ahora la condición es «practicar deporte»: los casos posibles son los 22 deportistas y los favorables, las 10 mujeres. P = 10/22 = 5/11 ≈ 0,45.", "Las dos respuestas usan el 10, pero lo dividen entre totales distintos: el orden de la condición importa."], "respuesta": "a) 1/2   b) 5/11" },
-        { "tipo": "lista", "titulo": "Errores frecuentes", "items": ["Suponer que todos los resultados son igual de probables sin serlo («hay 3 opciones, entonces es 1/3»).", "Dividir entre el total general cuando la pregunta tiene una condición.", "Confundir «la probabilidad de A si ocurre B» con «la probabilidad de B si ocurre A».", "Sumar las probabilidades de eventos independientes cuando se deben multiplicar."] },
-        { "tipo": "tip", "contenido": "Tip ICFES: subraya la condición de la pregunta («si es de grado 11…», «entre los que…»). Esa frase te dice cuál es el nuevo total de casos posibles. Además, recuerda que una probabilidad nunca es negativa ni mayor que 1: úsalo para descartar opciones rápidamente." },
-        { "tipo": "ejercicio", "enunciado": "Se lanza un dado común de seis caras. ¿Cuál es la probabilidad de obtener un número mayor que 4?", "opciones": ["1/6", "1/3", "1/2", "2/3"], "correcta": 1, "explicacion": "Los números mayores que 4 son 5 y 6: 2 casos favorables de 6 posibles, así que P = 2/6 = 1/3. Si se incluye el 4 se obtiene 1/2, pero «mayor que 4» no incluye al 4." },
-        { "tipo": "ejercicio", "enunciado": "Se lanza una moneda dos veces. ¿Cuál es la probabilidad de obtener cara en los dos lanzamientos?", "opciones": ["1/4", "1/3", "1/2", "1"], "correcta": 0, "explicacion": "Los lanzamientos son independientes: P = 1/2 × 1/2 = 1/4. También puedes listar los resultados posibles: CC, CS, SC y SS; solo 1 de los 4 es favorable. Sumar (1/2 + 1/2 = 1) daría un evento seguro, lo cual no tiene sentido." }
+        {
+          "tipo": "texto",
+          "contenido": "Un porcentaje indica **cuántas partes de cada 100** se toman de un total. Se usa en descuentos, impuestos (IVA), intereses, estadísticas, encuestas y comparaciones. El símbolo % equivale a dividir entre 100: 25 % = 25/100 = 0,25."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Calcular el porcentaje de una cantidad"
+        },
+        {
+          "tipo": "formula",
+          "contenido": "p % de N = N × p ÷ 100"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Donde **N** es el total (la cantidad completa) y **p** el porcentaje que se busca."
+        },
+        {
+          "tipo": "ejemplo",
+          "titulo": "¿Cuánto es el 35 % de 80?",
+          "contenido": "80 × 35 ÷ 100 = 2.800 ÷ 100 = **28**."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 3,
+          "texto": "Método rápido: el 10 % y el 1 %"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Cualquier porcentaje se puede armar a partir del 10 % y del 1 %, sin calculadora:"
+        },
+        {
+          "tipo": "lista",
+          "items": [
+            "**10 %:** se divide entre 10 (se quita un cero o se corre la coma un lugar a la izquierda). 10 % de 500 = 50; 10 % de 255 = 25,5.",
+            "**1 %:** se divide entre 100 (se quitan dos ceros o se corre la coma dos lugares). 1 % de 150.000 = 1.500; 1 % de 255 = 2,55."
+          ],
+          "ordenada": false
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Porcentaje",
+            "Cómo calcularlo",
+            "Ejemplo con 240.000"
+          ],
+          "filas": [
+            [
+              "50 %",
+              "La mitad",
+              "120.000"
+            ],
+            [
+              "25 %",
+              "La mitad de la mitad (÷ 4)",
+              "60.000"
+            ],
+            [
+              "20 %",
+              "10 % × 2",
+              "24.000 × 2 = 48.000"
+            ],
+            [
+              "5 %",
+              "La mitad del 10 %",
+              "24.000 ÷ 2 = 12.000"
+            ],
+            [
+              "15 %",
+              "10 % + 5 %",
+              "24.000 + 12.000 = 36.000"
+            ],
+            [
+              "3 %",
+              "1 % × 3",
+              "2.400 × 3 = 7.200"
+            ],
+            [
+              "19 % (IVA)",
+              "20 % − 1 %",
+              "48.000 − 2.400 = 45.600"
+            ]
+          ]
+        },
+        {
+          "tipo": "tip",
+          "titulo": "Cómo reconocerlo",
+          "contenido": "Calcular el 20 % se puede hacer como 10 % × 2, como 1 % × 20 o como 40 % ÷ 2. En cambio, \"1 % dividido entre 20\" NO da el 20 %: da el 0,05 %."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Descuentos y aumentos"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Se puede calcular el valor del descuento (o aumento) y luego restarlo (o sumarlo), o hacerlo en un solo paso multiplicando por un factor:"
+        },
+        {
+          "tipo": "formula",
+          "contenido": "Precio con descuento = P × (1 − p/100)\nPrecio con aumento = P × (1 + p/100)"
+        },
+        {
+          "tipo": "ejemplo",
+          "titulo": "Zapatos con descuento",
+          "contenido": "Unos zapatos cuestan $350.000 y tienen 10 % de descuento.\n\nDescuento: 10 % de 350.000 = 35.000. Precio final: 350.000 − 35.000 = **$315.000**.\n\nEn un paso: 350.000 × 0,90 = $315.000.\n\n**Ejemplo resuelto: Precio con IVA del 19 %**\n\nUn artículo cuesta $200.000 antes de IVA. IVA = 19 % de 200.000 = 200.000 × 0,19 = 38.000.\n\nPrecio final = 200.000 + 38.000 = **$238.000** (o 200.000 × 1,19)."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 3,
+          "texto": "Porcentajes sucesivos"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Cuando se aplican dos porcentajes seguidos, el segundo se calcula **sobre el resultado del primero**, no sobre el valor inicial. Por eso los porcentajes sucesivos **no se suman**."
+        },
+        {
+          "tipo": "ejemplo",
+          "titulo": "Descuento del 20 % y luego otro del 10 %",
+          "contenido": "Precio inicial: $100.000.\n\nPrimer descuento: 100.000 × 0,80 = 80.000.\n\nSegundo descuento (sobre 80.000): 80.000 × 0,90 = 72.000.\n\nDescuento total: 100.000 − 72.000 = 28.000, es decir, **28 %** (no 30 %).\n\n**Ejemplo resuelto: Porcentaje de un porcentaje: rendimiento de una inversión**\n\nUna empresa da 10 % de rendimiento trimestral y cobra el 25 % de ese rendimiento. Un cliente invierte $5.000.000.\n\nPaso 1. Rendimiento: 10 % de 5.000.000 = 500.000.\n\nPaso 2. Cobro de la empresa: 25 % de 500.000 = 500.000 ÷ 4 = 125.000.\n\nPaso 3. Ganancia del cliente: 500.000 − 125.000 = **$375.000**."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "¿Qué porcentaje representa una cantidad?"
+        },
+        {
+          "tipo": "formula",
+          "contenido": "Porcentaje = (parte ÷ total) × 100"
+        },
+        {
+          "tipo": "ejemplo",
+          "titulo": "Respuestas correctas en un examen",
+          "contenido": "Pedro respondió bien 5 de 10 preguntas y Ana 8 de 10.\n\nPedro: (5 ÷ 10) × 100 = **50 %**. Ana: (8 ÷ 10) × 100 = **80 %**.\n\nOtro caso: 18 de 24 → (18 ÷ 24) × 100 = 0,75 × 100 = **75 %**."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Hallar el total conociendo una parte"
+        },
+        {
+          "tipo": "formula",
+          "contenido": "Total = parte × 100 ÷ p"
+        },
+        {
+          "tipo": "ejemplo",
+          "titulo": "Asistentes a un concierto",
+          "contenido": "Por la lluvia, el 50 % de los asistentes se fue a la primera hora y el 30 % del total a la segunda. Quedaron 100 personas. ¿Cuántas había al inicio?\n\nSe fue 50 % + 30 % = 80 % (ambos son porcentajes del mismo total, por eso sí se suman). Quedó el 20 %.\n\nTotal = 100 × 100 ÷ 20 = **500 asistentes**. Comprobación: 20 % de 500 = 100 ✓.\n\n**Ejemplo resuelto: Hallar el número inicial a partir del 1 %**\n\nEl 1 % de la cantidad inicial de semillas es 4. ¿Cuántas semillas había?\n\nTotal = 4 × 100 ÷ 1 = **400 semillas**."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Variación porcentual"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Indica en qué porcentaje aumentó o disminuyó una cantidad. Si el resultado es positivo hubo aumento; si es negativo, disminución."
+        },
+        {
+          "tipo": "formula",
+          "contenido": "Variación % = (valor nuevo − valor anterior) ÷ valor anterior × 100"
+        },
+        {
+          "tipo": "ejemplo",
+          "titulo": "Aumento de precio",
+          "contenido": "Un pasaje pasó de $2.500 a $3.000. Variación = (3.000 − 2.500) ÷ 2.500 × 100 = 500 ÷ 2.500 × 100 = **20 % de aumento**."
+        },
+        {
+          "tipo": "tip",
+          "titulo": "Qué fórmula usar",
+          "contenido": "Si te dan el valor anterior y el porcentaje → usa descuento/aumento. Si te dan los dos valores → usa variación porcentual. Si te dan la parte y el porcentaje → halla el total."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Regla de tres"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Sirve para resolver problemas de **proporcionalidad**: se conocen tres valores y se busca un cuarto. Antes de aplicarla hay que decidir si la relación es directa o inversa."
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Tipo",
+            "Cómo reconocerla",
+            "Fórmula"
+          ],
+          "filas": [
+            [
+              "Directa",
+              "Si una cantidad aumenta, la otra también aumenta en la misma proporción (más productos → más costo).",
+              "a → b\nc → x\nx = (b × c) ÷ a"
+            ],
+            [
+              "Inversa",
+              "Si una cantidad aumenta, la otra disminuye (más trabajadores → menos días).",
+              "a → b\nc → x\nx = (a × b) ÷ c"
+            ]
+          ]
+        },
+        {
+          "tipo": "ejemplo",
+          "titulo": "Regla de tres directa: cambio de moneda",
+          "contenido": "1 dólar = 3.000 pesos. ¿Cuánto se paga por un cepillo de 6 dólares?\n\n1 → 3.000; 6 → x. x = (3.000 × 6) ÷ 1 = **18.000 pesos**.\n\n**Ejemplo resuelto: Regla de tres directa: proporción de goles**\n\nUn futbolista anota 4 goles por cada 5 tiros. Si anotó 12 goles, ¿cuántos tiros hizo?\n\n4 goles → 5 tiros; 12 goles → x. x = (5 × 12) ÷ 4 = 60 ÷ 4 = **15 tiros**.\n\n**Ejemplo resuelto: Regla de tres inversa: obreros y días**\n\n6 obreros construyen un muro en 10 días. ¿Cuántos días tardan 4 obreros?\n\nMenos obreros → más días: es inversa. x = (6 × 10) ÷ 4 = 60 ÷ 4 = **15 días**.\n\n**Ejemplo resuelto: Ahorro mensual con porcentaje**\n\nEstefanía gana $900.000 al mes y ahorra el 3 % durante 10 meses.\n\n1 % de 900.000 = 9.000 → 3 % = 27.000 por mes. En 10 meses: 27.000 × 10 = **$270.000**."
+        }
       ]
     },
     {
-      "codigo": "MAT-CAL-L1",
-      "subtema": "calculo-basico",
-      "titulo": "¿Qué tan rápido cambia? Tasa de cambio y lectura de gráficas",
-      "resumen": "Aprenderás a calcular e interpretar la tasa de cambio, a identificar en una gráfica dónde una función crece, decrece o alcanza su máximo, y a distinguir la variación lineal de la exponencial.",
-      "duracion_min": 12,
+      "codigo": "MAT-ECU-L1",
+      "subtema": "ecuaciones-basicas",
+      "titulo": "Ecuaciones básicas",
+      "resumen": "Una ecuación es una igualdad con un valor desconocido (la incógnita, normalmente x). Resolverla es encontrar el valor de x que hace verdadera la igualdad. Se usan para hallar cantidades desconocidas a partir de condiciones: precios, edades, medidas, costos de producción.",
+      "duracion_min": 8,
       "bloques": [
-        { "tipo": "texto", "contenido": "En el ICFES, el cálculo no aparece con derivadas ni fórmulas complicadas: aparece como la pregunta **¿cómo cambia una cantidad cuando cambia otra?** ¿Qué tan rápido se vacía un tanque? ¿Cuándo alcanzó su altura máxima un balón? ¿Qué crece más rápido, un ahorro fijo o uno con intereses? Todo eso se responde leyendo gráficas y tablas con atención." },
-        { "tipo": "concepto", "titulo": "Tasa de cambio y pendiente", "contenido": "La **tasa de cambio promedio** entre dos puntos indica cuánto cambia y por cada unidad que cambia x. En una gráfica, es la **pendiente** (inclinación) del segmento que une los dos puntos. Si es positiva, la cantidad crece; si es negativa, decrece; si es cero, se mantiene constante. Sus unidades combinan las de los ejes: m/min, litros/hora, pesos/kg." },
-        { "tipo": "formula", "contenido": "Tasa de cambio = Δy ÷ Δx = (y₂ − y₁) ÷ (x₂ − x₁)", "nota": "En una función lineal y = m·x + b, la tasa de cambio es siempre la misma: la pendiente m." },
-        { "tipo": "ejemplo", "titulo": "Ejemplo resuelto: el tanque de la finca", "enunciado": "El tanque de agua de una finca en San Gil (Santander) tenía 1.200 litros a las 6:00 a. m. y 750 litros a las 9:00 a. m. ¿Cuál fue la tasa de cambio promedio del volumen de agua y qué significa?", "pasos": ["Cambio en el volumen: Δy = 750 − 1.200 = −450 litros.", "Cambio en el tiempo: Δx = 9 − 6 = 3 horas.", "Tasa de cambio: −450 ÷ 3 = −150 litros por hora.", "El signo negativo indica que el volumen disminuye: en promedio, el tanque perdió 150 litros cada hora."], "respuesta": "−150 L/h: el tanque se vació, en promedio, 150 litros por hora." },
-        { "tipo": "concepto", "titulo": "Crecimiento, decrecimiento, máximos y mínimos", "contenido": "Una función **crece** en un intervalo si al avanzar hacia la derecha la gráfica sube, y **decrece** si baja. El **máximo** es el punto más alto de la gráfica y el **mínimo**, el más bajo; se informan con su valor (en el eje y) y el momento en que ocurren (en el eje x). Cuanto más inclinado es un tramo, más rápido es el cambio." },
-        { "tipo": "concepto", "titulo": "Variación lineal vs. exponencial", "contenido": "En la variación **lineal** se **suma** la misma cantidad en cada periodo: la tasa de cambio es constante y la gráfica es una recta. En la **exponencial** se **multiplica** por el mismo factor en cada periodo, así que los aumentos son cada vez mayores y la gráfica es una curva que se empina. Por ejemplo, crecer un 10 % al año significa multiplicar por 1,1 cada año: y = y₀ · 1,1ⁿ. A largo plazo, un crecimiento exponencial siempre supera a uno lineal." },
-        { "tipo": "lista", "titulo": "¿Lineal o exponencial? Revisa la tabla", "items": ["Calcula las diferencias entre valores consecutivos: si son iguales, la variación es lineal.", "Calcula los cocientes entre valores consecutivos: si son iguales, la variación es exponencial.", "En la gráfica, la lineal es una recta; la exponencial creciente es una curva cada vez más empinada."] },
-        { "tipo": "tip", "contenido": "Tip ICFES: cuando te pregunten en qué intervalo algo cambió más rápido, no compares cuánto subió o bajó en total: compara la **inclinación**, es decir, el cambio dividido entre el tiempo. Un tramo corto y empinado puede ser más rápido que uno largo." },
-        { "tipo": "ejercicio", "enunciado": "Un bus sale de Bogotá hacia Tunja. A las 7:00 a. m. ha recorrido 20 km y a las 9:30 a. m. ha recorrido 145 km. ¿Cuál fue su rapidez promedio en ese intervalo?", "opciones": ["50 km/h", "58 km/h", "62,5 km/h", "125 km/h"], "correcta": 0, "explicacion": "Δd = 145 − 20 = 125 km y Δt = 9:30 − 7:00 = 2,5 h. Rapidez promedio = 125 ÷ 2,5 = 50 km/h. El 58 sale de dividir 145 ÷ 2,5 sin restar los 20 km iniciales, y el 62,5, de usar 2 horas en lugar de 2,5." },
-        { "tipo": "ejercicio", "enunciado": "La tabla muestra el número de bacterias en un cultivo de laboratorio: 0 h → 300; 1 h → 600; 2 h → 1.200; 3 h → 2.400. Si el comportamiento se mantiene, ¿qué tipo de variación es y cuántas bacterias habrá a las 5 horas?", "opciones": ["Lineal; 3.600", "Lineal; 4.800", "Exponencial; 4.800", "Exponencial; 9.600"], "correcta": 3, "explicacion": "Los cocientes son iguales: 600 ÷ 300 = 1.200 ÷ 600 = 2.400 ÷ 1.200 = 2, así que la población se duplica cada hora (variación exponencial). A las 4 h habrá 4.800 y a las 5 h, 9.600. El 4.800 corresponde a las 4 horas, no a las 5." }
+        {
+          "tipo": "texto",
+          "contenido": "Una ecuación es una **igualdad con un valor desconocido** (la incógnita, normalmente x). Resolverla es encontrar el valor de x que hace verdadera la igualdad. Se usan para hallar cantidades desconocidas a partir de condiciones: precios, edades, medidas, costos de producción."
+        },
+        {
+          "tipo": "texto",
+          "contenido": "El **grado** de una ecuación es el mayor exponente de la incógnita: 2x − 4 = 20 es de primer grado; x² − 5x + 6 = 0 es de segundo grado."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Ecuaciones de primer grado"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Tienen la forma **ax + b = c** y siempre tienen una sola solución. La idea es **dejar la x sola** a un lado del igual. Para eso, cada término que cambia de lado hace la operación contraria (transposición):"
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Si en un lado está…",
+            "…pasa al otro lado…"
+          ],
+          "filas": [
+            [
+              "sumando (+)",
+              "restando (−)"
+            ],
+            [
+              "restando (−)",
+              "sumando (+)"
+            ],
+            [
+              "multiplicando (×)",
+              "dividiendo (÷)"
+            ],
+            [
+              "dividiendo (÷)",
+              "multiplicando (×)"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "contenido": "**Pasos generales:** 1) eliminar paréntesis y fracciones; 2) llevar los términos con x a un lado y los números al otro; 3) reducir términos semejantes; 4) despejar x; 5) comprobar reemplazando."
+        },
+        {
+          "tipo": "ejemplo",
+          "titulo": "X − 9 = 19",
+          "contenido": "El −9 pasa sumando: 4x = 19 + 9 → 4x = 28.\n\nEl 4 que multiplica pasa dividiendo: x = 28 ÷ 4 → **x = 7**.\n\nComprobación: 4(7) − 9 = 28 − 9 = 19 ✓\n\n**Ejemplo resuelto: Con paréntesis: 3(x − 2) + 5 = x + 9**\n\nDistributiva: 3x − 6 + 5 = x + 9 → 3x − 1 = x + 9.\n\nTérminos con x a la izquierda y números a la derecha: 3x − x = 9 + 1 → 2x = 10.\n\nDespejar: x = 10 ÷ 2 → **x = 5**.\n\nComprobación: 3(5 − 2) + 5 = 9 + 5 = 14 y 5 + 9 = 14 ✓\n\n**Ejemplo resuelto: Con fracciones: x/2 + x/3 = 10**\n\nSe multiplica todo por el mínimo común múltiplo de los denominadores (6): 6·x/2 + 6·x/3 = 6·10.\n\n3x + 2x = 60 → 5x = 60 → **x = 12**.\n\nComprobación: 12/2 + 12/3 = 6 + 4 = 10 ✓"
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 3,
+          "texto": "Despejar una variable en una fórmula"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "El mismo procedimiento sirve para despejar una letra en función de otra, por ejemplo para reescribir una fórmula."
+        },
+        {
+          "tipo": "ejemplo",
+          "titulo": "Despejar x en y = 3 − 2x",
+          "contenido": "El 3 está sumando a la derecha: pasa restando → y − 3 = −2x.\n\nEl −2 multiplica: pasa dividiendo → x = (y − 3) ÷ (−2), que es lo mismo que **x = (3 − y)/2**.\n\nError frecuente: pasar el 3 sin cambiarle el signo, o agregar un signo negativo de más a la y."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Plantear ecuaciones a partir de un problema"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "En el preICFES casi nunca dan la ecuación escrita: hay que traducir el enunciado."
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Enunciado",
+            "Expresión"
+          ],
+          "filas": [
+            [
+              "Un número",
+              "x"
+            ],
+            [
+              "El doble / el triple de un número",
+              "2x / 3x"
+            ],
+            [
+              "La mitad de un número",
+              "x/2"
+            ],
+            [
+              "Un número aumentado en 5",
+              "x + 5"
+            ],
+            [
+              "Un número disminuido en 5",
+              "x − 5"
+            ],
+            [
+              "Tres números consecutivos",
+              "x, x + 1, x + 2"
+            ],
+            [
+              "El cuadrado de un número",
+              "x²"
+            ],
+            [
+              "El 20 % de un número",
+              "0,2x"
+            ]
+          ]
+        },
+        {
+          "tipo": "ejemplo",
+          "titulo": "Reparto de dinero",
+          "contenido": "Ana tiene el triple de dinero que Luis. Entre los dos tienen $80.000. ¿Cuánto tiene cada uno?\n\nDinero de Luis = x; dinero de Ana = 3x. Ecuación: x + 3x = 80.000.\n\n4x = 80.000 → x = 20.000.\n\nLuis tiene **$20.000** y Ana 3 × 20.000 = **$60.000**. Comprobación: 20.000 + 60.000 = 80.000 ✓"
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Ecuaciones de segundo grado"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Tienen la forma general **ax² + bx + c = 0**, con a ≠ 0. Pueden tener **dos soluciones, una o ninguna** (en los reales). Aparecen en problemas de áreas, movimiento (lanzamientos) y costos que dependen de x²."
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Antes de resolver, la ecuación debe estar **igualada a cero** e identificarse a, b y c (con sus signos)."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 3,
+          "texto": "Método 1: ecuación incompleta sin término en x (b = 0)"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Forma ax² + c = 0. Se despeja x² y se saca raíz cuadrada, recordando el ±."
+        },
+        {
+          "tipo": "ejemplo",
+          "titulo": "X² − 25 = 0",
+          "contenido": "x² = 25 → x = ±√25 → **x = 5 o x = −5**.\n\n**Ejemplo resuelto: Costos de producción**\n\nEl costo de producir x unidades es y = x² + 30.000. Si el costo fue 40.000, ¿cuántas unidades se produjeron?\n\n40.000 = x² + 30.000 → x² = 10.000 → x = ±100.\n\nComo no se producen cantidades negativas, se descarta −100: **x = 100 unidades**."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 3,
+          "texto": "Método 2: ecuación incompleta sin término independiente (c = 0)"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Forma ax² + bx = 0. Se saca **factor común x** y se iguala cada factor a cero."
+        },
+        {
+          "tipo": "ejemplo",
+          "titulo": "X² − 12x = 0",
+          "contenido": "Factor común: 3x(x − 4) = 0.\n\n3x = 0 → x = 0; x − 4 = 0 → x = 4. Soluciones: **x = 0 y x = 4**."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 3,
+          "texto": "Método 3: factorización del trinomio x² + bx + c"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Se buscan **dos números que multiplicados den c y sumados den b**. Luego cada factor se iguala a cero."
+        },
+        {
+          "tipo": "ejemplo",
+          "titulo": "X² − 5x + 6 = 0",
+          "contenido": "Dos números que multiplicados den +6 y sumados den −5: −2 y −3 (porque (−2)(−3) = 6 y −2 + (−3) = −5).\n\nFactorización: (x − 2)(x − 3) = 0.\n\nx − 2 = 0 → x = 2; x − 3 = 0 → x = 3. Soluciones: **x = 2 y x = 3**.\n\nComprobación con x = 2: 4 − 10 + 6 = 0 ✓"
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 3,
+          "texto": "Método 4: fórmula general (sirve siempre)"
+        },
+        {
+          "tipo": "formula",
+          "contenido": "x = [ −b ± √(b² − 4ac) ] ÷ 2a"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "**a** es el número que acompaña a x², **b** el que acompaña a x y **c** el término sin x."
+        },
+        {
+          "tipo": "ejemplo",
+          "titulo": "X² + 3x − 2 = 0",
+          "contenido": "Identificar: a = 2, b = 3, c = −2.\n\nDiscriminante: b² − 4ac = 3² − 4(2)(−2) = 9 + 16 = 25.\n\nx = (−3 ± √25) ÷ (2·2) = (−3 ± 5) ÷ 4.\n\nCon +: x₁ = (−3 + 5) ÷ 4 = 2/4 = **1/2**. Con −: x₂ = (−3 − 5) ÷ 4 = −8/4 = **−2**."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 3,
+          "texto": "El discriminante: cuántas soluciones hay"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "La expresión **Δ = b² − 4ac** (lo que está dentro de la raíz) dice cuántas soluciones tiene la ecuación sin resolverla:"
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Valor de Δ",
+            "Soluciones reales",
+            "En la gráfica (parábola)"
+          ],
+          "filas": [
+            [
+              "Δ > 0",
+              "Dos soluciones distintas",
+              "Corta el eje x en dos puntos"
+            ],
+            [
+              "Δ = 0",
+              "Una solución (doble)",
+              "Toca el eje x en un punto"
+            ],
+            [
+              "Δ < 0",
+              "Ninguna solución real",
+              "No toca el eje x"
+            ]
+          ]
+        },
+        {
+          "tipo": "ejemplo",
+          "titulo": "¿Cuántas soluciones tiene 2x² + 6x + 3 = 0?",
+          "contenido": "a = 2, b = 6, c = 3 → Δ = 6² − 4(2)(3) = 36 − 24 = 12.\n\nComo Δ = 12 > 0, la ecuación tiene **dos soluciones reales**.\n\n**Ejemplo resuelto: Problema de área**\n\nEl largo de un terreno rectangular mide 3 m más que el ancho y su área es 40 m². ¿Cuáles son sus medidas?\n\nAncho = x; largo = x + 3. Área: x(x + 3) = 40 → x² + 3x − 40 = 0.\n\nDos números que multiplicados den −40 y sumados den +3: 8 y −5 → (x + 8)(x − 5) = 0.\n\nx = −8 (se descarta, una medida no es negativa) o x = 5.\n\nAncho = **5 m**, largo = **8 m**. Comprobación: 5 × 8 = 40 ✓"
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Situación",
+            "Método recomendado"
+          ],
+          "filas": [
+            [
+              "Falta el término en x (ax² + c = 0)",
+              "Despejar x² y sacar raíz (±)"
+            ],
+            [
+              "Falta el término independiente (ax² + bx = 0)",
+              "Factor común x"
+            ],
+            [
+              "a = 1 y los números son \"fáciles\"",
+              "Factorizar buscando dos números"
+            ],
+            [
+              "No se encuentran los números o a ≠ 1",
+              "Fórmula general"
+            ],
+            [
+              "Solo preguntan cuántas soluciones hay",
+              "Calcular el discriminante"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "codigo": "MAT-GE1-L1",
+      "subtema": "geometria-i",
+      "titulo": "Geometría I",
+      "resumen": "La geometría permite medir objetos y espacios reales: cuánta cerca se necesita, cuánta pintura, cuántas baldosas o cuánta agua cabe en un tanque.",
+      "duracion_min": 5,
+      "bloques": [
+        {
+          "tipo": "texto",
+          "contenido": "La geometría permite medir objetos y espacios reales: cuánta cerca se necesita, cuánta pintura, cuántas baldosas o cuánta agua cabe en un tanque."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Perímetro, área y volumen: cuál usar"
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Medida",
+            "Qué mide",
+            "Unidades",
+            "Palabras clave del problema"
+          ],
+          "filas": [
+            [
+              "Perímetro",
+              "La longitud del borde o contorno",
+              "cm, m, km",
+              "cerca, marco, borde, cinta, rodear, cable alrededor"
+            ],
+            [
+              "Área",
+              "La superficie que cubre una figura plana",
+              "cm², m²",
+              "pintar, baldosas, piso, terreno, tela, césped"
+            ],
+            [
+              "Volumen",
+              "El espacio que ocupa un cuerpo 3D",
+              "cm³, m³, litros",
+              "llenar, capacidad, cuánta agua, tanque, caja"
+            ]
+          ]
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Fórmulas de figuras planas"
+        },
+        {
+          "tipo": "imagen",
+          "src": "/img/lecciones/geometria-i/01.png",
+          "alt": "figuras",
+          "pie": null
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Figura",
+            "Perímetro (P)",
+            "Área (A)",
+            "Variables"
+          ],
+          "filas": [
+            [
+              "Cuadrado",
+              "P = 4l",
+              "A = l²",
+              "l = lado"
+            ],
+            [
+              "Rectángulo",
+              "P = 2b + 2h",
+              "A = b × h",
+              "b = base, h = altura"
+            ],
+            [
+              "Triángulo",
+              "P = a + b + c",
+              "A = (b × h) ÷ 2",
+              "h = altura perpendicular a la base"
+            ],
+            [
+              "Paralelogramo",
+              "Suma de sus lados",
+              "A = b × h",
+              "h = altura (no el lado inclinado)"
+            ],
+            [
+              "Rombo",
+              "P = 4l",
+              "A = (D × d) ÷ 2",
+              "D y d = diagonales"
+            ],
+            [
+              "Trapecio",
+              "Suma de sus lados",
+              "A = (B + b) × h ÷ 2",
+              "B = base mayor, b = base menor"
+            ],
+            [
+              "Círculo",
+              "P = 2πr = πD",
+              "A = πr²",
+              "r = radio, D = diámetro = 2r, π ≈ 3,14"
+            ]
+          ]
+        },
+        {
+          "tipo": "alerta",
+          "titulo": "Cuidado",
+          "contenido": "La altura de un triángulo o de un paralelogramo siempre es perpendicular (forma 90°) a la base. No se debe usar el lado inclinado como altura."
+        },
+        {
+          "tipo": "ejemplo",
+          "titulo": "Medidas de un círculo de radio 7 m",
+          "contenido": "Perímetro: P = 2 × π × 7 = 14π m ≈ 14 × 3,14 = **43,96 m**.\n\nÁrea: A = π × 7² = 49π m² ≈ 49 × 3,14 = **153,86 m²**.\n\nSi dan el diámetro (14 m), primero se halla el radio: r = 14 ÷ 2 = 7 m."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Figuras compuestas"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Cuando una figura está formada por varias figuras simples: se **divide en partes conocidas**, se calcula el área de cada una y se **suman** (o se **restan** si hay un hueco)."
+        },
+        {
+          "tipo": "ejemplo",
+          "titulo": "Ventana con forma de rectángulo y semicírculo",
+          "contenido": "Una ventana es un rectángulo de 2 m de ancho y 3 m de alto, con un semicírculo encima cuyo diámetro es el ancho (2 m).\n\nÁrea del rectángulo: 2 × 3 = 6 m².\n\nSemicírculo: radio = 2 ÷ 2 = 1 m; área = (π × 1²) ÷ 2 ≈ 3,14 ÷ 2 = 1,57 m².\n\nÁrea total ≈ 6 + 1,57 = **7,57 m²**.\n\n**Ejemplo resuelto: Área con un hueco**\n\nUn jardín rectangular de 10 m × 6 m tiene en el centro una fuente circular de radio 1 m. ¿Cuánto césped se necesita?\n\nÁrea del jardín: 10 × 6 = 60 m². Área de la fuente: π × 1² ≈ 3,14 m².\n\nCésped = 60 − 3,14 = **56,86 m²**."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Efecto de cambiar las medidas (escala)"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Si todas las longitudes de una figura se multiplican por un número k: el perímetro se multiplica por **k**, el área por **k²** y el volumen por **k³**."
+        },
+        {
+          "tipo": "ejemplo",
+          "titulo": "Duplicar el lado de un cuadrado",
+          "contenido": "Lado 3 cm: P = 12 cm, A = 9 cm². Lado 6 cm (k = 2): P = 24 cm (el doble), A = 36 cm² (**4 veces** mayor, porque 2² = 4)."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Volumen de cuerpos geométricos"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "En figuras 3D no se habla de perímetro ni de área de la figura plana, sino de **volumen**. En prismas y cilindros la regla general es **área de la base × altura**; en conos y pirámides es la tercera parte de eso."
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Cuerpo",
+            "Volumen (V)",
+            "Variables"
+          ],
+          "filas": [
+            [
+              "Cubo",
+              "V = a³",
+              "a = arista"
+            ],
+            [
+              "Prisma rectangular (caja)",
+              "V = largo × ancho × alto",
+              "—"
+            ],
+            [
+              "Cilindro",
+              "V = πr² × h",
+              "r = radio de la base, h = altura"
+            ],
+            [
+              "Cono",
+              "V = (πr² × h) ÷ 3",
+              "r = radio, h = altura"
+            ],
+            [
+              "Pirámide",
+              "V = (área de la base × h) ÷ 3",
+              "h = altura"
+            ],
+            [
+              "Esfera",
+              "V = (4/3)πr³",
+              "r = radio"
+            ]
+          ]
+        },
+        {
+          "tipo": "ejemplo",
+          "titulo": "Capacidad de un tanque cilíndrico",
+          "contenido": "Un tanque cilíndrico tiene radio de 1 m y altura de 2 m. ¿Cuántos litros caben?\n\nV = π × 1² × 2 = 2π ≈ 2 × 3,14 = 6,28 m³.\n\nComo 1 m³ = 1.000 L: 6,28 × 1.000 = **6.280 litros**.\n\n**Ejemplo resuelto: Cajas dentro de una caja**\n\n¿Cuántos cubos de 10 cm de arista caben en una caja de 50 cm × 30 cm × 20 cm?\n\nPor largo: 50 ÷ 10 = 5; por ancho: 30 ÷ 10 = 3; por alto: 20 ÷ 10 = 2.\n\nTotal: 5 × 3 × 2 = **30 cubos** (también: 30.000 cm³ ÷ 1.000 cm³ = 30)."
+        }
+      ]
+    },
+    {
+      "codigo": "MAT-GE2-L1",
+      "subtema": "geometria-ii",
+      "titulo": "Geometría II",
+      "resumen": "Un ángulo es la abertura entre dos semirrectas que salen de un mismo punto (el vértice). Se mide en grados (°). Una vuelta completa mide 360°.",
+      "duracion_min": 6,
+      "bloques": [
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Ángulos y su clasificación"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Un ángulo es la abertura entre dos semirrectas que salen de un mismo punto (el vértice). Se mide en grados (°). Una vuelta completa mide 360°."
+        },
+        {
+          "tipo": "imagen",
+          "src": "/img/lecciones/geometria-ii/01.png",
+          "alt": "angulos",
+          "pie": null
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Tipo",
+            "Medida"
+          ],
+          "filas": [
+            [
+              "Agudo",
+              "Menor que 90°"
+            ],
+            [
+              "Recto",
+              "Exactamente 90° (se marca con un cuadradito)"
+            ],
+            [
+              "Obtuso",
+              "Mayor que 90° y menor que 180°"
+            ],
+            [
+              "Llano",
+              "Exactamente 180° (forma una línea recta)"
+            ],
+            [
+              "Completo",
+              "360°"
+            ]
+          ]
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Relaciones entre ángulos"
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Relación",
+            "Regla",
+            "Ejemplo"
+          ],
+          "filas": [
+            [
+              "Complementarios",
+              "Suman 90°",
+              "36° y 54° (36 + 54 = 90)"
+            ],
+            [
+              "Suplementarios",
+              "Suman 180°",
+              "134° y 46° (134 + 46 = 180)"
+            ],
+            [
+              "Adyacentes en línea recta",
+              "Están uno al lado del otro sobre una recta: suman 180°",
+              "Si uno mide 140°, el otro mide 40°"
+            ],
+            [
+              "Opuestos por el vértice",
+              "Se forman al cruzarse dos rectas: son iguales",
+              "140° y 140°; 40° y 40°"
+            ]
+          ]
+        },
+        {
+          "tipo": "ejemplo",
+          "titulo": "Hallar ángulos desconocidos",
+          "contenido": "Complemento de 36°: 90° − 36° = **54°**. Suplemento de 134°: 180° − 134° = **46°**.\n\nDos rectas se cruzan y uno de los ángulos mide 140°. Su opuesto por el vértice mide **140°**, y los otros dos (adyacentes) miden 180° − 140° = **40°** cada uno. Comprobación: 140 + 40 + 140 + 40 = 360° ✓"
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Rectas paralelas cortadas por una secante"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Cuando una recta (secante o transversal) corta dos rectas paralelas, se forman 8 ángulos con relaciones fijas. Son muy útiles para hallar ángulos sin medir."
+        },
+        {
+          "tipo": "imagen",
+          "src": "/img/lecciones/geometria-ii/02.png",
+          "alt": "paralelas",
+          "pie": null
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Pareja",
+            "Posición",
+            "Relación",
+            "En la figura"
+          ],
+          "filas": [
+            [
+              "Correspondientes",
+              "Misma posición en cada intersección",
+              "Iguales",
+              "1 y 5; 2 y 6; 3 y 7; 4 y 8"
+            ],
+            [
+              "Alternos internos",
+              "Entre las paralelas, a lados opuestos de la secante",
+              "Iguales",
+              "3 y 5; 4 y 6"
+            ],
+            [
+              "Alternos externos",
+              "Fuera de las paralelas, a lados opuestos de la secante",
+              "Iguales",
+              "1 y 7; 2 y 8"
+            ],
+            [
+              "Conjugados internos",
+              "Entre las paralelas, del mismo lado de la secante",
+              "Suman 180°",
+              "3 y 6; 4 y 5"
+            ]
+          ]
+        },
+        {
+          "tipo": "tip",
+          "titulo": "Truco",
+          "contenido": "Con dos paralelas y una secante solo hay dos medidas: todos los ángulos agudos son iguales entre sí, todos los obtusos son iguales entre sí, y un agudo más un obtuso suman 180°."
+        },
+        {
+          "tipo": "ejemplo",
+          "titulo": "Ángulos entre paralelas",
+          "contenido": "En la figura, el ángulo 2 mide 125°. Hallar los demás.\n\nÁngulo 1 (adyacente al 2): 180° − 125° = 55°. Ángulo 4 (opuesto por el vértice al 2): 125°. Ángulo 3 (opuesto al 1): 55°.\n\nPor correspondientes: 5 = 1 = **55°**, 6 = 2 = **125°**, 7 = 3 = **55°**, 8 = 4 = **125°**."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Triángulos"
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 3,
+          "texto": "Suma de los ángulos internos"
+        },
+        {
+          "tipo": "formula",
+          "contenido": "Ángulo A + ángulo B + ángulo C = 180°"
+        },
+        {
+          "tipo": "ejemplo",
+          "titulo": "Tercer ángulo de un triángulo",
+          "contenido": "Dos ángulos miden 45° y 85°. El tercero mide 180° − (45° + 85°) = 180° − 130° = **50°**."
+        },
+        {
+          "tipo": "texto",
+          "contenido": "**Ángulo exterior:** un ángulo exterior de un triángulo es igual a la **suma de los dos ángulos internos no adyacentes** a él. En el triángulo anterior, el ángulo exterior junto al de 50° mide 45° + 85° = 130° (o 180° − 50° = 130°)."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 3,
+          "texto": "Clasificación"
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Según sus lados",
+            "Característica",
+            "Según sus ángulos",
+            "Característica"
+          ],
+          "filas": [
+            [
+              "Equilátero",
+              "3 lados iguales (y 3 ángulos de 60°)",
+              "Acutángulo",
+              "3 ángulos agudos"
+            ],
+            [
+              "Isósceles",
+              "2 lados iguales (y los 2 ángulos de la base iguales)",
+              "Rectángulo",
+              "1 ángulo recto (90°)"
+            ],
+            [
+              "Escaleno",
+              "Ningún lado igual",
+              "Obtusángulo",
+              "1 ángulo obtuso"
+            ]
+          ]
+        },
+        {
+          "tipo": "ejemplo",
+          "titulo": "Triángulo isósceles",
+          "contenido": "En un triángulo isósceles, el ángulo desigual mide 40°. ¿Cuánto miden los otros dos?\n\nLos dos ángulos de la base son iguales: 2x + 40° = 180° → 2x = 140° → x = **70°** cada uno.\n\nCaso especial: un triángulo rectángulo isósceles tiene ángulos de 90°, 45° y 45°."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 3,
+          "texto": "Desigualdad triangular"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Tres segmentos forman un triángulo solo si **cada lado es menor que la suma de los otros dos**. En la práctica basta comprobar que el lado más largo sea menor que la suma de los otros dos. También significa que el camino recto entre dos puntos es siempre más corto que ir pasando por un tercer punto."
+        },
+        {
+          "tipo": "formula",
+          "contenido": "a < b + c, b < a + c, c < a + b"
+        },
+        {
+          "tipo": "ejemplo",
+          "titulo": "¿Se puede formar el triángulo?",
+          "contenido": "Lados 3, 4 y 8: el mayor es 8 y 3 + 4 = 7. Como 8 > 7, **no** se forma triángulo.\n\nLados 5, 7 y 10: 5 + 7 = 12 > 10, **sí** se forma.\n\nSi dos lados miden 5 y 9, el tercero debe estar entre 9 − 5 = 4 y 9 + 5 = 14 (sin incluirlos)."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 3,
+          "texto": "Semejanza de triángulos"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Dos triángulos son **semejantes** cuando tienen la misma forma pero distinto tamaño: sus ángulos son iguales y sus lados son **proporcionales**. El número por el que se multiplican los lados se llama **razón de semejanza (k)**. Se usa en maquetas, planos, mapas, sombras y alturas inaccesibles."
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Criterio",
+            "Qué hay que comprobar"
+          ],
+          "filas": [
+            [
+              "AA (ángulo–ángulo)",
+              "Dos ángulos de un triángulo son iguales a dos ángulos del otro."
+            ],
+            [
+              "LLL (lado–lado–lado)",
+              "Los tres pares de lados correspondientes son proporcionales (dan el mismo cociente)."
+            ],
+            [
+              "LAL (lado–ángulo–lado)",
+              "Dos pares de lados son proporcionales y el ángulo entre ellos es igual."
+            ]
+          ]
+        },
+        {
+          "tipo": "ejemplo",
+          "titulo": "Comprobar semejanza",
+          "contenido": "Triángulo 1: lados 3, 4, 5. Triángulo 2: lados 6, 8, 10.\n\n6/3 = 2; 8/4 = 2; 10/5 = 2. Todos los cocientes son iguales → son **semejantes** con k = 2 (criterio LLL).\n\nEn una maqueta pasa lo mismo: si todas las medidas guardan la misma proporción, es semejante; basta una medida que no cumpla la proporción para que no lo sea.\n\n**Ejemplo resuelto: Altura de un árbol con sombras**\n\nUn poste de 2 m proyecta una sombra de 3 m. A la misma hora, un árbol proyecta una sombra de 12 m. ¿Cuánto mide el árbol?\n\nLos rayos del sol forman triángulos semejantes, así que: altura del árbol / 12 = 2 / 3.\n\nAltura = 2 × 12 ÷ 3 = 24 ÷ 3 = **8 m**."
+        },
+        {
+          "tipo": "texto",
+          "contenido": "**Congruencia:** dos triángulos son congruentes si tienen la misma forma y el **mismo tamaño** (k = 1): lados y ángulos iguales."
+        }
+      ]
+    },
+    {
+      "codigo": "MAT-PLC-L1",
+      "subtema": "plano-cartesiano",
+      "titulo": "Plano cartesiano",
+      "resumen": "El plano cartesiano es un sistema de dos rectas numéricas perpendiculares que permite ubicar puntos con coordenadas. Se usa para leer mapas y recorridos, graficar funciones, calcular distancias y mover figuras.",
+      "duracion_min": 5,
+      "bloques": [
+        {
+          "tipo": "texto",
+          "contenido": "El plano cartesiano es un sistema de dos rectas numéricas perpendiculares que permite **ubicar puntos con coordenadas**. Se usa para leer mapas y recorridos, graficar funciones, calcular distancias y mover figuras."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Elementos y ubicación de puntos"
+        },
+        {
+          "tipo": "lista",
+          "items": [
+            "**Eje x (horizontal):** abscisas. A la derecha del origen es positivo y a la izquierda negativo.",
+            "**Eje y (vertical):** ordenadas. Hacia arriba es positivo y hacia abajo negativo.",
+            "**Origen:** el punto (0, 0), donde se cruzan los ejes.",
+            "**Par ordenado:** todo punto se escribe **(x, y)**: primero el movimiento horizontal y luego el vertical."
+          ],
+          "ordenada": false
+        },
+        {
+          "tipo": "imagen",
+          "src": "/img/lecciones/plano-cartesiano/01.png",
+          "alt": "plano",
+          "pie": null
+        },
+        {
+          "tipo": "ejemplo",
+          "titulo": "Ubicar el punto (−2, 4)",
+          "contenido": "Desde el origen: 2 unidades a la izquierda (x = −2) y luego 4 hacia arriba (y = 4). Queda en el cuadrante II."
+        },
+        {
+          "tipo": "texto",
+          "contenido": "En problemas de recorridos se suele usar: **norte = arriba (+y)**, **sur = abajo (−y)**, **oriente o este = derecha (+x)** y **occidente u oeste = izquierda (−x)**."
+        },
+        {
+          "tipo": "ejemplo",
+          "titulo": "Recorrido en un mapa",
+          "contenido": "Una persona sale del punto (0, 0), camina 2 km al norte, 3 km al oriente y 5 km al sur. ¿Dónde termina?\n\nNorte 2: (0, 2). Oriente 3: (3, 2). Sur 5: (3, 2 − 5) = **(3, −3)**."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Distancia entre dos puntos"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Sirve para hallar la longitud de un segmento o la distancia en línea recta entre dos lugares. Sale del teorema de Pitágoras."
+        },
+        {
+          "tipo": "formula",
+          "contenido": "d = √[ (x₂ − x₁)² + (y₂ − y₁)² ]"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "(x₁, y₁) y (x₂, y₂) son las coordenadas de los dos puntos. Si los puntos están en la misma línea horizontal o vertical, basta restar las coordenadas que cambian."
+        },
+        {
+          "tipo": "ejemplo",
+          "titulo": "Distancia entre A(1, 2) y B(4, 6)",
+          "contenido": "x₂ − x₁ = 4 − 1 = 3; y₂ − y₁ = 6 − 2 = 4.\n\nd = √(3² + 4²) = √(9 + 16) = √25 = **5 unidades**."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Punto medio"
+        },
+        {
+          "tipo": "formula",
+          "contenido": "M = ( (x₁ + x₂)/2 , (y₁ + y₂)/2 )"
+        },
+        {
+          "tipo": "ejemplo",
+          "titulo": "Punto medio entre (2, 3) y (8, −1)",
+          "contenido": "x = (2 + 8)/2 = 5; y = (3 + (−1))/2 = 1. M = **(5, 1)**."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Pendiente de una recta"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "La pendiente **m** mide qué tan inclinada está una recta: cuánto cambia y por cada unidad que avanza x. Se usa para saber si algo crece o decrece y qué tan rápido (por ejemplo, precio por kilómetro)."
+        },
+        {
+          "tipo": "formula",
+          "contenido": "m = (y₂ − y₁) ÷ (x₂ − x₁)"
+        },
+        {
+          "tipo": "ejemplo",
+          "titulo": "Pendiente entre (1, 2) y (3, 8)",
+          "contenido": "m = (8 − 2) ÷ (3 − 1) = 6 ÷ 2 = **3**. Por cada unidad que avanza x, y sube 3.\n\nm > 0: la recta sube (creciente). m < 0: baja (decreciente). m = 0: horizontal (constante)."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Transformaciones en el plano"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Mover una figura sin deformarla. La **traslación, la reflexión y la rotación** son isometrías: **no cambian** las medidas de los lados, los ángulos, el perímetro ni el área; solo cambian la posición u orientación."
+        },
+        {
+          "tipo": "imagen",
+          "src": "/img/lecciones/plano-cartesiano/02.png",
+          "alt": "transformaciones",
+          "pie": null
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 3,
+          "texto": "Traslación"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Desliza la figura sin girarla. Cada punto se mueve la misma cantidad: h unidades en horizontal y k en vertical."
+        },
+        {
+          "tipo": "formula",
+          "contenido": "(x, y) → (x + h, y + k)"
+        },
+        {
+          "tipo": "ejemplo",
+          "titulo": "Trasladar el triángulo A(−5, 1), B(−4, 5), C(−1, 3) cinco unidades a la derecha",
+          "contenido": "Se suma 5 a cada x y la y queda igual: A'(0, 1), B'(1, 5), **C'(4, 3)**.\n\nSi además bajara 1 unidad, se restaría 1 a cada y."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 3,
+          "texto": "Reflexión"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Produce la imagen de la figura como si hubiera un **espejo** en una recta (eje de reflexión). Cada punto queda a la misma distancia del eje, pero del otro lado."
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Eje de reflexión",
+            "Regla",
+            "Ejemplo con (3, 4)"
+          ],
+          "filas": [
+            [
+              "Eje x",
+              "(x, y) → (x, −y)",
+              "(3, −4)"
+            ],
+            [
+              "Eje y",
+              "(x, y) → (−x, y)",
+              "(−3, 4)"
+            ],
+            [
+              "Recta horizontal y = k",
+              "(x, y) → (x, 2k − y)",
+              "Con y = 1: (3, 2·1 − 4) = (3, −2)"
+            ],
+            [
+              "Recta vertical x = h",
+              "(x, y) → (2h − x, y)",
+              "Con x = 1: (2·1 − 3, 4) = (−1, 4)"
+            ]
+          ]
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 3,
+          "texto": "Rotación"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Gira la figura un ángulo alrededor de un punto fijo (normalmente el origen). Hay que fijarse en el **sentido**: antihorario (contrario a las manecillas del reloj, positivo) u horario."
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Rotación alrededor del origen",
+            "Regla",
+            "Ejemplo con (4, 2)"
+          ],
+          "filas": [
+            [
+              "90° antihorario",
+              "(x, y) → (−y, x)",
+              "(−2, 4)"
+            ],
+            [
+              "180° (cualquier sentido)",
+              "(x, y) → (−x, −y)",
+              "(−4, −2)"
+            ],
+            [
+              "90° horario (= 270° antihorario)",
+              "(x, y) → (y, −x)",
+              "(2, −4)"
+            ]
+          ]
+        },
+        {
+          "tipo": "tip",
+          "titulo": "Tip",
+          "contenido": "Para verificar una rotación en el examen, se puede girar físicamente la hoja en el sentido indicado y observar hacia dónde queda apuntando la figura."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 3,
+          "texto": "Homotecia (ampliación o reducción)"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Multiplica las coordenadas por un factor k: (x, y) → (kx, ky). A diferencia de las anteriores, **sí cambia el tamaño** (no es isometría), pero conserva la forma y los ángulos: la figura obtenida es semejante a la original."
+        }
+      ]
+    },
+    {
+      "codigo": "MAT-TR1-L1",
+      "subtema": "trigonometria-i",
+      "titulo": "Trigonometría I",
+      "resumen": "La trigonometría relaciona los lados y los ángulos de un triángulo. Sirve para calcular distancias y alturas que no se pueden medir directamente: altura de un edificio, longitud de una rampa o de una escalera, distancia a un barco.",
+      "duracion_min": 5,
+      "bloques": [
+        {
+          "tipo": "texto",
+          "contenido": "La trigonometría relaciona los lados y los ángulos de un triángulo. Sirve para calcular distancias y alturas que no se pueden medir directamente: altura de un edificio, longitud de una rampa o de una escalera, distancia a un barco."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Partes del triángulo rectángulo"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Un triángulo rectángulo tiene un ángulo de 90°. El lado opuesto al ángulo recto es la **hipotenusa** (siempre el lado más largo). Los otros dos son los **catetos**. Cuando se trabaja con un ángulo agudo θ, el cateto que está frente a él es el **opuesto** y el que lo forma junto con la hipotenusa es el **adyacente**."
+        },
+        {
+          "tipo": "imagen",
+          "src": "/img/lecciones/trigonometria-i/01.png",
+          "alt": "rectangulo",
+          "pie": null
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Teorema de Pitágoras"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Sirve para hallar **un lado desconocido** de un triángulo **rectángulo** cuando se conocen los otros **dos lados**."
+        },
+        {
+          "tipo": "formula",
+          "contenido": "c² = a² + b²\nHipotenusa: c = √(a² + b²) Cateto: a = √(c² − b²)"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "**c** = hipotenusa; **a** y **b** = catetos."
+        },
+        {
+          "tipo": "ejemplo",
+          "titulo": "Hallar la hipotenusa",
+          "contenido": "Catetos de 6 cm y 8 cm: c = √(6² + 8²) = √(36 + 64) = √100 = **10 cm**.\n\n**Ejemplo resuelto: Hallar un cateto**\n\nHipotenusa de 13 m y un cateto de 5 m: a = √(13² − 5²) = √(169 − 25) = √144 = **12 m**.\n\n**Ejemplo resuelto: Escalera apoyada en una pared**\n\nUna escalera de 5 m se apoya en una pared con su base a 3 m de ella. ¿A qué altura toca la pared?\n\nLa escalera es la hipotenusa (5 m); la distancia al piso es un cateto (3 m).\n\nAltura = √(5² − 3²) = √(25 − 9) = √16 = **4 m**.\n\n**Ejemplo resuelto: Diagonal de un cuadrado**\n\nCuadrado de lado 1: la diagonal divide el cuadrado en dos triángulos rectángulos de catetos 1 y 1 → d = √(1² + 1²) = **√2**."
+        },
+        {
+          "tipo": "texto",
+          "contenido": "**Ternas pitagóricas** (números enteros que cumplen el teorema, útiles para ahorrar cálculos): 3-4-5, 5-12-13, 8-15-17, 7-24-25 y sus múltiplos (6-8-10, 9-12-15…)."
+        },
+        {
+          "tipo": "texto",
+          "contenido": "**¿Es rectángulo?** Si el cuadrado del lado mayor es igual a la suma de los cuadrados de los otros dos, sí. Ejemplo: 7, 24, 25 → 7² + 24² = 49 + 576 = 625 = 25² ✓."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Razones trigonométricas"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Relacionan un **ángulo agudo** con los lados de un triángulo **rectángulo**. Se usan cuando en el problema interviene un ángulo: se conoce un ángulo y un lado y se busca otro lado, o se conocen dos lados y se busca un ángulo."
+        },
+        {
+          "tipo": "formula",
+          "contenido": "sen θ = cateto opuesto ÷ hipotenusa\ncos θ = cateto adyacente ÷ hipotenusa\ntan θ = cateto opuesto ÷ cateto adyacente"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Regla para recordarlas: **SOH – CAH – TOA** (Seno = Opuesto/Hipotenusa; Coseno = Adyacente/Hipotenusa; Tangente = Opuesto/Adyacente)."
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Ángulo",
+            "sen",
+            "cos",
+            "tan"
+          ],
+          "filas": [
+            [
+              "30°",
+              "1/2 = 0,5",
+              "√3/2 ≈ 0,866",
+              "√3/3 ≈ 0,577"
+            ],
+            [
+              "45°",
+              "√2/2 ≈ 0,707",
+              "√2/2 ≈ 0,707",
+              "1"
+            ],
+            [
+              "60°",
+              "√3/2 ≈ 0,866",
+              "1/2 = 0,5",
+              "√3 ≈ 1,732"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "contenido": "**Cómo elegir la razón:** 1) marca el ángulo que conoces (o buscas); 2) identifica qué lado conoces y cuál buscas respecto a ese ángulo (opuesto, adyacente o hipotenusa); 3) elige la razón que contenga **esos dos lados**."
+        },
+        {
+          "tipo": "ejemplo",
+          "titulo": "Altura de una rampa (seno)",
+          "contenido": "Una rampa de 10 m forma un ángulo de 30° con el piso. ¿Qué altura alcanza?\n\nConozco la hipotenusa (10 m) y busco el cateto opuesto al ángulo (la altura h) → seno.\n\nsen 30° = h ÷ 10 → h = 10 × sen 30° = 10 × 0,5 = **5 m**.\n\n**Ejemplo resuelto: Altura de un edificio (tangente)**\n\nDesde un punto a 20 m de un edificio se ve la parte más alta con un ángulo de elevación de 60°. ¿Cuánto mide el edificio?\n\nConozco el cateto adyacente (20 m) y busco el opuesto (altura) → tangente.\n\ntan 60° = h ÷ 20 → h = 20 × √3 ≈ 20 × 1,732 = **34,64 m**.\n\n**Ejemplo resuelto: Distancia horizontal (coseno)**\n\nUn cable de 12 m forma un ángulo de 60° con el suelo. ¿A qué distancia del poste está anclado?\n\nConozco la hipotenusa (12 m) y busco el cateto adyacente → coseno.\n\ncos 60° = d ÷ 12 → d = 12 × 0,5 = **6 m**.\n\n**Ejemplo resuelto: Hallar un ángulo**\n\nUn triángulo rectángulo tiene catetos de 5 cm y 5 cm. ¿Cuánto mide el ángulo agudo?\n\ntan θ = 5 ÷ 5 = 1. El ángulo cuya tangente es 1 es **θ = 45°**."
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Lo que se conoce",
+            "Lo que se busca",
+            "Herramienta"
+          ],
+          "filas": [
+            [
+              "Dos lados",
+              "El tercer lado",
+              "Teorema de Pitágoras"
+            ],
+            [
+              "Un ángulo agudo y un lado",
+              "Otro lado",
+              "Razones trigonométricas"
+            ],
+            [
+              "Dos lados",
+              "Un ángulo",
+              "Razones trigonométricas (al revés)"
+            ],
+            [
+              "Dos ángulos",
+              "El tercer ángulo",
+              "Suma de ángulos = 180°"
+            ]
+          ]
+        },
+        {
+          "tipo": "tip",
+          "titulo": "Clave preICFES",
+          "contenido": "Para hallar un lado con razones trigonométricas se necesita conocer al menos un lado y un ángulo agudo. El ángulo recto no sirve como dato porque ya se sabe que mide 90°. Con solo ángulos no se puede hallar ningún lado."
+        }
+      ]
+    },
+    {
+      "codigo": "MAT-TR2-L1",
+      "subtema": "trigonometria-ii",
+      "titulo": "Trigonometría II",
+      "resumen": "El teorema de Pitágoras y las razones trigonométricas solo funcionan en triángulos rectángulos. Para triángulos que no tienen ángulo recto (oblicuángulos) se usan la ley del seno y la ley del coseno.",
+      "duracion_min": 5,
+      "bloques": [
+        {
+          "tipo": "texto",
+          "contenido": "El teorema de Pitágoras y las razones trigonométricas **solo funcionan en triángulos rectángulos**. Para triángulos que no tienen ángulo recto (**oblicuángulos**) se usan la ley del seno y la ley del coseno."
+        },
+        {
+          "tipo": "texto",
+          "contenido": "**Notación:** los ángulos se nombran con mayúsculas (A, B, C) y cada lado con la minúscula del ángulo que tiene **enfrente**: el lado a está frente al ángulo A, b frente a B y c frente a C."
+        },
+        {
+          "tipo": "imagen",
+          "src": "/img/lecciones/trigonometria-ii/01.png",
+          "alt": "oblicuo",
+          "pie": null
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Ley del seno"
+        },
+        {
+          "tipo": "formula",
+          "contenido": "a / sen A = b / sen B = c / sen C"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "**Cuándo usarla:** cuando se conoce una **pareja completa** (un lado y su ángulo opuesto) y otro dato más. Casos típicos: dos ángulos y un lado (ALA o LAA), o dos lados y el ángulo opuesto a uno de ellos (LLA)."
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Se usan solo **dos** de las tres fracciones: la de la pareja conocida y la que tiene la incógnita."
+        },
+        {
+          "tipo": "ejemplo",
+          "titulo": "Dos ángulos y un lado",
+          "contenido": "En un triángulo, A = 40°, B = 60° y a = 10 cm. Hallar b y c. (sen 40° ≈ 0,643; sen 60° ≈ 0,866; sen 80° ≈ 0,985)\n\nTercer ángulo: C = 180° − 40° − 60° = 80°.\n\nPareja conocida: a = 10 con A = 40°.\n\nb / sen 60° = 10 / sen 40° → b = 10 × 0,866 ÷ 0,643 ≈ **13,47 cm**.\n\nc / sen 80° = 10 / sen 40° → c = 10 × 0,985 ÷ 0,643 ≈ **15,32 cm**."
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Para hallar un ángulo se despeja el seno: **sen B = b × sen A ÷ a**, y luego se busca el ángulo que tiene ese seno."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Ley del coseno"
+        },
+        {
+          "tipo": "formula",
+          "contenido": "a² = b² + c² − 2·b·c·cos A\nb² = a² + c² − 2·a·c·cos B\nc² = a² + b² − 2·a·b·cos C"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "**Cuándo usarla:** cuando **no hay una pareja completa**. Casos: se conocen **dos lados y el ángulo entre ellos (LAL)** y se busca el tercer lado, o se conocen **los tres lados (LLL)** y se busca un ángulo."
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Para hallar un ángulo se usa el despeje: **cos A = (b² + c² − a²) ÷ (2·b·c)**."
+        },
+        {
+          "tipo": "ejemplo",
+          "titulo": "Dos lados y el ángulo entre ellos (LAL)",
+          "contenido": "Dos barcos salen del mismo puerto en direcciones que forman 60°. Uno recorre 8 km y el otro 5 km. ¿Qué distancia los separa?\n\nDatos: b = 8, c = 5, A = 60° (el ángulo entre ellos); se busca a.\n\na² = 8² + 5² − 2(8)(5)·cos 60° = 64 + 25 − 80 × 0,5 = 89 − 40 = 49.\n\na = √49 = **7 km**.\n\n**Ejemplo resuelto: Tres lados (LLL): hallar un ángulo**\n\nUn triángulo tiene lados a = 7, b = 8 y c = 5. ¿Cuánto mide el ángulo A?\n\ncos A = (8² + 5² − 7²) ÷ (2 × 8 × 5) = (64 + 25 − 49) ÷ 80 = 40 ÷ 80 = 0,5.\n\nEl ángulo cuyo coseno es 0,5 es **A = 60°**."
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Si el ángulo es de 90°, cos 90° = 0 y la ley del coseno se convierte en el teorema de Pitágoras (a² = b² + c²)."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Cómo decidir qué usar"
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Pregunta",
+            "Respuesta → Herramienta"
+          ],
+          "filas": [
+            [
+              "¿El triángulo tiene un ángulo de 90°?",
+              "Sí → Pitágoras (solo lados) o razones trigonométricas (si hay ángulos)."
+            ],
+            [
+              "¿Conozco un lado y su ángulo opuesto (una pareja)?",
+              "Sí → Ley del seno."
+            ],
+            [
+              "¿Conozco dos lados y el ángulo entre ellos (LAL)?",
+              "Sí → Ley del coseno para el tercer lado."
+            ],
+            [
+              "¿Conozco los tres lados (LLL)?",
+              "Sí → Ley del coseno para los ángulos."
+            ],
+            [
+              "¿Conozco dos ángulos y un lado?",
+              "Halla el tercer ángulo (180°) y usa la ley del seno."
+            ]
+          ]
+        },
+        {
+          "tipo": "ejemplo",
+          "titulo": "Reconocer el procedimiento",
+          "contenido": "Un clavadista salta desde un punto P. Se conocen dos ángulos del triángulo PQR (que no es rectángulo) y la longitud de un lado. ¿Se puede hallar la distancia QR?\n\nSí. Con dos ángulos se obtiene el tercero (suman 180°) y con un lado ya hay una pareja lado–ángulo opuesto. Se aplica la **ley del seno**. No se puede usar Pitágoras porque el triángulo no es rectángulo."
+        },
+        {
+          "tipo": "texto",
+          "contenido": "En el preICFES normalmente no se usa calculadora: los valores de seno y coseno que se necesitan suelen venir en el enunciado, o el problema solo pide **identificar** qué ley o procedimiento aplicar."
+        }
+      ]
+    },
+    {
+      "codigo": "MAT-FU1-L1",
+      "subtema": "funciones-i",
+      "titulo": "Funciones I",
+      "resumen": "Una función es una regla que a cada valor de entrada x le asigna un único valor de salida y. Se puede imaginar como una máquina: entra un número, la máquina aplica la regla y sale un resultado. Se escribe y = f(x) y se lee \"y es función de x\".",
+      "duracion_min": 6,
+      "bloques": [
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "¿Qué es una función?"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Una función es una regla que a cada valor de entrada **x** le asigna **un único** valor de salida **y**. Se puede imaginar como una **máquina**: entra un número, la máquina aplica la regla y sale un resultado. Se escribe y = f(x) y se lee \"y es función de x\"."
+        },
+        {
+          "tipo": "lista",
+          "items": [
+            "**x** es la variable independiente (la que se elige: tiempo, unidades producidas, kilómetros).",
+            "**y** o **f(x)** es la variable dependiente (lo que resulta: costo, distancia, temperatura)."
+          ],
+          "ordenada": false
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Las funciones sirven para modelar situaciones donde una cantidad depende de otra: el costo depende de las unidades, la distancia depende del tiempo, el pago del taxi depende de los kilómetros."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Evaluar una función"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Evaluar es **reemplazar x por un número** y hacer las operaciones respetando la jerarquía."
+        },
+        {
+          "tipo": "ejemplo",
+          "titulo": "Evaluar f(x) = 2x² − 3x + 1 en x = −2",
+          "contenido": "f(−2) = 2(−2)² − 3(−2) + 1 = 2(4) + 6 + 1 = 8 + 6 + 1 = **15**.\n\nCuidado: (−2)² = 4 (el negativo también se eleva al cuadrado).\n\n**Ejemplo resuelto: Encontrar x conociendo y**\n\nEl peso de un camión es P(m) = 2m + 30. Si el camión pesa 50 t, ¿cuántas miniexcavadoras lleva?\n\n50 = 2m + 30 → 2m = 20 → **m = 10**."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Formas de representar una función"
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Representación",
+            "Ejemplo para y = 2x"
+          ],
+          "filas": [
+            [
+              "Expresión algebraica",
+              "f(x) = 2x"
+            ],
+            [
+              "Tabla de valores",
+              "x: 1, 2, 3 → y: 2, 4, 6"
+            ],
+            [
+              "Diagrama sagital (flechas)",
+              "1 → 2; 2 → 4; 3 → 6"
+            ],
+            [
+              "Gráfica en el plano cartesiano",
+              "Una recta que pasa por (0, 0), (1, 2), (2, 4)…"
+            ]
+          ]
+        },
+        {
+          "tipo": "imagen",
+          "src": "/img/lecciones/funciones-i/01.png",
+          "alt": "Diagrama sagital de f(x) = 2x: cada elemento de A tiene exactamente una flecha.",
+          "pie": null
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Diagrama sagital de f(x) = 2x: cada elemento de A tiene exactamente una flecha."
+        },
+        {
+          "tipo": "texto",
+          "contenido": "**¿Cómo saber si una relación es función?**"
+        },
+        {
+          "tipo": "lista",
+          "items": [
+            "**En un diagrama sagital:** cada elemento del conjunto de salida (A) debe tener **exactamente una flecha**. Si un elemento tiene dos flechas o ninguna, no es función. (En B pueden quedar elementos sin flecha, como el 8.)",
+            "**En una gráfica (prueba de la recta vertical):** si alguna recta vertical corta la gráfica en más de un punto, no es función. Por ejemplo, una circunferencia no es función.",
+            "**En una tabla:** un mismo valor de x no puede aparecer con dos valores distintos de y."
+          ],
+          "ordenada": false
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Dominio"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "El **dominio** es el conjunto de **todos los valores que puede tomar x** sin que la operación sea imposible. Para hallarlo se buscan los valores \"prohibidos\":"
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Tipo de expresión",
+            "Restricción",
+            "Ejemplo"
+          ],
+          "filas": [
+            [
+              "Polinomios (2x + 1, x², x³…)",
+              "Ninguna: dominio = todos los reales (ℝ)",
+              "f(x) = x² − 4 → Dom = ℝ"
+            ],
+            [
+              "Fracción con x en el denominador",
+              "El denominador no puede ser 0",
+              "f(x) = 1/(x − 3) → x ≠ 3"
+            ],
+            [
+              "Raíz cuadrada (raíz par)",
+              "Lo de adentro debe ser ≥ 0",
+              "f(x) = √(x − 2) → x ≥ 2"
+            ],
+            [
+              "Logaritmo",
+              "Lo de adentro debe ser > 0",
+              "f(x) = log(x + 1) → x > −1"
+            ],
+            [
+              "Situación real (contexto)",
+              "Solo valores con sentido: no negativos, enteros, dentro de un límite",
+              "Unidades producidas: 0, 1, 2, 3…"
+            ]
+          ]
+        },
+        {
+          "tipo": "ejemplo",
+          "titulo": "Dominio de f(x) = (x + 1)/(x² − 4)",
+          "contenido": "El denominador no puede ser cero: x² − 4 = 0 → x² = 4 → x = 2 o x = −2.\n\nDominio: **todos los reales excepto 2 y −2**, es decir, ℝ − {−2, 2}.\n\n**Ejemplo resuelto: Dominio de g(x) = √(2x − 6)**\n\nSe exige 2x − 6 ≥ 0 → 2x ≥ 6 → x ≥ 3. Dominio: **[3, ∞)**.\n\n**Ejemplo resuelto: Un procedimiento que divide entre x**\n\nUn programa toma un número x, calcula 1/x y luego multiplica el resultado por x. ¿Qué valores puede tomar x?\n\nLa división 1/x no existe cuando x = 0. Dominio: **todos los reales diferentes de 0**."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Rango"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "El **rango** (o recorrido) es el conjunto de **todos los valores que toma y** (las salidas). Se halla pensando qué resultados puede producir la función, o mirando la gráfica sobre el eje y."
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Función",
+            "Rango",
+            "Razón"
+          ],
+          "filas": [
+            [
+              "f(x) = 2x + 1",
+              "ℝ (todos los reales)",
+              "Una recta inclinada toma todos los valores"
+            ],
+            [
+              "f(x) = x²",
+              "[0, ∞)",
+              "Un número al cuadrado nunca es negativo"
+            ],
+            [
+              "f(x) = x² + 3",
+              "[3, ∞)",
+              "El menor valor de x² es 0, así que y mínimo = 0 + 3"
+            ],
+            [
+              "f(x) = √x",
+              "[0, ∞)",
+              "La raíz cuadrada nunca es negativa"
+            ],
+            [
+              "f(x) = 5",
+              "{5}",
+              "Siempre da 5"
+            ]
+          ]
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Notación de intervalos"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "El dominio y el rango suelen escribirse como intervalos. **Corchete [ ]** significa que el extremo **se incluye**; **paréntesis ( )** que **no se incluye**. El infinito (∞) siempre lleva paréntesis."
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Intervalo",
+            "Significa",
+            "Desigualdad"
+          ],
+          "filas": [
+            [
+              "[2, 5]",
+              "De 2 a 5, incluyendo ambos",
+              "2 ≤ x ≤ 5"
+            ],
+            [
+              "(2, 5)",
+              "De 2 a 5, sin incluir los extremos",
+              "2 < x < 5"
+            ],
+            [
+              "[2, 5)",
+              "Incluye el 2, no el 5",
+              "2 ≤ x < 5"
+            ],
+            [
+              "[3, ∞)",
+              "Desde 3 en adelante",
+              "x ≥ 3"
+            ],
+            [
+              "(−∞, 0)",
+              "Todos los negativos",
+              "x < 0"
+            ]
+          ]
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Leer dominio, rango y comportamiento en una gráfica"
+        },
+        {
+          "tipo": "imagen",
+          "src": "/img/lecciones/funciones-i/02.png",
+          "alt": "El dominio se lee sobre el eje x y el rango sobre el eje y.",
+          "pie": null
+        },
+        {
+          "tipo": "texto",
+          "contenido": "El dominio se lee sobre el eje x y el rango sobre el eje y."
+        },
+        {
+          "tipo": "lista",
+          "items": [
+            "**Dominio:** desde el punto más a la izquierda hasta el más a la derecha de la gráfica (proyección sobre el eje x). Aquí: **[−2, 4]**.",
+            "**Rango:** desde el punto más bajo hasta el más alto (proyección sobre el eje y). Aquí: **[−1, 3]**.",
+            "**Creciente:** donde la gráfica sube al avanzar a la derecha: en [−2, 0] y en [3, 4].",
+            "**Constante:** donde es horizontal: en [0, 1] (y = 3).",
+            "**Decreciente:** donde baja: en [1, 3].",
+            "**Máximo:** y = 3; **mínimo:** y = −1. **Cortes con el eje x** (donde y = 0): en x = −1,5 y en x = 3."
+          ],
+          "ordenada": false
+        },
+        {
+          "tipo": "alerta",
+          "titulo": "Cuidado",
+          "contenido": "Un intervalo como [1, 5] es un tramo del eje x, no un punto (1, 5). Una función solo es constante en un intervalo si es horizontal en todo ese tramo; que tome el mismo valor en los extremos no basta."
+        }
+      ]
+    },
+    {
+      "codigo": "MAT-FU2-L1",
+      "subtema": "funciones-ii",
+      "titulo": "Funciones II",
+      "resumen": "Cada tipo de función tiene una forma de gráfica característica y modela un tipo de situación. En el preICFES es clave reconocer el tipo a partir de la expresión, la tabla, la gráfica o la descripción verbal.",
+      "duracion_min": 7,
+      "bloques": [
+        {
+          "tipo": "texto",
+          "contenido": "Cada tipo de función tiene una forma de gráfica característica y modela un tipo de situación. En el preICFES es clave **reconocer el tipo** a partir de la expresión, la tabla, la gráfica o la descripción verbal."
+        },
+        {
+          "tipo": "imagen",
+          "src": "/img/lecciones/funciones-ii/01.png",
+          "alt": "Gráficas características de los principales tipos de funciones.",
+          "pie": null
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Gráficas características de los principales tipos de funciones."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Función lineal"
+        },
+        {
+          "tipo": "formula",
+          "contenido": "f(x) = mx + b"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "**m** = pendiente (cuánto cambia y por cada unidad de x); **b** = punto de corte con el eje y (valor inicial, cuando x = 0). Su gráfica es una **recta**. Si m > 0 es creciente; si m < 0, decreciente. Si b = 0 (y = mx) es una **proporcionalidad directa** y pasa por el origen."
+        },
+        {
+          "tipo": "texto",
+          "contenido": "**Uso:** situaciones con un valor fijo más un cambio constante: tarifas de taxi, planes de celular, salarios con comisión, llenado de un tanque a ritmo constante."
+        },
+        {
+          "tipo": "ejemplo",
+          "titulo": "Tarifa de un taxi",
+          "contenido": "Un taxi cobra $4.000 de arranque más $1.200 por kilómetro. ¿Cuál es la función y cuánto cuesta un viaje de 10 km?\n\nValor fijo: b = 4.000. Cambio por km: m = 1.200. Función: **C(k) = 1.200k + 4.000**.\n\nC(10) = 1.200 × 10 + 4.000 = 12.000 + 4.000 = **$16.000**.\n\n**Ejemplo resuelto: Ecuación de la recta que pasa por (2, 7) y (5, 13)**\n\nPendiente: m = (13 − 7) ÷ (5 − 2) = 6 ÷ 3 = 2.\n\nSe reemplaza un punto en y = mx + b: 7 = 2(2) + b → 7 = 4 + b → b = 3.\n\nEcuación: **y = 2x + 3**. Comprobación con (5, 13): 2(5) + 3 = 13 ✓"
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Función constante"
+        },
+        {
+          "tipo": "formula",
+          "contenido": "f(x) = k"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "La salida es siempre la misma, sin importar x. Su gráfica es una **recta horizontal** (pendiente 0). Dominio: ℝ; rango: {k}. **Uso:** tarifas planas (un parqueadero que cobra $5.000 por día sin importar las horas), periodos en que algo no cambia (un carro detenido: la distancia recorrida se mantiene)."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Función cuadrática"
+        },
+        {
+          "tipo": "formula",
+          "contenido": "f(x) = ax² + bx + c"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Su gráfica es una **parábola**. Si **a > 0** abre hacia arriba y tiene un **mínimo**; si **a < 0** abre hacia abajo y tiene un **máximo**. El punto más alto o más bajo es el **vértice**:"
+        },
+        {
+          "tipo": "formula",
+          "contenido": "x del vértice = −b ÷ 2a ; y del vértice = f(−b ÷ 2a)"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "El corte con el eje y es c; los cortes con el eje x se hallan resolviendo ax² + bx + c = 0. **Uso:** lanzamientos (altura de un balón), áreas, ganancias máximas."
+        },
+        {
+          "tipo": "ejemplo",
+          "titulo": "Altura de un balón",
+          "contenido": "La altura (en metros) de un balón pateado hacia arriba es h(t) = −5t² + 20t, con t en segundos. ¿Cuál es la altura máxima y cuándo cae al suelo?\n\na = −5 (abre hacia abajo → tiene máximo), b = 20.\n\nTiempo del vértice: t = −20 ÷ (2 × −5) = −20 ÷ −10 = 2 s.\n\nAltura máxima: h(2) = −5(2)² + 20(2) = −20 + 40 = **20 m**.\n\nCae al suelo cuando h = 0: −5t² + 20t = 0 → t(−5t + 20) = 0 → t = 0 (salida) o t = **4 s** (llegada)."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Función cúbica"
+        },
+        {
+          "tipo": "formula",
+          "contenido": "f(x) = x³ (en general ax³ + bx² + cx + d)"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Gráfica en forma de **S**. Dominio y rango: todos los reales. A diferencia de la parábola, toma valores negativos y positivos. **Uso:** volúmenes (el volumen de un cubo de arista x es x³)."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Función racional"
+        },
+        {
+          "tipo": "formula",
+          "contenido": "f(x) = k / x"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Gráfica llamada **hipérbola**: dos ramas que se acercan a los ejes sin tocarlos (asíntotas). Dominio: ℝ − {0}. **Uso:proporcionalidad inversa**: cuando una cantidad aumenta, la otra disminuye y su producto es constante (velocidad y tiempo para una misma distancia; número de trabajadores y días)."
+        },
+        {
+          "tipo": "ejemplo",
+          "titulo": "Velocidad y tiempo",
+          "contenido": "Para recorrer 120 km, el tiempo es t(v) = 120 / v. A 60 km/h: t = 120 ÷ 60 = 2 h. A 40 km/h: t = 120 ÷ 40 = **3 h**."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Función raíz cuadrada"
+        },
+        {
+          "tipo": "formula",
+          "contenido": "f(x) = √x"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Empieza en el origen y crece cada vez más despacio. Dominio: [0, ∞); rango: [0, ∞). Si es √(x − h), empieza en x = h."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Función valor absoluto"
+        },
+        {
+          "tipo": "formula",
+          "contenido": "f(x) = |x|"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "El valor absoluto es la distancia de un número al cero, siempre positiva o cero: |−3| = 3, |3| = 3. Gráfica en forma de **V** con vértice en el origen. Dominio: ℝ; rango: [0, ∞). **Uso:** distancias y errores (diferencia sin importar el signo)."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Función exponencial"
+        },
+        {
+          "tipo": "formula",
+          "contenido": "f(x) = a · bˣ"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "La variable está en el **exponente**. Si b > 1 crece cada vez más rápido (**crecimiento exponencial**); si 0 < b < 1 decrece (**decaimiento**). Dominio: ℝ; rango: (0, ∞) cuando a > 0: nunca toca el eje x. **Uso:** poblaciones de bacterias, contagios, interés compuesto, desintegración radiactiva."
+        },
+        {
+          "tipo": "ejemplo",
+          "titulo": "Crecimiento de bacterias",
+          "contenido": "Un cultivo empieza con 100 bacterias y se duplica cada hora: P(t) = 100 · 2ᵗ.\n\nDespués de 3 horas: P(3) = 100 · 2³ = 100 · 8 = **800 bacterias**."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Función logarítmica"
+        },
+        {
+          "tipo": "formula",
+          "contenido": "f(x) = log_b(x)"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Es la **inversa de la exponencial**: log_b(x) = y significa que bʸ = x. Por ejemplo, log₂(8) = 3 porque 2³ = 8, y log(100) = 2 porque 10² = 100. Crece cada vez más lento. Dominio: (0, ∞); rango: ℝ. **Uso:** escalas como la de pH o la de Richter."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Funciones trigonométricas"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "**f(x) = sen x** y **f(x) = cos x** tienen gráficas en forma de onda que se repiten cada 360° (2π radianes): son **periódicas**. Dominio: ℝ; rango: [−1, 1]. **Uso:** fenómenos que se repiten: mareas, la altura de una silla en una rueda de Chicago, el sonido, la corriente alterna."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Resumen y cómo reconocer cada tipo"
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Tipo",
+            "Expresión",
+            "Gráfica",
+            "Dominio",
+            "Rango"
+          ],
+          "filas": [
+            [
+              "Lineal",
+              "mx + b",
+              "Recta inclinada",
+              "ℝ",
+              "ℝ"
+            ],
+            [
+              "Constante",
+              "k",
+              "Recta horizontal",
+              "ℝ",
+              "{k}"
+            ],
+            [
+              "Cuadrática",
+              "ax² + bx + c",
+              "Parábola",
+              "ℝ",
+              "Desde o hasta el vértice"
+            ],
+            [
+              "Cúbica",
+              "x³",
+              "Forma de S",
+              "ℝ",
+              "ℝ"
+            ],
+            [
+              "Racional",
+              "k/x",
+              "Hipérbola",
+              "ℝ − {0}",
+              "ℝ − {0}"
+            ],
+            [
+              "Raíz cuadrada",
+              "√x",
+              "Media rama creciente",
+              "[0, ∞)",
+              "[0, ∞)"
+            ],
+            [
+              "Valor absoluto",
+              "x",
+              "Forma de V",
+              "ℝ",
+              "[0, ∞)"
+            ],
+            [
+              "Exponencial",
+              "bˣ",
+              "Crece o decrece muy rápido",
+              "ℝ",
+              "(0, ∞)"
+            ],
+            [
+              "Logarítmica",
+              "log_b x",
+              "Crece cada vez más lento",
+              "(0, ∞)",
+              "ℝ"
+            ],
+            [
+              "Seno / coseno",
+              "sen x, cos x",
+              "Onda periódica",
+              "ℝ",
+              "[−1, 1]"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "contenido": "**Reconocer el tipo en una tabla de valores** (con x avanzando de 1 en 1):"
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Si los valores de y…",
+            "La función es…",
+            "Ejemplo (x = 0, 1, 2, 3)"
+          ],
+          "filas": [
+            [
+              "Aumentan o disminuyen siempre la misma cantidad (se suma)",
+              "Lineal",
+              "y: 3, 5, 7, 9 (suma 2)"
+            ],
+            [
+              "No cambian",
+              "Constante",
+              "y: 4, 4, 4, 4"
+            ],
+            [
+              "Se multiplican siempre por el mismo número",
+              "Exponencial",
+              "y: 3, 6, 12, 24 (× 2)"
+            ],
+            [
+              "Las diferencias cambian, pero las diferencias de las diferencias son iguales",
+              "Cuadrática",
+              "y: 0, 1, 4, 9 (diferencias 1, 3, 5 → aumentan de 2 en 2)"
+            ]
+          ]
+        },
+        {
+          "tipo": "ejemplo",
+          "titulo": "Reconocer la gráfica por la descripción",
+          "contenido": "Se espera una \"relación lineal creciente\" entre los días después de publicar un artículo y sus citaciones. ¿Qué gráfica le corresponde?\n\n\"Lineal\" → debe ser una **recta** (se descartan curvas). \"Creciente\" → debe **subir** de izquierda a derecha (pendiente positiva). Se descartan las rectas que bajan."
+        }
+      ]
+    },
+    {
+      "codigo": "MAT-MTC-L1",
+      "subtema": "medidas-tendencia-central",
+      "titulo": "Medidas de tendencia central",
+      "resumen": "La estadística organiza e interpreta datos. Las medidas de tendencia central (media, mediana y moda) resumen un conjunto de datos en un solo valor representativo.",
+      "duracion_min": 10,
+      "bloques": [
+        {
+          "tipo": "texto",
+          "contenido": "La estadística organiza e interpreta datos. Las medidas de tendencia central (media, mediana y moda) resumen un conjunto de datos en **un solo valor representativo**. Se complementan con las medidas de dispersión (qué tan separados están los datos) y las de posición (en qué lugar se ubica un dato respecto a los demás)."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Conceptos básicos y tipos de variables"
+        },
+        {
+          "tipo": "lista",
+          "items": [
+            "**Población:** todo el grupo que se quiere estudiar. **Muestra:** la parte de la población a la que se le toman los datos.",
+            "**Variable:** la característica que se mide u observa."
+          ],
+          "ordenada": false
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Tipo de variable",
+            "Subtipo",
+            "Ejemplos"
+          ],
+          "filas": [
+            [
+              "Cualitativa (cualidades, no números)",
+              "Nominal: sin orden",
+              "Color favorito, deporte, género"
+            ],
+            [
+              "",
+              "Ordinal: con orden",
+              "Nivel educativo, talla S-M-L, satisfacción (baja, media, alta)"
+            ],
+            [
+              "Cuantitativa (números)",
+              "Discreta: se cuenta (valores enteros)",
+              "Número de hermanos, goles, estudiantes"
+            ],
+            [
+              "",
+              "Continua: se mide (admite decimales)",
+              "Estatura, peso, tiempo, temperatura"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "contenido": "En variables cualitativas solo tiene sentido la **moda**; la media y la mediana requieren números."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Tablas de frecuencia"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Organizan los datos indicando cuántas veces aparece cada valor."
+        },
+        {
+          "tipo": "lista",
+          "items": [
+            "**Frecuencia absoluta (f):** número de veces que aparece el dato.",
+            "**Frecuencia relativa:** f ÷ n (n = total de datos). Multiplicada por 100 da el porcentaje.",
+            "**Frecuencia acumulada (F):** suma de las frecuencias hasta ese dato."
+          ],
+          "ordenada": false
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Número de hermanos (x)",
+            "f",
+            "Frecuencia relativa",
+            "%",
+            "F (acumulada)"
+          ],
+          "filas": [
+            [
+              "0",
+              "3",
+              "3/20 = 0,15",
+              "15 %",
+              "3"
+            ],
+            [
+              "1",
+              "8",
+              "8/20 = 0,40",
+              "40 %",
+              "11"
+            ],
+            [
+              "2",
+              "5",
+              "5/20 = 0,25",
+              "25 %",
+              "16"
+            ],
+            [
+              "3",
+              "4",
+              "4/20 = 0,20",
+              "20 %",
+              "20"
+            ],
+            [
+              "Total",
+              "20",
+              "1",
+              "100 %",
+              "—"
+            ]
+          ]
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Media (promedio)"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Es el valor que resultaría si el total se repartiera en partes iguales. Es la medida más usada, pero se ve afectada por los datos extremos."
+        },
+        {
+          "tipo": "formula",
+          "contenido": "x̄ = (suma de todos los datos) ÷ (número de datos)"
+        },
+        {
+          "tipo": "ejemplo",
+          "titulo": "Café recogido por trabajadores",
+          "contenido": "Seis trabajadores recogieron 90, 110, 120, 100, 130 y 110 kg de café. ¿Cuál fue el promedio por trabajador?\n\nSuma: 90 + 110 + 120 + 100 + 130 + 110 = 660 kg.\n\nMedia: 660 ÷ 6 = **110 kg**."
+        },
+        {
+          "tipo": "texto",
+          "contenido": "**Media con tabla de frecuencias:** se multiplica cada dato por su frecuencia, se suman los productos y se divide entre el total."
+        },
+        {
+          "tipo": "ejemplo",
+          "titulo": "Media de la tabla de hermanos",
+          "contenido": "x̄ = (0·3 + 1·8 + 2·5 + 3·4) ÷ 20 = (0 + 8 + 10 + 12) ÷ 20 = 30 ÷ 20 = **1,5 hermanos**."
+        },
+        {
+          "tipo": "texto",
+          "contenido": "**Media ponderada:** cuando cada dato tiene un peso distinto (porcentaje), se multiplica cada dato por su peso y se suman."
+        },
+        {
+          "tipo": "ejemplo",
+          "titulo": "Nota final con porcentajes",
+          "contenido": "Notas: 3,5 (30 %), 4,0 (30 %) y 4,5 (40 %).\n\nNota final = 3,5 × 0,3 + 4,0 × 0,3 + 4,5 × 0,4 = 1,05 + 1,20 + 1,80 = **4,05**.\n\n**Ejemplo resuelto: Hallar un dato que falta**\n\nPara que el promedio de 4 notas sea 4,0, ¿cuánto debe sacar un estudiante en la cuarta nota si ya tiene 3,5; 4,2 y 4,0?\n\nLa suma de las 4 notas debe ser 4,0 × 4 = 16,0. Ya tiene 3,5 + 4,2 + 4,0 = 11,7.\n\nCuarta nota = 16,0 − 11,7 = **4,3**."
+        },
+        {
+          "tipo": "texto",
+          "contenido": "**Propiedad útil:** si se suma un mismo número a todos los datos, la media aumenta en ese número; si todos los datos se multiplican por un número, la media también se multiplica por él."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Mediana"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Es el **dato central** cuando los datos están **ordenados** de menor a mayor: deja 50 % de los datos por debajo y 50 % por encima."
+        },
+        {
+          "tipo": "lista",
+          "items": [
+            "Si la cantidad de datos (n) es **impar**: la mediana es el dato de la posición (n + 1) ÷ 2.",
+            "Si n es **par**: la mediana es el **promedio de los dos datos centrales**."
+          ],
+          "ordenada": false
+        },
+        {
+          "tipo": "ejemplo",
+          "titulo": "Cantidad impar de datos: 7, 3, 9, 5, 4",
+          "contenido": "Ordenar: 3, 4, **5**, 7, 9. Hay 5 datos → posición (5 + 1) ÷ 2 = 3. Mediana = **5**.\n\n**Ejemplo resuelto: Cantidad par de datos: 2, 8, 4, 10, 6, 12**\n\nOrdenar: 2, 4, **6, 8**, 10, 12. Los centrales son 6 y 8. Mediana = (6 + 8) ÷ 2 = **7**.\n\n**Ejemplo resuelto: Mediana en la tabla de frecuencias**\n\nEn la tabla de hermanos hay 20 datos: los centrales son los de las posiciones 10 y 11.\n\nPor la frecuencia acumulada: las posiciones 1 a 3 son \"0\" y las posiciones 4 a 11 son \"1\". Ambas posiciones centrales valen 1 → Mediana = **1**."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Moda"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Es el **dato que más se repite** (el de mayor frecuencia). Puede haber una moda, dos (bimodal) o ninguna (si todos se repiten igual). Es la única medida que sirve para variables cualitativas."
+        },
+        {
+          "tipo": "ejemplo",
+          "titulo": "Moda",
+          "contenido": "En 3, 5, 5, 7, 8, 5, 7 la moda es **5** (aparece 3 veces). En la tabla de hermanos la moda es **1** (frecuencia 8)."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "¿Cuál medida usar?"
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Situación",
+            "Medida más adecuada"
+          ],
+          "filas": [
+            [
+              "Datos sin valores extremos",
+              "Media"
+            ],
+            [
+              "Hay datos atípicos (muy grandes o muy pequeños)",
+              "Mediana (no se deja afectar por los extremos)"
+            ],
+            [
+              "Datos cualitativos o se pregunta por \"lo más común\"",
+              "Moda"
+            ]
+          ]
+        },
+        {
+          "tipo": "ejemplo",
+          "titulo": "Efecto de un dato atípico",
+          "contenido": "Salarios (en millones) de 5 empleados: 1, 1, 1, 2 y 15.\n\nMedia = (1 + 1 + 1 + 2 + 15) ÷ 5 = 20 ÷ 5 = 4 millones. Mediana = 1 millón.\n\nLa media (4) no representa a la mayoría porque el salario de 15 la \"jala\" hacia arriba. La **mediana** representa mejor a este grupo."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Medidas de dispersión"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Indican **qué tan alejados están los datos entre sí o de la media**: si el grupo es homogéneo (datos parecidos) o heterogéneo (datos muy diferentes). Dos grupos pueden tener la misma media y ser muy distintos."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 3,
+          "texto": "Rango"
+        },
+        {
+          "tipo": "formula",
+          "contenido": "Rango = dato mayor − dato menor"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Es la medida más sencilla, pero solo usa dos datos."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 3,
+          "texto": "Varianza y desviación estándar"
+        },
+        {
+          "tipo": "formula",
+          "contenido": "Varianza: σ² = Σ(xᵢ − x̄)² ÷ n\nDesviación estándar: σ = √varianza"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "**xᵢ** = cada dato; **x̄** = media; **n** = número de datos; **Σ** = \"suma de\". La desviación estándar está en las mismas unidades que los datos y se interpreta como la distancia típica de los datos a la media: **mientras más pequeña, más parecidos son los datos**."
+        },
+        {
+          "tipo": "ejemplo",
+          "titulo": "Calcular rango, varianza y desviación de 2, 4, 4, 4, 5, 5, 7, 9",
+          "contenido": "Rango: 9 − 2 = 7.\n\nMedia: (2 + 4 + 4 + 4 + 5 + 5 + 7 + 9) ÷ 8 = 40 ÷ 8 = 5.\n\nDiferencias con la media al cuadrado: (2−5)² = 9; (4−5)² = 1 (tres veces: 3); (5−5)² = 0 (dos veces: 0); (7−5)² = 4; (9−5)² = 16.\n\nSuma: 9 + 3 + 0 + 4 + 16 = 32. Varianza = 32 ÷ 8 = **4**.\n\nDesviación estándar = √4 = **2**. En promedio, los datos se alejan 2 unidades de la media.\n\n**Ejemplo resuelto: Comparar dos grupos**\n\nGrupo A: 4, 5, 6 (media 5). Grupo B: 1, 5, 9 (media 5). Ambos tienen la misma media.\n\nRango de A = 2 y rango de B = 8: el grupo B es más disperso; el A es más homogéneo (sus datos están más concentrados alrededor de la media)."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Medidas de posición: cuartiles y percentiles"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Dividen los datos **ordenados** en partes iguales para ubicar un dato respecto al grupo."
+        },
+        {
+          "tipo": "lista",
+          "items": [
+            "**Cuartiles (Q1, Q2, Q3):** dividen los datos en 4 partes con 25 % cada una. Q2 es la mediana.",
+            "**Percentiles (P1 a P99):** dividen los datos en 100 partes. Estar en el **percentil 70** significa que el 70 % del grupo tiene un valor igual o menor que el tuyo (por ejemplo, en el puntaje del ICFES, superas al 70 % de los evaluados). P25 = Q1, P50 = Q2 = mediana, P75 = Q3."
+          ],
+          "ordenada": false
+        },
+        {
+          "tipo": "ejemplo",
+          "titulo": "Procedimiento para los cuartiles",
+          "contenido": "1) ordenar los datos; 2) hallar la mediana (Q2); 3) Q1 es la mediana de la mitad inferior y Q3 la mediana de la mitad superior (sin incluir la mediana si n es impar)."
+        },
+        {
+          "tipo": "ejemplo",
+          "titulo": "Cuartiles de 1, 3, 4, 5, 7, 8, 9, 10, 12, 13, 15",
+          "contenido": "Hay 11 datos (ya ordenados). Q2 = dato de la posición 6 = **8**.\n\nMitad inferior: 1, 3, 4, 5, 7 → Q1 = **4**. Mitad superior: 9, 10, 12, 13, 15 → Q3 = **12**.\n\nRango intercuartílico: RIC = Q3 − Q1 = 12 − 4 = 8 (amplitud del 50 % central de los datos)."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Diagrama de caja y bigotes"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Resume los datos con cinco valores: **mínimo, Q1, mediana, Q3 y máximo**. La caja contiene el 50 % central de los datos y cada tramo (bigote izquierdo, mitad izquierda de la caja, mitad derecha, bigote derecho) contiene el 25 %."
+        },
+        {
+          "tipo": "imagen",
+          "src": "/img/lecciones/medidas-tendencia-central/01.png",
+          "alt": "Diagrama de caja de los datos del ejemplo anterior.",
+          "pie": null
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Diagrama de caja de los datos del ejemplo anterior."
+        },
+        {
+          "tipo": "lista",
+          "items": [
+            "Una **caja más larga** indica datos más dispersos en el centro.",
+            "Si la mediana no está en el centro de la caja, los datos están cargados hacia un lado.",
+            "Los puntos aislados fuera de los bigotes son **valores atípicos** (datos muy alejados del resto)."
+          ],
+          "ordenada": false
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Lectura de gráficas estadísticas"
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Gráfica",
+            "Para qué sirve",
+            "Qué revisar"
+          ],
+          "filas": [
+            [
+              "Barras",
+              "Comparar cantidades entre categorías",
+              "La escala del eje vertical (puede no empezar en 0)"
+            ],
+            [
+              "Circular (torta)",
+              "Mostrar partes de un total (porcentajes)",
+              "Ángulo del sector = porcentaje × 360° ÷ 100. Ej.: 25 % → 90°"
+            ],
+            [
+              "Líneas",
+              "Ver cambios en el tiempo (tendencias)",
+              "Dónde sube, baja o se mantiene"
+            ],
+            [
+              "Histograma",
+              "Frecuencia de datos agrupados en intervalos",
+              "Los intervalos y su amplitud"
+            ]
+          ]
+        },
+        {
+          "tipo": "tip",
+          "titulo": "Cómo reconocer qué calcular",
+          "contenido": "Antes de calcular, identifica qué pide la pregunta: \"promedio\" → media; \"valor central\" o \"la mitad de los datos\" → mediana; \"más frecuente\" o \"más común\" → moda; \"qué tan variados\" o \"más homogéneo\" → rango o desviación estándar."
+        }
+      ]
+    },
+    {
+      "codigo": "MAT-TCO-L1",
+      "subtema": "tecnicas-de-conteo",
+      "titulo": "Técnicas de conteo",
+      "resumen": "Las técnicas de conteo permiten saber de cuántas maneras puede ocurrir algo sin tener que escribir todas las posibilidades. Son la base para calcular probabilidades.",
+      "duracion_min": 8,
+      "bloques": [
+        {
+          "tipo": "texto",
+          "contenido": "Las técnicas de conteo permiten saber **de cuántas maneras** puede ocurrir algo sin tener que escribir todas las posibilidades. Son la base para calcular probabilidades."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Factorial"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "El factorial de un número natural n (se escribe **n!**) es la multiplicación de n por todos los naturales menores que él hasta 1. Por definición, **0! = 1**."
+        },
+        {
+          "tipo": "formula",
+          "contenido": "n! = n × (n − 1) × (n − 2) × … × 2 × 1"
+        },
+        {
+          "tipo": "ejemplo",
+          "titulo": "Calcular factoriales",
+          "contenido": "5! = 5 × 4 × 3 × 2 × 1 = **120**.\n\nSimplificar antes de multiplicar: 8!/6! = (8 × 7 × 6!)/6! = 8 × 7 = **56**."
+        },
+        {
+          "tipo": "texto",
+          "contenido": "n! cuenta las formas de **ordenar n elementos distintos**: 5 libros en un estante se pueden ordenar de 5! = 120 formas."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Principio multiplicativo (método de las cajitas)"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Si una decisión se toma en varias etapas y la primera tiene m opciones, la segunda n opciones, etc., el total de formas es **m × n × …**. Se dibuja una \"cajita\" por cada etapa, se escribe dentro cuántas opciones hay y se multiplican."
+        },
+        {
+          "tipo": "texto",
+          "contenido": "**Principio aditivo:** si se elige una cosa **o** la otra (opciones que no se pueden dar al mismo tiempo), las cantidades se **suman**."
+        },
+        {
+          "tipo": "ejemplo",
+          "titulo": "Combinaciones de ropa",
+          "contenido": "3 camisas, 4 pantalones y 2 pares de zapatos: [3] × [4] × [2] = **24 formas** de vestirse.\n\n**Ejemplo resuelto: Códigos con y sin repetición**\n\nCódigos de 4 cifras con los dígitos {1, 2, 3, 4, 5}.\n\nSi se pueden repetir: [5] × [5] × [5] × [5] = 5⁴ = **625**.\n\nSi no se pueden repetir: [5] × [4] × [3] × [2] = **120** (cada cajita tiene una opción menos).\n\n**Ejemplo resuelto: Puestos en un carro**\n\nUn carro tiene 2 sillas delanteras y 3 traseras. Una familia de 2 padres y 3 niños se sienta de modo que solo los adultos van adelante (cualquiera puede manejar). ¿De cuántas formas se pueden sentar?\n\nAdelante (2 adultos en 2 sillas): [2] × [1] = 2 formas.\n\nAtrás (3 niños en 3 sillas): [3] × [2] × [1] = 6 formas.\n\nTotal: 2 × 6 = **12 formas**."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Permutaciones (el orden SÍ importa)"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Cuentan las formas de **seleccionar y ordenar** r elementos tomados de un grupo de n. Se usan cuando cambiar el orden produce un resultado distinto: puestos, cargos, podios, códigos, filas."
+        },
+        {
+          "tipo": "formula",
+          "contenido": "P(n, r) = n! ÷ (n − r)!"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "**n** = total de elementos disponibles; **r** = cuántos se eligen. Si se ordenan todos (r = n): P = n!."
+        },
+        {
+          "tipo": "ejemplo",
+          "titulo": "Campeón y subcampeón",
+          "contenido": "En un torneo de 6 equipos, ¿de cuántas formas se pueden asignar los títulos de campeón y subcampeón?\n\nEl orden importa (ser campeón no es lo mismo que subcampeón): n = 6, r = 2.\n\nP(6, 2) = 6! ÷ 4! = 6 × 5 = **30 formas**. Con cajitas: [6] × [5] = 30.\n\n**Ejemplo resuelto: Presidente, vicepresidente y secretario**\n\nDe 10 estudiantes se eligen 3 cargos distintos: P(10, 3) = 10 × 9 × 8 = **720 formas**."
+        },
+        {
+          "tipo": "texto",
+          "contenido": "**Permutación con elementos repetidos:** si entre los n elementos hay grupos de elementos iguales, se divide n! entre el factorial de cada repetición."
+        },
+        {
+          "tipo": "ejemplo",
+          "titulo": "Palabras con las letras de CASA",
+          "contenido": "4 letras con la A repetida 2 veces: 4! ÷ 2! = 24 ÷ 2 = **12 ordenaciones**."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Combinaciones (el orden NO importa)"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Cuentan las formas de **escoger** r elementos de un grupo de n **sin importar el orden**: comités, grupos, equipos, manos de cartas, escoger bolas de una bolsa."
+        },
+        {
+          "tipo": "formula",
+          "contenido": "C(n, r) = n! ÷ [ r! × (n − r)! ]"
+        },
+        {
+          "tipo": "ejemplo",
+          "titulo": "Comité de 3 personas entre 9",
+          "contenido": "C(9, 3) = 9! ÷ (3! × 6!) = (9 × 8 × 7) ÷ (3 × 2 × 1) = 504 ÷ 6 = **84 comités**.\n\nAtajo: se multiplican r números descendentes desde n y se divide entre r!."
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Observa que P(9, 3) = 504 y C(9, 3) = 84: la combinación es menor porque las 3! = 6 formas de ordenar a las mismas personas cuentan como un solo comité."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "¿Cuál técnica usar?"
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Pregunta clave",
+            "Si la respuesta es sí…"
+          ],
+          "filas": [
+            [
+              "¿Hay varias etapas o decisiones independientes, o se pueden repetir elementos?",
+              "Principio multiplicativo (cajitas). Con repetición: nʳ"
+            ],
+            [
+              "¿Se ordenan o se asignan puestos/cargos distintos? ¿Si intercambio dos elementos obtengo otro resultado?",
+              "Permutación: n!/(n − r)!"
+            ],
+            [
+              "¿Solo se escoge un grupo y no importa el orden?",
+              "Combinación: n!/[r!(n − r)!]"
+            ]
+          ]
+        },
+        {
+          "tipo": "tip",
+          "titulo": "Palabras clave",
+          "contenido": "ordenar, puestos, cargos, podio, fila, código, clave → permutación. Grupo, comité, equipo, escoger, seleccionar, sacar varias a la vez → combinación."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Probabilidad"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "La probabilidad mide **qué tan posible es que ocurra un evento**. Es un número entre 0 (imposible) y 1 (seguro); también se expresa en porcentaje (0 % a 100 %)."
+        },
+        {
+          "tipo": "formula",
+          "contenido": "P(evento) = casos favorables ÷ casos posibles"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "**Casos posibles:** todos los resultados que pueden ocurrir (el espacio muestral). **Casos favorables:** los que cumplen la condición pedida. La fórmula sirve cuando todos los resultados son igualmente probables."
+        },
+        {
+          "tipo": "lista",
+          "items": [
+            "**Complemento:** P(no ocurra A) = 1 − P(A). La probabilidad de que algo ocurra más la de que no ocurra siempre suma 1 (100 %).",
+            "Es útil para preguntas de \"al menos uno\": P(al menos uno) = 1 − P(ninguno)."
+          ],
+          "ordenada": false
+        },
+        {
+          "tipo": "ejemplo",
+          "titulo": "Lanzar un dado",
+          "contenido": "P(número par) = favorables {2, 4, 6} ÷ posibles {1, …, 6} = 3/6 = **1/2 = 50 %**.\n\n**Ejemplo resuelto: Lanzar dos monedas**\n\nEspacio muestral: {CC, CS, SC, SS} → 4 casos posibles.\n\nP(al menos una cara) = 3/4 (CC, CS, SC). Por complemento: 1 − P(ninguna cara) = 1 − 1/4 = **3/4**.\n\n**Ejemplo resuelto: Probabilidades de un afiche**\n\nUn afiche dice: probabilidad de acertar 6/20 y de fallar 3/20. ¿Qué error tiene?\n\nAcertar y fallar son complementarios, así que deben sumar 1 (20/20). Pero 6/20 + 3/20 = 9/20. **La suma debería ser 1**.\n\n**Ejemplo resuelto: Probabilidad con combinaciones**\n\nEn una bolsa hay 4 bolas azules y 5 negras. Se sacan 3 a la vez y se gana si al menos 2 son azules. ¿Cuál es la probabilidad de ganar?\n\nCasos posibles: formas de escoger 3 bolas de 9 → C(9, 3) = 84.\n\nFavorables con 2 azules y 1 negra: C(4, 2) × C(5, 1) = 6 × 5 = 30. Con 3 azules: C(4, 3) = 4. Total favorables: 30 + 4 = 34.\n\nP(ganar) = 34/84 = **17/42 ≈ 0,40 (40 %)**."
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Eventos compuestos"
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "Situación",
+            "Regla",
+            "Ejemplo"
+          ],
+          "filas": [
+            [
+              "Que ocurra A **y** B (independientes: uno no afecta al otro)",
+              "Se multiplican: P(A) × P(B)",
+              "Sacar 6 en dos lanzamientos de un dado: 1/6 × 1/6 = 1/36"
+            ],
+            [
+              "Que ocurra A **o** B (no pueden ocurrir a la vez)",
+              "Se suman: P(A) + P(B)",
+              "Sacar 1 o 2 en un dado: 1/6 + 1/6 = 2/6 = 1/3"
+            ],
+            [
+              "Extracciones **sin reemplazo**",
+              "Después de cada extracción, se resta uno a los favorables (si salió uno de ellos) y uno al total",
+              "Ver ejemplo siguiente"
+            ]
+          ]
+        },
+        {
+          "tipo": "ejemplo",
+          "titulo": "Dos bolas azules sin reemplazo",
+          "contenido": "De la bolsa con 4 azules y 5 negras se sacan 2 bolas, una después de la otra, sin devolverlas. ¿Probabilidad de que ambas sean azules?\n\nPrimera azul: 4/9. Quedan 3 azules de 8 bolas → segunda azul: 3/8.\n\nP = 4/9 × 3/8 = 12/72 = **1/6**. (Con combinaciones: C(4, 2) ÷ C(9, 2) = 6/36 = 1/6 ✓)"
+        },
+        {
+          "tipo": "subtitulo",
+          "nivel": 2,
+          "texto": "Probabilidad a partir de tablas"
+        },
+        {
+          "tipo": "texto",
+          "contenido": "Cuando los datos vienen en una tabla de doble entrada, los casos posibles cambian según la condición que dé la pregunta. Si la pregunta dice \"**si se sabe que…**\" o \"**entre los…**\", el total ya no es toda la tabla, sino solo esa fila o columna (**probabilidad condicional**)."
+        },
+        {
+          "tipo": "tabla",
+          "encabezado": [
+            "",
+            "Fútbol",
+            "Voleibol",
+            "Total"
+          ],
+          "filas": [
+            [
+              "Hombres",
+              "12",
+              "5",
+              "17"
+            ],
+            [
+              "Mujeres",
+              "8",
+              "15",
+              "23"
+            ],
+            [
+              "Total",
+              "20",
+              "20",
+              "40"
+            ]
+          ]
+        },
+        {
+          "tipo": "ejemplo",
+          "titulo": "Leer probabilidades en la tabla",
+          "contenido": "P(elegir una mujer) = 23/40 = 0,575 (57,5 %).\n\nP(elegir a alguien que juega voleibol) = 20/40 = 1/2.\n\nP(juega voleibol, si se sabe que es mujer) = 15/23 ≈ 0,65 (el total ahora son solo las 23 mujeres)."
+        }
       ]
     }
   ]

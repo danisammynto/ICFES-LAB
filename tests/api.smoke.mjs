@@ -89,8 +89,34 @@ await paso('Página privada sin sesión redirige a /login', async () => {
 await paso('Dashboard', async () => {
   const d = await api('GET', '/api/analitica/dashboard');
   assert.ok(d.cuenta_regresiva.dias !== undefined);
+  // Cuenta nueva: aún no eligió calendario, así que no hay días ni fecha (nada inventado).
+  assert.equal(d.cuenta_regresiva.estado, 'sin_calendario');
+  assert.equal(d.cuenta_regresiva.dias, null);
   ctx.leccionDia = d.recordatorio.leccion_del_dia;
   return `ICFES en ${d.cuenta_regresiva.dias} días · lección del día: ${d.recordatorio.leccion_del_dia.leccion?.titulo}`;
+});
+await paso('Calendario del ICFES (A o B) y fecha de la citación', async () => {
+  const me = await api('GET', '/api/auth/me');
+  assert.equal(me.calendario_icfes, null, 'al primer inicio de sesión se debe preguntar el calendario');
+  await api('PUT', '/api/perfil/calendario', { calendario_icfes: 'C' }, { esperado: 422 });
+  const r = await api('PUT', '/api/perfil/calendario', { calendario_icfes: 'B' });
+  assert.equal(r.calendario_icfes, 'B');
+  assert.equal(r.cuenta_regresiva.calendario, 'B');
+  let detalle = r.cuenta_regresiva.estado;
+  if (r.cuenta_regresiva.estado === 'sin_publicar') {
+    // Sin fecha oficial publicada, la cuenta regresiva usa la fecha de la citación que ingrese el estudiante.
+    const anio = new Date().getFullYear() + 1;
+    const c = await api('PUT', '/api/perfil/calendario', { calendario_icfes: 'B', fecha_icfes: `${anio}-03-14` });
+    assert.equal(c.cuenta_regresiva.estado, 'citacion');
+    assert.ok(c.cuenta_regresiva.dias > 0);
+    // Al cambiar de calendario, la fecha de la citación anterior se descarta.
+    const a = await api('PUT', '/api/perfil/calendario', { calendario_icfes: 'A' });
+    assert.notEqual(a.cuenta_regresiva.estado, 'citacion');
+    detalle = `sin publicar → citación (${c.cuenta_regresiva.dias} días) → Calendario A: ${a.cuenta_regresiva.estado}`;
+  }
+  const me2 = await api('GET', '/api/auth/me');
+  assert.ok(['A', 'B'].includes(me2.calendario_icfes));
+  return detalle;
 });
 await paso('Materias', async () => {
   const r = await api('GET', '/api/materias');
@@ -103,7 +129,14 @@ await paso('Detalle de materia con bloqueos por nivel', async () => {
   return `bloqueados: ${bloqueados.join(', ')}`;
 });
 await paso('Subtema bloqueado → 403', async () => {
-  await api('GET', '/api/practica/siguiente?subtema=calculo-basico', undefined, { esperado: 403 });
+  await api('GET', '/api/practica/siguiente?subtema=geometria-ii', undefined, { esperado: 403 });
+});
+await paso('Preguntas del tema tras la explicación', async () => {
+  const r = await api('GET', '/api/practica/subtema/operaciones-basicas');
+  assert.ok(r.preguntas.length >= 1);
+  assert.equal(r.preguntas[0].opciones[0].es_correcta, undefined, 'no debe revelar la respuesta');
+  assert.equal(r.preguntas[0].ultima, null);
+  return `${r.subtema.nombre}: ${r.preguntas.length} preguntas`;
 });
 await paso('Lección y finalización (+XP)', async () => {
   const leccion = await api('GET', `/api/lecciones/${ctx.leccionDia.leccion.id}`);
@@ -111,22 +144,25 @@ await paso('Lección y finalización (+XP)', async () => {
   return `${leccion.bloques.length} bloques · eventos: ${r.eventos.map((e) => e.tipo).join(', ')}`;
 });
 await paso('Práctica adaptativa: siguiente pregunta (sin solución)', async () => {
-  const r = await api('GET', '/api/practica/siguiente?subtema=algebra');
+  const r = await api('GET', '/api/practica/siguiente?subtema=operaciones-basicas');
   assert.ok(r.pregunta);
-  assert.equal(r.pregunta.opciones.length, 4);
+  assert.ok([3, 4].includes(r.pregunta.opciones.length));
   assert.equal(r.pregunta.opciones[0].es_correcta, undefined, 'no debe revelar la respuesta');
   ctx.pregunta = r.pregunta;
   return `${r.pregunta.codigo} (dificultad objetivo ${r.dificultad_objetivo})`;
 });
 await paso('Responder pregunta (retroalimentación y eventos)', async () => {
   const r = await api('POST', '/api/practica/responder', { pregunta_id: ctx.pregunta.id, opcion_id: ctx.pregunta.opciones[0].id, tiempo_ms: 45000 });
-  assert.ok(r.explicacion);
+  assert.ok(r.letra_correcta && r.opciones.some((o) => o.es_correcta));
   return `${r.correcta ? 'correcta' : `incorrecta (era ${r.letra_correcta})`} · XP ${r.jugador.xp} · racha ${r.jugador.racha}`;
 });
 await paso('Catálogo de simulacros', async () => {
   const r = await api('GET', '/api/simulacros');
   ctx.mini1 = r.minis[0];
-  assert.equal(r.completos.length, 10);
+  assert.equal(r.completos.length, 5, 'deben ser 5 simulacros completos');
+  // Estructura pedida: 120 preguntas en la primera sesión y 134 en la segunda.
+  assert.equal(r.completos[0].preguntas_objetivo, 254);
+  assert.equal(r.retos.some((x) => /maestro/i.test(x.titulo)), false, 'el reto del nivel Maestro se retiró');
   assert.equal(r.minis.length, 10);
   assert.ok(r.minis[1].bloqueado, 'el mini 2 debe estar bloqueado');
   return `Simulacro 1: ${r.completos[0].preguntas} preguntas / ${r.completos[0].duracion_min} min · Mini 1: ${ctx.mini1.preguntas} preguntas`;
@@ -147,7 +183,8 @@ await paso('Iniciar minisimulacro 1 y su sesión', async () => {
 await paso('Autoguardado de respuestas y marcas', async () => {
   for (const [i, item] of ctx.preguntasIntento.entries()) {
     if (i % 5 === 4) continue; // algunas quedan omitidas
-    const opcion = item.pregunta.opciones[i % 4];
+    // Las preguntas de Inglés pueden traer 3 opciones (A–C) y el resto 4 (A–D).
+    const opcion = item.pregunta.opciones[i % item.pregunta.opciones.length];
     await api('PUT', `/api/intentos/${ctx.intento}/respuestas/${item.pregunta.id}`, { opcion_id: opcion.id, tiempo_ms: 40000, marcada: i === 0 });
   }
   return `${ctx.preguntasIntento.length} preguntas procesadas`;
@@ -159,7 +196,7 @@ await paso('Finalizar sesión → calificación', async () => {
 });
 await paso('Resultado con rendimiento por área y revisión', async () => {
   const r = await api('GET', `/api/intentos/${ctx.intento}/resultado`);
-  assert.ok(r.revision[0].pregunta.explicacion);
+  assert.equal(typeof r.revision[0].pregunta.explicacion, 'string'); // puede ser vacía: el banco 2026 solo trae la respuesta correcta
   return `${r.resultado.puntaje_global}/500 · ${r.resultado.aciertos}/${r.resultado.total} · ${r.resultado.estrellas}★ · ${r.resultado.recomendaciones.length} recomendaciones`;
 });
 await paso('Mini 2 desbloqueado tras completar el 1', async () => {
@@ -202,6 +239,9 @@ await paso('Tienda y compra', async () => {
   const t = await api('GET', '/api/tienda');
   const r = await api('POST', '/api/tienda/comprar', { tipo: 'item', codigo: 'accesorio-gafas' });
   await api('POST', '/api/tienda/comprar', { tipo: 'item', codigo: 'accesorio-gafas' }, { esperado: 409 });
+  // Las insignias ya no se venden.
+  assert.equal(t.insignias, undefined);
+  await api('POST', '/api/tienda/comprar', { tipo: 'insignia', codigo: 'tienda-libro' }, { esperado: 422 });
   return `${t.monedas} → ${r.jugador.monedas} monedas`;
 });
 await paso('Equipar avatar (y rechazar artículo no adquirido)', async () => {
@@ -211,7 +251,12 @@ await paso('Equipar avatar (y rechazar artículo no adquirido)', async () => {
 await paso('Logros, niveles, insignias y racha', async () => {
   const l = await api('GET', '/api/gamificacion/logros');
   const n = await api('GET', '/api/gamificacion/niveles');
-  await api('GET', '/api/gamificacion/insignias');
+  assert.equal(n.niveles.length, 4, 'sin el nivel Maestro');
+  assert.equal(n.niveles.at(-1).nombre, 'Experto');
+  assert.ok(n.actual.siguiente.requisitos.length >= 5, 'el siguiente nivel muestra sus requisitos con el avance');
+  assert.ok(n.niveles.at(-1).requisitos.some((x) => x.clave === 'actividades' && x.meta === 90));
+  const i = await api('GET', '/api/gamificacion/insignias');
+  assert.equal(i.insignias.some((x) => x.origen === 'tienda' && !x.obtenida), false);
   const r = await api('GET', '/api/gamificacion/racha');
   return `${l.logros.filter((x) => x.desbloqueado).length} logros · nivel ${n.actual.nivel.nombre} · racha ${r.actual} · calendario ${r.calendario.length} días`;
 });

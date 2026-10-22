@@ -3,7 +3,7 @@
   "entradas": [
     {
       "id": "mat-porcentajes",
-      "subtema": "algebra",
+      "subtema": "porcentajes",
       "titulo": "Porcentajes y variación porcentual",
       "palabras_clave": ["porcentaje", "porcentajes", "descuento", "descuentos", "aumento porcentual", "variacion porcentual", "variación porcentual", "iva", "tanto por ciento"],
       "explicacion": "Un porcentaje es una fracción con denominador 100: el p % de una cantidad es (p ÷ 100) × cantidad. Aumentar un p % equivale a multiplicar por (1 + p/100) y descontar un p % equivale a multiplicar por (1 − p/100). La variación porcentual entre dos valores se calcula siempre respecto al valor inicial: (final − inicial) ÷ inicial × 100 %. Cuando hay porcentajes sucesivos, los factores se multiplican; por eso dos descuentos seguidos no se suman.",
@@ -12,7 +12,7 @@
     },
     {
       "id": "mat-ecuaciones-lineales",
-      "subtema": "algebra",
+      "subtema": "ecuaciones-basicas",
       "titulo": "Ecuaciones lineales y sistemas 2×2",
       "palabras_clave": ["ecuacion", "ecuación", "ecuaciones", "despejar", "incognita", "incógnita", "sistema de ecuaciones", "sistemas de ecuaciones", "sustitucion", "sustitución"],
       "explicacion": "Una ecuación lineal es una igualdad en la que la incógnita aparece con exponente 1, como 3x + 5 = 20. Para resolverla se despeja la incógnita aplicando la misma operación a ambos lados: primero se quitan los términos que suman o restan y luego los que multiplican o dividen. Cuando hay dos incógnitas se necesitan dos ecuaciones (un sistema 2×2), que se resuelve por sustitución (despejar una variable y reemplazarla en la otra ecuación) o por reducción (sumar o restar las ecuaciones para eliminar una variable). Siempre conviene comprobar reemplazando la solución en el enunciado original.",
@@ -21,7 +21,7 @@
     },
     {
       "id": "mat-pitagoras",
-      "subtema": "geometria",
+      "subtema": "trigonometria-i",
       "titulo": "Teorema de Pitágoras",
       "palabras_clave": ["pitagoras", "pitágoras", "hipotenusa", "cateto", "catetos", "triangulo rectangulo", "triángulo rectángulo", "triangulos rectangulos", "triángulos rectángulos"],
       "explicacion": "El teorema de Pitágoras se cumple solo en triángulos rectángulos, es decir, los que tienen un ángulo de 90°. Dice que el cuadrado de la hipotenusa (el lado más largo, opuesto al ángulo recto) es igual a la suma de los cuadrados de los catetos: c² = a² + b². Sirve para hallar un lado desconocido cuando se conocen los otros dos. Para hallar un cateto se resta: a² = c² − b².",
@@ -30,7 +30,7 @@
     },
     {
       "id": "mat-areas-volumenes",
-      "subtema": "geometria",
+      "subtema": "geometria-i",
       "titulo": "Perímetro, área y volumen",
       "palabras_clave": ["area", "área", "areas", "áreas", "perimetro", "perímetro", "volumen", "volumenes", "volúmenes", "semejanza"],
       "explicacion": "El perímetro es la longitud del contorno de una figura (se mide en m o cm), el área es la medida de su superficie (m², cm²) y el volumen es el espacio que ocupa un cuerpo (m³, cm³). Fórmulas básicas: rectángulo, A = b·h; triángulo, A = b·h ÷ 2; círculo, A = π·r²; prisma o cilindro, V = área de la base × altura. Si todas las medidas de una figura se multiplican por k (figuras semejantes), el perímetro se multiplica por k, el área por k² y el volumen por k³.",
@@ -39,7 +39,7 @@
     },
     {
       "id": "mat-tendencia-central",
-      "subtema": "estadistica",
+      "subtema": "medidas-tendencia-central",
       "titulo": "Media, mediana y moda",
       "palabras_clave": ["media", "promedio", "promedios", "mediana", "moda", "rango", "tendencia central", "dato atipico", "dato atípico"],
       "explicacion": "La media o promedio es la suma de todos los datos dividida entre la cantidad de datos. La mediana es el dato que queda en el centro cuando los datos se ordenan; si la cantidad de datos es par, es el promedio de los dos centrales. La moda es el dato que más se repite, y puede haber más de una o ninguna. La media se ve muy afectada por los datos atípicos (muy grandes o muy pequeños); en esos casos, la mediana representa mejor al grupo.",
@@ -48,7 +48,7 @@
     },
     {
       "id": "mat-muestreo",
-      "subtema": "estadistica",
+      "subtema": "medidas-tendencia-central",
       "titulo": "Población, muestra y representatividad",
       "palabras_clave": ["muestra", "muestras", "poblacion", "población", "representativa", "representatividad", "sesgo", "encuesta", "encuestas"],
       "explicacion": "La población es el grupo completo que se quiere estudiar y la muestra es la parte de ese grupo que realmente se observa o se encuesta. Para que las conclusiones de una muestra se puedan generalizar, esta debe ser representativa, es decir, parecerse a la población en las características importantes. La mejor manera de lograrlo es escoger la muestra al azar entre toda la población. Si se elige solo a un grupo particular (un curso, los amigos, los socios de un club), hay sesgo y la conclusión no es válida para todos.",
@@ -57,7 +57,7 @@
     },
     {
       "id": "mat-probabilidad",
-      "subtema": "probabilidad",
+      "subtema": "tecnicas-de-conteo",
       "titulo": "Probabilidad clásica y condicional",
       "palabras_clave": ["probabilidad", "probabilidades", "azar", "casos favorables", "casos posibles", "probabilidad condicional", "tabla de doble entrada", "eventos independientes", "evento independiente"],
       "explicacion": "La probabilidad de un evento es un número entre 0 (imposible) y 1 (seguro). Si todos los resultados son igualmente probables, P = casos favorables ÷ casos posibles, y la probabilidad de que el evento no ocurra es 1 − P. Si dos eventos son independientes, la probabilidad de que ocurran ambos es el producto de sus probabilidades. En una probabilidad condicional («si se sabe que…», «entre los que…») los casos posibles se reducen a los que cumplen la condición, por ejemplo, a una fila o a una columna de una tabla de doble entrada.",
@@ -66,7 +66,7 @@
     },
     {
       "id": "mat-tasa-cambio",
-      "subtema": "calculo-basico",
+      "subtema": "funciones-i",
       "titulo": "Tasa de cambio y tipos de variación",
       "palabras_clave": ["tasa de cambio", "razon de cambio", "razón de cambio", "pendiente", "crecimiento", "decrecimiento", "exponencial", "funcion lineal", "función lineal"],
       "explicacion": "La tasa de cambio promedio indica cuánto cambia una cantidad y por cada unidad que cambia x: (y₂ − y₁) ÷ (x₂ − x₁). En una gráfica corresponde a la pendiente o inclinación del tramo: si es positiva la función crece, si es negativa decrece y si es cero es constante. En una función lineal la tasa de cambio es constante (se suma lo mismo en cada periodo); en una exponencial se multiplica por el mismo factor, así que los aumentos son cada vez mayores. Los máximos y mínimos son los puntos más alto y más bajo de la gráfica.",

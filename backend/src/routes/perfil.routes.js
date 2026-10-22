@@ -43,6 +43,15 @@ router.put(
   ),
   ctrl.configuracion,
 );
+// Calendario del Saber 11 (A o B) y, si el ICFES no ha publicado una fecha única, la de la citación.
+router.put(
+  '/calendario',
+  validado(
+    body('calendario_icfes').isIn(['A', 'B']).withMessage('Elige el Calendario A o el Calendario B.'),
+    fechaOpcional('fecha_icfes'),
+  ),
+  ctrl.calendario,
+);
 router.put('/email', validado(email(), passwordRequerida()), ctrl.email);
 router.put('/password', validado(passwordRequerida('actual'), passwordNueva('nueva')), ctrl.password);
 router.delete('/', validado(passwordRequerida()), ctrl.eliminar);

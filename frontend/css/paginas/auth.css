@@ -23,7 +23,7 @@
   overflow: hidden;
 }
 
-.panel-marca .logo-imagen { height: 42px; color: #fff; }
+.panel-marca .logo-imagen { height: 42px; width: auto; color: #fff; }
 .panel-marca h1 { font-size: clamp(2rem, 3.2vw, 2.9rem); max-width: 540px; margin: 0 0 var(--esp-4); }
 .panel-marca h1 span { color: var(--lima); }
 .panel-marca p { color: rgba(255, 255, 255, 0.85); max-width: 480px; font-size: var(--texto-lg); }
@@ -32,7 +32,7 @@
 .lista-beneficios li { display: flex; align-items: center; gap: var(--esp-3); font-weight: 500; }
 .lista-beneficios .icono { width: 34px; height: 34px; padding: 7px; border-radius: 10px; background: rgba(255, 255, 255, 0.14); color: var(--lima); }
 
-.vanty-marca { position: absolute; right: 36px; bottom: 30px; width: 190px; animation: flotar 4.5s ease-in-out infinite; }
+.hueco-personaje { position: absolute; right: 36px; bottom: 24px; width: 210px; }
 
 .panel-formulario {
   display: grid;
@@ -62,7 +62,7 @@
 @media (max-width: 991px) {
   .pagina-auth { grid-template-columns: minmax(0, 1fr); }
   .panel-marca { padding: var(--esp-6); gap: var(--esp-4); }
-  .panel-marca p, .lista-beneficios, .vanty-marca { display: none; }
+  .panel-marca p, .lista-beneficios, .hueco-personaje { display: none; }
   .panel-marca h1 { font-size: var(--texto-2xl); margin: 0; }
   .panel-formulario { place-items: start center; padding: var(--esp-6) var(--esp-4) var(--esp-10); }
   .caja-formulario .tarjeta { padding: var(--esp-6); }

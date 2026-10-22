@@ -1,0 +1,206 @@
+{
+  "materia": "sociales-ciudadanas",
+  "contextos": {},
+  "preguntas": [
+    {
+      "codigo": "SOC-HIS-01",
+      "subtema": "historia",
+      "dificultad": 1,
+      "competencia": "Pensamiento reflexivo y sistémico",
+      "contexto_ref": null,
+      "contexto": "Entre 1958 y 1974 funcionó en Colombia el Frente Nacional, un acuerdo entre los partidos Liberal y Conservador pactado como respuesta al periodo conocido como La Violencia y al gobierno militar del general Gustavo Rojas Pinilla. Según el acuerdo, la Presidencia de la República se alternaba cada cuatro años entre los dos partidos y los cargos públicos se repartían por partes iguales entre ellos.",
+      "enunciado": "Una historiadora afirma que el Frente Nacional “fue una solución que trajo nuevos problemas”. ¿Cuál de las siguientes afirmaciones sustenta mejor esta idea?",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        { "letra": "A", "texto": "Amplió la participación política, porque permitió que nuevos partidos compitieran por la Presidencia en igualdad de condiciones.", "correcta": false, "retroalimentacion": "Ocurrió lo contrario: el acuerdo reservó la Presidencia y los cargos públicos a liberales y conservadores, de modo que otros movimientos no podían competir en igualdad de condiciones." },
+        { "letra": "B", "texto": "Redujo la violencia entre liberales y conservadores, pero dejó por fuera del poder a las fuerzas políticas distintas de esos dos partidos.", "correcta": true, "retroalimentacion": "Correcta. Recoge las dos caras de la frase: la “solución” (el fin de la confrontación bipartidista) y los “nuevos problemas” (la exclusión de otras fuerzas políticas, que alimentó el descontento)." },
+        { "letra": "C", "texto": "Estableció la elección popular de alcaldes, lo que debilitó el control de los partidos tradicionales sobre las regiones.", "correcta": false, "retroalimentacion": "Es un anacronismo: la elección popular de alcaldes se aprobó en 1986 y las primeras elecciones se hicieron en 1988, más de una década después del Frente Nacional." },
+        { "letra": "D", "texto": "Puso fin al conflicto armado, pero causó una crisis económica por la desmovilización de las guerrillas.", "correcta": false, "retroalimentacion": "Es falsa: durante el Frente Nacional surgieron guerrillas como las FARC, el ELN y el EPL; el conflicto armado no terminó en ese periodo." }
+      ],
+      "explicacion": "El Frente Nacional (1958-1974) fue la salida que encontraron los dos partidos tradicionales para terminar la violencia bipartidista y el gobierno militar: se turnaron la Presidencia y se repartieron por mitades los cargos públicos.\n**La solución:** disminuyó notablemente la confrontación armada entre liberales y conservadores.\n**Los nuevos problemas:** el sistema quedó cerrado para otras fuerzas políticas. Muchos historiadores señalan esa exclusión como uno de los factores que contribuyeron al surgimiento de guerrillas en los años sesenta (FARC, ELN, EPL) y, más tarde, del M-19, que tomó su nombre de las cuestionadas elecciones del 19 de abril de 1970.\nPor eso la opción B es la única que muestra a la vez el logro y su consecuencia negativa. Las opciones C y D contienen errores históricos, y la A dice lo contrario de lo que ocurrió.",
+      "tiempo_estimado_seg": 90,
+      "etiquetas": ["frente nacional", "siglo xx", "bipartidismo", "exclusión política"]
+    },
+    {
+      "codigo": "SOC-HIS-02",
+      "subtema": "historia",
+      "dificultad": 2,
+      "competencia": "Interpretación y análisis de perspectivas",
+      "contexto_ref": null,
+      "contexto": "Testimonios ficticios, elaborados con fines educativos, de personas que vivieron el proceso que llevó a la Asamblea Nacional Constituyente de 1991:\n• Estudiante universitaria (1990): “La violencia y la corrupción nos mostraron que las instituciones no escuchaban a la gente. Votar la ‘séptima papeleta’ fue decir que los ciudadanos también podemos proponer un nuevo pacto.”\n• Líder indígena del Cauca: “Queremos que la nueva Constitución reconozca que Colombia es un país con muchos pueblos, culturas y lenguas, y que nosotros tengamos voz en esa decisión.”\n• Excombatiente de una guerrilla desmovilizada: “Dejamos las armas porque creemos que los cambios se pueden lograr por la vía política. La Asamblea es la prueba de que ese camino existe.”\n• Congresista de un partido tradicional: “Comparto que el país necesita reformas, pero la Constitución vigente dice que su reforma le corresponde al Congreso. Me preocupa que una Asamblea sin límites claros genere inseguridad jurídica.”",
+      "enunciado": "Al comparar los cuatro testimonios, es correcto afirmar que",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        { "letra": "A", "texto": "el congresista se opone a cualquier cambio y defiende que la Constitución de 1886 siga igual.", "correcta": false, "retroalimentacion": "El congresista dice explícitamente que “el país necesita reformas”; su reparo es sobre el procedimiento, no sobre la necesidad de cambios." },
+        { "letra": "B", "texto": "la estudiante y el excombatiente coinciden en que la reforma debía hacerla únicamente el Congreso.", "correcta": false, "retroalimentacion": "Ninguno de los dos lo plantea: ambos valoran la Asamblea como un camino abierto a la participación ciudadana y política. La idea de que la reforma le corresponde al Congreso aparece en el testimonio del congresista." },
+        { "letra": "C", "texto": "la líder indígena rechaza la Asamblea porque cree que no reconocerá la diversidad cultural.", "correcta": false, "retroalimentacion": "Confunde su postura: la líder espera que la nueva Constitución sí reconozca la diversidad y quiere participar en su redacción." },
+        { "letra": "D", "texto": "tres de los actores ven en la Asamblea un canal de participación, y el congresista cuestiona el procedimiento, no la necesidad de reformas.", "correcta": true, "retroalimentacion": "Correcta. La estudiante, la líder indígena y el excombatiente ven la Asamblea como una oportunidad de ser escuchados; el congresista acepta que se necesitan reformas, pero duda del mecanismo." }
+      ],
+      "explicacion": "Para analizar perspectivas, identifica en cada testimonio **quién habla, qué propone y qué le preocupa**.\n1. La estudiante ve la Asamblea como una forma de que los ciudadanos propongan un nuevo pacto.\n2. La líder indígena busca el reconocimiento de la diversidad y tener voz en la decisión.\n3. El excombatiente la ve como prueba de que la vía política es posible.\n4. El congresista acepta la necesidad de reformas, pero su preocupación es jurídica: la Constitución de 1886 reservaba al Congreso la facultad de reformarla.\nEse debate fue real: la convocatoria se hizo por vías excepcionales (la ‘séptima papeleta’ y la votación de mayo de 1990) y la Corte Suprema de Justicia la avaló en 1990. La Asamblea, elegida en diciembre de ese año, expidió la Constitución el 4 de julio de 1991.",
+      "tiempo_estimado_seg": 150,
+      "etiquetas": ["constitución de 1991", "séptima papeleta", "asamblea nacional constituyente", "perspectivas"]
+    },
+    {
+      "codigo": "SOC-GEO-01",
+      "subtema": "geografia",
+      "dificultad": 1,
+      "competencia": "Pensamiento social",
+      "contexto_ref": null,
+      "contexto": "Mariana vive en un municipio ubicado a orillas del río Magdalena, a unos 300 m sobre el nivel del mar, donde la temperatura media es de 28 °C y abundan los cultivos de cacao y mango. En vacaciones visita la finca de su abuelo, en una ladera de la cordillera cercana, a 2.700 m de altitud. Allí la temperatura media es de 13 °C y se cultivan papa y haba.",
+      "enunciado": "¿Qué explica principalmente la diferencia entre los cultivos de los dos lugares?",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        { "letra": "A", "texto": "La finca del abuelo está lejos del río, y sin riego es imposible cultivar cacao o mango.", "correcta": false, "retroalimentacion": "El caso no habla de riego ni de la distancia al río; la información clave es la diferencia de altitud (300 m frente a 2.700 m) y de temperatura (28 °C frente a 13 °C)." },
+        { "letra": "B", "texto": "A mayor altitud aumenta la temperatura, y la papa necesita más calor que el cacao.", "correcta": false, "retroalimentacion": "Es el error inverso: al ascender, la temperatura disminuye, como lo muestran los datos (28 °C abajo y 13 °C arriba). La papa se adapta al clima frío." },
+        { "letra": "C", "texto": "Al ascender disminuye la temperatura, y cada piso térmico favorece cultivos distintos.", "correcta": true, "retroalimentacion": "Correcta. El municipio de Mariana está en el piso térmico cálido (cacao, mango) y la finca, en el frío (papa, haba). La altitud determina la temperatura, y esta, los cultivos posibles." },
+        { "letra": "D", "texto": "La papa y la haba solo se cultivan en tierras planas, como las de los valles de los ríos.", "correcta": false, "retroalimentacion": "Es falso: en Colombia la papa y la haba se cultivan sobre todo en laderas y altiplanos de clima frío, como los de Boyacá, Cundinamarca y Nariño." }
+      ],
+      "explicacion": "En Colombia, por estar en la zona intertropical, la temperatura depende sobre todo de la **altitud**: en promedio desciende unos 6 °C por cada 1.000 m de ascenso (0,6 °C por cada 100 m).\nEntre los dos lugares hay 2.400 m de diferencia (2.700 − 300), lo que equivale a unos 14 o 15 °C menos; por eso se pasa de 28 °C a 13 °C.\nEsa diferencia ubica al municipio de Mariana en el **piso térmico cálido** (menos de 1.000 m, más de 24 °C) y a la finca del abuelo en el **piso frío** (2.000 a 3.000 m, entre 12 y 18 °C).\nCada piso favorece cultivos distintos: cacao, mango y plátano en el cálido; café en el templado; papa, haba y hortalizas en el frío. Es un ejemplo de la relación entre sociedad y territorio: las condiciones naturales influyen en las actividades económicas de las comunidades.",
+      "tiempo_estimado_seg": 75,
+      "etiquetas": ["pisos térmicos", "altitud", "clima", "sociedad y territorio"]
+    },
+    {
+      "codigo": "SOC-GEO-02",
+      "subtema": "geografia",
+      "dificultad": 2,
+      "competencia": "Pensamiento reflexivo y sistémico",
+      "contexto_ref": null,
+      "contexto": "Santa Rosa es un municipio andino ficticio cuyo acueducto se abastece de las quebradas que nacen en un páramo cercano. En los últimos años, varias familias campesinas que viven en el páramo han ampliado los cultivos de papa y los potreros para ganado, y una empresa solicitó permiso para extraer oro en la zona. La empresa de acueducto advierte que el caudal de las quebradas ha disminuido, mientras que las familias campesinas explican que la agricultura es su principal fuente de ingresos.",
+      "enunciado": "¿Cuál de las siguientes propuestas atiende de manera más completa las dimensiones ambiental, económica y social de este problema?",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        { "letra": "A", "texto": "Delimitar el páramo, no permitir allí la minería y acordar con las familias un plan gradual de reconversión productiva con apoyo técnico y económico.", "correcta": true, "retroalimentacion": "Correcta. Protege el ecosistema que regula el agua (dimensión ambiental), ofrece alternativas de ingreso (dimensión económica) y reconoce a las familias como parte de la solución (dimensión social)." },
+        { "letra": "B", "texto": "Autorizar la mina y la ampliación de los cultivos, porque generan empleo e ingresos para el municipio en el corto plazo.", "correcta": false, "retroalimentacion": "Solo considera la dimensión económica inmediata e ignora que el deterioro del páramo afectaría el agua de todo el municipio. Además, la ley colombiana prohíbe la minería en los páramos." },
+        { "letra": "C", "texto": "Desalojar de inmediato a las familias campesinas, sin compensación, para que el ecosistema se recupere lo más rápido posible.", "correcta": false, "retroalimentacion": "Atiende solo la dimensión ambiental y desconoce los derechos y el sustento de las familias; además, generaría un nuevo conflicto social." },
+        { "letra": "D", "texto": "Construir un tanque de almacenamiento más grande en el casco urbano, sin intervenir lo que ocurre en el páramo.", "correcta": false, "retroalimentacion": "Ataca un síntoma (la falta de agua almacenada), pero no la causa: si el páramo se sigue deteriorando, el agua que llega a las quebradas seguirá disminuyendo." }
+      ],
+      "explicacion": "Los páramos funcionan como **esponjas**: su vegetación (frailejones, musgos, pajonales) y sus suelos captan el agua de la lluvia y la neblina y la liberan poco a poco hacia las quebradas. Colombia tiene una de las mayores extensiones de páramo del mundo, y muchas ciudades dependen de ellos para su abastecimiento de agua.\nUn problema socioambiental tiene varias dimensiones: **ambiental** (proteger el ecosistema), **económica** (ingresos de las familias y del municipio) y **social** (derechos y bienestar de la comunidad).\nUna buena solución no sacrifica por completo una dimensión por otra. La opción A protege el agua y, al mismo tiempo, busca alternativas para las familias; B, C y D atienden una sola dimensión o solo un síntoma. En Colombia, la ley de páramos (Ley 1930 de 2018) prohíbe la minería en estos ecosistemas y prevé la reconversión gradual de las actividades agropecuarias con acompañamiento a sus habitantes.",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": ["páramos", "agua", "conflictos ambientales", "dimensiones de un problema"]
+    },
+    {
+      "codigo": "SOC-ECO-01",
+      "subtema": "economia",
+      "dificultad": 2,
+      "competencia": "Interpretación y análisis de perspectivas",
+      "contexto_ref": null,
+      "contexto": "El Gobierno nacional estudia eliminar el arancel (impuesto que se cobra a los productos importados) que hoy pagan las importaciones de arroz. Una asociación de consumidores apoya la medida, porque las familias de menores ingresos destinan una parte importante de su presupuesto a los alimentos. En cambio, los productores de arroz del Tolima y del Casanare se oponen a ella.",
+      "enunciado": "¿Qué interés explica mejor la oposición de los productores de arroz?",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        { "letra": "A", "texto": "Evitar que el precio del arroz suba y que las familias compren menos, lo que reduciría sus ventas.", "correcta": false, "retroalimentacion": "Confunde el efecto de la medida: sin arancel, el arroz importado entra más barato, así que la presión es a que el precio baje, no a que suba." },
+        { "letra": "B", "texto": "Proteger a las familias de menores ingresos, que gastan buena parte de su dinero en alimentos.", "correcta": false, "retroalimentacion": "Ese es el argumento de la asociación de consumidores, no el de los productores. Confundir las perspectivas de los actores es un error frecuente." },
+        { "letra": "C", "texto": "Evitar que el arroz importado, al entrar más barato, aumente la oferta, haga bajar el precio y reduzca sus ingresos.", "correcta": true, "retroalimentacion": "Correcta. Sin arancel, el arroz importado compite con ventaja; la mayor oferta presiona el precio a la baja y los productores nacionales venderían menos o a menor precio." },
+        { "letra": "D", "texto": "Evitar que el nuevo impuesto se cobre a los productores nacionales por cada tonelada que vendan.", "correcta": false, "retroalimentacion": "Confunde qué es un arancel: es un impuesto a los productos importados, no a los nacionales. Además, la medida propone eliminarlo, no crearlo." }
+      ],
+      "explicacion": "Un **arancel** encarece los productos importados y así protege a los productores nacionales de la competencia externa.\nSi se elimina, el arroz importado llega más barato: aumenta la **oferta** en el mercado y, con una demanda similar, el **precio** tiende a bajar.\n• Los **consumidores** ganan: pagan menos por un alimento básico (por eso apoyan la medida).\n• Los **productores nacionales** pierden: deben vender más barato o pierden compradores (por eso se oponen).\nAnalizar perspectivas consiste en identificar qué gana o qué pierde cada actor con una decisión. Este tipo de debate acompaña a la globalización y a la apertura económica que Colombia inició a comienzos de los años noventa.",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": ["oferta y demanda", "aranceles", "globalización", "actores e intereses"]
+    },
+    {
+      "codigo": "SOC-ECO-02",
+      "subtema": "economia",
+      "dificultad": 3,
+      "competencia": "Pensamiento reflexivo y sistémico",
+      "contexto_ref": null,
+      "contexto": "La gráfica presenta datos ficticios de un país hipotético: el aumento porcentual del salario mínimo decretado para cada año y la inflación registrada durante ese mismo año.",
+      "enunciado": "Un candidato afirma: “Como el salario mínimo subió todos los años, el poder de compra de quienes lo ganan mejoró en cada uno de esos años”. Con base en la gráfica, ¿cuál es la evaluación correcta de esta afirmación?",
+      "imagen": "/img/preguntas/SOC-ECO-02.svg",
+      "imagen_alt": "Gráfica de barras agrupadas por año. 2021: aumento del salario mínimo 4 %, inflación 3 %. 2022: aumento del salario mínimo 10 %, inflación 13 %. 2023: aumento del salario mínimo 16 %, inflación 9 %. 2024: aumento del salario mínimo 12 %, inflación 6 %.",
+      "opciones": [
+        { "letra": "A", "texto": "Es correcta, porque un aumento del salario nominal siempre se traduce en mayor poder de compra.", "correcta": false, "retroalimentacion": "Confunde el salario nominal (la cantidad de pesos) con el salario real (lo que se puede comprar con ellos). Si los precios suben más que el salario, el poder de compra cae aunque el salario aumente." },
+        { "letra": "B", "texto": "Es incorrecta, porque en 2022 la inflación (13 %) superó el aumento del salario (10 %), así que ese año el salario alcanzó para comprar menos.", "correcta": true, "retroalimentacion": "Correcta. En 2022 los precios subieron más que el salario, de modo que el salario real disminuyó (cerca de 2,7 %). Basta un año en esa situación para refutar la afirmación." },
+        { "letra": "C", "texto": "Es incorrecta, porque en 2023 se registró la inflación más alta del periodo y ese año el salario perdió poder de compra.", "correcta": false, "retroalimentacion": "Error de lectura de la gráfica: la inflación más alta fue la de 2022 (13 %). En 2023 el salario subió 16 % y la inflación fue de 9 %, así que el poder de compra aumentó." },
+        { "letra": "D", "texto": "Es correcta, porque en todos los años el aumento del salario fue mayor que la inflación.", "correcta": false, "retroalimentacion": "Error de lectura: en 2022 la barra de la inflación (13 %) es más alta que la del aumento del salario (10 %)." }
+      ],
+      "explicacion": "La clave es distinguir el **salario nominal** (los pesos que se reciben) del **salario real** (los bienes y servicios que se pueden comprar con ellos).\nUna forma aproximada de estimar el cambio del salario real es: aumento del salario − inflación.\n• 2021: 4 % − 3 % ≈ +1 % (gana poder de compra)\n• 2022: 10 % − 13 % ≈ −3 % (pierde poder de compra)\n• 2023: 16 % − 9 % ≈ +7 % (gana)\n• 2024: 12 % − 6 % ≈ +6 % (gana)\nEl cálculo exacto para 2022 es 1,10 ÷ 1,13 ≈ 0,973, es decir, una pérdida cercana al 2,7 %. Como ese año el salario perdió poder de compra, la afirmación del candidato es falsa. Evaluar afirmaciones con evidencia, y no aceptarlas por quién las dice, es una habilidad clave del pensamiento reflexivo.",
+      "tiempo_estimado_seg": 180,
+      "etiquetas": ["inflación", "salario real", "lectura de gráficas", "evaluación de argumentos"]
+    },
+    {
+      "codigo": "SOC-POL-01",
+      "subtema": "politica",
+      "dificultad": 2,
+      "competencia": "Pensamiento social",
+      "contexto_ref": null,
+      "contexto": "En el municipio ficticio de El Porvenir, la alcaldía pagó la totalidad de un contrato para construir un puente peatonal, pero la obra quedó abandonada a mitad de camino. Una veeduría ciudadana, es decir, un grupo de ciudadanos organizado para vigilar la gestión pública, denunció el caso y pidió que se establezca si hubo un daño a los recursos públicos y que se recupere el dinero perdido.",
+      "enunciado": "¿Qué entidad es la competente para adelantar el proceso que determine si hubo un daño al patrimonio público y quién debe responder económicamente por él?",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        { "letra": "A", "texto": "La Contraloría, porque ejerce el control fiscal sobre el manejo de los recursos públicos.", "correcta": true, "retroalimentacion": "Correcta. El control fiscal consiste en vigilar cómo se gestionan los recursos públicos; mediante un proceso de responsabilidad fiscal, la Contraloría determina quién causó el daño y le exige resarcirlo." },
+        { "letra": "B", "texto": "La Defensoría del Pueblo, porque vela por la promoción y la protección de los derechos humanos.", "correcta": false, "retroalimentacion": "La Defensoría hace parte del Ministerio Público, pero su función es promover y proteger los derechos humanos, no investigar el manejo del dinero público." },
+        { "letra": "C", "texto": "La Procuraduría, porque vigila la conducta de los servidores públicos y adelanta investigaciones disciplinarias.", "correcta": false, "retroalimentacion": "Es el distractor más cercano: la Procuraduría sí podría abrir una investigación disciplinaria por el incumplimiento de deberes. Pero determinar el daño patrimonial y su resarcimiento es control fiscal, tarea de la Contraloría." },
+        { "letra": "D", "texto": "El Concejo municipal, porque es el órgano de la rama judicial encargado de juzgar al alcalde.", "correcta": false, "retroalimentacion": "El concejo es una corporación administrativa de elección popular que ejerce control político sobre la administración municipal; no pertenece a la rama judicial ni adelanta procesos de responsabilidad fiscal." }
+      ],
+      "explicacion": "Un mismo hecho puede dar lugar a **tres investigaciones distintas** que avanzan en paralelo:\n• **Fiscal** (Contraloría): ¿se perdieron recursos públicos?, ¿quién debe responder por ellos?\n• **Disciplinaria** (Procuraduría o personería): ¿el servidor público incumplió sus deberes?\n• **Penal** (Fiscalía General de la Nación, que pertenece a la rama judicial): ¿se cometió un delito?\nLa pregunta pide establecer el daño al patrimonio y quién responde económicamente: eso es **control fiscal**. Según el origen de los recursos, lo ejerce la contraloría territorial (departamental o municipal) o la Contraloría General de la República. La Contraloría y el Ministerio Público (Procuraduría, Defensoría del Pueblo y personerías) son los órganos de control del Estado.",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": ["órganos de control", "contraloría", "procuraduría", "veedurías ciudadanas"]
+    },
+    {
+      "codigo": "SOC-POL-02",
+      "subtema": "politica",
+      "dificultad": 3,
+      "competencia": "Interpretación y análisis de perspectivas",
+      "contexto_ref": null,
+      "contexto": "En un foro sobre descentralización se escucharon estas intervenciones (testimonios ficticios):\n• Gobernadora: “Los departamentos y municipios conocen mejor las necesidades de su gente. Deberían recibir más recursos y decidir con mayor autonomía en qué invertirlos.”\n• Funcionario del Gobierno nacional: “Muchos municipios pequeños tienen poco personal técnico y recaudan muy pocos impuestos propios. Si se les transfieren más recursos sin fortalecer esas capacidades, aumenta el riesgo de que se malgasten.”\n• Líder comunitaria de una vereda: “Las decisiones sobre nuestras vías y escuelas se toman muy lejos de aquí. Con más autonomía local, la comunidad podría participar directamente en la definición del presupuesto.”",
+      "enunciado": "¿Cuál de las siguientes propuestas recoge a la vez la preocupación del funcionario nacional y las aspiraciones de la gobernadora y de la líder comunitaria?",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        { "letra": "A", "texto": "Centralizar en el Gobierno nacional la ejecución de las vías y escuelas, para evitar que los recursos se pierdan en los municipios.", "correcta": false, "retroalimentacion": "Responde solo a la preocupación del funcionario y va en contra de la autonomía territorial que piden la gobernadora y la líder comunitaria." },
+        { "letra": "B", "texto": "Aumentar las transferencias a los municipios sin ninguna condición, pues la autonomía territorial impide cualquier tipo de control.", "correcta": false, "retroalimentacion": "Recoge solo la aspiración de la gobernadora e ignora el riesgo señalado por el funcionario. Además, es falso que la autonomía impida el control: las entidades territoriales están sujetas a los órganos de control y a la vigilancia ciudadana." },
+        { "letra": "C", "texto": "Reemplazar al concejo municipal por asambleas veredales que decidan todo el presupuesto sin intervención de las autoridades elegidas.", "correcta": false, "retroalimentacion": "Exagera la postura de la líder: ella pide participar, no reemplazar a las autoridades elegidas. Además, no responde a la preocupación del funcionario por la capacidad técnica." },
+        { "letra": "D", "texto": "Transferir más recursos y competencias, acompañados de asistencia técnica a los municipios y de presupuestos participativos con veeduría ciudadana.", "correcta": true, "retroalimentacion": "Correcta. Amplía la autonomía (gobernadora), fortalece capacidades y control para reducir el riesgo de malgasto (funcionario) y abre espacios de participación directa (líder comunitaria)." }
+      ],
+      "explicacion": "La **descentralización** consiste en trasladar poder de decisión, funciones y recursos del nivel nacional a departamentos y municipios. En Colombia avanzó con la elección popular de alcaldes (desde 1988) y de gobernadores (desde 1991), y con las transferencias de la Nación a los territorios.\nPara resolver una pregunta de perspectivas de nivel alto, primero identifica el interés de cada actor:\n• Gobernadora: más recursos y **autonomía**.\n• Funcionario: evitar el **malgasto** por falta de capacidad técnica.\n• Líder comunitaria: **participación** directa de la comunidad.\nLuego busca la propuesta que no sacrifique a ningún actor. Solo la D combina autonomía, fortalecimiento técnico, control y participación; A, B y C responden a un solo actor o deforman lo que dijo.",
+      "tiempo_estimado_seg": 180,
+      "etiquetas": ["descentralización", "autonomía territorial", "participación ciudadana", "perspectivas"]
+    },
+    {
+      "codigo": "SOC-CIU-01",
+      "subtema": "ciudadania",
+      "dificultad": 1,
+      "competencia": "Pensamiento social",
+      "contexto_ref": null,
+      "contexto": "En el municipio ficticio de La Esperanza, la alcaldesa fue elegida con un programa de gobierno que prometía construir un acueducto veredal y un puesto de salud. Después de un año y medio de gobierno, un grupo de ciudadanos considera que ella no ha cumplido ese programa y quiere que deje el cargo antes de que termine su periodo.",
+      "enunciado": "¿Qué mecanismo de participación ciudadana, reconocido en la Constitución de 1991, permite a los ciudadanos lograr este propósito?",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        { "letra": "A", "texto": "El cabildo abierto, porque en él los ciudadanos votan para destituir a los funcionarios municipales.", "correcta": false, "retroalimentacion": "El cabildo abierto es una sesión pública de una corporación, como el concejo o la junta administradora local, en la que los habitantes discuten asuntos de interés comunitario; no sirve para destituir a nadie." },
+        { "letra": "B", "texto": "La acción de tutela, porque protege a la comunidad cuando un gobernante incumple sus promesas de campaña.", "correcta": false, "retroalimentacion": "La tutela es un mecanismo judicial para proteger derechos fundamentales; no es un mecanismo de participación ni sirve para terminar el mandato de un gobernante." },
+        { "letra": "C", "texto": "La revocatoria del mandato, porque permite a los ciudadanos dar por terminado el mandato de un alcalde o de un gobernador.", "correcta": true, "retroalimentacion": "Correcta. Es el mecanismo con el que los ciudadanos pueden terminar anticipadamente el mandato de alcaldes y gobernadores, por ejemplo, por incumplir el programa con el que fueron elegidos." },
+        { "letra": "D", "texto": "El plebiscito, porque permite a los habitantes de un municipio elegir un nuevo alcalde en cualquier momento.", "correcta": false, "retroalimentacion": "El plebiscito lo convoca el presidente de la República para que el pueblo apoye o rechace una decisión del Ejecutivo; no sirve para cambiar alcaldes." }
+      ],
+      "explicacion": "La Constitución de 1991 creó una **democracia participativa**: además de votar, los ciudadanos pueden intervenir directamente en las decisiones públicas. El artículo 103 enumera los mecanismos de participación: el voto, el plebiscito, el referendo, la consulta popular, el cabildo abierto, la iniciativa legislativa y la revocatoria del mandato.\nLa **revocatoria del mandato** permite terminar anticipadamente el periodo de un alcalde o de un gobernador. Se relaciona con el **voto programático**: quien elige a un alcalde o gobernador le impone como mandato el programa que presentó al inscribirse como candidato.\nLa ley fija requisitos para usarla, como recoger un número mínimo de firmas, que haya pasado un tiempo mínimo desde la posesión y que la ciudadanía la apruebe en una votación.\nLa tutela (B) es un mecanismo de protección, no de participación; el cabildo abierto (A) y el plebiscito (D) tienen otros fines.",
+      "tiempo_estimado_seg": 75,
+      "etiquetas": ["mecanismos de participación", "revocatoria del mandato", "voto programático", "constitución de 1991"]
+    },
+    {
+      "codigo": "SOC-CIU-02",
+      "subtema": "ciudadania",
+      "dificultad": 3,
+      "competencia": "Pensamiento social",
+      "contexto_ref": null,
+      "contexto": "Analiza las siguientes situaciones (casos ficticios):\n1. Hace dos meses, Luz Marina radicó una petición escrita en la Secretaría de Educación municipal para conocer los cupos escolares disponibles para su hija. Hasta hoy no ha recibido ninguna respuesta.\n2. Un joven fue capturado sin orden judicial y sin haber sido sorprendido cometiendo un delito. Han pasado más de 36 horas y no ha sido puesto a disposición de un juez.\n3. Los habitantes de un barrio quieren que un juez ordene detener los vertimientos tóxicos que una fábrica hace en la quebrada que atraviesa el sector y que afectan a toda la comunidad.",
+      "enunciado": "¿Cuál es el mecanismo judicial más adecuado para cada situación?",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        { "letra": "A", "texto": "1: acción de tutela; 2: hábeas corpus; 3: acción popular.", "correcta": true, "retroalimentacion": "Correcta. En la situación 1 se vulneró el derecho fundamental de petición (no hubo respuesta), que se protege con tutela; en la 2 hay una privación ilegal de la libertad (hábeas corpus); en la 3 se afecta un derecho colectivo, el ambiente sano (acción popular)." },
+        { "letra": "B", "texto": "1: derecho de petición; 2: acción de tutela; 3: acción de cumplimiento.", "correcta": false, "retroalimentacion": "Luz Marina ya ejerció el derecho de petición, que además no es una acción judicial. Para la detención ilegal existe un mecanismo específico y más rápido, el hábeas corpus, y la acción de cumplimiento sirve para exigir que se cumpla una ley o un acto administrativo, no para proteger derechos colectivos." },
+        { "letra": "C", "texto": "1: acción de cumplimiento; 2: hábeas corpus; 3: acción de tutela.", "correcta": false, "retroalimentacion": "Acierta solo en la situación 2. En la 1 lo vulnerado es un derecho fundamental, que se protege con tutela, y en la 3 el derecho afectado es colectivo, por lo que corresponde la acción popular." },
+        { "letra": "D", "texto": "1: derecho de petición; 2: hábeas corpus; 3: acción popular.", "correcta": false, "retroalimentacion": "Es la opción más tentadora, pero falla en la situación 1: la petición ya se presentó y no fue respondida, así que lo que procede es acudir a un juez mediante tutela. El derecho de petición no es una acción judicial: se ejerce directamente ante las autoridades." }
+      ],
+      "explicacion": "Para elegir el mecanismo, sigue tres pasos: **1)** ¿qué derecho se vulnera?, **2)** ¿es individual o colectivo?, **3)** ¿existe un mecanismo específico para ese caso?\n• Situación 1: la petición es un derecho fundamental (art. 23) y la ley fija plazos breves para responder (la regla general es de 15 días hábiles). Como la petición ya se presentó y no fue respondida, procede la **acción de tutela** (art. 86) para que un juez ordene responder.\n• Situación 2: toda persona detenida debe ser puesta a disposición de un juez dentro de las 36 horas siguientes. Ante una privación ilegal de la libertad procede el **hábeas corpus** (art. 30), que debe resolverse en un término de 36 horas.\n• Situación 3: el ambiente sano es un derecho colectivo; se protege con la **acción popular** (art. 88).\nLa acción de cumplimiento (art. 87) sirve para exigir que una autoridad cumpla una ley o un acto administrativo, lo que no corresponde a ninguno de los tres casos.",
+      "tiempo_estimado_seg": 180,
+      "etiquetas": ["mecanismos de protección", "acción de tutela", "hábeas corpus", "acción popular"]
+    }
+  ]
+}

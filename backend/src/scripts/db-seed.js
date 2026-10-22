@@ -23,12 +23,15 @@ export function leerJson(subcarpeta) {
 /** Importa todo el contenido dentro de una transacción. */
 export async function sembrarContenido() {
   return transaccion(async (cliente) => {
-    const resumen = { preguntas: 0, nuevas: 0, lecciones: 0 };
+    const resumen = { preguntas: 0, nuevas: 0, lecciones: 0, retiradas: 0 };
+    const codigosPreguntas = [];
+    const codigosLecciones = [];
     for (const { archivo, datos } of leerJson('preguntas')) {
       try {
         const r = await importarPreguntas(cliente, datos);
         resumen.preguntas += r.total;
         resumen.nuevas += r.nuevas;
+        codigosPreguntas.push(...(datos.preguntas ?? []).map((p) => p.codigo));
         console.log(`  ✔ preguntas/${archivo}: ${r.total} (${r.nuevas} nuevas)`);
       } catch (error) {
         console.error(`  ✖ preguntas/${archivo}: ${error.message}`);
@@ -39,8 +42,22 @@ export async function sembrarContenido() {
     for (const { archivo, datos } of leerJson('lecciones')) {
       const r = await importarLecciones(cliente, datos);
       resumen.lecciones += r.total;
+      codigosLecciones.push(...(datos.lecciones ?? []).map((l) => l.codigo));
       console.log(`  ✔ lecciones/${archivo}: ${r.total}`);
     }
+    // El contenido del banco que ya no está en los JSON (temarios anteriores) se desactiva:
+    // se conserva con su historial de respuestas, pero deja de mostrarse.
+    if (codigosPreguntas.length) {
+      const r = await cliente.query(
+        `UPDATE preguntas SET activa = FALSE WHERE origen = 'banco' AND activa AND NOT (codigo = ANY($1::text[]))`,
+        [codigosPreguntas],
+      );
+      resumen.retiradas += r.rowCount;
+    }
+    if (codigosLecciones.length) {
+      await cliente.query(`UPDATE lecciones SET activa = FALSE WHERE activa AND NOT (codigo = ANY($1::text[]))`, [codigosLecciones]);
+    }
+    if (resumen.retiradas) console.log(`  • ${resumen.retiradas} preguntas de temarios anteriores quedaron inactivas.`);
     return resumen;
   });
 }

@@ -33,7 +33,7 @@ let limite = 80;
 // ---------------------------------------------------------------------------
 
 function avatarVanty() {
-  return h('span', { class: 'avatar-mensaje' }, h('img', { src: '/img/vanty.svg', alt: 'Vanty' }));
+  return h('span', { class: 'avatar-mensaje avatar-vanty' }, h('img', { src: '/img/vanty-cabeza.png', alt: 'Vanty', width: 444, height: 512 }));
 }
 
 function avatarUsuario() {
@@ -108,7 +108,7 @@ function desplazarAlFinal() {
 
 function bienvenida() {
   montar(lista, h('div', { class: 'bienvenida-vanty' },
-    h('img', { src: '/img/vanty.svg', alt: '' }),
+    h('img', { src: '/img/vanty-cabeza.png', alt: '', width: 444, height: 512 }),
     h('h2', {}, `¡Hola, ${usuario()?.nombre_mostrar ?? ''}! Soy Vanty`),
     h('p', { class: 'texto-2' }, 'Tu tutora para el ICFES. Resuelvo dudas, te explico tus errores, te recomiendo qué estudiar y te genero preguntas a tu medida.'),
     h('div', { class: 'sugerencias' }, SUGERENCIAS.map(([ico, texto]) => h('button', { type: 'button', onclick: () => enviar(texto) }, icono(ico, 'icono-sm'), ` ${texto}`)))));

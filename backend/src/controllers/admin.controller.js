@@ -13,6 +13,7 @@ export async function catalogo(_req, res) {
   const subtemas = await varias(
     `SELECT s.slug, s.nombre, m.slug AS materia_slug, m.nombre AS materia
        FROM subtemas s JOIN temas t ON t.id = s.tema_id JOIN materias m ON m.id = t.materia_id
+      WHERE s.activo
       ORDER BY m.orden, t.orden, s.orden`,
   );
   res.json({ subtemas });
@@ -24,7 +25,7 @@ export async function obtenerConfiguracion(_req, res) {
 
 export async function actualizarConfiguracion(req, res) {
   const d = datos(req);
-  res.json(await admin.actualizarConfiguracion({ fechaIcfes: d.fecha_icfes, vanty: d.vanty }));
+  res.json(await admin.actualizarConfiguracion({ calendarios: d.calendarios_icfes, vanty: d.vanty }));
 }
 
 export async function listarPreguntas(req, res) {

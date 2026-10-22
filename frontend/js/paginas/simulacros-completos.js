@@ -19,7 +19,7 @@ function tarjeta(s) {
     h('span', { class: 'numero-simulacro', 'aria-hidden': 'true' }, String(s.numero).padStart(2, '0')),
     h('span', { class: 'titulo-simulacro' }, s.titulo),
     h('span', { class: 'meta' },
-      h('span', {}, icono('list-checks', 'icono-sm'), `${s.preguntas} preguntas`),
+      h('span', {}, icono('list-checks', 'icono-sm'), s.preguntas < s.preguntas_objetivo ? `${s.preguntas} de ${s.preguntas_objetivo} preguntas` : `${s.preguntas} preguntas`),
       h('span', {}, icono('clock', 'icono-sm'), `${s.sesiones.length} sesiones · ${formatoDuracion(s.duracion_min * 60)}`),
       s.ultima_fecha ? h('span', {}, icono('history', 'icono-sm'), `Último: ${formatoFecha(s.ultima_fecha, { day: 'numeric', month: 'short' })}`) : null),
     h('span', { class: 'estado' }, chipEstado));

@@ -1,6 +1,9 @@
 /**
- * Avatar personalizable: un personaje SVG compuesto por color, expresión, accesorio y fondo.
+ * Avatar personalizable: un robot SVG compuesto por color, expresión, accesorio y fondo.
  * Los códigos coinciden con la tabla items_tienda de la base de datos.
+ *
+ * El cuerpo es blanco y el color elegido tiñe los apliques (antena, orejas, hombros,
+ * manos y emblema), de modo que cada artículo de la tienda sigue cambiando el personaje.
  */
 import { s } from './dom.js';
 
@@ -35,6 +38,14 @@ export const AVATAR_POR_DEFECTO = {
 };
 
 const TINTA = '#23264f';
+// Carcasa blanca del robot y pantalla de la cara.
+const BLANCO = '#f7f9ff';
+const BLANCO_SOMBRA = '#dde4f4';
+const VISOR = '#20304f';
+const VISOR_CLARO = '#2c4068';
+const BRILLO = '#6ff0ff';
+// Los sombreros tapan la antena.
+const SOMBREROS = new Set(['accesorio-gorra', 'accesorio-birrete', 'accesorio-corona']);
 let contador = 0;
 
 function degradado(id, colores, vertical = true) {
@@ -74,48 +85,49 @@ function fondo(codigo, idBase) {
   return grupo;
 }
 
-function ojos(expresion) {
+/** Cara del robot: se dibuja sobre la pantalla oscura, con trazo luminoso. */
+function cara(expresion) {
   const g = s('g');
-  const brillo = (x, y) => s('circle', { cx: x, cy: y, r: 1.3, fill: '#ffffff' });
+  const luz = { fill: 'none', stroke: BRILLO, 'stroke-width': 3.4, 'stroke-linecap': 'round', 'stroke-linejoin': 'round' };
+  const sonrisa = (d, ancho = 2.4) => s('path', { d, ...luz, 'stroke-width': ancho, opacity: 0.9 });
+
   switch (expresion) {
     case 'expresion-sonrisa':
-      g.append(s('path', { d: 'M36 52q5-6 10 0M54 52q5-6 10 0', fill: 'none', stroke: TINTA, 'stroke-width': 3, 'stroke-linecap': 'round' }));
-      g.append(s('path', { d: 'M40 62q10 12 20 0z', fill: TINTA }));
-      g.append(s('path', { d: 'M45 67q5 3 10 0', fill: 'none', stroke: '#fda879', 'stroke-width': 3, 'stroke-linecap': 'round' }));
+      g.append(s('circle', { cx: 41, cy: 40, r: 3.4, fill: BRILLO }), s('circle', { cx: 59, cy: 40, r: 3.4, fill: BRILLO }));
+      g.append(sonrisa('M43 48q7 6 14 0', 3));
       break;
     case 'expresion-guino':
-      g.append(s('ellipse', { cx: 41, cy: 51, rx: 3.6, ry: 4.6, fill: TINTA }), brillo(42, 49.5));
-      g.append(s('path', { d: 'M54 52q5 4 10 0', fill: 'none', stroke: TINTA, 'stroke-width': 3, 'stroke-linecap': 'round' }));
-      g.append(s('path', { d: 'M42 63q8 7 16 0', fill: 'none', stroke: TINTA, 'stroke-width': 3, 'stroke-linecap': 'round' }));
+      g.append(s('path', { d: 'M37 41q4-6 8 0', ...luz }));
+      g.append(s('path', { d: 'M55 41h8', ...luz }));
+      g.append(sonrisa('M44 48q6 5 12 0'));
       break;
     case 'expresion-concentrado':
-      g.append(s('path', { d: 'M35 44l10 3M65 44l-10 3', stroke: TINTA, 'stroke-width': 2.6, 'stroke-linecap': 'round' }));
-      g.append(s('rect', { x: 37, y: 50, width: 8, height: 5, rx: 2.5, fill: TINTA }), s('rect', { x: 55, y: 50, width: 8, height: 5, rx: 2.5, fill: TINTA }));
-      g.append(s('path', { d: 'M44 64h12', stroke: TINTA, 'stroke-width': 3, 'stroke-linecap': 'round' }));
+      g.append(s('path', { d: 'M36 40h9M55 40h9', ...luz }));
+      g.append(sonrisa('M44 49h12'));
       break;
     case 'expresion-asombro':
-      g.append(s('circle', { cx: 41, cy: 51, r: 5.5, fill: '#ffffff', stroke: TINTA, 'stroke-width': 2 }), s('circle', { cx: 41, cy: 51, r: 2.6, fill: TINTA }));
-      g.append(s('circle', { cx: 59, cy: 51, r: 5.5, fill: '#ffffff', stroke: TINTA, 'stroke-width': 2 }), s('circle', { cx: 59, cy: 51, r: 2.6, fill: TINTA }));
-      g.append(s('ellipse', { cx: 50, cy: 66, rx: 3.6, ry: 4.4, fill: TINTA }));
+      g.append(s('circle', { cx: 41, cy: 39, r: 4.6, fill: 'none', stroke: BRILLO, 'stroke-width': 2.6 }));
+      g.append(s('circle', { cx: 59, cy: 39, r: 4.6, fill: 'none', stroke: BRILLO, 'stroke-width': 2.6 }));
+      g.append(s('ellipse', { cx: 50, cy: 49, rx: 3, ry: 3.6, fill: 'none', stroke: BRILLO, 'stroke-width': 2.4 }));
       break;
     case 'expresion-estrella': {
       const estrella = (cx, cy) => s('path', {
-        d: `M${cx} ${cy - 6}l1.8 3.9 4.2.5-3.1 2.9.8 4.2-3.7-2.1-3.7 2.1.8-4.2-3.1-2.9 4.2-.5z`,
-        fill: '#f2c14e', stroke: TINTA, 'stroke-width': 1.2, 'stroke-linejoin': 'round',
+        d: `M${cx} ${cy - 5.4}l1.6 3.5 3.8.5-2.8 2.6.7 3.8-3.3-1.9-3.3 1.9.7-3.8-2.8-2.6 3.8-.5z`,
+        fill: '#ffe066', stroke: '#fff3b0', 'stroke-width': 0.8, 'stroke-linejoin': 'round',
       });
-      g.append(estrella(41, 51), estrella(59, 51));
-      g.append(s('path', { d: 'M42 63q8 8 16 0', fill: 'none', stroke: TINTA, 'stroke-width': 3, 'stroke-linecap': 'round' }));
+      g.append(estrella(41, 40), estrella(59, 40));
+      g.append(sonrisa('M44 49q6 5 12 0'));
       break;
     }
     case 'expresion-genio':
-      g.append(s('path', { d: 'M31 47h38v4c0 5-4 8-9 8h-2c-4 0-7-3-7-6h-2c0 3-3 6-7 6h-2c-5 0-9-3-9-8z', fill: TINTA }));
-      g.append(s('path', { d: 'M36 50l5 0M55 50l5 0', stroke: '#81a1f6', 'stroke-width': 1.6, 'stroke-linecap': 'round' }));
-      g.append(s('path', { d: 'M43 65q7 4 14-2', fill: 'none', stroke: TINTA, 'stroke-width': 3, 'stroke-linecap': 'round' }));
+      g.append(s('path', { d: 'M33 36h34v5c0 4-3 7-7 7h-3c-3 0-6-2-6-5h-2c0 3-3 5-6 5h-3c-4 0-7-3-7-7z', fill: '#101a33' }));
+      g.append(s('path', { d: 'M37 39h6M57 39h6', stroke: BRILLO, 'stroke-width': 1.8, 'stroke-linecap': 'round', opacity: 0.8 }));
+      g.append(sonrisa('M45 51q6 3 11-2'));
       break;
-    default: // feliz
-      g.append(s('ellipse', { cx: 41, cy: 51, rx: 3.6, ry: 4.6, fill: TINTA }), brillo(42, 49.5));
-      g.append(s('ellipse', { cx: 59, cy: 51, rx: 3.6, ry: 4.6, fill: TINTA }), brillo(60, 49.5));
-      g.append(s('path', { d: 'M42 62q8 8 16 0', fill: 'none', stroke: TINTA, 'stroke-width': 3, 'stroke-linecap': 'round' }));
+    default: // feliz: los ojos curvos de la imagen de referencia
+      g.append(s('path', { d: 'M36 42q5-7 10 0', ...luz }));
+      g.append(s('path', { d: 'M54 42q5-7 10 0', ...luz }));
+      g.append(sonrisa('M45 49q5 4 10 0', 2.2));
   }
   return g;
 }
@@ -124,38 +136,38 @@ function accesorio(codigo) {
   const g = s('g');
   switch (codigo) {
     case 'accesorio-lazo':
-      g.append(s('path', { d: 'M66 22l-10 6 10 6zM66 22l10 -4v16l-10-6z', fill: '#ff8a80', stroke: TINTA, 'stroke-width': 1.4, 'stroke-linejoin': 'round' }));
-      g.append(s('circle', { cx: 66, cy: 28, r: 3, fill: '#fda879', stroke: TINTA, 'stroke-width': 1.2 }));
+      g.append(s('path', { d: 'M70 22l-9 5 9 5zM70 22l9-3v14l-9-5z', fill: '#ff8a80', stroke: TINTA, 'stroke-width': 1.4, 'stroke-linejoin': 'round' }));
+      g.append(s('circle', { cx: 70, cy: 27, r: 2.8, fill: '#fda879', stroke: TINTA, 'stroke-width': 1.2 }));
       break;
     case 'accesorio-gafas':
-      g.append(s('circle', { cx: 41, cy: 51, r: 8, fill: 'rgba(255,255,255,0.25)', stroke: TINTA, 'stroke-width': 2.4 }));
-      g.append(s('circle', { cx: 59, cy: 51, r: 8, fill: 'rgba(255,255,255,0.25)', stroke: TINTA, 'stroke-width': 2.4 }));
-      g.append(s('path', { d: 'M49 50h2M33 49l-6-2M67 49l6-2', stroke: TINTA, 'stroke-width': 2.4, 'stroke-linecap': 'round' }));
+      g.append(s('circle', { cx: 41, cy: 40, r: 7.5, fill: 'rgba(255,255,255,0.18)', stroke: '#ffffff', 'stroke-width': 2.2 }));
+      g.append(s('circle', { cx: 59, cy: 40, r: 7.5, fill: 'rgba(255,255,255,0.18)', stroke: '#ffffff', 'stroke-width': 2.2 }));
+      g.append(s('path', { d: 'M48.5 40h3M33.5 38l-4-1M66.5 38l4-1', stroke: '#ffffff', 'stroke-width': 2.2, 'stroke-linecap': 'round' }));
       break;
     case 'accesorio-gorra':
-      g.append(s('path', { d: 'M27 34c0-13 10-20 23-20s23 7 23 20z', fill: '#484ea2' }));
-      g.append(s('path', { d: 'M50 34h33c3 0 3 5 0 5H50z', fill: '#3a3f8a' }));
-      g.append(s('circle', { cx: 50, cy: 15, r: 2.6, fill: '#d5e068' }));
+      g.append(s('path', { d: 'M28 24c0-11 9-17 22-17s22 6 22 17z', fill: '#484ea2' }));
+      g.append(s('path', { d: 'M50 24h31c3 0 3 5 0 5H50z', fill: '#3a3f8a' }));
+      g.append(s('circle', { cx: 50, cy: 8, r: 2.4, fill: '#d5e068' }));
       break;
     case 'accesorio-antenas':
-      g.append(s('path', { d: 'M40 28L33 12M60 28l7-16', stroke: TINTA, 'stroke-width': 2.4, 'stroke-linecap': 'round' }));
-      g.append(s('circle', { cx: 33, cy: 11, r: 4, fill: '#d5e068', stroke: TINTA, 'stroke-width': 1.6 }));
-      g.append(s('circle', { cx: 67, cy: 11, r: 4, fill: '#fda879', stroke: TINTA, 'stroke-width': 1.6 }));
+      g.append(s('path', { d: 'M40 22L34 8M60 22l6-14', stroke: TINTA, 'stroke-width': 2.2, 'stroke-linecap': 'round' }));
+      g.append(s('circle', { cx: 34, cy: 7, r: 3.6, fill: '#d5e068', stroke: TINTA, 'stroke-width': 1.5 }));
+      g.append(s('circle', { cx: 66, cy: 7, r: 3.6, fill: '#fda879', stroke: TINTA, 'stroke-width': 1.5 }));
       break;
     case 'accesorio-audifonos':
-      g.append(s('path', { d: 'M23 50c0-18 12-30 27-30s27 12 27 30', fill: 'none', stroke: TINTA, 'stroke-width': 4, 'stroke-linecap': 'round' }));
-      g.append(s('rect', { x: 17, y: 44, width: 10, height: 18, rx: 5, fill: '#81a1f6', stroke: TINTA, 'stroke-width': 1.6 }));
-      g.append(s('rect', { x: 73, y: 44, width: 10, height: 18, rx: 5, fill: '#81a1f6', stroke: TINTA, 'stroke-width': 1.6 }));
+      g.append(s('path', { d: 'M24 42c0-15 11-26 26-26s26 11 26 26', fill: 'none', stroke: TINTA, 'stroke-width': 4, 'stroke-linecap': 'round' }));
+      g.append(s('rect', { x: 17, y: 36, width: 10, height: 18, rx: 5, fill: '#81a1f6', stroke: TINTA, 'stroke-width': 1.6 }));
+      g.append(s('rect', { x: 73, y: 36, width: 10, height: 18, rx: 5, fill: '#81a1f6', stroke: TINTA, 'stroke-width': 1.6 }));
       break;
     case 'accesorio-birrete':
-      g.append(s('path', { d: 'M50 12l30 10-30 10-30-10z', fill: TINTA }));
-      g.append(s('path', { d: 'M34 27v6c0 3 7 6 16 6s16-3 16-6v-6l-16 5z', fill: '#2e3263' }));
-      g.append(s('path', { d: 'M80 22v13', stroke: '#fda879', 'stroke-width': 2, 'stroke-linecap': 'round' }));
-      g.append(s('circle', { cx: 80, cy: 37, r: 3, fill: '#fda879' }));
+      g.append(s('path', { d: 'M50 4l28 10-28 10-28-10z', fill: TINTA }));
+      g.append(s('path', { d: 'M35 19v6c0 3 7 5 15 5s15-2 15-5v-6l-15 5z', fill: '#2e3263' }));
+      g.append(s('path', { d: 'M78 14v13', stroke: '#fda879', 'stroke-width': 2, 'stroke-linecap': 'round' }));
+      g.append(s('circle', { cx: 78, cy: 29, r: 3, fill: '#fda879' }));
       break;
     case 'accesorio-corona':
-      g.append(s('path', { d: 'M32 30l3-16 8 9 7-12 7 12 8-9 3 16z', fill: '#f2c14e', stroke: TINTA, 'stroke-width': 1.6, 'stroke-linejoin': 'round' }));
-      g.append(s('circle', { cx: 50, cy: 24, r: 2.4, fill: '#ff8a80' }), s('circle', { cx: 39, cy: 26, r: 1.8, fill: '#81a1f6' }), s('circle', { cx: 61, cy: 26, r: 1.8, fill: '#7fd6b8' }));
+      g.append(s('path', { d: 'M33 22l3-15 8 8 6-11 6 11 8-8 3 15z', fill: '#f2c14e', stroke: TINTA, 'stroke-width': 1.6, 'stroke-linejoin': 'round' }));
+      g.append(s('circle', { cx: 50, cy: 16, r: 2.2, fill: '#ff8a80' }), s('circle', { cx: 40, cy: 18, r: 1.6, fill: '#81a1f6' }), s('circle', { cx: 60, cy: 18, r: 1.6, fill: '#7fd6b8' }));
       break;
     default:
       break;
@@ -172,23 +184,47 @@ export function crearAvatar(config = {}, { tamano = 40, titulo = 'Avatar' } = {}
   contador += 1;
   const id = `avatar-${contador}`;
   const colores = COLORES[avatar.color] ?? COLORES['color-lima'];
+  const tinte = `url(#${id}-tinte)`;
 
   const svg = s('svg', { viewBox: '0 0 100 100', width: tamano, height: tamano, role: 'img', 'aria-label': titulo, class: 'avatar-svg' });
-  const defs = s('defs', {},
+  svg.append(s('defs', {},
     s('clipPath', { id: `${id}-circulo` }, s('circle', { cx: 50, cy: 50, r: 50 })),
-    degradado(`${id}-cuerpo`, colores.length > 1 ? colores : [colores[0], colores[0]]));
-  svg.append(defs);
+    degradado(`${id}-tinte`, colores.length > 1 ? colores : [colores[0], colores[0]]),
+    degradado(`${id}-carcasa`, [BLANCO, BLANCO_SOMBRA]),
+    degradado(`${id}-visor`, [VISOR_CLARO, VISOR])));
 
   const grupo = s('g', { 'clip-path': `url(#${id}-circulo)` });
   grupo.append(fondo(avatar.fondo, id));
-  // Cuerpo: una silueta redondeada con brillo y mejillas.
-  grupo.append(s('rect', { x: 22, y: 26, width: 56, height: 84, rx: 28, fill: `url(#${id}-cuerpo)` }));
-  grupo.append(s('ellipse', { cx: 50, cy: 86, rx: 18, ry: 12, fill: '#ffffff', opacity: 0.22 }));
-  grupo.append(s('ellipse', { cx: 37, cy: 34, rx: 7, ry: 4, fill: '#ffffff', opacity: 0.35 }));
-  if (avatar.expresion !== 'expresion-genio') {
-    grupo.append(s('circle', { cx: 33, cy: 60, r: 4, fill: '#fda879', opacity: 0.55 }), s('circle', { cx: 67, cy: 60, r: 4, fill: '#fda879', opacity: 0.55 }));
+
+  const robot = s('g');
+  // Antena (se omite si el accesorio es un sombrero).
+  if (!SOMBREROS.has(avatar.accesorio)) {
+    robot.append(s('path', { d: 'M50 22V13', stroke: tinte, 'stroke-width': 2.6, 'stroke-linecap': 'round' }));
+    robot.append(s('circle', { cx: 50, cy: 10, r: 3.6, fill: tinte }));
   }
-  grupo.append(ojos(avatar.expresion));
+
+  // Brazos y manos: el izquierdo cuelga y el derecho saluda junto a la cabeza.
+  const brazo = { fill: 'none', stroke: BLANCO_SOMBRA, 'stroke-width': 7, 'stroke-linecap': 'round' };
+  robot.append(s('path', { d: 'M35 72q-9 3-12 9', ...brazo }));
+  robot.append(s('path', { d: 'M67 70q12-4 17-25', ...brazo }));
+  robot.append(s('circle', { cx: 21, cy: 83, r: 5.4, fill: tinte }));
+  robot.append(s('circle', { cx: 86, cy: 38, r: 6, fill: tinte }));
+
+  // Cuerpo con hombros y emblema.
+  robot.append(s('rect', { x: 32, y: 62, width: 36, height: 30, rx: 13, fill: `url(#${id}-carcasa)` }));
+  robot.append(s('path', { d: 'M36 66h4v8h-4zM60 66h4v8h-4z', fill: tinte, opacity: 0.85 }));
+  robot.append(s('rect', { x: 43, y: 70, width: 14, height: 14, rx: 5, fill: tinte }));
+  robot.append(s('path', { d: 'M50 73l1.6 2.9L54.5 77l-2.9 1.6L50 81.5l-1.6-2.9L45.5 77l2.9-1.6z', fill: '#ffffff' }));
+
+  // Cabeza, orejas y pantalla.
+  robot.append(s('rect', { x: 19, y: 36, width: 9, height: 16, rx: 4.5, fill: tinte }));
+  robot.append(s('rect', { x: 72, y: 36, width: 9, height: 16, rx: 4.5, fill: tinte }));
+  robot.append(s('rect', { x: 25, y: 22, width: 50, height: 42, rx: 19, fill: `url(#${id}-carcasa)` }));
+  robot.append(s('ellipse', { cx: 38, cy: 31, rx: 8, ry: 4.5, fill: '#ffffff', opacity: 0.75 }));
+  robot.append(s('rect', { x: 31, y: 29, width: 38, height: 27, rx: 12, fill: `url(#${id}-visor)` }));
+  robot.append(cara(avatar.expresion));
+
+  grupo.append(robot);
   grupo.append(accesorio(avatar.accesorio));
   svg.append(grupo);
   return svg;

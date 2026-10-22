@@ -1,52 +1,244 @@
 /* =============================================================================
-   ICFES Lab · Tienda y editor de avatar
+   ICFES Lab · Tienda del personaje
+   Estructura: encabezado con el saldo · columna del personaje (look, paleta y
+   cómo ganar monedas) · catálogo por secciones · línea de evolución.
    ============================================================================= */
 
-.diseno-tienda { display: grid; grid-template-columns: 320px minmax(0, 1fr); gap: var(--esp-6); align-items: start; }
+/* --- Encabezado ------------------------------------------------------------------ */
+.encabezado-tienda {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--esp-5);
+  flex-wrap: wrap;
+  margin-bottom: var(--esp-6);
+}
 
-.vista-avatar { position: sticky; top: calc(var(--alto-cabecera) + var(--esp-6)); text-align: center; }
-.vista-avatar .marco-avatar { width: 200px; height: 200px; margin: 0 auto var(--esp-4); border-radius: 50%; overflow: hidden; box-shadow: 0 16px 40px rgba(72, 78, 162, 0.25); }
+.encabezado-tienda h1 { font-size: var(--texto-3xl); margin-bottom: 4px; }
+.encabezado-tienda p { margin: 0; color: var(--texto-2); max-width: 60ch; }
+
+.tarjeta-monedas {
+  display: flex;
+  align-items: center;
+  gap: var(--esp-4);
+  padding: var(--esp-4) var(--esp-5);
+  flex-shrink: 0;
+}
+
+.rotulo { display: block; font-size: var(--texto-xs); font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--texto-3); }
+.saldo { display: inline-flex; align-items: center; gap: 8px; font-family: var(--fuente-titulos); font-size: var(--texto-2xl); font-weight: 800; color: #7a5600; }
+.saldo .icono { color: var(--oro); width: 26px; height: 26px; }
+:root[data-tema='oscuro'] .saldo { color: #f4d27a; }
+@media (prefers-color-scheme: dark) { :root:not([data-tema='claro']) .saldo { color: #f4d27a; } }
+
+/* --- Estructura ------------------------------------------------------------------- */
+.diseno-tienda { display: grid; grid-template-columns: 330px minmax(0, 1fr); gap: var(--esp-6); align-items: start; }
+.columna-personaje { display: flex; flex-direction: column; gap: var(--esp-5); position: sticky; top: calc(var(--alto-cabecera) + var(--esp-5)); }
+.columna-catalogo { display: flex; flex-direction: column; gap: var(--esp-5); min-width: 0; }
+
+/* --- Tarjeta del personaje -------------------------------------------------------- */
+.vista-avatar { text-align: center; }
+.nota-personaje { margin: 0 0 var(--esp-3); font-family: var(--fuente-titulos); color: var(--texto-2); }
+.nota-personaje strong { color: var(--primario); }
+
+.vista-avatar .marco-avatar {
+  width: 210px;
+  height: 210px;
+  margin: 0 auto var(--esp-4);
+  border-radius: 28px;
+  overflow: hidden;
+  background: linear-gradient(160deg, var(--lima-100), var(--cielo-100));
+  box-shadow: 0 16px 34px rgba(72, 78, 162, 0.18);
+}
+
 .vista-avatar .marco-avatar svg { width: 100%; height: 100%; }
-.saldo { display: inline-flex; align-items: center; gap: var(--esp-2); padding: 8px 16px; border-radius: var(--radio-pill); background: #fff4d6; color: #7a5600; font-family: var(--fuente-titulos); font-size: var(--texto-xl); font-weight: 800; margin-bottom: var(--esp-4); }
-.saldo .icono { color: var(--oro); }
-:root[data-tema='oscuro'] .saldo { background: #3a3218; color: #f4d27a; }
-@media (prefers-color-scheme: dark) { :root:not([data-tema='claro']) .saldo { background: #3a3218; color: #f4d27a; } }
 
-.grid-items { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: var(--esp-4); }
-.item {
+.look-actual { margin: var(--esp-4) 0; text-align: left; }
+.look-actual .rotulo { margin-bottom: 8px; }
+.look-actual .chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip-cambio { background: var(--lima-100); color: var(--lima-800); }
+
+/* --- Paleta de colores ------------------------------------------------------------- */
+.tarjeta-paleta h2, .tarjeta-monedas-ayuda h2, .seccion-tienda h2 { font-size: var(--texto-lg); margin: 0; }
+.tarjeta-paleta p { margin: 4px 0 var(--esp-4); }
+
+.paleta { display: grid; grid-template-columns: repeat(auto-fill, minmax(54px, 1fr)); gap: var(--esp-3); }
+
+.muestra-color {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: var(--esp-2);
-  padding: var(--esp-4);
-  border: 2px solid var(--borde);
-  border-radius: var(--radio-lg);
-  background: var(--superficie);
-  text-align: center;
-  cursor: pointer;
+  gap: 2px;
+  padding: 6px 2px 4px;
+  border: 2px solid transparent;
+  border-radius: var(--radio);
+  background: transparent;
   transition: border-color var(--transicion), transform var(--transicion);
 }
-.item:hover { transform: translateY(-2px); border-color: var(--cielo); }
-.item.seleccionado { border-color: var(--primario); box-shadow: 0 0 0 3px color-mix(in srgb, var(--cielo) 35%, transparent); }
-.item.bloqueado { cursor: not-allowed; opacity: 0.6; }
-.item .miniatura { width: 84px; height: 84px; border-radius: 50%; overflow: hidden; }
-.item .miniatura svg { width: 100%; height: 100%; }
-.item strong { font-size: var(--texto-sm); }
-.item .etiqueta-estado { position: absolute; top: 8px; right: 8px; }
-.item .precio { font-size: var(--texto-sm); font-weight: 700; color: #7a5600; display: inline-flex; align-items: center; gap: 4px; }
-.item .precio .icono { color: var(--oro); }
 
+.muestra-color .disco { width: 34px; height: 34px; border-radius: 50%; box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.55), 0 4px 10px rgba(35, 38, 79, 0.18); }
+.muestra-color:hover { transform: translateY(-2px); border-color: var(--borde-fuerte); }
+.muestra-color.seleccionado { border-color: var(--primario); background: var(--primario-suave); }
+.muestra-color.bloqueado { opacity: 0.55; }
+.muestra-color .icono { width: 14px; height: 14px; color: var(--texto-3); }
+.muestra-color.seleccionado .icono { color: var(--primario); }
+.precio-color { font-size: 10px; font-weight: 700; color: #7a5600; }
+:root[data-tema='oscuro'] .precio-color { color: #f4d27a; }
+@media (prefers-color-scheme: dark) { :root:not([data-tema='claro']) .precio-color { color: #f4d27a; } }
+
+/* --- Cómo ganar monedas ------------------------------------------------------------ */
+.tarjeta-monedas-ayuda {
+  background: linear-gradient(150deg, var(--primario) 0%, #5f66c9 100%);
+  color: #fff;
+  border-color: transparent;
+}
+
+.tarjeta-monedas-ayuda h2 { color: #fff; }
+.lista-ganar { list-style: none; margin: var(--esp-4) 0 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+.lista-ganar li { display: flex; align-items: center; gap: var(--esp-2); font-size: var(--texto-sm); color: rgba(255, 255, 255, 0.92); }
+.lista-ganar .icono { color: var(--lima); flex-shrink: 0; }
+.monedas-ganar { display: inline-flex; align-items: center; gap: 4px; padding: 2px 10px; border-radius: var(--radio-pill); background: rgba(255, 255, 255, 0.16); font-weight: 700; white-space: nowrap; }
+.monedas-ganar .icono { color: #ffd978; width: 14px; height: 14px; }
+
+/* --- Navegación del catálogo -------------------------------------------------------- */
+.navegacion-tienda {
+  position: sticky;
+  top: calc(var(--alto-cabecera) + 8px);
+  z-index: 5;
+  display: flex;
+  gap: 6px;
+  padding: 6px;
+  border-radius: var(--radio-pill);
+  background: color-mix(in srgb, var(--superficie) 92%, transparent);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--borde);
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.navegacion-tienda::-webkit-scrollbar { display: none; }
+
+.pastilla-seccion {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: var(--radio-pill);
+  color: var(--texto-2);
+  font-size: var(--texto-sm);
+  font-weight: 600;
+  white-space: nowrap;
+  text-decoration: none !important;
+  transition: background var(--transicion), color var(--transicion);
+}
+
+.pastilla-seccion:hover { background: var(--primario-suave); color: var(--primario); }
+.pastilla-seccion.activa { background: var(--primario); color: #fff; }
+.pastilla-seccion.activa .icono { color: #fff; }
+
+/* --- Secciones del catálogo --------------------------------------------------------- */
+.seccion-tienda { scroll-margin-top: calc(var(--alto-cabecera) + 70px); }
+.cabecera-seccion { display: flex; align-items: baseline; justify-content: space-between; gap: var(--esp-3); margin-bottom: var(--esp-4); }
+
+.grid-articulos { display: grid; grid-template-columns: repeat(auto-fill, minmax(104px, 1fr)); gap: var(--esp-3); }
+
+.articulo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 6px 12px;
+  border: 2px solid transparent;
+  border-radius: var(--radio-lg);
+  background: transparent;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color var(--transicion), background var(--transicion), transform var(--transicion);
+}
+
+.articulo .miniatura {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  display: grid;
+  place-items: center;
+  border-radius: var(--radio-lg);
+  overflow: hidden;
+  background: var(--superficie-2);
+  border: 1px solid var(--borde);
+}
+
+.articulo .miniatura svg { width: 100%; height: 100%; }
+.articulo strong { font-size: var(--texto-xs); font-weight: 600; line-height: 1.25; }
+.articulo:hover { transform: translateY(-2px); }
+.articulo:hover .miniatura { border-color: var(--cielo); }
+.articulo.seleccionado { border-color: var(--primario); background: var(--primario-suave); }
+.articulo.bloqueado { cursor: not-allowed; }
+.articulo.bloqueado .miniatura { filter: grayscale(0.7); opacity: 0.7; }
+
+/* Marcas de estado (iguales en artículos y etapas). */
+.chip-equipado { background: var(--indigo-50); color: var(--primario); }
+.chip-bloqueado { background: var(--fondo-2); color: var(--texto-3); }
+.chip-precio { background: #fff4d6; color: #7a5600; border: 0; font-weight: 700; cursor: pointer; }
+.chip-precio .icono { color: var(--oro); }
+.chip-precio:hover { background: #ffe9b0; }
+:root[data-tema='oscuro'] .chip-precio { background: #3a3218; color: #f4d27a; }
+@media (prefers-color-scheme: dark) { :root:not([data-tema='claro']) .chip-precio { background: #3a3218; color: #f4d27a; } }
+
+/* --- Protector de racha -------------------------------------------------------------- */
 .tarjeta-protector { display: flex; gap: var(--esp-5); align-items: center; flex-wrap: wrap; }
 .tarjeta-protector .medalla { --color: var(--durazno-600); }
 
+/* --- Evolución de la mascota ---------------------------------------------------------- */
+.seccion-evolucion {
+  padding: var(--esp-6);
+  border-radius: var(--radio-xl, 22px);
+  background: linear-gradient(150deg, #23264f 0%, #343a74 55%, #484ea2 100%);
+  color: #fff;
+  border: 0;
+  scroll-margin-top: calc(var(--alto-cabecera) + 70px);
+}
+
+.etiqueta-evolucion { display: inline-block; padding: 3px 12px; border-radius: var(--radio-pill); background: rgba(213, 224, 104, 0.2); color: var(--lima); font-size: var(--texto-xs); font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+.cabecera-evolucion h2 { color: #fff; font-size: var(--texto-xl); margin: var(--esp-3) 0 4px; }
+.cabecera-evolucion p { margin: 0 0 var(--esp-5); color: rgba(255, 255, 255, 0.82); max-width: 62ch; }
+
+.grid-evolucion { display: grid; grid-template-columns: repeat(auto-fit, minmax(138px, 1fr)); gap: var(--esp-4); }
+
+.etapa {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: var(--esp-4) var(--esp-3);
+  border-radius: var(--radio-lg);
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  text-align: center;
+}
+
+.etapa .personaje { width: 118px; }
+.etapa strong { font-family: var(--fuente-titulos); }
+.etapa span.texto-xs { color: rgba(255, 255, 255, 0.76); min-height: 3em; }
+.etapa.actual { background: rgba(213, 224, 104, 0.16); border-color: var(--lima); }
+.etapa.pendiente .personaje-lienzo { filter: grayscale(1) opacity(0.45); }
+
+/* --- Responsive ------------------------------------------------------------------------ */
+@media (max-width: 1199px) {
+  .diseno-tienda { grid-template-columns: 290px minmax(0, 1fr); }
+}
+
 @media (max-width: 991px) {
   .diseno-tienda { grid-template-columns: minmax(0, 1fr); }
-  .vista-avatar { position: static; }
-  .vista-avatar .marco-avatar { width: 150px; height: 150px; }
+  .columna-personaje { position: static; }
+  .vista-avatar .marco-avatar { width: 180px; height: 180px; }
 }
 
 @media (max-width: 767px) {
-  .grid-items { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--esp-3); }
-  .item .miniatura { width: 70px; height: 70px; }
+  .encabezado-tienda { gap: var(--esp-4); }
+  .tarjeta-monedas { width: 100%; justify-content: space-between; }
+  .grid-articulos { grid-template-columns: repeat(auto-fill, minmax(92px, 1fr)); gap: var(--esp-2); }
+    .grid-evolucion { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .seccion-evolucion { padding: var(--esp-5) var(--esp-4); }
+  .etapa .personaje { width: 96px; }
 }

@@ -1,0 +1,157 @@
+{
+  "materia": "sociales-ciudadanas",
+  "lecciones": [
+    {
+      "codigo": "SOC-HIS-L1",
+      "subtema": "historia",
+      "titulo": "Del Frente Nacional a la Constitución de 1991",
+      "resumen": "Entenderás cómo el pacto bipartidista del Frente Nacional y la crisis de los años ochenta llevaron a la Constitución de 1991, y aprenderás a analizar fuentes históricas.",
+      "duracion_min": 10,
+      "bloques": [
+        { "tipo": "texto", "contenido": "La historia no es una lista de fechas: es entender **por qué** pasaron las cosas y **qué consecuencias** tuvieron. En el ICFES casi nunca te preguntarán una fecha exacta; te pedirán relacionar causas, consecuencias y puntos de vista. ¡Vamos con dos momentos clave del siglo XX colombiano!" },
+        { "tipo": "concepto", "titulo": "El Frente Nacional (1958-1974)", "contenido": "Fue un acuerdo entre los partidos Liberal y Conservador para superar la violencia bipartidista y el gobierno militar de Gustavo Rojas Pinilla. Durante 16 años, los dos partidos se alternaron la Presidencia y se repartieron por partes iguales los cargos públicos. **Logro:** redujo la confrontación entre liberales y conservadores. **Límite:** cerró el sistema político a otras fuerzas, algo que muchos historiadores relacionan con el surgimiento de guerrillas en los años sesenta." },
+        { "tipo": "concepto", "titulo": "El camino hacia la Constitución de 1991", "contenido": "A finales de los años ochenta, Colombia vivía una grave crisis: narcoterrorismo, asesinatos de líderes políticos y desconfianza en las instituciones. En 1990, un movimiento estudiantil impulsó la **‘séptima papeleta’** para pedir una Asamblea Nacional Constituyente. La Asamblea, elegida en diciembre de 1990, reunió a partidos tradicionales, al M-19 recién desmovilizado, a representantes indígenas y a otros sectores, y fue presidida de forma compartida por un liberal, un conservador del Movimiento de Salvación Nacional y un dirigente de la AD M-19. La nueva Constitución se expidió el **4 de julio de 1991**." },
+        { "tipo": "lista", "titulo": "Línea de tiempo esencial", "items": [
+          "1810: Grito de Independencia en Santafé de Bogotá (20 de julio).",
+          "1819: Batalla de Boyacá (7 de agosto), decisiva para la independencia.",
+          "1886: Constitución centralista de la Regeneración, vigente hasta 1991.",
+          "1948: asesinato de Jorge Eliécer Gaitán (9 de abril) y agudización de La Violencia.",
+          "1953-1957: gobierno militar del general Gustavo Rojas Pinilla.",
+          "1958-1974: Frente Nacional.",
+          "1991: nueva Constitución Política (4 de julio).",
+          "2016: firma del Acuerdo Final de paz entre el Gobierno nacional y las FARC-EP."
+        ] },
+        { "tipo": "ejemplo", "titulo": "Analiza una fuente paso a paso", "enunciado": "Fuente (ficticia): volante estudiantil de marzo de 1990 que dice: “Si las instituciones no cambian, la violencia seguirá. En las elecciones, deposita una papeleta adicional para pedir una Asamblea Constituyente”. ¿Qué nos dice esta fuente sobre el proceso que llevó a la Constitución de 1991?", "pasos": [
+          "Paso 1 · Autor y fecha: lo escriben estudiantes en marzo de 1990, en medio de una ola de violencia en la que habían sido asesinados líderes políticos como Luis Carlos Galán (agosto de 1989).",
+          "Paso 2 · Propósito: convencer a los votantes de pedir una Asamblea Constituyente mediante una papeleta extra.",
+          "Paso 3 · Interés o postura: los estudiantes creen que el problema es institucional y que la salida es un nuevo pacto social, no solo cambiar de gobernantes.",
+          "Paso 4 · Consecuencia: la presión ciudadana llevó a una votación oficial en mayo de 1990, a la elección de la Asamblea en diciembre y a la Constitución de 1991."
+        ], "respuesta": "La fuente muestra que la Constitución de 1991 nació, en buena parte, de una movilización ciudadana que buscaba una salida política e institucional a la crisis." },
+        { "tipo": "tip", "contenido": "Tip ICFES: desconfía de las opciones con **anacronismos**, es decir, que ubican un hecho en una época que no le corresponde. Por ejemplo, la acción de tutela y la elección popular de gobernadores no existían durante el Frente Nacional: ambas llegaron con la Constitución de 1991. Ubicar cada hecho en su época te permite descartar opciones muy rápido." },
+        { "tipo": "ejercicio", "enunciado": "¿Cuál de las siguientes fue una característica del Frente Nacional?", "opciones": ["La alternancia de la Presidencia entre liberales y conservadores.", "La elección popular de alcaldes y gobernadores.", "La creación de la acción de tutela.", "La participación de partidos de izquierda en igualdad de condiciones."], "correcta": 0, "explicacion": "El Frente Nacional (1958-1974) se basó en la alternancia presidencial y en la repartición por partes iguales de los cargos entre liberales y conservadores. Las opciones B y C son posteriores: la elección de alcaldes se aprobó en 1986, y la de gobernadores y la tutela llegaron con la Constitución de 1991. La D dice lo contrario de lo que ocurrió." },
+        { "tipo": "ejercicio", "enunciado": "¿Qué hecho impulsó directamente la convocatoria de la Asamblea Nacional Constituyente de 1991?", "opciones": ["La firma del Acuerdo Final de paz con las FARC-EP.", "El asesinato de Jorge Eliécer Gaitán.", "El movimiento estudiantil de la ‘séptima papeleta’.", "La creación del Frente Nacional."], "correcta": 2, "explicacion": "En 1990, el movimiento estudiantil promovió una papeleta adicional en las elecciones para pedir una Asamblea Constituyente. El Acuerdo con las FARC-EP es de 2016 (posterior), y la muerte de Gaitán (1948) y el Frente Nacional (1958) son hechos anteriores que no convocaron la Asamblea." }
+      ]
+    },
+    {
+      "codigo": "SOC-GEO-L1",
+      "subtema": "geografia",
+      "titulo": "Colombia de arriba abajo: regiones y pisos térmicos",
+      "resumen": "Aprenderás a relacionar la altitud, el clima y las regiones naturales con las formas de vida y las actividades económicas de las comunidades.",
+      "duracion_min": 9,
+      "bloques": [
+        { "tipo": "texto", "contenido": "Colombia es uno de los países más diversos del planeta: en un mismo día puedes pasar del calor de un valle al frío de un páramo. En geografía, el ICFES quiere que entiendas **cómo el territorio influye en la sociedad y cómo la sociedad transforma el territorio**." },
+        { "tipo": "concepto", "titulo": "Pisos térmicos", "contenido": "Como Colombia está en la zona intertropical, su temperatura depende sobre todo de la **altitud**: en promedio baja unos 6 °C por cada 1.000 m de ascenso (0,6 °C por cada 100 m). Así se forman franjas de clima llamadas **pisos térmicos**, y cada una favorece cultivos y formas de vida distintas." },
+        { "tipo": "lista", "titulo": "Los pisos térmicos (valores aproximados)", "items": [
+          "Cálido: de 0 a 1.000 m, más de 24 °C (cacao, plátano, arroz, ganadería).",
+          "Templado: de 1.000 a 2.000 m, entre 18 y 24 °C (café, frutales).",
+          "Frío: de 2.000 a 3.000 m, entre 12 y 18 °C (papa, hortalizas, ganadería de leche).",
+          "Páramo: de 3.000 a 4.000 m, entre 6 y 12 °C (ecosistema que regula el agua).",
+          "Glacial o nival: por encima de unos 4.000 m, menos de 6 °C; las nieves perpetuas solo aparecen en las cumbres más altas."
+        ] },
+        { "tipo": "concepto", "titulo": "Regiones naturales", "contenido": "Colombia tiene seis regiones naturales: **Andina** (tres cordilleras, donde vive la mayor parte de la población), **Caribe** (llanuras, ciénagas y puertos como Cartagena, Barranquilla y Santa Marta), **Pacífica** (selva húmeda y una de las zonas más lluviosas del planeta), **Orinoquía** (llanos, ganadería, arroz y petróleo), **Amazonía** (la mayor extensión de selva del país) e **Insular** (San Andrés, Providencia y Santa Catalina en el Caribe; Gorgona y Malpelo en el Pacífico)." },
+        { "tipo": "ejemplo", "titulo": "Lee datos de altitud y temperatura", "enunciado": "Un pueblo ubicado a 200 m de altitud tiene una temperatura media de 28 °C. ¿Qué temperatura aproximada tendrá una vereda del mismo municipio ubicada a 2.700 m, y en qué piso térmico está?", "pasos": [
+          "Paso 1 · Calcula la diferencia de altitud: 2.700 − 200 = 2.500 m.",
+          "Paso 2 · Aplica la regla: por cada 1.000 m la temperatura baja unos 6 °C → 2,5 × 6 = 15 °C menos.",
+          "Paso 3 · Resta: 28 − 15 = 13 °C.",
+          "Paso 4 · Ubica el piso: 2.700 m y 13 °C corresponden al piso frío (2.000 a 3.000 m, 12 a 18 °C).",
+          "Paso 5 · Relaciona con la sociedad: en esa vereda es más probable encontrar cultivos de papa y ganadería de leche que cacao o plátano."
+        ], "respuesta": "Unos 13 °C, en el piso térmico frío." },
+        { "tipo": "lista", "titulo": "Sociedad y territorio: relaciones que el ICFES pregunta", "items": [
+          "La altitud y el clima condicionan qué se puede cultivar y dónde se asienta la población.",
+          "Los páramos regulan el agua que consumen muchas ciudades; su deterioro afecta a comunidades que viven lejos de ellos.",
+          "La deforestación en la Amazonía, asociada a la ganadería extensiva, los cultivos de uso ilícito y el acaparamiento de tierras, transforma el territorio y altera el ciclo del agua.",
+          "Los ríos han sido vías de comunicación y de poblamiento, como el Magdalena en la región Andina y el Atrato en el Pacífico."
+        ] },
+        { "tipo": "tip", "contenido": "Tip ICFES: cuando una pregunta incluya un mapa, una tabla o una gráfica, lee primero el título, las convenciones y las unidades, y después las opciones. Muchas opciones incorrectas contienen un dato que no aparece en la fuente o que la contradice. Y recuerda: en Colombia, **más altitud = menos temperatura**." },
+        { "tipo": "ejercicio", "enunciado": "Un municipio está a 2.600 m de altitud. ¿En qué piso térmico se encuentra?", "opciones": ["Cálido", "Templado", "Frío", "Páramo"], "correcta": 2, "explicacion": "El piso frío va aproximadamente de 2.000 a 3.000 m. A 2.600 m, como ocurre en Bogotá, el clima es frío." },
+        { "tipo": "ejercicio", "enunciado": "¿Qué región natural se caracteriza por su selva húmeda, sus altísimas lluvias y una alta proporción de población afrodescendiente?", "opciones": ["Orinoquía", "Pacífica", "Insular", "Andina"], "correcta": 1, "explicacion": "La región Pacífica, con departamentos como el Chocó, es una de las zonas más lluviosas del planeta y concentra una gran proporción de comunidades afrodescendientes, además de pueblos indígenas." }
+      ]
+    },
+    {
+      "codigo": "SOC-ECO-L1",
+      "subtema": "economia",
+      "titulo": "Economía en tu bolsillo: precios, inflación y empleo",
+      "resumen": "Entenderás cómo se forman los precios, qué es la inflación y cómo leer indicadores como el desempleo para analizar situaciones económicas reales.",
+      "duracion_min": 10,
+      "bloques": [
+        { "tipo": "texto", "contenido": "Cada vez que pagas un pasaje de bus o un almuerzo estás participando en la economía. En el ICFES no necesitas fórmulas complicadas: necesitas entender **cómo reaccionan los precios y quién gana o quién pierde** con una decisión económica." },
+        { "tipo": "concepto", "titulo": "Oferta y demanda", "contenido": "La **oferta** es la cantidad de un bien que los productores quieren vender; la **demanda**, la cantidad que los consumidores quieren comprar. Si la oferta disminuye (por ejemplo, por una sequía) y la demanda se mantiene, el precio tiende a **subir**. Si la oferta aumenta (por ejemplo, porque llegan importaciones más baratas), el precio tiende a **bajar**. Y si la demanda crece mientras la oferta no cambia, el precio sube." },
+        { "tipo": "concepto", "titulo": "Inflación y salario real", "contenido": "La **inflación** es el aumento generalizado y sostenido de los precios. Si tu salario sube menos que la inflación, puedes comprar menos cosas aunque recibas más pesos: tu **salario real** disminuye. En Colombia, el DANE mide la inflación con el Índice de Precios al Consumidor (IPC), y el Banco de la República tiene la tarea de mantener el poder adquisitivo de la moneda." },
+        { "tipo": "lista", "titulo": "Otros conceptos que debes dominar", "items": [
+          "Sectores económicos: primario (agricultura, minería, pesca), secundario (industria, construcción) y terciario (comercio, transporte, servicios).",
+          "Impuestos directos, como el de renta, que depende de los ingresos de cada persona, e indirectos, como el IVA, que se paga al comprar sin importar cuánto gana el comprador.",
+          "Tasa de desempleo = personas desocupadas ÷ fuerza de trabajo × 100.",
+          "Globalización: mayor intercambio de bienes, capitales e información entre países; trae oportunidades (más mercados, productos más baratos) y retos (más competencia para los productores locales)."
+        ] },
+        { "tipo": "ejemplo", "titulo": "¿Ganó o perdió poder de compra?", "enunciado": "El salario de Andrés aumentó 8 % este año, pero la inflación fue de 11 %. ¿Andrés puede comprar más o menos que el año pasado?", "pasos": [
+          "Paso 1 · Identifica los datos: el salario nominal subió 8 %; los precios subieron 11 %.",
+          "Paso 2 · Compara: los precios subieron más que el salario (11 % > 8 %).",
+          "Paso 3 · Estima el cambio del salario real: 8 % − 11 % ≈ −3 %. El cálculo exacto es 1,08 ÷ 1,11 ≈ 0,973, es decir, cerca de 2,7 % menos.",
+          "Paso 4 · Concluye: aunque Andrés recibe más pesos, con ellos compra menos que antes."
+        ], "respuesta": "Puede comprar menos: su salario real cayó cerca de 3 %." },
+        { "tipo": "tip", "contenido": "Tip ICFES: en las preguntas de economía, haz una tabla mental de **actores**: ¿quién gana y quién pierde con la medida? Por ejemplo, si se eliminan los aranceles a un alimento importado, los consumidores ganan (precios más bajos) y los productores nacionales pierden (más competencia). Así identificas rápidamente la postura de cada actor." },
+        { "tipo": "ejercicio", "enunciado": "Una helada destruye parte de la cosecha de papa y la demanda se mantiene igual. ¿Qué pasará probablemente con el precio de la papa?", "opciones": ["Bajará, porque hay menos papa en el mercado.", "Subirá, porque disminuyó la oferta.", "Se mantendrá, porque la demanda no cambió.", "Bajará, porque los consumidores comprarán más."], "correcta": 1, "explicacion": "Al disminuir la oferta con una demanda constante, hay más compradores para menos producto, y el precio tiende a subir." },
+        { "tipo": "ejercicio", "enunciado": "En un municipio, la fuerza de trabajo es de 20.000 personas y 2.400 de ellas están desocupadas. ¿Cuál es la tasa de desempleo?", "opciones": ["8 %", "10 %", "12 %", "24 %"], "correcta": 2, "explicacion": "Tasa de desempleo = 2.400 ÷ 20.000 × 100 = 12 %. La opción de 24 % aparece si se divide por error entre 10.000 en lugar de 20.000." }
+      ]
+    },
+    {
+      "codigo": "SOC-POL-L1",
+      "subtema": "politica",
+      "titulo": "¿Quién hace qué en el Estado colombiano?",
+      "resumen": "Conocerás las ramas del poder público, los órganos de control y la descentralización para saber a qué entidad le corresponde cada función.",
+      "duracion_min": 11,
+      "bloques": [
+        { "tipo": "texto", "contenido": "Imagina el Estado como un gran equipo: cada integrante tiene una función y otros vigilan que la cumpla. Si sabes **quién hace qué**, podrás responder muchas preguntas del ICFES sin memorizar artículos." },
+        { "tipo": "concepto", "titulo": "Estado social de derecho", "contenido": "El artículo 1 de la Constitución define a Colombia como un **Estado social de derecho**, organizado como república unitaria, descentralizada, con autonomía de sus entidades territoriales, democrática, participativa y pluralista. **De derecho:** todos, incluidos los gobernantes, están sometidos a la ley. **Social:** el Estado debe garantizar condiciones de vida dignas, en especial a quienes están en situación de desventaja." },
+        { "tipo": "concepto", "titulo": "Las tres ramas del poder público", "contenido": "**Legislativa:** el Congreso (Senado y Cámara de Representantes) hace las leyes, puede reformar la Constitución y ejerce control político sobre el Gobierno. **Ejecutiva:** el presidente, que es jefe de Estado, jefe de Gobierno y suprema autoridad administrativa, junto con sus ministros y, en los territorios, los gobernadores y alcaldes; ejecuta las leyes y las políticas públicas. **Judicial:** la Corte Suprema de Justicia, el Consejo de Estado, la Corte Constitucional, la Fiscalía General de la Nación, los tribunales y los jueces; administra justicia." },
+        { "tipo": "lista", "titulo": "Órganos de control: no los confundas", "items": [
+          "Contraloría: control **fiscal**; vigila cómo se gastan los recursos públicos y busca recuperar el dinero perdido.",
+          "Procuraduría: vigila la **conducta** de los servidores públicos y adelanta investigaciones disciplinarias.",
+          "Defensoría del Pueblo: promueve y protege los **derechos humanos**.",
+          "Personería municipal: hace parte del Ministerio Público en el municipio, recibe quejas de los ciudadanos y vigila la conducta de los servidores municipales.",
+          "Ojo: la Fiscalía no es un órgano de control; pertenece a la rama judicial e investiga **delitos**."
+        ] },
+        { "tipo": "concepto", "titulo": "Descentralización", "contenido": "Es el traslado de decisiones, funciones y recursos del nivel nacional a los departamentos y municipios. En Colombia, los alcaldes se eligen por voto popular desde 1988 y los gobernadores desde 1991. Los municipios reciben transferencias de la Nación para educación, salud y agua potable, y recaudan impuestos propios como el predial. Su gran reto: muchos municipios pequeños dependen en gran medida de esas transferencias." },
+        { "tipo": "ejemplo", "titulo": "¿A quién le corresponde?", "enunciado": "Un concejal denuncia que el secretario de Obras de su municipio pagó un contrato de pavimentación que nunca se ejecutó, y que además recibió dinero del contratista. ¿Qué entidades pueden intervenir y por qué?", "pasos": [
+          "Paso 1 · Separa los hechos: (a) se perdió dinero público; (b) un servidor público pudo incumplir sus deberes; (c) recibir dinero del contratista puede ser un delito.",
+          "Paso 2 · Daño al patrimonio público → Contraloría (responsabilidad fiscal).",
+          "Paso 3 · Incumplimiento de deberes del servidor → Procuraduría o personería (responsabilidad disciplinaria).",
+          "Paso 4 · Posible delito, como el cohecho → Fiscalía General de la Nación (responsabilidad penal); al final, un juez decide.",
+          "Paso 5 · Además, el concejo municipal ejerce control político sobre la administración y puede promover un debate sobre el caso."
+        ], "respuesta": "Pueden actuar la Contraloría, la Procuraduría (o la personería) y la Fiscalía, cada una en su campo; las tres investigaciones son independientes entre sí." },
+        { "tipo": "tip", "contenido": "Tip ICFES: cuando veas un caso de corrupción, pregúntate qué se investiga: el **dinero** perdido (Contraloría), la **conducta** del funcionario (Procuraduría) o un **delito** (Fiscalía). Y si la pregunta trata sobre derechos humanos, piensa en la Defensoría del Pueblo." },
+        { "tipo": "ejercicio", "enunciado": "¿Qué entidad adelanta investigaciones disciplinarias contra los servidores públicos que incumplen sus deberes?", "opciones": ["La Contraloría", "La Defensoría del Pueblo", "La Registraduría", "La Procuraduría"], "correcta": 3, "explicacion": "La Procuraduría General de la Nación vigila la conducta de quienes ejercen funciones públicas y adelanta los procesos disciplinarios. La Contraloría se ocupa del control fiscal, y la Registraduría, de la identificación de las personas y de la organización de las elecciones." },
+        { "tipo": "ejercicio", "enunciado": "¿A qué rama del poder público pertenece la Fiscalía General de la Nación?", "opciones": ["A la rama ejecutiva.", "A la rama judicial.", "A la rama legislativa.", "A ninguna: es un órgano de control."], "correcta": 1, "explicacion": "La Constitución ubica a la Fiscalía General de la Nación dentro de la rama judicial: investiga los delitos y acusa a los presuntos responsables ante los jueces. Confundirla con un órgano de control es un error muy común." }
+      ]
+    },
+    {
+      "codigo": "SOC-CIU-L1",
+      "subtema": "ciudadania",
+      "titulo": "Tus derechos tienen herramientas",
+      "resumen": "Aprenderás a elegir el mecanismo adecuado para proteger un derecho o para participar en las decisiones públicas, y a resolver conflictos de forma pacífica.",
+      "duracion_min": 12,
+      "bloques": [
+        { "tipo": "texto", "contenido": "La Constitución de 1991 no es solo un libro de normas: es una caja de herramientas que puedes usar desde hoy. Reconoce derechos fundamentales y te da mecanismos para defenderlos y para participar en las decisiones que afectan tu vida y tu comunidad." },
+        { "tipo": "concepto", "titulo": "Derechos fundamentales y pluralismo", "contenido": "Los **derechos fundamentales** (como la vida, la igualdad, la libertad de expresión, la petición o el debido proceso) son esenciales para la dignidad humana y se pueden proteger mediante la acción de tutela. La Constitución también reconoce y protege la **diversidad étnica y cultural** de la Nación y define a Colombia como un Estado pluralista: caben distintas culturas, creencias y opiniones, siempre dentro del respeto por los derechos de los demás." },
+        { "tipo": "lista", "titulo": "Mecanismos de protección de derechos", "items": [
+          "Acción de tutela (art. 86): protege derechos fundamentales vulnerados o amenazados por una autoridad o, en ciertos casos, por particulares. El juez debe resolver en máximo 10 días.",
+          "Derecho de petición (art. 23): permite presentar solicitudes respetuosas a las autoridades y obtener una pronta respuesta.",
+          "Acción de cumplimiento (art. 87): permite exigir ante un juez que una autoridad cumpla una ley o un acto administrativo.",
+          "Acciones populares (art. 88): protegen derechos colectivos, como el ambiente sano, el espacio público o la salubridad pública.",
+          "Hábeas corpus (art. 30): protege la libertad de quien está privado de ella ilegalmente; debe resolverse en 36 horas."
+        ] },
+        { "tipo": "concepto", "titulo": "Mecanismos de participación (art. 103)", "contenido": "Son el voto, el plebiscito, el referendo, la consulta popular, el cabildo abierto, la iniciativa legislativa y la revocatoria del mandato. Por ejemplo: con el **cabildo abierto** la comunidad discute un tema en una sesión pública del concejo; con la **revocatoria del mandato** se puede terminar el periodo de un alcalde o gobernador; con el **referendo** el pueblo aprueba o rechaza una norma." },
+        { "tipo": "ejemplo", "titulo": "Elige el mecanismo correcto", "enunciado": "Camila tiene 16 años y cursa grado 11. Su colegio público le niega la matrícula porque su familia no ha pagado un ‘bono voluntario’. ¿Qué mecanismo puede usar para proteger su derecho?", "pasos": [
+          "Paso 1 · ¿Qué derecho está en juego? El derecho a la educación, que en el caso de los niños, niñas y adolescentes es fundamental.",
+          "Paso 2 · ¿Es un derecho individual o colectivo? Es individual: la afectada directa es Camila.",
+          "Paso 3 · ¿Hay un mecanismo específico? Sí: si el colegio no corrige la situación, la acción de tutela protege derechos fundamentales de forma rápida.",
+          "Paso 4 · Descarta: la acción popular es para derechos colectivos; el hábeas corpus, para la libertad; la acción de cumplimiento, para exigir que se cumpla una ley o un acto administrativo."
+        ], "respuesta": "La acción de tutela, porque se vulnera un derecho fundamental de carácter individual." },
+        { "tipo": "concepto", "titulo": "Convivencia y resolución pacífica de conflictos", "contenido": "Los conflictos son normales en cualquier comunidad; lo importante es cómo se resuelven. En la **negociación**, las partes dialogan directamente para llegar a un acuerdo. En la **mediación**, un tercero neutral facilita el diálogo, pero no decide. En la **conciliación**, un tercero (por ejemplo, un conciliador en equidad) ayuda a las partes y puede proponer fórmulas de arreglo. En el **arbitraje**, un tercero toma una decisión que las partes deben acatar." },
+        { "tipo": "tip", "contenido": "Tip ICFES: en las preguntas sobre conflictos, la mejor opción suele ser la que **escucha a todas las partes, respeta los derechos de todos y usa el diálogo**. Descarta las opciones que imponen la voluntad de uno, recurren a la fuerza o ignoran a alguno de los involucrados." },
+        { "tipo": "ejercicio", "enunciado": "Una comunidad quiere que el concejo municipal escuche, en una sesión pública, sus propuestas sobre el manejo de las basuras. ¿Qué mecanismo de participación es el adecuado?", "opciones": ["El referendo", "La revocatoria del mandato", "El cabildo abierto", "El plebiscito"], "correcta": 2, "explicacion": "El cabildo abierto es una sesión pública del concejo (o de la junta administradora local) en la que los habitantes participan directamente para discutir asuntos de interés para la comunidad." },
+        { "tipo": "ejercicio", "enunciado": "Dos estudiantes discuten por el uso de la cancha en el descanso. Piden ayuda a un compañero neutral que les facilita el diálogo para que ellos mismos encuentren un acuerdo, sin imponerles una decisión. ¿Qué mecanismo están usando?", "opciones": ["La mediación", "El arbitraje", "La imposición", "La evasión"], "correcta": 0, "explicacion": "En la mediación, un tercero neutral ayuda a dialogar, pero no decide: el acuerdo lo construyen las partes. En el arbitraje, en cambio, el tercero sí toma la decisión." }
+      ]
+    }
+  ]
+}

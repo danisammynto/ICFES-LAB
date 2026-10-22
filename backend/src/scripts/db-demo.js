@@ -342,18 +342,13 @@ async function main() {
       monedas -= item.precio;
     }
 
-    // Nivel según la XP acumulada (con sus insignias y monedas).
-    const niveles = await varias(`SELECT numero, xp_minimo, recompensa_monedas, insignia_id FROM niveles ORDER BY numero`, [], cliente);
-    const alcanzados = niveles.filter((n) => n.xp_minimo <= xp);
-    for (const n of alcanzados) {
-      monedas += n.recompensa_monedas;
-      if (n.insignia_id) await cliente.query(`INSERT INTO usuario_insignias (usuario_id, insignia_id) VALUES ($1, $2) ON CONFLICT DO NOTHING`, [usuarioId, n.insignia_id]);
-    }
+    // El nivel no se calcula aquí: al final, la evaluación de logros sube los niveles cuyos
+    // requisitos (XP, días, preguntas, aciertos y temario) cumple el historial de demostración.
     await cliente.query(
-      `UPDATE perfiles SET xp = $2, nivel = $3, monedas = $4,
+      `UPDATE perfiles SET xp = $2, nivel = 1, monedas = $3,
               avatar = '{"color":"color-menta","expresion":"expresion-feliz","accesorio":"accesorio-gafas","fondo":"fondo-estrellas"}'
         WHERE usuario_id = $1`,
-      [usuarioId, xp, alcanzados.at(-1).numero, Math.max(0, monedas)],
+      [usuarioId, xp, Math.max(0, monedas)],
     );
     await cliente.query(
       `INSERT INTO historial_recompensas (usuario_id, tipo, cantidad, motivo, referencia) VALUES ($1, 'xp', $2, 'demo', 'historial-demo')`,

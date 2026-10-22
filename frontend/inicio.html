@@ -6,6 +6,9 @@
   <title>Inicio · ICFES Lab</title>
   <meta name="description" content="Tu panel de estudio para la Prueba Saber 11: racha, progreso, estadísticas y recomendaciones de Vanty.">
   <link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <meta name="theme-color" content="#484ea2">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap">
@@ -13,6 +16,7 @@
   <link rel="stylesheet" href="/css/base.css">
   <link rel="stylesheet" href="/css/componentes.css">
   <link rel="stylesheet" href="/css/layout.css">
+  <link rel="stylesheet" href="/css/personaje.css">
   <link rel="stylesheet" href="/css/paginas/inicio.css">
   <script src="/js/tema-inicial.js"></script>
   <script src="/vendor/chart.js/chart.umd.min.js" defer></script>
@@ -35,7 +39,7 @@
     <div class="fila-superior">
       <article class="racha tarjeta" aria-labelledby="titulo-racha">
         <h3 class="titulo-racha" id="titulo-racha">RACHA DE <span id="dias-racha">0</span> DÍAS</h3>
-        <img src="/img/fuego.svg" alt="" class="fuego-racha">
+        <img src="/img/fuego-racha.png" alt="" class="fuego-racha" width="203" height="256">
         <p class="racha-record mb-0" id="record-racha"></p>
         <div class="semana-racha" id="semana-racha" aria-label="Actividad de esta semana"></div>
         <div class="recompensa-racha" id="recompensa-racha"></div>
@@ -47,15 +51,15 @@
         <p id="motivacion"></p>
         <a href="/materias" class="btn btn-lima btn-lg boton-recordatorio" id="boton-leccion">INICIA TU LECCIÓN DE HOY</a>
         <p class="detalle-leccion mb-0" id="detalle-leccion"></p>
-        <img src="/img/vanty.svg" alt="Vanty, tu tutora" class="imagen-personaje">
+        <div class="imagen-personaje" id="personaje-inicio"></div>
       </article>
 
       <article class="cuenta-regresiva tarjeta" aria-labelledby="titulo-cuenta">
-        <h3 class="titulo-cuenta-regresiva" id="titulo-cuenta">DÍAS RESTANTES PARA EL ICFES</h3>
+        <h3 class="titulo-cuenta-regresiva" id="titulo-cuenta">DÍAS FALTANTES PARA EL ICFES</h3>
         <div><span id="dias-icfes" class="dias-restantes">–</span><span class="dias-unidad">días</span></div>
         <div>
           <p class="fecha" id="fecha-icfes"></p>
-          <a href="/configuracion#preparacion" id="cambiar-fecha">Cambiar mi fecha</a>
+          <div class="acciones-cuenta" id="acciones-cuenta"></div>
         </div>
       </article>
     </div>
@@ -102,7 +106,7 @@
       <div class="columna" style="gap: var(--esp-6)">
         <article class="tarjeta">
           <div class="cabecera-vanty">
-            <img src="/img/vanty.svg" alt="">
+            <img src="/img/vanty-cabeza.png" alt="" width="444" height="512">
             <div class="crecer">
               <h3 class="mb-0">Vanty recomienda</h3>
               <a href="/vanty" class="texto-sm">Hablar con Vanty</a>

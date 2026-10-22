@@ -3,7 +3,7 @@
  */
 import { detalleMateria, listarMaterias } from '../services/catalogo.service.js';
 import { completarLeccion, leccionDelDia, obtenerLeccion } from '../services/lecciones.service.js';
-import { responderPregunta, siguientePregunta } from '../services/practica.service.js';
+import { preguntasDeSubtema, responderPregunta, siguientePregunta } from '../services/practica.service.js';
 import { datos } from '../validators/comunes.js';
 
 export async function materias(req, res) {
@@ -29,6 +29,10 @@ export async function completar(req, res) {
     aciertos: d.aciertos ?? 0,
     total: d.total ?? 0,
   }));
+}
+
+export async function preguntasSubtema(req, res) {
+  res.json(await preguntasDeSubtema(req.usuario.id, datos(req).slug));
 }
 
 export async function siguiente(req, res) {

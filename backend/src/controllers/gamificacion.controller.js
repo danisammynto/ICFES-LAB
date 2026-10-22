@@ -3,6 +3,7 @@
  */
 import { varias } from '../config/db.js';
 import { progresoNivel } from '../services/gamificacion.service.js';
+import { requisitosDeNivel } from '../services/niveles.service.js';
 import { listarLogros } from '../services/logros.service.js';
 import { calendarioActividad, estadoRacha } from '../services/racha.service.js';
 import { catalogo, comprar } from '../services/tienda.service.js';
@@ -13,22 +14,26 @@ export async function resumen(req, res) {
   res.json({ ...nivel, racha });
 }
 
-/** Niveles con lo que desbloquea cada uno (subtemas y retos reales del catálogo). */
+/** Niveles con sus requisitos y lo que desbloquea cada uno (subtemas y retos reales del catálogo). */
 export async function niveles(req, res) {
   const [lista, subtemas, retos, perfil] = await Promise.all([
     varias(`SELECT n.numero, n.nombre, n.xp_minimo, n.descripcion, n.color, n.icono, n.recompensa_monedas, n.desbloqueos,
-                   i.nombre AS insignia, i.icono AS insignia_icono
+                   n.requisitos, i.nombre AS insignia, i.icono AS insignia_icono
               FROM niveles n LEFT JOIN insignias i ON i.id = n.insignia_id ORDER BY n.numero`),
     varias(`SELECT s.nivel_requerido, s.nombre, m.nombre AS materia FROM subtemas s
-              JOIN temas t ON t.id = s.tema_id JOIN materias m ON m.id = t.materia_id ORDER BY m.orden, s.orden`),
+              JOIN temas t ON t.id = s.tema_id JOIN materias m ON m.id = t.materia_id
+             WHERE s.activo ORDER BY m.orden, t.orden, s.orden`),
     varias(`SELECT nivel_requerido, titulo FROM simulacros WHERE tipo = 'reto' AND activo ORDER BY numero`),
     progresoNivel(req.usuario.id),
   ]);
   res.json({
     actual: perfil,
-    niveles: lista.map((n) => ({
+    niveles: lista.map(({ requisitos: _r, ...n }) => ({
       ...n,
-      alcanzado: perfil.xp >= n.xp_minimo,
+      // Requisitos para llegar a ese nivel (texto); los del siguiente nivel, con el avance actual,
+      // vienen en `actual.siguiente.requisitos`.
+      requisitos: requisitosDeNivel({ ...n, requisitos: _r }).map(({ clave, etiqueta, meta, texto }) => ({ clave, etiqueta, meta, texto })),
+      alcanzado: n.numero <= perfil.nivel.numero,
       subtemas: subtemas.filter((s) => s.nivel_requerido === n.numero).map((s) => `${s.nombre} (${s.materia})`),
       retos: retos.filter((r) => r.nivel_requerido === n.numero).map((r) => r.titulo),
     })),
@@ -45,6 +50,8 @@ export async function insignias(req, res) {
             ui.obtenida_en
        FROM insignias i
        LEFT JOIN usuario_insignias ui ON ui.insignia_id = i.id AND ui.usuario_id = $1
+      -- Las que ya no se pueden obtener (tienda, nivel Maestro) solo se muestran a quien las tiene.
+      WHERE i.activa OR ui.obtenida_en IS NOT NULL
       ORDER BY i.orden`,
     [req.usuario.id],
   );

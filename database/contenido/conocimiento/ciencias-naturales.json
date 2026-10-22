@@ -3,7 +3,7 @@
   "entradas": [
     {
       "id": "cie-genetica-mendeliana",
-      "subtema": "biologia",
+      "subtema": "genetica-mendeliana",
       "titulo": "Genética mendeliana: alelos dominantes y recesivos",
       "palabras_clave": ["genetica", "genética", "mendel", "alelo", "alelos", "dominante", "recesivo", "punnett", "genotipo", "fenotipo"],
       "explicacion": "En la herencia mendeliana, cada característica depende de un gen que tiene dos copias, llamadas alelos: una se hereda de la madre y otra del padre. El alelo dominante (se escribe con mayúscula, A) se manifiesta aunque haya una sola copia; el recesivo (con minúscula, a) solo se manifiesta cuando hay dos copias (aa). El genotipo es la combinación de alelos (AA, Aa o aa) y el fenotipo es la característica que se observa. El cuadro de Punnett combina los alelos que aporta cada padre para predecir las proporciones de la descendencia.",
@@ -12,7 +12,7 @@
     },
     {
       "id": "cie-cadenas-troficas",
-      "subtema": "biologia",
+      "subtema": "ecosistemas",
       "titulo": "Cadenas tróficas y flujo de energía",
       "palabras_clave": ["cadena trofica", "cadena trófica", "cadenas troficas", "cadenas tróficas", "red trofica", "red trófica", "productores", "consumidores", "descomponedores", "depredador"],
       "explicacion": "Una cadena trófica muestra quién se alimenta de quién en un ecosistema. Empieza con los productores (plantas y algas, que hacen fotosíntesis), sigue con los consumidores primarios (herbívoros) y los consumidores secundarios y terciarios (carnívoros), y se completa con los descomponedores (hongos y bacterias), que reciclan la materia. La energía fluye en un solo sentido y de cada nivel solo pasa al siguiente cerca del 10 %; el resto se gasta en la respiración y se pierde como calor. Por eso hay menos organismos en los niveles superiores, mientras que la materia sí se recicla. Varias cadenas conectadas forman una red trófica.",
@@ -30,7 +30,7 @@
     },
     {
       "id": "cie-leyes-newton",
-      "subtema": "fisica",
+      "subtema": "dinamica-i",
       "titulo": "Las tres leyes de Newton",
       "palabras_clave": ["leyes de newton", "newton", "inercia", "fuerza", "fuerzas", "fuerza neta", "accion y reaccion", "acción y reacción", "aceleracion", "aceleración"],
       "explicacion": "Primera ley (inercia): si la fuerza neta sobre un cuerpo es cero, este permanece en reposo o sigue moviéndose en línea recta con velocidad constante. Segunda ley: la fuerza neta produce una aceleración en su misma dirección, según F = m·a (F en newtons, m en kilogramos y a en m/s²). Tercera ley: si un cuerpo A ejerce una fuerza sobre un cuerpo B, B ejerce sobre A una fuerza de igual magnitud y sentido contrario; como actúan sobre cuerpos distintos, no se anulan entre sí. Idea clave: moverse no requiere fuerza neta, pero cambiar la velocidad sí.",
@@ -39,7 +39,7 @@
     },
     {
       "id": "cie-energia-mecanica",
-      "subtema": "fisica",
+      "subtema": "dinamica-ii",
       "titulo": "Energía mecánica y su conservación",
       "palabras_clave": ["energia", "energía", "energia cinetica", "energía cinética", "energia potencial", "energía potencial", "energia mecanica", "energía mecánica", "conservacion de la energia", "conservación de la energía"],
       "explicacion": "La energía cinética es la energía del movimiento: Ec = ½·m·v². La energía potencial gravitacional depende de la altura: Ep = m·g·h, y en los problemas suele usarse g = 10 m/s². La energía mecánica es la suma de ambas y, si no hay fricción, se conserva: lo que pierde una forma lo gana la otra. Con fricción, parte de la energía mecánica se transforma en calor, pero la energía total del sistema se sigue conservando.",
@@ -48,7 +48,7 @@
     },
     {
       "id": "cie-ph-acidos-bases",
-      "subtema": "quimica",
+      "subtema": "reacciones-y-ph",
       "titulo": "Ácidos, bases y pH",
       "palabras_clave": ["ph", "acido", "ácido", "acidos", "ácidos", "basico", "básico", "alcalino", "neutralizacion", "neutralización"],
       "explicacion": "El pH mide qué tan ácida o básica es una solución, en una escala que suele ir de 0 a 14. Un pH menor que 7 es ácido (limón, vinagre, jugo gástrico), 7 es neutro (agua pura a 25 °C) y mayor que 7 es básico o alcalino (jabón, bicarbonato, leche de magnesia). La escala es logarítmica: cada unidad de pH menos significa una solución 10 veces más ácida. Cuando un ácido reacciona con una base se produce una neutralización, que forma una sal y agua.",
@@ -57,7 +57,7 @@
     },
     {
       "id": "cie-balanceo-conservacion-masa",
-      "subtema": "quimica",
+      "subtema": "reacciones-y-ph",
       "titulo": "Conservación de la masa y balanceo de ecuaciones",
       "palabras_clave": ["balanceo", "balancear", "ecuacion quimica", "ecuación química", "reaccion quimica", "reacción química", "conservacion de la masa", "conservación de la masa", "lavoisier", "coeficientes"],
       "explicacion": "Según la ley de conservación de la masa (Lavoisier), en una reacción química la materia no se crea ni se destruye: los átomos solo se reorganizan. Por eso una ecuación química debe estar balanceada, con el mismo número de átomos de cada elemento a ambos lados de la flecha. Para balancear se cambian únicamente los coeficientes (los números delante de las fórmulas) y nunca los subíndices, porque eso cambiaría la sustancia. Si en un experimento la masa parece aumentar o disminuir, casi siempre es porque un gas entró o salió del sistema.",

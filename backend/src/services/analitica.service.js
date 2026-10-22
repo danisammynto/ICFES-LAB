@@ -158,6 +158,7 @@ async function rendimientoPorSubtema(usuarioId, dias = 90) {
        LEFT JOIN respuestas r ON r.subtema_id = s.id AND r.usuario_id = $1
                               AND r.creado_en > now() - make_interval(days => $2)
        LEFT JOIN progreso pr ON pr.subtema_id = s.id AND pr.usuario_id = $1
+      WHERE s.activo
       GROUP BY s.id, t.id, m.id, pr.dominio
       ORDER BY m.orden, t.orden, s.orden`,
     [usuarioId, dias],

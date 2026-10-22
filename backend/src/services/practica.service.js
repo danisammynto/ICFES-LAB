@@ -46,7 +46,7 @@ async function resolverSubtema(usuarioId, { subtema, materia }) {
     const s = await una(
       `SELECT s.id, s.slug, s.nombre, s.nivel_requerido, m.slug AS materia_slug, m.nombre AS materia_nombre
          FROM subtemas s JOIN temas t ON t.id = s.tema_id JOIN materias m ON m.id = t.materia_id
-        WHERE s.slug = $1`,
+        WHERE s.slug = $1 AND s.activo`,
       [subtema],
     );
     if (!s) throw noEncontrado('El subtema no existe.');
@@ -62,7 +62,7 @@ async function resolverSubtema(usuarioId, { subtema, materia }) {
          JOIN temas t ON t.id = s.tema_id
          JOIN materias m ON m.id = t.materia_id
          LEFT JOIN progreso p ON p.subtema_id = s.id AND p.usuario_id = $1
-        WHERE m.slug = $2 AND s.nivel_requerido <= $3
+        WHERE m.slug = $2 AND s.activo AND s.nivel_requerido <= $3
           AND EXISTS (SELECT 1 FROM preguntas q WHERE q.subtema_id = s.id AND q.activa AND q.publica)
         ORDER BY coalesce(p.dominio, 50) + random() * 15
         LIMIT 1`,
@@ -72,6 +72,43 @@ async function resolverSubtema(usuarioId, { subtema, materia }) {
     return s;
   }
   throw solicitudInvalida('Indica un subtema o una materia para practicar.');
+}
+
+/**
+ * Todas las preguntas del banco de un subtema, en el orden del banco y sin solución, con el
+ * resultado de la última respuesta del estudiante a cada una (para la sección de preguntas
+ * que sigue a la explicación de cada tema).
+ */
+export async function preguntasDeSubtema(usuarioId, slug) {
+  const sub = await resolverSubtema(usuarioId, { subtema: slug });
+  const progreso = await una(
+    `SELECT dominio, respondidas FROM progreso WHERE usuario_id = $1 AND subtema_id = $2`,
+    [usuarioId, sub.id],
+  );
+  const filas = await varias(
+    `SELECT q.id, u.opcion_id, u.es_correcta, u.creado_en
+       FROM preguntas q
+       LEFT JOIN LATERAL (
+         SELECT r.opcion_id, r.es_correcta, r.creado_en FROM respuestas r
+          WHERE r.usuario_id = $1 AND r.pregunta_id = q.id
+          ORDER BY r.creado_en DESC LIMIT 1
+       ) u ON TRUE
+      WHERE q.subtema_id = $2 AND q.activa AND q.publica
+      ORDER BY q.codigo`,
+    [usuarioId, sub.id],
+  );
+  const preguntas = await cargarPreguntas(filas.map((f) => f.id));
+  return {
+    subtema: { slug: sub.slug, nombre: sub.nombre },
+    materia: { slug: sub.materia_slug, nombre: sub.materia_nombre },
+    dominio: progreso?.dominio ?? 0,
+    preguntas: preguntas.map((p, i) => ({
+      ...p,
+      ultima: filas[i].opcion_id != null || filas[i].es_correcta != null
+        ? { correcta: filas[i].es_correcta, opcion_id: filas[i].opcion_id, fecha: filas[i].creado_en }
+        : null,
+    })),
+  };
 }
 
 /**

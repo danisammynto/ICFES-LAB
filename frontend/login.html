@@ -6,12 +6,16 @@
   <title>Iniciar sesión · ICFES Lab</title>
   <meta name="description" content="Ingresa a ICFES Lab y sigue preparándote para la Prueba Saber 11.">
   <link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <meta name="theme-color" content="#484ea2">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap">
   <link rel="stylesheet" href="/css/tokens.css">
   <link rel="stylesheet" href="/css/base.css">
   <link rel="stylesheet" href="/css/componentes.css">
+  <link rel="stylesheet" href="/css/personaje.css">
   <link rel="stylesheet" href="/css/paginas/auth.css">
   <script src="/js/tema-inicial.js"></script>
   <script type="module" src="/js/paginas/login.js"></script>
@@ -20,13 +24,7 @@
   <div class="pagina-auth">
     <section class="panel-marca">
       <a href="/" aria-label="ICFES Lab, página principal">
-        <svg class="logo-imagen" viewBox="0 0 212 48" role="img" aria-label="ICFES Lab">
-          <rect x="2" y="2" width="44" height="44" rx="13" fill="#ffffff" fill-opacity="0.16"/>
-          <path d="M19 12h10M21 12v8.5L13.6 32.9a3.2 3.2 0 0 0 2.8 4.8h15.2a3.2 3.2 0 0 0 2.8-4.8L27 20.5V12" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M16.3 30.4h15.4l2 3.4a1.6 1.6 0 0 1-1.4 2.4H15.7a1.6 1.6 0 0 1-1.4-2.4z" fill="#d5e068"/>
-          <path d="M37 7.5l1.3 3.2 3.2 1.3-3.2 1.3L37 16.5l-1.3-3.2-3.2-1.3 3.2-1.3z" fill="#fda879"/>
-          <text x="56" y="33" font-family="Outfit, Segoe UI, sans-serif" font-size="25" font-weight="800" fill="currentColor">ICFES<tspan fill="#d5e068"> Lab</tspan></text>
-        </svg>
+        <img class="logo-imagen" src="/img/logo-icfes-lab.png" alt="ICFES Lab" width="520" height="140">
       </a>
       <div>
         <h1>Bienvenido de nuevo. Tu racha te <span>está esperando</span>.</h1>
@@ -37,7 +35,7 @@
           <li><svg class="icono" aria-hidden="true"><use href="/img/iconos.svg#chart-line"></use></svg> Tu puntaje estimado y proyección de mejora</li>
         </ul>
       </div>
-      <img src="/img/vanty.svg" alt="" class="vanty-marca">
+      <div class="hueco-personaje" data-personaje="3" data-clase="personaje-marca" aria-label="Tu mascota de ICFES Lab estudiando"></div>
     </section>
 
     <main class="panel-formulario" id="contenido">

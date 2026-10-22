@@ -124,11 +124,14 @@ export function crearPregunta(pregunta, {
       }
     });
     const acerto = elegidaFinal != null && elegidaFinal === correcta?.id;
-    zonaSolucion.replaceChildren(
+    // replaceChildren() convertiría un null en el texto "null": se filtran los hijos ausentes.
+    zonaSolucion.replaceChildren(...[
       h('div', { class: `resultado-respuesta ${elegidaFinal == null ? 'omitida' : acerto ? 'acierto' : 'error'}` },
         icono(elegidaFinal == null ? 'circle-help' : acerto ? 'circle-check' : 'circle-x'),
         h('strong', {}, elegidaFinal == null ? `Sin responder · la correcta era la ${correcta?.letra}` : acerto ? '¡Correcto!' : `Incorrecto · la respuesta era la ${correcta?.letra}`)),
-      h('div', { class: 'explicacion' }, h('h4', {}, icono('lightbulb'), 'Explicación'), bloqueTexto(explicacion ?? '')));
+      // Algunas preguntas del banco solo traen la respuesta correcta, sin explicación.
+      explicacion ? h('div', { class: 'explicacion' }, h('h4', {}, icono('lightbulb'), 'Explicación'), bloqueTexto(explicacion)) : null,
+    ].filter(Boolean));
   }
 
   if (modo === 'revision' && pregunta.opciones.some((o) => o.es_correcta !== undefined)) {

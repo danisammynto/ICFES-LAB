@@ -3,7 +3,7 @@
   "entradas": [
     {
       "id": "ing-present-perfect-simple-past",
-      "subtema": "grammar",
+      "subtema": "perfecto-preposiciones",
       "titulo": "Present perfect vs. simple past",
       "palabras_clave": ["present perfect", "presente perfecto", "simple past", "past simple", "pasado simple", "pretérito perfecto", "preterito perfecto", "tiempos verbales", "have been"],
       "explicacion": "El **simple past** (pasado simple) se usa para acciones terminadas en un momento concreto del pasado: I visited Cartagena last year. El **present perfect** (have/has + participio pasado) conecta el pasado con el presente: situaciones que empezaron antes y continúan (I have lived here since 2020), experiencias sin fecha (Have you ever tried ajiaco?) o resultados recientes (I have lost my keys). La pista está en las expresiones de tiempo: yesterday, ago, last e in 2019 van con pasado simple; since, for, ever, never, already, yet y just suelen ir con present perfect. Ojo: en español decimos «vivo aquí desde 2020», pero en inglés se dice I have lived here since 2020.",
@@ -12,7 +12,7 @@
     },
     {
       "id": "ing-condicionales",
-      "subtema": "grammar",
+      "subtema": null,
       "titulo": "Condicionales (zero, first y second conditional)",
       "palabras_clave": ["condicional", "condicionales", "conditional", "conditionals", "if clause", "oración condicional", "oracion condicional", "first conditional", "second conditional", "would"],
       "explicacion": "Los condicionales expresan que algo ocurre solo si se cumple una condición. El **zero conditional** (If + presente, presente) se usa para verdades generales: If you heat ice, it melts. El **first conditional** (If + presente, will + verbo) se usa para situaciones reales o probables en el futuro: If it rains tomorrow, we will stay home. El **second conditional** (If + pasado, would + verbo) se usa para situaciones imaginarias o poco probables: If I had more time, I would learn French. En el second conditional se suele usar were con todas las personas (If I were you, I would study more), y en el first conditional no se usa will después de if (If it will rain ✗ → If it rains ✓).",
@@ -21,7 +21,7 @@
     },
     {
       "id": "ing-comparativos-superlativos",
-      "subtema": "grammar",
+      "subtema": "futuro-comparativos-superlativos",
       "titulo": "Comparativos y superlativos",
       "palabras_clave": ["comparativo", "comparativos", "superlativo", "superlativos", "comparative", "superlative", "comparación", "comparacion", "more than", "the most"],
       "explicacion": "Los **comparativos** comparan dos cosas y van con than; los **superlativos** destacan una cosa dentro de un grupo y van con the. Con adjetivos de una sílaba se añade -er / -est (tall → taller → the tallest), y si terminan en consonante-vocal-consonante se duplica la última letra (hot → hotter → the hottest). Con la mayoría de adjetivos de dos o más sílabas se usa more / the most (expensive → more expensive → the most expensive), excepto los terminados en -y, que cambian a -ier / -iest (easy → easier → the easiest). Algunos son irregulares y hay que memorizarlos: good → better → the best; bad → worse → the worst.",
@@ -30,7 +30,7 @@
     },
     {
       "id": "ing-verbos-modales",
-      "subtema": "context-understanding",
+      "subtema": "modal-phrasal-verbs",
       "titulo": "Verbos modales (can, must, should, might…)",
       "palabras_clave": ["modales", "verbos modales", "modal verbs", "must", "mustn't", "should", "have to", "might", "obligación", "obligacion"],
       "explicacion": "Los **verbos modales** (can, could, must, should, might…) van seguidos de un verbo en forma base, sin to (You must go, no You must to go), y revelan la intención de quien habla; por eso son clave para entender avisos y conversaciones. **Can / could** expresan habilidad, permiso o peticiones (I can swim; Could you open the window?). **Must** y **have to** expresan obligación (You must wear a helmet), mientras que **mustn't** expresa prohibición y **don't have to** significa que algo no es necesario. **Should** sirve para dar consejos (You should sleep more) y **might / may** expresan posibilidad (It might rain later).",
@@ -39,7 +39,7 @@
     },
     {
       "id": "ing-preposiciones-tiempo-lugar",
-      "subtema": "language-use",
+      "subtema": "perfecto-preposiciones",
       "titulo": "Preposiciones de tiempo y lugar (in, on, at)",
       "palabras_clave": ["preposiciones", "preposición", "preposicion", "prepositions", "preposition", "in on at", "preposiciones de tiempo", "preposiciones de lugar", "next to", "between"],
       "explicacion": "Para el **tiempo**: **at** va con horas y momentos exactos (at 7:00, at night, at noon), **on** con días y fechas (on Monday, on May 5th, on my birthday) e **in** con meses, años, estaciones y partes del día (in August, in 2026, in the morning). Para el **lugar**: **at** va con puntos específicos (at the bus stop, at school), **on** con superficies (on the table, on the wall) e **in** con espacios cerrados o áreas (in the classroom, in Colombia). Otras preposiciones de lugar útiles son next to (al lado de), between (entre dos cosas), in front of (enfrente de), behind (detrás de) y under (debajo de). En español usamos «en» para casi todo, por eso este tema causa tantos errores.",
@@ -48,7 +48,7 @@
     },
     {
       "id": "ing-false-friends",
-      "subtema": "vocabulary",
+      "subtema": null,
       "titulo": "False friends (falsos amigos)",
       "palabras_clave": ["false friends", "false friend", "falsos amigos", "falso amigo", "cognados", "library", "actually", "carpet", "parents", "embarrassed"],
       "explicacion": "Los **false friends** (falsos amigos) son palabras en inglés que se parecen a palabras del español, pero significan otra cosa. Son una trampa frecuente en las Partes 1, 2 y 7 del ICFES, porque muchos distractores se aprovechan de ellos. Algunos de los más comunes: library (biblioteca, no librería), parents (padres, no parientes), carpet (alfombra, no carpeta), actually (en realidad, no actualmente), embarrassed (avergonzado, no embarazada), exit (salida, no éxito) y assist (ayudar, no asistir; asistir se dice attend). Cuando una palabra te parezca demasiado fácil porque suena igual que en español, verifica su significado con el contexto.",
@@ -57,7 +57,7 @@
     },
     {
       "id": "ing-phrasal-verbs",
-      "subtema": "vocabulary",
+      "subtema": "modal-phrasal-verbs",
       "titulo": "Phrasal verbs frecuentes",
       "palabras_clave": ["phrasal verbs", "phrasal verb", "verbos frasales", "verbo frasal", "look for", "give up", "get up", "turn off", "find out"],
       "explicacion": "Un **phrasal verb** es un verbo seguido de una o dos partículas (up, off, on, out, for…) que juntas forman un significado nuevo, a veces muy distinto del verbo original. Por ejemplo, give significa «dar», pero **give up** significa «rendirse» o «dejar de hacer algo». Algunos de los más frecuentes son get up (levantarse), look for (buscar), look after (cuidar), find out (averiguar), turn on / turn off (encender / apagar), put on (ponerse ropa), take off (quitarse ropa o despegar) y pick up (recoger). Apréndelos con oraciones completas, no como palabras sueltas.",
@@ -66,7 +66,7 @@
     },
     {
       "id": "ing-skimming-scanning",
-      "subtema": "reading",
+      "subtema": null,
       "titulo": "Estrategias de lectura: skimming y scanning",
       "palabras_clave": ["skimming", "scanning", "estrategias de lectura", "estrategia de lectura", "comprensión lectora", "comprension lectora", "reading", "idea principal", "main idea"],
       "explicacion": "**Skimming** es una lectura rápida para captar la idea general: lees el título, la primera oración de cada párrafo y las palabras que se repiten, sin detenerte en lo que no entiendes. **Scanning** es buscar un dato concreto (una fecha, un nombre, un número o una palabra clave) recorriendo el texto con la vista hasta encontrarlo. En el ICFES conviene combinarlas: primero haces skimming para saber de qué trata el texto; luego lees la pregunta y haces scanning para ubicar el párrafo donde está la respuesta. Por último, lee ese fragmento con atención, porque la respuesta correcta suele estar parafraseada, no copiada.",

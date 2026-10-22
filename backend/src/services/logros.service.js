@@ -9,7 +9,7 @@
 import { pool, una, varias } from '../config/db.js';
 import { HORARIOS_ESPECIALES, REGLAS } from '../config/reglas.js';
 import { horaLocal } from '../utils/fechas.js';
-import { darInsignia, otorgar } from './gamificacion.service.js';
+import { darInsignia, otorgar, subirNiveles } from './gamificacion.service.js';
 
 const CONSULTA_METRICAS = `
   SELECT
@@ -30,7 +30,32 @@ const CONSULTA_METRICAS = `
       WHERE usuario_id = $1 AND dominio >= $2 AND respondidas >= $3)               AS subtemas_dominados,
     (SELECT nivel FROM perfiles WHERE usuario_id = $1)                             AS nivel,
     (SELECT count(*) FROM mensajes_vanty WHERE usuario_id = $1 AND rol = 'usuario') AS mensajes_vanty,
-    (SELECT count(*) FROM historial_recompensas WHERE usuario_id = $1 AND motivo = 'compra') AS compras`;
+    (SELECT count(*) FROM historial_recompensas WHERE usuario_id = $1 AND motivo = 'compra') AS compras,
+    -- Temario vigente, simulacros, constancia y calendario.
+    (SELECT count(*) FROM progreso p JOIN subtemas s ON s.id = p.subtema_id AND s.activo
+      WHERE p.usuario_id = $1 AND p.completado)                                     AS temas_completados,
+    (SELECT count(*) FROM subtemas s JOIN temas t ON t.id = s.tema_id AND t.activo
+      WHERE s.activo)                                                              AS temas_total,
+    (SELECT count(*) FROM (
+       SELECT t.materia_id FROM subtemas s
+         JOIN temas t ON t.id = s.tema_id AND t.activo
+         LEFT JOIN progreso p ON p.subtema_id = s.id AND p.usuario_id = $1
+        WHERE s.activo GROUP BY t.materia_id
+       HAVING bool_and(coalesce(p.completado, FALSE))) a)                          AS areas_completas,
+    (SELECT count(DISTINCT t.materia_id) FROM progreso p
+       JOIN subtemas s ON s.id = p.subtema_id AND s.activo
+       JOIN temas t ON t.id = s.tema_id AND t.activo
+      WHERE p.usuario_id = $1 AND p.completado)                                     AS areas_con_tema,
+    (SELECT count(*) FROM resultados r JOIN simulacros s ON s.id = r.simulacro_id
+      WHERE r.usuario_id = $1 AND s.tipo = 'completo')                             AS simulacros_completos,
+    (SELECT count(DISTINCT r.simulacro_id) FROM resultados r JOIN simulacros s ON s.id = r.simulacro_id
+      WHERE r.usuario_id = $1 AND s.tipo = 'completo' AND s.activo)                AS simulacros_completos_distintos,
+    (SELECT count(DISTINCT r.simulacro_id) FROM resultados r JOIN simulacros s ON s.id = r.simulacro_id
+      WHERE r.usuario_id = $1 AND s.tipo = 'mini' AND s.activo)                    AS minis_distintos,
+    (SELECT count(DISTINCT r.simulacro_id) FROM resultados r JOIN simulacros s ON s.id = r.simulacro_id
+      WHERE r.usuario_id = $1 AND s.tipo = 'reto' AND s.activo AND r.aprobado)     AS retos_distintos,
+    (SELECT count(*) FROM actividad_diaria WHERE usuario_id = $1)                  AS dias_activos,
+    (SELECT (calendario_icfes IS NOT NULL)::int FROM perfiles WHERE usuario_id = $1) AS calendario_elegido`;
 
 function enHorario(hora, { desde, hasta }) {
   return desde < hasta ? hora >= desde && hora < hasta : hora >= desde || hora < hasta;
@@ -43,9 +68,13 @@ export async function calcularMetricas(usuarioId, { estudio = false } = {}, clie
     [usuarioId, REGLAS.dominio.umbralDominado, REGLAS.dominio.minimoRespondidas],
     cliente,
   );
+  for (const [clave, valor] of Object.entries(m)) m[clave] = Number(valor ?? 0);
   const hora = horaLocal();
   m.estudio_madrugada = estudio && enHorario(hora, HORARIOS_ESPECIALES.madrugada) ? 1 : 0;
   m.estudio_nocturno = estudio && enHorario(hora, HORARIOS_ESPECIALES.nocturno) ? 1 : 0;
+  m.temario_porcentaje = m.temas_total ? Math.floor((100 * m.temas_completados) / m.temas_total) : 0;
+  // Porcentaje de aciertos, solo con una muestra suficiente (200 respuestas).
+  m.precision_200 = m.respuestas_total >= 200 ? Math.floor((100 * m.correctas_total) / m.respuestas_total) : 0;
   return m;
 }
 
@@ -61,7 +90,8 @@ export async function evaluarLogros(cliente, usuarioId, { estudio = false } = {}
               i.nombre AS insignia_nombre, i.icono AS insignia_icono, i.color AS insignia_color
          FROM logros l
          LEFT JOIN insignias i ON i.id = l.insignia_id
-        WHERE NOT EXISTS (SELECT 1 FROM usuario_logros ul WHERE ul.usuario_id = $1 AND ul.logro_id = l.id)
+        WHERE l.activo
+          AND NOT EXISTS (SELECT 1 FROM usuario_logros ul WHERE ul.usuario_id = $1 AND ul.logro_id = l.id)
         ORDER BY l.orden`,
       [usuarioId],
       cliente,
@@ -101,6 +131,9 @@ export async function evaluarLogros(cliente, usuarioId, { estudio = false } = {}
       eventos.push(...eventosRecompensa.filter((e) => e.tipo === 'nivel'));
     }
   }
+  // Al final de cada acción se revisa si ya cumple los requisitos del siguiente nivel (el
+  // progreso del temario o de las actividades pudo cambiar sin otorgar XP en ese momento).
+  eventos.push(...(await subirNiveles(cliente, usuarioId)));
   return eventos;
 }
 
@@ -114,6 +147,8 @@ export async function listarLogros(usuarioId) {
        FROM logros l
        LEFT JOIN usuario_logros ul ON ul.logro_id = l.id AND ul.usuario_id = $1
        LEFT JOIN insignias i ON i.id = l.insignia_id
+      -- Los logros retirados solo se muestran a quien ya los desbloqueó.
+      WHERE l.activo OR ul.desbloqueado_en IS NOT NULL
       ORDER BY l.orden`,
     [usuarioId],
   );

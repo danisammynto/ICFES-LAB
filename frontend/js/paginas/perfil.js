@@ -101,7 +101,7 @@ function pintar(p) {
           });
           return tarjeta;
         }))
-        : h('p', { class: 'texto-2' }, 'Aún no tienes insignias. Consíguelas con logros, rachas, niveles o en la tienda.')));
+        : h('p', { class: 'texto-2' }, 'Aún no tienes insignias. Consíguelas con logros, rachas y niveles.')));
 }
 
 async function recargar() {

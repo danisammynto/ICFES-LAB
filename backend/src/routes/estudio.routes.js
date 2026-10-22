@@ -22,6 +22,7 @@ router.post(
   ctrl.completar,
 );
 
+router.get('/practica/subtema/:slug', validado(slugParam()), ctrl.preguntasSubtema);
 router.get(
   '/practica/siguiente',
   validado(

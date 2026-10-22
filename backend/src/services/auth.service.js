@@ -63,7 +63,7 @@ export async function iniciarSesion({ email, password }) {
 export async function sesionActual(usuarioId) {
   const datos = await una(
     `SELECT u.id, u.nombre, u.email, u.rol, u.creado_en,
-            p.nombre_mostrar, p.avatar, p.xp, p.nivel, p.monedas, p.tema_interfaz, p.meta_diaria_min,
+            p.nombre_mostrar, p.avatar, p.xp, p.nivel, p.monedas, p.tema_interfaz, p.meta_diaria_min, p.calendario_icfes,
             n.nombre AS nivel_nombre, n.color AS nivel_color, n.icono AS nivel_icono, n.xp_minimo,
             sig.xp_minimo AS siguiente_xp, sig.nombre AS siguiente_nombre
        FROM usuarios u
@@ -87,6 +87,8 @@ export async function sesionActual(usuarioId) {
     rol: datos.rol,
     avatar: datos.avatar,
     tema_interfaz: datos.tema_interfaz,
+    // NULL hasta que el estudiante responde en qué calendario presentará el ICFES.
+    calendario_icfes: datos.calendario_icfes,
     xp: datos.xp,
     monedas: datos.monedas,
     nivel: {

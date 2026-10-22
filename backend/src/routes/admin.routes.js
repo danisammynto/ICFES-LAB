@@ -7,7 +7,6 @@ import * as ctrl from '../controllers/admin.controller.js';
 import { requireAuth, requireRol } from '../middlewares/auth.js';
 import { validado } from '../middlewares/validar.js';
 import { idEntero, idUuid, slugQuery } from '../validators/comunes.js';
-import { esFechaValida } from '../utils/fechas.js';
 
 const router = Router();
 router.use(requireAuth, requireRol('admin'));
@@ -22,10 +21,9 @@ router.get('/configuracion', ctrl.obtenerConfiguracion);
 router.put(
   '/configuracion',
   validado(
-    body('fecha_icfes').optional().isObject(),
-    body('fecha_icfes.fecha').optional().custom(esFechaValida).withMessage('La fecha no es válida.'),
-    body('fecha_icfes.nombre').optional().isString().trim().isLength({ max: 80 }),
-    body('fecha_icfes.estimada').optional().isBoolean().toBoolean(),
+    // Fechas oficiales por calendario: { A: { convocatoria, meses, fuente, fechas: [{ fecha, descripcion }] }, B: {…} }.
+    // El detalle se valida en admin.service (normalizarCalendarios).
+    body('calendarios_icfes').optional().isObject(),
     body('vanty').optional().isObject(),
     body('vanty.limite_diario').optional().isInt({ min: 1, max: 1000 }).toInt(),
   ),

@@ -41,6 +41,15 @@ export async function configuracion(req, res) {
   }));
 }
 
+export async function calendario(req, res) {
+  const d = datos(req);
+  res.json(await perfilService.actualizarCalendario(req.usuario.id, {
+    calendario: d.calendario_icfes,
+    fechaIcfes: d.fecha_icfes ?? null,
+    conFecha: Object.prototype.hasOwnProperty.call(req.body ?? {}, 'fecha_icfes'),
+  }));
+}
+
 export async function email(req, res) {
   const d = datos(req);
   res.json(await perfilService.cambiarEmail(req.usuario.id, { email: d.email, password: d.password }));

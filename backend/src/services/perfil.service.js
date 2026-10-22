@@ -7,14 +7,16 @@ import { AppError, conflicto, noEncontrado, solicitudInvalida } from '../utils/A
 import { porcentaje } from '../utils/texto.js';
 import { firmarToken } from '../middlewares/auth.js';
 import { hashPassword } from './auth.service.js';
-import { progresoNivel } from './gamificacion.service.js';
+import { progresoNivel, resumenJugador } from './gamificacion.service.js';
 import { estadoRacha } from './racha.service.js';
-import { fechaIcfes } from './config.service.js';
+import { calendariosIcfes, CALENDARIOS, fechaIcfes } from './config.service.js';
+import { evaluarLogros } from './logros.service.js';
+import { fechaLocal, sumarDias } from '../utils/fechas.js';
 
 export async function obtenerPerfil(usuarioId) {
   const datos = await una(
     `SELECT u.id, u.nombre, u.email, u.rol, u.creado_en,
-            p.nombre_mostrar, p.bio, p.colegio, p.ciudad, p.grado, p.avatar, p.fecha_icfes, p.meta_diaria_min,
+            p.nombre_mostrar, p.bio, p.colegio, p.ciudad, p.grado, p.avatar, p.fecha_icfes, p.calendario_icfes, p.meta_diaria_min,
             p.meta_puntaje, p.tema_interfaz, p.recordatorios, p.insignia_destacada_id
        FROM usuarios u JOIN perfiles p ON p.usuario_id = u.id
       WHERE u.id = $1`,
@@ -48,7 +50,9 @@ export async function obtenerPerfil(usuarioId) {
     estadoRacha(usuarioId),
     fechaIcfes(usuarioId),
     una(
-      `SELECT count(ul.logro_id)::int AS desbloqueados, (SELECT count(*) FROM logros)::int AS total
+      `SELECT count(ul.logro_id)::int AS desbloqueados,
+              (SELECT count(*) FROM logros l
+                WHERE l.activo OR EXISTS (SELECT 1 FROM usuario_logros u WHERE u.logro_id = l.id AND u.usuario_id = $1))::int AS total
          FROM usuario_logros ul WHERE ul.usuario_id = $1`,
       [usuarioId],
     ),
@@ -66,6 +70,7 @@ export async function obtenerPerfil(usuarioId) {
       insignia_destacada_id: datos.insignia_destacada_id,
     },
     configuracion: {
+      calendario_icfes: datos.calendario_icfes,
       fecha_icfes: datos.fecha_icfes,
       meta_diaria_min: datos.meta_diaria_min,
       meta_puntaje: datos.meta_puntaje,
@@ -151,6 +156,44 @@ export async function actualizarConfiguracion(usuarioId, cambios) {
     await query(`UPDATE perfiles SET ${asignaciones} WHERE usuario_id = $1`, [usuarioId, ...presentes.map(([, v]) => v)]);
   }
   return (await obtenerPerfil(usuarioId)).configuracion;
+}
+
+/**
+ * Guarda el calendario (A o B) en el que el estudiante presentará el Saber 11 y, si hace falta,
+ * la fecha de su citación. No toca el progreso: solo cambia la cuenta regresiva.
+ *   - Si el ICFES publicó una única fecha oficial para ese calendario, se usa esa.
+ *   - Si publicó varias, la fecha enviada debe ser una de ellas (la de su citación).
+ *   - Si aún no la publicó, se acepta la fecha de la citación (hoy o posterior).
+ * Al cambiar de calendario se descarta la fecha anterior, salvo que se envíe una nueva.
+ */
+export async function actualizarCalendario(usuarioId, { calendario, fechaIcfes: fecha, conFecha }) {
+  if (!CALENDARIOS.includes(calendario)) throw solicitudInvalida('Elige el Calendario A o el Calendario B.');
+  const config = await calendariosIcfes();
+  const hoy = fechaLocal();
+  const opciones = config[calendario].fechas.filter((f) => f.fecha >= hoy);
+  let nuevaFecha = conFecha ? fecha ?? null : undefined;
+  if (nuevaFecha) {
+    if (opciones.length === 1) nuevaFecha = null; // Manda la fecha oficial.
+    else if (opciones.length > 1 && !opciones.some((o) => o.fecha === nuevaFecha)) {
+      throw solicitudInvalida('Elige una de las fechas oficiales publicadas por el ICFES para tu calendario.');
+    } else if (nuevaFecha < hoy || nuevaFecha > sumarDias(hoy, 730)) {
+      throw solicitudInvalida('La fecha de tu citación debe ser de hoy en adelante (máximo dos años).');
+    }
+  }
+
+  return transaccion(async (cliente) => {
+    const actual = await una(`SELECT calendario_icfes FROM perfiles WHERE usuario_id = $1 FOR UPDATE`, [usuarioId], cliente);
+    const cambia = actual?.calendario_icfes !== calendario;
+    if (nuevaFecha === undefined) nuevaFecha = cambia ? null : undefined;
+    await cliente.query(
+      `UPDATE perfiles SET calendario_icfes = $2,
+              fecha_icfes = CASE WHEN $3 THEN $4::date ELSE fecha_icfes END
+        WHERE usuario_id = $1`,
+      [usuarioId, calendario, nuevaFecha !== undefined, nuevaFecha ?? null],
+    );
+    const eventos = await evaluarLogros(cliente, usuarioId);
+    return { calendario_icfes: calendario, eventos, jugador: await resumenJugador(cliente, usuarioId) };
+  }).then(async (r) => ({ ...r, cuenta_regresiva: await fechaIcfes(usuarioId) }));
 }
 
 async function verificarPassword(usuarioId, password) {

@@ -52,8 +52,17 @@ async function main() {
   }
 
   const { rows } = await pool.query(`SELECT to_regclass('public.usuarios') IS NOT NULL AS existe`);
+  if (rows[0].existe) {
+    // Migraciones idempotentes para bases creadas con versiones anteriores del esquema.
+    const carpeta = path.join(env.raiz, 'database', 'migraciones');
+    const migraciones = fs.existsSync(carpeta) ? fs.readdirSync(carpeta).filter((f) => f.endsWith('.sql')).sort() : [];
+    for (const archivo of migraciones) {
+      await pool.query(fs.readFileSync(path.join(carpeta, archivo), 'utf8'));
+    }
+    if (migraciones.length) console.log(`✔ Migraciones aplicadas: ${migraciones.join(', ')}.`);
+  }
   if (rows[0].existe && soloSiVacia) {
-    console.log('• La base de datos ya está instalada: no se modifica (--solo-si-vacia).');
+    console.log('• La base de datos ya está instalada: no se modifica el contenido (--solo-si-vacia).');
     return;
   }
   if (rows[0].existe) {

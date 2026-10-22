@@ -160,7 +160,7 @@ export async function leccionDelDia(usuarioId) {
          FROM lecciones l
          JOIN subtemas s ON s.id = l.subtema_id
          JOIN temas t ON t.id = s.tema_id
-        WHERE t.materia_id = $2 AND l.activa AND s.nivel_requerido <= $3
+        WHERE t.materia_id = $2 AND l.activa AND s.activo AND s.nivel_requerido <= $3
           AND NOT EXISTS (SELECT 1 FROM lecciones_completadas lc WHERE lc.leccion_id = l.id AND lc.usuario_id = $1)
         ORDER BY t.orden, s.orden, l.orden
         LIMIT 1`,
@@ -184,7 +184,7 @@ export async function leccionDelDia(usuarioId) {
        JOIN temas t ON t.id = s.tema_id
        JOIN materias m ON m.id = t.materia_id
        LEFT JOIN progreso p ON p.subtema_id = s.id AND p.usuario_id = $1
-      WHERE s.nivel_requerido <= $2
+      WHERE s.activo AND s.nivel_requerido <= $2
       ORDER BY coalesce(p.dominio, 0), random()
       LIMIT 1`,
     [usuarioId, nivel],

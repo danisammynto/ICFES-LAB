@@ -93,6 +93,16 @@ for (const { archivo, datos } of leer('lecciones')) {
     totalLecciones += 1;
   }
 }
+// El contenido de temarios anteriores que ya no está en los JSON se desactiva (se conserva su historial).
+const codigosPreguntas = leer('preguntas').flatMap(({ datos }) => (datos.preguntas ?? []).map((p) => p.codigo));
+const codigosLecciones = leer('lecciones').flatMap(({ datos }) => (datos.lecciones ?? []).map((l) => l.codigo));
+if (codigosPreguntas.length) {
+  bloques.push('', '-- Preguntas y lecciones de temarios anteriores: quedan inactivas, con su historial.',
+    `UPDATE preguntas SET activa = FALSE WHERE origen = 'banco' AND activa AND codigo NOT IN (${codigosPreguntas.map(literal).join(', ')});`);
+}
+if (codigosLecciones.length) {
+  bloques.push(`UPDATE lecciones SET activa = FALSE WHERE activa AND codigo NOT IN (${codigosLecciones.map(literal).join(', ')});`);
+}
 bloques.push('', 'COMMIT;', '');
 
 fs.writeFileSync(SALIDA, bloques.join('\n'), 'utf8');

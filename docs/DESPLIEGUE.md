@@ -251,7 +251,7 @@ No abras los puertos 3000 ni 5432: solo Nginx debe ser accesible desde Internet.
 cd /opt/icfes-lab && git pull && npm ci --omit=dev && npm run db:setup && pm2 restart icfes-lab
 ```
 
-`npm run db:setup` es seguro sobre una base existente: actualiza el catálogo y el contenido sin borrar datos de los estudiantes. El proyecto no incluye un sistema de migraciones, así que si una versión nueva modifica `schema.sql` aplica ese cambio con un script SQL propio antes de reiniciar.
+`npm run db:setup` es seguro sobre una base existente: aplica en orden las migraciones de `database/migraciones/*.sql` (idempotentes), actualiza el catálogo y el contenido, y no borra datos de los estudiantes. Cuando cambia el temario, los temas, lecciones y preguntas anteriores se **desactivan** (`activo = FALSE` / `activa = FALSE`) en lugar de borrarse, así las respuestas, el progreso y los logros de cada estudiante se conservan. Si una versión nueva modifica `schema.sql`, agrega la migración correspondiente en esa carpeta (con `IF NOT EXISTS` / `CREATE OR REPLACE`) antes de desplegar.
 
 ---
 

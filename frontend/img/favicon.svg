@@ -1,8 +1,32 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
-  <rect x="2" y="2" width="44" height="44" rx="13" fill="#484ea2"/>
-  <path d="M19 12h10M21 12v8.5L13.6 32.9a3.2 3.2 0 0 0 2.8 4.8h15.2a3.2 3.2 0 0 0 2.8-4.8L27 20.5V12" fill="none" stroke="#ffffff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M16.3 30.4h15.4l2 3.4a1.6 1.6 0 0 1-1.4 2.4H15.7a1.6 1.6 0 0 1-1.4-2.4z" fill="#d5e068"/>
-  <circle cx="22" cy="26" r="1.7" fill="#81a1f6"/>
-  <circle cx="26.6" cy="23.4" r="1.2" fill="#81a1f6"/>
-  <path d="M37 7.5l1.3 3.2 3.2 1.3-3.2 1.3L37 16.5l-1.3-3.2-3.2-1.3 3.2-1.3z" fill="#fda879"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="ICFES Lab">
+  <title>ICFES Lab</title>
+  <!-- Silueta de la cabeza de la mascota: capucha, punta enroscada con farolito y cara. -->
+  <defs>
+    <linearGradient id="capucha" x1="0.1" y1="0" x2="0.6" y2="1">
+      <stop offset="0" stop-color="#93e7d2"/>
+      <stop offset="1" stop-color="#55bfa7"/>
+    </linearGradient>
+    <radialGradient id="farol" cx="0.35" cy="0.3" r="0.8">
+      <stop offset="0" stop-color="#ffe9a3"/>
+      <stop offset="1" stop-color="#eda42b"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Punta enroscada (va detrás de la capucha) -->
+  <path fill="none" stroke="#6fd0b9" stroke-width="6" stroke-linecap="round"
+        d="M34 16c7-6 17-4 19 4 1 5-1 9-5 11"/>
+  <!-- Farolito -->
+  <circle cx="47" cy="34" r="7" fill="url(#farol)"/>
+  <circle cx="44.6" cy="31.4" r="2" fill="#fff6d2" opacity="0.9"/>
+
+  <!-- Capucha -->
+  <path fill="url(#capucha)"
+        d="M7 50C4 37 7 23 19 15c6-4 13-4 17 1 7 7 10 20 7 32-2 8-9 12-18 12S9 57 7 50z"/>
+  <!-- Cara -->
+  <ellipse cx="26.5" cy="44" rx="13.5" ry="12.5" fill="#fbeada"/>
+  <ellipse cx="21" cy="43" rx="3" ry="3.8" fill="#23264f"/>
+  <ellipse cx="32" cy="43" rx="3" ry="3.8" fill="#23264f"/>
+  <circle cx="22.2" cy="41.6" r="0.9" fill="#ffffff"/>
+  <circle cx="33.2" cy="41.6" r="0.9" fill="#ffffff"/>
+  <path d="M23.5 50.5q3 2.8 6 0" fill="none" stroke="#23264f" stroke-width="1.8" stroke-linecap="round"/>
 </svg>

@@ -15,7 +15,7 @@ const FRASES = [
   'Hoy es un buen día para sumar XP y acercarte a tu meta.',
   'Leer con calma también es una estrategia: el ICFES premia la comprensión.',
   'Tu cerebro es un músculo: cada lección lo hace más fuerte.',
-  'Paso a paso, tema a tema: así se llega a Maestro ICFES.',
+  'Paso a paso, tema a tema: así se llega a Experto.',
   'La preparación convierte los nervios en confianza.',
 ];
 
@@ -31,7 +31,7 @@ export function mensajeDelDia(ctx) {
     if (ctx.hoy.minutos >= ctx.meta_diaria_min) {
       return `¡Cumpliste tu meta de hoy, ${nombre}! ${fraseDelDia(ctx.usuarioId)}`;
     }
-    return `¡Bien, ${nombre}! Ya sumaste tu día ${ctx.racha.actual} de racha. Te faltan ${Math.max(0, ctx.meta_diaria_min - ctx.hoy.minutos)} min para tu meta diaria.`;
+    return `¡Bien, ${nombre}! Te faltan ${Math.max(0, ctx.meta_diaria_min - ctx.hoy.minutos)} min para tu meta diaria.`;
   }
   if (ctx.racha?.actual >= 2) {
     return `${nombre}, llevas ${ctx.racha.actual} días seguidos. ¡No rompas la racha! ${fraseDelDia(ctx.usuarioId)}`;

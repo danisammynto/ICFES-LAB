@@ -10,8 +10,9 @@ flowchart TB
     A --> B["XP y monedas"]
     A --> R["Racha diaria"]
     A --> L["Logros e insignias"]
-    B --> N["Niveles<br/>Principiante → Maestro ICFES"]
-    B --> T["Tienda<br/>avatar · insignias · protectores"]
+    B --> N["Niveles<br/>Principiante → Experto"]
+    A --> N
+    B --> T["Tienda<br/>avatar · protectores"]
     R --> H["Hitos de racha<br/>XP · monedas · protectores · insignias"]
     T -. "protectores" .-> R
     N --> D["Desbloqueos<br/>subtemas · retos · artículos"]
@@ -39,15 +40,27 @@ Cada acción de estudio devuelve **eventos** (`+XP`, `+monedas`, subida de nivel
 
 ## Niveles
 
-| Nivel | Nombre | XP mínimo | Monedas al subir | Insignia | Desbloquea |
-|---|---|---|---|---|---|
-| 1 | Principiante | 0 | — | — | 15 subtemas básicos de las 5 áreas, camino de minisimulacros, simulacros completos, retos Relámpago y Supera tu punto débil. |
-| 2 | Explorador | 400 | 30 | Explorador (rara) | Subtemas Probabilidad, Análisis de textos, Física, Economía y Context understanding · reto Precisión · fondo Circuitos · insignias de tienda Cerebro galáctico y Futuro profesional. |
-| 3 | Avanzado | 1500 | 60 | Avanzado (rara) | Subtemas Cálculo básico, Argumentación, Química, Política y Language use · reto Maratón mixta · Birrete de grado, Ojos de estrella, fondo Aurora · insignia Diamante académico. |
-| 4 | Experto | 4500 | 100 | Experto (épica) | Reto Desafío Experto · color Dorado, Modo genio, fondo Rayos dorados. |
-| 5 | Maestro ICFES | 10 000 | 200 | Maestro ICFES (legendaria) | Reto final Maestro ICFES · Corona y color Galaxia. |
+Hay 4 niveles; el máximo es **Experto**. Para subir no basta la XP: hay que cumplir **todos** los requisitos académicos del nivel, que se definen en `niveles.requisitos` (`database/seed.sql`) y se calculan en [`niveles.service.js`](../backend/src/services/niveles.service.js).
 
-La curva está calibrada para que el nivel Explorador llegue en los primeros días y Maestro ICFES requiera meses de estudio constante (la cuenta de demostración, con 6 semanas de actividad, está en el nivel 4).
+| Nivel | Nombre | XP | Días de estudio | Preguntas respondidas | Aciertos | Temas completados en **cada** área | Actividades completadas | Monedas | Insignia |
+|---|---|---|---|---|---|---|---|---|---|
+| 1 | Principiante | 0 | — | — | — | — | — | — | — |
+| 2 | Explorador | 1000 | 7 | 150 | 55 % | 25 % | — | 30 | Explorador (rara) |
+| 3 | Avanzado | 4000 | 25 | 600 | 65 % | 60 % | 50 % | 60 | Avanzado (rara) |
+| 4 | Experto | 9000 | 45 | 1000 | 75 % | 85 % | **90 %** | 100 | Experto (épica) |
+
+- **Temas completados:** lección del tema hecha y dominio ≥ 60 %. Se exige en cada una de las 5 áreas del temario vigente: Lectura Crítica (7 temas), Matemáticas (12), Sociales y Ciudadanas (16), Ciencias Naturales (40) e Inglés (9).
+- **Actividades de la plataforma:** las 84 lecciones, los 84 temas, los 10 minisimulacros, los 5 simulacros completos y los 5 retos (188 en total). **Experto** exige el 90 % de todas ellas.
+- **Aciertos:** porcentaje de respuestas correctas sobre todas las respuestas (práctica, lecciones, simulacros, retos y Vanty).
+- Los niveles se alcanzan en orden y **nunca se pierden**: quien ya estaba en un nivel lo conserva aunque los requisitos hayan subido. El nivel 5 (Maestro ICFES) se eliminó: quien estaba en él quedó en Experto con su XP, logros e insignias.
+- En **Logros → Niveles** el estudiante ve los requisitos del siguiente nivel con su avance (por ejemplo, «Temario en cada área · 18 % de 25 %», con el detalle por área), y en el Inicio cuántos requisitos lleva.
+
+| Nivel | Desbloquea |
+|---|---|
+| 1 | 70 temas del temario de las 5 áreas, camino de minisimulacros, los 5 simulacros completos, retos Relámpago y Supera tu punto débil. |
+| 2 | Los 14 temas de continuación (II y III) de Matemáticas, Ciencias Naturales y Sociales y Ciudadanas · reto Precisión · fondo Circuitos. |
+| 3 | Reto Maratón mixta · Birrete de grado, Ojos de estrella, fondo Aurora. |
+| 4 | Reto Desafío Experto · color Dorado, Galaxia, Modo genio, Corona y fondo Rayos dorados. |
 
 ## Monedas
 
@@ -116,24 +129,44 @@ Se evalúan después de cada acción. Como un logro puede subir de nivel al estu
 | Dominio total | Dominio ≥ 80 % en un subtema (con 2+ respuestas) | 100 | 30 | — |
 | Estudiante dedicado | Completar 25 lecciones | 250 | 60 | — |
 | Nivel Experto | Alcanzar el nivel 4 | — | 100 | — |
-| Maestro ICFES | Alcanzar el nivel 5 | — | 200 | — |
 | Buen conversador | Enviar 10 mensajes a Vanty | 50 | 15 | — |
 | Estilo propio | Comprar el primer artículo | 30 | — | — |
 | Madrugador 🔒 | Estudiar entre las 4:00 y las 6:59 a. m. | 40 | 10 | Madrugador |
 | Búho nocturno 🔒 | Estudiar entre las 10:00 p. m. y las 3:59 a. m. | 40 | 10 | Búho nocturno |
+| Fecha en la mira | Elegir el calendario del ICFES (A o B) | 20 | 5 | — |
+| Primeros temas | Completar 5 temas del temario | 80 | 20 | — |
+| Un tercio del temario | Completar 25 temas | 250 | 60 | — |
+| Explorador de áreas | Completar al menos un tema en cada una de las 5 áreas | 120 | 30 | — |
+| Área dominada | Completar todos los temas de un área | 300 | 80 | — |
+| Temario completo | Completar todos los temas del temario | 800 | 200 | — |
+| Lector incansable | Completar 50 lecciones | 300 | 70 | — |
+| Prueba de fuego | Terminar el primer simulacro completo | 150 | 40 | — |
+| Simulacros al día | Terminar los 5 simulacros completos | 500 | 120 | — |
+| Camino recorrido | Completar los 10 minisimulacros | 300 | 80 | — |
+| Club de los 400 | 400 puntos o más en un simulacro completo | 400 | 100 | — |
+| Retador total | Superar los 5 retos | 300 | 80 | — |
+| Mil aciertos | 1000 respuestas correctas | 700 | 150 | — |
+| Puntería fina | 70 % de aciertos con 200 respuestas o más | 200 | 50 | — |
+| 30 días de estudio | Estudiar 30 días distintos | 200 | 50 | — |
+| 100 días de estudio | Estudiar 100 días distintos | 600 | 150 | — |
+| Nivel Explorador | Alcanzar el nivel 2 | — | 20 | — |
+| Nivel Avanzado | Alcanzar el nivel 3 | — | 50 | — |
 
 🔒 Logros secretos: su nombre y condición se ocultan hasta desbloquearlos.
 
+En total hay **38 logros**. Los nuevos se entregan también a quien ya cumplía la condición, en su siguiente acción. El logro «Maestro ICFES» se retiró junto con el nivel 5: quien lo había desbloqueado lo conserva (`logros.activo = FALSE` solo lo oculta para los demás).
+
 ## Insignias
 
-19 insignias con rareza común, rara, épica o legendaria:
+12 insignias con rareza común, rara, épica o legendaria. **Ya no se compran:** se ganan con niveles, rachas y logros.
 
 | Origen | Insignias |
 |---|---|
-| Niveles (4) | Explorador, Avanzado, Experto, Maestro ICFES |
+| Niveles (3) | Explorador, Avanzado, Experto |
 | Rachas (3) | Llama semanal (7 días), Fuego constante (30), Llama eterna (100) |
 | Logros (6) | Centenario, Perfeccionista, Veterano, Todoterreno, Madrugador, Búho nocturno |
-| Tienda (6) | Ratón de biblioteca (80), Mente rápida (120), Estrella ICFES (180), Cerebro galáctico (250, nivel 2), Futuro profesional (300, nivel 2), Diamante académico (450, nivel 3) |
+
+Las 6 insignias que antes vendía la tienda y la del nivel Maestro quedaron con `insignias.activa = FALSE`: quien las tenía las conserva y las sigue viendo en su colección; los demás ya no las ven.
 
 El estudiante puede **destacar** una insignia en su perfil.
 
@@ -141,12 +174,13 @@ El estudiante puede **destacar** una insignia en su perfil.
 
 | Categoría | Artículos | Precios |
 |---|---|---|
-| Color del avatar | Lima, Cielo, Índigo (gratis) · Durazno, Menta, Lavanda, Coral · Dorado (nivel 4) · Galaxia (nivel 5) | 0–400 |
+| Color del avatar | Lima, Cielo, Índigo (gratis) · Durazno, Menta, Lavanda, Coral · Dorado y Galaxia (nivel 4) | 0–400 |
 | Expresión | Feliz, Sonriente (gratis) · Guiño, Concentrado, Asombro · Ojos de estrella (nivel 3) · Modo genio (nivel 4) | 0–200 |
-| Accesorio | Sin accesorio (gratis) · Moño, Gafas de estudio, Gorra, Antenas, Audífonos · Birrete de grado (nivel 3) · Corona (nivel 5) | 0–500 |
+| Accesorio | Sin accesorio (gratis) · Moño, Gafas de estudio, Gorra, Antenas, Audífonos · Birrete de grado (nivel 3) · Corona (nivel 4) | 0–500 |
 | Fondo | Índigo, Cielo, Lima suave (gratis) · Atardecer, Noche estrellada · Circuitos (nivel 2) · Aurora (nivel 3) · Rayos dorados (nivel 4) | 0–350 |
 | Protector de racha | Mantiene la racha un día sin estudio (máximo 3) | 100 |
-| Insignias de colección | Ver [Insignias](#insignias) | 80–450 |
+
+La tienda ya no vende insignias (la API rechaza `tipo: "insignia"`).
 
 El avatar se compone con un artículo de cada categoría (color, expresión, accesorio y fondo) y solo se pueden equipar artículos del inventario. Una compra sin saldo suficiente falla sin descontar nada.
 
@@ -156,11 +190,11 @@ El avatar se compone con un artículo de cada categoría (color, expresión, acc
 
 | Tipo | Cantidad | Estructura | Selección de preguntas | Recompensa (primera vez) |
 |---|---|---|---|---|
-| **Simulacro completo** | 10 | 2 sesiones de 4 h 30 min. Sesión 1: Lectura Crítica 41, Matemáticas 25, Sociales 25, Ciencias 29. Sesión 2: Matemáticas 25, Ciencias 29, Sociales 25, Inglés 55. | Fija con semilla: el mismo simulacro tiene las mismas preguntas para todos. | 200 XP + 2 XP por acierto · 50 monedas |
+| **Simulacro completo** | 5 | 2 sesiones de 4 h 30 min. Primera sesión (120): Lectura Crítica 41, Matemáticas 25, Sociales y Ciudadanas 25, Ciencias Naturales 29. Segunda sesión (134): Matemáticas 25, Sociales y Ciudadanas 25, Ciencias Naturales 29, Inglés 55. Total: 254. | Fija con semilla: el mismo simulacro tiene las mismas preguntas para todos. | 200 XP + 2 XP por acierto · 50 monedas |
 | **Minisimulacro** (camino) | 10 | 1 sesión de 30 min. 1–3: 20 preguntas (dificultad baja y media); 4–7: 25 (todas); 8–10: 30 (media y alta). | Adaptativa: prioriza preguntas no vistas o falladas y subtemas débiles. Cada uno se desbloquea al completar el anterior. | 60 a 105 XP + 2 por acierto · 15 monedas + 5 por estrella |
-| **Reto** | 6 | Ver tabla de retos. | Aleatoria, por área débil o por dificultad. | Solo si se supera el porcentaje de aprobación |
+| **Reto** | 5 | Ver tabla de retos. | Aleatoria, por área débil o por dificultad. | Solo si se supera el porcentaje de aprobación |
 
-**Con el banco inicial** (10 preguntas por área), un simulacro completo usa las 50 preguntas disponibles (25 por sesión) y la duración se ajusta al mismo ritmo del examen real: 56 min la sesión 1 y 50 min la sesión 2. Cuando el banco tenga al menos 50 preguntas de Matemáticas, 41 de Lectura Crítica, 50 de Sociales, 58 de Ciencias y 55 de Inglés (254 en total), los simulacros completos tendrán la extensión y los tiempos reales del Saber 11 sin cambiar el código.
+**Con el banco actual** (252 preguntas: 21 de Lectura Crítica, 36 de Matemáticas, 48 de Sociales, 120 de Ciencias y 27 de Inglés), cada simulacro completo arma 190 de sus 254 preguntas y la duración se ajusta al ritmo del examen real (6 h 44 min en total); las tarjetas lo indican («190 de 254 preguntas»). Cuando el banco tenga al menos 41 preguntas de Lectura Crítica, 50 de Matemáticas, 50 de Sociales, 58 de Ciencias y 55 de Inglés, los simulacros tendrán la extensión y los tiempos completos sin cambiar el código. Los simulacros 6 a 10 de versiones anteriores quedaron inactivos (sus resultados se conservan).
 
 **Retos por nivel:**
 
@@ -171,7 +205,8 @@ El avatar se compone con un artículo de cada categoría (color, expresión, acc
 | Precisión | 2 | 12 mixtas | 15 min | 80 % | 120 XP · 30 monedas |
 | Maratón mixta | 3 | 20 (4 por área) | 25 min | 70 % | 180 XP · 45 monedas |
 | Desafío Experto | 4 | 15 de dificultad alta | 20 min | 70 % | 250 XP · 70 monedas |
-| Maestro ICFES | 5 | 25 exigentes (5 por área) | 30 min | 80 % | 400 XP · 120 monedas |
+
+El reto «Maestro ICFES» se retiró con el nivel 5 (sus resultados se conservan).
 
 **Reglas comunes:**
 

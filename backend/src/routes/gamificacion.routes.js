@@ -20,7 +20,7 @@ router.get('/tienda', ctrl.tienda);
 router.post(
   '/tienda/comprar',
   validado(
-    body('tipo').isIn(['item', 'insignia']).withMessage('Tipo de compra no válido.'),
+    body('tipo').isIn(['item']).withMessage('Solo se pueden comprar artículos: las insignias se ganan con logros, niveles y rachas.'),
     body('codigo').isString().matches(/^[a-z0-9-]{2,40}$/).withMessage('Artículo no válido.'),
   ),
   ctrl.compra,

@@ -1,0 +1,45 @@
+/* =============================================================================
+   ICFES Lab · Mascota del estudiante (videos por etapa)
+   El fondo blanco del video se recorta en un lienzo (js/core/personaje.js), así que
+   el personaje se apoya directamente sobre la tarjeta, sin recuadro ni deformación.
+   ============================================================================= */
+
+.personaje {
+  position: relative;
+  display: block;
+  aspect-ratio: var(--personaje-proporcion, 0.75);
+  /* El personaje se dibuja en el lienzo; el video queda oculto como fuente. */
+  line-height: 0;
+}
+
+.personaje-lienzo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  /* La sombra sigue la silueta recortada, no una caja. */
+  filter: drop-shadow(0 12px 18px rgba(35, 38, 79, 0.28));
+}
+
+.personaje-fuente {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* --- Variantes ------------------------------------------------------------------ */
+
+/* Dashboard: la mascota asomada en la tarjeta del recordatorio. */
+.personaje-widget .personaje-lienzo { filter: drop-shadow(0 14px 22px rgba(20, 22, 55, 0.35)); }
+.personaje-widget { animation: flotar 4s ease-in-out infinite; }
+
+/* Inicio de sesión y registro. */
+.personaje-marca { animation: flotar 4.5s ease-in-out infinite; }
+
+/* Tienda: tira de evolución. */
+.personaje-etapa .personaje-lienzo { filter: drop-shadow(0 8px 14px rgba(20, 22, 55, 0.3)); }
+
+@media (prefers-reduced-motion: reduce) {
+  .personaje-widget, .personaje-marca { animation: none; }
+}

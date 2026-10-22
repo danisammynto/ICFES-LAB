@@ -51,9 +51,12 @@ CREATE TABLE niveles (
   color               VARCHAR(9)   NOT NULL DEFAULT '#484ea2',
   icono               VARCHAR(40)  NOT NULL DEFAULT 'sprout',
   recompensa_monedas  INTEGER      NOT NULL DEFAULT 0 CHECK (recompensa_monedas >= 0),
-  desbloqueos         JSONB        NOT NULL DEFAULT '[]'::jsonb
+  desbloqueos         JSONB        NOT NULL DEFAULT '[]'::jsonb,
+  -- Requisitos académicos además de la XP: {"dias_activos":7,"respondidas":150,"precision":55,
+  --  "temario_area":25,"actividades":50}. Ver backend/src/services/niveles.service.js.
+  requisitos          JSONB        NOT NULL DEFAULT '{}'::jsonb
 );
-COMMENT ON TABLE niveles IS 'Niveles del estudiante según su XP: Principiante → Maestro ICFES.';
+COMMENT ON TABLE niveles IS 'Niveles del estudiante: Principiante → Experto (XP + actividad, preguntas, aciertos y temario).';
 
 -- =============================================================================
 -- 5b. Insignias (perfiles referencia la insignia destacada)
@@ -72,6 +75,8 @@ CREATE TABLE insignias (
   precio_monedas   INTEGER      CHECK (precio_monedas IS NULL OR precio_monedas > 0),
   nivel_requerido  SMALLINT     NOT NULL DEFAULT 1 REFERENCES niveles (numero),
   orden            SMALLINT     NOT NULL DEFAULT 0,
+  -- FALSE: ya no se puede obtener (p. ej. las de la tienda); quien la tiene la conserva.
+  activa           BOOLEAN      NOT NULL DEFAULT TRUE,
   -- Solo las insignias de tienda tienen precio.
   CONSTRAINT insignias_precio_tienda_ck CHECK ((origen = 'tienda') = (precio_monedas IS NOT NULL))
 );
@@ -109,7 +114,9 @@ CREATE TABLE perfiles (
   grado                  VARCHAR(12)  CHECK (grado IN ('10', '11', 'egresado', 'otro')),
   avatar                 JSONB        NOT NULL DEFAULT
                            '{"color":"color-lima","expresion":"expresion-feliz","accesorio":"accesorio-ninguno","fondo":"fondo-indigo"}'::jsonb,
-  fecha_icfes            DATE,        -- Fecha personal; si es NULL se usa la fecha global.
+  fecha_icfes            DATE,        -- Fecha de la citación o convocatoria elegida (si la oficial no es única).
+  -- Calendario del Saber 11 que presentará ('A' o 'B'); NULL = aún no lo ha elegido.
+  calendario_icfes       CHAR(1)      CONSTRAINT perfiles_calendario_icfes_ck CHECK (calendario_icfes IN ('A', 'B')),
   meta_diaria_min        SMALLINT     NOT NULL DEFAULT 30 CHECK (meta_diaria_min BETWEEN 5 AND 240),
   meta_puntaje           SMALLINT     CHECK (meta_puntaje BETWEEN 0 AND 500),
   tema_interfaz          VARCHAR(10)  NOT NULL DEFAULT 'sistema' CHECK (tema_interfaz IN ('claro', 'oscuro', 'sistema')),
@@ -157,7 +164,9 @@ CREATE TABLE temas (
   slug             VARCHAR(60)  NOT NULL UNIQUE,
   nombre           VARCHAR(100) NOT NULL,
   descripcion      VARCHAR(300) NOT NULL DEFAULT '',
-  orden            SMALLINT     NOT NULL DEFAULT 0
+  orden            SMALLINT     NOT NULL DEFAULT 0,
+  -- Los temas de temarios anteriores se conservan (con su historial) pero no se muestran.
+  activo           BOOLEAN      NOT NULL DEFAULT TRUE
 );
 CREATE INDEX temas_materia_idx ON temas (materia_id, orden);
 
@@ -170,9 +179,11 @@ CREATE TABLE subtemas (
   icono            VARCHAR(40)  NOT NULL DEFAULT 'book-open',
   -- Nivel del estudiante necesario para desbloquear el subtema.
   nivel_requerido  SMALLINT     NOT NULL DEFAULT 1 REFERENCES niveles (numero),
-  orden            SMALLINT     NOT NULL DEFAULT 0
+  orden            SMALLINT     NOT NULL DEFAULT 0,
+  activo           BOOLEAN      NOT NULL DEFAULT TRUE
 );
 CREATE INDEX subtemas_tema_idx ON subtemas (tema_id, orden);
+CREATE INDEX subtemas_activos_idx ON subtemas (tema_id, orden) WHERE activo;
 
 CREATE TABLE lecciones (
   id                  INTEGER      GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
@@ -240,8 +251,8 @@ CREATE TABLE opciones (
 -- Como máximo una opción correcta por pregunta.
 CREATE UNIQUE INDEX opciones_una_correcta_uq ON opciones (pregunta_id) WHERE es_correcta;
 
--- Integridad diferida: al confirmar la transacción cada pregunta debe tener
--- exactamente 4 opciones y exactamente 1 correcta.
+-- Integridad diferida: al confirmar la transacción cada pregunta debe tener 3 o 4 opciones
+-- (la prueba de Inglés usa 3 en varias partes) y exactamente 1 correcta.
 CREATE OR REPLACE FUNCTION tg_validar_opciones_pregunta() RETURNS trigger AS $$
 DECLARE
   v_pregunta INTEGER;
@@ -265,8 +276,8 @@ BEGIN
     INTO v_total, v_correctas
     FROM opciones WHERE pregunta_id = v_pregunta;
 
-  IF v_total <> 4 OR v_correctas <> 1 THEN
-    RAISE EXCEPTION 'La pregunta % debe tener 4 opciones y 1 correcta (tiene % y %).',
+  IF v_total NOT BETWEEN 3 AND 4 OR v_correctas <> 1 THEN
+    RAISE EXCEPTION 'La pregunta % debe tener 3 o 4 opciones y 1 correcta (tiene % y %).',
       v_pregunta, v_total, v_correctas
       USING ERRCODE = 'check_violation';
   END IF;
@@ -454,7 +465,9 @@ CREATE TABLE logros (
   monedas_recompensa  INTEGER      NOT NULL DEFAULT 0,
   insignia_id         INTEGER      REFERENCES insignias (id) ON DELETE SET NULL,
   secreto             BOOLEAN      NOT NULL DEFAULT FALSE,
-  orden               SMALLINT     NOT NULL DEFAULT 0
+  orden               SMALLINT     NOT NULL DEFAULT 0,
+  -- FALSE: logro retirado (p. ej. el del nivel Maestro); quien lo desbloqueó lo conserva.
+  activo              BOOLEAN      NOT NULL DEFAULT TRUE
 );
 
 CREATE TABLE usuario_logros (

@@ -1,214 +1,4806 @@
 {
   "materia": "ciencias-naturales",
-  "contextos": {
-    "CIE-CTX-01": {
-      "titulo": "Sal en el agua de riego y germinación del fríjol",
-      "texto": "En algunas zonas secas del Caribe colombiano, ciertos pozos tienen agua con sales disueltas. Un grupo de estudiantes quiso averiguar si la sal del agua de riego afecta la germinación de las semillas de fríjol.\nColocaron 20 semillas de la misma variedad en cada uno de cuatro platos con algodón y regaron cada plato con 10 mL diarios de una solución distinta. Los cuatro platos se mantuvieron a 25 °C y con la misma iluminación. Después de 7 días contaron las semillas germinadas en cada plato:\n• Plato 1 · agua sin sal (0 g/L): 18 semillas germinadas.\n• Plato 2 · agua con 2 g/L de sal: 15 semillas germinadas.\n• Plato 3 · agua con 4 g/L de sal: 9 semillas germinadas.\n• Plato 4 · agua con 8 g/L de sal: 2 semillas germinadas.",
-      "imagen": null,
-      "imagen_alt": null,
-      "fuente": "Texto original elaborado para ICFES Lab"
-    }
-  },
+  "contextos": {},
   "preguntas": [
     {
-      "codigo": "CIE-BIO-01",
-      "subtema": "biologia",
+      "codigo": "CIE-ECO-01",
+      "subtema": "ecosistemas",
       "dificultad": 2,
-      "competencia": "Uso comprensivo del conocimiento científico",
+      "competencia": null,
       "contexto_ref": null,
-      "contexto": "En una granja de Pasto (Nariño), Rosa cría cuyes. Considere que el color del pelaje de estos cuyes depende de un solo gen: el alelo N (pelaje negro) es dominante y el alelo n (pelaje blanco) es recesivo. Rosa cruzó un macho negro con una hembra blanca y, en varias camadas, obtuvo 12 crías: 6 negras y 6 blancas.",
-      "enunciado": "Si Rosa cruza entre sí dos de las crías negras, ¿qué porcentaje de crías blancas puede esperar en la nueva descendencia?",
-      "imagen": null,
-      "imagen_alt": null,
-      "opciones": [
-        { "letra": "A", "texto": "0 %, porque dos cuyes negros solo pueden tener crías negras.", "correcta": false, "retroalimentacion": "Es un error común creer que el rasgo recesivo desaparece. Las crías negras son portadoras (Nn): cada una puede transmitir el alelo n y, si ambas lo aportan, la cría será nn, es decir, blanca." },
-        { "letra": "B", "texto": "25 %, porque cada cría negra heredó un alelo n de su madre blanca.", "correcta": true, "retroalimentacion": "Correcto. La madre (nn) solo aporta alelos n, así que toda cría negra es Nn. El cruce Nn × Nn produce NN, Nn, Nn y nn: 1 de cada 4 crías (25 %) será blanca." },
-        { "letra": "C", "texto": "50 %, porque se repetirá la proporción observada en el primer cruce.", "correcta": false, "retroalimentacion": "La proporción 1:1 del primer cruce se debió a que uno de los padres era nn (Nn × nn). En el nuevo cruce ambos padres son Nn, y la proporción esperada cambia a 3 negras : 1 blanca." },
-        { "letra": "D", "texto": "75 %, porque en el cuadro de Punnett tres de cada cuatro combinaciones tienen el alelo N.", "correcta": false, "retroalimentacion": "El 75 % corresponde a las crías con al menos un alelo N (NN y Nn), que son negras. Una cría blanca debe ser nn, y eso ocurre solo en 1 de las 4 combinaciones." }
-      ],
-      "explicacion": "**Paso 1.** La madre es blanca, así que su genotipo es nn: solo puede transmitir el alelo n.\n**Paso 2.** Cada cría negra recibió un alelo n de la madre y, para ser negra, un alelo N del padre. Por tanto, todas las crías negras son heterocigotas (Nn).\n**Paso 3.** Al cruzar dos de ellas (Nn × Nn), el cuadro de Punnett da cuatro combinaciones igualmente probables: NN, Nn, nN y nn.\n**Paso 4.** Solo nn produce pelaje blanco: 1 de 4 combinaciones, es decir, **25 %**. Las otras tres (75 %) darán crías negras.\nDato extra: que la mitad de las crías del primer cruce saliera blanca indica que el macho original también era Nn.",
-      "tiempo_estimado_seg": 120,
-      "etiquetas": ["genética mendeliana", "alelos dominantes y recesivos", "cuadro de Punnett", "heterocigoto"]
-    },
-    {
-      "codigo": "CIE-BIO-02",
-      "subtema": "biologia",
-      "dificultad": 3,
-      "competencia": "Explicación de fenómenos",
-      "contexto_ref": null,
-      "contexto": "Muchos ciclistas colombianos entrenan en Boyacá, por ejemplo en Paipa, a unos 2.500 m de altitud. Estos son algunos datos del aire en Paipa y en Santa Marta, que está al nivel del mar:\n• Santa Marta (0 m): oxígeno = 21 % del aire; presión atmosférica = 101 kPa.\n• Paipa (2.500 m): oxígeno = 21 % del aire; presión atmosférica = 75 kPa.\nUn ciclista samario que llega a entrenar en Paipa se fatiga con facilidad durante los primeros días. Después de cuatro semanas, sus exámenes muestran que su sangre tiene más glóbulos rojos que antes del viaje.",
-      "enunciado": "¿Cuál de las siguientes afirmaciones explica mejor el cambio observado en la sangre del ciclista?",
-      "imagen": null,
-      "imagen_alt": null,
-      "opciones": [
-        { "letra": "A", "texto": "En Paipa el aire contiene un menor porcentaje de oxígeno, y los glóbulos rojos adicionales producen el oxígeno que les falta a los músculos.", "correcta": false, "retroalimentacion": "Tiene dos errores. Según los datos, el porcentaje de oxígeno es el mismo (21 %) en ambas ciudades; lo que cambia es la presión. Además, los glóbulos rojos no producen oxígeno: lo transportan unido a la hemoglobina." },
-        { "letra": "B", "texto": "En Paipa el porcentaje de oxígeno es igual al de Santa Marta, así que los glóbulos rojos aumentan porque el cuerpo refuerza sus defensas por el esfuerzo.", "correcta": false, "retroalimentacion": "Que el porcentaje sea igual no significa que se inhale la misma cantidad de oxígeno: con menor presión, cada litro de aire tiene menos moléculas de O₂. Además, la defensa del organismo es función de los glóbulos blancos, no de los rojos." },
-        { "letra": "C", "texto": "En Paipa el aire es más puro y cada inhalación aporta más oxígeno, por lo que el cuerpo fabrica más glóbulos rojos para aprovecharlo.", "correcta": false, "retroalimentacion": "El aire de montaña puede tener menos contaminantes, pero eso no aumenta el oxígeno disponible. Con una presión de 75 kPa, cada inhalación contiene menos moléculas de O₂ que al nivel del mar, no más." },
-        { "letra": "D", "texto": "En Paipa cada inhalación aporta menos moléculas de oxígeno, y los glóbulos rojos adicionales permiten que la sangre transporte más oxígeno a los músculos.", "correcta": true, "retroalimentacion": "Correcto. Con el mismo 21 % de oxígeno pero menor presión, el aire está menos concentrado: cada inhalación lleva menos moléculas de O₂. El cuerpo compensa fabricando más glóbulos rojos, cuya hemoglobina transporta el oxígeno; así cada litro de sangre lleva más O₂ a los músculos." }
-      ],
-      "explicacion": "**Paso 1.** Compara los datos: el porcentaje de oxígeno es el mismo (21 %), pero la presión en Paipa es menor (75 kPa frente a 101 kPa).\n**Paso 2.** A menor presión, el aire está menos comprimido: cada litro contiene menos moléculas de todos los gases, incluido el O₂. Por eso cada inhalación aporta menos oxígeno y el ciclista se fatiga al principio.\n**Paso 3.** Los glóbulos rojos contienen hemoglobina, la proteína que transporta el O₂ desde los pulmones hasta los tejidos. No producen oxígeno ni defienden al cuerpo; esa última función es de los glóbulos blancos.\n**Paso 4.** La falta de oxígeno estimula a los riñones a liberar la hormona eritropoyetina (EPO), y la médula ósea fabrica más glóbulos rojos. Así la sangre transporta más oxígeno aunque cada inhalación traiga menos.\nEsta adaptación es la base del entrenamiento en altura.",
-      "tiempo_estimado_seg": 150,
-      "etiquetas": ["glóbulos rojos", "hemoglobina", "sistema respiratorio", "presión atmosférica", "adaptación a la altura"]
-    },
-    {
-      "codigo": "CIE-MED-01",
-      "subtema": "medio-ambiente",
-      "dificultad": 1,
-      "competencia": "Explicación de fenómenos",
-      "contexto_ref": null,
-      "contexto": "El páramo de Chingaza abastece buena parte del agua que se consume en Bogotá. En los páramos, los frailejones atrapan la humedad de la niebla con sus hojas cubiertas de vellosidades, y los musgos y los suelos, ricos en materia orgánica, almacenan grandes cantidades de agua. Esa agua se libera lentamente hacia las quebradas durante todo el año, incluso en la temporada seca.",
-      "enunciado": "Si en una zona del páramo se retiran los frailejones y los musgos y se ara el suelo para sembrar papa, lo más probable es que las quebradas que nacen allí",
-      "imagen": null,
-      "imagen_alt": null,
-      "opciones": [
-        { "letra": "A", "texto": "lleven menos agua en la temporada seca, porque el suelo pierde su capacidad de almacenar agua y liberarla poco a poco.", "correcta": true, "retroalimentacion": "Correcto. Sin frailejones ni musgos, y con el suelo arado y expuesto, se pierde la 'esponja' del páramo: el agua de lluvia escurre rápido y en la temporada seca queda muy poca para alimentar las quebradas." },
-        { "letra": "B", "texto": "lleven más agua durante todo el año, porque ya no habrá plantas que absorban el agua de la lluvia.", "correcta": false, "retroalimentacion": "Sin vegetación el agua escurre más rápido durante los aguaceros, pero se pierde la capacidad de almacenarla. El resultado no es más agua todo el año, sino crecientes en época de lluvias y quebradas casi secas en la temporada seca." },
-        { "letra": "C", "texto": "mantengan el mismo caudal, porque el agua de las quebradas depende solo de la cantidad de lluvia.", "correcta": false, "retroalimentacion": "La lluvia importa, pero el texto muestra que el páramo también captura agua de la niebla y la regula: la guarda en sus suelos y musgos y la libera poco a poco. Si se destruye ese sistema, el caudal cambia aunque llueva lo mismo." },
-        { "letra": "D", "texto": "se congelen con más frecuencia, porque sin vegetación el agua del páramo se transforma en hielo.", "correcta": false, "retroalimentacion": "Aquí se confunde el páramo con los glaciares de los nevados. El páramo no almacena el agua como hielo, sino en sus suelos y musgos; retirar la vegetación no convierte el agua en hielo." }
-      ],
-      "explicacion": "**Paso 1.** Identifica la función del páramo en el texto: captura agua de la lluvia y de la niebla, la almacena en suelos y musgos y la libera lentamente.\n**Paso 2.** Al retirar frailejones y musgos, se pierde la captura de agua de la niebla. Al arar, el suelo queda expuesto al sol y al viento, se seca y pierde materia orgánica, así que retiene cada vez menos agua.\n**Paso 3.** Sin esa 'esponja', el agua de lluvia escurre rápidamente y no queda reserva para la temporada seca.\n**Conclusión:** las quebradas llevarán menos agua justo cuando más se necesita. Por eso los páramos son ecosistemas estratégicos para el abastecimiento de agua en Colombia.",
-      "tiempo_estimado_seg": 90,
-      "etiquetas": ["páramos", "regulación hídrica", "biodiversidad colombiana", "servicios ecosistémicos"]
-    },
-    {
-      "codigo": "CIE-MED-02",
-      "subtema": "medio-ambiente",
-      "dificultad": 2,
-      "competencia": "Explicación de fenómenos",
-      "contexto_ref": null,
-      "contexto": "Una laguna andina está rodeada de cultivos de cebolla que se abonan con fertilizantes ricos en nitratos y fosfatos. Después de cada temporada de lluvias, el agua de la laguna se vuelve verde por la gran cantidad de algas y, semanas más tarde, los pescadores encuentran muchos peces muertos. Los análisis del agua no detectan sustancias tóxicas para los peces, pero sí una concentración muy baja de oxígeno disuelto.",
-      "enunciado": "¿Cuál de las siguientes secuencias explica mejor la muerte de los peces?",
-      "imagen": null,
-      "imagen_alt": null,
-      "opciones": [
-        { "letra": "A", "texto": "Lluvias → los fertilizantes llegan a la laguna → los nitratos y fosfatos se acumulan en las branquias → los peces mueren envenenados.", "correcta": false, "retroalimentacion": "Los análisis descartan sustancias tóxicas para los peces. Los nitratos y fosfatos actúan como nutrientes para las algas; el daño a los peces es indirecto, por la falta de oxígeno." },
-        { "letra": "B", "texto": "Lluvias → los fertilizantes llegan a la laguna → las algas se multiplican y producen un exceso de oxígeno → el exceso de oxígeno intoxica a los peces.", "correcta": false, "retroalimentacion": "Los análisis muestran muy poco oxígeno, no un exceso. Las algas producen oxígeno mientras viven, pero cuando mueren en grandes cantidades su descomposición lo agota." },
-        { "letra": "C", "texto": "Lluvias → los fertilizantes llegan a la laguna → las algas se multiplican → al morir, las bacterias que las descomponen consumen el oxígeno → los peces mueren.", "correcta": true, "retroalimentacion": "Correcto. Es el proceso de eutrofización: el exceso de nutrientes dispara el crecimiento de las algas; cuando estas mueren, las bacterias descomponedoras usan el oxígeno disuelto para degradarlas y los peces mueren por asfixia." },
-        { "letra": "D", "texto": "Lluvias → el agua de la laguna se enfría → el agua fría retiene menos oxígeno disuelto → los peces mueren por falta de oxígeno.", "correcta": false, "retroalimentacion": "Ocurre lo contrario: el agua fría puede disolver más oxígeno que el agua caliente. Además, esta secuencia no explica por qué el agua se vuelve verde ni el papel de los fertilizantes." }
-      ],
-      "explicacion": "**Paso 1.** Descarta lo que contradicen los datos: no hay sustancias tóxicas (se descarta el envenenamiento) y hay poco oxígeno (se descarta un exceso de oxígeno).\n**Paso 2.** Las lluvias arrastran los fertilizantes de los cultivos hacia la laguna. Los nitratos y fosfatos son nutrientes para las algas, que se multiplican y tiñen el agua de verde.\n**Paso 3.** Cuando las algas mueren, las bacterias descomponedoras las degradan y, en ese proceso, consumen gran parte del oxígeno disuelto.\n**Paso 4.** Sin oxígeno suficiente, los peces mueren. Este fenómeno se llama **eutrofización** y se previene usando menos fertilizantes y conservando franjas de vegetación en las orillas, que retienen los nutrientes antes de que lleguen al agua.",
-      "tiempo_estimado_seg": 120,
-      "etiquetas": ["eutrofización", "contaminación del agua", "fertilizantes", "oxígeno disuelto", "descomponedores"]
-    },
-    {
-      "codigo": "CIE-FIS-01",
-      "subtema": "fisica",
-      "dificultad": 1,
-      "competencia": "Uso comprensivo del conocimiento científico",
-      "contexto_ref": null,
-      "contexto": "Un bus del MIO, en Cali, avanza en línea recta con velocidad constante y frena de repente. Los pasajeros que van de pie y no se sostienen de las barandas se inclinan hacia adelante.",
-      "enunciado": "¿Cuál de los siguientes principios explica lo que les ocurre a los pasajeros?",
-      "imagen": null,
-      "imagen_alt": null,
-      "opciones": [
-        { "letra": "A", "texto": "Toda acción tiene una reacción: al frenar, el bus empuja a los pasajeros hacia adelante con una fuerza igual a la del freno.", "correcta": false, "retroalimentacion": "Se aplica mal la tercera ley de Newton: las fuerzas de acción y reacción actúan sobre cuerpos distintos, y aquí ninguna fuerza empuja a los pasajeros hacia adelante. Lo que ocurre es que su cuerpo sigue moviéndose mientras el bus se frena." },
-        { "letra": "B", "texto": "Todo cuerpo tiende a conservar su estado de movimiento: los pasajeros siguen moviéndose hacia adelante mientras el bus se detiene.", "correcta": true, "retroalimentacion": "Correcto. Es la primera ley de Newton o principio de inercia. Los pasajeros llevaban la misma velocidad del bus; cuando este frena, sus cuerpos tienden a mantener esa velocidad y por eso se van hacia adelante." },
-        { "letra": "C", "texto": "Los cuerpos en movimiento acumulan una fuerza propia que los sigue impulsando hacia adelante hasta que se agota.", "correcta": false, "retroalimentacion": "Es una idea muy común, pero incorrecta: un cuerpo no necesita una 'fuerza guardada' para seguir moviéndose. Mantener la velocidad no requiere fuerza; cambiarla, sí." },
-        { "letra": "D", "texto": "Al frenar, la fuerza de gravedad dentro del bus cambia de dirección y empuja a los pasajeros hacia adelante.", "correcta": false, "retroalimentacion": "La gravedad (el peso) siempre apunta hacia el centro de la Tierra, es decir, hacia abajo, y no cambia porque el bus frene. La inclinación hacia adelante se debe a la inercia." }
-      ],
-      "explicacion": "**Paso 1.** Antes de frenar, el bus y los pasajeros se mueven juntos, con la misma velocidad.\n**Paso 2.** Al frenar, el bus reduce su velocidad. A los pasajeros solo los frena la fricción del piso sobre sus pies; sobre el resto del cuerpo no actúa ninguna fuerza que lo detenga.\n**Paso 3.** Por la **primera ley de Newton (inercia)**, todo cuerpo tiende a conservar su velocidad si no actúa una fuerza neta que la cambie. Por eso los pies se frenan con el bus, pero el tronco sigue hacia adelante.\n**Conclusión:** ninguna fuerza empuja a los pasajeros hacia adelante; simplemente siguen moviéndose mientras el bus se detiene. Por eso es importante sostenerse de las barandas.",
-      "tiempo_estimado_seg": 75,
-      "etiquetas": ["leyes de Newton", "inercia", "primera ley de Newton", "fuerza"]
-    },
-    {
-      "codigo": "CIE-FIS-02",
-      "subtema": "fisica",
-      "dificultad": 3,
-      "competencia": "Indagación",
-      "contexto_ref": null,
-      "contexto": "Un bus articulado de TransMilenio viaja en línea recta entre dos estaciones. La gráfica muestra cómo cambió su velocidad durante el recorrido.",
-      "enunciado": "Con base en la gráfica, ¿cuál de las siguientes conclusiones es válida?",
-      "imagen": "/img/preguntas/CIE-FIS-02.svg",
-      "imagen_alt": "Gráfica de velocidad (m/s) contra tiempo (s). La velocidad aumenta en línea recta de 0 a 10 m/s entre 0 y 10 s, se mantiene constante en 10 m/s entre 10 y 40 s y disminuye en línea recta hasta 0 m/s entre 40 y 50 s.",
-      "opciones": [
-        { "letra": "A", "texto": "Entre 0 s y 10 s el bus recorre 100 m, porque al final de ese intervalo su velocidad es 10 m/s.", "correcta": false, "retroalimentacion": "Multiplicar la velocidad final por el tiempo supone que el bus fue a 10 m/s todo el intervalo, pero partió del reposo. La distancia es el área del triángulo: ½ × 10 s × 10 m/s = 50 m." },
-        { "letra": "B", "texto": "Entre 10 s y 40 s el bus está detenido, porque la línea de la gráfica es horizontal.", "correcta": false, "retroalimentacion": "Se confunde una gráfica de velocidad con una de posición. Una línea horizontal en una gráfica velocidad–tiempo indica velocidad constante (aquí, 10 m/s), no reposo. El bus estaría detenido solo si la línea estuviera sobre v = 0." },
-        { "letra": "C", "texto": "Entre 40 s y 50 s el bus se devuelve hacia la estación de partida, porque la línea de la gráfica desciende.", "correcta": false, "retroalimentacion": "La velocidad disminuye, pero sigue siendo positiva hasta llegar a cero: el bus avanza cada vez más despacio en el mismo sentido y se detiene. Solo se devolvería si la velocidad tomara valores negativos." },
-        { "letra": "D", "texto": "Entre 10 s y 40 s la fuerza neta sobre el bus es cero, porque su velocidad no cambia.", "correcta": true, "retroalimentacion": "Correcto. Entre 10 s y 40 s la velocidad es constante (10 m/s), así que la aceleración es cero. Por la segunda ley de Newton (F neta = m·a), la fuerza neta también es cero: la fuerza que impulsa al bus se equilibra con la fricción y la resistencia del aire." }
-      ],
-      "explicacion": "**Paso 1.** Lee la gráfica por tramos: de 0 a 10 s la velocidad sube de 0 a 10 m/s; de 10 a 40 s se mantiene en 10 m/s; de 40 a 50 s baja de 10 m/s a 0.\n**Paso 2.** En el tramo de 10 a 40 s, Δv = 0, así que la aceleración es a = Δv/Δt = 0 m/s².\n**Paso 3.** Por la segunda ley de Newton, F neta = m·a = 0. El bus sí se mueve, pero la fuerza que lo impulsa está equilibrada con la fricción y la resistencia del aire.\n**Paso 4.** Descarta las demás: de 0 a 10 s recorre ½ × 10 s × 10 m/s = 50 m (no 100 m); una línea horizontal en v–t no significa reposo; y de 40 a 50 s la velocidad sigue siendo positiva, así que el bus frena sin devolverse.\n**Clave:** moverse con velocidad constante no requiere fuerza neta; cambiar la velocidad sí.",
-      "tiempo_estimado_seg": 150,
-      "etiquetas": ["gráfica velocidad-tiempo", "MRUA", "segunda ley de Newton", "fuerza neta", "interpretación de gráficas"]
-    },
-    {
-      "codigo": "CIE-QUI-01",
-      "subtema": "quimica",
-      "dificultad": 2,
-      "competencia": "Explicación de fenómenos",
-      "contexto_ref": null,
-      "contexto": "En el laboratorio del colegio, Valentina calienta al aire un trozo de lana de acero (hierro) de 10,0 g hasta que se oscurece; al pesarlo de nuevo, la balanza marca 10,8 g. Al mismo tiempo, Andrés quema en un plato abierto una hoja de papel de 5,0 g; las cenizas que quedan pesan 0,2 g.",
-      "enunciado": "¿Cuál de las siguientes afirmaciones explica correctamente ambos resultados?",
-      "imagen": null,
-      "imagen_alt": null,
-      "opciones": [
-        { "letra": "A", "texto": "El hierro se combina con el oxígeno del aire y forma un óxido de mayor masa; el papel produce dióxido de carbono y vapor de agua, que escapan al aire. En ambos casos, la masa total se conserva.", "correcta": true, "retroalimentacion": "Correcto. La balanza solo registra lo que queda en el plato. El hierro gana la masa del oxígeno que incorpora y el papel pierde la masa de los gases que se van. Si ambas reacciones ocurrieran en recipientes cerrados, la masa total no cambiaría." },
-        { "letra": "B", "texto": "La combustión del papel destruye parte de la materia y la oxidación del hierro crea materia nueva, porque la ley de conservación de la masa no se cumple cuando hay fuego.", "correcta": false, "retroalimentacion": "La ley de conservación de la masa se cumple en todas las reacciones químicas, con o sin fuego. La materia no se crea ni se destruye: los átomos se reorganizan y, en este caso, algunos entran desde el aire o salen hacia él." },
-        { "letra": "C", "texto": "El hierro absorbe el calor de la llama y ese calor aumenta su masa; el papel, en cambio, libera su calor al aire y por eso su masa disminuye.", "correcta": false, "retroalimentacion": "El calor es energía que se transfiere, no una sustancia con masa que se pueda medir en una balanza. El cambio de masa se debe a los átomos de oxígeno que se unen al hierro y a los gases que escapan del papel." },
-        { "letra": "D", "texto": "El hierro se dilata al calentarse y por eso pesa más; el papel se transforma completamente en energía y por eso la mayor parte de su masa desaparece.", "correcta": false, "retroalimentacion": "Dilatarse aumenta el volumen, no la masa. Y el papel no se convierte en energía: sus átomos de carbono e hidrógeno forman CO₂ y H₂O, gases que se dispersan en el aire." }
-      ],
-      "explicacion": "**Paso 1.** Recuerda la ley de conservación de la masa: en una reacción química los átomos no se crean ni se destruyen, solo se reorganizan.\n**Paso 2.** Hierro: el oxígeno del aire se une al hierro y forma un óxido (por ejemplo, 3 Fe + 2 O₂ → Fe₃O₄). El sólido pesa más porque ahora incluye oxígeno: los 0,8 g adicionales corresponden al oxígeno incorporado.\n**Paso 3.** Papel: la celulosa reacciona con el O₂ y produce CO₂ y vapor de agua, gases que escapan del plato abierto. Solo quedan 0,2 g de cenizas, formadas por minerales que no arden.\n**Paso 4.** La balanza no registra los gases que entran o salen. Si cada experimento se hiciera en un recipiente cerrado, la masa total antes y después de la reacción sería la misma.\n**Clave:** cuando una masa parece aparecer o desaparecer, busca un gas que entró o salió del sistema.",
-      "tiempo_estimado_seg": 120,
-      "etiquetas": ["conservación de la masa", "reacciones químicas", "combustión", "oxidación", "sistemas abiertos y cerrados"]
-    },
-    {
-      "codigo": "CIE-QUI-02",
-      "subtema": "quimica",
-      "dificultad": 3,
-      "competencia": "Uso comprensivo del conocimiento científico",
-      "contexto_ref": null,
-      "contexto": "La gráfica muestra la solubilidad del nitrato de potasio (KNO₃), una sal usada como fertilizante, a diferentes temperaturas. En el laboratorio se disuelve la máxima cantidad posible de KNO₃ en 50 g de agua a 60 °C; luego la solución se enfría hasta 20 °C y se deja en reposo hasta que dejan de formarse cristales.",
-      "enunciado": "¿Qué masa de KNO₃ se separa de la solución en forma de cristales?",
-      "imagen": "/img/preguntas/CIE-QUI-02.svg",
-      "imagen_alt": "Curva de solubilidad del KNO₃: gramos de sal que se disuelven en 100 g de agua según la temperatura. La curva crece cada vez más rápido: 13 g a 0 °C, 21 g a 10 °C, 32 g a 20 °C, 46 g a 30 °C, 64 g a 40 °C, 86 g a 50 °C y 110 g a 60 °C. Los puntos de 20 °C (32 g) y 60 °C (110 g) están resaltados.",
-      "opciones": [
-        { "letra": "A", "texto": "16 g", "correcta": false, "retroalimentacion": "16 g es la masa que sigue disuelta a 20 °C (32 g × 50/100), no la que se cristaliza. Los cristales son la diferencia entre lo que estaba disuelto y lo que el agua todavía puede retener." },
-        { "letra": "B", "texto": "39 g", "correcta": true, "retroalimentacion": "Correcto. A 60 °C, 50 g de agua disuelven 110 g ÷ 2 = 55 g de KNO₃; a 20 °C solo pueden retener 32 g ÷ 2 = 16 g. El exceso, 55 g − 16 g = 39 g, se separa como cristales." },
-        { "letra": "C", "texto": "55 g", "correcta": false, "retroalimentacion": "55 g es todo lo que se disolvió a 60 °C. Al enfriar no se cristaliza todo el soluto: a 20 °C el agua todavía mantiene disueltos 16 g." },
-        { "letra": "D", "texto": "78 g", "correcta": false, "retroalimentacion": "78 g (110 g − 32 g) sería la respuesta si hubiera 100 g de agua. Como solo hay 50 g, todas las cantidades se reducen a la mitad." }
-      ],
-      "explicacion": "**Paso 1.** Lee la gráfica: la solubilidad del KNO₃ es de 110 g por cada 100 g de agua a 60 °C y de 32 g por cada 100 g de agua a 20 °C.\n**Paso 2.** Ajusta a 50 g de agua, que es la mitad: a 60 °C se disuelven 110 ÷ 2 = 55 g y a 20 °C solo caben 32 ÷ 2 = 16 g.\n**Paso 3.** Al enfriar, el agua ya no puede mantener disuelto todo el soluto y el exceso se cristaliza: 55 g − 16 g = **39 g**.\n**Paso 4.** Comprueba: 39 g de cristales + 16 g disueltos = 55 g, la misma masa de soluto del comienzo.\nEste proceso, llamado cristalización por enfriamiento, se usa para purificar sales cuya solubilidad cambia mucho con la temperatura.",
-      "tiempo_estimado_seg": 180,
-      "etiquetas": ["solubilidad", "curva de solubilidad", "cristalización", "soluciones saturadas", "temperatura"]
-    },
-    {
-      "codigo": "CIE-MET-01",
-      "subtema": "metodo-cientifico",
-      "dificultad": 1,
-      "competencia": "Indagación",
-      "contexto_ref": "CIE-CTX-01",
       "contexto": null,
-      "enunciado": "¿Cuál es la variable independiente en este experimento?",
+      "enunciado": "Con base en el modelo anterior (los metales pesados se acumulan en los tejidos de los animales que se alimentan de pastos), ¿qué causa la presencia de metales pesados en las muestras de leche de vaca?",
       "imagen": null,
       "imagen_alt": null,
       "opciones": [
-        { "letra": "A", "texto": "La concentración de sal en el agua de riego.", "correcta": true, "retroalimentacion": "Correcto. La concentración de sal es lo que los estudiantes cambiaron a propósito entre un plato y otro (0, 2, 4 y 8 g/L) para ver su efecto." },
-        { "letra": "B", "texto": "El número de semillas germinadas en cada plato.", "correcta": false, "retroalimentacion": "Esa es la variable dependiente: lo que se mide para ver cómo responde la germinación al cambio en la concentración de sal." },
-        { "letra": "C", "texto": "La temperatura de 25 °C a la que estaban los platos.", "correcta": false, "retroalimentacion": "La temperatura fue la misma en los cuatro platos: es una variable controlada, que se mantiene fija para que no influya en los resultados." },
-        { "letra": "D", "texto": "La variedad de fríjol que se utilizó.", "correcta": false, "retroalimentacion": "Todos los platos tenían semillas de la misma variedad, así que es una variable controlada, no la independiente." }
+        {
+          "letra": "A",
+          "texto": "Que las vacas beban las aguas residuales de los procesos de cosechas.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "Que las vacas se alimenten de pastos contaminados por metales pesados.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "Que las vacas se alimenten de los peces contaminados con metilmercurio.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "Que las vacas respiren las emisiones y los desechos industriales gaseosos.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
       ],
-      "explicacion": "**Paso 1.** Busca qué cambia a propósito entre los platos: solo la concentración de sal (0, 2, 4 y 8 g/L). Esa es la **variable independiente**.\n**Paso 2.** Busca qué se mide como resultado: el número de semillas germinadas. Esa es la **variable dependiente**.\n**Paso 3.** Todo lo que se mantiene igual (temperatura, luz, variedad de fríjol, número de semillas, volumen de riego y tiempo) son **variables controladas**.\nTruco: la independiente es la causa que el investigador manipula; la dependiente es el efecto que mide.",
-      "tiempo_estimado_seg": 60,
-      "etiquetas": ["variables", "variable independiente", "diseño experimental"]
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
     },
     {
-      "codigo": "CIE-MET-02",
-      "subtema": "metodo-cientifico",
+      "codigo": "CIE-ECO-02",
+      "subtema": "ecosistemas",
       "dificultad": 2,
-      "competencia": "Indagación",
-      "contexto_ref": "CIE-CTX-01",
-      "contexto": null,
-      "enunciado": "¿Cuál de las siguientes conclusiones es válida a partir de los resultados del experimento?",
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": "El DDT es una sustancia química contaminante y bioacumulable que se usó en el pasado como control de plagas de mosquitos y de otros insectos. La bioacumulación es un proceso de depósito gradual de una sustancia química en el organismo de un ser vivo, y puede dar lugar a la biomagnificación de la sustancia química a lo largo de la cadena trófica, siendo los depredadores los más afectados al acumular gradualmente los químicos de todas sus presas.",
+      "enunciado": "Teniendo en cuenta la información anterior, ¿por qué se prohibió la venta de DDT en todo el mundo?",
       "imagen": null,
       "imagen_alt": null,
       "opciones": [
-        { "letra": "A", "texto": "La sal impide por completo la germinación de cualquier tipo de semilla, sin importar su concentración.", "correcta": false, "retroalimentacion": "Es una generalización excesiva: incluso con 8 g/L germinaron 2 semillas, y solo se probó el fríjol. El resultado no puede extenderse a todas las semillas ni a todas las concentraciones." },
-        { "letra": "B", "texto": "Las plantas de fríjol regadas con agua sin sal crecieron más altas que las regadas con agua salada.", "correcta": false, "retroalimentacion": "Los estudiantes contaron semillas germinadas; no midieron la altura de las plantas. Una conclusión válida solo puede referirse a lo que se midió." },
-        { "letra": "C", "texto": "En las condiciones del experimento, a mayor concentración de sal en el agua de riego, menos semillas de fríjol germinaron.", "correcta": true, "retroalimentacion": "Correcto. Los datos muestran una tendencia clara: 18, 15, 9 y 2 semillas germinadas con 0, 2, 4 y 8 g/L de sal. La conclusión se limita a lo medido y a las condiciones del experimento." },
-        { "letra": "D", "texto": "Una concentración baja de sal (2 g/L) favorece la germinación del fríjol, porque en ese plato germinaron 15 semillas.", "correcta": false, "retroalimentacion": "Hay que comparar con el grupo control: sin sal germinaron 18 semillas y con 2 g/L germinaron 15. La sal no favoreció la germinación; la redujo." }
+        {
+          "letra": "A",
+          "texto": "Porque se transmitía a las personas por medio de las picaduras de los mosquitos y otros insectos causando la muerte.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "Porque terminaba acumulándose en los organismos de las personas y las perjudicaba seriamente en su salud.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "Porque acababa con todos los organismos presentes en los medios acuáticos y terrestres.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "Porque permanecía en el medio acuático y terrestre de manera indefinida.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
       ],
-      "explicacion": "**Paso 1.** Organiza los datos: 0 g/L → 18; 2 g/L → 15; 4 g/L → 9; 8 g/L → 2 semillas germinadas de 20.\n**Paso 2.** Identifica la tendencia: cada vez que aumenta la concentración de sal, germinan menos semillas.\n**Paso 3.** Verifica que la conclusión hable solo de lo que se midió (germinación, no altura), de lo que se probó (fríjol, no todas las semillas) y que compare con el grupo control (agua sin sal).\n**Paso 4.** La conclusión válida es que, en las condiciones del experimento, a mayor concentración de sal germinaron menos semillas de fríjol. Una buena conclusión no exagera ni va más allá de los datos.",
-      "tiempo_estimado_seg": 105,
-      "etiquetas": ["conclusiones válidas", "interpretación de datos", "grupo control", "generalización"]
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-ECO-03",
+      "subtema": "ecosistemas",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "En un ecosistema de pradera, la población de conejos aumenta notablemente después de una temporada de lluvias abundantes. Si a continuación aumenta también la población de zorros, lo más probable es que",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "los conejos se reproduzcan más rápido.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "la población de conejos disminuya por efecto de la depredación.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "desaparezcan los productores de la pradera.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "los zorros se vuelvan herbívoros.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-SIM-01",
+      "subtema": "simbiosis",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "Las bacterias del género Rhizobium viven en los nódulos de las raíces de las leguminosas, fijan nitrógeno atmosférico y reciben azúcares de la planta. Esta relación es un ejemplo de",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "parasitismo.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "comensalismo.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "depredación.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "mutualismo.",
+          "correcta": true,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-SIM-02",
+      "subtema": "simbiosis",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "Las rémoras se adhieren al cuerpo de los tiburones y se alimentan de los restos de comida de estos, sin causarles beneficio ni daño. Esta relación es un ejemplo de",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "comensalismo.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "mutualismo.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "parasitismo.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "competencia.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-SIM-03",
+      "subtema": "simbiosis",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "Una garrapata se alimenta de la sangre de un perro y puede transmitirle enfermedades. En esta relación",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "ambos organismos se benefician.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "el perro se beneficia y la garrapata se perjudica.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "la garrapata se beneficia y el perro se perjudica.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "ninguno de los dos organismos se ve afectado.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-CIC-01",
+      "subtema": "ciclos-biogeoquimicos",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "En el ciclo del nitrógeno, las bacterias nitrificantes del suelo cumplen la función de",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "convertir el nitrógeno atmosférico en amoníaco.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "convertir el amoníaco en nitritos y nitratos que pueden ser aprovechados por las plantas.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "devolver el nitrógeno a la atmósfera en forma de gas.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "transformar los nitratos en proteínas animales.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-CIC-02",
+      "subtema": "ciclos-biogeoquimicos",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "Durante la fotosíntesis las plantas toman dióxido de carbono de la atmósfera. En el ciclo del carbono, este elemento regresa a la atmósfera principalmente mediante",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "la respiración y la descomposición de la materia orgánica.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "la fotosíntesis y la transpiración.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "la absorción de nitrógeno por las raíces.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "la condensación del vapor de agua.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-CIC-03",
+      "subtema": "ciclos-biogeoquimicos",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "En el ciclo del agua, el paso del agua líquida a vapor por acción del calor del Sol se denomina",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "condensación.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "precipitación.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "infiltración.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "evaporación.",
+          "correcta": true,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-MCI-01",
+      "subtema": "metodo-cientifico",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": "Las saponinas son unos detergentes naturales que se extraen de algunas plantas del desierto. Forman complejos insolubles con el colesterol. Un grupo de científicos estudió su efectividad en la reducción del colesterol sanguíneo: a individuos entre 40 y 50 años cuyo colesterol era superior al rango permitido (160 mg/dl) les proporcionaron pastillas con diferente concentración de saponina.",
+      "enunciado": "Los investigadores utilizaron diferentes concentraciones de saponina en la investigación porque debían",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "hallar la concentración que redujera el nivel de colesterol en los individuos.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "hallar la concentración más efectiva para la reducción del colesterol.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "elegir la concentración que redujera los costos para el control del colesterol.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "elegir la concentración que redujera el colesterol durante más tiempo.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-MCI-02",
+      "subtema": "metodo-cientifico",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "En el mismo estudio de las saponinas, en la tabla se observa que cada concentración de saponina fue suministrada a 50 individuos. Esto se debe a que",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "el número mínimo necesario para un análisis estadístico es 50 individuos.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "permite ejercer un control en la población de individuos de 40 a 50 años.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "es una forma de incorporar la variabilidad natural de los individuos en el análisis.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "sólo se contaba con 450 individuos para realizar las pruebas con saponinas.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-MCI-03",
+      "subtema": "metodo-cientifico",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": "La tabla muestra los resultados de indicadores bioquímicos en pacientes sanos y pacientes con anorexia (valores promedio): glucosa en sangre (mg/dL) 86,6 vs. 77,4*; proteínas totales en sangre (mg/dL) 7,47 vs. 6,98*; calcio (mg/dL) 9,8 vs. 8,40*. (*Diferencias estadísticamente significativas con relación a pacientes sanos.) El estudio busca responder: ¿La anorexia tiene algún efecto sobre los niveles de carbohidratos y de proteínas en el cuerpo? Los investigadores concluyen que la anorexia afecta la concentración de glucosa y proteínas totales en la sangre.",
+      "enunciado": "De acuerdo con la información, ¿estos resultados son suficientes para respaldar la conclusión dada por los investigadores?",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "No, porque ninguno de los parámetros muestra los niveles de carbohidratos de los pacientes.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "Sí, porque se incluyeron pacientes sin anorexia como control, demostrando que este trastorno reduce los niveles de glucosa y proteínas totales en las personas que lo padecen.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "No, porque no hay ninguna diferencia en los resultados de los niveles de glucosa y de proteínas totales entre pacientes sin anorexia y pacientes que sufren de anorexia.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "Sí, porque los pacientes sanos tienen niveles bajos de glucosa y proteínas totales en la sangre.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-EVO-01",
+      "subtema": "evolucion-de-las-especies",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": "Una especie de mono presentaba alta tasa de predación debido a su poca agilidad para escapar de sus depredadores. En un momento de su historia evolutiva surgieron individuos con brazos más largos que lograron huir con más facilidad. En la actualidad la mayoría de los monos de dicha especie presentan brazos largos.",
+      "enunciado": "Según los principios de Darwin y analizando la evolución de dicha especie de monos se podría plantear que con mayor probabilidad",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "en una época determinada la característica de los brazos largos apareció simultáneamente en la mayoría de los individuos, los cuales al reproducirse heredaron esta característica a sus hijos.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "el tamaño largo de los brazos se logró poco a poco y de manera individual a medida que los monos huían de sus depredadores, los actuales monos de brazos largos son producto de la ejercitación de los brazos.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "el tamaño largo de los brazos fue una característica que apareció al azar, se heredó y afectó el éxito reproductivo de generación en generación hasta que la mayor parte de los individuos de esta especie tuvieron brazos largos.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "los brazos largos los obtuvieron algunos individuos al azar, característica que no se heredó por carecer de utilidad para la especie.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-EVO-02",
+      "subtema": "evolucion-de-las-especies",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "Antiguamente la zanahoria silvestre era de una tonalidad violeta. Su color actual se debe a las continuas selecciones, que desde los años 1700 aprox., permitieron una mayor abundancia de betacarotenos, el pigmento base de la zanahoria y precursor de la vitamina A. Los cambios evolutivos que se presentaron en las zanahorias silvestres dieron lugar a la aparición de plantas con raíces más grandes y carnosas. Estos cambios se produjeron porque inicialmente hubo",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "un aumento de los genes dominantes en las zanahorias silvestres.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "mutaciones e intercambio genético entre las zanahorias silvestres.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "cambios en las condiciones climáticas del planeta a través del tiempo.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "mayor disponibilidad de nutrientes en la superficie terrestre.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-EVO-03",
+      "subtema": "evolucion-de-las-especies",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "Cuando un cultivo de bacterias se expone repetidamente a un antibiótico, la mayoría muere, pero sobreviven algunas con una mutación que las hace resistentes, las cuales se reproducen y originan poblaciones resistentes. Esto se explica porque",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "el antibiótico produce la mutación para que las bacterias se adapten.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "las bacterias deciden cambiar para sobrevivir.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "la selección natural favorece a los individuos resistentes, que dejan más descendientes.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "todas las bacterias adquieren resistencia al mismo tiempo.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-ORG-01",
+      "subtema": "organos-del-cuerpo-humano",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": "El calcio es un mineral importante para la formación y la estructura de los huesos y los dientes. En la tabla se puede observar que los pacientes con anorexia presentan bajos niveles de calcio.",
+      "enunciado": "En este sentido, ¿cuál de las siguientes consecuencias puede esperarse en pacientes con anorexia, debido a que tienen bajos niveles de calcio?",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "Calambres, pérdida de la masa muscular y daño de los músculos.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "Problemas de digestión, reflujo gástrico, gases, colon irritable y diarrea persistente.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "Osteoporosis, daño de la estructura dental y pérdida de la densidad ósea.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "Disfunción renal, desbalance osmótico e infecciones urinarias.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-ORG-02",
+      "subtema": "organos-del-cuerpo-humano",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "El órgano del sistema digestivo donde ocurre principalmente la absorción de nutrientes es",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "el estómago.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "el intestino delgado.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "el esófago.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "el hígado.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-ORG-03",
+      "subtema": "organos-del-cuerpo-humano",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "La función principal de los riñones en el cuerpo humano es",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "bombear la sangre a todo el cuerpo.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "producir la bilis que digiere las grasas.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "realizar el intercambio de gases con el aire.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "filtrar la sangre y eliminar los desechos en forma de orina.",
+          "correcta": true,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-CTS-01",
+      "subtema": "ciencia-tecnologia-sociedad",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "Los chinos y los japoneses propusieron en la antigüedad una explicación para los sismos y la actividad volcánica que denominaron la “explicación sintética”. Esta teoría señalaba que estos fenómenos son originados por el Gran Dragón que habitaba en el interior de la Tierra, el cual cuando estaba de mal humor sacudía su rugosa piel o, peor aún, arrojaba fuego por sus narices. Esta explicación no científica se puede entender porque estas culturas",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "asumían que los fenómenos de la naturaleza respondían a los dioses, definiendo así las alteraciones y modificaciones ambientales.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "no poseían teorías alternativas e instrumentos para registrar los movimientos de la corteza terrestre, procesar la información y luego mapearla.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "su capacidad para reflexionar sobre el comportamiento de los sistemas físicos del relieve era muy limitada y equivocada.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "no estaban interesados en explicaciones que estuvieran por fuera de su sistema de creencias y tradiciones milenarias.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-CTS-02",
+      "subtema": "ciencia-tecnologia-sociedad",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": "Las bebidas azucaradas y los dulces usan edulcorantes artificiales para generar la sensación de dulce en el gusto. Es recurrente encontrar el aspartamo (E951), que ha sido ampliamente investigado debido a que se relaciona con la generación de diversas enfermedades. Un estudio demostró que consumir esta sustancia en grandes cantidades puede llegar a afectar el ciclo celular de las neuronas.",
+      "enunciado": "De acuerdo con lo anterior, ¿cuál de las siguientes es una posible consecuencia de consumir aspartamo en grandes cantidades?",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "Acumulación de líquido en las articulaciones.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "Obesidad mórbida en los niños y las niñas.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "Generación de tumores cerebrales.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "Aparición de caries y caída de dientes.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-CTS-03",
+      "subtema": "ciencia-tecnologia-sociedad",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "La producción de vacunas mediante biotecnología ha permitido controlar muchas enfermedades infecciosas. Una consecuencia social positiva de este avance es",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "la disminución de la mortalidad por enfermedades prevenibles.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "el aumento de las enfermedades infecciosas.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "la desaparición de la necesidad de hábitos de higiene.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "la reducción de la esperanza de vida de la población.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-AMB-01",
+      "subtema": "medio-ambiente",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "La revolución verde, entendida como el conjunto de conocimientos científico-técnicos encaminados a aumentar y racionalizar la producción agrícola, incentivó la aplicación de pesticidas con nuevas y más eficientes propiedades. Estas prácticas adoptadas en años pasados y que aún se siguen aplicando en algunas zonas provocan el",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "mejoramiento de la calidad de los productos y la satisfacción de las necesidades alimentarias de más personas.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "uso indiscriminado de agroquímicos y la pérdida de fertilidad del suelo, así como su contaminación.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "control y eliminación de plagas y a su vez aumentan la fertilidad de los suelos.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "desarrollo y adecuación de más tierra para la producción agroindustrial con mayor rentabilidad y eficacia.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-AMB-02",
+      "subtema": "medio-ambiente",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "La huella ecológica se define como la superficie de tierra requerida por una ciudad para su abastecimiento de bienes de consumo. Incorporar este concepto en la planificación urbana implica,",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "considerar a las ciudades como nodos interconectados por flujos de bienes, servicios e información.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "proponer políticas que estimulen la competitividad entre las ciudades principales e intermedias.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "comprender las relaciones espaciales complejas existentes más allá del perímetro propio de la ciudad.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "analizar las políticas migratorias como fenómenos complejos sujetos a factores endógenos y exógenos.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-AMB-03",
+      "subtema": "medio-ambiente",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "El aumento de dióxido de carbono y de otros gases producidos por la quema de combustibles fósiles intensifica",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "la formación de la capa de ozono.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "el enfriamiento global de la atmósfera.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "el efecto invernadero y el calentamiento global.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "la fotosíntesis marina exclusivamente.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-CEL-01",
+      "subtema": "celula-procariota-eucariota",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": "La tabla muestra las características de las células de tres organismos diferentes.\nOrganismo 1: ausencia de membrana nuclear; presencia de ribosomas; ausencia de cloroplastos; muchos hacen fotosíntesis; algunos con paredes de peptidoglucano.\nOrganismo 2: presencia de membrana nuclear; presencia de ribosomas; presencia de cloroplastos; todos hacen fotosíntesis; paredes de celulosa.\nOrganismo 3: presencia de membrana nuclear; presencia de ribosomas; ausencia de cloroplastos; no hacen fotosíntesis; algunos con paredes de quitina.",
+      "enunciado": "De acuerdo con estas características dichos organismos pertenecen en su orden a los reinos",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "protista, vegetal y monera.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "monera, animal y hongos.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "protista, hongos y animal.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "monera, vegetal y hongos.",
+          "correcta": true,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-CEL-02",
+      "subtema": "celula-procariota-eucariota",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "La penicilina es uno de los antibióticos más ampliamente utilizados. Su acción específica consiste en evitar la formación de la red de peptidoglucano, un compuesto químico esencial en la estructura de las paredes celulares de muchos organismos. La razón más probable por la cual la penicilina no afecta las células de los mamíferos es porque éstas",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "son impermeables a la penicilina.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "no poseen pared celular.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "poseen paredes celulares muy gruesas.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "presentan baja cantidad de peptidoglucano en su pared.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-CEL-03",
+      "subtema": "celula-procariota-eucariota",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "Una diferencia fundamental entre las células procariotas y las eucariotas es que las procariotas",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "poseen núcleo definido.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "poseen mitocondrias.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "poseen retículo endoplasmático.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "carecen de un núcleo delimitado por membrana.",
+          "correcta": true,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-ORL-01",
+      "subtema": "organelos-de-la-celula",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "Los espermatozoides tienen como función la fecundación de un óvulo. Su estructura es muy sencilla: constan de un núcleo, un cuello y un flagelo, éste último de gran utilidad para movilizarse por el aparato reproductor femenino en busca del óvulo. Además del material genético y el flagelo, los espermatozoides cuentan con muy pocos organelos, uno de los cuales es muy abundante. Teniendo en cuenta la función de los espermatozoides, usted podría suponer que el tipo de organelo más abundante en estas células es",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "la mitocondria.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "el lisosoma.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "el ribosoma.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "el núcleo.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-ORL-02",
+      "subtema": "organelos-de-la-celula",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": "El esquema muestra los organelos que participan en el proceso de formación de proteínas hasta que éstas son incorporadas a otros organelos de la misma célula o son secretadas al medio extracelular (paso 1: núcleo; paso 2: ribosomas; paso 3: complejo de Golgi; luego vesículas de transporte).",
+      "enunciado": "De acuerdo con el esquema, si ocurriera un fallo a nivel del complejo de Golgi usted esperaría que la célula fuera incapaz de",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "traducir la información del ARN mensajero en proteínas.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "modificar las proteínas y empaquetarlas.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "transcribir la información del ADN en ARN mensajero.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "ensamblar aminoácidos para formar cadenas polipeptídicas.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-ORL-03",
+      "subtema": "organelos-de-la-celula",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "El organelo encargado de realizar la fotosíntesis en las células vegetales es",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "la mitocondria.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "el lisosoma.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "el cloroplasto.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "la vacuola.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-TRM-01",
+      "subtema": "transporte-de-membrana",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "El paso de agua a través de una membrana semipermeable, desde la zona de menor concentración de soluto hacia la de mayor concentración, se denomina",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "difusión simple.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "ósmosis.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "endocitosis.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "transporte activo.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-TRM-02",
+      "subtema": "transporte-de-membrana",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "El transporte activo se diferencia del pasivo porque",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "no requiere energía.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "solo transporta agua.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "ocurre sin proteínas de membrana.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "requiere energía (ATP) para mover sustancias en contra del gradiente de concentración.",
+          "correcta": true,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-TRM-03",
+      "subtema": "transporte-de-membrana",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "Una célula animal sumergida en agua destilada (medio hipotónico) tiende a",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "hincharse y, eventualmente, romperse.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "encogerse.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "permanecer igual.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "formar una pared celular.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-RC1-01",
+      "subtema": "reproduccion-celular-i",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "La mitosis produce",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "cuatro células haploides.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "gametos.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "dos células hijas genéticamente idénticas a la célula madre.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "una célula con el doble de cromosomas.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-RC1-02",
+      "subtema": "reproduccion-celular-i",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "El orden correcto de las fases de la mitosis es",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "metafase, profase, telofase y anafase.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "profase, metafase, anafase y telofase.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "anafase, profase, metafase y telofase.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "telofase, anafase, metafase y profase.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-RC1-03",
+      "subtema": "reproduccion-celular-i",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "Durante la metafase, los cromosomas",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "se alinean en el plano ecuatorial de la célula.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "se separan hacia los polos.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "se descondensan.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "se duplican.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-RC2-01",
+      "subtema": "reproduccion-celular-ii",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "La meiosis produce",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "dos células diploides idénticas.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "una sola célula.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "dos células haploides idénticas.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "cuatro células haploides genéticamente diferentes.",
+          "correcta": true,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-RC2-02",
+      "subtema": "reproduccion-celular-ii",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "El entrecruzamiento (crossing-over) ocurre durante",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "la anafase de la mitosis.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "la telofase II.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "la profase I de la meiosis.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "la interfase.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-RC2-03",
+      "subtema": "reproduccion-celular-ii",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "Una célula con 2n = 46 cromosomas produce por meiosis gametos con",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "46 cromosomas.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "23 cromosomas.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "92 cromosomas.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "12 cromosomas.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-MTB-01",
+      "subtema": "metabolismo-celular",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": "Las levaduras pueden obtener energía, a partir de los azúcares, por dos vías diferentes. Durante la fermentación una pequeña parte de la energía química contenida en los azúcares (C6H12O6) es convertida a ATP usado por la célula. Durante la respiración celular una mayor cantidad de energía química pasa a ATP disponible para las células, como se muestra en las siguientes ecuaciones:\nFERMENTACIÓN: C6H12O6 → 2CO2 + 2C2H5OH + 2 ATP\nRESPIRACIÓN CELULAR: C6H12O6 + O2 → 6CO2 + 6H2O + 38 ATP",
+      "enunciado": "De acuerdo con estas ecuaciones, es posible afirmar que la",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "producción de alcohol depende de la presencia de oxígeno.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "mayor parte de la energía química de la glucosa permanece en el alcohol.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "levadura necesita oxígeno para producir energía.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "fermentación en la levadura requiere oxígeno.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-MTB-02",
+      "subtema": "metabolismo-celular",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "La ecuación general de la fotosíntesis es CO₂ + H₂O + luz →",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "CO₂ + agua.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "ATP + CO₂.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "alcohol + CO₂.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "glucosa + oxígeno.",
+          "correcta": true,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-MTB-03",
+      "subtema": "metabolismo-celular",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "La respiración celular aeróbica ocurre principalmente en",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "la mitocondria.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "el núcleo.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "el ribosoma.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "el complejo de Golgi.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-TRT-01",
+      "subtema": "transcripcion-y-traduccion",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": "Los aminoácidos, transportados por el ARN de transferencia (ARNt), inician el proceso de traducción cuando la información contenida en el ARN mensajero (ARNm) pasa por el ribosoma. Las bases nitrogenadas (anticodón del ARNt y codón del ARNm) se aparean y van uniendo los aminoácidos en el orden necesario para formar una proteína específica.",
+      "enunciado": "Teniendo en cuenta esta información, ¿qué pasaría ante la ausencia del ARNt en la síntesis de proteínas?",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "Se detendría la producción de proteínas, puesto que el ARNt es el encargado de transportar aminoácidos específicos y aparearlos con el fin de iniciar el proceso de elongación.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "No se vería afectada la producción de proteínas, ya que depende únicamente del ARNm.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "Se aumentaría la producción de proteínas, puesto que el ARNt controla el número de aminoácidos que son transportados al unir al codón y al anticodón en el citoplasma del ribosoma.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "No se vería afectada la producción de proteínas, ya que el ARNt es reemplazado por el ARNm.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-TRT-02",
+      "subtema": "transcripcion-y-traduccion",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": "Las proteínas, el ADN y el ARN están formados por unidades más pequeñas. El ADN y el ARN se encuentran formados por bases nitrogenadas y las proteínas por aminoácidos. La producción de estas tres sustancias se encuentra relacionada entre sí, de tal forma que para la producción de proteínas es necesaria la presencia previa de ADN y/o ARN. El siguiente cuadro indica con signo (−) las sustancias que se les suprimen a cuatro cultivos de células:\nSustancia — Cultivo 1 / 2 / 3 / 4\nAminoácidos: − / − / + / +\nBases nitrogenadas: − / + / − / +",
+      "enunciado": "Al analizar los resultados después de un tiempo se espera que probablemente",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "ocurra producción de proteína en los cultivos 3 y 4 y de ARN en 2 y 4.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "se produzcan ADN y proteínas en 2 y 4 pero ARN sólo en el cultivo 4.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "en el cultivo 3 se produzca proteína, ADN y ARN.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "se produzca ARN en 2 y 4 y proteína únicamente en 4.",
+          "correcta": true,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-TRT-03",
+      "subtema": "transcripcion-y-traduccion",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "Las células humanas necesitan adquirir algunos aminoácidos como la leucina y la fenilalanina a partir de los alimentos consumidos por el organismo, ya que son incapaces de sintetizarlos. Teniendo en cuenta el esquema del enunciado anterior (paso 1: núcleo; paso 2: ribosomas; paso 3: complejo de Golgi), si una persona no consume estos dos aminoácidos el proceso de formación de una proteína que los requiera se vería afectado a nivel del",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "paso 2, porque el ADN no se transcribe en ARN de transferencia.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "paso 1, porque la proteína no se puede modificar ni empaquetar.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "paso 2, porque el ARN mensajero no se puede traducir en proteínas.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "paso 1, porque la proteína no se puede transcribir a partir del ARN.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-GEN-01",
+      "subtema": "genetica-mendeliana",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "Algunos gemelos se originan cuando un óvulo fecundado (cigoto) se divide en dos células y éstas continúan desarrollándose de manera independiente. A pesar de sus similitudes estos gemelos pueden presentar a lo largo de su vida diferencias relacionadas con la estatura, el peso, la textura del cabello, etc.; con lo cual se estaría confirmando la idea según la cual",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "la información genética de un individuo puede cambiar a lo largo de su vida.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "las características observables de los organismos no están determinadas genéticamente.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "todos los organismos poseen diferente información genética desde el momento de su concepción.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "una misma información genética se puede expresar de manera diferente debido a las presiones del ambiente.",
+          "correcta": true,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-GEN-02",
+      "subtema": "genetica-mendeliana",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "Si se cruzan dos individuos heterocigotos Aa × Aa (A dominante sobre a), la proporción fenotípica esperada en la descendencia es",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "1 : 1.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "1 : 2 : 1.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "3 dominantes : 1 recesivo.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "100 % dominantes.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-GEN-03",
+      "subtema": "genetica-mendeliana",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "Un individuo con genotipo Aa es",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "homocigoto dominante.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "heterocigoto.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "homocigoto recesivo.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "haploide.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-MP1-01",
+      "subtema": "materia-y-propiedades-i",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": "Durante una tarde calurosa, se coloca una barra metálica de aluminio bajo la luz directa del sol y se hacen mediciones de su longitud y temperatura, obteniendo los resultados que se muestran en la gráfica (longitud de la barra vs. temperatura).",
+      "enunciado": "De acuerdo con la gráfica, ¿cuál de las siguientes afirmaciones es correcta?",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "La longitud de la barra aumenta, ya que el incremento de la temperatura provoca la contracción del aluminio.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "La longitud de la barra disminuye, ya que el incremento de la temperatura provoca la dilatación del aluminio.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "La longitud de la barra aumenta, ya que el incremento de la temperatura provoca la dilatación del aluminio.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "La longitud de la barra disminuye, ya que el incremento de la temperatura provoca la contracción del aluminio.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-MP1-02",
+      "subtema": "materia-y-propiedades-i",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "De las siguientes, una propiedad intensiva de la materia es",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "la densidad.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "la masa.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "el volumen.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "la longitud.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-MP1-03",
+      "subtema": "materia-y-propiedades-i",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "El estado de la materia que posee forma y volumen definidos es",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "el gas.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "el líquido.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "el plasma.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "el sólido.",
+          "correcta": true,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-MP2-01",
+      "subtema": "materia-y-propiedades-ii",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "El cambio de estado de sólido a gas sin pasar por el estado líquido se denomina",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "fusión.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "condensación.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "sublimación.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "ebullición.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-MP2-02",
+      "subtema": "materia-y-propiedades-ii",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "Un ejemplo de cambio químico es",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "el derretimiento del hielo.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "la oxidación de un clavo de hierro.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "la evaporación del agua.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "el rompimiento de una hoja de papel.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-MP2-03",
+      "subtema": "materia-y-propiedades-ii",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "Un objeto tiene una masa de 200 g y un volumen de 50 cm³. Su densidad es",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "0,25 g/cm³.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "10 g/cm³.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "150 g/cm³.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "4 g/cm³.",
+          "correcta": true,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-TEM-01",
+      "subtema": "escalas-de-temperatura",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "0 °C equivale aproximadamente a",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "273 K.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "0 K.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "100 K.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "32 K.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-TEM-02",
+      "subtema": "escalas-de-temperatura",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "La temperatura de ebullición del agua, 100 °C, equivale en grados Fahrenheit a",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "100 °F.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "180 °F.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "212 °F.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "373 °F.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-TEM-03",
+      "subtema": "escalas-de-temperatura",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "Una temperatura de 300 K equivale a",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "573 °C.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "27 °C.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "300 °C.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "0 °C.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-MEZ-01",
+      "subtema": "mezclas-y-separacion",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": "En el proceso de obtención de aceite de coco se consigue un producto con dos fases que se separan, y la fase aceitosa se vende como producto. Un usuario de aceite de coco decide experimentar con el último aceite que compró y lo destila a baja presión (usando una bomba de vacío). Como resultado de la destilación obtiene un aceite transparente, muy concentrado en aroma, y una grasa blanca casi sin olor.",
+      "enunciado": "De acuerdo con la información, ¿el aceite de coco es un compuesto o una mezcla?",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "Una mezcla porque puede separarse usando procesos físicos como la destilación.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "Un compuesto porque puede separarse usando procesos físicos como la destilación.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "Un compuesto porque puede separarse usando procesos químicos como la destilación.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "Una mezcla porque puede separarse usando procesos químicos como la destilación.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-MEZ-02",
+      "subtema": "mezclas-y-separacion",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "Para separar la arena del agua en una mezcla heterogénea se utiliza",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "la filtración.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "la destilación.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "la cromatografía.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "la evaporación.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-MEZ-03",
+      "subtema": "mezclas-y-separacion",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "Para obtener la sal disuelta en agua, conservando la sal, el método más adecuado es",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "la filtración.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "la decantación.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "la imantación.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "la evaporación.",
+          "correcta": true,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-ATO-01",
+      "subtema": "el-atomo",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": "Para alcanzar estabilidad, los átomos captan o ceden electrones formando iones en los compuestos iónicos, o comparten electrones en los compuestos covalentes. Los iones son átomos cargados que favorecen el paso de la corriente eléctrica cuando se encuentran disueltos. La tabla muestra la conductividad eléctrica de algunas sustancias y el tipo de enlace: C12H22O11 (covalente; conductividad baja); CH3COOH (covalente; baja); NaCl (iónico; alta); HCl (covalente; no conduce).",
+      "enunciado": "De las anteriores sustancias, ¿cuál tendría presencia de iones disueltos según su conductividad y tipo de enlace?",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "C12H22O11",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "CH3COOH",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "NaCl",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "HCl",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-ATO-02",
+      "subtema": "el-atomo",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "Las partículas que se encuentran en el núcleo del átomo son",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "los protones y los electrones.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "los neutrones y los electrones.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "los protones y los neutrones.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "solo los protones.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-ATO-03",
+      "subtema": "el-atomo",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "El número atómico (Z) de un elemento indica el número de",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "neutrones.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "protones.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "electrones de valencia.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "partículas totales del núcleo y la corteza.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-CFE-01",
+      "subtema": "configuracion-electronica",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "La configuración electrónica 1s² 2s² 2p⁶ corresponde a un átomo neutro con número atómico",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "8.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "12.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "6.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "10.",
+          "correcta": true,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-CFE-02",
+      "subtema": "configuracion-electronica",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "El número máximo de electrones que admite un subnivel p es",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "6.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "2.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "10.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "14.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-CFE-03",
+      "subtema": "configuracion-electronica",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "El sodio (Z = 11) tiene la configuración 1s² 2s² 2p⁶ 3s¹. Su número de electrones de valencia es",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "2.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "8.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "1.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "11.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-RPH-01",
+      "subtema": "reacciones-y-ph",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": "Un estudiante afirma que el pH no afecta la solubilidad de una sustancia. Con el fin de comprobar su afirmación, el estudiante adiciona la misma cantidad de hidróxido de aluminio a tres recipientes que contienen la misma cantidad de agua con diferente pH. Después de agitar durante 10 minutos, observa lo siguiente: a pH ácido se disuelve totalmente; a pH neutro se disuelve parcialmente; a pH básico no se disuelve.",
+      "enunciado": "De acuerdo con lo observado, ¿la hipótesis del estudiante es verdadera o falsa?",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "Verdadera, porque en los tres recipientes se disuelve la misma cantidad de hidróxido de aluminio.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "Falsa, porque se observa que la solubilidad del hidróxido de aluminio cambia a diferentes valores de pH.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "Falsa, porque la solubilidad del hidróxido de aluminio aumenta a medida que disminuye la cantidad de agua.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "Verdadera, porque al variar el pH la cantidad de hidróxido de aluminio permanece constante.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-RPH-02",
+      "subtema": "reacciones-y-ph",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "Una solución con pH = 3 es",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "básica.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "ácida.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "neutra.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "indefinida.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-RPH-03",
+      "subtema": "reacciones-y-ph",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "La reacción HCl + NaOH → NaCl + H₂O es una reacción de",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "neutralización.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "síntesis.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "descomposición.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "combustión.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-ES1-01",
+      "subtema": "estequiometria-i",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "La masa molar del agua (H₂O) es aproximadamente (H = 1 g/mol; O = 16 g/mol)",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "16 g/mol.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "20 g/mol.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "10 g/mol.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "18 g/mol.",
+          "correcta": true,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-ES1-02",
+      "subtema": "estequiometria-i",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "¿Cuántos moles de agua hay en 36 g de agua? (masa molar = 18 g/mol)",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "1 mol.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "4 mol.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "2 mol.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "0,5 mol.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-ES1-03",
+      "subtema": "estequiometria-i",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "Según la ecuación 2H₂ + O₂ → 2H₂O, ¿cuántos moles de agua se producen a partir de 3 mol de O₂ con suficiente H₂?",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "3 mol.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "6 mol.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "4 mol.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "12 mol.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-ES2-01",
+      "subtema": "estequiometria-ii",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "Según la ecuación N₂ + 3H₂ → 2NH₃, ¿cuántos moles de NH₃ se obtienen a partir de 6 mol de H₂?",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "2 mol.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "6 mol.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "12 mol.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "4 mol.",
+          "correcta": true,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-ES2-02",
+      "subtema": "estequiometria-ii",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "En la reacción A + 2B → C se mezclan 2 mol de A con 3 mol de B. El reactivo limitante es",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "B.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "A.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "ninguno de los dos.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "ambos por igual.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-ES2-03",
+      "subtema": "estequiometria-ii",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "El rendimiento teórico de una reacción es 50 g y se obtienen 40 g de producto. El porcentaje de rendimiento es",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "125 %.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "90 %.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "80 %.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "20 %.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-SOL-01",
+      "subtema": "soluciones",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": "Los ácidos pueden neutralizarse con bases simples a través de una técnica volumétrica denominada titulación ácido-base. En este procedimiento se toma una muestra de una solución utilizando un recipiente que registre su volumen con precisión y exactitud, con el fin de cuantificar la concentración de la sustancia desconocida.",
+      "enunciado": "¿Cuál de los siguientes es el recipiente más apropiado para la toma de dicha muestra?",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "Mortero: pulveriza sólidos.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "Pipeta aforada: mide un único volumen de 25 mL.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "Gotero: permite agregar gotas de volumen desconocido.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "Balanza: mide determinada masa de un sólido.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-SOL-02",
+      "subtema": "soluciones",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "La molaridad de una solución que contiene 2 mol de soluto en 4 L de solución es",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "8 M.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "0,5 M.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "2 M.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "4 M.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-SOL-03",
+      "subtema": "soluciones",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "En una solución, el soluto es",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "el componente que se encuentra en menor cantidad y se disuelve.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "el componente que está en mayor cantidad.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "el disolvente.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "el sólido que precipita.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-GAS-01",
+      "subtema": "gases-ideales",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": "En una página web se muestra un recipiente con hidrógeno y otro con helio, ambos en estado gaseoso, cerrados, con el mismo volumen (5,0 L) y temperatura (20 °C): hidrógeno, 0,50 mol, presión 2,4 atm; helio, 1,25 mol, presión 6,0 atm.",
+      "enunciado": "Teniendo en cuenta lo anterior, ¿cómo será el valor de la presión cuando se mezclen ambos gases manteniendo el volumen y la temperatura iniciales?",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "Se espera que la presión sea menor que 2,4 atm, porque las moléculas se mueven más lento.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "Se espera que la presión sea mayor que 2,4 atm y menor que 6 atm, porque se reduce el tamaño de las moléculas.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "Se espera que la presión sea mayor que 2,4 atm y menor que 6 atm, porque la presión depende del número de átomos.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "Se espera que la presión sea mayor que 6 atm, porque la presión es proporcional a la cantidad de moles.",
+          "correcta": true,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-GAS-02",
+      "subtema": "gases-ideales",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "Según la ley de Boyle, a temperatura constante, si el volumen de un gas se duplica su presión",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "se duplica.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "no cambia.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "se cuadruplica.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "se reduce a la mitad.",
+          "correcta": true,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-GAS-03",
+      "subtema": "gases-ideales",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "Según la ecuación PV = nRT, si la temperatura de un gas aumenta manteniendo constantes el volumen y el número de moles, la presión",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "disminuye.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "permanece igual.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "aumenta.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "se hace cero.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-QOR-01",
+      "subtema": "quimica-organica",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "Un hidrocarburo que contiene únicamente enlaces sencillos entre carbonos es un",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "alqueno.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "alcano.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "alquino.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "areno.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-QOR-02",
+      "subtema": "quimica-organica",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "La fórmula molecular del metano es",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "C₂H₆.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "C₂H₄.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "CO₂.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "CH₄.",
+          "correcta": true,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-QOR-03",
+      "subtema": "quimica-organica",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "El grupo funcional –OH caracteriza a los",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "alcoholes.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "cetonas.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "ácidos carboxílicos.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "éteres.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-AD1-01",
+      "subtema": "analisis-dimensional-i",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "La unidad de fuerza en el Sistema Internacional es",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "el julio (J).",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "el vatio (W).",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "el newton (N).",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "el pascal (Pa).",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-AD1-02",
+      "subtema": "analisis-dimensional-i",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "Al convertir 72 km/h a m/s se obtiene",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "72 m/s.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "20 m/s.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "7,2 m/s.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "259 m/s.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-AD1-03",
+      "subtema": "analisis-dimensional-i",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "Las dimensiones de la velocidad son",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "L/T",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "L·T",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "L/T²",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "M·L",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-AD2-01",
+      "subtema": "analisis-dimensional-ii",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "Las dimensiones de la aceleración son",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "L·T⁻¹",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "L²·T⁻²",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "M·L·T⁻²",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "L·T⁻²",
+          "correcta": true,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-AD2-02",
+      "subtema": "analisis-dimensional-ii",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "Las dimensiones de la fuerza (F = m·a) son",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "M·L²·T⁻²",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "L·T⁻²",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "M·L·T⁻²",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "M·L⁻¹·T⁻²",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-AD2-03",
+      "subtema": "analisis-dimensional-ii",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "La ecuación d = v·t², donde d es distancia, v es velocidad y t es tiempo, es",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "dimensionalmente correcta, porque ambos lados son longitudes.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "dimensionalmente incorrecta, porque v·t² tiene dimensiones de L·T.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "incorrecta, porque d no tiene dimensiones.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "correcta, porque el tiempo siempre se eleva al cuadrado.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-CN1-01",
+      "subtema": "cinematica-i",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "Un carro viaja a 60 km/h durante 2 horas. La distancia recorrida es",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "30 km.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "62 km.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "240 km.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "120 km.",
+          "correcta": true,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-CN1-02",
+      "subtema": "cinematica-i",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "Un corredor recorre 100 m en 20 s. Su velocidad media es",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "5 m/s.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "20 m/s.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "2.000 m/s.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "0,2 m/s.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-CN1-03",
+      "subtema": "cinematica-i",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "En un movimiento rectilíneo uniforme (MRU) la aceleración es",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "constante y diferente de cero.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "creciente.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "igual a cero.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "variable.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-CN2-01",
+      "subtema": "cinematica-ii",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": "En una pista circular de juguete hay cuatro carros que se desplazan con rapidez constante. Todos los carros tardan el mismo tiempo en dar una vuelta completa a la pista.",
+      "enunciado": "La magnitud de la aceleración de cualquiera de los carros en cualquier momento es",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "igual a cero, porque la magnitud de su velocidad es constante.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "igual a cero, porque la magnitud de la fuerza neta sobre el carro es nula.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "diferente de cero, porque la magnitud de la velocidad angular no es constante.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "diferente de cero, porque la dirección de la velocidad no es constante.",
+          "correcta": true,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-CN2-02",
+      "subtema": "cinematica-ii",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "Un cuerpo parte del reposo con aceleración constante de 2 m/s². Su velocidad a los 5 s es",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "2,5 m/s.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "10 m/s.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "7 m/s.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "25 m/s.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-CN2-03",
+      "subtema": "cinematica-ii",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "Un objeto se deja caer desde el reposo (g = 10 m/s², sin rozamiento). Su velocidad a los 2 s es",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "20 m/s.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "10 m/s.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "40 m/s.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "5 m/s.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-DN1-01",
+      "subtema": "dinamica-i",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "Dos partículas de polvo cargadas están separadas a una misma distancia de una pantalla larga que tiene una carga eléctrica positiva. La pantalla ejerce una fuerza sobre las partículas de igual magnitud y en direcciones opuestas, generando que las partículas experimenten aceleraciones. Una estudiante nota que, de acuerdo a la figura, la magnitud de la aceleración de la partícula 1 es el doble que la de la partícula 2. ¿A qué se debe que la magnitud de la aceleración de las partículas no sea la misma?",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "A que la masa de las partículas es diferente.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "A que la dirección de las fuerzas es diferente.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "A que la cantidad de carga de las partículas es igual.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "A que la distancia de separación es la misma.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-DN1-02",
+      "subtema": "dinamica-i",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "La fuerza neta sobre un cuerpo de 5 kg que acelera a 3 m/s² es",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "8 N.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "1,67 N.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "0,6 N.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "15 N.",
+          "correcta": true,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-DN1-03",
+      "subtema": "dinamica-i",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "Según la primera ley de Newton, un cuerpo sobre el que no actúa una fuerza neta",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "acelera constantemente.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "se detiene siempre.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "mantiene su estado de reposo o de movimiento rectilíneo uniforme.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "cae hacia la Tierra.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-DN2-01",
+      "subtema": "dinamica-ii",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": "En el espacio se encuentran dos asteroides de masas m₁ y m₂, separados por una distancia r. Los asteroides se atraen, inicialmente, con una fuerza (F) dada por F = G·m₁·m₂ / r².",
+      "enunciado": "Si la distancia entre los asteroides se duplica y una de sus masas también se duplica, ¿cuál será la fuerza de atracción?",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "2F",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "0",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "F/2",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "F",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-DN2-02",
+      "subtema": "dinamica-ii",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "El peso de un cuerpo de 10 kg en un lugar donde g = 10 m/s² es",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "10 N.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "100 N.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "1 N.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "1.000 N.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-DN2-03",
+      "subtema": "dinamica-ii",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "Una caja de 20 kg reposa sobre un piso horizontal con coeficiente de fricción μ = 0,5 (g = 10 m/s²). La fuerza de fricción máxima es",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "10 N.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "40 N.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "200 N.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "100 N.",
+          "correcta": true,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-MON-01",
+      "subtema": "movimiento-ondulatorio",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": "En una cubeta de ondas una esfera movida por un motor toca el agua en el punto O 10 veces por segundo generando ondas circulares que se propagan en la superficie. En la cubeta la velocidad de propagación de las ondas depende de la profundidad del agua.",
+      "enunciado": "Sobre las ondas así generadas, puede decirse que",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "la longitud de onda es independiente de la profundidad del agua pero la frecuencia varía con la profundidad.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "la frecuencia es independiente de la profundidad pero la longitud de onda depende de la profundidad.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "la longitud de onda y la frecuencia dependen de la profundidad del agua en la cubeta.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "la frecuencia y la longitud de onda son independientes de la profundidad del agua en la cubeta.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-MON-02",
+      "subtema": "movimiento-ondulatorio",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "Una onda tiene una frecuencia de 5 Hz y una longitud de onda de 2 m. Su velocidad de propagación es",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "10 m/s.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "2,5 m/s.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "7 m/s.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "0,4 m/s.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-MON-03",
+      "subtema": "movimiento-ondulatorio",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "El periodo de una onda cuya frecuencia es 4 Hz es",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "4 s.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "2 s.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "0,25 s.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "8 s.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-FON-01",
+      "subtema": "fenomenos-ondulatorios",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "Un rayo de luz incide sobre un cristal semitransparente con un ángulo θ tal que el haz reflejado es perpendicular al refractado. (Se sabe que sen(90° − θ) = cos θ.) De esto se deduce que el índice de refracción, n, del cristal es",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "tan θ",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "sen θ",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "ctg θ",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "cos θ",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-FON-02",
+      "subtema": "fenomenos-ondulatorios",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "El eco es un fenómeno que se explica por",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "la refracción de la luz.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "la reflexión del sonido.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "la difracción.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "la interferencia constructiva.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-FON-03",
+      "subtema": "fenomenos-ondulatorios",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "Cuando una onda se curva al rodear un obstáculo o al pasar por una abertura pequeña se presenta",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "difracción.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "reflexión.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "polarización.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "absorción.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-SOP-01",
+      "subtema": "sonido-y-optica",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "Un pequeño robot submarino lleva un dispositivo que permite filmar bajo la superficie del mar. El robot submarino emite un haz de luz que se atenúa con la distancia hasta que desaparece totalmente. Tal comportamiento se explica, porque en el agua la luz se",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "dispersa y se refracta.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "refracta y se refleja.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "dispersa y se absorbe.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "refleja y se absorbe.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-SOP-02",
+      "subtema": "sonido-y-optica",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "El sonido no se propaga en",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "el aire.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "el agua.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "el acero.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "el vacío.",
+          "correcta": true,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-SOP-03",
+      "subtema": "sonido-y-optica",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "La imagen formada por un espejo plano es",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "real e invertida.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "real y aumentada.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "virtual, derecha y del mismo tamaño del objeto.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "virtual, invertida y más pequeña.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-ELM-01",
+      "subtema": "electromagnetismo",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "Un muñeco metálico con brazos móviles se construyó con papel aluminio, alambre y corcho. Un muñeco cargado negativamente se une a otro muñeco descargado y luego se separan. De esta situación se puede afirmar que",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "el muñeco cargado se descarga, cargando al muñeco descargado.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "el muñeco descargado, descarga al primer muñeco, quedando ambos neutros.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "un muñeco queda cargado positivamente y el otro negativamente.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "ambos muñecos quedan cargados negativamente.",
+          "correcta": true,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-ELM-02",
+      "subtema": "electromagnetismo",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "Según la ley de Ohm (V = I·R), una resistencia de 10 Ω por la que circula una corriente de 2 A tiene un voltaje de",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "5 V.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "20 V.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "12 V.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "0,2 V.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-ELM-03",
+      "subtema": "electromagnetismo",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "Dos cargas eléctricas del mismo signo",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "se atraen.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "se neutralizan.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "no interactúan.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "se repelen.",
+          "correcta": true,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-TDN-01",
+      "subtema": "termodinamica",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "En el interior de cada pistón del motor de un carro, la gasolina mezclada con aire hace explosión cuando salta la chispa eléctrica en la bujía. La explosión produce gases en expansión que mueven el pistón. ¿Cuál es la secuencia que mejor describe las transformaciones de energía en el pistón? (La flecha significa: se transforma en.)",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "Energía eléctrica de la bujía → energía mecánica de expansión de los gases → energía mecánica de los pistones.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "Energía química de la mezcla combustible-aire → energía mecánica de expansión de los gases → energía mecánica del pistón.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "Energía eléctrica de la bujía → energía química de la mezcla → calor → energía mecánica del pistón.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "Energía química de la mezcla → energía eléctrica de la bujía → energía mecánica del pistón.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-TDN-02",
+      "subtema": "termodinamica",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "En la siguiente gráfica se observa el comportamiento del volumen de 1 g de agua cuando se le aplica calor a presión atmosférica. De acuerdo con la información contenida en la gráfica, la temperatura para la cual la densidad del agua es máxima es",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "8 ºC",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "16 ºC",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "0 ºC",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "4 ºC",
+          "correcta": true,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-TDN-03",
+      "subtema": "termodinamica",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "La siguiente figura muestra un carro híbrido, es decir, un carro que tiene dos motores: un motor de combustión que funciona con gasolina y un motor eléctrico que funciona con baterías eléctricas. Si se usan los dos motores al tiempo y se pone en movimiento el carro y se encienden las luces, ¿qué transformaciones de energía ocurren?",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "La energía eléctrica se transforma en química, cinética y lumínica.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "Las energías eléctrica y química se transforman en cinética y lumínica.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "La energía cinética se transforma en química, lumínica y eléctrica.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "Las energías cinética y lumínica se transforman en química y eléctrica.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-COL-01",
+      "subtema": "colisiones-cantidad-movimiento",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "La cantidad de movimiento de un cuerpo de 2 kg que se mueve a 3 m/s es",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "6 kg·m/s.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "1,5 kg·m/s.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "5 kg·m/s.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "9 kg·m/s.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-COL-02",
+      "subtema": "colisiones-cantidad-movimiento",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "En una colisión perfectamente inelástica, los cuerpos",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "se separan con la misma rapidez.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "conservan toda su energía cinética.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "quedan unidos y se mueven juntos después del choque.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "no conservan la cantidad de movimiento.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
+    },
+    {
+      "codigo": "CIE-COL-03",
+      "subtema": "colisiones-cantidad-movimiento",
+      "dificultad": 2,
+      "competencia": null,
+      "contexto_ref": null,
+      "contexto": null,
+      "enunciado": "Un carrito A de 2 kg que se mueve a 3 m/s choca con un carrito B de 1 kg en reposo y quedan unidos. La velocidad final del conjunto es",
+      "imagen": null,
+      "imagen_alt": null,
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "1 m/s.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "B",
+          "texto": "2 m/s.",
+          "correcta": true,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "C",
+          "texto": "3 m/s.",
+          "correcta": false,
+          "retroalimentacion": null
+        },
+        {
+          "letra": "D",
+          "texto": "6 m/s.",
+          "correcta": false,
+          "retroalimentacion": null
+        }
+      ],
+      "explicacion": "",
+      "tiempo_estimado_seg": 120,
+      "etiquetas": []
     }
   ]
 }

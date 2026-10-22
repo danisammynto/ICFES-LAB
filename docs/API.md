@@ -71,7 +71,7 @@ Después de responder (o al revisar un simulacro terminado) cada opción incluye
 | Método | Ruta | Descripción |
 |---|---|---|
 | `GET` | `/api/salud` | Estado del servidor: `{ estado: "ok", hora }`. Lo usa el healthcheck de Docker. |
-| `GET` | `/api/config/publica` | `{ app, fecha_icfes: { fecha, nombre, estimada, dias }, vanty: { modo: "claude" \| "local" } }` |
+| `GET` | `/api/config/publica` | `{ app, calendarios_icfes: { A, B }, vanty: { modo: "claude" \| "local" } }`. Cada calendario: `{ convocatoria, meses, estado, fecha, dias, opciones }`; `fecha` y `dias` son `null` mientras el ICFES no publique la fecha oficial. |
 
 ## Autenticación · `/api/auth`
 
@@ -94,7 +94,8 @@ Después de responder (o al revisar un simulacro terminado) cada opción incluye
 | `PUT` | `/` | `nombre?`, `nombre_mostrar?` (≤ 40), `bio?` (≤ 280), `colegio?`, `ciudad?`, `grado?` | Perfil actualizado (misma forma que `GET`). |
 | `PUT` | `/avatar` | `color`, `expresion`, `accesorio`, `fondo` (códigos de artículos, p. ej. `color-lima`) | `{ avatar }`. `403 NO_ADQUIRIDO` si el artículo no está en el inventario. |
 | `PUT` | `/insignia-destacada` | `insignia_id` (o `null`) | `{ insignia_destacada_id }` |
-| `PUT` | `/configuracion` | `fecha_icfes?` (o `null` para usar la global), `meta_diaria_min?` (5–240), `meta_puntaje?` (0–500), `tema_interfaz?` (`claro`, `oscuro`, `sistema`), `recordatorios?` | Configuración actualizada. |
+| `PUT` | `/calendario` | `calendario_icfes` (`A` o `B`), `fecha_icfes?` (`AAAA-MM-DD` o `null`): la de la citación cuando el ICFES no ha publicado la fecha, o una de las fechas oficiales si publicó varias. Al cambiar de calendario se descarta la fecha anterior. | `{ calendario_icfes, cuenta_regresiva, eventos, jugador }`. `cuenta_regresiva.estado`: `oficial`, `elegida`, `varias`, `citacion` o `sin_publicar` (sin fecha inventada: `dias` es `null`). |
+| `PUT` | `/configuracion` | `fecha_icfes?` (fecha de la citación; preferir `/calendario`), `meta_diaria_min?` (5–240), `meta_puntaje?` (0–500), `tema_interfaz?` (`claro`, `oscuro`, `sistema`), `recordatorios?` | Configuración actualizada. |
 | `PUT` | `/email` | `email`, `password` | `{ email }` |
 | `PUT` | `/password` | `actual`, `nueva` | `{ mensaje }` + cookie nueva; las demás sesiones se cierran. |
 | `DELETE` | `/` | `password` | `{ mensaje }`. Elimina la cuenta y todos sus datos. |
@@ -109,7 +110,8 @@ Después de responder (o al revisar un simulacro terminado) cada opción incluye
 | `GET` | `/api/lecciones/:id` | — | `{ id, titulo, resumen, bloques, duracion_min, recompensa, completada, veces, subtema, materia, siguiente }`. `403 BLOQUEADO` si el nivel no alcanza. |
 | `POST` | `/api/lecciones/:id/completar` | `tiempo_seg?`, `aciertos?`, `total?` | `{ primera_vez, eventos, jugador }` |
 | `GET` | `/api/practica/siguiente` | `subtema` o `materia` (slug), `excluir?` (ids separados por coma) | `{ subtema, materia, dominio, dificultad_objetivo, pregunta }`. `pregunta: null` si no quedan preguntas nuevas en la sesión. |
-| `POST` | `/api/practica/responder` | `pregunta_id`, `opcion_id` (`null` = omitida), `tiempo_ms?`, `origen?` (`practica`, `leccion`, `vanty`) | `{ correcta, opcion_elegida_id, opcion_correcta_id, letra_correcta, explicacion, opciones, eventos, jugador }` |
+| `GET` | `/api/practica/subtema/:slug` | — | `{ subtema, materia, dominio, preguntas: [{ …pregunta sin solución, ultima: { correcta, opcion_id, fecha } \| null }] }`: todas las preguntas del banco de ese tema, en orden, para mostrarlas después de la explicación de la lección. `403 BLOQUEADO` si el nivel no alcanza. |
+| `POST` | `/api/practica/responder` | `pregunta_id`, `opcion_id` (`null` = omitida), `tiempo_ms?`, `origen?` (`practica`, `leccion`, `vanty`) | `{ correcta, opcion_elegida_id, opcion_correcta_id, letra_correcta, explicacion, opciones, eventos, jugador }`. `explicacion` puede ser una cadena vacía (las preguntas del banco 2026 traen solo la respuesta correcta). |
 
 ## Simulacros, minisimulacros y retos 🔒
 
@@ -131,12 +133,12 @@ Después de responder (o al revisar un simulacro terminado) cada opción incluye
 | Método | Ruta | Cuerpo | Respuesta |
 |---|---|---|---|
 | `GET` | `/api/gamificacion/resumen` | — | `{ xp, monedas, nivel, siguiente: { …, faltan }, progreso, racha }` |
-| `GET` | `/api/gamificacion/niveles` | — | `{ actual, niveles: [{ numero, nombre, xp_minimo, recompensa_monedas, desbloqueos, insignia, alcanzado, subtemas, retos }] }` |
+| `GET` | `/api/gamificacion/niveles` | — | `{ actual, niveles: [{ numero, nombre, xp_minimo, recompensa_monedas, desbloqueos, requisitos: [{ clave, etiqueta, meta, texto }], insignia, alcanzado, subtemas, retos }] }`. `actual.siguiente.requisitos` trae además `actual` y `cumplido` de cada requisito (XP, días de estudio, preguntas, aciertos, temario por área, actividades). |
 | `GET` | `/api/gamificacion/logros` | — | `{ logros: [{ codigo, nombre, descripcion, icono, categoria, secreto, desbloqueado, desbloqueado_en, progreso: { valor, meta, porcentaje }, recompensa, insignia }] }`. Los secretos se ocultan hasta desbloquearse. |
-| `GET` | `/api/gamificacion/insignias` | — | `{ insignias: [{ …, obtenida, obtenida_en }] }` |
+| `GET` | `/api/gamificacion/insignias` | — | `{ insignias: [{ …, obtenida, obtenida_en }] }`. Las insignias retiradas (tienda, nivel Maestro) solo aparecen si el estudiante ya las tiene. |
 | `GET` | `/api/gamificacion/racha` | — | `{ actual, maxima, protectores, estudio_hoy, en_riesgo, inicio, proxima_recompensa, calendario (26 semanas), recompensas }` |
-| `GET` | `/api/tienda` | — | `{ monedas, nivel, avatar, protectores: { cantidad, maximo }, items: { color, expresion, accesorio, fondo, protector }, insignias }` |
-| `POST` | `/api/tienda/comprar` | `tipo` (`item` o `insignia`), `codigo` | `{ ok, comprado, eventos, jugador }`. `400 SIN_MONEDAS`, `403 BLOQUEADO`, `409` si ya lo tiene o si ya tiene 3 protectores. |
+| `GET` | `/api/tienda` | — | `{ monedas, nivel, avatar, protectores: { cantidad, maximo }, items: { color, expresion, accesorio, fondo, protector } }` |
+| `POST` | `/api/tienda/comprar` | `tipo` (`item`), `codigo` | `{ ok, comprado, eventos, jugador }`. `400 SIN_MONEDAS`, `403 BLOQUEADO`, `409` si ya lo tiene o si ya tiene 3 protectores. `422` con `tipo: "insignia"`: las insignias ya no se venden. |
 
 ## Analítica 🔒
 
@@ -188,8 +190,8 @@ En el navegador, `frontend/js/core/api.js` (`flujo`) lee el stream con `fetch` +
 |---|---|---|---|
 | `GET` | `/resumen` | — | `{ general: { usuarios, activos_7, preguntas, lecciones, respuestas_24h, simulacros, mensajes_vanty }, por_materia (preguntas por dificultad), actividad (últimos 14 días) }` |
 | `GET` | `/catalogo` | — | `{ subtemas: [{ slug, nombre, materia_slug, materia }] }` |
-| `GET` | `/configuracion` | — | `{ fecha_icfes: { fecha, nombre, estimada }, vanty: { limite_diario } }` |
-| `PUT` | `/configuracion` | `fecha_icfes?: { fecha, nombre?, estimada? }`, `vanty?: { limite_diario }` (1–1000) | Configuración actualizada. |
+| `GET` | `/configuracion` | — | `{ calendarios_icfes: { A, B, revisado }, vanty: { limite_diario } }` |
+| `PUT` | `/configuracion` | `calendarios_icfes?: { A?: { convocatoria, meses, fuente, fechas: [{ fecha, descripcion }] }, B?: {…} }` (hasta 3 fechas oficiales por calendario; con fechas, `fuente` es obligatoria), `vanty?: { limite_diario }` (1–1000) | Configuración actualizada. |
 | `GET` | `/preguntas` | `materia?`, `subtema?`, `q?`, `estado?` (`activas`, `inactivas`, `todas`), `pagina?` | `{ total, pagina, por_pagina, preguntas }` (20 por página) |
 | `GET` | `/preguntas/:id` | — | Pregunta completa con solución, contexto, `activa` y `etiquetas`. |
 | `POST` | `/preguntas` | Pregunta en el formato de [FORMATO.md](../database/contenido/FORMATO.md) | `201 { id }`. `400` con la lista de problemas si no es válida. |
@@ -209,8 +211,8 @@ curl -c cookies.txt -X POST http://localhost:3000/api/auth/login \
   -H "Content-Type: application/json" -H "X-Requested-With: XMLHttpRequest" \
   -d '{"email":"demo@icfeslab.co","password":"IcfesLab2026"}'
 
-# 2. Pedir una pregunta de Geometría
-curl -b cookies.txt "http://localhost:3000/api/practica/siguiente?subtema=geometria"
+# 2. Pedir una pregunta de Geometría I
+curl -b cookies.txt "http://localhost:3000/api/practica/siguiente?subtema=geometria-i"
 
 # 3. Responderla (usa el id de la pregunta y el de una de sus opciones)
 curl -b cookies.txt -X POST http://localhost:3000/api/practica/responder \

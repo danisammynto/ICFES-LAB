@@ -2,7 +2,8 @@
  * Catálogo académico con el avance del estudiante.
  *
  * Avance de un subtema (0–100) = 30 % lecciones completadas + 70 % dominio.
- * Avance de una materia = promedio del avance de sus subtemas.
+ * Avance de una materia = promedio del avance de sus subtemas. Solo cuentan los subtemas activos
+ * (los del temario vigente); los retirados conservan su historial pero no se muestran.
  */
 import { una, varias } from '../config/db.js';
 import { noEncontrado } from '../utils/AppError.js';
@@ -15,6 +16,7 @@ const CTE_AVANCE = `
       FROM subtemas s
       LEFT JOIN lecciones l ON l.subtema_id = s.id AND l.activa
       LEFT JOIN lecciones_completadas lc ON lc.leccion_id = l.id AND lc.usuario_id = $1
+     WHERE s.activo
      GROUP BY s.id
   ), avance AS (
     SELECT s.id AS subtema_id, t.materia_id, s.nivel_requerido,
@@ -29,6 +31,7 @@ const CTE_AVANCE = `
       JOIN temas t ON t.id = s.tema_id
       JOIN lecciones_subtema ls ON ls.subtema_id = s.id
       LEFT JOIN progreso p ON p.subtema_id = s.id AND p.usuario_id = $1
+     WHERE s.activo
   )`;
 
 /** Materias con avance, precisión y la próxima lección sugerida ("Continuar lección"). */
@@ -59,7 +62,7 @@ export async function listarMaterias(usuarioId) {
        FROM lecciones l
        JOIN subtemas s ON s.id = l.subtema_id
        JOIN temas t ON t.id = s.tema_id
-      WHERE l.activa AND s.nivel_requerido <= $2
+      WHERE l.activa AND s.activo AND s.nivel_requerido <= $2
         AND NOT EXISTS (SELECT 1 FROM lecciones_completadas lc WHERE lc.leccion_id = l.id AND lc.usuario_id = $1)
       ORDER BY t.materia_id, t.orden, s.orden, l.orden`,
     [usuarioId, nivel],
@@ -98,7 +101,7 @@ export async function detalleMateria(usuarioId, slug) {
        FROM subtemas s
        JOIN temas t ON t.id = s.tema_id
        JOIN avance a ON a.subtema_id = s.id
-      WHERE t.materia_id = $2
+      WHERE t.materia_id = $2 AND s.activo
       ORDER BY t.orden, s.orden`,
     [usuarioId, materia.id],
   );

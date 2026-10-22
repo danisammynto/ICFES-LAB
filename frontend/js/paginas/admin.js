@@ -84,15 +84,15 @@ function formularioPregunta(existente = null) {
           h('input', { class: 'entrada', id: 'p-imagen', name: 'imagen', value: p?.imagen?.url ?? '' })),
         h('div', { class: 'campo' }, h('label', { for: 'p-imagen-alt' }, 'Descripción de la imagen'),
           h('input', { class: 'entrada', id: 'p-imagen-alt', name: 'imagen_alt', value: p?.imagen?.alt ?? '' }))),
-      h('p', { class: 'etiqueta' }, 'Opciones (marca la correcta)'),
+      h('p', { class: 'etiqueta' }, 'Opciones (marca la correcta; la D puede quedar vacía en preguntas de 3 opciones, como en Inglés)'),
       ['A', 'B', 'C', 'D'].map((letra, i) => h('div', { class: 'opcion-form' },
         h('span', { class: 'letra' }, letra),
         h('div', { class: 'columna', style: { gap: '6px' } },
-          h('input', { class: 'entrada', name: `opcion_${letra}`, required: true, placeholder: `Texto de la opción ${letra}`, value: p?.opciones[i]?.texto ?? '', 'aria-label': `Texto de la opción ${letra}` }),
+          h('input', { class: 'entrada', name: `opcion_${letra}`, required: letra !== 'D', placeholder: `Texto de la opción ${letra}`, value: p?.opciones[i]?.texto ?? '', 'aria-label': `Texto de la opción ${letra}` }),
           h('input', { class: 'entrada', name: `retro_${letra}`, placeholder: 'Retroalimentación: por qué es correcta o incorrecta', value: p?.opciones[i]?.retroalimentacion ?? '', 'aria-label': `Retroalimentación de la opción ${letra}` }),
           h('label', { class: 'correcta' }, h('input', { type: 'radio', name: 'correcta', value: letra, checked: correcta === letra }), 'Es la respuesta correcta')))),
-      h('div', { class: 'campo' }, h('label', { for: 'p-explicacion' }, 'Explicación detallada'),
-        h('textarea', { class: 'entrada', id: 'p-explicacion', name: 'explicacion', required: true }, p?.explicacion ?? '')),
+      h('div', { class: 'campo' }, h('label', { for: 'p-explicacion' }, 'Explicación detallada (opcional)'),
+        h('textarea', { class: 'entrada', id: 'p-explicacion', name: 'explicacion' }, p?.explicacion ?? '')),
       h('div', { class: 'campo' }, h('label', { for: 'p-etiquetas' }, 'Etiquetas (separadas por comas)'),
         h('input', { class: 'entrada', id: 'p-etiquetas', name: 'etiquetas', value: (p?.etiquetas ?? []).join(', ') })),
       h('div', { class: 'modal-acciones' },
@@ -119,7 +119,7 @@ function formularioPregunta(existente = null) {
           texto: String(f.get(`opcion_${letra}`)).trim(),
           correcta: f.get('correcta') === letra,
           retroalimentacion: String(f.get(`retro_${letra}`)).trim() || null,
-        })),
+        })).filter((o, i) => i < 3 || o.texto), // la opción D es opcional (preguntas de 3 opciones)
       };
       try {
         await conCarga(form.querySelector('[type="submit"]'), () => (p ? api.put(`/api/admin/preguntas/${p.id}`, datos) : api.post('/api/admin/preguntas', datos)));
@@ -273,13 +273,42 @@ async function pintarConfiguracion() {
   const panel = $('#panel-configuracion');
   montar(panel, cargando());
   const c = await api.get('/api/admin/configuracion');
-  const form = h('form', { class: 'tarjeta', novalidate: true, style: { maxWidth: '720px' } },
-    h('h2', { class: 'tarjeta-titulo' }, icono('calendar'), 'Fecha global del ICFES'),
-    h('p', { class: 'texto-2' }, 'Se usa en la cuenta regresiva de todos los estudiantes que no hayan definido su propia fecha.'),
-    h('div', { class: 'rejilla-2', style: { gap: 'var(--esp-3)' } },
-      h('div', { class: 'campo' }, h('label', { for: 'c-fecha' }, 'Fecha del examen'), h('input', { class: 'entrada', type: 'date', id: 'c-fecha', name: 'fecha', value: c.fecha_icfes.fecha ?? '', required: true })),
-      h('div', { class: 'campo' }, h('label', { for: 'c-nombre' }, 'Nombre'), h('input', { class: 'entrada', id: 'c-nombre', name: 'nombre', value: c.fecha_icfes.nombre ?? '', maxlength: 80 }))),
-    h('label', { class: 'interruptor mb-4' }, h('input', { type: 'checkbox', name: 'estimada', checked: Boolean(c.fecha_icfes.estimada) }), h('span', {}, 'Marcar como fecha estimada (aún no oficial)')),
+  const calendarios = c.calendarios_icfes;
+  // Hasta 3 fechas oficiales por calendario (si el ICFES publica varias convocatorias, cada
+  // estudiante elige la de su citación).
+  const bloqueCalendario = (letra) => {
+    const conf = calendarios[letra];
+    const id = (campo, i = '') => `c-${letra}-${campo}${i}`;
+    return h('fieldset', { class: 'calendario-admin', style: { border: '1px solid var(--borde)', borderRadius: 'var(--radio-lg)', padding: 'var(--esp-4)', marginBottom: 'var(--esp-4)' } },
+      h('legend', { class: 'negrita', style: { padding: '0 6px' } }, `Calendario ${letra}`),
+      h('div', { class: 'rejilla-2', style: { gap: 'var(--esp-3)' } },
+        h('div', { class: 'campo' }, h('label', { for: id('convocatoria') }, 'Convocatoria'),
+          h('input', { class: 'entrada', id: id('convocatoria'), value: conf.convocatoria ?? '', maxlength: 80 })),
+        h('div', { class: 'campo' }, h('label', { for: id('meses') }, 'Cuándo se presenta normalmente'),
+          h('input', { class: 'entrada', id: id('meses'), value: conf.meses ?? '', maxlength: 80, placeholder: 'en marzo' }))),
+      [0, 1, 2].map((i) => h('div', { class: 'rejilla-2', style: { gap: 'var(--esp-3)' } },
+        h('div', { class: 'campo' }, h('label', { for: id('fecha', i) }, `Fecha oficial ${i + 1}${i ? ' (opcional)' : ''}`),
+          h('input', { class: 'entrada', type: 'date', id: id('fecha', i), value: conf.fechas[i]?.fecha ?? '' })),
+        h('div', { class: 'campo' }, h('label', { for: id('descripcion', i) }, 'Descripción'),
+          h('input', { class: 'entrada', id: id('descripcion', i), value: conf.fechas[i]?.descripcion ?? '', maxlength: 80, placeholder: 'Aplicación de la prueba' })))),
+      h('div', { class: 'campo' }, h('label', { for: id('fuente') }, 'Fuente oficial (resolución o enlace del ICFES)'),
+        h('input', { class: 'entrada', id: id('fuente'), value: conf.fuente ?? '', maxlength: 200, placeholder: 'Resolución ICFES … de … / https://www.icfes.gov.co/…' })));
+  };
+  const leerCalendario = (letra) => {
+    const valor = (campo, i = '') => $(`#c-${letra}-${campo}${i}`).value.trim();
+    return {
+      convocatoria: valor('convocatoria'),
+      meses: valor('meses'),
+      fuente: valor('fuente') || null,
+      fechas: [0, 1, 2].map((i) => ({ fecha: valor('fecha', i), descripcion: valor('descripcion', i) })).filter((f) => f.fecha),
+    };
+  };
+  const form = h('form', { class: 'tarjeta', novalidate: true, style: { maxWidth: '760px' } },
+    h('h2', { class: 'tarjeta-titulo' }, icono('calendar'), 'Fechas oficiales del Saber 11'),
+    h('p', { class: 'texto-2' }, 'Cada estudiante elige su calendario (A o B) y la cuenta regresiva usa la fecha oficial publicada por el ICFES. Deja las fechas vacías mientras el ICFES no las publique: la plataforma informa que aún no están publicadas y no calcula fechas estimadas. Si el ICFES publica varias fechas para un mismo calendario, regístralas y cada estudiante elegirá la de su citación.'),
+    calendarios.revisado ? h('p', { class: 'texto-sm texto-3' }, `Última actualización: ${calendarios.revisado}`) : null,
+    bloqueCalendario('A'),
+    bloqueCalendario('B'),
     h('hr'),
     h('h2', { class: 'tarjeta-titulo' }, icono('bot'), 'Vanty'),
     h('div', { class: 'campo', style: { maxWidth: '280px' } }, h('label', { for: 'c-limite' }, 'Límite diario de mensajes por estudiante'),
@@ -289,7 +318,7 @@ async function pintarConfiguracion() {
     e.preventDefault();
     try {
       await conCarga(form.querySelector('[type="submit"]'), () => api.put('/api/admin/configuracion', {
-        fecha_icfes: { fecha: form.fecha.value, nombre: form.nombre.value.trim() || 'Saber 11', estimada: form.estimada.checked },
+        calendarios_icfes: { A: leerCalendario('A'), B: leerCalendario('B') },
         vanty: { limite_diario: Number(form.limite_diario.value) },
       }));
       toast('Configuración guardada.');

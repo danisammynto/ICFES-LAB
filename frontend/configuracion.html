@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Configuración · ICFES Lab</title>
   <link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <meta name="theme-color" content="#484ea2">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap">
@@ -42,19 +45,23 @@
       <div class="secciones-config">
         <form class="tarjeta" id="preparacion" novalidate>
           <h2><svg class="icono" aria-hidden="true"><use href="/img/iconos.svg#target"></use></svg> Preparación</h2>
-          <p>Tu fecha de examen y tus metas personalizan la cuenta regresiva, las recomendaciones y la proyección de puntaje.</p>
+          <p>Tu calendario del ICFES y tus metas personalizan la cuenta regresiva, las recomendaciones y la proyección de puntaje.</p>
           <fieldset style="border: 0; padding: 0; margin: 0 0 var(--esp-4)">
-            <legend class="etiqueta" style="margin-bottom: 8px">Fecha de tu examen</legend>
+            <legend class="etiqueta" style="margin-bottom: 8px">¿En qué calendario presentarás la prueba Saber 11 del ICFES?</legend>
             <label class="opcion-fecha">
-              <input type="radio" name="tipo_fecha" value="global" checked>
-              <span><strong>Usar la fecha oficial de la plataforma</strong><br><span class="texto-sm texto-2" id="texto-fecha-global"></span></span>
+              <input type="radio" name="calendario_icfes" value="A">
+              <span><strong>Calendario A</strong><br><span class="texto-sm texto-2" id="meses-calendario-A"></span></span>
             </label>
             <label class="opcion-fecha">
-              <input type="radio" name="tipo_fecha" value="personal">
-              <span class="crecer"><strong>Usar mi propia fecha</strong><br>
-                <input class="entrada mt-4" type="date" id="fecha-personal" name="fecha_personal" aria-label="Mi fecha del examen">
-              </span>
+              <input type="radio" name="calendario_icfes" value="B">
+              <span><strong>Calendario B</strong><br><span class="texto-sm texto-2" id="meses-calendario-B"></span></span>
             </label>
+            <p class="texto-sm texto-2 mb-0" id="estado-fecha-icfes" aria-live="polite"></p>
+            <div class="campo mt-4" id="campo-fecha-citacion" hidden>
+              <label for="fecha-citacion-config" id="etiqueta-fecha-citacion">Fecha de la prueba según tu citación (opcional)</label>
+              <input class="entrada" type="date" id="fecha-citacion-config">
+              <select class="entrada" id="fecha-oficial-config" aria-labelledby="etiqueta-fecha-citacion" hidden></select>
+            </div>
           </fieldset>
           <div class="rejilla-2" style="gap: var(--esp-4)">
             <div class="campo">

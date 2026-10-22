@@ -3,10 +3,10 @@
   "configurations": [
     {
       "name": "dev",
-      "runtimeExecutable": "npm",
+      "runtimeExecutable": "C:\\Users\\Estudiante\\AppData\\Local\\icfes-lab\\node\\node.exe",
       "runtimeArgs": [
-        "run",
-        "dev"
+        "--watch",
+        "backend/src/server.js"
       ],
       "port": 3000
     }

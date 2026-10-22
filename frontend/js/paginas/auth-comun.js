@@ -2,6 +2,10 @@
  * Utilidades compartidas por las páginas de cuenta.
  */
 import { $, $$, h, icono } from '../core/dom.js';
+import { montarPersonajes } from '../core/personaje.js';
+
+// La mascota de la portada de estas pantallas se monta sola al cargar el módulo.
+montarPersonajes();
 
 /** Destino seguro después de iniciar sesión (solo rutas internas). */
 export function destinoSeguro() {

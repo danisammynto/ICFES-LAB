@@ -143,12 +143,12 @@ async function subtemaObjetivo(usuarioId, { materia, subtema, similarA, ctx }) {
     if (s) return { ...s, razon: 'similar' };
   }
   if (subtema) {
-    const s = await una(`${base} WHERE s.slug = $2 AND s.nivel_requerido <= $3`, [usuarioId, subtema, nivel]);
+    const s = await una(`${base} WHERE s.slug = $2 AND s.activo AND s.nivel_requerido <= $3`, [usuarioId, subtema, nivel]);
     if (s) return { ...s, razon: 'pedido' };
   }
   if (materia) {
     const s = await una(
-      `${base} WHERE m.slug = $2 AND s.nivel_requerido <= $3
+      `${base} WHERE m.slug = $2 AND s.activo AND s.nivel_requerido <= $3
           AND EXISTS (SELECT 1 FROM preguntas q WHERE q.subtema_id = s.id AND q.activa AND q.publica)
         ORDER BY coalesce(p.dominio, 50) + random() * 15 LIMIT 1`,
       [usuarioId, materia, nivel],
@@ -157,11 +157,11 @@ async function subtemaObjetivo(usuarioId, { materia, subtema, similarA, ctx }) {
   }
   const debil = ctx.debilidades.find((d) => !d.bloqueado);
   if (debil) {
-    const s = await una(`${base} WHERE s.slug = $2`, [usuarioId, debil.slug]);
+    const s = await una(`${base} WHERE s.slug = $2 AND s.activo`, [usuarioId, debil.slug]);
     if (s) return { ...s, razon: 'debilidad', precision: debil.precision };
   }
   return una(
-    `${base} WHERE s.nivel_requerido <= $2
+    `${base} WHERE s.activo AND s.nivel_requerido <= $2
         AND EXISTS (SELECT 1 FROM preguntas q WHERE q.subtema_id = s.id AND q.activa AND q.publica)
       ORDER BY coalesce(p.dominio, 0) + random() * 40 LIMIT 1`,
     [usuarioId, nivel],

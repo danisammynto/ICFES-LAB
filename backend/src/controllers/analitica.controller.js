@@ -3,7 +3,7 @@
  */
 import { analisisCompleto, dashboard } from '../services/analitica.service.js';
 import { estimarPuntajes, metaPuntaje } from '../services/puntaje.service.js';
-import { fechaIcfes } from '../services/config.service.js';
+import { fechaIcfes, resumenCalendarios } from '../services/config.service.js';
 import { claudeActivo } from '../services/vanty/claude.js';
 
 export async function panel(req, res) {
@@ -20,10 +20,10 @@ export async function puntaje(req, res) {
 }
 
 export async function configPublica(_req, res) {
-  const icfes = await fechaIcfes();
   res.json({
     app: 'ICFES Lab',
-    fecha_icfes: { fecha: icfes.fecha, nombre: icfes.nombre, estimada: icfes.estimada, dias: icfes.dias },
+    // Fechas oficiales del Saber 11 por calendario (vacías mientras el ICFES no las publique).
+    calendarios_icfes: await resumenCalendarios(),
     vanty: { modo: claudeActivo() ? 'claude' : 'local' },
   });
 }
